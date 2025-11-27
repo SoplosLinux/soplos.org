@@ -1,0 +1,12 @@
+# Archivos y carpetas ignorados por Git
+.vscode/
+node_modules/
+*.log
+*.tmp
+*.bak
+.env
+__pycache__/
+.DS_Store
+.idea/
+# Ignorar archivos temporales de sistema
+Thumbs.db
