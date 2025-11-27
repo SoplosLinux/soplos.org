@@ -1406,7 +1406,7 @@ Object.assign(window.LANG_ES, {
     "tyron-soplos-welcome-title": "Soplos Welcome",
     "tyron-soplos-welcome-desc": "Aplicación de bienvenida que guía a nuevos usuarios a través de la configuración inicial y personalización. Las características incluyen instalación de software, personalización del escritorio, detección de hardware, instalación de controladores y acceso a recursos de ayuda.",
     "tyron-soplos-live-title": "Soplos Welcome Live",
-    "tyron-soplos-live-desc": "Variante Live-ISO de Soplos Welcome usada en la imagen del instalador para elegir idioma, probar hardware e iniciar el instalador Calamares.",
+    "tyron-soplos-live-desc": "Variante Live-ISO de Soplos Welcome usada en la imagen del instalador para elegir idioma, probar hardware, iniciar el instalador Calamares y que incluye herramientas automatizadas de chroot para recuperar el sistema.",
     "tyron-soplos-docklike-title": "Soplos Docklike",
     "tyron-soplos-docklike-desc": "Herramienta gráfica para gestionar y organizar iconos en el complemento Docklike del panel de XFCE. Proporciona una elegante interfaz estilo dock con fácil organización de aplicaciones y personalización.",
     "tyron-soplos-grub-title": "Soplos GRUB Editor",
