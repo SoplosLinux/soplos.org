@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos GRUB Editor - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Graphical GRUB2 editor for Soplos Linux. Edit boot entries, themes, timeout and manage backups.">
+
+    <link rel="icon" href="../../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../../#inicio">
+                    <img src="../../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../../#requirements" id="menuRequirements">System Requirements</a>
+                                </li>
+                                <li><a href="../../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/applications/tyron/">Applications for Tyron</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Soplos GRUB Editor</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <style>
+            /* Page-specific overrides for GRUB Editor wiki page */
+            .container {
+                max-width: 1400px;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .main-content {
+                padding: 30px 30px;
+            }
+
+            .screenshot-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 18px;
+            }
+
+            .screenshot img {
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+                cursor: zoom-in;
+            }
+
+            @media (max-width: 900px) {
+                .screenshot img {
+                    height: 200px;
+                }
+            }
+        </style>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="grubTitle">Soplos GRUB Editor</h1>
+                    <p id="grubDescription">Graphical editor for GRUB2: manage boot entries, themes, timeout and create
+                        safe backups before applying changes.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Features Section -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="main-content">
+                        <section id="features" class="content-section">
+                            <h2 id="featuresTitle"><i class="fas fa-star"></i> Features</h2>
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-list"></i> Edit Boot Entries</h4>
+                                    <p>Add, remove or reorder GRUB boot entries and set the default entry.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-paint-brush"></i> Theme Management</h4>
+                                    <p>Install and preview GRUB themes, set background images and fonts.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-clock"></i> Timeout & Defaults</h4>
+                                    <p>Configure GRUB timeout, default entry, and kernel parameters easily.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-save"></i> Backups & Restore</h4>
+                                    <p>Automatic backups before applying changes and easy restore options.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="installation" class="content-section">
+                            <h2 id="installationTitle"><i class="fas fa-download"></i> Installation</h2>
+                            <p>Soplos GRUB Editor is available in Soplos repositories. To install:</p>
+                            <div class="code-example">
+                                <h4>Terminal</h4>
+                                <pre><code>sudo apt update
+sudo apt install soplos-grub-editor</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="usage" class="content-section">
+                            <h2 id="usageTitle"><i class="fas fa-play"></i> Usage</h2>
+                            <div class="step-list">
+                                <li><strong>Open the application:</strong> Run <code>soplos-grub-editor</code> from the
+                                    menu.</li>
+                                <li><strong>Edit entries:</strong> Add, rename or reorder boot entries and save changes.
+                                </li>
+                                <li><strong>Apply and backup:</strong> The app creates a backup before writing changes
+                                    to GRUB.</li>
+                                <li><strong>Themes & fonts:</strong> Preview and apply GRUB themes and fonts from the
+                                    UI.</li>
+                            </div>
+                        </section>
+
+                        <section id="screenshots" class="content-section">
+                            <h2 id="screenshotsTitle"><i class="fas fa-images"></i> Screenshots</h2>
+                            <p>Click any image to open fullscreen:</p>
+                            <div class="screenshot-gallery">
+                                <div class="screenshot"><img
+                                        src="../../../../images/Tyron/grub-editor/001-grub-editor.png"
+                                        alt="GRUB Editor Screenshot 1" onclick="openModal(this.src)"></div>
+                                <div class="screenshot"><img
+                                        src="../../../../images/Tyron/grub-editor/002-boot-entries.png"
+                                        alt="GRUB Editor Screenshot 2" onclick="openModal(this.src)"></div>
+                                <div class="screenshot"><img src="../../../../images/Tyron/grub-editor/003-themes.png"
+                                        alt="GRUB Editor Screenshot 3" onclick="openModal(this.src)"></div>
+                                <div class="screenshot"><img src="../../../../images/Tyron/grub-editor/004-fonts.png"
+                                        alt="GRUB Editor Screenshot 4" onclick="openModal(this.src)"></div>
+                            </div>
+                        </section>
+
+                        <section id="changelog" class="content-section">
+                            <h2 id="changelogTitle"><i class="fas fa-history"></i> Changelog</h2>
+                            <div class="changelog-list">
+                                <p>All notable changes for this project are documented here. The changelog follows
+                                    common conventions and Semantic Versioning.</p>
+
+                                <h3>1.0.4 — 2025-07-27</h3>
+                                <h4>Changed</h4>
+                                <ul>
+                                    <li>Program icon changed.</li>
+                                </ul>
+
+                                <h3>1.0.3 — 2025-07-18</h3>
+                                <h4>Changes</h4>
+                                <ul>
+                                    <li>Updated metainfo to comply with AppStream/DEP-11.</li>
+                                    <li>Screenshots renamed to a consistent numbering scheme.</li>
+                                    <li>Minor documentation and metadata improvements.</li>
+                                    <li>No functional changes to the application.</li>
+                                </ul>
+
+                                <h3>1.0.2 — 2025-06-15</h3>
+                                <h4>Added — Full Internationalization</h4>
+                                <ul>
+                                    <li>Dynamic translations system with on-demand loading.</li>
+                                    <li>Full support for 8 languages: Spanish, English, French, Portuguese, German,
+                                        Italian, Russian, Romanian.</li>
+                                    <li>Automatic language detection from system $LANG and robust fallbacks.</li>
+                                    <li>Improved translation API and helper functions for runtime language switching.
+                                    </li>
+                                </ul>
+
+                                <h4>Improvements — Translations System</h4>
+                                <ul>
+                                    <li>Complete restructuring of the translations module.</li>
+                                    <li>Optimized per-language loading and memory usage.</li>
+                                    <li>Robust validation and improved logging for translation errors.</li>
+                                </ul>
+
+                                <h4>Fixed — Internationalization</h4>
+                                <ul>
+                                    <li>Eliminated hardcoded strings and ensured logging/messages are translated.</li>
+                                    <li>Fixed issues with translation imports and initialization order.</li>
+                                </ul>
+
+                                <h4>Documentation & Development</h4>
+                                <ul>
+                                    <li>README updated with language information and packaging notes.</li>
+                                    <li>Changelog created with a detailed history.</li>
+                                </ul>
+
+                                <h3>1.0.1 — 2025-06-14</h3>
+                                <h4>Improvements</h4>
+                                <ul>
+                                    <li>More robust font conversion system (TTF/OTF → PF2).</li>
+                                    <li>Improved error handling for font installation.</li>
+                                    <li>More responsive UI and optimized theme installation.</li>
+                                </ul>
+
+                                <h4>Fixed</h4>
+                                <ul>
+                                    <li>Fixed TTF/OTF conversion errors.</li>
+                                    <li>Fixed permission issues in <code>/boot/grub/fonts/</code>.</li>
+                                    <li>Fixed UI crashes when loading large themes and memory errors during font
+                                        processing.</li>
+                                </ul>
+
+                                <h3>1.0.0 — 2025-06-13</h3>
+                                <h4>Initial Release</h4>
+                                <ul>
+                                    <li>Complete graphical editor for GRUB2 with a GTK interface.</li>
+                                    <li>Theme management (install/apply), font conversion, background configuration.
+                                    </li>
+                                    <li>Custom boot entries, advanced kernel options, and automatic backups.</li>
+                                    <li>Secure integration with update-grub and validation before applying changes.</li>
+                                </ul>
+
+                                <hr>
+
+                                <h4>Types of changes</h4>
+                                <ul>
+                                    <li><strong>Added</strong> for new features</li>
+                                    <li><strong>Changed</strong> for changes in existing functionality</li>
+                                    <li><strong>Deprecated</strong> for features that will be removed</li>
+                                    <li><strong>Removed</strong> for removed features</li>
+                                    <li><strong>Fixed</strong> for bug fixes</li>
+                                    <li><strong>Security</strong> for security fixes</li>
+                                </ul>
+
+                                <h4>Contributing & Support</h4>
+                                <p>To report issues or request features, contact <strong>info@soploslinux.com</strong>.
+                                    For translations, follow the project's translation guidelines.</p>
+                            </div>
+                        </section>
+
+                        <section id="troubleshooting" class="content-section">
+                            <h2 id="troubleshootingTitle"><i class="fas fa-tools"></i> FAQ & Troubleshooting</h2>
+                            <div class="faq-item">
+                                <h4 class="faq-question" role="button" aria-expanded="false">What does Soplos GRUB
+                                    Editor do? <i class="fas fa-chevron-right"></i></h4>
+                                <div class="faq-answer" aria-hidden="true">
+                                    <p>It provides a GTK graphical interface to edit GRUB2 configuration, themes,
+                                        timeouts and manage boot entries safely with automatic backups.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h4 class="faq-question" role="button" aria-expanded="false">Is it safe to apply
+                                    changes? <i class="fas fa-chevron-right"></i></h4>
+                                <div class="faq-answer" aria-hidden="true">
+                                    <p>The app creates backups before applying changes and validates configurations. If
+                                        something goes wrong, you can restore the backup.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Screenshots -->
+    <div id="imageModal" class="modal-gallery" role="dialog" aria-hidden="true">
+        <button class="close-modal-gallery" aria-label="Close" onclick="closeModal()">&times;</button>
+        <div class="modal-gallery-content">
+            <div class="modal-gallery-carousel">
+                <div class="modal-gallery-track">
+                    <img id="modalImage" src="" alt="Screenshot preview">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../../js/logger.js"></script>
+    <script src="../../../../js/language-loader.js"></script>
+    <script src="../../../../js/language-switcher.js"></script>
+    <script src="../../../../js/soplos-ui.js"></script>
+    <script src="../../../../js/main.js"></script>
+
+    <!-- Modal Script -->
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById('imageModal');
+            var img = document.getElementById('modalImage');
+            img.src = src;
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('imageModal');
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden', 'true');
+            // remove src to free memory
+            document.getElementById('modalImage').src = '';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            var modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // FAQ Toggle — simple single-open behavior
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        const q = otherItem.querySelector('.faq-question');
+                        const a = otherItem.querySelector('.faq-answer');
+                        if (q) q.setAttribute('aria-expanded', 'false');
+                        if (a) a.setAttribute('aria-hidden', 'true');
+                    });
+
+                    // Open clicked item if it wasn't active
+                    const answer = item.querySelector('.faq-answer');
+                    if (!isActive) {
+                        item.classList.add('active');
+                        if (question) question.setAttribute('aria-expanded', 'true');
+                        if (answer) answer.setAttribute('aria-hidden', 'false');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

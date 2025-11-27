@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Management - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Guide to software stores and package management in Soplos Linux Tyron, Tyson, and Boro.">
+    <meta name="keywords"
+        content="soplos, linux, packages, software, store, synaptic, discover, gnome software, flatpak, snap">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Package Management - Soplos Linux Wiki">
+    <meta property="og:description" content="Install and manage software on your Soplos Linux edition.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html#inicio">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../index.html#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System
+                                        Requirements</a></li>
+                                <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">System Packages</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="pkg-hero-title"><i class="fas fa-box-open"></i> Package Management</h1>
+                    <p id="pkg-hero-desc">Guide to software stores and package management in Soplos Linux Tyron, Tyson,
+                        and Boro.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="pkg-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#intro" id="pkg-toc-1">Introduction</a></li>
+                            <li><a href="#understanding" id="pkg-toc-2">Understanding Packages</a></li>
+                            <li><a href="#apt-basics" id="pkg-toc-3">APT Basics</a></li>
+                            <li><a href="#finding" id="pkg-toc-4">Finding & Installing</a></li>
+                            <li><a href="#deb-files" id="pkg-toc-5">Local .deb Files</a></li>
+                            <li><a href="#tyron" id="pkg-toc-6">Tyron (XFCE)</a></li>
+                            <li><a href="#tyson" id="pkg-toc-7">Tyson (Plasma)</a></li>
+                            <li><a href="#boro" id="pkg-toc-8">Boro (GNOME)</a></li>
+                            <li><a href="#repositories" id="pkg-toc-9">Repositories</a></li>
+                            <li><a href="#flatpak" id="pkg-toc-10">Flatpak</a></li>
+                            <li><a href="#snap" id="pkg-toc-11">Snap</a></li>
+                            <li><a href="#troubleshooting" id="pkg-toc-12">Troubleshooting</a></li>
+                            <li><a href="#best-practices" id="pkg-toc-13">Best Practices</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <section id="intro" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="pkg-intro-title">Software Management</span>
+                            </h2>
+                            <p id="pkg-intro-p1">Soplos Linux offers total flexibility for installing applications.
+                                Depending on the
+                                edition you choose (Tyron, Tyson, or Boro), the default experience varies, but they all
+                                share
+                                the same powerful Debian base.</p>
+                            <p id="pkg-intro-p2">You can easily manage your software stores from <strong>Soplos
+                                    Welcome</strong> in the
+                                <em>Software</em> tab.
+                            </p>
+                        </section>
+
+                        <section id="understanding" class="content-section">
+                            <h2><i class="fas fa-cube"></i> <span id="pkg-und-title">Understanding Package
+                                    Management</span></h2>
+
+                            <h3 id="pkg-und-what-h">What are Packages?</h3>
+                            <p id="pkg-und-what-p">In Linux, software is distributed as <strong>packages</strong> -
+                                compressed archives
+                                containing:</p>
+                            <ul>
+                                <li id="pkg-und-what-1">The actual program files and libraries</li>
+                                <li id="pkg-und-what-2">Configuration files</li>
+                                <li id="pkg-und-what-3">Documentation and man pages</li>
+                                <li id="pkg-und-what-4">Metadata (version, description, dependencies)</li>
+                            </ul>
+
+                            <h3 id="pkg-und-apt-h">APT: Advanced Package Tool</h3>
+                            <p id="pkg-und-apt-p">Soplos Linux uses <strong>APT</strong>, the same package manager as
+                                Debian and Ubuntu.
+                                APT handles:</p>
+                            <ul>
+                                <li id="pkg-und-apt-1"><strong>Installation:</strong> Downloads and installs packages
+                                </li>
+                                <li id="pkg-und-apt-2"><strong>Dependencies:</strong> Automatically installs required
+                                    libraries</li>
+                                <li id="pkg-und-apt-3"><strong>Updates:</strong> Keeps software current</li>
+                                <li id="pkg-und-apt-4"><strong>Removal:</strong> Cleanly uninstalls packages</li>
+                            </ul>
+
+                            <h3 id="pkg-und-deb-h">Debian Package Format (.deb)</h3>
+                            <p id="pkg-und-deb-p">Soplos uses <code>.deb</code> files, which are:</p>
+                            <ul>
+                                <li id="pkg-und-deb-1">Binary packages pre-compiled for your system</li>
+                                <li id="pkg-und-deb-2">Compatible with all Debian-based distributions</li>
+                                <li id="pkg-und-deb-3">Managed by <code>dpkg</code> (low-level) or <code>apt</code>
+                                    (high-level)</li>
+                            </ul>
+
+                            <div class="info-box info">
+                                <i class="fas fa-link"></i>
+                                <div>
+                                    <span id="pkg-und-dep-box"><strong>Dependencies:</strong> Packages often depend on
+                                        other packages. APT
+                                        automatically
+                                        resolves and installs these dependencies, making software installation
+                                        seamless.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="apt-basics" class="content-section">
+                            <h2><i class="fas fa-terminal"></i> <span id="pkg-apt-title">APT Command Line
+                                    Basics</span></h2>
+
+                            <p id="pkg-apt-intro">While graphical tools are convenient, the command line offers more
+                                control and is
+                                essential
+                                for troubleshooting. Here are the most common APT commands:</p>
+
+                            <h3 id="pkg-apt-inst-h">Installing Packages</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-apt-inst-term">Terminal</h4>
+                                <pre><code># Install a single package
+sudo apt install firefox
+
+# Install multiple packages
+sudo apt install gimp inkscape vlc
+
+# Install without confirmation prompt
+sudo apt install -y package-name</code></pre>
+                            </div>
+
+                            <h3 id="pkg-apt-rem-h">Removing Packages</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-apt-rem-term">Terminal</h4>
+                                <pre><code># Remove package (keeps configuration files)
+sudo apt remove package-name
+
+# Remove package and configuration files
+sudo apt purge package-name
+
+# Remove unused dependencies
+sudo apt autoremove</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <div>
+                                        <span id="pkg-apt-warn"><strong>remove vs purge:</strong> Use
+                                            <code>remove</code> to keep your settings if
+                                            you
+                                            plan to reinstall later. Use <code>purge</code> for complete removal
+                                            including all
+                                            configuration.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 id="pkg-apt-srch-h">Searching & Information</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-apt-srch-term">Terminal</h4>
+                                <pre><code># Search for packages
+apt search keyword
+
+# Show package information
+apt show package-name
+
+# List installed packages
+apt list --installed
+
+# Check if a package is installed
+apt list --installed | grep package-name</code></pre>
+                            </div>
+
+                            <h3 id="pkg-apt-list-h">Listing & Managing</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-apt-list-term">Terminal</h4>
+                                <pre><code># List upgradable packages
+apt list --upgradable
+
+# Show package dependencies
+apt-cache depends package-name
+
+# Show what packages depend on this one
+apt-cache rdepends package-name</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="finding" class="content-section">
+                            <h2><i class="fas fa-search"></i> <span id="pkg-find-title">Finding & Installing
+                                    Software</span></h2>
+
+                            <h3 id="pkg-find-srch-h">Searching for Packages</h3>
+                            <p id="pkg-find-srch-p">Before installing, you need to find the right package name:</p>
+
+                            <div class="code-example">
+                                <h4 id="pkg-find-srch-term">Terminal</h4>
+                                <pre><code># Search by name or description
+apt search photo editor
+
+# More precise search (package names only)
+apt-cache pkgnames | grep photo</code></pre>
+                            </div>
+
+                            <h3 id="pkg-find-info-h">Getting Package Information</h3>
+                            <p id="pkg-find-info-p">Always check package details before installing:</p>
+
+                            <div class="code-example">
+                                <h4 id="pkg-find-info-term">Terminal</h4>
+                                <pre><code># View detailed information
+apt show gimp</code></pre>
+                            </div>
+
+                            <p id="pkg-find-info-list-p">This shows:</p>
+                            <ul>
+                                <li id="pkg-find-info-1">Package name and version</li>
+                                <li id="pkg-find-info-2">Description and homepage</li>
+                                <li id="pkg-find-info-3">Download size and installed size</li>
+                                <li id="pkg-find-info-4">Dependencies</li>
+                                <li id="pkg-find-info-5">Maintainer information</li>
+                            </ul>
+
+                            <h3 id="pkg-find-inst-h">Installing from Official Repositories</h3>
+                            <p id="pkg-find-inst-p">Once you've found the right package:</p>
+
+                            <div class="step-list">
+                                <ul>
+                                    <li id="pkg-find-inst-1">Update package lists: <code>sudo apt update</code></li>
+                                    <li id="pkg-find-inst-2">Install the package:
+                                        <code>sudo apt install package-name</code>
+                                    </li>
+                                    <li id="pkg-find-inst-3">Verify installation: <code>which command-name</code> or try
+                                        running the program
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <div>
+                                        <span id="pkg-find-tip"><strong>Pro Tip:</strong> Use tab completion in the
+                                            terminal. Type
+                                            <code>sudo apt install fir</code>
+                                            and press TAB to see available packages starting with "fir".</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="deb-files" class="content-section">
+                            <h2><i class="fas fa-file-archive"></i> <span id="pkg-deb-title">Managing Local .deb
+                                    Files</span></h2>
+
+                            <h3 id="pkg-deb-what-h">What are .deb Files?</h3>
+                            <p id="pkg-deb-what-p">Sometimes you'll download software as a <code>.deb</code> file
+                                directly from a website
+                                (like Google Chrome, VS Code, or Discord). These are standalone Debian packages.</p>
+
+                            <h3 id="pkg-deb-inst-h">Installing .deb Files</h3>
+                            <p id="pkg-deb-inst-p">There are several methods to install local .deb files:</p>
+
+                            <h4 id="pkg-deb-m1-h">Method 1: Using APT (Recommended)</h4>
+                            <div class="code-example">
+                                <h4 id="pkg-deb-m1-term">Terminal</h4>
+                                <pre><code># Navigate to download directory
+cd ~/Downloads
+
+# Install with APT (handles dependencies automatically)
+sudo apt install ./package-name.deb</code></pre>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-check"></i>
+                                <div>
+                                    <span id="pkg-deb-m1-info"><strong>Why use APT?</strong> Unlike dpkg, APT
+                                        automatically resolves and installs
+                                        dependencies from your repositories, making installation much smoother.</span>
+                                </div>
+                            </div>
+
+                            <h4 id="pkg-deb-m2-h">Method 2: Using dpkg</h4>
+                            <div class="code-example">
+                                <h4 id="pkg-deb-m2-term">Terminal</h4>
+                                <pre><code># Install with dpkg
+sudo dpkg -i package-name.deb
+
+# If dependencies are missing, fix them with:
+sudo apt install -f</code></pre>
+                            </div>
+
+                            <h4 id="pkg-deb-m3-h">Method 3: Using Gdebi (GUI)</h4>
+                            <p id="pkg-deb-m3-p">Gdebi is a graphical tool for installing .deb files:</p>
+                            <div class="step-list">
+                                <ul>
+                                    <li id="pkg-deb-m3-1">Install Gdebi: <code>sudo apt install gdebi</code></li>
+                                    <li id="pkg-deb-m3-2">Right-click the .deb file</li>
+                                    <li id="pkg-deb-m3-3">Choose "Open with Gdebi"</li>
+                                    <li id="pkg-deb-m3-4">Click "Install Package"</li>
+                                </ul>
+                            </div>
+
+                            <h3 id="pkg-deb-rem-h">Removing Installed .deb Packages</h3>
+                            <p id="pkg-deb-rem-p">Once installed, .deb packages are managed like any other package:</p>
+                            <div class="code-example">
+                                <h4 id="pkg-deb-rem-term">Terminal</h4>
+                                <pre><code># Find the package name
+dpkg -l | grep package-keyword
+
+# Remove it
+sudo apt remove package-name</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <span id="pkg-deb-warn"><strong>Caution:</strong> Only install .deb files from
+                                        trusted sources. Installing
+                                        packages from unknown sources can compromise your system's security.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="tyron" class="content-section">
+                            <h3 id="pkg-tyr-title">Tyron (XFCE Edition)</h3>
+                            <p id="pkg-tyr-p">The Tyron edition follows a minimalist and lightweight philosophy:</p>
+                            <ul>
+                                <li id="pkg-tyr-1"><strong>Default:</strong> Does not include any heavy "software store"
+                                    pre-installed
+                                    to
+                                    save resources.</li>
+                                <li id="pkg-tyr-2"><strong>Available Options:</strong> From <em>Soplos Welcome</em> you
+                                    can easily
+                                    install:
+                                    <ul>
+                                        <li id="pkg-tyr-2-1"><strong>Synaptic:</strong> Classic and powerful package
+                                            manager (recommended
+                                            for
+                                            advanced users).</li>
+                                        <li id="pkg-tyr-2-2"><strong>Gdebi:</strong> For installing standalone `.deb`
+                                            files.</li>
+                                        <li id="pkg-tyr-2-3"><strong>GNOME Software:</strong> Full graphical store. When
+                                            installed from
+                                            Welcome, it is automatically configured with Flatpak and Snap plugins.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="tyson" class="content-section">
+                            <h3 id="pkg-tys-title">Tyson (Plasma Edition)</h3>
+                            <p id="pkg-tys-p">The Tyson edition offers a modern experience integrated with KDE:</p>
+                            <ul>
+                                <li id="pkg-tys-1"><strong>Default:</strong> Comes with <strong>Discover</strong>, the
+                                    KDE software
+                                    center.
+                                </li>
+                                <li id="pkg-tys-2"><strong>Integration:</strong> If you decide to install Flatpak or
+                                    Snap from
+                                    <em>Soplos
+                                        Welcome</em>, the system will automatically install the necessary plugins for
+                                    Discover to manage these formats.
+                                </li>
+                                <li id="pkg-tys-3"><strong>Alternatives:</strong> As in Tyron, you can install Synaptic
+                                    or Gdebi if you
+                                    prefer more traditional tools.</li>
+                            </ul>
+                        </section>
+
+                        <section id="boro" class="content-section">
+                            <h3 id="pkg-bor-title">Boro (GNOME Edition)</h3>
+                            <p id="pkg-bor-p">The Boro edition offers the full GNOME experience:</p>
+                            <ul>
+                                <li id="pkg-bor-1"><strong>Default:</strong> Includes <strong>GNOME Software</strong>
+                                    pre-installed.
+                                </li>
+                                <li id="pkg-bor-2"><strong>Configuration:</strong> Comes ready to use with support for
+                                    <strong>Flatpak</strong> and the <strong>Flathub</strong> repository already
+                                    configured
+                                    out of the box, offering immediate access to thousands of applications.
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="repositories" class="content-section">
+                            <h2><i class="fas fa-server"></i> <span id="pkg-repo-title">Repositories &
+                                    Sources</span></h2>
+
+                            <h3 id="pkg-repo-what-h">What are Repositories?</h3>
+                            <p id="pkg-repo-what-p">Repositories are servers that host packages. Soplos Linux uses
+                                Debian Testing
+                                repositories by default,
+                                providing thousands of software packages.</p>
+
+                            <h3 id="pkg-repo-view-h">Viewing Your Repositories</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-repo-view-term">Terminal</h4>
+                                <pre><code># View configured repositories
+cat /etc/apt/sources.list
+
+# View additional repository files
+ls /etc/apt/sources.list.d/</code></pre>
+                            </div>
+
+                            <h3 id="pkg-repo-add-h">Adding Third-Party Repositories</h3>
+                            <p id="pkg-repo-add-p">Sometimes you may need to add external repositories for specific
+                                software:</p>
+
+                            <div class="code-example">
+                                <h4 id="pkg-repo-add-term">Terminal</h4>
+                                <pre><code># Add repository key (if required)
+wget -qO- https://example.com/key.gpg | sudo apt-key add -
+
+# Add repository
+echo "deb https://example.com/repo stable main" | sudo tee /etc/apt/sources.list.d/example.list
+
+# Update package lists
+sudo apt update</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <div>
+                                        <span id="pkg-repo-warn"><strong>Warning:</strong> Only add repositories from
+                                            trusted sources. Third-party
+                                            repositories
+                                            can introduce security risks or system instability.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 id="pkg-repo-rem-h">Removing Repositories</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-repo-rem-term">Terminal</h4>
+                                <pre><code># Remove repository file
+sudo rm /etc/apt/sources.list.d/example.list
+
+# Update package lists
+sudo apt update</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="flatpak" class="content-section">
+                            <h2><i class="fas fa-box"></i> <span id="pkg-flat-title">Flatpak In-Depth</span></h2>
+
+                            <h3 id="pkg-flat-what-h">What is Flatpak?</h3>
+                            <p id="pkg-flat-what-p"><strong>Flatpak</strong> is the recommended format for modern
+                                desktop applications. It
+                                provides:</p>
+                            <ul>
+                                <li id="pkg-flat-what-1">Latest versions of applications (Discord, Spotify, OBS, VS
+                                    Code)</li>
+                                <li id="pkg-flat-what-2">Sandboxed execution for better security</li>
+                                <li id="pkg-flat-what-3">Independence from system libraries</li>
+                                <li id="pkg-flat-what-4">Easy installation and updates</li>
+                            </ul>
+
+                            <h3 id="pkg-flat-inst-h">Installing Flatpak Support</h3>
+                            <p id="pkg-flat-inst-p">You can install Flatpak easily from <strong>Soplos Welcome</strong>
+                                → Software tab, or
+                                via terminal:</p>
+
+                            <div class="code-example">
+                                <h4 id="pkg-flat-inst-term">Terminal</h4>
+                                <pre><code># Install Flatpak
+sudo apt install flatpak
+
+# Add Flathub repository (main source of Flatpak apps)
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo</code></pre>
+                            </div>
+
+                            <h3 id="pkg-flat-cmd-h">Common Flatpak Commands</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-flat-cmd-term">Terminal</h4>
+                                <pre><code># Search for applications
+flatpak search spotify
+
+# Install an application
+flatpak install flathub com.spotify.Client
+
+# Run a Flatpak application
+flatpak run com.spotify.Client
+
+# List installed Flatpaks
+flatpak list
+
+# Update all Flatpaks
+flatpak update
+
+# Remove a Flatpak
+flatpak uninstall com.spotify.Client
+
+# Remove unused runtimes
+flatpak uninstall --unused</code></pre>
+                            </div>
+
+                            <h3 id="pkg-flat-when-h">When to Use Flatpak</h3>
+                            <ul>
+                                <li id="pkg-flat-when-1"><strong>Latest versions:</strong> When Debian repos have older
+                                    versions</li>
+                                <li id="pkg-flat-when-2"><strong>Proprietary software:</strong> Discord, Spotify, Slack
+                                </li>
+                                <li id="pkg-flat-when-3"><strong>Not in Debian:</strong> Apps not available in official
+                                    repositories</li>
+                                <li id="pkg-flat-when-4"><strong>Sandboxing:</strong> When you want extra security
+                                    isolation</li>
+                            </ul>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <div>
+                                        <span id="pkg-flat-tip"><strong>Integration:</strong> Flatpak applications
+                                            appear in your application menu
+                                            alongside
+                                            regular packages and can be managed from GNOME Software or KDE
+                                            Discover.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="snap" class="content-section">
+                            <h2><i class="fas fa-cubes"></i> <span id="pkg-snap-title">Snap Packages</span></h2>
+
+                            <h3 id="pkg-snap-what-h">What is Snap?</h3>
+                            <p id="pkg-snap-what-p">Developed by Canonical (Ubuntu), <strong>Snap</strong> is another
+                                universal package
+                                format. Like Flatpak,
+                                it provides containerized applications.</p>
+
+                            <h3 id="pkg-snap-inst-h">Installing Snap Support</h3>
+                            <p id="pkg-snap-inst-p">Install from <strong>Soplos Welcome</strong> or via terminal:</p>
+
+                            <div class="code-example">
+                                <h4 id="pkg-snap-inst-term">Terminal</h4>
+                                <pre><code># Install snapd
+sudo apt install snapd
+
+# Enable snapd socket
+sudo systemctl enable --now snapd.socket
+
+# Create symbolic link
+sudo ln -s /var/lib/snapd/snap /snap</code></pre>
+                            </div>
+
+                            <h3 id="pkg-snap-cmd-h">Common Snap Commands</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-snap-cmd-term">Terminal</h4>
+                                <pre><code># Search for snaps
+snap find keyword
+
+# Install a snap
+sudo snap install package-name
+
+# List installed snaps
+snap list
+
+# Update all snaps
+sudo snap refresh
+
+# Remove a snap
+sudo snap remove package-name</code></pre>
+                            </div>
+
+                            <h3 id="pkg-snap-vs-h">Snap vs Flatpak</h3>
+                            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                                <thead>
+                                    <tr style="background: var(--bg-secondary);">
+                                        <th id="pkg-snap-vs-th1"
+                                            style="padding: 12px; border: 1px solid var(--border-color); text-align: left;">
+                                            Feature</th>
+                                        <th id="pkg-snap-vs-th2"
+                                            style="padding: 12px; border: 1px solid var(--border-color); text-align: left;">
+                                            Flatpak</th>
+                                        <th id="pkg-snap-vs-th3"
+                                            style="padding: 12px; border: 1px solid var(--border-color); text-align: left;">
+                                            Snap</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="pkg-snap-vs-td1"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">
+                                            <strong>Repository</strong>
+                                        </td>
+                                        <td id="pkg-snap-vs-td2"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Flathub
+                                            (community)</td>
+                                        <td id="pkg-snap-vs-td3"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Snap Store
+                                            (Canonical)</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="pkg-snap-vs-td4"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">
+                                            <strong>Desktop
+                                                Integration</strong>
+                                        </td>
+                                        <td id="pkg-snap-vs-td5"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Excellent</td>
+                                        <td id="pkg-snap-vs-td6"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="pkg-snap-vs-td7"
+                                            style="padding: 12px; border: 1px solid var(--border-color);"><strong>Server
+                                                Apps</strong>
+                                        </td>
+                                        <td id="pkg-snap-vs-td8"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Desktop focus
+                                        </td>
+                                        <td id="pkg-snap-vs-td9"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Desktop +
+                                            Server</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="pkg-snap-vs-td10"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">
+                                            <strong>Recommended for
+                                                Soplos</strong>
+                                        </td>
+                                        <td id="pkg-snap-vs-td11"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Yes</td>
+                                        <td id="pkg-snap-vs-td12"
+                                            style="padding: 12px; border: 1px solid var(--border-color);">If needed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <div>
+                                        <span id="pkg-snap-rec"><strong>Recommendation:</strong> For desktop
+                                            applications, Flatpak is generally
+                                            recommended
+                                            on Soplos Linux. Use Snap only if the application you need is exclusively
+                                            available
+                                            there.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-wrench"></i> <span id="pkg-trb-title">Troubleshooting Common
+                                    Issues</span></h2>
+
+                            <h3 id="pkg-trb-not-h">Package Not Found</h3>
+                            <p id="pkg-trb-not-p">If APT cannot find a package, try updating the lists first:</p>
+                            <div class="code-example">
+                                <h4 id="pkg-trb-not-term">Terminal</h4>
+                                <pre><code># Update package lists first
+sudo apt update
+
+# Try searching for similar names
+apt search package-keyword
+
+# Check if it's in Debian Testing
+# Visit: https://packages.debian.org/</code></pre>
+                            </div>
+
+                            <h3 id="pkg-trb-dep-h">Broken Dependencies</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-trb-dep-term">Terminal</h4>
+                                <pre><code># Fix broken dependencies
+sudo apt --fix-broken install
+
+# If that fails, try:
+sudo dpkg --configure -a
+sudo apt update
+sudo apt install -f</code></pre>
+                            </div>
+
+                            <h3 id="pkg-trb-con-h">Conflicting Processes</h3>
+                            <p id="pkg-trb-con-p">If you get a "Could not get lock" error, another process is using APT:
+                            </p>
+                            <div class="code-example">
+                                <h4 id="pkg-trb-con-term">Terminal</h4>
+                                <pre><code># Remove the conflicting package first
+sudo apt remove conflicting-package
+
+# Then install the desired package
+sudo apt install desired-package</code></pre>
+                            </div>
+
+                            <h3 id="pkg-trb-rep-h">Repository Errors</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-trb-rep-term">Terminal</h4>
+                                <pre><code># If you get GPG errors, update keyrings:
+sudo apt update --allow-insecure-repositories
+sudo apt install debian-archive-keyring
+
+# Then update normally
+sudo apt update</code></pre>
+                            </div>
+
+                            <h3 id="pkg-trb-dsk-h">Disk Space Issues</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-trb-dsk-term">Terminal</h4>
+                                <pre><code># Check disk space
+df -h
+
+# Clean package cache
+sudo apt clean
+
+# Remove old packages
+sudo apt autoremove
+
+# Remove old kernels (keep 2-3 latest)
+sudo apt autoremove --purge</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="best-practices" class="content-section">
+                            <h2><i class="fas fa-star"></i> <span id="pkg-best-title">Best Practices Checklist</span>
+                            </h2>
+
+                            <h3 id="pkg-best-pre-h">Before Installing</h3>
+                            <ul>
+                                <li id="pkg-best-pre-1">Always run <code>sudo apt update</code> first</li>
+                                <li id="pkg-best-pre-2">Check package details with <code>apt show</code></li>
+                                <li id="pkg-best-pre-3">Verify disk space if installing large software</li>
+                                <li id="pkg-best-pre-4">Read user reviews if available in software centers</li>
+                            </ul>
+
+                            <h3 id="pkg-best-cln-h">Keeping System Clean</h3>
+                            <ul>
+                                <li id="pkg-best-cln-1">Use <code>sudo apt autoremove</code> regularly</li>
+                                <li id="pkg-best-cln-2">Clean cache with <code>sudo apt clean</code> occasionally</li>
+                                <li id="pkg-best-cln-3">Remove unused repositories</li>
+                                <li id="pkg-best-cln-4">Don't install unnecessary packages</li>
+                            </ul>
+
+                            <h3 id="pkg-best-chc-h">Choosing Package Source</h3>
+                            <div class="step-list">
+                                <ul>
+                                    <li id="pkg-best-chc-1"><strong>First choice:</strong> Official Debian repositories
+                                        (most stable)</li>
+                                    <li id="pkg-best-chc-2"><strong>Latest versions:</strong> Flatpak from Flathub (for
+                                        desktop apps)</li>
+                                    <li id="pkg-best-chc-3"><strong>Third-party .deb:</strong> Only from official
+                                        websites (Chrome, VS Code)</li>
+                                    <li id="pkg-best-chc-4"><strong>Last resort:</strong> Third-party repositories
+                                        (potential risks)</li>
+                                </ul>
+                            </div>
+
+                            <h3 id="pkg-best-sec-h">Security</h3>
+                            <div class="info-box warning">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <span id="pkg-best-sec-box"><strong>Never:</strong>
+                                        <ul>
+                                            <li>Run <code>sudo pip install</code> (use virtual environments)</li>
+                                            <li>Execute scripts directly from curl/wget without reading them</li>
+                                            <li>Add repositories without verifying the GPG key</li>
+                                            <li>Install software from unverified websites</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <h3 id="pkg-best-src-h">Choosing Sources</h3>
+                            <ul>
+                                <li id="pkg-best-src-1">Prefer official repositories for stability</li>
+                                <li id="pkg-best-src-2">Use Flatpak for latest desktop apps</li>
+                                <li id="pkg-best-src-3">Avoid adding too many PPAs or third-party repos</li>
+                                <li id="pkg-best-src-4">Be cautious with random .deb files from the internet</li>
+                            </ul>
+
+                            <h3 id="pkg-best-perf-h">Performance Tips</h3>
+                            <ul>
+                                <li id="pkg-best-perf-1">Prefer APT over Flatpak for system utilities (lighter weight)
+                                </li>
+                                <li id="pkg-best-perf-2">Use Flatpak for user applications (better isolation, newer
+                                    versions)</li>
+                                <li id="pkg-best-perf-3">Avoid installing too many software centers (pick one and stick
+                                    with it)</li>
+                                <li id="pkg-best-perf-4">Remove old kernels to save disk space</li>
+                            </ul>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <span id="pkg-best-tip"><strong>Learn More:</strong> See the <a
+                                            href="../updates/">System Updates</a> page
+                                        for keeping
+                                        your packages current, and the <a href="../security/">Security</a> page for
+                                        hardening your system.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

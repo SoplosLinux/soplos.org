@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation Guide - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Complete installation guide for Soplos Linux Tyron and Tyson distributions. Step-by-step instructions for beginners and advanced users.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="inst-breadcrumb">Installation Guide</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-download"></i> <span id="inst-hero-title">Installation Guide</span></h1>
+                    <p id="inst-hero-desc">Complete step-by-step instructions to install Soplos Linux on your computer
+                    </p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Installation Content -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="inst-toc-title">Table of Contents</h3>
+                        <ul>
+                            <li><a href="#before-start" id="inst-toc-1">Before You Start</a></li>
+                            <li><a href="#system-requirements" id="inst-toc-2">System Requirements</a></li>
+                            <li><a href="#download" id="inst-toc-3">Download Soplos Linux</a></li>
+                            <li><a href="#create-media" id="inst-toc-4">Create Installation Media</a></li>
+                            <li><a href="#installation" id="inst-toc-5">Boot & Installation Process</a></li>
+                            <li><a href="#dual-boot" id="inst-toc-6">Dual Boot Guide</a></li>
+                            <li><a href="#first-boot" id="inst-toc-7">First Boot</a></li>
+                            <li><a href="#troubleshooting" id="inst-toc-8">Troubleshooting</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <!-- Before You Start -->
+                        <section id="before-start" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="inst-before-title">Before You Start</span>
+                            </h2>
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong id="inst-before-warn-label">Important:</strong> <span
+                                        id="inst-before-warn-text">Installing an operating system will modify your
+                                        computer's storage. Make sure to backup your important data before
+                                        proceeding.</span>
+                                </div>
+                            </div>
+
+                            <h3 id="inst-before-need-title">What You'll Need</h3>
+                            <ul>
+                                <li id="inst-before-need-1">A USB drive with at least 8GB capacity (16GB recommended)
+                                </li>
+                                <li id="inst-before-need-2">Stable internet connection for updates</li>
+                                <li id="inst-before-need-3">At least 1 hour of free time</li>
+                                <li id="inst-before-need-4">Access to another computer if creating installation media
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- System Requirements -->
+                        <section id="system-requirements" class="content-section">
+                            <h2><i class="fas fa-microchip"></i> <span id="inst-req-title">System Requirements</span>
+                            </h2>
+
+                            <div class="requirements-comparison">
+                                <div class="requirement-card">
+                                    <h3><i class="fas fa-desktop"></i> Tyron (XFCE)</h3>
+                                    <div class="req-section">
+                                        <h4 id="inst-req-min-title">Minimum Requirements:</h4>
+                                        <ul>
+                                            <li><strong>Processor:</strong> Dual core 2.0 GHz</li>
+                                            <li><strong>RAM:</strong> 2 GB</li>
+                                            <li><strong>Storage:</strong> 20 GB available space</li>
+                                            <li><strong>Graphics:</strong> OpenGL 2.0 compatible</li>
+                                        </ul>
+                                    </div>
+                                    <div class="req-section">
+                                        <h4 id="inst-req-rec-title">Recommended:</h4>
+                                        <ul>
+                                            <li><strong>Processor:</strong> Quad core 2.4 GHz</li>
+                                            <li><strong>RAM:</strong> 4 GB</li>
+                                            <li><strong>Storage:</strong> 30 GB SSD</li>
+                                            <li><strong>Graphics:</strong> Dedicated 1GB VRAM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="requirement-card">
+                                    <h3><i class="fas fa-desktop"></i> Tyson (Plasma)</h3>
+                                    <div class="req-section">
+                                        <h4 id="inst-req-min-title">Minimum Requirements:</h4>
+                                        <ul>
+                                            <li><strong>Processor:</strong> Dual core 2.4 GHz</li>
+                                            <li><strong>RAM:</strong> 4 GB</li>
+                                            <li><strong>Storage:</strong> 35 GB available space</li>
+                                            <li><strong>Graphics:</strong> OpenGL 3.3 compatible</li>
+                                        </ul>
+                                    </div>
+                                    <div class="req-section">
+                                        <h4 id="inst-req-rec-title">Recommended:</h4>
+                                        <ul>
+                                            <li><strong>Processor:</strong> Quad core 3.0 GHz</li>
+                                            <li><strong>RAM:</strong> 8 GB</li>
+                                            <li><strong>Storage:</strong> 50 GB NVMe SSD</li>
+                                            <li><strong>Graphics:</strong> Dedicated 4GB VRAM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="requirement-card">
+                                    <h3><i class="fas fa-desktop"></i> Boro (GNOME)</h3>
+                                    <div class="req-section">
+                                        <h4 id="inst-req-min-title">Minimum Requirements:</h4>
+                                        <ul>
+                                            <li><strong>Processor:</strong> Dual core 2.4 GHz</li>
+                                            <li><strong>RAM:</strong> 4 GB</li>
+                                            <li><strong>Storage:</strong> 35 GB available space</li>
+                                            <li><strong>Graphics:</strong> OpenGL 3.3 compatible</li>
+                                        </ul>
+                                    </div>
+                                    <div class="req-section">
+                                        <h4 id="inst-req-rec-title">Recommended:</h4>
+                                        <ul>
+                                            <li><strong>Processor:</strong> Quad core 3.0 GHz</li>
+                                            <li><strong>RAM:</strong> 8 GB</li>
+                                            <li><strong>Storage:</strong> 50 GB NVMe SSD</li>
+                                            <li><strong>Graphics:</strong> Dedicated 4GB VRAM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Download Section -->
+                        <section id="download" class="content-section">
+                            <h2><i class="fas fa-download"></i> <span id="inst-dl-title">Download Soplos Linux</span>
+                            </h2>
+                            <p id="inst-dl-intro">Choose your preferred desktop environment:</p>
+
+                            <div class="download-options">
+                                <div class="download-card">
+                                    <h3><i class="fas fa-desktop"></i> Tyron (XFCE)</h3>
+                                    <p id="inst-dl-tyron-desc">Lightweight and efficient desktop environment, perfect
+                                        for older hardware or
+                                        users who prefer simplicity.</p>
+                                    <div class="download-details">
+                                        <span class="file-size">~1.9 GB ISO</span>
+                                        <span class="checksum">SHA256:
+                                            596b9888b8084e1d721a5a2b9e6e526862e1f752fc2c9a0e12ec8ffc0beebd6b</span>
+                                    </div>
+                                    <a href="https://sourceforge.net/projects/soplos-linux/files/soplos-linux-tyron-beta-1.0.1.iso/download"
+                                        class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-download"></i> <span id="inst-dl-btn-tyron">Download
+                                            Tyron</span>
+                                    </a>
+                                </div>
+
+                                <div class="download-card">
+                                    <h3><i class="fas fa-desktop"></i> Tyson (Plasma)</h3>
+                                    <p id="inst-dl-tyson-desc">Modern and feature-rich desktop environment with
+                                        beautiful animations and
+                                        advanced customization.</p>
+                                    <div class="download-details">
+                                        <span class="file-size">~2.9 GB ISO</span>
+                                        <span class="checksum">SHA256:
+                                            3d2254831a7b9ec02f94f25218e12585ff20adfcfab888bfbdbc99b556e59896</span>
+                                    </div>
+                                    <a href="https://sourceforge.net/projects/soplos-linux-tyson/files/soplos-linux-tyson-beta-1.0.1.iso/download"
+                                        class="btn btn-primary" target="_blank">
+                                        <i class="fas fa-download"></i> <span id="inst-dl-btn-tyson">Download
+                                            Tyson</span>
+                                    </a>
+                                </div>
+
+                                <div class="download-card">
+                                    <h3><i class="fas fa-desktop"></i> Boro (GNOME)</h3>
+                                    <p id="inst-dl-boro-desc">The definitive GNOME experience. Modern, workflow-centric,
+                                        and polished for
+                                        productivity.</p>
+                                    <div class="download-details">
+                                        <span class="file-size">~2.7 GB ISO</span>
+                                        <span class="checksum">SHA256:
+                                            c42ceff2cda8ef07027bed48ecc4896ad38ceb56fee47d3b029c9deed50a089a</span>
+                                    </div>
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="fas fa-download"></i> <span id="inst-dl-btn-boro">Download Boro</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="inst-dl-tip-label">Tip:</strong> <span id="inst-dl-tip-text">Not sure
+                                        which to choose? Tyron is lighter and faster, while
+                                        Tyson offers more features and visual effects.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Create Installation Media -->
+                        <section id="create-media" class="content-section">
+                            <h2><i class="fab fa-usb"></i> <span id="inst-media-title">Create Installation Media</span>
+                            </h2>
+
+                            <h3 id="inst-media-tools-title">Recommended Tools</h3>
+                            <div class="tools-grid">
+                                <div class="tool-card">
+                                    <h4><i class="fab fa-windows"></i> Windows</h4>
+                                    <ul>
+                                        <li id="inst-media-win-1"><strong>Rufus</strong> (Recommended)</li>
+                                        <li id="inst-media-win-2">Balena Etcher</li>
+                                        <li id="inst-media-win-3">Windows Media Creation Tool</li>
+                                    </ul>
+                                </div>
+                                <div class="tool-card">
+                                    <h4><i class="fab fa-linux"></i> Linux</h4>
+                                    <ul>
+                                        <li id="inst-media-lin-1"><strong>dd command</strong> (Advanced users)</li>
+                                        <li id="inst-media-lin-2">Balena Etcher</li>
+                                        <li id="inst-media-lin-3">GNOME Disks</li>
+                                    </ul>
+                                </div>
+                                <div class="tool-card">
+                                    <h4><i class="fab fa-apple"></i> macOS</h4>
+                                    <ul>
+                                        <li id="inst-media-mac-1"><strong>Balena Etcher</strong> (Recommended)</li>
+                                        <li id="inst-media-mac-2">dd command (Terminal)</li>
+                                        <li id="inst-media-mac-3">UNetbootin</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 id="inst-media-steps-title">Step-by-Step Instructions</h3>
+                            <ol class="step-list">
+                                <li>
+                                    <strong id="inst-media-step1-title">Insert your USB drive</strong><br>
+                                    <span id="inst-media-step1-desc">Make sure it has at least 8GB capacity and backup
+                                        any important data.</span>
+                                </li>
+                                <li>
+                                    <strong id="inst-media-step2-title">Download and install Rufus</strong> (Windows) or
+                                    <strong>Balena
+                                        Etcher</strong> (All platforms)<br>
+                                    <span id="inst-media-step2-desc">These are the most reliable tools for creating
+                                        installation media.</span>
+                                </li>
+                                <li>
+                                    <strong id="inst-media-step3-title">Select the Soplos Linux ISO file</strong><br>
+                                    <span id="inst-media-step3-desc">Browse to the location where you downloaded the ISO
+                                        file.</span>
+                                </li>
+                                <li>
+                                    <strong id="inst-media-step4-title">Select your USB drive</strong><br>
+                                    <span id="inst-media-step4-desc">Make sure you select the correct drive to avoid
+                                        data loss.</span>
+                                </li>
+                                <li>
+                                    <strong id="inst-media-step5-title">Write the image</strong><br>
+                                    <span id="inst-media-step5-desc">Click "Start" and wait for the process to complete
+                                        (usually 5-10 minutes).</span>
+                                </li>
+                            </ol>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong id="inst-media-warn-label">Warning:</strong> <span
+                                        id="inst-media-warn-text">This process will erase all data on the USB drive.
+                                        Make
+                                        sure to backup any important files first.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Boot & Installation Process -->
+                        <section id="installation" class="content-section">
+                            <h2><i class="fas fa-cogs"></i> <span id="inst-boot-title">Boot & Installation
+                                    Process</span></h2>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="inst-boot-info-label">Soplos Welcome Live:</strong> <span
+                                        id="inst-boot-info-text">The live system includes a specialized welcome
+                                        application that provides language configuration, installation launcher, and
+                                        system
+                                        recovery tools.</span>
+                                </div>
+                            </div>
+
+                            <h3 id="inst-boot-steps-title">Installation Steps</h3>
+                            <div class="installation-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step1-title">Boot from USB</h4>
+                                        <p id="inst-boot-step1-desc">Restart your computer and boot from the USB drive.
+                                            You may need to change
+                                            boot order in BIOS/UEFI settings.</p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step2-title">Live System Loads</h4>
+                                        <p id="inst-boot-step2-desc">The Soplos Linux live system will boot and
+                                            automatically log in to the
+                                            desktop environment.</p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step3-title">Soplos Welcome Live Opens</h4>
+                                        <p id="inst-boot-step3-desc">The Soplos Welcome Live application automatically
+                                            launches on startup,
+                                            providing a centralized interface for system configuration and installation.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step4-title">Configure System Language</h4>
+                                        <p id="inst-boot-step4-intro">Select your preferred language from the dropdown
+                                            menu. This will:</p>
+                                        <ul>
+                                            <li id="inst-boot-step4-1">Change the live system interface language</li>
+                                            <li id="inst-boot-step4-2">Set keyboard layout automatically</li>
+                                            <li id="inst-boot-step4-3">Update XDG directories (Desktop, Documents, etc.)
+                                            </li>
+                                            <li id="inst-boot-step4-4">Configure regional settings</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step5-title">Launch Calamares Installer</h4>
+                                        <p id="inst-boot-step5-desc">Click the <strong>"Install System"</strong> button
+                                            to launch the Calamares
+                                            installer with your configured language settings.</p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step6-title">Installation Wizard</h4>
+                                        <p id="inst-boot-step6-intro">Calamares will guide you through:</p>
+                                        <ul>
+                                            <li id="inst-boot-step6-1"><strong>Location:</strong> Timezone and region
+                                                settings</li>
+                                            <li id="inst-boot-step6-2"><strong>Keyboard:</strong> Keyboard layout
+                                                (pre-configured from language
+                                                selection)</li>
+                                            <li id="inst-boot-step6-3"><strong>Partitions:</strong> Disk partitioning
+                                                and installation target
+                                            </li>
+                                            <li id="inst-boot-step6-4"><strong>Users:</strong> Create your user account
+                                                and set passwords</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">7</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step7-title">Partitioning Options</h4>
+                                        <p id="inst-boot-step7-intro">Choose your preferred installation method:</p>
+                                        <ul>
+                                            <li id="inst-boot-step7-1"><strong>Erase disk:</strong> Simple installation,
+                                                uses entire disk</li>
+                                            <li id="inst-boot-step7-2"><strong>Manual partitioning:</strong> Advanced
+                                                users can create custom
+                                                partition layouts</li>
+                                            <li id="inst-boot-step7-3"><strong>Alongside existing OS:</strong> Dual-boot
+                                                configuration (if
+                                                applicable)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">8</div>
+                                    <div class="step-content">
+                                        <h4 id="inst-boot-step8-title">Installation Progress</h4>
+                                        <p id="inst-boot-step8-intro">Soplos Linux installation is remarkably fast:</p>
+                                        <ul>
+                                            <li id="inst-boot-step8-1"><strong>Soplos Tyron (XFCE):</strong>
+                                                Approximately 4 minutes</li>
+                                            <li id="inst-boot-step8-2"><strong>Soplos Tyson (Plasma):</strong>
+                                                Approximately 6-8 minutes</li>
+                                        </ul>
+                                        <p id="inst-boot-step8-note"><em>These times are based on testing with
+                                                14-year-old hardware, so
+                                                installation on modern systems will likely be even faster.</em></p>
+                                        <p id="inst-boot-step8-info">Installation speed may vary depending on your
+                                            hardware specifications,
+                                            storage type (SSD vs HDD), and system load.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-box success">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <strong id="inst-boot-tools-label">Additional Tools:</strong> <span
+                                        id="inst-boot-tools-text">Soplos Welcome Live also provides system recovery
+                                        tools (ChRoot environment) and GParted integration for advanced users.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Dual Boot Guide -->
+                        <section id="dual-boot" class="content-section">
+                            <h2><i class="fab fa-windows"></i> <span id="inst-dual-title">Dual Boot Guide</span></h2>
+                            <p id="inst-dual-intro">Installing Soplos Linux alongside Windows is fully supported. Follow
+                                these specific steps
+                                for a successful dual boot setup:</p>
+
+                            <h3 id="inst-dual-prep-title">1. Prepare Windows</h3>
+                            <ul>
+                                <li id="inst-dual-prep-1"><strong>Disable Fast Startup:</strong> In Windows Control
+                                    Panel → Power Options →
+                                    Choose what the power buttons do → Uncheck "Turn on fast startup".</li>
+                                <li id="inst-dual-prep-2"><strong>Disable Secure Boot:</strong> In your BIOS/UEFI
+                                    settings (optional but
+                                    recommended if you face issues).</li>
+                                <li id="inst-dual-prep-3"><strong>Free up Space:</strong> Use Windows Disk Management to
+                                    shrink your C: drive
+                                    and create at least 30GB of "Unallocated Space".</li>
+                            </ul>
+
+                            <h3 id="inst-dual-inst-title">2. Installation</h3>
+                            <ul>
+                                <li id="inst-dual-inst-1">Boot Soplos Linux USB.</li>
+                                <li id="inst-dual-inst-2">Launch the installer.</li>
+                                <li id="inst-dual-inst-3">At the <strong>Partitions</strong> step, select
+                                    <strong>"Install
+                                        alongside"</strong>.
+                                </li>
+                                <li id="inst-dual-inst-4">The installer will automatically detect the unallocated space
+                                    and install Soplos
+                                    there.</li>
+                                <li id="inst-dual-inst-5">Alternatively, choose <strong>"Manual partitioning"</strong>
+                                    to create partitions
+                                    yourself in the free space.</li>
+                            </ul>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong id="inst-dual-warn-label">BitLocker:</strong> <span
+                                        id="inst-dual-warn-text">If your Windows drive is encrypted with BitLocker, you
+                                        must disable it or provide the recovery key to mount the drive in Linux.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- First Boot -->
+                        <section id="first-boot" class="content-section">
+                            <h2><i class="fas fa-rocket"></i> <span id="inst-first-title">First Boot</span></h2>
+
+                            <p id="inst-first-intro">Congratulations! You've successfully installed Soplos Linux. Here's
+                                what happens next:
+                            </p>
+
+                            <div class="first-boot-steps">
+                                <div class="boot-step">
+                                    <h4 id="inst-first-step1-title"><i class="fas fa-power-off"></i> Restart Your
+                                        Computer</h4>
+                                    <p id="inst-first-step1-desc">Remove the USB drive and restart your computer. Soplos
+                                        Linux should boot
+                                        automatically.</p>
+                                </div>
+
+                                <div class="boot-step">
+                                    <h4 id="inst-first-step2-title"><i class="fas fa-user"></i> Login</h4>
+                                    <p id="inst-first-step2-desc">Use the username and password you created during
+                                        installation to log in.</p>
+                                </div>
+
+                                <div class="boot-step">
+                                    <h4 id="inst-first-step3-title"><i class="fas fa-magic"></i> Welcome Screen</h4>
+                                    <p id="inst-first-step3-desc">The Soplos Welcome application will guide you through
+                                        initial setup and
+                                        customization.</p>
+                                </div>
+
+                                <div class="boot-step">
+                                    <h4 id="inst-first-step4-title"><i class="fas fa-sync"></i> System Updates</h4>
+                                    <p id="inst-first-step4-desc">Check for and install system updates to ensure you
+                                        have the latest features and
+                                        security patches.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box success">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong id="inst-first-success-label">Success!</strong> <span
+                                        id="inst-first-success-text">You're now running Soplos Linux. Check out our <a
+                                            href="../start/">First Steps guide</a> for tips on getting started.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Troubleshooting -->
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-tools"></i> <span id="inst-trouble-title">Troubleshooting</span></h2>
+
+                            <div class="troubleshooting-grid">
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-boot-title"><i class="fas fa-exclamation-circle"></i> Boot
+                                        Issues</h4>
+                                    <ul>
+                                        <li id="inst-trouble-boot-1">Check if Secure Boot is disabled in BIOS/UEFI</li>
+                                        <li id="inst-trouble-boot-2">Ensure USB is set as first boot device</li>
+                                        <li id="inst-trouble-boot-3">Try different USB ports</li>
+                                        <li id="inst-trouble-boot-4">Recreate the installation media</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-net-title"><i class="fas fa-wifi"></i> Network Problems</h4>
+                                    <ul>
+                                        <li id="inst-trouble-net-1">Check if network adapter is recognized</li>
+                                        <li id="inst-trouble-net-2">Try ethernet connection if Wi-Fi fails</li>
+                                        <li id="inst-trouble-net-3">Update network drivers after installation</li>
+                                        <li id="inst-trouble-net-4">Check router compatibility</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-disp-title"><i class="fas fa-display"></i> Display Issues</h4>
+                                    <ul>
+                                        <li id="inst-trouble-disp-1">Use safe graphics mode during boot</li>
+                                        <li id="inst-trouble-disp-2">Install proprietary graphics drivers</li>
+                                        <li id="inst-trouble-disp-3">Check monitor connection</li>
+                                        <li id="inst-trouble-disp-4">Try different resolution settings</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-stor-title"><i class="fas fa-hdd"></i> Storage Problems</h4>
+                                    <ul>
+                                        <li id="inst-trouble-stor-1">Ensure sufficient disk space (20GB minimum)</li>
+                                        <li id="inst-trouble-stor-2">Check if hard drive is healthy</li>
+                                        <li id="inst-trouble-stor-3">Try manual partitioning</li>
+                                        <li id="inst-trouble-stor-4">Disable fast startup on Windows (dual boot)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="help-section">
+                                <h4 id="inst-trouble-help-title"><i class="fas fa-life-ring"></i> Need More Help?</h4>
+                                <p id="inst-trouble-help-intro">If you encounter issues not covered here:</p>
+                                <ul>
+                                    <li id="inst-trouble-help-1">Check our <a href="../faq/">FAQ section</a> for common
+                                        questions</li>
+                                    <li id="inst-trouble-help-2">Visit our <a href="/forums/">community forums</a> for
+                                        support</li>
+                                    <li id="inst-trouble-help-3">Report bugs on our <a
+                                            href="https://github.com/SoplosLinux" target="_blank">GitHub repository</a>
+                                    </li>
+                                    <li id="inst-trouble-help-4">Contact us through our <a
+                                            href="../../#community">social media channels</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

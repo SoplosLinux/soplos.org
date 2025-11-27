@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyron (XFCE) Guide - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Complete guide for Soplos Tyron with XFCE desktop environment - customization, features, and optimization tips.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../index.html#inicio"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="tyron-breadcrumb">Tyron (XFCE) Guide</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><i class="fas fa-desktop"></i> <span id="tyron-hero-title">Soplos Tyron (XFCE) Guide</span></h1>
+                        <p id="tyron-hero-desc">Complete guide for the lightweight and efficient XFCE desktop environment
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Content -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="tyron-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#overview" id="tyron-toc-1">Overview</a></li>
+                            <li><a href="#interface" id="tyron-toc-2">Interface Tour</a></li>
+                            <li><a href="#customization" id="tyron-toc-3">Customization</a></li>
+                            <li><a href="#applications" id="tyron-toc-4">Default Applications</a></li>
+                            <li><a href="#soplos-apps" id="tyron-toc-5">Soplos Exclusive Apps</a></li>
+                            <li><a href="#performance" id="tyron-toc-6">Performance Tips</a></li>
+                            <li><a href="#troubleshooting" id="tyron-toc-7">Common Issues</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <!-- Overview -->
+                        <section id="overview" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="tyron-overview-title">Overview</span></h2>
+
+                            <p id="tyron-overview-intro">Soplos Tyron is the lightweight variant of Soplos Linux,
+                                featuring the <strong>XFCE
+                                    desktop environment</strong>. It's designed for users who prioritize performance,
+                                efficiency, and simplicity while maintaining a modern and attractive interface.</p>
+
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-tachometer-alt"></i> <span id="tyron-feat-perf-title">Performance Focused</span></h3>
+                                    <p id="tyron-feat-perf-desc">Optimized for speed and low resource usage. Perfect for
+                                        older hardware or users
+                                        who want maximum performance.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-sliders-h"></i> <span id="tyron-feat-custom-title">Highly Customizable</span></h3>
+                                    <p id="tyron-feat-custom-desc">XFCE's modular design allows extensive customization
+                                        without sacrificing
+                                        stability or performance.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-heart"></i> <span id="tyron-feat-friendly-title">User Friendly</span></h3>
+                                    <p id="tyron-feat-friendly-desc">Familiar interface design that's easy to use for
+                                        both Linux newcomers and
+                                        experienced users.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-battery-full"></i> <span id="tyron-feat-battery-title">Battery Efficient</span></h3>
+                                    <p id="tyron-feat-battery-desc">Excellent for laptops with longer battery life
+                                        thanks to optimized power
+                                        management.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-lightbulb"></i>
+                                <div id="tyron-overview-info">
+                                    <strong>Perfect for:</strong> Older computers, laptops, users who prefer snappy
+                                    performance, minimalist setups, and anyone who values efficiency over visual
+                                    effects.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Interface Tour -->
+                        <section id="interface" class="content-section">
+                            <h2><i class="fas fa-eye"></i> <span id="tyron-interface-title">Interface Tour</span></h2>
+
+                            <h3 id="tyron-interface-layout-title">Desktop Layout</h3>
+                            <p id="tyron-interface-layout-intro">Tyron features a clean, minimalist desktop layout
+                                optimized for efficiency:</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-desktop"></i> <span id="tyron-interface-clean-title">Clean
+                                            Desktop</span></h4>
+                                    <p id="tyron-interface-clean-desc">Minimal desktop interface focused on
+                                        productivity. Clean workspace without
+                                        unnecessary elements, allowing applications to take center stage.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-th"></i> <span id="tyron-interface-menu-title">Applications
+                                            Menu</span></h4>
+                                    <p id="tyron-interface-menu-desc">Whisker Menu provides quick access to all
+                                        applications with search functionality
+                                        and favorites section. Accessible via keyboard shortcut or desktop interaction.
+                                    </p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-folder"></i> <span id="tyron-interface-file-title">File
+                                            Manager</span></h4>
+                                    <p id="tyron-interface-file-desc">Thunar file manager offers fast navigation, tabs,
+                                        custom actions, and plugin
+                                        support for efficient file management.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-cogs"></i> <span id="tyron-interface-system-title">System
+                                            Access</span></h4>
+                                    <p id="tyron-interface-system-desc">Right-click desktop for quick access to
+                                        settings, applications, and system
+                                        configuration options.</p>
+                                </div>
+                            </div>
+
+                            <h3 id="tyron-interface-docklike-title">Soplos Docklike</h3>
+                            <p id="tyron-interface-docklike-intro">Tyron includes the exclusive <strong>Soplos
+                                    Docklike</strong> application:</p>
+
+                            <div class="info-box success">
+                                <i class="fas fa-star"></i>
+                                <div id="tyron-interface-docklike-desc">
+                                    <strong>Soplos Docklike</strong> is a graphical tool designed to manage and organize
+                                    icons in the XFCE panel's Docklike plugin. It provides an intuitive interface for
+                                    customizing your dock-style panel, organizing applications, and creating a modern
+                                    desktop experience. Access it through the applications menu or Soplos Welcome.
+                                </div>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-magic"></i>
+                                <div id="tyron-interface-custom-info">
+                                    <strong>Customizable Interface:</strong> While Tyron comes with a minimal default
+                                    setup, you can easily add panels, widgets, or keep the clean Docklike interface
+                                    based on your preferences through XFCE's configuration tools.
+                                </div>
+                            </div>
+
+                            <h3>Screenshots</h3>
+                            <p>Example Tyron screenshots from the ISO:</p>
+                            <div class="screenshot-row">
+                                <img src="../../images/Tyron/tyron/004-Desktop-01.png" alt="Tyron Desktop"
+                                    style="max-width:48%; margin-right:1rem;">
+                                <img src="../../images/Tyron/welcome/001-welcome.png" alt="Tyron Welcome"
+                                    style="max-width:48%;">
+                            </div>
+
+                            <!-- single-row gallery matches Tyson: no extra images -->
+                        </section>
+
+                        <!-- Customization -->
+                        <section id="customization" class="content-section">
+                            <h2><i class="fas fa-paint-brush"></i> <span id="tyron-custom-title">Customization</span></h2>
+
+                            <h3 id="tyron-custom-appear-title">Appearance Settings</h3>
+                            <p id="tyron-custom-appear-intro">Access appearance settings through <strong>Settings
+                                    Manager → Appearance</strong>:</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-palette"></i> <span
+                                            id="tyron-custom-themes-title">Themes</span></h4>
+                                    <ul>
+                                        <li id="tyron-custom-themes-1">Pre-installed Soplos themes optimized for XFCE
+                                        </li>
+                                        <li id="tyron-custom-themes-2">Use <strong>Soplos Theme Manager</strong> for
+                                            easy switching</li>
+                                        <li id="tyron-custom-themes-3">Download additional themes from xfce-look.org
+                                        </li>
+                                        <li id="tyron-custom-themes-4">Dark and light variants available</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-icons"></i> <span id="tyron-custom-icons-title">Icons</span>
+                                    </h4>
+                                    <ul>
+                                        <li id="tyron-custom-icons-1">Multiple icon sets included</li>
+                                        <li id="tyron-custom-icons-2">Consistent Soplos icon theme</li>
+                                        <li id="tyron-custom-icons-3">Support for custom icon themes</li>
+                                        <li id="tyron-custom-icons-4">Scalable SVG icons for crisp display</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-font"></i> <span id="tyron-custom-fonts-title">Fonts</span>
+                                    </h4>
+                                    <ul>
+                                        <li id="tyron-custom-fonts-1">Optimized font rendering</li>
+                                        <li id="tyron-custom-fonts-2">System-wide font configuration</li>
+                                        <li id="tyron-custom-fonts-3">Subpixel hinting support</li>
+                                        <li id="tyron-custom-fonts-4">Easy font size adjustment</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-image"></i> <span
+                                            id="tyron-custom-wallpaper-title">Wallpapers</span></h4>
+                                    <ul>
+                                        <li id="tyron-custom-wallpaper-1">Curated Soplos wallpaper collection</li>
+                                        <li id="tyron-custom-wallpaper-2">Slideshow and rotation support</li>
+                                        <li id="tyron-custom-wallpaper-3">Custom wallpaper support</li>
+                                        <li id="tyron-custom-wallpaper-4">Multiple monitor configurations</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 id="tyron-custom-desktop-title">Desktop Customization</h3>
+                            <p id="tyron-custom-desktop-intro">Customize your desktop interface through XFCE settings:
+                            </p>
+
+                            <div class="code-example">
+                                <h4 id="tyron-custom-options-title">Interface Customization Options</h4>
+                                <ul>
+                                    <li id="tyron-custom-options-1"><strong>Add panels:</strong> Create custom panels if
+                                        desired (top, bottom, left,
+                                        or right)</li>
+                                    <li id="tyron-custom-options-2"><strong>Desktop icons:</strong> Enable/disable and
+                                        configure desktop icons</li>
+                                    <li id="tyron-custom-options-3"><strong>Soplos Docklike:</strong> Use the elegant
+                                        dock interface as default</li>
+                                    <li id="tyron-custom-options-4"><strong>Shortcuts:</strong> Configure keyboard
+                                        shortcuts for quick access</li>
+                                    <li id="tyron-custom-options-5"><strong>Workspaces:</strong> Set up multiple virtual
+                                        desktops</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-magic"></i>
+                                <div id="tyron-custom-tip">
+                                    <strong>Pro Tip:</strong> Use Soplos Theme Manager (available in Soplos Welcome) to
+                                    quickly switch between different appearance configurations with one click.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Default Applications -->
+                        <section id="applications" class="content-section">
+                            <h2><i class="fas fa-th-large"></i> <span id="tyron-apps-title">Default Applications</span></h2>
+
+                            <p id="tyron-apps-intro">Tyron comes with a carefully selected set of lightweight, efficient
+                                applications
+                                optimized for performance and usability. The exact application selection is designed to
+                                provide essential functionality while maintaining system responsiveness.</p>
+
+                            <div class="info-box info">
+                                <i class="fas fa-download"></i>
+                                <div id="tyron-apps-need">
+                                    <strong>Need more applications?</strong> Use Soplos Welcome → Software tab to access
+                                    additional software centers, or browse Soplos Welcome → Recommended tab for curated
+                                    application suggestions. You can install any additional software you need through
+                                    these convenient interfaces.
+                                </div>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div id="tyron-apps-mgmt">
+                                    <strong>Application Management:</strong> All software installation and management is
+                                    handled through Soplos Welcome, which provides access to multiple package managers
+                                    including APT, Flatpak, and Snap, as well as graphical software centers.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Soplos Exclusive Apps -->
+                        <section id="soplos-apps" class="content-section">
+                            <h2><i class="fas fa-gem"></i> <span id="tyron-soplos-title">Soplos Exclusive Applications</span></h2>
+
+                            <p id="tyron-soplos-intro">Tyron includes several exclusive Soplos applications accessible
+                                through <strong>Soplos
+                                    Welcome</strong>:</p>
+
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome"
+                                            style="width: 48px; height: 48px;"> <span id="tyron-soplos-welcome-title">Soplos Welcome</span></h3>
+                                    <p id="tyron-soplos-welcome-desc">Welcome application that guides new users through
+                                        initial setup and
+                                        customization. Features include software installation, desktop customization,
+                                        hardware detection, driver installation, and access to help resources.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.welcomelive.png"
+                                            alt="Soplos Welcome Live" style="width: 48px; height: 48px;"> <span id="tyron-soplos-live-title">Soplos Welcome Live</span></h3>
+                                    <p id="tyron-soplos-live-desc">Live-ISO variant of Soplos Welcome used on the
+                                        installer image to choose
+                                        language, test hardware and launch the Calamares installer.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.docklike.png" alt="Soplos Docklike"
+                                            style="width: 48px; height: 48px;"> <span id="tyron-soplos-docklike-title">Soplos Docklike</span></h3>
+                                    <p id="tyron-soplos-docklike-desc">Graphical tool to manage and organize icons in
+                                        the XFCE panel's Docklike plugin.
+                                        Provides an elegant dock-style interface with easy application organization and
+                                        customization.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor"
+                                            style="width: 48px; height: 48px;"> <span id="tyron-soplos-grub-title">Soplos GRUB Editor</span></h3>
+                                    <p id="tyron-soplos-grub-desc">Advanced graphical GTK3 editor for GRUB2
+                                        configuration. Features visual editing,
+                                        theme management, custom fonts, backgrounds, boot entries, kernel parameters,
+                                        and automatic backups.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.plymouthmanager.png"
+                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-plymouth-title">Soplos Plymouth Manager</span></h3>
+                                    <p id="tyron-soplos-plymouth-desc">Boot splash screen manager for customizing
+                                        Plymouth themes. Install, preview, and
+                                        apply beautiful boot animations with an intuitive graphical interface.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.thememanager.png"
+                                            alt="Soplos Theme Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-theme-title">Soplos Theme Manager</span></h3>
+                                    <p id="tyron-soplos-theme-desc">Simple and intuitive desktop theme manager. Create,
+                                        save, and apply complete
+                                        desktop themes easily with support for multiple desktop styles and full XFCE
+                                        integration.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.reposelector.png"
+                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;"> <span id="tyron-soplos-repo-title">Soplos Repo Selector</span></h3>
+                                    <p id="tyron-soplos-repo-desc">Repository management tool for switching between
+                                        software sources, finding
+                                        fastest mirrors, and enabling additional repositories with a user-friendly
+                                        interface.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box success">
+                                <i class="fas fa-star"></i>
+                                <div id="tyron-soplos-exclusive">
+                                    <strong>Exclusive to Tyron:</strong> Soplos Docklike is specifically designed for
+                                    XFCE and provides a beautiful dock experience that enhances the traditional panel
+                                    system.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Performance Tips -->
+                        <section id="performance" class="content-section">
+                            <h2><i class="fas fa-rocket"></i> <span id="tyron-perf-title">Performance Tips</span></h2>
+
+                            <p id="tyron-perf-intro">Maximize Tyron's performance with these optimization techniques:
+                            </p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-memory"></i> <span id="tyron-perf-mem-title">Memory
+                                            Optimization</span></h4>
+                                    <ul>
+                                        <li id="tyron-perf-mem-1">Disable compositor for maximum performance</li>
+                                        <li id="tyron-perf-mem-2">Reduce startup applications</li>
+                                        <li id="tyron-perf-mem-3">Use lightweight alternatives when available</li>
+                                        <li id="tyron-perf-mem-4">Close unused applications regularly</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-desktop"></i> <span id="tyron-perf-visual-title">Visual
+                                            Effects</span></h4>
+                                    <ul>
+                                        <li id="tyron-perf-visual-1">Disable window animations for speed</li>
+                                        <li id="tyron-perf-visual-2">Use simple window decorations</li>
+                                        <li id="tyron-perf-visual-3">Reduce panel plugins</li>
+                                        <li id="tyron-perf-visual-4">Choose lightweight themes</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-hdd"></i> <span id="tyron-perf-storage-title">Storage
+                                            Management</span></h4>
+                                    <ul>
+                                        <li id="tyron-perf-storage-1">Clean package cache regularly</li>
+                                        <li id="tyron-perf-storage-2">Remove unused packages</li>
+                                        <li id="tyron-perf-storage-3">Use disk cleanup tools</li>
+                                        <li id="tyron-perf-storage-4">Monitor disk usage</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-microchip"></i> <span id="tyron-perf-system-title">System
+                                            Tuning</span></h4>
+                                    <ul>
+                                        <li id="tyron-perf-system-1">Try performance kernels (Liquorix, XanMod)</li>
+                                        <li id="tyron-perf-system-2">Adjust swappiness for SSD systems</li>
+                                        <li id="tyron-perf-system-3">Configure power management</li>
+                                        <li id="tyron-perf-system-4">Update system regularly</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <h4>Quick Performance Commands</h4>
+                                <pre><code># Clean package cache
+sudo apt autoclean
+
+# Remove unused packages
+sudo apt autoremove
+
+# Check system resources
+htop
+
+# Check disk usage
+df -h
+
+# Monitor memory usage
+free -h</code></pre>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div id="tyron-perf-tip">
+                                    <strong>Advanced:</strong> Access performance kernels through Soplos Welcome →
+                                    Kernels tab. Liquorix and XanMod kernels can provide significant performance
+                                    improvements for desktop use.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Common Issues -->
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-wrench"></i> <span id="tyron-trouble-title">Common Issues</span></h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="tyron-trouble-q1">Panel disappeared
+                                        or corrupted</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="tyron-trouble-a1">Reset the panel configuration:</p>
+                                    <div class="code-example">
+                                        <pre><code># Reset XFCE panel
+xfce4-panel --quit
+pkill xfconfd
+rm -rf ~/.config/xfce4/panel
+rm -rf ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+xfce4-panel &</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="tyron-trouble-q2">Desktop icons not
+                                        showing</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="tyron-trouble-a2-intro">Enable desktop icons in settings:</p>
+                                    <ol>
+                                        <li id="tyron-trouble-a2-1">Right-click on desktop → Desktop Settings</li>
+                                        <li id="tyron-trouble-a2-2">Go to Icons tab</li>
+                                        <li id="tyron-trouble-a2-3">Check "Show desktop icons"</li>
+                                        <li id="tyron-trouble-a2-4">Configure which icons to display</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="tyron-trouble-q3">Slow performance
+                                        issues</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="tyron-trouble-a3-intro">Try these performance fixes:</p>
+                                    <ol>
+                                        <li id="tyron-trouble-a3-1">Disable compositor: Settings → Window Manager Tweaks
+                                            → Compositor</li>
+                                        <li id="tyron-trouble-a3-2">Reduce startup applications: Settings → Session and
+                                            Startup</li>
+                                        <li id="tyron-trouble-a3-3">Check system resources with Task Manager</li>
+                                        <li id="tyron-trouble-a3-4">Clean system:
+                                            <code>sudo apt autoremove && sudo apt autoclean</code>
+                                        </li>
+                                        <li id="tyron-trouble-a3-5">Consider switching to a lightweight theme</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="tyron-trouble-q4">Applications not
+                                        appearing in menu</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="tyron-trouble-a4-intro">Refresh the applications menu:</p>
+                                    <ol>
+                                        <li id="tyron-trouble-a4-1">Right-click on Applications menu</li>
+                                        <li id="tyron-trouble-a4-2">Select "Edit Applications"</li>
+                                        <li id="tyron-trouble-a4-3">Or restart the session: Log out and back in</li>
+                                        <li id="tyron-trouble-a4-4">For manual refresh:
+                                            <code>update-desktop-database</code>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div id="tyron-trouble-help">
+                                    <strong>Need more help?</strong> Check the troubleshooting section in the wiki or
+                                    ask on the community forums for help with specific hardware.
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <!-- FAQ JavaScript for collapsible sections -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

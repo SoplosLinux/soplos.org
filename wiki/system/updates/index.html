@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Updates - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Guide to keeping your Soplos Linux system updated using Soplos Welcome or the terminal.">
+    <meta name="keywords" content="soplos, linux, updates, update, upgrade, apt, soplos welcome">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="System Updates - Soplos Linux Wiki">
+    <meta property="og:description" content="Learn how to keep your Soplos Linux system secure and up to date.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../#inicio">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="upd-breadcrumb">System Updates</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-sync-alt"></i> <span id="upd-title">System Updates</span></h1>
+                    <p id="upd-subtitle">Guide to keeping your Soplos Linux system updated using Soplos Welcome or the
+                        terminal.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="upd-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#intro" id="upd-toc-intro">Introduction</a></li>
+                            <li><a href="#understanding" id="upd-toc-understanding">Understanding Updates</a></li>
+                            <li><a href="#soplos-welcome" id="upd-toc-soplos">Using Soplos Welcome</a></li>
+                            <li><a href="#terminal" id="upd-toc-terminal">Using Terminal</a></li>
+                            <li><a href="#troubleshooting" id="upd-toc-troubleshooting">Troubleshooting</a></li>
+                            <li><a href="#automatic" id="upd-toc-automatic">Automatic Updates</a></li>
+                            <li><a href="#frequency" id="upd-toc-frequency">Update Frequency</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <section id="intro" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="upd-intro-title">Introduction</span></h2>
+                            <p id="upd-intro-desc">Keeping your Soplos Linux system updated is crucial for security,
+                                stability, and to enjoy
+                                the latest software features. Being based on <strong>Debian Testing</strong>, Soplos
+                                receives frequent package updates.</p>
+                        </section>
+
+                        <section id="understanding" class="content-section">
+                            <h2><i class="fas fa-lightbulb"></i> <span id="upd-under-title">Understanding Updates</span>
+                            </h2>
+
+                            <h3 id="upd-under-what-title">What Gets Updated?</h3>
+                            <p id="upd-under-what-desc">When you update your Soplos Linux system, several components may
+                                receive updates:</p>
+                            <ul>
+                                <li id="upd-under-what-1"><strong>System Packages:</strong> Core operating system
+                                    components and libraries
+                                </li>
+                                <li id="upd-under-what-2"><strong>Applications:</strong> Installed software and user
+                                    programs</li>
+                                <li id="upd-under-what-3"><strong>Linux Kernel:</strong> The core of the operating
+                                    system</li>
+                                <li id="upd-under-what-4"><strong>Drivers:</strong> Hardware support and firmware</li>
+                                <li id="upd-under-what-5"><strong>Security Patches:</strong> Critical fixes for
+                                    vulnerabilities</li>
+                            </ul>
+
+                            <h3 id="upd-under-types-title">Types of Updates</h3>
+                            <div class="info-box info">
+                                <i class="fas fa-shield-alt"></i>
+                                <div id="upd-under-types-info">
+                                    <strong>Security Updates:</strong> High-priority updates that fix security
+                                    vulnerabilities.
+                                    These should be installed as soon as possible to protect your system.
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li id="upd-under-types-1"><strong>Security Updates:</strong> Fix vulnerabilities and
+                                    security issues</li>
+                                <li id="upd-under-types-2"><strong>Bug Fixes:</strong> Resolve problems and improve
+                                    stability</li>
+                                <li id="upd-under-types-3"><strong>Feature Updates:</strong> Add new functionality to
+                                    software</li>
+                                <li id="upd-under-types-4"><strong>Version Upgrades:</strong> Major version changes with
+                                    new features</li>
+                            </ul>
+
+                            <h3 id="upd-under-rolling-title">Debian Testing & Rolling Release</h3>
+                            <p id="upd-under-rolling-desc">Soplos Linux is based on Debian Testing, which follows a
+                                <strong>partial rolling
+                                    release</strong>
+                                model. This means:
+                            </p>
+                            <ul>
+                                <li id="upd-under-rolling-1">You receive newer software versions more frequently than
+                                    stable distributions</li>
+                                <li id="upd-under-rolling-2">Updates are tested but may occasionally introduce minor
+                                    issues</li>
+                                <li id="upd-under-rolling-3">No need for major distribution upgrades - your system
+                                    evolves continuously</li>
+                                <li id="upd-under-rolling-4">Balance between cutting-edge and stability</li>
+                            </ul>
+                        </section>
+
+                        <section id="soplos-welcome" class="content-section">
+                            <h3 id="upd-soplos-title">Graphical Method: Soplos Welcome</h3>
+                            <p id="upd-soplos-desc">The easiest way to update your system is through the <strong>Soplos
+                                    Welcome</strong>
+                                tool, which comes pre-installed on all editions (Tyron, Tyson, and Boro).</p>
+
+                            <figure style="margin: 30px 0;">
+                                <img src="../../../images/Tyron/welcome/002-software.png"
+                                    alt="Soplos Welcome - Software Tab"
+                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                <figcaption
+                                    style="text-align: center; margin-top: 10px; color: var(--text-muted, #6c757d); font-size: 0.9rem;"
+                                    id="upd-soplos-caption">
+                                    Soplos Welcome Software tab showing Update and Upgrade buttons
+                                </figcaption>
+                            </figure>
+
+                            <div class="step-list">
+                                <ul>
+                                    <li id="upd-soplos-step1">Open <strong>Soplos Welcome</strong> from the applications
+                                        menu.</li>
+                                    <li id="upd-soplos-step2">Go to the <strong>Software</strong> tab.</li>
+                                    <li><span id="upd-soplos-step3">You will find two main buttons at the top:</span>
+                                        <ul>
+                                            <li id="upd-soplos-step3a"><strong>Update Repositories:</strong> Refreshes
+                                                the list of available
+                                                packages (equivalent to <code>apt update</code>).</li>
+                                            <li id="upd-soplos-step3b"><strong>Upgrade All:</strong> Installs all
+                                                available updates for your
+                                                system
+                                                and applications (equivalent to <code>apt upgrade</code>).</li>
+                                        </ul>
+                                    </li>
+                                    <li id="upd-soplos-step4">Click "Update Repositories" first and wait for it to
+                                        finish.</li>
+                                    <li id="upd-soplos-step5">Then click "Upgrade All" to apply the changes.</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div id="upd-soplos-note">
+                                    <strong>Note:</strong> You will be asked for your administrator (root/sudo) password
+                                    to perform these actions.
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="terminal" class="content-section">
+                            <h3 id="upd-term-title">Advanced Method: Terminal</h3>
+                            <p id="upd-term-desc">If you prefer full control or are used to Debian/Ubuntu, you can use
+                                the terminal. Soplos
+                                Linux uses the <strong>APT</strong> package manager.</p>
+
+                            <h4 id="upd-term-basic-title">Basic Commands</h4>
+                            <p id="upd-term-basic-desc">Open your favorite terminal and run:</p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label1">Terminal</h4>
+                                <pre><code>sudo apt update && sudo apt upgrade -y</code></pre>
+                            </div>
+
+                            <ul>
+                                <li id="upd-term-basic-1"><code>sudo apt update</code>: Refreshes the repository list.
+                                </li>
+                                <li id="upd-term-basic-2"><code>sudo apt upgrade</code>: Installs the newest versions of
+                                    installed packages.
+                                </li>
+                                <li id="upd-term-basic-3"><code>-y</code>: Automatically accepts confirmations
+                                    (optional).</li>
+                            </ul>
+
+                            <h4 id="upd-term-output-title">Understanding APT Output</h4>
+                            <p id="upd-term-output-desc">When you run <code>apt upgrade</code>, you'll see output like
+                                this:</p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label2">Example Output</h4>
+                                <pre><code>Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  firefox libc6 python3
+3 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.</code></pre>
+                            </div>
+
+                            <p id="upd-term-output-explain">Here's what each line means:</p>
+                            <ul>
+                                <li id="upd-term-output-1"><strong>X upgraded:</strong> Number of packages that will be
+                                    updated</li>
+                                <li id="upd-term-output-2"><strong>Y newly installed:</strong> New packages required as
+                                    dependencies</li>
+                                <li id="upd-term-output-3"><strong>Z to remove:</strong> Packages that need to be
+                                    removed</li>
+                                <li id="upd-term-output-4"><strong>N not upgraded:</strong> Packages that are "kept
+                                    back" (see Troubleshooting)
+                                </li>
+                            </ul>
+
+                            <h4 id="upd-term-full-title">Full Upgrade</h4>
+                            <p id="upd-term-full-desc">Sometimes you may need to use <code>full-upgrade</code> instead
+                                of <code>upgrade</code>:
+                            </p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label3">Terminal</h4>
+                                <pre><code>sudo apt full-upgrade</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div id="upd-term-full-warn">
+                                    <strong>Difference:</strong> <code>apt upgrade</code> never removes packages, while
+                                    <code>apt full-upgrade</code> can install or remove packages if needed to complete
+                                    the upgrade.
+                                    Use <code>full-upgrade</code> when packages are kept back.
+                                </div>
+                            </div>
+
+                            <h4 id="upd-term-clean-title">Cleanup (Optional)</h4>
+                            <p id="upd-term-clean-desc">To remove packages that are no longer needed (orphaned
+                                dependencies):</p>
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label4">Terminal</h4>
+                                <pre><code>sudo apt autoremove</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-tools"></i> <span id="upd-trb-title">Troubleshooting Common
+                                    Issues</span></h2>
+
+                            <h3 id="upd-trb-held-title">Held/Kept Back Packages</h3>
+                            <p id="upd-trb-held-desc">If you see packages "kept back" during an upgrade:</p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label5">Example</h4>
+                                <pre><code>The following packages have been kept back:
+  linux-image-amd64 linux-headers-amd64
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.</code></pre>
+                            </div>
+
+                            <p id="upd-trb-held-sol"><strong>Solution:</strong> Use <code>sudo apt full-upgrade</code>
+                                to install these
+                                packages.</p>
+
+                            <h3 id="upd-trb-dep-title">Dependency Conflicts</h3>
+                            <p id="upd-trb-dep-desc">If you encounter dependency issues:</p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label6">Terminal</h4>
+                                <pre><code># Try to fix broken dependencies
+sudo apt --fix-broken install
+
+# If that doesn't work, try:
+sudo dpkg --configure -a
+sudo apt update
+sudo apt upgrade</code></pre>
+                            </div>
+
+                            <h3 id="upd-trb-lock-title">Locked Database</h3>
+                            <p id="upd-trb-lock-desc">Error: "Could not get lock /var/lib/dpkg/lock"</p>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div id="upd-trb-lock-warn">
+                                    <strong>Important:</strong> Make sure no other package manager is running (including
+                                    Soplos Welcome) before proceeding.
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label7">Terminal</h4>
+                                <pre><code># Check if apt is running
+ps aux | grep apt
+
+# If nothing important is running, remove the lock:
+sudo rm /var/lib/dpkg/lock
+sudo rm /var/lib/dpkg/lock-frontend
+sudo dpkg --configure -a</code></pre>
+                            </div>
+
+                            <h3 id="upd-trb-failed-title">Failed Updates</h3>
+                            <p id="upd-trb-failed-desc">If an update fails midway:</p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label8">Terminal</h4>
+                                <pre><code># Reconfigure failed packages
+sudo dpkg --configure -a
+
+# Clean package cache
+sudo apt clean
+
+# Try updating again
+sudo apt update
+sudo apt upgrade</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="automatic" class="content-section">
+                            <h2><i class="fas fa-clock"></i> <span id="upd-auto-title">Automatic Updates</span>
+                            </h2>
+
+                            <p id="upd-auto-desc">You can configure automatic security updates using
+                                <code>unattended-upgrades</code>:
+                            </p>
+
+                            <div class="code-example">
+                                <h4 id="upd-term-cmd-label9">Terminal</h4>
+                                <pre><code># Install unattended-upgrades
+sudo apt install unattended-upgrades
+
+# Enable automatic updates
+sudo dpkg-reconfigure -plow unattended-upgrades</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div id="upd-auto-warn">
+                                    <strong>Debian Testing Consideration:</strong> Since Soplos is based on Debian
+                                    Testing,
+                                    automatic updates should be configured carefully. It's generally recommended to
+                                    review
+                                    updates manually to avoid potential issues with large changes.
+                                </div>
+                            </div>
+
+                            <p id="upd-auto-recommend">For most users, <strong>manual updates are recommended</strong>
+                                to maintain better
+                                control
+                                over system changes.</p>
+                        </section>
+
+                        <section id="frequency" class="content-section">
+                            <h2><i class="fas fa-calendar-alt"></i> <span id="upd-freq-title">Update Frequency & Best
+                                    Practices</span></h2>
+
+                            <h3 id="upd-freq-sched-title">Recommended Schedule</h3>
+                            <p id="upd-freq-sched-desc">Since Soplos is based on Debian Testing (partial Rolling
+                                Release), it is recommended to
+                                check for updates:</p>
+                            <ul>
+                                <li id="upd-freq-sched-1"><strong>Daily:</strong> Check for security updates</li>
+                                <li id="upd-freq-sched-2"><strong>Weekly:</strong> Perform system updates to keep the
+                                    system current</li>
+                                <li id="upd-freq-sched-3"><strong>Monthly:</strong> Consider using
+                                    <code>apt full-upgrade</code> for major
+                                    updates
+                                </li>
+                                <li id="upd-freq-sched-4"><strong>Before installing new software:</strong> To avoid
+                                    dependency conflicts</li>
+                            </ul>
+
+                            <h3 id="upd-freq-before-title">Before Updating: Checklist</h3>
+                            <ul>
+                                <li id="upd-freq-before-1"><i class="fas fa-check"></i> <strong>Save your work:</strong>
+                                    Close important
+                                    applications</li>
+                                <li id="upd-freq-before-2"><i class="fas fa-check"></i> <strong>Check disk
+                                        space:</strong> Ensure you have at
+                                    least 1-2GB free</li>
+                                <li id="upd-freq-before-3"><i class="fas fa-check"></i> <strong>Review backups:</strong>
+                                    Especially before
+                                    major updates (see <a href="../backup/">Backup</a> section)</li>
+                                <li id="upd-freq-before-4"><i class="fas fa-check"></i> <strong>Time
+                                        permitting:</strong> Don't update when
+                                    working on critical tasks</li>
+                            </ul>
+
+                            <h3 id="upd-freq-after-title">After Updating</h3>
+                            <ul>
+                                <li id="upd-freq-after-1"><strong>Kernel updates:</strong> Reboot if the kernel was
+                                    updated</li>
+                                <li id="upd-freq-after-2"><strong>Service updates:</strong> Some services may need
+                                    restart</li>
+                                <li id="upd-freq-after-3"><strong>Clean cache:</strong> Run
+                                    <code>sudo apt autoremove</code> periodically
+                                </li>
+                            </ul>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div id="upd-freq-warn">
+                                    <strong>Important:</strong> Being a "Testing" base, large updates can sometimes
+                                    arrive.
+                                    It is good practice to have backups (see <a href="../backup/">Backup</a> section)
+                                    before
+                                    performing massive system updates.
+                                </div>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div id="upd-freq-tip">
+                                    <strong>Pro Tip:</strong> Check <code>/var/log/apt/history.log</code> to see your
+                                    update history and troubleshoot issues.
+                                </div>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

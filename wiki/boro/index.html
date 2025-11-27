@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos Linux Boro (GNOME) - Wiki</title>
+    <meta name="description" content="Documentation and user guide for Soplos Linux Boro (GNOME Edition).">
+    <meta name="keywords" content="soplos, linux, boro, gnome, wiki, documentation, guide">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Soplos Linux Boro - GNOME Guide">
+    <meta property="og:description" content="Official documentation for Soplos Linux Boro (GNOME Edition).">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../index.html#inicio"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Boro (GNOME) Guide</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><i class="fas fa-desktop"></i> Soplos Boro (GNOME) Guide</h1>
+                        <p>Complete guide for the modern and elegant GNOME desktop environment</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Content -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#interface">Interface Tour</a></li>
+                            <li><a href="#customization">Customization</a></li>
+                            <li><a href="#applications">Default Applications</a></li>
+                            <li><a href="#soplos-apps">Soplos Exclusive Apps</a></li>
+                            <li><a href="#performance">Performance Tips</a></li>
+                            <li><a href="#troubleshooting">Common Issues</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <!-- Overview -->
+                        <section id="overview" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+
+                            <p>Soplos Boro is the GNOME edition of Soplos Linux, featuring the <strong>GNOME 49
+                                    desktop environment</strong>. Like Tyron and Tyson, it is based on <strong>Debian
+                                    Testing</strong>, offering a perfect balance between stability and updated software.
+                            </p>
+
+                            <div class="feature-grid">
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-paint-brush"></i>
+                                    </div>
+                                    <h3>Visually Stunning</h3>
+                                    <p>Includes an exclusive Soplos Linux customization package and a carefully defined
+                                        selection of GNOME shells to make it visually attractive out of the box.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-sliders-h"></i>
+                                    </div>
+                                    <h3>Highly Customizable</h3>
+                                    <p>GNOME's modern design allows extensive customization through extensions and
+                                        settings.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <h3>User Friendly</h3>
+                                    <p>Familiar interface design that's easy to use for both Linux newcomers and
+                                        experienced users.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-battery-full"></i>
+                                    </div>
+                                    <h3>Battery Efficient</h3>
+                                    <p>Excellent for laptops with longer battery life thanks to optimized power
+                                        management.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <strong>Perfect for:</strong> Older computers, laptops, users who prefer snappy
+                                    performance, minimalist setups, and anyone who values efficiency over visual
+                                    effects.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Interface Tour -->
+                        <section id="interface" class="content-section">
+                            <h2><i class="fas fa-eye"></i> Interface Tour</h2>
+
+                            <h3>Desktop Experience</h3>
+                            <p>Boro offers a polished GNOME 49 experience enhanced by Soplos Linux:</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-desktop"></i> GNOME 49</h4>
+                                    <p>The latest version of the GNOME desktop, providing a modern, distraction-free
+                                        workspace.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-th"></i> Activities Overview</h4>
+                                    <p>Press the Super key to view open windows, workspaces, and the application grid
+                                        all in one place. Search for apps, files, and settings instantly.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-folder"></i> Files (Nautilus)</h4>
+                                    <p>The default file manager designed to be simple and elegant, with support for
+                                        tabs, quick search, and seamless integration with cloud services.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-magic"></i> Exclusive Customization</h4>
+                                    <p>Comes with a specific selection of GNOME shells and themes designed to provide a
+                                        unique and attractive look and feel, exclusive to Soplos Linux.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-magic"></i>
+                                <div>
+                                    <strong>Customizable Interface:</strong> Boro uses <strong>Dash to Panel</strong>
+                                    and <strong>ArcMenu</strong> for a familiar and efficient workflow. You can easily
+                                    customize them using GNOME Extensions and Tweaks.
+                                </div>
+                            </div>
+
+                            <h3>Screenshots</h3>
+                            <p>Example Boro screenshots from the ISO:</p>
+                            <div class="screenshot-row" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                                <img src="../../images/boro/boro/004-desktop.png" alt="Boro Desktop"
+                                    style="max-width: 100%; flex: 1 1 300px;">
+                                <img src="../../images/boro/boro/003-greeter.png" alt="Boro Greeter"
+                                    style="max-width: 100%; flex: 1 1 300px;">
+                            </div>
+                        </section>
+
+                        <!-- Customization -->
+                        <section id="customization" class="content-section">
+                            <h2><i class="fas fa-paint-brush"></i> Customization</h2>
+
+                            <h3>Appearance Settings</h3>
+                            <p>Access appearance settings through <strong>Settings → Appearance</strong>:</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-palette"></i> Themes</h4>
+                                    <ul>
+                                        <li>Pre-installed Soplos themes optimized for GNOME</li>
+                                        <li>Use <strong>GNOME Tweaks</strong> for easy switching</li>
+                                        <li>Download additional themes from gnome-look.org</li>
+                                        <li>Dark and light variants available</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-icons"></i> Icons</h4>
+                                    <ul>
+                                        <li>Multiple icon sets included</li>
+                                        <li>Consistent Soplos icon theme</li>
+                                        <li>Support for custom icon themes</li>
+                                        <li>Scalable SVG icons for crisp display</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-font"></i> Fonts</h4>
+                                    <ul>
+                                        <li>Optimized font rendering</li>
+                                        <li>System-wide font configuration</li>
+                                        <li>Subpixel hinting support</li>
+                                        <li>Easy font size adjustment</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-image"></i> Wallpapers</h4>
+                                    <ul>
+                                        <li>Curated Soplos wallpaper collection</li>
+                                        <li>Custom wallpaper support</li>
+                                        <li>Multiple monitor configurations</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>Desktop Customization</h3>
+                            <p>Boro (GNOME) offers unique customization options:</p>
+                            <ul>
+                                <li><strong>Dash to Panel:</strong> Combine the dash and top bar into a single panel
+                                    (like Windows 10/11). Right-click the panel to configure.</li>
+                                <li><strong>ArcMenu:</strong> A powerful and customizable application menu. Right-click
+                                    the menu icon to choose layouts (Start menu, KRunner style, etc.).</li>
+                                <li><strong>GNOME Extensions:</strong> Use the "Extensions" app to manage pre-installed
+                                    extensions like Dash to Panel, ArcMenu, and more.</li>
+                            </ul>
+                        </section>
+
+                        <!-- Default Applications -->
+                        <section id="applications" class="content-section">
+                            <h2><i class="fas fa-box-open"></i> Default Applications</h2>
+
+                            <p>Boro comes with a curated selection of GNOME applications:</p>
+                            <div class="app-categories">
+                                <div class="app-category">
+                                    <h4><i class="fas fa-globe"></i> Internet</h4>
+                                    <ul>
+                                        <li><strong>Firefox:</strong> Web Browser</li>
+                                        <li><strong>Transmission:</strong> Torrent Client</li>
+                                    </ul>
+                                </div>
+                                <div class="app-category">
+                                    <h4><i class="fas fa-file-alt"></i> Office</h4>
+                                    <ul>
+                                        <li><strong>LibreOffice:</strong> Full Office Suite</li>
+                                        <li><strong>Evince:</strong> Document Viewer</li>
+                                    </ul>
+                                </div>
+                                <div class="app-category">
+                                    <h4><i class="fas fa-music"></i> Multimedia</h4>
+                                    <ul>
+                                        <li><strong>Rhythmbox:</strong> Music Player</li>
+                                        <li><strong>Totem:</strong> Video Player</li>
+                                    </ul>
+                                </div>
+                                <div class="app-category">
+                                    <h4><i class="fas fa-tools"></i> System</h4>
+                                    <ul>
+                                        <li><strong>GParted:</strong> Partition Editor</li>
+                                        <li><strong>GNOME Software:</strong> App Store</li>
+                                        <li><strong>Synaptic:</strong> Package Manager</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-download"></i>
+                                <div>
+                                    <strong>Need more applications?</strong> Use Soplos Welcome → Software tab to access
+                                    additional software centers, or browse Soplos Welcome → Recommended tab for curated
+                                    application suggestions. You can install any additional software you need through
+                                    these convenient interfaces.
+                                </div>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <strong>Application Management:</strong> All software installation and management is
+                                    handled through Soplos Welcome, which provides access to multiple package managers
+                                    including APT, Flatpak, and Snap, as well as graphical software centers.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Soplos Exclusive Apps -->
+                        <!-- Soplos Exclusive Apps -->
+                        <section id="soplos-apps" class="content-section">
+                            <h2><i class="fas fa-star"></i> Soplos Exclusive Apps</h2>
+                            <p>Tools developed by the Soplos team to enhance your experience:</p>
+
+                            <div class="feature-grid">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor"
+                                            style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos GRUB Editor</h3>
+                                    <p>Easily customize your boot menu appearance and settings. Manage entries, fonts,
+                                        and themes visually.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.plymouthmanager.png"
+                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Plymouth Manager</h3>
+                                    <p>Change and preview boot splash themes with a simple click. Customize the startup
+                                        animation.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.reposelector.png"
+                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Repo Selector</h3>
+                                    <p>Select the fastest mirrors for updates and software installation to ensure
+                                        maximum download speeds.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome"
+                                            style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Welcome</h3>
+                                    <p>Your first stop after installation. Install drivers, software, and customize your
+                                        desktop easily.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box success">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <strong>Exclusive to Boro:</strong> Soplos Linux Boro combines the power of GNOME 49
+                                    with the exclusive Soplos customization suite for a unique user experience.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Performance Tips -->
+                        <section id="performance" class="content-section">
+                            <h2><i class="fas fa-rocket"></i> Performance Tips</h2>
+
+                            <p>Maximize Boro's performance with these optimization techniques:</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Optimization</h4>
+                                    <ul>
+                                        <li>Disable animations in GNOME Tweaks</li>
+                                        <li>Reduce startup applications</li>
+                                        <li>Use lightweight alternatives when available</li>
+                                        <li>Close unused applications regularly</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-desktop"></i> Visual Effects</h4>
+                                    <ul>
+                                        <li>Disable window animations for speed</li>
+                                        <li>Use static workspaces if possible</li>
+                                        <li>Disable unused extensions</li>
+                                        <li>Choose lightweight themes</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-hdd"></i> Storage Management</h4>
+                                    <ul>
+                                        <li>Clean package cache regularly</li>
+                                        <li>Remove unused packages</li>
+                                        <li>Use disk cleanup tools</li>
+                                        <li>Monitor disk usage</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-microchip"></i> System Tuning</h4>
+                                    <ul>
+                                        <li>Try performance kernels (Liquorix, XanMod)</li>
+                                        <li>Adjust swappiness for SSD systems</li>
+                                        <li>Configure power management</li>
+                                        <li>Update system regularly</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <h4>Quick Performance Commands</h4>
+                                <pre><code># Clean package cache
+sudo apt autoclean
+
+# Remove unused packages
+sudo apt autoremove
+
+# Check system resources
+htop
+
+# Check disk usage
+df -h
+
+# Monitor memory usage
+free -h</code></pre>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <strong>Advanced:</strong> Access performance kernels through Soplos Welcome →
+                                    Kernels tab. Liquorix and XanMod kernels can provide significant performance
+                                    improvements for desktop use.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Common Issues -->
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-wrench"></i> Common Issues</h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Panel disappeared or corrupted
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Restart GNOME Shell (Wayland):</p>
+                                    <div class="code-example">
+                                        <pre><code># Log out and back in is recommended for Wayland
+# Or restart the session
+gnome-session-quit</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Desktop icons not showing
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Enable desktop icons in settings:</p>
+                                    <ol>
+                                        <li>Right-click on desktop → Desktop Settings</li>
+                                        <li>Go to Icons tab</li>
+                                        <li>Check "Show desktop icons"</li>
+                                        <li>Configure which icons to display</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Slow performance issues
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Try these performance fixes:</p>
+                                    <ol>
+                                        <li>Disable animations: GNOME Tweaks → Appearance</li>
+                                        <li>Reduce startup applications: GNOME Tweaks → Startup Applications</li>
+                                        <li>Check system resources with Task Manager</li>
+                                        <li>Clean system: <code>sudo apt autoremove && sudo apt autoclean</code></li>
+                                        <li>Consider switching to a lightweight theme</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Applications not appearing in menu
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Refresh the applications menu:</p>
+                                    <ol>
+                                        <li>Right-click on Applications menu</li>
+                                        <li>Select "Edit Applications"</li>
+                                        <li>Or restart the session: Log out and back in</li>
+                                        <li>For manual refresh: <code>update-desktop-database</code></li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong>Need more help?</strong> Check the troubleshooting section in the wiki or
+                                    ask on the community forums for help with specific hardware.
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <!-- FAQ JavaScript for collapsible sections -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

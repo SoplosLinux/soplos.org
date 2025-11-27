@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Soplos Linux</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Permiso para acceder a sitios más visitados (Chrome) -->
+  <meta name="chrome-webview-permission" content="topSites">
+</head>
+<body>
+  <!-- Reemplazar el selector simple con el nuevo selector con banderas -->
+  <div class="language-selector">
+    <div class="selected-language">
+      <img src="https://flagcdn.com/w20/es.png" alt="Español" class="flag-icon">
+      <span>ES</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <ul class="language-dropdown">
+      <li><a href="#" data-lang="es" class="active"><img src="https://flagcdn.com/w20/es.png" alt="Español">Español</a></li>
+      <li><a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English">English</a></li>
+      <li><a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português">Português</a></li>
+      <li><a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français">Français</a></li>
+      <li><a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch">Deutsch</a></li>
+      <li><a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano">Italiano</a></li>
+      <li><a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română">Română</a></li>
+      <li><a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский">Русский</a></li>
+    </ul>
+  </div>
+
+  <div class="search-container">
+    <img class="logo" src="images/logo.png" alt="Logo Soplos Linux">
+    <h1 id="title">Busca con Soplos Linux</h1>
+    <form id="search-form" action="https://www.google.com/search" method="get">
+      <input type="text" id="search-input" name="q" placeholder="Buscar en Google">
+      <input type="submit" id="search-button" value="Buscar">
+    </form>
+    
+    <div class="search-engines">
+      <button title="Google" data-engine="google">G</button>
+      <button title="DuckDuckGo" data-engine="duckduckgo">D</button>
+      <button title="Bing" data-engine="bing">B</button>
+      <button title="Ecosia" data-engine="ecosia">E</button>
+    </div>
+  </div>
+  
+  <!-- Nueva sección para sitios frecuentes -->
+  <div class="frequent-sites">
+    <h3 id="frequent-sites-title">Sitios frecuentes</h3>
+    <div class="sites-grid" id="sites-grid">
+      <!-- Contenido dinámico - Se llenará con JavaScript -->
+    </div>
+  </div>
+  
+  <!-- Movidos después de los sitios frecuentes -->
+  <div class="site-links">
+    <a href="https://soplos.org" id="home-link" target="_blank">Sitio Web</a>
+    <a href="https://soplos.org/wiki" id="tyron-link" target="_blank">Wiki</a>
+    <a href="https://soplos.org/forums" id="forum-link" target="_blank">Foros</a>
+    <a href="https://github.com/SoplosLinux" id="github-link" target="_blank">GitHub</a>
+    <a href="https://paypal.me/isubdes" id="donate-link" target="_blank">Donar</a>
+  </div>
+
+  <footer id="footer">&copy; 2025 Soplos Linux</footer>
+
+  <!-- Formulario modal para añadir sitio -->
+  <div id="add-site-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 id="modal-title">Añadir sitio frecuente</h3>
+      <form id="add-site-form">
+        <div class="form-group">
+          <label for="site-name" id="site-name-label">Nombre:</label>
+          <input type="text" id="site-name" required placeholder="Nombre del sitio">
+        </div>
+        <div class="form-group">
+          <label for="site-url" id="site-url-label">URL:</label>
+          <input type="url" id="site-url" placeholder="https://ejemplo.com" required>
+        </div>
+        <div class="form-group" style="display: none;">
+          <!-- Ocultamos el selector de iconos ya que ahora usamos favicons -->
+          <label for="site-icon" id="site-icon-label">Icono:</label>
+          <select id="site-icon">
+            <option value="globe">🌐 Web</option>
+          </select>
+        </div>
+        <button type="submit" id="save-site-btn">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts modulares -->
+  <script src="js/translations.js"></script>
+  <script src="js/search-engines.js"></script>
+  <script src="js/language-switcher.js"></script>
+  <script src="js/frequent-sites.js"></script>
+  <script src="js/main.js"></script>
+  <script src="extensions/firefox-setup.js"></script>
+</body>
+</html>

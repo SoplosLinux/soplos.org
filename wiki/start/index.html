@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Steps - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Essential first steps after installing Soplos Linux. Configuration, customization and getting started guide.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="start-breadcrumb">First Steps</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><i class="fas fa-rocket"></i> <span id="start-hero-title">First Steps</span></h1>
+                        <p id="start-hero-desc">Essential configuration and setup to get the most out of your Soplos
+                            Linux
+                            experience</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Content -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="start-toc-title">Table of Contents</h3>
+                        <ul>
+                            <li><a href="#welcome-app" id="start-toc-1">Soplos Welcome</a></li>
+                            <li><a href="#system-updates" id="start-toc-2">System Updates</a></li>
+                            <li><a href="#software-centers" id="start-toc-3">Software Centers</a></li>
+                            <li><a href="#basic-settings" id="start-toc-4">Basic Settings</a></li>
+                            <li><a href="#essential-apps" id="start-toc-5">Essential Applications</a></li>
+                            <li><a href="#drivers" id="start-toc-6">Driver Management</a></li>
+                            <li><a href="#kernels" id="start-toc-7">Kernel Customization</a></li>
+                            <li><a href="#customization" id="start-toc-8">Desktop Customization</a></li>
+                            <li><a href="#multimedia" id="start-toc-9">Multimedia Support</a></li>
+                            <li><a href="#security" id="start-toc-10">Security & Privacy</a></li>
+                            <li><a href="#next-steps" id="start-toc-11">Next Steps</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <!-- Welcome App -->
+                        <section id="welcome-app" class="content-section">
+                            <h2><i class="fas fa-magic"></i> <span id="start-welcome-title">Soplos Welcome
+                                    Application</span></h2>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="start-welcome-info-label">First things first:</strong> <span
+                                        id="start-welcome-info-text">The Soplos Welcome application should launch
+                                        automatically on your first login. This is your starting point!</span>
+                                </div>
+                            </div>
+
+                            <p id="start-welcome-intro">The Soplos Welcome application is designed to guide you through
+                                the essential first steps
+                                after installation.</p>
+
+                            <div class="welcome-features">
+                                <div class="feature-grid">
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-sync"></i> <span id="start-welcome-feat1-title">System
+                                                Updates</span></h4>
+                                        <p id="start-welcome-feat1-desc">Automatic check for the latest system updates
+                                            and security patches.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-palette"></i> <span id="start-welcome-feat2-title">Theme
+                                                Selection</span></h4>
+                                        <p id="start-welcome-feat2-desc">Choose from pre-installed themes to personalize
+                                            your desktop appearance.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-download"></i> <span
+                                                id="start-welcome-feat3-title">Essential Software</span></h4>
+                                        <p id="start-welcome-feat3-desc">One-click installation of popular applications
+                                            and multimedia codecs.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-cog"></i> <span id="start-welcome-feat4-title">System
+                                                Configuration</span></h4>
+                                        <p id="start-welcome-feat4-desc">Quick access to important system settings and
+                                            preferences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- System Updates -->
+                        <section id="system-updates" class="content-section">
+                            <h2><i class="fas fa-sync"></i> <span id="start-updates-title">System Updates</span></h2>
+
+                            <p id="start-updates-intro">Keeping your system updated is crucial for security, stability,
+                                and getting the latest
+                                features.</p>
+
+                            <h3 id="start-updates-welcome-h">Via Soplos Welcome</h3>
+                            <ol class="step-list">
+                                <li id="start-updates-welcome-1">Open Soplos Welcome from the applications menu</li>
+                                <li id="start-updates-welcome-2">Click on "Check for Updates"</li>
+                                <li id="start-updates-welcome-3">Review available updates with descriptions</li>
+                                <li id="start-updates-welcome-4">Click "Install Updates" and enter your password</li>
+                            </ol>
+
+                            <h3 id="start-updates-term-h">Via Terminal (Advanced Users)</h3>
+                            <div class="code-example">
+                                <h4 id="start-updates-term-title">Update Commands</h4>
+                                <pre><code># Update package list
+sudo apt update
+
+# Upgrade all packages
+sudo apt upgrade
+
+# Full system upgrade
+sudo apt full-upgrade</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong id="start-updates-warn-label">Important:</strong> <span
+                                        id="start-updates-warn-text">Always reboot after kernel updates to ensure all
+                                        changes
+                                        take effect.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Software Centers -->
+                        <section id="software-centers" class="content-section">
+                            <h2><i class="fas fa-store"></i> <span id="start-soft-title">Software Centers</span></h2>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="start-soft-info-label">Software Tab:</strong> <span
+                                        id="start-soft-info-text">Soplos Welcome includes a dedicated Software
+                                        management section for installing package managers and software centers.</span>
+                                </div>
+                            </div>
+
+                            <p id="start-soft-intro">The Software tab in Soplos Welcome allows you to install and manage
+                                various software
+                                centers and package managers:</p>
+
+                            <div class="software-centers">
+                                <h4><i class="fas fa-download"></i> <span id="start-soft-avail-title">Available Software
+                                        Centers</span></h4>
+                                <ul>
+                                    <li id="start-soft-avail-1"><strong>Synaptic Package Manager:</strong> Advanced APT
+                                        package manager with GUI
+                                    </li>
+                                    <li id="start-soft-avail-2"><strong>Gdebi:</strong> Simple tool to install local
+                                        .deb packages</li>
+                                    <li id="start-soft-avail-3"><strong>GNOME Software:</strong> User-friendly software
+                                        store (Default in Boro)
+                                        with Flatpak and
+                                        Snap support</li>
+                                    <li id="start-soft-avail-4"><strong>Flatpak Support:</strong> Universal package
+                                        system with Plasma Discover
+                                        integration</li>
+                                    <li id="start-soft-avail-5"><strong>Snap Support:</strong> Ubuntu's universal
+                                        packages with Plasma Discover
+                                        support</li>
+                                </ul>
+
+                                <h4><i class="fas fa-tools"></i> <span id="start-soft-maint-title">System
+                                        Maintenance</span></h4>
+                                <ul>
+                                    <li id="start-soft-maint-1"><strong>Update Repositories:</strong> Refresh package
+                                        lists from all configured
+                                        sources</li>
+                                    <li id="start-soft-maint-2"><strong>Upgrade System:</strong> Install all available
+                                        package updates</li>
+                                    <li id="start-soft-maint-3"><strong>Clean System:</strong> Remove unnecessary
+                                        packages and cached files</li>
+                                </ul>
+
+                                <h4><i class="fas fa-cog"></i> <span id="start-soft-repo-title">Repository
+                                        Management</span></h4>
+                                <ul>
+                                    <li id="start-soft-repo-1"><strong>Soplos Repo Selector:</strong> Graphical tool to
+                                        manage and optimize APT
+                                        repositories</li>
+                                    <li id="start-soft-repo-2"><strong>Add Flathub:</strong> Enable the main Flatpak
+                                        repository</li>
+                                    <li id="start-soft-repo-3"><strong>Snap Menu Integration:</strong> Integrate Snap
+                                        applications into the
+                                        system menu</li>
+                                </ul>
+
+                                <div class="info-box success">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <strong id="start-soft-success-label">One-Click Installation:</strong> <span
+                                            id="start-soft-success-text">All software centers can be installed
+                                            with a single click, including their dependencies and integration
+                                            packages.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Basic Settings -->
+                        <section id="basic-settings" class="content-section">
+                            <h2><i class="fas fa-cogs"></i> <span id="start-settings-title">Basic Settings
+                                    Configuration</span></h2>
+
+                            <div class="settings-grid">
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-globe"></i> <span id="start-settings-lang-title">Language &
+                                            Region</span></h4>
+                                    <p id="start-settings-lang-loc"><strong>Location:</strong> Settings → Language &
+                                        Region</p>
+                                    <ul>
+                                        <li id="start-settings-lang-1">Set your language and locale</li>
+                                        <li id="start-settings-lang-2">Configure date and time format</li>
+                                        <li id="start-settings-lang-3">Set your timezone</li>
+                                        <li id="start-settings-lang-4">Configure keyboard layout</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-wifi"></i> <span id="start-settings-net-title">Network
+                                            Settings</span></h4>
+                                    <p id="start-settings-net-loc"><strong>Location:</strong> Settings → Network</p>
+                                    <ul>
+                                        <li id="start-settings-net-1">Connect to Wi-Fi networks</li>
+                                        <li id="start-settings-net-2">Configure ethernet settings</li>
+                                        <li id="start-settings-net-3">Set up VPN connections</li>
+                                        <li id="start-settings-net-4">Manage network profiles</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-user"></i> <span id="start-settings-user-title">User
+                                            Account</span></h4>
+                                    <p id="start-settings-user-loc"><strong>Location:</strong> Settings → Users</p>
+                                    <ul>
+                                        <li id="start-settings-user-1">Add profile picture</li>
+                                        <li id="start-settings-user-2">Change account details</li>
+                                        <li id="start-settings-user-3">Set up additional users</li>
+                                        <li id="start-settings-user-4">Configure user permissions</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-volume-up"></i> <span id="start-settings-audio-title">Audio
+                                            Configuration</span></h4>
+                                    <p id="start-settings-audio-loc"><strong>Location:</strong> Settings → Sound</p>
+                                    <ul>
+                                        <li id="start-settings-audio-1">Configure audio devices</li>
+                                        <li id="start-settings-audio-2">Adjust volume levels</li>
+                                        <li id="start-settings-audio-3">Set default input/output</li>
+                                        <li id="start-settings-audio-4">Test audio functionality</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Essential Applications -->
+                        <section id="essential-apps" class="content-section">
+                            <h2><i class="fas fa-download"></i> <span></span>Essential
+                                <h2><i class="fas fa-star"></i> <span id="start-apps-title">Essential
+                                        Applications</span></h2>
+
+                                <div class="info-box info">
+                                    <i class="fas fa-star"></i>
+                                    <div>
+                                        <strong id="start-apps-info-label">Soplos Welcome:</strong> <span
+                                            id="start-apps-info-text">Your system includes Soplos Welcome, which
+                                            provides
+                                            easy one-click installation of recommended applications. Access it from the
+                                            applications menu or by running <code>soplos-welcome</code> in
+                                            terminal.</span>
+                                    </div>
+                                </div>
+
+                                <h3><i class="fas fa-magic"></i> <span id="start-apps-using-title">Using Soplos
+                                        Welcome</span></h3>
+                                <p id="start-apps-using-intro">Soplos Welcome includes a comprehensive "Recommended" tab
+                                    with curated software organized
+                                    into categories:</p>
+
+                                <div class="welcome-features">
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-globe"></i> <span id="start-apps-web-title">Web
+                                                Browsers</span></h4>
+                                        <p id="start-apps-web-desc">Chrome, Chromium, Brave, LibreWolf, Falkon, Epiphany
+                                        </p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-comments"></i> <span
+                                                id="start-apps-comm-title">Communications</span></h4>
+                                        <p id="start-apps-comm-desc">Thunderbird, WhatsApp, Telegram, Discord, Signal,
+                                            Element</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-file-alt"></i> <span id="start-apps-office-title">Office
+                                                Suite</span></h4>
+                                        <p id="start-apps-office-desc">LibreOffice, OnlyOffice, WPS Office</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-film"></i> <span
+                                                id="start-apps-multi-title">Multimedia</span>
+                                        </h4>
+                                        <p id="start-apps-multi-desc">VLC, MPV, Kodi, Audacity, LMMS, OBS Studio,
+                                            OpenShot,
+                                            Kdenlive, Shotcut</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-code"></i> <span
+                                                id="start-apps-dev-title">Development</span>
+                                        </h4>
+                                        <p id="start-apps-dev-desc">VS Code, Sublime Text, Bluefish, Geany, VSCodium,
+                                            Zed
+                                        </p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-paint-brush"></i> <span
+                                                id="start-apps-design-title">Graphics &
+                                                Design</span></h4>
+                                        <p id="start-apps-design-desc">GIMP, Inkscape, Krita, Blender, darktable,
+                                            RawTherapee
+                                        </p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-gamepad"></i> <span
+                                                id="start-apps-gaming-title">Gaming</span>
+                                        </h4>
+                                        <p id="start-apps-gaming-desc">Steam, Lutris, Heroic, Bottles, Wine, PlayOnLinux
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="info-box warning">
+                                    <i class="fas fa-info-circle"></i>
+                                    <div>
+                                        <strong id="start-apps-flat-label">Flatpak Support:</strong> <span
+                                            id="start-apps-flat-text">Many applications in Soplos Welcome are
+                                            available
+                                            as Flatpak packages. The welcome app can automatically install Flatpak
+                                            support
+                                            if
+                                            needed.</span>
+                                    </div>
+                                </div>
+
+                                <h3><i class="fas fa-mouse-pointer"></i> <span id="start-apps-how-title">How to Install
+                                        Applications</span></h3>
+                                <ol class="step-list">
+                                    <li>Open <strong>Soplos Welcome</strong> from the applications
+                                        menu</li>
+                                    <li id="start-apps-how-1">Open <strong>Soplos Welcome</strong> from the applications
+                                        menu</li>
+                                    <li id="start-apps-how-2">Navigate to the <strong>"Recommended"</strong> tab</li>
+                                    <li id="start-apps-how-3">Browse the application categories</li>
+                                    <li id="start-apps-how-4">Click <strong>"Install"</strong> on any application you
+                                        want
+                                    </li>
+                                    <li id="start-apps-how-5">The app will handle dependencies and package management
+                                        automatically</li>
+                                </ol>
+                        </section>
+
+                        <!-- Driver Management -->
+                        <section id="drivers" class="content-section">
+                            <h2><i class="fas fa-microchip"></i> <span id="start-drivers-title">Hardware
+                                    Drivers</span></h2>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="start-drivers-info-label">Drivers Tab:</strong> <span
+                                        id="start-drivers-info-text">Soplos Welcome automatically detects your hardware
+                                        and installs the necessary proprietary drivers for optimal performance.</span>
+                                </div>
+                            </div>
+
+                            <div class="driver-categories">
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-video"></i> <span id="start-drivers-nvidia-title">NVIDIA
+                                            Drivers</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-nvidia-1"><strong>Latest Driver (Series 500+):</strong>
+                                            For
+                                            GeForce GTX 1600+, RTX 2000+,
+                                            RTX 3000+, RTX 4000+</li>
+                                        <li id="start-drivers-nvidia-2"><strong>Legacy 470:</strong> For GeForce GTX
+                                            900,
+                                            GTX 1000</li>
+                                        <li id="start-drivers-nvidia-3"><strong>Legacy 390:</strong> For GeForce GTX
+                                            600,
+                                            GTX 700, GTX 800</li>
+                                        <li id="start-drivers-nvidia-4"><strong>Legacy 340:</strong> For GeForce GTX
+                                            400,
+                                            GTX 500</li>
+                                        <li id="start-drivers-nvidia-5"><strong>Nouveau (Open Source):</strong> Free and
+                                            open source NVIDIA driver
+                                        </li>
+                                        <li id="start-drivers-nvidia-6"><strong>DaVinci Resolve Support:</strong> OpenCL
+                                            and video encoding support</li>
+                                        <li id="start-drivers-nvidia-7"><strong>Blender/CUDA Support:</strong> CUDA
+                                            toolkit
+                                            for rendering</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-microchip"></i> <span id="start-drivers-amd-title">AMD
+                                            Drivers</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-amd-1"><strong>AMD Radeon (AMDGPU):</strong> Modern open
+                                            source driver for RX 400+
+                                            series and APUs</li>
+                                        <li id="start-drivers-amd-2"><strong>Radeon (Legacy):</strong> Legacy open
+                                            source
+                                            driver for older cards
+                                        </li>
+                                        <li id="start-drivers-amd-3"><strong>Mesa & Vulkan:</strong> Complete graphics
+                                            stack
+                                            with firmware support
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-desktop"></i> <span id="start-drivers-intel-title">Intel
+                                            Graphics</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-intel-1"><strong>Intel i915:</strong> For Intel HD, UHD,
+                                            Iris,
+                                            and Iris Xe graphics
+                                        </li>
+                                        <li id="start-drivers-intel-2"><strong>Intel Xe:</strong> For Intel Arc discrete
+                                            graphics cards</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-wifi"></i> <span id="start-drivers-wifi-title">Wi-Fi
+                                            Drivers</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-wifi-1"><strong>MediaTek:</strong> MT76xx series (mt7601u,
+                                            mt76, mt7915e, mt7921u,
+                                            mt7925e, etc.)</li>
+                                        <li id="start-drivers-wifi-2"><strong>Intel WiFi:</strong> iwlwifi, iwldvm,
+                                            iwlmvm
+                                            for AC/AX series and legacy
+                                            chips</li>
+                                        <li id="start-drivers-wifi-3"><strong>Realtek:</strong> rtl8xxxu, rtl8192xx,
+                                            rtl8188ee, rtl8723xx, rtl8821ae
+                                            series</li>
+                                        <li id="start-drivers-wifi-4"><strong>Broadcom:</strong> brcmfmac, brcmsmac,
+                                            b43,
+                                            b43legacy for BCM43xx chips
+                                        </li>
+                                        <li id="start-drivers-wifi-5"><strong>Atheros:</strong> ath9k, ath10k, ath11k,
+                                            ath12k, carl9170 for all
+                                            Atheros series</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-ethernet"></i> <span id="start-drivers-eth-title">Ethernet
+                                            Drivers</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-eth-1"><strong>Complete Support:</strong> All available
+                                            Ethernet drivers from kernel
+                                            modules</li>
+                                        <li id="start-drivers-eth-2"><strong>Realtek, Intel, Broadcom:</strong> Full
+                                            coverage for desktop and laptop
+                                            NICs</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-bluetooth"></i> <span id="start-drivers-bt-title">Bluetooth
+                                            Support</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-bt-1"><strong>Universal Support:</strong> btusb, btmtk,
+                                            btbcm
+                                            for MediaTek and
+                                            Broadcom chips</li>
+                                        <li id="start-drivers-bt-2"><strong>Atheros Support:</strong> ath3k for Atheros
+                                            Bluetooth devices</li>
+                                        <li id="start-drivers-bt-3"><strong>UART Support:</strong> hci_uart for embedded
+                                            Bluetooth modules</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-print"></i> <span id="start-drivers-print-title">Printer
+                                            Support</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-print-1"><strong>Universal Drivers:</strong> Support for
+                                            HP,
+                                            Canon, Epson, Brother and
+                                            major brands</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-hdd"></i> <span id="start-drivers-stor-title">Storage
+                                            Support</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-stor-1"><strong>NVMe:</strong> Complete NVMe SSD support
+                                            with
+                                            nvme-core drivers</li>
+                                        <li id="start-drivers-stor-2"><strong>SATA/AHCI:</strong> Full SATA and AHCI
+                                            controller support</li>
+                                        <li id="start-drivers-stor-3"><strong>USB Storage:</strong> Universal USB mass
+                                            storage and UAS support</li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-desktop"></i> <span id="start-drivers-vm-title">Virtual Machine
+                                            Tools</span></h4>
+                                    <ul>
+                                        <li id="start-drivers-vm-1"><strong>VMware Tools:</strong> Open VM Tools Desktop
+                                            for
+                                            VMware
+                                            Workstation/Player integration</li>
+                                        <li id="start-drivers-vm-2"><strong>QEMU/KVM Agent:</strong> Guest agent and
+                                            tools
+                                            for QEMU/KVM virtual
+                                            machines</li>
+                                        <li id="start-drivers-vm-3"><strong>VirtualBox Guest Additions:</strong>
+                                            Complete
+                                            VirtualBox integration
+                                            with shared folders and clipboard</li>
+                                    </ul>
+                                </div>
+                                <div class="info-box success">
+                                    <i class="fas fa-search"></i>
+                                    <div>
+                                        <strong id="start-drivers-success-label">Maximum Hardware
+                                            Compatibility:</strong>
+                                        <span id="start-drivers-success-text">Soplos Linux includes an extensive driver
+                                            collection for maximum hardware compatibility across desktops, laptops, and
+                                            virtual machines.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Kernel Management -->
+                        <section id="kernels" class="content-section">
+                            <h2><i class="fas fa-cogs"></i> <span id="start-kernels-title">Kernel
+                                    Management</span></h2>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="start-kernels-info-label">Kernels Tab:</strong> <span
+                                        id="start-kernels-info-text">Install, remove or clean alternative kernels
+                                        like
+                                        Liquorix and XanMod to improve system performance.</span>
+                                </div>
+                            </div>
+
+                            <div class="kernel-options">
+                                <h4><i class="fas fa-layer-group"></i> <span id="start-kernels-avail-title">Available
+                                        Kernels</span></h4>
+
+                                <div class="kernel-types">
+                                    <div class="kernel-type">
+                                        <h5><i class="fas fa-rocket"></i> <span id="start-kernels-liq-title">Liquorix
+                                                Kernel</span></h5>
+                                        <p id="start-kernels-liq-desc">Kernel optimized for desktop and gaming, with low
+                                            latency and performance
+                                            improvements.</p>
+                                    </div>
+
+                                    <div class="kernel-type">
+                                        <h5><i class="fas fa-tachometer-alt"></i> <span
+                                                id="start-kernels-xan-title">XanMod Kernel</span></h5>
+                                        <p id="start-kernels-xan-desc">Kernel optimized for low latency and high
+                                            performance, ideal for demanding
+                                            tasks.</p>
+                                    </div>
+                                </div>
+
+                                <h4><i class="fas fa-broom"></i> <span id="start-kernels-maint-title">System
+                                        Maintenance</span></h4>
+                                <ul>
+                                    <li id="start-kernels-maint-1"><strong>Clean Old Kernels:</strong> Remove old
+                                        kernels and free up disk space
+                                    </li>
+                                    <li id="start-kernels-maint-2"><strong>Update GRUB:</strong> Update GRUB
+                                        configuration after kernel changes
+                                    </li>
+                                    <li id="start-kernels-maint-3"><strong>Current Kernel Info:</strong> Display details
+                                        about the kernel in use
+                                    </li>
+                                </ul>
+
+                                <div class="info-box warning">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <div>
+                                        <strong id="start-kernels-warn-label">NVIDIA Compatibility:</strong> <span
+                                            id="start-kernels-warn-text">Alternative kernels may require NVIDIA
+                                            driver reinstallation after updates.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Desktop Customization -->
+                        <section id="customization" class="content-section">
+                            <h2><i class="fas fa-palette"></i> <span id="start-custom-title">Desktop
+                                    Customization</span></h2>
+
+                            <div class="desktop-variants">
+                                <div class="variant-section">
+                                    <h3><i class="fas fa-desktop"></i> <span id="start-custom-tyron-title">Tyron
+                                            (XFCE)</span></h3>
+                                    <ul>
+                                        <li id="start-custom-tyron-1">Right-click on desktop → Settings → Appearance
+                                        </li>
+                                        <li id="start-custom-tyron-2">Use <strong>Soplos Theme Manager</strong> for easy
+                                            theme switching</li>
+                                        <li id="start-custom-tyron-3">Use <strong>Soplos Docklike</strong> for a
+                                            macOS-style dock</li>
+                                        <li id="start-custom-tyron-4">Customize window decorations and icons</li>
+                                    </ul>
+                                </div>
+
+                                <div class="variant-section">
+                                    <h3><i class="fas fa-desktop"></i> <span id="start-custom-tyson-title">Tyson
+                                            (Plasma)</span></h3>
+                                    <ul>
+                                        <li id="start-custom-tyson-1">Right-click on desktop → Configure Desktop</li>
+                                        <li id="start-custom-tyson-2">System Settings → Appearance → Global Theme</li>
+                                        <li id="start-custom-tyson-3">Customize plasma themes, icons, and cursors</li>
+                                        <li id="start-custom-tyson-4">Configure desktop effects and animations</li>
+                                    </ul>
+                                </div>
+
+                                <div class="variant-section">
+                                    <h3><i class="fas fa-desktop"></i> <span id="start-custom-boro-title">Boro
+                                            (GNOME)</span></h3>
+                                    <ul>
+                                        <li id="start-custom-boro-1">Settings → Appearance</li>
+                                        <li id="start-custom-boro-2">Use <strong>GNOME Tweaks</strong> (pre-installed)
+                                            for advanced customization
+                                        </li>
+                                        <li id="start-custom-boro-3">Use <strong>Extension Manager</strong>
+                                            (pre-installed) to manage extensions
+                                        </li>
+                                        <li id="start-custom-boro-4">Configure <strong>Dash to Panel</strong> settings
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Multimedia Support -->
+                        <section id="multimedia" class="content-section">
+                            <h2><i class="fas fa-music"></i> <span id="start-multi-title">Multimedia
+                                    Support</span></h2>
+
+                            <div class="info-box success">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong id="start-multi-pre-label">Pre-configured:</strong> <span
+                                        id="start-multi-pre-text">Soplos Linux comes with all multimedia codecs
+                                        already installed and configured. You can play most media formats out of the box
+                                        without additional setup.</span>
+                                </div>
+                            </div>
+
+                            <div class="multimedia-setup">
+                                <h4><i class="fas fa-play-circle"></i> <span id="start-multi-incl-title">What's Already
+                                        Included</span></h4>
+                                <ul>
+                                    <li id="start-multi-incl-1"><strong>Audio Codecs:</strong> MP3, AAC, FLAC, OGG,
+                                        Opus, and more</li>
+                                    <li id="start-multi-incl-2"><strong>Video Codecs:</strong> H.264, H.265, VP9, AV1,
+                                        and proprietary formats
+                                    </li>
+                                    <li id="start-multi-incl-3"><strong>Container Formats:</strong> MP4, MKV, AVI, WebM,
+                                        MOV, and others</li>
+                                    <li id="start-multi-incl-4"><strong>Streaming Support:</strong> Ready for Netflix,
+                                        YouTube, Spotify, and
+                                        other services</li>
+                                </ul>
+
+                                <div class="info-box info">
+                                    <i class="fas fa-volume-up"></i>
+                                    <div>
+                                        <strong id="start-multi-pipe-label">PipeWire Audio:</strong> <span
+                                            id="start-multi-pipe-text">Soplos Linux uses PipeWire for optimal
+                                            audio
+                                            performance, low latency, and advanced routing capabilities out of the
+                                            box.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Security & Privacy -->
+                        <section id="security" class="content-section">
+                            <h2><i class="fas fa-shield-alt"></i> <span id="start-sec-title">Security & Privacy</span>
+                            </h2>
+
+                            <div class="security-items">
+                                <div class="security-item">
+                                    <h4><i class="fas fa-lock"></i> <span id="start-sec-fw-title">Firewall</span></h4>
+                                    <p id="start-sec-fw-intro">Soplos Linux includes a pre-configured firewall with both
+                                        command-line and
+                                        graphical management:</p>
+
+                                    <h5><i class="fas fa-desktop"></i> <span id="start-sec-gufw-title">Graphical
+                                            Interface (GUFW)</span></h5>
+                                    <p id="start-sec-gufw-desc">For users who prefer a GUI, Soplos Linux includes GUFW
+                                        (Graphical Uncomplicated
+                                        Firewall) - a user-friendly interface for managing firewall rules without
+                                        terminal commands.</p>
+
+                                    <h5><i class="fas fa-terminal"></i> <span id="start-sec-cli-title">Command
+                                            Line</span></h5>
+                                    <div class="code-example">
+                                        <pre><code># Check firewall status
+sudo ufw status
+
+# Enable firewall
+sudo ufw enable</code></pre>
+                                    </div>
+                                </div>
+
+                                <div class="security-item">
+                                    <h4><i class="fas fa-key"></i> <span id="start-sec-pass-title">Password
+                                            Security</span></h4>
+                                    <ul>
+                                        <li id="start-sec-pass-1">Use strong, unique passwords</li>
+                                        <li id="start-sec-pass-2">Enable automatic screen lock</li>
+                                        <li id="start-sec-pass-3">Consider using a password manager</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Next Steps -->
+                        <section id="next-steps" class="content-section">
+                            <h2><i class="fas fa-arrow-right"></i> <span id="start-next-title">What's
+                                    Next?</span></h2>
+
+                            <div class="next-steps-grid">
+                                <div class="next-step-card">
+                                    <h4><i class="fas fa-book"></i> <span id="start-next-doc-title">Explore
+                                            Documentation</span></h4>
+                                    <p id="start-next-doc-desc">Browse our comprehensive wiki for detailed guides.</p>
+                                    <a href="/wiki/" class="btn btn-secondary" id="start-next-doc-btn">Browse Wiki</a>
+                                </div>
+
+                                <div class="next-step-card">
+                                    <h4><i class="fas fa-users"></i> <span id="start-next-comm-title">Join
+                                            Community</span></h4>
+                                    <p id="start-next-comm-desc">Connect with other Soplos Linux users.</p>
+                                    <a href="/forums/" class="btn btn-secondary" id="start-next-comm-btn">Visit
+                                        Forums</a>
+                                </div>
+
+                                <div class="next-step-card">
+                                    <h4><i class="fas fa-question-circle"></i> <span id="start-next-help-title">Get
+                                            Help</span></h4>
+                                    <p id="start-next-help-desc">Find answers in our FAQ section.</p>
+                                    <a href="../faq/" class="btn btn-secondary" id="start-next-help-btn">View FAQ</a>
+                                </div>
+                            </div>
+
+                            <div class="info-box success">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <strong id="start-next-congrats-label">Congratulations!</strong> <span
+                                        id="start-next-congrats-text">You're now ready to enjoy your Soplos Linux
+                                        experience. Welcome to the community!</span>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

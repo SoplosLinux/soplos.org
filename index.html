@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos Linux</title>
+    <meta name="description"
+        content="Soplos Linux - Official support site for Tyron, Tyson and future distributions. International, simple and direct.">
+    <meta name="author" content="Soplos Linux Team">
+    <meta name="keywords" content="linux, debian, xfce, kde, distributions, soplos, tyron, tyson, support, wiki, forum">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soplos.org/">
+    <meta property="og:title" content="Soplos Linux - Tu sistema operativo amigable">
+    <meta property="og:description"
+        content="Sistema operativo moderno basado en Debian Testing. Descarga Soplos Linux Tyron (XFCE) o Tyson (Plasma) gratis.">
+    <meta property="og:image" content="https://soplos.org/images/hero/wallpaper.jpg">
+    <meta property="og:site_name" content="Soplos Linux">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://soplos.org/">
+    <meta name="twitter:title" content="Soplos Linux - Tu sistema operativo amigable">
+    <meta name="twitter:description" content="Sistema operativo moderno basado en Debian Testing. Descarga gratis.">
+    <meta name="twitter:image" content="https://soplos.org/images/hero/wallpaper.jpg">
+
+    <link rel="icon" href="images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Soplos Linux",
+      "operatingSystem": "Linux",
+      "applicationCategory": "OperatingSystem",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "Soplos Linux is a modern operating system based on Debian Testing, designed for reliability, ease of use, and productivity.",
+      "softwareVersion": "2025",
+      "author": {
+        "@type": "Organization",
+        "name": "Soplos Linux Team",
+        "url": "https://soplos.org"
+      },
+      "downloadUrl": "https://soplos.org/#download"
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#inicio">
+                    <!-- Use new logo with text -->
+                    <img src="images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#features" id="menuFeatures">Features</a></li>
+                                <li><a href="#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- HERO SECTION: Soplos Linux with desktop choice -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="heroTagline">Soplos Linux</h1>
+                    <p id="heroDescription">
+                        The newest version of your friendly operating system is ready. Install Soplos Linux on your
+                        computer today!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="btn btn-primary" id="heroTyronBtn">
+                            Download
+                        </a>
+                        <a href="/wiki/install" class="btn btn-secondary" id="heroTysonBtn">
+                            Installation Guide
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Hero image: you can replace wallpaper.jpg with a more representative image if needed -->
+                    <img src="images/hero/wallpaper.jpg" alt="Soplos Linux Wallpaper">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features section directly after hero -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 id="featuresTitle">Features</h2>
+                <div class="features-grid">
+                    <!-- First card -->
+                    <div class="feature-card active">
+                        <h3 id="featureWhyTitle">Why Soplos Linux?</h3>
+                        <p id="featureWhyDesc">
+                            Soplos Linux is a modern operating system for desktops and laptops, designed for
+                            reliability, ease of use, and productivity. It comes pre-installed with essential
+                            applications and is ready to use from the first boot.
+                        </p>
+                    </div>
+                    <!-- Second card: Easy Browsing -->
+                    <div class="feature-card">
+                        <i class="fas fa-globe feature-icon"></i>
+                        <h3 id="featureBrowsingTitle">Easy Browsing</h3>
+                        <p id="featureBrowsingDesc">
+                            Enjoy effortless internet navigation with Firefox. Access your favorite websites and watch
+                            YouTube videos with a fast, secure, and user-friendly experience.
+                        </p>
+                    </div>
+                    <!-- Third card: Productivity -->
+                    <div class="feature-card">
+                        <i class="fas fa-pencil-alt feature-icon"></i>
+                        <h3 id="featureProductivityTitle">Productivity</h3>
+                        <p id="featureProductivityDesc">
+                            Feel free to use your favorite office suite to work comfortably and efficiently. Soplos
+                            Linux lets you choose the tools that best fit your workflow.
+                        </p>
+                    </div>
+                    <!-- Fourth card: For Content Creators -->
+                    <div class="feature-card">
+                        <i class="fas fa-film feature-icon"></i>
+                        <h3 id="featureContentTitle">For Content Creators</h3>
+                        <p id="featureContentDesc">
+                            Specially designed for content creators who need multimedia tools for audio and video
+                            production.
+                        </p>
+                    </div>
+                    <!-- Fifth card: Designed for Designers -->
+                    <div class="feature-card">
+                        <i class="fas fa-palette feature-icon"></i>
+                        <h3 id="featureDesignTitle">Designed for Designers</h3>
+                        <p id="featureDesignDesc">
+                            Carefully crafted so you can work with graphic tools like Blender, GIMP, and Inkscape.
+                        </p>
+                    </div>
+                    <!-- Sixth card: For Gamers -->
+                    <div class="feature-card">
+                        <i class="fas fa-gamepad feature-icon"></i>
+                        <h3 id="featureGamingTitle">For Gamers</h3>
+                        <p id="featureGamingDesc">
+                            Play your favorite games with Steam, Heroic Launcher, Lutris, and Retrogames. Soplos Linux
+                            includes gaming-optimized kernels for the best experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New hero-style section for transition message -->
+        <section class="transition-hero">
+            <div class="container transition-hero-container">
+                <h2 class="transition-hero-title" id="transitionTitle">Feel Free</h2>
+                <p class="transition-hero-desc" id="transitionDesc">
+                    The first step to escape from Windows is easy with Soplos Linux.<br>
+                    We make your transition simple, friendly, and enjoyable.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Galleries Section -->
+        <section id="galleries" class="galleries">
+            <div class="container">
+                <h2 id="galleriesTitle">Galleries</h2>
+                <div class="screenshot-gallery">
+                    <!-- Example Tyron image -->
+                    <div class="screenshot gallery-view-btn" data-distro="tyron">
+                        <img src="images/Tyron/tyron/004-Desktop-01.png" alt="Tyron Desktop" id="tyronDesktopAlt">
+                        <span class="magnifier-icon"><i class="fas fa-search-plus"></i></span>
+                        <p id="tyronGalleryCaption">Tyron XFCE Desktop</p>
+                    </div>
+                    <!-- Example Tyson image -->
+                    <div class="screenshot gallery-view-btn" data-distro="tyson">
+                        <img src="images/Tyson/tyson/005-desktop-01.png" alt="Tyson Desktop" id="tysonDesktopAlt">
+                        <span class="magnifier-icon"><i class="fas fa-search-plus"></i></span>
+                        <p id="tysonGalleryCaption">Tyson Plasma Desktop</p>
+                    </div>
+                    <!-- Example Boro image (Placeholder) -->
+                    <div class="screenshot gallery-view-btn" data-distro="boro">
+                        <img src="images/boro/boro/004-desktop.png" alt="Boro Desktop" id="boroDesktopAlt"
+                            onerror="this.src='images/Tyron/tyron/004-Desktop-01.png'">
+                        <span class="magnifier-icon"><i class="fas fa-search-plus"></i></span>
+                        <p id="boroGalleryCaption">Boro GNOME Desktop</p>
+                    </div>
+                    <!-- ...more galleries as resources allow... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Motivational transition section before apps -->
+        <section class="transition-hero">
+            <div class="container transition-hero-container">
+                <h2 class="transition-hero-title" id="readyMoreTitle">Ready for More?</h2>
+                <p class="transition-hero-desc" id="readyMoreDesc">
+                    Discover the unique tools that make Soplos Linux truly yours.<br>
+                    Welcome, customize, manage and enjoy your desktop experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Soplos Exclusive Applications -->
+        <section id="apps" class="applications">
+            <div class="container">
+                <h2 id="appsTitle">Soplos Exclusive Apps</h2>
+                <p id="appsDesc" class="apps-desc">
+                    Discover the applications developed exclusively for Soplos Linux. These tools allow you to
+                    customize, manage, and enhance your experience on Tyron and Tyson desktops.
+                </p>
+                <div class="apps-versions-grid">
+                    <!-- Tyron card -->
+                    <div class="apps-version-card" data-version="tyron">
+                        <h3 id="appsTyronTitle">Tyron (XFCE)</h3>
+                        <div class="apps-icons-grid">
+                            <button class="app-icon-btn" data-app="docklike" data-version="tyron"
+                                data-icon="images/icons/com.soplos.docklike.png">
+                                <img src="images/icons/com.soplos.docklike.png" alt="Soplos Docklike">
+                            </button>
+                            <button class="app-icon-btn" data-app="grub-editor" data-version="tyron"
+                                data-icon="images/icons/com.soplos.grubeditor.png">
+                                <img src="images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor">
+                            </button>
+                            <button class="app-icon-btn" data-app="plymouth-manager" data-version="tyron"
+                                data-icon="images/icons/com.soplos.plymouthmanager.png">
+                                <img src="images/icons/com.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager">
+                            </button>
+                            <button class="app-icon-btn" data-app="repo-selector" data-version="tyron"
+                                data-icon="images/icons/com.soplos.reposelector.png">
+                                <img src="images/icons/com.soplos.reposelector.png" alt="Soplos Repo Selector">
+                            </button>
+                            <button class="app-icon-btn" data-app="theme-manager" data-version="tyron"
+                                data-icon="images/icons/com.soplos.thememanager.png">
+                                <img src="images/icons/com.soplos.thememanager.png" alt="Soplos Theme Manager">
+                            </button>
+                            <button class="app-icon-btn" data-app="welcome" data-version="tyron"
+                                data-icon="images/icons/com.soplos.welcome.png">
+                                <img src="images/icons/com.soplos.welcome.png" alt="Soplos Welcome">
+                            </button>
+                            <button class="app-icon-btn" data-app="welcome-live" data-version="tyron"
+                                data-icon="images/icons/com.soplos.welcomelive.png">
+                                <img src="images/icons/com.soplos.welcomelive.png" alt="Soplos Welcome Live">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Tyson card (only existing apps, alphabetically) -->
+                    <div class="apps-version-card" data-version="tyson">
+                        <h3 id="appsTysonTitle">Tyson (Plasma 6)</h3>
+                        <div class="apps-icons-grid">
+                            <button class="app-icon-btn" data-app="grub-editor" data-version="tyson"
+                                data-icon="images/icons/com.soplos.grubeditor.png">
+                                <img src="images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor">
+                            </button>
+                            <button class="app-icon-btn" data-app="plymouth-manager" data-version="tyson"
+                                data-icon="images/icons/com.soplos.plymouthmanager.png">
+                                <img src="images/icons/com.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager">
+                            </button>
+                            <button class="app-icon-btn" data-app="repo-selector" data-version="tyson"
+                                data-icon="images/icons/com.soplos.reposelector.png">
+                                <img src="images/icons/com.soplos.reposelector.png" alt="Soplos Repo Selector">
+                            </button>
+                            <button class="app-icon-btn" data-app="welcome" data-version="tyson"
+                                data-icon="images/icons/com.soplos.welcome.png">
+                                <img src="images/icons/com.soplos.welcome.png" alt="Soplos Welcome">
+                            </button>
+                            <button class="app-icon-btn" data-app="welcome-live" data-version="tyson"
+                                data-icon="images/icons/com.soplos.welcomelive.png">
+                                <img src="images/icons/com.soplos.welcomelive.png" alt="Soplos Welcome Live">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Boro card -->
+                    <div class="apps-version-card" data-version="boro">
+                        <h3 id="appsBoroTitle">Boro (GNOME)</h3>
+                        <div class="apps-icons-grid">
+                            <button class="app-icon-btn" data-app="grub-editor" data-version="boro"
+                                data-icon="images/icons/com.soplos.grubeditor.png">
+                                <img src="images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor">
+                            </button>
+                            <button class="app-icon-btn" data-app="plymouth-manager" data-version="boro"
+                                data-icon="images/icons/com.soplos.plymouthmanager.png">
+                                <img src="images/icons/com.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager">
+                            </button>
+                            <button class="app-icon-btn" data-app="repo-selector" data-version="boro"
+                                data-icon="images/icons/com.soplos.reposelector.png">
+                                <img src="images/icons/com.soplos.reposelector.png" alt="Soplos Repo Selector">
+                            </button>
+                            <button class="app-icon-btn" data-app="welcome" data-version="boro"
+                                data-icon="images/icons/com.soplos.welcome.png">
+                                <img src="images/icons/com.soplos.welcome.png" alt="Soplos Welcome">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motivational transition section before system requirements -->
+        <section class="transition-hero">
+            <div class="container transition-hero-container">
+                <h2 class="transition-hero-title" id="deviceReadyTitle">Is your device ready?</h2>
+                <p class="transition-hero-desc" id="deviceReadyDesc">
+                    Check the minimum and recommended requirements to enjoy Soplos Linux without limits.<br>
+                    Your next experience starts here!
+                </p>
+            </div>
+        </section>
+
+        <!-- System requirements section -->
+        <section id="requirements" class="system-requirements">
+            <div class="container">
+                <h2 id="requirementsTitle">System Requirements</h2>
+                <div class="requirements-cards">
+                    <a href="#" class="requirements-card" role="button" id="requirementsTyronBtn">
+                        <img src="images/Tyron/tyron/004-Desktop-01.png" alt="Tyron XFCE" class="requirements-card-img">
+                        <span class="magnifier-icon"><i class="fas fa-search-plus"></i></span>
+                        <span class="requirements-card-title" id="requirementsTyronTitle">Tyron (XFCE)</span>
+                    </a>
+                    <a href="#" class="requirements-card" role="button" id="requirementsTysonBtn">
+                        <img src="images/Tyson/tyson/005-desktop-01.png" alt="Tyson Plasma"
+                            class="requirements-card-img">
+                        <span class="magnifier-icon"><i class="fas fa-search-plus"></i></span>
+                        <span class="requirements-card-title" id="requirementsTysonTitle">Tyson (Plasma 6)</span>
+                    </a>
+                    <a href="#" class="requirements-card" role="button" id="requirementsBoroBtn">
+                        <img src="images/boro/boro/004-desktop.png" alt="Boro GNOME" class="requirements-card-img"
+                            onerror="this.src='images/Tyron/tyron/004-Desktop-01.png'">
+                        <span class="magnifier-icon"><i class="fas fa-search-plus"></i></span>
+                        <span class="requirements-card-title" id="requirementsBoroTitle">Boro (GNOME)</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Tyron System Requirements -->
+        <div id="modalRequirementsTyron" class="modal-requirements">
+            <div class="modal-requirements-content">
+                <h3 class="modal-requirements-title" id="modalTyronTitle">Tyron (XFCE) - System Requirements</h3>
+                <button class="close-modal-requirements" aria-label="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-requirements-body" id="modalRequirementsTyronBody">
+                    <div class="requirements-container">
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="systemBaseTitle">System base</h3>
+                                <ul>
+                                    <li id="debianBase">Based on Debian Testing</li>
+                                    <li id="xfceDesktop">XFCE 4.20.1 desktop environment</li>
+                                    <li id="linuxKernel">Linux kernel 6.12.38+deb13-amd64</li>
+                                    <li id="x11System">X11 window system with PipeWire 1.4.2</li>
+                                    <li id="tyronVersion">Soplos Linux Tyron 1.0.0 Beta</li>
+                                    <li id="archSupport">x86_64 architecture with APT package manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="systemReqTitle">System requirements</h3>
+                                <div class="requirements-columns">
+                                    <div>
+                                        <h4 id="minimumTitle">Minimum:</h4>
+                                        <ul>
+                                            <li id="minProcessor">Processor: Dual core 2.0 GHz</li>
+                                            <li id="minRAM">RAM: 2 GB</li>
+                                            <li id="minStorage">Storage: 20 GB</li>
+                                            <li id="minGraphics">Graphics: OpenGL 2.0 compatible</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 id="recommendedTitle">Recommended:</h4>
+                                        <ul>
+                                            <li id="recProcessor">Processor: Quad core 2.4 GHz</li>
+                                            <li id="recRAM">RAM: 4 GB</li>
+                                            <li id="recStorage">Storage: 30 GB SSD</li>
+                                            <li id="recGraphics">Graphics: Dedicated 1GB VRAM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="optimizationsTitle">Optimizations</h3>
+                                <ul>
+                                    <li id="fastBoot">Fast boot with optimized systemd</li>
+                                    <li id="memoryMgmt">Enhanced memory management with optimized configuration</li>
+                                    <li id="ssdTuned">File system tuned for SSD</li>
+                                    <li id="pipewireAudio">Audio PipeWire 1.4.2 for better multimedia performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-box-open"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="includedSoftwareTitle">Included software</h3>
+                                <ul>
+                                    <li id="soplosApps1">Soplos Docklike 1.0.4</li>
+                                    <li id="soplosApps2">Soplos Grub Editor 1.0.4</li>
+                                    <li id="soplosApps3">Soplos Plymouth Manager 1.0.4</li>
+                                    <li id="soplosApps4">Soplos Repo Selector 1.0.4</li>
+                                    <li id="soplosApps5">Soplos Theme Manager 1.0.4</li>
+                                    <li id="soplosApps6">Soplos Welcome 1.0.3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-paint-roller"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="customizationTitle">Customization</h3>
+                                <ul>
+                                    <li id="visualThemes">Preconfigured visual themes and styles</li>
+                                    <li id="themeManager">Integrated theme manager for quick changes</li>
+                                    <li id="fontOptions">Simple font and appearance options</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="securityTitle">Security and Privacy</h3>
+                                <ul>
+                                    <li id="debianSecurity">Based on Debian's solid security</li>
+                                    <li id="securityUpdates">Regular security updates</li>
+                                    <li id="firewall">Preconfigured firewall for increased protection</li>
+                                    <li id="privacyOptions">Enhanced privacy options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Tyson System Requirements -->
+        <div id="modalRequirementsTyson" class="modal-requirements">
+            <div class="modal-requirements-content">
+                <button class="close-modal-requirements" aria-label="Close"><i class="fas fa-times"></i></button>
+                <h3 class="modal-requirements-title" id="modalTysonTitle">Tyson (Plasma 6) - System Requirements</h3>
+                <div class="modal-requirements-body" id="modalRequirementsTysonBody">
+                    <div class="requirements-container">
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="systemBaseTitleTyson">System base</h3>
+                                <ul>
+                                    <li id="debianBaseTyson">Based on Debian Testing</li>
+                                    <li id="plasmaDesktop">KDE Plasma 6.3.6 desktop environment</li>
+                                    <li id="linuxKernelTyson">Linux kernel 6.12.38+deb13-amd64 with optimization patches
+                                    </li>
+                                    <li id="archSupportTyson">x86_64 architecture support</li>
+                                    <li id="pipewireTyson">PipeWire 1.4.2</li>
+                                    <li id="aptManager">Package manager: APT (Debian/Ubuntu)</li>
+                                    <li id="waylandSystem">Window system: Wayland</li>
+                                    <li id="tysonVersion">Soplos Linux Tyson 1.0.0 Beta</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="systemReqTitleTyson">System requirements</h3>
+                                <div class="requirements-columns">
+                                    <div>
+                                        <h4 id="minimumTitleTyson">Minimum:</h4>
+                                        <ul>
+                                            <li id="minProcessorTyson">Processor: Dual core 2.4 GHz</li>
+                                            <li id="minRAMTyson">RAM: 4 GB</li>
+                                            <li id="minStorageTyson">Storage: 35 GB</li>
+                                            <li id="minGraphicsTyson">Graphics: OpenGL 3.3 compatible</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 id="recommendedTitleTyson">Recommended:</h4>
+                                        <ul>
+                                            <li id="recProcessorTyson">Processor: Quad core 3.0 GHz or higher</li>
+                                            <li id="recRAMTyson">RAM: 8 GB or more</li>
+                                            <li id="recStorageTyson">Storage: 50 GB NVMe SSD</li>
+                                            <li id="recGraphicsTyson">Graphics: Dedicated 4GB VRAM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-cog"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="optimizationsTitleTyson">Optimizations</h3>
+                                <ul>
+                                    <li id="fastBootTyson">Fast boot with optimized systemd</li>
+                                    <li id="memoryMgmtTyson">Enhanced memory management with optimized configuration
+                                    </li>
+                                    <li id="ssdTunedTyson">File system tuned for SSD</li>
+                                    <li id="kernelOptions">Kernel options for better desktop performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-box-open"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="includedSoftwareTitleTyson">Included software</h3>
+                                <ul>
+                                    <li id="soplosAppsTyson1">Soplos Grub Editor 1.0.5</li>
+                                    <li id="soplosAppsTyson2">Soplos Plymouth Manager 1.0.6</li>
+                                    <li id="soplosAppsTyson3">Soplos Repo Selector 1.0.7</li>
+                                    <li id="soplosAppsTyson4">Soplos Welcome 1.1.3</li>
+                                    <li id="soplosAppsTyson5">Soplos Welcome Live 1.1.3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-paint-roller"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="customizationTitleTyson">Customization</h3>
+                                <ul>
+                                    <li id="visualThemesTyson">Preconfigured visual themes and styles</li>
+                                    <li id="themeManagerTyson">Integrated theme manager for quick changes</li>
+                                    <li id="fontOptionsTyson">Simple font and appearance configuration</li>
+                                    <li id="iconsVariety">Variety of icons and cursors available</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="securityTitleTyson">Security and Privacy</h3>
+                                <ul>
+                                    <li id="debianSecurityTyson">Based on Debian's solid security</li>
+                                    <li id="securityUpdatesTyson">Regular security updates</li>
+                                    <li id="firewallTyson">Preconfigured firewall for increased protection</li>
+                                    <li id="privacyOptionsTyson">Enhanced privacy options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Boro System Requirements -->
+        <div id="modalRequirementsBoro" class="modal-requirements">
+            <div class="modal-requirements-content">
+                <button class="close-modal-requirements" aria-label="Close"><i class="fas fa-times"></i></button>
+                <h3 class="modal-requirements-title" id="modalBoroTitle">Boro (GNOME 49) - System Requirements</h3>
+                <div class="modal-requirements-body" id="modalRequirementsBoroBody">
+                    <div class="requirements-container">
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="systemBaseTitleBoro">System base</h3>
+                                <ul>
+                                    <li id="debianBaseBoro">Based on Debian Testing</li>
+                                    <li id="gnomeDesktop">GNOME 49 desktop environment</li>
+                                    <li id="linuxKernelBoro">Linux kernel 6.12.38+deb13-amd64</li>
+                                    <li id="waylandSystemBoro">Window system: Wayland</li>
+                                    <li id="boroVersion">Soplos Linux Boro 1.0.0 Alpha</li>
+                                    <li id="archSupportBoro">x86_64 architecture with APT package manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="systemReqTitleBoro">System requirements</h3>
+                                <div class="requirements-columns">
+                                    <div>
+                                        <h4 id="minimumTitleBoro">Minimum:</h4>
+                                        <ul>
+                                            <li id="minProcessorBoro">Processor: Dual core 2.0 GHz</li>
+                                            <li id="minRAMBoro">RAM: 4 GB</li>
+                                            <li id="minStorageBoro">Storage: 25 GB</li>
+                                            <li id="minGraphicsBoro">Graphics: OpenGL 3.3 compatible</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 id="recommendedTitleBoro">Recommended:</h4>
+                                        <ul>
+                                            <li id="recProcessorBoro">Processor: Quad core 2.4 GHz</li>
+                                            <li id="recRAMBoro">RAM: 8 GB</li>
+                                            <li id="recStorageBoro">Storage: 50 GB SSD</li>
+                                            <li id="recGraphicsBoro">Graphics: Dedicated 2GB VRAM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="optimizationsTitleBoro">Optimizations</h3>
+                                <ul>
+                                    <li id="fastBootBoro">Fast boot with optimized systemd</li>
+                                    <li id="memoryMgmtBoro">Enhanced memory management with optimized configuration</li>
+                                    <li id="ssdTunedBoro">File system tuned for SSD</li>
+                                    <li id="pipewireAudioBoro">Audio PipeWire 1.4.2 for better multimedia performance
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-box-open"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="includedSoftwareTitleBoro">Included software</h3>
+                                <ul>
+                                    <li id="soplosAppsBoro1">Soplos Grub Editor 1.0.5</li>
+                                    <li id="soplosAppsBoro2">Soplos Plymouth Manager 1.0.6</li>
+                                    <li id="soplosAppsBoro3">Soplos Repo Selector 1.0.7</li>
+                                    <li id="soplosAppsBoro4">Soplos Theme Manager 1.0.8</li>
+                                    <li id="soplosAppsBoro5">Soplos Welcome 1.1.3</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-paint-roller"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="customizationTitleBoro">Customization</h3>
+                                <ul>
+                                    <li id="visualThemesBoro">Preconfigured visual themes and styles</li>
+                                    <li id="themeManagerBoro">Integrated theme manager for quick changes</li>
+                                    <li id="gnomeExtensions">GNOME Extensions preinstalled for customization</li>
+                                    <li id="fontOptionsBoro">Simple font and appearance options</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="requirements-card">
+                            <div class="requirements-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="requirements-content">
+                                <h3 id="securityTitleBoro">Security and Privacy</h3>
+                                <ul>
+                                    <li id="debianSecurityBoro">Based on Debian's solid security</li>
+                                    <li id="securityUpdatesBoro">Regular security updates</li>
+                                    <li id="firewallBoro">Preconfigured firewall for increased protection</li>
+                                    <li id="privacyOptionsBoro">Enhanced privacy options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Download Section -->
+        <section id="download" class="download">
+            <div class="container">
+                <h2 id="downloadTitle">Download Soplos Linux</h2>
+                <div class="download-options">
+                    <a href="https://sourceforge.net/projects/soplos-linux/files/soplos-linux-tyron-beta-1.0.1.iso/download"
+                        class="download-btn" id="downloadTyronBtn" target="_blank">
+                        <i class="fas fa-download"></i>
+                        <span>Tyron (XFCE)</span>
+                        <small>ISO ~1.9GB</small>
+                    </a>
+                    <a href="https://sourceforge.net/projects/soplos-linux-tyson/files/soplos-linux-tyson-beta-1.0.1.iso/download"
+                        class="download-btn" id="downloadTysonBtn" target="_blank">
+                        <i class="fas fa-download"></i>
+                        <span>Tyson (Plasma)</span>
+                        <small>ISO ~2.9GB</small>
+                    </a>
+                    <!-- Future desktop -->
+                    <a href="#" class="download-btn" id="downloadBoroBtn">
+                        <i class="fas fa-download"></i>
+                        <span>Boro (GNOME) <span class="coming-soon-badge" id="comingSoonBadge">Coming
+                                Soon</span></span>
+                        <small>ISO ~2.7GB</small>
+                    </a>
+                </div>
+                <div class="checksum-info">
+                    <h4>SHA-256 Checksums:</h4>
+                    <p><strong>Tyron (XFCE):</strong>
+                        <code>596b9888b8084e1d721a5a2b9e6e526862e1f752fc2c9a0e12ec8ffc0beebd6b</code>
+                    </p>
+                    <p><strong>Tyson (Plasma):</strong>
+                        <code>3d2254831a7b9ec02f94f25218e12585ff20adfcfab888bfbdbc99b556e59896</code>
+                    </p>
+                    <p><strong>Boro (GNOME):</strong>
+                        <code>c42ceff2cda8ef07027bed48ecc4896ad38ceb56fee47d3b029c9deed50a089a</code>
+                    </p>
+                </div>
+                <!-- Checksums, mirrors, etc. -->
+                <!-- Badges embebidos SourceForge en dos columnas: Tyron | Tyson -->
+                <div class="sourceforge-badge badges-grid">
+                    <div class="badge-column tyron" aria-label="Badges Tyron">
+                        <h4 class="badge-column-title">Tyron (XFCE)</h4>
+                        <div class="badges-container">
+                            <!-- Begin  Tag -->
+                            <div class="sf-root" data-id="3848705" data-badge="oss-users-love-us-black"
+                                style="width:125px">
+                                <a href="https://sourceforge.net/projects/soplos-linux/" target="_blank">Soplos Linux
+                                    Tyron</a>
+                            </div>
+                            <script>(function () { var sc = document.createElement('script'); sc.async = true; sc.src = 'https://b.sf-syn.com/badge_js?sf_id=3848705'; var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(sc, p); })();</script>
+                            <!-- End  Tag -->
+
+                            <!-- Begin  Tag -->
+                            <div class="sf-root" data-id="3848705" data-badge="oss-rising-star-black"
+                                data-metadata="achievement=oss-rising-star" style="width:125px">
+                                <a href="https://sourceforge.net/projects/soplos-linux/" target="_blank">Soplos Linux
+                                    Tyron</a>
+                            </div>
+                            <script>(function () { var sc = document.createElement('script'); sc.async = true; sc.src = 'https://b.sf-syn.com/badge_js?sf_id=3848705'; var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(sc, p); })();</script>
+                            <!-- End  Tag -->
+
+                            <!-- Begin  Tag -->
+                            <div class="sf-root" data-id="3848705" data-badge="oss-sf-favorite-black"
+                                data-metadata="achievement=oss-sf-favorite" style="width:125px">
+                                <a href="https://sourceforge.net/projects/soplos-linux/" target="_blank">Soplos Linux
+                                    Tyron</a>
+                            </div>
+                            <script>(function () { var sc = document.createElement('script'); sc.async = true; sc.src = 'https://b.sf-syn.com/badge_js?sf_id=3848705'; var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(sc, p); })();</script>
+                            <!-- End  Tag -->
+                        </div>
+                    </div>
+
+                    <div class="badge-column tyson" aria-label="Badges Tyson">
+                        <h4 class="badge-column-title">Tyson (Plasma)</h4>
+                        <div class="badges-container">
+                            <!-- Begin  Tag -->
+                            <div class="sf-root" data-id="3882383" data-badge="oss-users-love-us-black"
+                                style="width:125px">
+                                <a href="https://sourceforge.net/projects/soplos-linux-tyson/" target="_blank">Soplos
+                                    Linux Tyson</a>
+                            </div>
+                            <script>(function () { var sc = document.createElement('script'); sc.async = true; sc.src = 'https://b.sf-syn.com/badge_js?sf_id=3882383'; var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(sc, p); })();</script>
+                            <!-- End  Tag -->
+
+                            <!-- Begin  Tag -->
+                            <div class="sf-root" data-id="3882383" data-badge="oss-rising-star-black"
+                                data-metadata="achievement=oss-rising-star" style="width:125px">
+                                <a href="https://sourceforge.net/projects/soplos-linux-tyson/" target="_blank">Soplos
+                                    Linux Tyson</a>
+                            </div>
+                            <script>(function () { var sc = document.createElement('script'); sc.async = true; sc.src = 'https://b.sf-syn.com/badge_js?sf_id=3882383'; var p = document.getElementsByTagName('script')[0]; p.parentNode.insertBefore(sc, p); })();</script>
+                            <!-- End  Tag -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Documentation/Guides -->
+        <div class="info-row">
+            <section id="docs" class="documentation">
+                <div class="container">
+                    <h2 id="docsTitle">Documentation & Guides</h2>
+                    <ul>
+                        <li>
+                            <a href="/wiki/install" id="docsInstallLink">
+                                <i class="fas fa-download" aria-hidden="true"></i> Installation Guide
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/wiki/start" id="docsStartLink">
+                                <i class="fas fa-rocket" aria-hidden="true"></i> First Steps
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/wiki/faq" id="docsFaqLink">
+                                <i class="fas fa-question-circle" aria-hidden="true"></i> FAQ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="community" class="community">
+                <div class="container">
+                    <h2 id="communityTitle">Join the Community</h2>
+                    <div class="social-icons">
+                        <a href="https://github.com/SoplosLinux" target="_blank" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://x.com/soploslinux" target="_blank" title="X (Twitter)"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://soplos.org/forums" target="_blank" title="Forums"><i
+                                class="fas fa-comments"></i></a>
+                        <a href="https://paypal.me/isubdes" target="_blank" title="PayPal - Support Us"><i
+                                class="fab fa-paypal"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Add gallery modal if not present -->
+        <div id="modalGallery" class="modal-gallery">
+            <div class="modal-gallery-content">
+                <button class="close-modal-gallery" aria-label="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-gallery-carousel">
+                    <button class="modal-gallery-nav prev" aria-label="Previous"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="modal-gallery-track"></div>
+                    <button class="modal-gallery-nav next" aria-label="Next"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="modal-gallery-caption"></div>
+                <div class="modal-gallery-dots"></div>
+            </div>
+        </div>
+
+        <!-- Modal for exclusive applications -->
+        <div id="modalApp" class="modal-app">
+            <div class="modal-app-content">
+                <button class="close-modal-app" aria-label="Close"><i class="fas fa-times"></i></button>
+                <div class="modal-app-header">
+                    <img id="modal-app-icon" src="" alt="" />
+                    <h3 id="modal-app-title"></h3>
+                </div>
+                <p id="modal-app-desc"></p>
+                <div class="modal-app-gallery" style="position: relative;">
+                    <button class="modal-app-nav prev" style="z-index: 10;"><i class="fas fa-chevron-left"></i></button>
+                    <div class="modal-app-track"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                    <button class="modal-app-nav next" style="z-index: 10;"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="modal-app-dots" id="modal-app-dots"></div>
+                <div class="modal-app-caption" id="modal-app-caption"></div>
+                <div class="modal-app-links" id="modal-app-links"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                <a href="legal/terms.html" id="footer-terms">Terms of Use</a>
+            </p>
+        </div>
+    </footer>
+    <a href="#inicio" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <script src="js/logger.js"></script>
+    <script src="js/language-loader.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/soplos-ui.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hash-loader.js"></script>
+</body>
+
+</html>

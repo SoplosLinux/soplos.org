@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyson (Plasma) Guide - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Complete guide for Soplos Tyson with KDE Plasma desktop environment - customization, features, and optimization tips.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../index.html#inicio"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Tyson (Plasma) Guide</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-desktop"></i> Soplos Tyson (Plasma) Guide</h1>
+                    <p>Complete guide for the modern and feature-rich KDE Plasma desktop variant</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Content -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#interface">Interface Tour</a></li>
+                            <li><a href="#customization">Customization</a></li>
+                            <li><a href="#applications">Default Applications</a></li>
+                            <li><a href="#soplos-apps">Soplos Exclusive Apps</a></li>
+                            <li><a href="#performance">Performance Tips</a></li>
+                            <li><a href="#troubleshooting">Common Issues</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <!-- Overview -->
+                        <section id="overview" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+
+                            <p>Soplos Tyson is the modern variant of Soplos Linux, built around the <strong>KDE Plasma
+                                    desktop environment</strong>. Tyson focuses on a polished visual experience,
+                                powerful customization, and integrated desktop features while remaining responsive on
+                                mid-range hardware.</p>
+
+                            <div class="feature-grid">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tv"></i>
+                                    </div>
+                                    <h3>Visually Rich</h3>
+                                    <p>Plasma offers advanced visual effects, native widgets and smooth animations while
+                                        remaining configurable to reduce effects on older machines.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-sliders-h"></i>
+                                    </div>
+                                    <h3>Extremely Customizable</h3>
+                                    <p>From widgets to panels, Plasma can be tailored to any workflow. Use System
+                                        Settings or Soplos Welcome for quick configuration.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <h3>Integrated Tools</h3>
+                                    <p>Native KDE utilities (KWin, KRunner, Discover) provide a cohesive desktop
+                                        experience with deep integration options.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                    <h3>Modern Session</h3>
+                                    <p>Tyson ships with SDDM login and a polished welcome desktop tuned for
+                                        out-of-the-box visual consistency.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <strong>Perfect for:</strong> Users who want a full-featured, attractive desktop
+                                    with deep customization and integrated features—good for everyday workstations and
+                                    creative setups.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Interface Tour -->
+                        <section id="interface" class="content-section">
+                            <h2><i class="fas fa-eye"></i> Interface Tour</h2>
+
+                            <h3>Desktop Layout</h3>
+                            <p>Tyson uses Plasma's default layout: a top or bottom panel (configurable), system tray,
+                                application launcher, and desktop widgets (Plasmoids).</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-bars"></i> Application Launcher</h4>
+                                    <p>Plasma's launcher provides fast search, categories and a compact or full-screen
+                                        view depending on your preference.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-th-large"></i> Panels & Widgets</h4>
+                                    <p>Plasma panels are flexible: add widgets, applets, and configure multiple panels
+                                        on any screen edge.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-search"></i> KRunner</h4>
+                                    <p>Press Alt+Space to launch KRunner — a powerful command, calculator and launcher
+                                        bar that accelerates workflows.</p>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-user-circle"></i> SDDM Login</h4>
+                                    <p>Tyson ships with SDDM for a polished graphical login and session manager. The
+                                        greeter is themed to Soplos styling.</p>
+                                </div>
+                            </div>
+
+                            <h3>Screenshots</h3>
+                            <p>Example Tyson screenshots from the ISO:</p>
+                            <div class="screenshot-row">
+                                <img src="../../images/Tyson/tyson/005-desktop-01.png" alt="Tyson Desktop"
+                                    style="max-width:48%; margin-right:1rem;">
+                                <img src="../../images/Tyson/tyson/004-welcome.png" alt="Tyson Welcome"
+                                    style="max-width:48%;">
+                            </div>
+                        </section>
+
+                        <!-- Customization -->
+                        <section id="customization" class="content-section">
+                            <h2><i class="fas fa-paint-brush"></i> Customization</h2>
+
+                            <h3>Appearance Settings</h3>
+                            <p>Open <strong>System Settings → Appearance</strong> to change themes, colors, fonts and
+                                icon sets. Plasma supports global themes that can apply multiple settings at once.</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-palette"></i> Global Themes</h4>
+                                    <ul>
+                                        <li>Switch complete desktop themes from System Settings or Soplos Theme Manager
+                                            (if installed)</li>
+                                        <li>Download KDE store themes directly from the settings dialog</li>
+                                        <li>Dark and light options available</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-icons"></i> Icons & Cursors</h4>
+                                    <ul>
+                                        <li>Manage icon packs and cursor themes easily</li>
+                                        <li>Soplos-provided icon theme available</li>
+                                        <li>Per-application icon overrides supported</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-window-maximize"></i> Window Management</h4>
+                                    <ul>
+                                        <li>Fine-grained KWin settings for effects and tiling</li>
+                                        <li>Keyboard shortcuts and window rules</li>
+                                        <li>Compositor settings to trade visuals for performance</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-image"></i> Wallpapers & Lock Screen</h4>
+                                    <ul>
+                                        <li>Set wallpapers per activity or screen</li>
+                                        <li>Configure lock screen background and widgets</li>
+                                        <li>Animated or slideshow wallpapers supported</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-magic"></i>
+                                <div>
+                                    <strong>Pro Tip:</strong> Use Activities to create different layouts for work,
+                                    gaming or presentations and switch them quickly.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Default Applications -->
+                        <section id="applications" class="content-section">
+                            <h2><i class="fas fa-th-large"></i> Default Applications</h2>
+
+                            <p>Tyson ships with a curated set of KDE and cross-desktop applications chosen for balance
+                                between features and integration. For additional software, use Soplos Welcome →
+                                Software.</p>
+
+                            <div class="info-box info">
+                                <i class="fas fa-download"></i>
+                                <div>
+                                    <strong>Need more applications?</strong> Soplos Welcome provides access to APT,
+                                    Flatpak and curated recommendations to extend your desktop quickly.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Soplos Exclusive Apps -->
+                        <section id="soplos-apps" class="content-section">
+                            <h2><i class="fas fa-gem"></i> Soplos Exclusive Applications</h2>
+
+                            <p>Tyson includes the Soplos system utilities accessible through <strong>Soplos
+                                    Welcome</strong> (icons shown from the packaged apps):</p>
+
+                            <div class="feature-grid">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome"
+                                            style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Welcome</h3>
+                                    <p>Central hub for initial setup, software management, drivers, kernels and
+                                        customization. It detects hardware, recommends drivers and simplifies common
+                                        tasks.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.welcomelive.png"
+                                            alt="Soplos Welcome Live" style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Welcome Live</h3>
+                                    <p>Live-ISO variant of Welcome used on the installer image to select language, test
+                                        hardware and launch the Calamares installer.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor"
+                                            style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos GRUB Editor</h3>
+                                    <p>Graphical GTK3 tool for editing GRUB2 settings and themes. Create backups, edit
+                                        boot entries and manage kernel parameters safely.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.plymouthmanager.png"
+                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Plymouth Manager</h3>
+                                    <p>Manage Plymouth boot themes: preview, install and apply custom boot animations
+                                        with a simple GUI.</p>
+                                </div>
+
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <img src="../../images/icons/com.soplos.reposelector.png"
+                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;">
+                                    </div>
+                                    <h3>Soplos Repo Selector</h3>
+                                    <p>Choose fastest mirrors, enable additional repositories and manage GPG keys with
+                                        an easy interface designed to simplify package sources.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box success">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <strong>Note:</strong> Some Soplos utilities are shared between Tyron and Tyson. On
+                                    Plasma you can use native panel widgets instead of dock-specific tools if you
+                                    prefer.
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Performance Tips -->
+                        <section id="performance" class="content-section">
+                            <h2><i class="fas fa-rocket"></i> Performance Tips</h2>
+
+                            <p>Plasma is configurable to be lightweight or visually rich. Use these tips to balance
+                                performance and effects:</p>
+
+                            <div class="settings-grid">
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-memory"></i> Memory Optimization</h4>
+                                    <ul>
+                                        <li>Disable or reduce desktop effects in System Settings → Workspace Behavior →
+                                            Desktop Effects</li>
+                                        <li>Limit startup services and autostart entries</li>
+                                        <li>Prefer lightweight alternatives for background services</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-desktop"></i> Compositor</h4>
+                                    <ul>
+                                        <li>Configure KWin compositor to use XRender for older GPUs or OpenGL 2/3 for
+                                            better performance</li>
+                                        <li>Turn off blur and transparency effects to save GPU cycles</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-hdd"></i> Storage</h4>
+                                    <ul>
+                                        <li>Keep your home on fast storage where possible</li>
+                                        <li>Clean caches regularly and monitor disk health</li>
+                                    </ul>
+                                </div>
+
+                                <div class="settings-card">
+                                    <h4><i class="fas fa-microchip"></i> System Tuning</h4>
+                                    <ul>
+                                        <li>Try Liquorix/XanMod kernels via Soplos Welcome → Kernels</li>
+                                        <li>Adjust swappiness and CPU governor for laptops</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Common Issues -->
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-wrench"></i> Common Issues</h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Panel or widgets not showing
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Try restarting Plasma shell:</p>
+                                    <div class="code-example">
+                                        <pre><code># Restart Plasma shell
+kwin_x11 --replace &
+plasmashell --replace &</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Login screen issues
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Check SDDM configuration and greeter logs in /var/log. Reconfigure SDDM if
+                                        needed:</p>
+                                    <ol>
+                                        <li>Inspect /var/log/sddm.log</li>
+                                        <li>Try: <code>sudo dpkg-reconfigure sddm</code></li>
+                                        <li>Test with a different session from the greeter</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> Slow animations or effects
+                                </h4>
+                                <div class="faq-answer">
+                                    <p>Disable or tune effects in System Settings → Workspace Behavior → Desktop Effects
+                                        and adjust compositor backend.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong>Need more help?</strong> Check the troubleshooting section in the wiki or
+                                    ask on the community forums for help with specific hardware.
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <!-- FAQ JavaScript for collapsible sections -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Frequently asked questions about Soplos Linux. Find answers to common questions and solutions to typical problems.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="faq-breadcrumb">FAQ</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-question-circle"></i> <span id="faq-hero-title">Frequently Asked
+                            Questions</span></h1>
+                    <p id="faq-hero-desc">Find answers to the most common questions about Soplos Linux</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Content -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="faq-toc-title">Categories</h3>
+                        <ul>
+                            <li><a href="#general" id="faq-toc-1">General Questions</a></li>
+                            <li><a href="#installation" id="faq-toc-2">Installation</a></li>
+                            <li><a href="#system" id="faq-toc-3">System & Hardware</a></li>
+                            <li><a href="#software" id="faq-toc-4">Software & Applications</a></li>
+                            <li><a href="#desktop" id="faq-toc-5">Desktop Environments</a></li>
+                            <li><a href="#troubleshooting" id="faq-toc-6">Troubleshooting</a></li>
+                            <li><a href="#support" id="faq-toc-7">Support</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <!-- General Questions -->
+                        <section id="general" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="faq-general-title">General Questions</span>
+                            </h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q1">What is Soplos
+                                        Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-gen-a1">Soplos Linux is a modern, user-friendly Linux distribution based
+                                        on Debian
+                                        Testing. It comes in three desktop variants: Tyron (XFCE) for lightweight
+                                        performance, Tyson (Plasma) for a modern, feature-rich experience, and Boro
+                                        (GNOME) for a polished, workflow-centric environment. Soplos
+                                        includes exclusive applications and tools to make your Linux experience simple
+                                        and enjoyable.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q2">Is Soplos Linux
+                                        free?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-gen-a2">Yes! Soplos Linux is completely free and open-source. You can
+                                        download, use,
+                                        modify, and distribute it without any cost. However, donations are appreciated
+                                        to support development and server costs.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q3">Which version should I
+                                        choose: Tyron, Tyson, or
+                                        Boro?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p><strong id="faq-gen-a3-tyron-intro">Choose Tyron (XFCE) if:</strong></p>
+                                    <ul>
+                                        <li id="faq-gen-a3-tyron-1">You have older or limited hardware</li>
+                                        <li id="faq-gen-a3-tyron-2">You prefer a lightweight, fast system</li>
+                                        <li id="faq-gen-a3-tyron-3">You want longer battery life on laptops</li>
+                                        <li id="faq-gen-a3-tyron-4">You like simplicity and efficiency</li>
+                                    </ul>
+                                    <p><strong id="faq-gen-a3-tyson-intro">Choose Tyson (Plasma) if:</strong></p>
+                                    <ul>
+                                        <li id="faq-gen-a3-tyson-1">You have modern hardware</li>
+                                        <li id="faq-gen-a3-tyson-2">You want beautiful animations and effects</li>
+                                        <li id="faq-gen-a3-tyson-3">You enjoy extensive customization options</li>
+                                        <li id="faq-gen-a3-tyson-4">You prefer a modern, polished interface</li>
+                                    </ul>
+                                    <p><strong id="faq-gen-a3-boro-intro">Choose Boro (GNOME) if:</strong></p>
+                                    <ul>
+                                        <li id="faq-gen-a3-boro-1">You prefer a distraction-free, workflow-oriented
+                                            interface</li>
+                                        <li id="faq-gen-a3-boro-2">You want a modern and consistent design</li>
+                                        <li id="faq-gen-a3-boro-3">You use touch gestures or trackpads extensively</li>
+                                        <li id="faq-gen-a3-boro-4">You want a polished out-of-the-box experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q4">Can I switch between
+                                        Tyron, Tyson, and Boro?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-gen-a4">While technically possible to install multiple desktop
+                                        environments, we recommend
+                                        doing a fresh installation for the best experience. Each variant is optimized
+                                        for its specific desktop environment and includes tailored applications and
+                                        configurations.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Installation -->
+                        <section id="installation" class="content-section">
+                            <h2><i class="fas fa-download"></i> <span id="faq-install-title">Installation
+                                    Questions</span></h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-inst-q1">Can I install Soplos
+                                        Linux alongside Windows?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-inst-a1-intro">Yes! Soplos Linux supports dual boot installation. During
+                                        installation, choose
+                                        "Install Soplos Linux alongside [existing OS]" option. Make sure to:</p>
+                                    <ul>
+                                        <li id="faq-inst-a1-1">Backup your important data first</li>
+                                        <li id="faq-inst-a1-2">Disable Fast Startup in Windows</li>
+                                        <li id="faq-inst-a1-3">Ensure you have enough free disk space (at least 30GB)
+                                        </li>
+                                        <li id="faq-inst-a1-4">Disable Secure Boot if you encounter issues</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-inst-q2">My computer won't boot
+                                        from USB. What should I
+                                        do?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-inst-a2-intro">Try these solutions:</p>
+                                    <ol>
+                                        <li id="faq-inst-a2-1">Check if the USB is properly created (recreate if
+                                            necessary)</li>
+                                        <li id="faq-inst-a2-2">Enter BIOS/UEFI settings and set USB as first boot device
+                                        </li>
+                                        <li id="faq-inst-a2-3">Disable Secure Boot temporarily</li>
+                                        <li id="faq-inst-a2-4">Try different USB ports (preferably USB 2.0)</li>
+                                        <li id="faq-inst-a2-5">Use a different USB drive if available</li>
+                                        <li id="faq-inst-a2-6">Check if your computer supports UEFI or Legacy boot</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-inst-q3">How much disk space do I
+                                        need?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p><strong id="faq-inst-a3-min-intro">Minimum requirements:</strong></p>
+                                    <ul>
+                                        <li id="faq-inst-a3-min-1">Tyron (XFCE): 20GB</li>
+                                        <li id="faq-inst-a3-min-2">Tyson (Plasma): 35GB</li>
+                                        <li id="faq-inst-a3-min-3">Boro (GNOME): 35GB</li>
+                                    </ul>
+                                    <p><strong id="faq-inst-a3-rec-intro">Recommended:</strong></p>
+                                    <ul>
+                                        <li id="faq-inst-a3-rec-1">Tyron (XFCE): 30GB or more</li>
+                                        <li id="faq-inst-a3-rec-2">Tyson (Plasma): 50GB or more</li>
+                                        <li id="faq-inst-a3-rec-3">Boro (GNOME): 50GB or more</li>
+                                    </ul>
+                                    <p id="faq-inst-a3-note">More space allows for additional software, updates, and
+                                        personal files.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- System & Hardware -->
+                        <section id="system" class="content-section">
+                            <h2><i class="fas fa-microchip"></i> <span id="faq-sys-title">System &
+                                    Hardware</span></h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q1">Will my hardware work
+                                        with Soplos Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a1-intro">Soplos Linux has excellent hardware support thanks to its
+                                        comprehensive driver
+                                        collection accessible through <strong>Soplos Welcome</strong>. The Drivers tab
+                                        includes support for:</p>
+                                    <ul>
+                                        <li><strong id="faq-sys-a1-graphics">Graphics:</strong>
+                                            <ul>
+                                                <li id="faq-sys-a1-graphics-1">NVIDIA Legacy and Latest drivers</li>
+                                                <li id="faq-sys-a1-graphics-2">AMD graphics drivers</li>
+                                                <li id="faq-sys-a1-graphics-3">Intel graphics drivers</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong id="faq-sys-a1-wifi">WiFi Adapters:</strong>
+                                            <ul>
+                                                <li id="faq-sys-a1-wifi-1">MediaTek, Intel, Realtek, Broadcom, Atheros
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="faq-sys-a1-bt"><strong>Bluetooth:</strong> Comprehensive Bluetooth stack
+                                            support</li>
+                                        <li id="faq-sys-a1-printers"><strong>Printers:</strong> Extensive printer driver
+                                            database</li>
+                                        <li id="faq-sys-a1-vm"><strong>Virtual Machines:</strong> VMware Tools,
+                                            VirtualBox Guest Additions,
+                                            QEMU Guest Agent</li>
+                                    </ul>
+                                    <p id="faq-sys-a1-outro">Most hardware works out of the box, and additional drivers
+                                        can be easily
+                                        installed through Soplos Welcome's intuitive interface. You can test
+                                        compatibility using the live USB before installation.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q2">How do I install NVIDIA
+                                        graphics drivers?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a2-intro">Installing NVIDIA drivers in Soplos Linux is simple using
+                                        Soplos Welcome:</p>
+                                    <ol>
+                                        <li id="faq-sys-a2-1">Open <strong>Soplos Welcome</strong> from the applications
+                                            menu</li>
+                                        <li id="faq-sys-a2-2">Go to the <strong>Drivers</strong> tab</li>
+                                        <li id="faq-sys-a2-3">In the <strong>Graphics</strong> section, you'll find:
+                                            <ul>
+                                                <li id="faq-sys-a2-3-1"><strong>NVIDIA Legacy:</strong> For older
+                                                    graphics cards</li>
+                                                <li id="faq-sys-a2-3-2"><strong>NVIDIA Latest:</strong> For modern
+                                                    graphics cards</li>
+                                            </ul>
+                                        </li>
+                                        <li id="faq-sys-a2-4">Click the install button next to your appropriate driver
+                                        </li>
+                                        <li id="faq-sys-a2-5">Reboot your system when installation is complete</li>
+                                    </ol>
+                                    <p id="faq-sys-a2-alt"><strong>Alternative method:</strong> You can also install via
+                                        terminal:</p>
+                                    <div class="code-example">
+                                        <pre><code>sudo apt update
+sudo apt install nvidia-driver
+sudo reboot</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q3">Does Soplos Linux support
+                                        BTRFS and system
+                                        snapshots?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a3-intro">Yes! Soplos Linux offers comprehensive BTRFS support in all
+                                        variants (Tyron,
+                                        Tyson, and Boro):</p>
+                                    <ul>
+                                        <li id="faq-sys-a3-1"><strong>BTRFS File System:</strong> Modern, copy-on-write
+                                            file system with
+                                            advanced features</li>
+                                        <li id="faq-sys-a3-2"><strong>Timeshift Integration:</strong> Pre-configured
+                                            system snapshot
+                                            management</li>
+                                        <li id="faq-sys-a3-3"><strong>Automatic Snapshots:</strong> System snapshots
+                                            before major updates
+                                            and installations</li>
+                                        <li id="faq-sys-a3-4"><strong>Easy Recovery:</strong> Restore your system to a
+                                            previous state if
+                                            something goes wrong</li>
+                                        <li id="faq-sys-a3-5"><strong>Subvolume Management:</strong> Efficient storage
+                                            with BTRFS
+                                            subvolumes</li>
+                                    </ul>
+                                    <p id="faq-sys-a3-benefits-intro"><strong>Benefits of BTRFS + Timeshift in
+                                            Soplos:</strong></p>
+                                    <ul>
+                                        <li id="faq-sys-a3-benefit-1">Rollback system changes safely</li>
+                                        <li id="faq-sys-a3-benefit-2">Protection against failed updates</li>
+                                        <li id="faq-sys-a3-benefit-3">Space-efficient snapshots</li>
+                                        <li id="faq-sys-a3-benefit-4">Automatic cleanup of old snapshots</li>
+                                        <li id="faq-sys-a3-benefit-5">GRUB integration for boot-time recovery</li>
+                                    </ul>
+                                    <p id="faq-sys-a3-outro">You can choose BTRFS during installation or manage
+                                        snapshots through Timeshift's
+                                        user-friendly interface.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q4">My Wi-Fi doesn't work.
+                                        How can I fix it?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a4-intro">Soplos Linux includes comprehensive Wi-Fi driver support.
+                                        Try these solutions:
+                                    </p>
+                                    <ol>
+                                        <li id="faq-sys-a4-welcome"><strong>Use Soplos Welcome (Recommended):</strong>
+                                            <ul>
+                                                <li id="faq-sys-a4-welcome-1">Open Soplos Welcome →
+                                                    <strong>Drivers</strong> tab
+                                                </li>
+                                                <li id="faq-sys-a4-welcome-2">Check the <strong>WiFi</strong> section
+                                                    for your specific adapter:
+                                                    <ul>
+                                                        <li id="faq-sys-a4-welcome-2-1">MediaTek WiFi drivers</li>
+                                                        <li id="faq-sys-a4-welcome-2-2">Intel WiFi drivers</li>
+                                                        <li id="faq-sys-a4-welcome-2-3">Realtek WiFi drivers</li>
+                                                        <li id="faq-sys-a4-welcome-2-4">Broadcom WiFi drivers</li>
+                                                        <li id="faq-sys-a4-welcome-2-5">Atheros WiFi drivers</li>
+                                                    </ul>
+                                                </li>
+                                                <li id="faq-sys-a4-welcome-3">Click install on the appropriate driver
+                                                    for your hardware</li>
+                                            </ul>
+                                        </li>
+                                        <li id="faq-sys-a4-troubleshoot"><strong>Basic troubleshooting:</strong>
+                                            <ul>
+                                                <li id="faq-sys-a4-troubleshoot-1">Check if Wi-Fi is enabled in network
+                                                    settings</li>
+                                                <li id="faq-sys-a4-troubleshoot-2">Restart network manager:
+                                                    <code>sudo systemctl restart NetworkManager</code>
+                                                </li>
+                                                <li id="faq-sys-a4-troubleshoot-3">Install firmware packages:
+                                                    <code>sudo apt install firmware-linux firmware-linux-nonfree</code>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <p id="faq-sys-a4-outro">Most Wi-Fi adapters work out of the box thanks to Soplos'
+                                        comprehensive driver
+                                        collection.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q5">How do I manage the
+                                        firewall in Soplos Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a5-intro">Soplos Linux comes with <strong>GUFW (Graphical
+                                            Uncomplicated Firewall)</strong>
+                                        pre-installed for easy firewall management:</p>
+                                    <ul>
+                                        <li id="faq-sys-a5-1"><strong>Access GUFW:</strong> Available through the
+                                            applications menu or
+                                            system settings</li>
+                                        <li id="faq-sys-a5-2"><strong>User-friendly interface:</strong> No need to use
+                                            complex
+                                            command-line UFW commands</li>
+                                        <li id="faq-sys-a5-3"><strong>Simple rules creation:</strong> Easily allow/deny
+                                            applications and
+                                            ports</li>
+                                        <li id="faq-sys-a5-4"><strong>Profile management:</strong> Different firewall
+                                            profiles for various
+                                            scenarios</li>
+                                        <li id="faq-sys-a5-5"><strong>Real-time monitoring:</strong> View active
+                                            connections and firewall
+                                            status</li>
+                                    </ul>
+                                    <p id="faq-sys-a5-outro">The firewall is automatically configured with sensible
+                                        defaults, but GUFW allows
+                                        you to customize rules according to your needs without technical complexity.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Software & Applications -->
+                        <section id="software" class="content-section">
+                            <h2><i class="fas fa-download"></i> <span id="faq-soft-title">Software &
+                                    Applications</span></h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-soft-q1">How do I install
+                                        software in Soplos Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-soft-a1-intro">Soplos Linux offers multiple ways to install software, all
+                                        accessible through
+                                        <strong>Soplos Welcome</strong>:
+                                    </p>
+                                    <ul>
+                                        <li><strong id="faq-soft-a1-welcome-soft">Soplos Welcome → Software
+                                                tab:</strong>
+                                            <ul>
+                                                <li id="faq-soft-a1-welcome-soft-1">Software Centers (Discover,
+                                                    Synaptic, GNOME Software)</li>
+                                                <li id="faq-soft-a1-welcome-soft-2">Package Managers (APT, Flatpak,
+                                                    Snap)</li>
+                                                <li id="faq-soft-a1-welcome-soft-3">Easy one-click installation
+                                                    interface</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong id="faq-soft-a1-welcome-rec">Soplos Welcome → Recommended
+                                                tab:</strong>
+                                            <ul>
+                                                <li id="faq-soft-a1-welcome-rec-1">Curated essential applications</li>
+                                                <li id="faq-soft-a1-welcome-rec-2">Categorized by purpose (productivity,
+                                                    multimedia, development, etc.)
+                                                </li>
+                                                <li id="faq-soft-a1-welcome-rec-3">One-click installation with automatic
+                                                    dependencies</li>
+                                            </ul>
+                                        </li>
+                                        <li id="faq-soft-a1-cli"><strong>Command line:</strong>
+                                            <code>sudo apt install package-name</code>
+                                        </li>
+                                        <li id="faq-soft-a1-deb"><strong>.deb packages:</strong> Download and
+                                            double-click to install</li>
+                                    </ul>
+                                    <p id="faq-soft-a1-note"><strong>Note:</strong> Some applications require Flatpak to
+                                        be installed first,
+                                        which Soplos Welcome handles automatically.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-soft-q2">Can I run Windows
+                                        programs on Soplos Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-soft-a2-intro">Yes, there are several options:</p>
+                                    <ul>
+                                        <li id="faq-soft-a2-1"><strong>Wine:</strong> Run Windows applications directly
+                                        </li>
+                                        <li id="faq-soft-a2-2"><strong>PlayOnLinux:</strong> Simplified Wine interface
+                                        </li>
+                                        <li id="faq-soft-a2-3"><strong>Lutris:</strong> Gaming-focused compatibility
+                                            layer</li>
+                                        <li id="faq-soft-a2-4"><strong>VirtualBox:</strong> Run full Windows in a
+                                            virtual machine</li>
+                                        <li id="faq-soft-a2-5"><strong>Steam Proton:</strong> For Windows games on Steam
+                                        </li>
+                                    </ul>
+                                    <p id="faq-soft-a2-outro">Many popular applications also have native Linux
+                                        alternatives.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-soft-q3">What are the Soplos
+                                        exclusive applications?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-soft-a3-intro">Soplos Linux includes several exclusive applications
+                                        accessible through
+                                        <strong>Soplos Welcome</strong>:
+                                    </p>
+                                    <ul>
+                                        <li id="faq-soft-a3-1"><strong>Soplos Welcome:</strong> Central hub for system
+                                            configuration,
+                                            software installation, and driver management with 6 comprehensive tabs</li>
+                                        <li id="faq-soft-a3-2"><strong>Soplos GRUB Editor:</strong> Easy bootloader
+                                            customization and theme
+                                            management</li>
+                                        <li id="faq-soft-a3-3"><strong>Soplos Plymouth Manager:</strong> Boot splash
+                                            screen customization
+                                            and management</li>
+                                        <li id="faq-soft-a3-4"><strong>Soplos Theme Manager:</strong> System-wide theme
+                                            switching and
+                                            customization</li>
+                                        <li id="faq-soft-a3-5"><strong>Soplos Repo Selector:</strong> Repository
+                                            management and mirror
+                                            selection</li>
+                                        <li id="faq-soft-a3-6"><strong>Soplos Docklike:</strong> macOS-style dock panel
+                                            (available in Tyron
+                                            XFCE)</li>
+                                    </ul>
+                                    <p id="faq-soft-a3-outro">Additionally, Soplos Welcome provides access to advanced
+                                        kernel management
+                                        (Liquorix, XanMod) and comprehensive hardware driver installation.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-soft-q4">Can I install different
+                                        kernels in Soplos
+                                        Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-soft-a4-intro">Yes! Soplos Welcome includes a dedicated
+                                        <strong>Kernels</strong> tab with
+                                        advanced kernel options:
+                                    </p>
+                                    <ul>
+                                        <li id="faq-soft-a4-1"><strong>Liquorix Kernel:</strong> Low-latency kernel
+                                            optimized for desktop
+                                            performance and gaming</li>
+                                        <li id="faq-soft-a4-2"><strong>XanMod Kernel:</strong> Performance-focused
+                                            kernel with various
+                                            optimization profiles</li>
+                                        <li id="faq-soft-a4-3"><strong>Kernel Management Tools:</strong> Easy
+                                            installation, removal, and
+                                            maintenance of kernel versions</li>
+                                    </ul>
+                                    <p id="faq-soft-a4-outro">The Kernels tab provides one-click installation and
+                                        automatic configuration,
+                                        making it safe and easy to experiment with different kernel options for optimal
+                                        performance.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Desktop Environments -->
+                        <section id="desktop" class="content-section">
+                            <h2><i class="fas fa-desktop"></i> <span id="faq-desktop-title">Desktop Environment
+                                    Questions</span></h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-desktop-q1">How do I customize
+                                        the desktop appearance?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p><strong id="faq-desktop-a1-tyron-intro">For Tyron (XFCE):</strong></p>
+                                    <ul>
+                                        <li id="faq-desktop-a1-tyron-1">Right-click desktop → Settings → Appearance</li>
+                                        <li id="faq-desktop-a1-tyron-2">Use Soplos Theme Manager for easy theme
+                                            switching</li>
+                                        <li id="faq-desktop-a1-tyron-3">Customize panels through panel preferences</li>
+                                        <li id="faq-desktop-a1-tyron-4">Use Soplos Docklike for a dock-style taskbar
+                                        </li>
+                                    </ul>
+                                    <p><strong id="faq-desktop-a1-tyson-intro">For Tyson (Plasma):</strong></p>
+                                    <ul>
+                                        <li id="faq-desktop-a1-tyson-1">Right-click desktop → Configure Desktop</li>
+                                        <li id="faq-desktop-a1-tyson-2">System Settings → Appearance</li>
+                                        <li id="faq-desktop-a1-tyson-3">Download additional themes from KDE Store</li>
+                                        <li id="faq-desktop-a1-tyson-4">Customize widgets and panels</li>
+                                    </ul>
+                                    <p><strong id="faq-desktop-a1-boro-intro">For Boro (GNOME):</strong></p>
+                                    <ul>
+                                        <li id="faq-desktop-a1-boro-1">Settings → Appearance</li>
+                                        <li id="faq-desktop-a1-boro-2">Use <strong>GNOME Tweaks</strong> (pre-installed)
+                                            for advanced options</li>
+                                        <li id="faq-desktop-a1-boro-3">Use <strong>Extension Manager</strong>
+                                            (pre-installed) to manage GNOME Shell
+                                            extensions</li>
+                                        <li id="faq-desktop-a1-boro-4">Visit <a href="https://extensions.gnome.org"
+                                                target="_blank">extensions.gnome.org</a> for more functionality</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-desktop-q2">How do I change the
+                                        desktop wallpaper?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-desktop-a2-intro">Both desktop environments:</p>
+                                    <ul>
+                                        <li id="faq-desktop-a2-1">Right-click on an empty area of the desktop</li>
+                                        <li id="faq-desktop-a2-2">Select "Desktop Settings" or "Configure Desktop"</li>
+                                        <li id="faq-desktop-a2-3">Choose from included wallpapers or browse for your own
+                                        </li>
+                                        <li id="faq-desktop-a2-4">Set up slideshow mode for rotating wallpapers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Troubleshooting -->
+                        <!-- Software & Applications --> <!-- Troubleshooting -->
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-tools"></i> <span id="faq-trouble-title">Troubleshooting</span></h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-trouble-q1">My system is running
+                                        slowly. How can I improve
+                                        performance?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-trouble-a1-intro">Try these optimization tips:</p>
+                                    <ol>
+                                        <li id="faq-trouble-a1-1">Check system resources with <code>htop</code> or
+                                            System Monitor</li>
+                                        <li id="faq-trouble-a1-2">Disable startup applications you don't need</li>
+                                        <li id="faq-trouble-a1-3">Clear package cache: <code>sudo apt autoclean</code>
+                                        </li>
+                                        <li id="faq-trouble-a1-4">Remove unused packages:
+                                            <code>sudo apt autoremove</code>
+                                        </li>
+                                        <li id="faq-trouble-a1-5">Check for malware or resource-heavy processes</li>
+                                        <li id="faq-trouble-a1-6">Consider switching from Tyson/Boro to Tyron for better
+                                            performance</li>
+                                        <li id="faq-trouble-a1-7">Try performance kernels through <strong>Soplos Welcome
+                                                → Kernels
+                                                tab</strong> (Liquorix or XanMod)</li>
+                                        <li id="faq-trouble-a1-8">Add more RAM or switch to an SSD if possible</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-trouble-q2">I forgot my password.
+                                        How can I reset it?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-trouble-a2-intro">You can reset your password using recovery mode:</p>
+                                    <ol>
+                                        <li id="faq-trouble-a2-1">Restart your computer</li>
+                                        <li id="faq-trouble-a2-2">Hold Shift during boot to access GRUB menu</li>
+                                        <li id="faq-trouble-a2-3">Select "Advanced options for Soplos Linux"</li>
+                                        <li id="faq-trouble-a2-4">Choose recovery mode</li>
+                                        <li id="faq-trouble-a2-5">Select "root - Drop to root shell prompt"</li>
+                                        <li id="faq-trouble-a2-6">Type: <code>passwd your-username</code></li>
+                                        <li id="faq-trouble-a2-7">Enter new password twice</li>
+                                        <li id="faq-trouble-a2-8">Reboot with: <code>reboot</code></li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-trouble-q3">How do I fix boot
+                                        problems?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-trouble-a3-intro">Common boot fixes:</p>
+                                    <ul>
+                                        <li id="faq-trouble-a3-1"><strong>GRUB not showing:</strong> Boot from live USB
+                                            and repair GRUB</li>
+                                        <li id="faq-trouble-a3-2"><strong>Black screen:</strong> Try safe graphics mode
+                                            or nomodeset parameter
+                                        </li>
+                                        <li id="faq-trouble-a3-3"><strong>Kernel panic:</strong> Boot with previous
+                                            kernel version from GRUB
+                                        </li>
+                                        <li id="faq-trouble-a3-4"><strong>File system errors:</strong> Boot from live
+                                            USB and run fsck</li>
+                                    </ul>
+                                    <p id="faq-trouble-a3-outro">If problems persist, use our <a
+                                            href="../install/#troubleshooting">installation
+                                            troubleshooting guide</a>.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Support -->
+                        <section id="support" class="content-section">
+                            <h2><i class="fas fa-life-ring"></i> <span id="faq-support-title">Getting Support</span>
+                            </h2>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-support-q1">Where can I get help
+                                        if my question isn't
+                                        answered here?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-support-a1-intro">There are several ways to get help:</p>
+                                    <ul>
+                                        <li id="faq-support-a1-1"><strong>Community Forums:</strong> <a
+                                                href="/forums/">soplos.org/forums</a>
+                                        </li>
+                                        <li id="faq-support-a1-2"><strong>GitHub Issues:</strong> <a
+                                                href="https://github.com/SoplosLinux" target="_blank">Report bugs and
+                                                request features</a></li>
+                                        <li id="faq-support-a1-3"><strong>Social Media:</strong> Follow us on <a
+                                                href="https://x.com/soploslinux" target="_blank">X (Twitter)</a></li>
+                                        <li id="faq-support-a1-4"><strong>Wiki Documentation:</strong> Browse our
+                                            comprehensive <a href="/wiki/">wiki</a></li>
+                                        <li id="faq-support-a1-5"><strong>Installation Guide:</strong> Step-by-step <a
+                                                href="../install/">installation instructions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-support-q2">How can I contribute
+                                        to Soplos Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-support-a2-intro">We welcome contributions in many forms:</p>
+                                    <ul>
+                                        <li id="faq-support-a2-1"><strong>Testing:</strong> Try new versions and report
+                                            bugs</li>
+                                        <li id="faq-support-a2-2"><strong>Documentation:</strong> Help improve our wiki
+                                            and guides</li>
+                                        <li id="faq-support-a2-3"><strong>Translation:</strong> Translate Soplos to your
+                                            language</li>
+                                        <li id="faq-support-a2-4"><strong>Development:</strong> Contribute code on
+                                            GitHub</li>
+                                        <li id="faq-support-a2-5"><strong>Community Support:</strong> Help other users
+                                            in forums</li>
+                                        <li id="faq-support-a2-6"><strong>Donations:</strong> Support development costs
+                                        </li>
+                                        <li id="faq-support-a2-7"><strong>Spreading the word:</strong> Share Soplos with
+                                            others</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <strong id="faq-support-info-label">Still have questions?</strong> <span
+                                        id="faq-support-info-text">Don't hesitate to ask in our community forums
+                                        or check our other documentation sections. The Soplos community is friendly and
+                                        always willing to help!</span>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+
+    <!-- FAQ JavaScript for collapsible questions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

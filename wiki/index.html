@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Soplos Linux Wiki - Documentation, guides and help for Tyron, Tyson and future distributions.">
+    <meta name="author" content="Soplos Linux Team">
+    <meta name="keywords"
+        content="linux, debian, xfce, kde, distributions, soplos, tyron, tyson, wiki, documentation, guide, help">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soplos.org/wiki/">
+    <meta property="og:title" content="Soplos Linux Wiki - Documentación y Guías">
+    <meta property="og:description"
+        content="Wiki oficial de Soplos Linux con guías de instalación, primeros pasos y documentación completa.">
+    <meta property="og:image" content="https://soplos.org/images/hero/wallpaper.jpg">
+    <meta property="og:site_name" content="Soplos Linux Wiki">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://soplos.org/wiki/">
+    <meta name="twitter:title" content="Soplos Linux Wiki - Documentación y Guías">
+    <meta name="twitter:description" content="Wiki oficial de Soplos Linux con guías completas.">
+    <meta name="twitter:image" content="https://soplos.org/images/hero/wallpaper.jpg">
+
+    <link rel="icon" href="../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../#inicio">
+                    <img src="../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="/" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html#inicio"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="breadcrumbWiki">Wiki</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <!-- Wiki Hero Section -->
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 id="wikiTitle">Soplos Linux Wiki</h1>
+                        <p id="wikiDescription">
+                            Complete documentation, installation guides, and help resources for Soplos Linux
+                            distributions.
+                            Everything you need to get started and master your Soplos experience.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Access Cards -->
+            <section class="quick-access">
+                <div class="container">
+                    <h2 id="quickAccessTitle">Quick Access</h2>
+                    <div class="quick-access-grid">
+                        <a href="install/" class="quick-access-card">
+                            <div class="quick-access-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h3 id="installGuideTitle">Installation Guide</h3>
+                            <p id="installGuideDesc">Step-by-step installation instructions for Tyron and Tyson</p>
+                            <span class="quick-access-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="start/" class="quick-access-card">
+                            <div class="quick-access-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 id="firstStepsTitle">First Steps</h3>
+                            <p id="firstStepsDesc">Essential configuration and setup after installation</p>
+                            <span class="quick-access-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+
+                        <a href="faq/" class="quick-access-card">
+                            <div class="quick-access-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3 id="faqTitle">FAQ</h3>
+                            <p id="faqDesc">Frequently asked questions and common solutions</p>
+                            <span class="quick-access-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Wiki Categories -->
+        <section class="wiki-categories">
+            <div class="container">
+                <h2 id="categoriesTitle">Documentation Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h3 id="installationTitle">Installation & Setup</h3>
+                        <ul class="category-links">
+                            <li><a href="install/index.html" id="installationGuideLink">Installation Guide</a></li>
+                            <li><a href="install/index.html#system-requirements" id="systemRequirementsLink">System
+                                    Requirements</a></li>
+                            <li><a href="install/index.html#dual-boot" id="dualBootLink">Dual Boot Setup</a></li>
+                            <li><a href="install/index.html#troubleshooting" id="troubleshootingLink">Installation
+                                    Troubleshooting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 id="desktopTitle">Desktop Environments</h3>
+                        <div class="category-content">
+                            <ul class="category-links">
+                                <li><a href="tyron/index.html" id="tyronGuideLink">Tyron (XFCE) Guide</a></li>
+                                <li><a href="tyson/index.html" id="tysonGuideLink">Tyson (Plasma) Guide</a></li>
+                                <li><a href="boro/index.html" id="boroGuideLink">Boro (GNOME) Guide</a></li>
+                                <li><a href="customization/index.html" id="customizationLink">Customization</a></li>
+                                <li><a href="themes/index.html" id="themesLink">Themes & Appearance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3 id="soplosAppsTitle">Soplos Applications</h3>
+                        <ul>
+                            <li><a href="applications/tyron/" id="tyronAppsLink">Applications for Tyron</a></li>
+                            <li><a href="applications/tyson/" id="tysonAppsLink">Applications for Tyson</a></li>
+                            <li><a href="applications/boro/" id="boroAppsLink">Applications for Boro</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 id="systemTitle">System Management</h3>
+                        <ul>
+                            <li><a href="system/updates/" id="updatesLink">System Updates</a></li>
+                            <li><a href="system/packages/" id="packagesLink">Package Management</a></li>
+                            <li><a href="system/security/" id="securityLink">Security Settings</a></li>
+                            <li><a href="system/backup/" id="backupLink">Backup Solutions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-life-ring"></i>
+                        </div>
+                        <h3 id="supportTitle">Support & Help</h3>
+                        <ul>
+                            <li><a href="faq/" id="frequentQuestionsLink">Frequently Asked Questions</a></li>
+                            <li><a href="troubleshooting/" id="troubleshootingGuideLink">Troubleshooting Guide</a></li>
+                            <li><a href="community/" id="communityHelpLink">Community Support</a></li>
+                            <li><a href="contact/" id="contactLink">Contact Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 id="developmentTitle">Development</h3>
+                        <ul>
+                            <li><a href="development/contribute/" id="contributeLink">How to Contribute</a></li>
+                            <li><a href="development/building/" id="buildingLink">Building from Source</a></li>
+                            <li><a href="development/packaging/" id="packagingLink">Package Creation</a></li>
+                            <li><a href="development/api/" id="apiLink">API Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Updates -->
+        <section class="recent-updates">
+            <div class="container">
+                <h2 id="recentUpdatesTitle">Recent Updates</h2>
+                <div class="updates-grid">
+                    <div class="update-item" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                        <div class="update-content">
+                            <i class="fas fa-rocket"
+                                style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                            <h4 id="comingSoonTitle">Coming Soon</h4>
+                            <p id="comingSoonDesc">This section will be updated with the latest news about Soplos Linux
+                                distributions, new releases, application updates, and major improvements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../js/logger.js"></script>
+    <script src="../js/language-loader.js"></script>
+    <script src="../js/language-switcher.js"></script>
+    <script src="../js/soplos-ui.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

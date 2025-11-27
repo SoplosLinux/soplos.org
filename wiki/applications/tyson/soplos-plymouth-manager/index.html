@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos Plymouth Manager - Soplos Linux Wiki</title>
+    <meta name="description" content="Manage and preview Plymouth boot splash screens for Tyson (KDE Plasma).">
+
+    <link rel="icon" href="../../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../../#inicio">
+                    <img src="../../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../../#requirements" id="menuRequirements">System Requirements</a>
+                                </li>
+                                <li><a href="../../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/applications/tyson/">Applications for Tyson</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Soplos Plymouth Manager</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <style>
+            .container {
+                max-width: 1400px;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .main-content {
+                padding: 30px 30px;
+            }
+
+            .screenshot-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 18px;
+            }
+
+            .screenshot img {
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+                cursor: zoom-in;
+            }
+
+            @media (max-width: 900px) {
+                .screenshot img {
+                    height: 200px;
+                }
+            }
+        </style>
+
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Soplos Plymouth Manager</h1>
+                    <p>Manage and customize Plymouth boot splash screens for Tyson (KDE Plasma).</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="main-content">
+
+                        <section id="features" class="content-section">
+                            <h2><i class="fas fa-star"></i> Features</h2>
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-eye"></i> Preview Themes</h4>
+                                    <p>Preview Plymouth themes before applying them to the system.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-save"></i> Backup & Restore</h4>
+                                    <p>Backup current Plymouth configuration and restore if needed.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-cogs"></i> Integration</h4>
+                                    <p>Integrates with system settings and supports Wayland/X11 environments.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="installation" class="content-section">
+                            <h2><i class="fas fa-download"></i> Installation</h2>
+                            <p>Install from the official repositories or via the Debian package:</p>
+                            <div class="code-example">
+                                <h4>Terminal</h4>
+                                <pre><code>sudo apt update
+sudo apt install soplos-plymouth-manager</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="usage" class="content-section">
+                            <h2><i class="fas fa-play"></i> Usage</h2>
+                            <ul>
+                                <li><strong>Open the app:</strong> Run <code>soplos-plymouth-manager</code> from the
+                                    menu.</li>
+                                <li><strong>Preview:</strong> Select a theme and preview before applying.</li>
+                                <li><strong>Backup:</strong> Create a backup before making changes.</li>
+                            </ul>
+                        </section>
+
+                        <section id="screenshots" class="content-section">
+                            <h2><i class="fas fa-images"></i> Screenshots</h2>
+                            <p>Click any image to open fullscreen:</p>
+                            <div class="screenshot-gallery">
+                                <div class="screenshot"><img
+                                        src="../../../../images/Tyson/plymouth-manager/001-plymouth-manager.png"
+                                        alt="Plymouth Screenshot 1" onclick="openModal(this.src)"></div>
+                                <div class="screenshot"><img
+                                        src="../../../../images/Tyson/plymouth-manager/002-apply-theme.png"
+                                        alt="Plymouth Screenshot 2" onclick="openModal(this.src)"></div>
+                                <div class="screenshot"><img
+                                        src="../../../../images/Tyson/plymouth-manager/003-Plymouth.png"
+                                        alt="Plymouth Screenshot 3" onclick="openModal(this.src)"></div>
+                            </div>
+                        </section>
+
+                        <section id="changelog" class="content-section">
+                            <h2><i class="fas fa-history"></i> Changelog</h2>
+                            <div class="changelog-list">
+                                <p>All notable changes are documented here (descending order).</p>
+
+                                <h3>1.0.6 — 2025-07-27</h3>
+                                <h4>🎨 Cambiado - Icono</h4>
+                                <ul>
+                                    <li>Cambio de icono del programa.</li>
+                                </ul>
+
+                                <h3>1.0.5 — 2025-07-16</h3>
+                                <h4>🛠️ Mejorado - Metainfo y compatibilidad AppStream/DEP-11</h4>
+                                <ul>
+                                    <li>Finalización de la corrección del metainfo para cumplir estándar
+                                        AppStream/DEP-11.</li>
+                                    <li>Implementados iconos del programa en 48x48, 64x64 y 128x128.</li>
+                                </ul>
+
+                                <h3>1.0.4 — 2025-07-15</h3>
+                                <h4>🛠️ Mejorado - Metainfo y compatibilidad AppStream/DEP-11</h4>
+                                <ul>
+                                    <li>Finalización del metainfo para AppStream/DEP-11.</li>
+                                    <li>Añadidos diferentes tamaños del icono (stock y remoto) para compatibilidad con
+                                        centros de software.</li>
+                                </ul>
+
+                                <h3>1.0.3 — 2025-07-14</h3>
+                                <h4>🛠️ Corregido - Metainfo y visibilidad en centros de software</h4>
+                                <ul>
+                                    <li>Correcciones finales en el metainfo para garantizar la aparición en centros de
+                                        software (AppStream/Discover/GNOME Software).</li>
+                                </ul>
+
+                                <h3>1.0.1 — 2025-01-15</h3>
+                                <h4>🌍 Añadido - Integración y compatibilidad</h4>
+                                <ul>
+                                    <li>Detección automática de temas del sistema (KDE/Plasma).</li>
+                                    <li>Soporte mejorado para sesiones Wayland.</li>
+                                    <li>Integración con portales XDG para compatibilidad con Wayland.</li>
+                                    <li>Mejor integración con entornos de escritorio.</li>
+                                </ul>
+
+                                <h3>1.0.0 — 2025-05-08</h3>
+                                <h4>🎉 Lanzamiento Inicial</h4>
+                                <ul>
+                                    <li>Versión inicial de soplos-plymouth-manager.</li>
+                                </ul>
+
+                                <hr>
+                                <h4>Types of Changes</h4>
+                                <ul>
+                                    <li><strong>Añadido</strong> para nuevas características</li>
+                                    <li><strong>Cambiado</strong> para cambios en funcionalidad existente</li>
+                                    <li><strong>Obsoleto</strong> para características que serán eliminadas</li>
+                                    <li><strong>Eliminado</strong> para características eliminadas</li>
+                                    <li><strong>Corregido</strong> para corrección de errores</li>
+                                    <li><strong>Seguridad</strong> para vulnerabilidades</li>
+                                </ul>
+
+                                <h4>Soporte y contribuciones</h4>
+                                <p>Documentación: soploslinux.com/docs/soplos-plymouth-manager</p>
+                                <p>Issues / Contribuciones: github.com/SoplosLinux/tyson</p>
+                            </div>
+                        </section>
+
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-tools"></i> FAQ & Troubleshooting</h2>
+                            <div class="faq-item">
+                                <h4 class="faq-question" role="button" aria-expanded="false">How to preview a theme? <i
+                                        class="fas fa-chevron-right"></i></h4>
+                                <div class="faq-answer" aria-hidden="true">
+                                    <p>Use the preview button. If preview fails, ensure Plymouth and required
+                                        dependencies are installed.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h4 class="faq-question" role="button" aria-expanded="false">Is Wayland supported? <i
+                                        class="fas fa-chevron-right"></i></h4>
+                                <div class="faq-answer" aria-hidden="true">
+                                    <p>Yes, the app provides integration with portals and Wayland where available.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="imageModal" class="modal-gallery" role="dialog" aria-hidden="true">
+        <button class="close-modal-gallery" aria-label="Close" onclick="closeModal()">&times;</button>
+        <div class="modal-gallery-content">
+            <div class="modal-gallery-carousel">
+                <div class="modal-gallery-track">
+                    <img id="modalImage" src="" alt="Screenshot preview">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../../js/logger.js"></script>
+    <script src="../../../../js/language-loader.js"></script>
+    <script src="../../../../js/language-switcher.js"></script>
+    <script src="../../../../js/soplos-ui.js"></script>
+    <script src="../../../../js/main.js"></script>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById('imageModal');
+            var img = document.getElementById('modalImage');
+            img.src = src;
+            modal.classList.add('show');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+        function closeModal() {
+            var modal = document.getElementById('imageModal');
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden', 'true');
+            document.getElementById('modalImage').src = '';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        const q = otherItem.querySelector('.faq-question');
+                        const a = otherItem.querySelector('.faq-answer');
+                        if (q) q.setAttribute('aria-expanded', 'false');
+                        if (a) a.setAttribute('aria-hidden', 'true');
+                    });
+                    const answer = item.querySelector('.faq-answer');
+                    if (!isActive) {
+                        item.classList.add('active');
+                        if (question) question.setAttribute('aria-expanded', 'true');
+                        if (answer) answer.setAttribute('aria-hidden', 'false');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

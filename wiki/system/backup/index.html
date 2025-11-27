@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backups - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Learn how to backup and restore your Soplos Linux system with Timeshift and BTRFS.">
+    <meta name="keywords" content="soplos, linux, backup, security copy, timeshift, btrfs, restore">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Backups - Soplos Linux Wiki">
+    <meta property="og:description" content="Protect your data and system with backups.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html#inicio">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../index.html#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System
+                                        Requirements</a></li>
+                                <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Backups</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="bk-hero-title"><i class="fas fa-hdd"></i> System Backups</h1>
+                    <p id="bk-hero-desc">Comprehensive guide to protecting your system and data in Soplos Linux.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="bk-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#intro" id="bk-toc-1">Introduction</a></li>
+                            <li><a href="#fundamentals" id="bk-toc-2">Backup Fundamentals</a></li>
+                            <li><a href="#timeshift" id="bk-toc-3">System: Timeshift</a></li>
+                            <li><a href="#deja-dup" id="bk-toc-4">Data: Deja Dup</a></li>
+                            <li><a href="#imaging" id="bk-toc-5">Disk Imaging</a></li>
+                            <li><a href="#cloud" id="bk-toc-6">Cloud Backups</a></li>
+                            <li><a href="#automation" id="bk-toc-7">Automation & Best Practices</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <section id="intro" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="bk-intro-title">Why Backups Matter</span>
+                            </h2>
+                            <p id="bk-intro-p">Data loss can happen to anyone due to hardware failure, accidental
+                                deletion, or malicious
+                                attacks. Soplos Linux provides powerful tools to ensure your system and personal files
+                                are safe.</p>
+                        </section>
+
+                        <section id="fundamentals" class="content-section">
+                            <h2><i class="fas fa-graduation-cap"></i> <span id="bk-fund-title">Backup
+                                    Fundamentals</span></h2>
+
+                            <h3 id="bk-fund-rule-h">The 3-2-1 Rule</h3>
+                            <p id="bk-fund-rule-p">The gold standard for backup strategies:</p>
+                            <ul>
+                                <li id="bk-fund-rule-1"><strong>3 Copies of Data:</strong> Your original data plus two
+                                    backups.</li>
+                                <li id="bk-fund-rule-2"><strong>2 Different Media:</strong> E.g., internal drive and
+                                    external USB drive.
+                                </li>
+                                <li id="bk-fund-rule-3"><strong>1 Offsite Copy:</strong> Cloud storage or a physical
+                                    drive at another
+                                    location.</li>
+                            </ul>
+
+                            <h3 id="bk-fund-sys-h">System vs. Data Backups</h3>
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="bk-fund-sys-box-title">Crucial Distinction:</strong>
+                                    <ul>
+                                        <li id="bk-fund-sys-1"><strong>System Backups (Timeshift):</strong> Protect the
+                                            OS, updates, and
+                                            configurations. They usually <em>exclude</em> your home folder to avoid
+                                            reverting personal files.</li>
+                                        <li id="bk-fund-sys-2"><strong>Data Backups (Deja Dup/Pika):</strong> Protect
+                                            your documents,
+                                            photos, and projects in your home folder.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="timeshift" class="content-section">
+                            <h2><i class="fas fa-history"></i> <span id="bk-ts-title">System Backups:
+                                    Timeshift</span></h2>
+                            <p id="bk-ts-intro">Timeshift creates "snapshots" of your system files. It's your safety net
+                                against bad
+                                updates or configuration mistakes.</p>
+
+                            <h3 id="bk-ts-inst-h">Installation</h3>
+                            <div class="code-example">
+                                <h4 id="bk-ts-inst-term">Terminal</h4>
+                                <pre><code>sudo apt update
+sudo apt install timeshift</code></pre>
+                            </div>
+
+                            <h3 id="bk-ts-conf-h">Configuration: RSYNC vs BTRFS</h3>
+                            <ul>
+                                <li id="bk-ts-conf-1"><strong>BTRFS:</strong> Recommended if you installed Soplos on
+                                    BTRFS. Snapshots are
+                                    instant and take minimal space.</li>
+                                <li id="bk-ts-conf-2"><strong>RSYNC:</strong> Works on all file systems (EXT4, etc.).
+                                    Copies files to a
+                                    backup location. Slower but reliable.</li>
+                            </ul>
+
+                            <h3 id="bk-ts-snap-h">Creating Snapshots</h3>
+                            <p id="bk-ts-snap-p">You can create snapshots manually or schedule them (hourly, daily,
+                                weekly, boot).</p>
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="bk-ts-snap-tip"><strong>Recommendation:</strong> Keep 5 daily and 1 weekly
+                                        snapshot. This covers
+                                        most mishaps without using too much space.</span>
+                                </div>
+                            </div>
+
+                            <h3 id="bk-ts-res-h">Restoring</h3>
+                            <p id="bk-ts-res-p1"><strong>From Desktop:</strong> Open Timeshift, select a snapshot, and
+                                click "Restore".
+                            </p>
+                            <p id="bk-ts-res-p2"><strong>From Live USB (If system won't boot):</strong></p>
+                            <ol class="step-list">
+                                <li id="bk-ts-res-1">Boot from your Soplos Linux Live USB.</li>
+                                <li id="bk-ts-res-2">Install Timeshift if not present.</li>
+                                <li id="bk-ts-res-3">Open Timeshift and select your system drive.</li>
+                                <li id="bk-ts-res-4">Select a snapshot and restore.</li>
+                            </ol>
+                        </section>
+
+                        <section id="deja-dup" class="content-section">
+                            <h2><i class="fas fa-folder-open"></i> <span id="bk-dd-title">Data Backups: Deja Dup</span>
+                            </h2>
+                            <p id="bk-dd-intro">For your personal files (`/home/user`), use <strong>Deja Dup</strong>
+                                (Backups). It's
+                                simple, integrated, and supports encryption.</p>
+
+                            <h3 id="bk-dd-inst-h">Installation</h3>
+                            <div class="code-example">
+                                <h4 id="bk-dd-inst-term">Terminal</h4>
+                                <pre><code>sudo apt install deja-dup</code></pre>
+                            </div>
+
+                            <h3 id="bk-dd-conf-h">Configuration</h3>
+                            <ol class="step-list">
+                                <li id="bk-dd-conf-1">Open "Backups" from the menu.</li>
+                                <li id="bk-dd-conf-2"><strong>Folders to Save:</strong> Select your Home folder.</li>
+                                <li id="bk-dd-conf-3"><strong>Folders to Ignore:</strong> Exclude "Downloads" or "Trash"
+                                    to save space.
+                                </li>
+                                <li id="bk-dd-conf-4"><strong>Storage Location:</strong> Choose an external drive,
+                                    network server, or
+                                    Google Drive.</li>
+                                <li id="bk-dd-conf-5"><strong>Scheduling:</strong> Set to "Automatic" for daily or
+                                    weekly backups.</li>
+                            </ol>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-lock"></i>
+                                <div>
+                                    <span id="bk-dd-warn"><strong>Encryption:</strong> Deja Dup will ask for an
+                                        encryption password.
+                                        <strong>Do not lose this password</strong>, or your data will be
+                                        unrecoverable.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="imaging" class="content-section">
+                            <h2><i class="fas fa-compact-disc"></i> <span id="bk-img-title">Disk Imaging:
+                                    Rescuezilla</span></h2>
+                            <p id="bk-img-intro">For a complete "bare-metal" backup of your entire drive (including
+                                partition table and
+                                bootloader), use <strong>Rescuezilla</strong>.</p>
+
+                            <h3 id="bk-img-when-h">When to use</h3>
+                            <ul>
+                                <li id="bk-img-when-1">Migrating to a new hard drive.</li>
+                                <li id="bk-img-when-2">Creating a baseline image after a fresh setup.</li>
+                                <li id="bk-img-when-3">Recovering from catastrophic drive failure.</li>
+                            </ul>
+
+                            <h3 id="bk-img-use-h">Usage</h3>
+                            <p id="bk-img-use-p">Rescuezilla runs from a Live USB, independent of your OS.</p>
+                            <ol class="step-list">
+                                <li id="bk-img-use-1">Download the Rescuezilla ISO.</li>
+                                <li id="bk-img-use-2">Flash it to a USB stick (using Etcher or Ventoy).</li>
+                                <li id="bk-img-use-3">Boot from the USB.</li>
+                                <li id="bk-img-use-4">Follow the wizard to "Backup" or "Restore" your drive to/from an
+                                    external drive.
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section id="cloud" class="content-section">
+                            <h2><i class="fas fa-cloud"></i> <span id="bk-cld-title">Cloud Backups: Rclone</span></h2>
+                            <p id="bk-cld-intro"><strong>Rclone</strong> is a command-line tool to sync files with cloud
+                                storage providers
+                                (Google Drive, Dropbox, OneDrive, S3, etc.).</p>
+
+                            <h3 id="bk-cld-inst-h">Installation</h3>
+                            <div class="code-example">
+                                <h4 id="bk-cld-inst-term">Terminal</h4>
+                                <pre><code>sudo apt install rclone</code></pre>
+                            </div>
+
+                            <h3 id="bk-cld-conf-h">Configuration</h3>
+                            <p id="bk-cld-conf-p1">Run the configuration wizard:</p>
+                            <div class="code-example">
+                                <h4 id="bk-cld-conf-term">Terminal</h4>
+                                <pre><code>rclone config</code></pre>
+                            </div>
+                            <p id="bk-cld-conf-p2">Follow the prompts to select your provider and authenticate.</p>
+
+                            <h3 id="bk-cld-use-h">Basic Usage</h3>
+                            <div class="code-example">
+                                <h4 id="bk-cld-use-term">Terminal</h4>
+                                <pre><code># Sync local folder to remote
+rclone sync /home/user/Documents remote:Documents
+
+# Copy file to remote
+rclone copy file.txt remote:Backup/</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="automation" class="content-section">
+                            <h2><i class="fas fa-cogs"></i> <span id="bk-auto-title">Automation & Best
+                                    Practices</span></h2>
+
+                            <h3 id="bk-auto-auto-h">Automation</h3>
+                            <ul>
+                                <li id="bk-auto-auto-1"><strong>Timeshift:</strong> Use the built-in scheduler.</li>
+                                <li id="bk-auto-auto-2"><strong>Deja Dup:</strong> Enable "Back Up Automatically".</li>
+                                <li id="bk-auto-auto-3"><strong>Rclone:</strong> Create a systemd timer or cron job for
+                                    regular syncs.</li>
+                            </ul>
+
+                            <h3 id="bk-auto-best-h">Best Practices Checklist</h3>
+                            <ul class="step-list">
+                                <li id="bk-auto-best-1"><i class="fas fa-check"></i> <strong>Test Restores:</strong> A
+                                    backup is useless if
+                                    it doesn't restore. Test it occasionally.</li>
+                                <li id="bk-auto-best-2"><i class="fas fa-check"></i> <strong>Encrypt Sensitive
+                                        Data:</strong> Always encrypt
+                                    backups stored offsite or in the cloud.</li>
+                                <li id="bk-auto-best-3"><i class="fas fa-check"></i> <strong>Unplug External
+                                        Drives:</strong> Ransomware can
+                                    encrypt connected backup drives. Disconnect them when not in use.</li>
+                            </ul>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

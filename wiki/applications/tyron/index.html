@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications for Tyron - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Exclusive tools for Soplos Tyron: docklike, GRUB editor, Plymouth manager, repo selector, theme manager, welcome and more.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../#inicio">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../index.html#inicio"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Tyron Apps</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-th"></i> Tyron Applications</h1>
+                    <p>Exclusive tools developed for Soplos Tyron (XFCE), designed to enhance your desktop experience
+                        and customization.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- Applications Grid -->
+        <!-- Applications Grid -->
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#docklike">Soplos Docklike</a></li>
+                            <li><a href="#grub">Soplos GRUB Editor</a></li>
+                            <li><a href="#plymouth">Soplos Plymouth Manager</a></li>
+                            <li><a href="#repo">Soplos Repo Selector</a></li>
+                            <li><a href="#theme">Soplos Theme Manager</a></li>
+                            <li><a href="#welcome">Soplos Welcome</a></li>
+                            <li><a href="#welcomelive">Soplos Welcome Live</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <section class="content-section">
+                            <h2><i class="fas fa-star"></i> Exclusive Applications for Tyron</h2>
+                            <p>The Tyron (XFCE) edition includes a set of tools developed by the Soplos Linux team to
+                                facilitate system configuration and customization.</p>
+                        </section>
+
+                        <div class="tools-grid">
+                            <div class="tool-card" id="docklike">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.docklike.png" alt="Soplos Docklike Icon">
+                                </div>
+                                <h4>Soplos Docklike</h4>
+                                <p>A modern dock for XFCE inspired by macOS. Features include auto-hide, icon
+                                    magnification, and
+                                    customizable themes.</p>
+                                <ul>
+                                    <li>Auto-hide functionality</li>
+                                    <li>Icon zoom on hover</li>
+                                    <li>Customizable position and size</li>
+                                </ul>
+                                <a href="../soplos-docklike/" class="tool-link">Learn More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="grub">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.grubeditor.png"
+                                        alt="Soplos GRUB Editor Icon">
+                                </div>
+                                <h4>Soplos GRUB Editor</h4>
+                                <p>Graphical interface to customize the GRUB bootloader. Easily change boot order,
+                                    themes, and
+                                    timeout settings.</p>
+                                <ul>
+                                    <li>Change default boot entry</li>
+                                    <li>Apply custom GRUB themes</li>
+                                    <li>Set boot timeout</li>
+                                </ul>
+                                <a href="../soplos-grub-editor/" class="tool-link">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="plymouth">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.plymouthmanager.png"
+                                        alt="Soplos Plymouth Manager Icon">
+                                </div>
+                                <h4>Soplos Plymouth Manager</h4>
+                                <p>Manage and customize Plymouth boot splash screens. Preview and apply themes with a
+                                    simple
+                                    interface.</p>
+                                <ul>
+                                    <li>Preview Plymouth themes</li>
+                                    <li>Apply custom splash screens</li>
+                                    <li>Backup and restore settings</li>
+                                </ul>
+                                <a href="../soplos-plymouth-manager/" class="tool-link">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="repo">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.reposelector.png"
+                                        alt="Soplos Repo Selector Icon">
+                                </div>
+                                <h4>Soplos Repo Selector</h4>
+                                <p>Select and configure software repositories intuitively. Add official and third-party
+                                    repos
+                                    with ease.</p>
+                                <ul>
+                                    <li>Add/remove repositories</li>
+                                    <li>Enable/disable sources</li>
+                                    <li>Update package lists</li>
+                                </ul>
+                                <a href="../soplos-repo-selector/" class="tool-link">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="theme">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.thememanager.png"
+                                        alt="Soplos Theme Manager Icon">
+                                </div>
+                                <h4>Soplos Theme Manager</h4>
+                                <p>Apply and manage GTK themes, icons, and cursors for XFCE. Browse and install themes
+                                    from
+                                    online sources.</p>
+                                <ul>
+                                    <li>Install GTK themes</li>
+                                    <li>Change icon sets</li>
+                                    <li>Customize cursor themes</li>
+                                </ul>
+                                <a href="../soplos-theme-manager/" class="tool-link">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="welcome">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome Icon">
+                                </div>
+                                <h4>Soplos Welcome</h4>
+                                <p>Welcome assistant that guides you through first steps with Tyron. Includes tutorials
+                                    and
+                                    system info.</p>
+                                <ul>
+                                    <li>System overview</li>
+                                    <li>Basic configuration tips</li>
+                                    <li>Links to documentation</li>
+                                </ul>
+                                <a href="../soplos-welcome/" class="tool-link">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="welcomelive">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/com.soplos.welcomelive.png"
+                                        alt="Soplos Welcome Live Icon">
+                                </div>
+                                <h4>Soplos Welcome Live</h4>
+                                <p>Special version of the welcome assistant for Tyron live sessions. Optimized for demo
+                                    and
+                                    testing.</p>
+                                <ul>
+                                    <li>Live session info</li>
+                                    <li>Installation prompts</li>
+                                    <li>System requirements check</li>
+                                </ul>
+                                <a href="../soplos-welcome-live/" class="tool-link">Learn more <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

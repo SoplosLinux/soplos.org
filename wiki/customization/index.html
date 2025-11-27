@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Customize Soplos Tyron and Tyson: themes, icons, fonts, wallpapers and desktop layout tips.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="/wiki/">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Customization</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-paint-brush"></i> Customization</h1>
+                    <p>How to customize appearance and layout on Soplos Tyron (XFCE), Tyson (Plasma) and Boro (GNOME).
+                    </p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <aside class="toc">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#themes">Global Themes</a></li>
+                            <li><a href="#icons">Icons & Cursors</a></li>
+                            <li><a href="#fonts">Fonts & DPI</a></li>
+                            <li><a href="#wallpapers">Wallpapers & Lock Screen</a></li>
+                            <li><a href="#panels">Panels, Docklike & Widgets</a></li>
+                            <li><a href="#shortcuts">Shortcuts & Workspaces</a></li>
+                            <li><a href="#soplos-theme-manager">Soplos Theme Manager</a></li>
+                            <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+                        <section id="overview" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <p>Customization in Soplos focuses on delivering a cohesive look while keeping performance
+                                options available. Plasma (Tyson) provides deep visual features; XFCE (Tyron) focuses on
+                                lightweight flexibility; GNOME (Boro) offers a polished, modern workflow. This page
+                                documents common customization tasks and best
+                                practices shared across all variants.</p>
+                        </section>
+
+                        <section id="themes" class="content-section">
+                            <h2><i class="fas fa-palette"></i> Global Themes</h2>
+                            <p>Global themes change colors, window decorations, plasmoids/panel styles and sometimes
+                                icons. Use these tools:</p>
+                            <ul>
+                                <li><strong>Tyson (Plasma):</strong> System Settings → Global Theme / Appearance.</li>
+                                <li><strong>Tyron (XFCE):</strong> Settings Manager → Appearance and Window Manager.
+                                </li>
+                                <li><strong>Boro (GNOME):</strong> Settings → Appearance (or GNOME Tweaks for advanced
+                                    themes).</li>
+                            </ul>
+                            <p>Recommendations:</p>
+                            <ul>
+                                <li>Use a single global theme for consistent colors across apps.</li>
+                                <li>Prefer dark mode for low-light use; check contrast for dialog inputs.</li>
+                                <li>Test performance after enabling heavy effects and disable if necessary.</li>
+                            </ul>
+                        </section>
+
+                        <section id="icons" class="content-section">
+                            <h2><i class="fas fa-icons"></i> Icons & Cursors</h2>
+                            <p>Icons affect system menus, file managers and application toolbars. Soplos ships with a
+                                consistent icon set, but you can switch or install new icon themes:</p>
+                            <ul>
+                                <li><strong>Install new icons:</strong> Place icon folders in
+                                    <code>/usr/share/icons</code> (system) or <code>~/.icons</code> (user).
+                                </li>
+                                <li><strong>Change icons:</strong> Tyson: System Settings → Icons. Tyron: Appearance →
+                                    Icons. Boro: GNOME Tweaks → Appearance.</li>
+                                <li><strong>Cursors:</strong> Change cursor themes in the same dialogs; logout/login to
+                                    fully apply in some environments.</li>
+                            </ul>
+                        </section>
+
+                        <section id="fonts" class="content-section">
+                            <h2><i class="fas fa-font"></i> Fonts & DPI</h2>
+                            <p>Fonts and scaling are important for readability, especially on HiDPI displays.</p>
+                            <ul>
+                                <li><strong>Adjust font size:</strong> Tyson: System Settings → Fonts. Tyron: Appearance
+                                    → Fonts. Boro: GNOME Tweaks → Fonts.</li>
+                                <li><strong>Scaling / HiDPI:</strong> In Plasma use Display Configuration → Scale; in
+                                    XFCE adjust DPI or use fractional scaling if supported.</li>
+                                <li><strong>Hinting & Anti-aliasing:</strong> Enable subpixel hinting and configure
+                                    hinting levels for best sharpness.</li>
+                            </ul>
+                        </section>
+
+                        <section id="wallpapers" class="content-section">
+                            <h2><i class="fas fa-image"></i> Wallpapers & Lock Screen</h2>
+                            <p>Wallpapers can be set per-activity (Plasma) or per-desktop; lock screen settings are
+                                separate in both environments.</p>
+                            <ul>
+                                <li><strong>Tyson (Plasma):</strong> Wallpaper and Lock Screen configurable from System
+                                    Settings; supports slideshow and per-activity wallpapers.</li>
+                                <li><strong>Tyron (XFCE):</strong> Desktop → Background for wallpapers; use Light Locker
+                                    or xfce4-screensaver for lock screen settings.</li>
+                                <li><strong>Boro (GNOME):</strong> Settings → Appearance (Background). Lock screen uses
+                                    the same background by default (blurred).</li>
+                                <li><strong>Best practice:</strong> Keep wallpapers in
+                                    <code>~/Pictures/Wallpapers</code> or <code>/usr/share/backgrounds</code> and
+                                    reference them from the settings dialog to avoid broken links.
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="panels" class="content-section">
+                            <h2><i class="fas fa-th-large"></i> Panels, Docklike & Widgets</h2>
+                            <p>Soplos provides Docklike for XFCE; Plasma uses native widgets (plasmoids). Tips to
+                                configure panels and widgets:</p>
+                            <ul>
+                                <li><strong>Soplos Docklike (Tyron):</strong> Use Soplos Docklike to emulate a dock;
+                                    configure via the app or XFCE Panel plugin.</li>
+                                <li><strong>Plasma panels (Tyson):</strong> Right-click the panel → Edit Panel to add
+                                    widgets, system tray items and adjust alignment.</li>
+                                <li><strong>Boro (GNOME):</strong> Use <strong>Dash to Panel</strong> settings
+                                    (right-click panel) to configure the taskbar. Use <strong>ArcMenu</strong> settings
+                                    (right-click menu icon) to customize the app launcher.</li>
+                                <li><strong>Widgets/Plasmoids:</strong> Add date, system monitor or application
+                                    launchers; keep only what you use to avoid clutter.</li>
+                                <li><strong>Save your layout:</strong> Plasma supports Activities; in XFCE export panel
+                                    config or create a backup of <code>~/.config/xfce4</code>.</li>
+                            </ul>
+                        </section>
+
+                        <section id="shortcuts" class="content-section">
+                            <h2><i class="fas fa-keyboard"></i> Shortcuts & Workspaces</h2>
+                            <p>Keyboard shortcuts and virtual desktops boost productivity.</p>
+                            <ul>
+                                <li><strong>Configure shortcuts:</strong> Tyson: System Settings → Shortcuts. Tyron:
+                                    Settings → Keyboard → Application Shortcuts. Boro: Settings → Keyboard → View and
+                                    Customize Shortcuts.</li>
+                                <li><strong>Workspaces:</strong> Configure number of workspaces and switcher shortcuts;
+                                    use activities (Plasma) or workspace switcher (XFCE).</li>
+                            </ul>
+                        </section>
+
+                        <section id="soplos-theme-manager" class="content-section">
+                            <h2><i class="fas fa-cog"></i> Soplos Theme Manager</h2>
+                            <p><strong>Note:</strong> <em>Soplos Theme Manager</em> is XFCE-only and intended for
+                                <strong>Tyron (XFCE)</strong>. It does not apply full global themes for Plasma; on
+                                <strong>Tyson (Plasma)</strong> use <code>System Settings → Global Theme</code> or the
+                                native Plasma tools.
+                            </p>
+                            <p>If you have Soplos Theme Manager installed on Tyron, key points:</p>
+                            <ul>
+                                <li>Open <strong>Soplos Theme Manager</strong> from Soplos Welcome or the applications
+                                    menu (Tyron).</li>
+                                <li>Apply complete theme sets (wallpaper, icons, GTK theme) in a single action for XFCE.
+                                </li>
+                                <li>If something does not apply correctly, revert the theme or log out/in to force
+                                    components to reload.</li>
+                            </ul>
+                        </section>
+
+                        <section id="troubleshooting" class="content-section">
+                            <h2><i class="fas fa-wrench"></i> Troubleshooting</h2>
+                            <p>Common issues and fixes:</p>
+                            <ul>
+                                <li>If icons or cursors don't update, clear icon cache:
+                                    <code>sudo gtk-update-icon-cache /usr/share/icons/YOUR_THEME</code> and relogin.
+                                </li>
+                                <li>If fonts look blurry, adjust DPI or disable fractional scaling; restart session
+                                    after changes.</li>
+                                <li>Restore XFCE panel: backup config from <code>~/.config/xfce4/panel</code> or reset
+                                    if broken.</li>
+                                <li>For Plasma visual glitches, try <code>plasmashell --replace &amp;</code> and check
+                                    compositor settings.</li>
+                                <li>For GNOME (Boro) extensions issues, restart the shell (Alt+F2, type 'r', Enter) or
+                                    disable extensions from the Extensions app.</li>
+                            </ul>
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>Tip:</strong> Test theme changes on a local user first before applying
+                                    system-wide, so you can easily revert without affecting other users.
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="info-box success">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <strong>Next:</strong> After customizing, visit <a href="../tyron/">Tyron guide</a>,
+                                <a href="../tyson/">Tyson guide</a> or <a href="../boro/">Boro guide</a> for
+                                desktop-specific tips and screenshots.
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

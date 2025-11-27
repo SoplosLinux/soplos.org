@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting - Soplos Linux Wiki</title>
+    <meta name="description"
+        content="Solutions to common problems in Soplos Linux: boot, network, audio, and graphics.">
+    <meta name="keywords" content="soplos, linux, troubleshooting, help, fix, boot, wifi, audio, graphics">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Troubleshooting - Soplos Linux Wiki">
+    <meta property="og:description" content="Fix common issues in Soplos Linux.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../index.html#inicio">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../index.html#requirements" id="menuRequirements">System
+                                        Requirements</a></li>
+                                <li><a href="../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../index.html" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Troubleshooting</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-tools"></i> Troubleshooting</h1>
+                    <p>Common solutions to issues you might encounter. If you don't find the answer here, please check
+                        our Community Forums.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3>Contents</h3>
+                        <ul>
+                            <li><a href="#install">Installation Issues</a></li>
+                            <li><a href="#boot">Boot Problems</a></li>
+                            <li><a href="#desktop">Desktop Environments</a></li>
+                            <li><a href="#packages">Package Management</a></li>
+                            <li><a href="#hardware">Hardware & Network</a></li>
+                            <li><a href="#graphics">Graphics & Display</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <section id="intro" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Troubleshooting Guide</h2>
+                            <p>Before trying complex fixes, always ensure your system is up to date:</p>
+                            <pre><code>sudo apt update && sudo apt upgrade</code></pre>
+                        </section>
+
+                        <section id="install" class="content-section">
+                            <h2><i class="fas fa-compact-disc"></i> Installation Issues</h2>
+
+                            <h3>Calamares Installer Fails</h3>
+                            <p>If the installer crashes with a "Boost.Python" error:</p>
+                            <ul>
+                                <li><strong>Cause:</strong> Often due to an unstable internet connection during
+                                    installation.</li>
+                                <li><strong>Fix:</strong> Disconnect from the internet (unplug cable/disable WiFi) and
+                                    try installing again. You can update the system <em>after</em> installation.</li>
+                            </ul>
+
+                            <h3>Partitioning Errors</h3>
+                            <p><strong>"Not enough space" or EFI errors:</strong></p>
+                            <ul>
+                                <li>Ensure you have disabled <strong>Secure Boot</strong> and <strong>Fast Boot</strong>
+                                    in BIOS.</li>
+                                <li>If dual-booting, shrink your Windows partition from Windows first.</li>
+                                <li>Create a manual partition table if automatic fails:
+                                    <ul>
+                                        <li><strong>EFI:</strong> 512MB (FAT32, flag: boot/esp)</li>
+                                        <li><strong>Root (/):</strong> Remaining space (BTRFS or EXT4)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="boot" class="content-section">
+                            <h2><i class="fas fa-power-off"></i> Boot Problems</h2>
+
+                            <h3>GRUB Rescue / Bootloader Missing</h3>
+                            <p>If you can't boot into Soplos after installing Windows or another OS:</p>
+                            <ol class="step-list">
+                                <li>Boot from your Soplos Live USB.</li>
+                                <li>Install <strong>Boot Repair</strong> (if available) or use the terminal.</li>
+                                <li><strong>Terminal Method:</strong>
+                                    <pre><code>sudo mount /dev/sdX2 /mnt  # Your root partition
+sudo mount /dev/sdX1 /mnt/boot/efi  # Your EFI partition
+sudo grub-install --boot-directory=/mnt/boot --efi-directory=/mnt/boot/efi /dev/sdX</code></pre>
+                                </li>
+                            </ol>
+
+                            <h3>Initramfs Error</h3>
+                            <p>If you drop to an <code>(initramfs)</code> prompt, your file system might have errors:
+                            </p>
+                            <pre><code>fsck /dev/sda2 -y</code></pre>
+                            <p>Replace <code>/dev/sda2</code> with your root partition.</p>
+                        </section>
+
+                        <section id="desktop" class="content-section">
+                            <h2><i class="fas fa-desktop"></i> Desktop Environment Specifics</h2>
+
+                            <h3>Boro (GNOME)</h3>
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>Boro</strong> uses GNOME, which relies heavily on extensions.
+                                </div>
+                            </div>
+
+                            <h4>Extensions Crashing</h4>
+                            <p>If the shell freezes or extensions act up:</p>
+                            <pre><code># Reset GNOME extensions
+dconf reset -f /org/gnome/shell/extensions/</code></pre>
+
+                            <h4>Wayland vs X11</h4>
+                            <p>If you have issues with <strong>Screen Sharing</strong> (Discord, Zoom) or
+                                <strong>Gaming</strong>:
+                            </p>
+                            <ol>
+                                <li>Log out.</li>
+                                <li>Click your user name.</li>
+                                <li>Click the gear icon <i class="fas fa-cog"></i> in the bottom right.</li>
+                                <li>Select <strong>"GNOME on Xorg"</strong>.</li>
+                            </ol>
+
+                            <h3>Tyron (XFCE)</h3>
+                            <h4>Panel Missing</h4>
+                            <p>If your taskbar disappears:</p>
+                            <pre><code>xfce4-panel -r</code></pre>
+
+                            <h3>Tyson (KDE Plasma)</h3>
+                            <h4>Reset Configuration</h4>
+                            <p>If Plasma becomes unstable:</p>
+                            <pre><code>rm -rf ~/.config/plasma*
+kquitapp5 plasmashell && kstart5 plasmashell</code></pre>
+                        </section>
+
+                        <section id="packages" class="content-section">
+                            <h2><i class="fas fa-box-open"></i> Package Management Errors</h2>
+
+                            <h3>"Could not get lock"</h3>
+                            <p>Error: <code>Could not get lock /var/lib/dpkg/lock</code></p>
+                            <p>This means another process (like an auto-updater) is using APT. If you are sure nothing
+                                is running:</p>
+                            <pre><code>sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock*
+sudo dpkg --configure -a</code></pre>
+
+                            <h3>Broken Packages</h3>
+                            <p>If an installation failed halfway:</p>
+                            <pre><code>sudo apt --fix-broken install</code></pre>
+                        </section>
+
+                        <section id="hardware" class="content-section">
+                            <h2><i class="fas fa-microchip"></i> Hardware & Network</h2>
+
+                            <h3>WiFi Not Detected</h3>
+                            <ol class="step-list">
+                                <li>Connect via Ethernet or USB Tethering.</li>
+                                <li>Open <strong>Soplos Welcome</strong> -> <strong>Drivers</strong>.</li>
+                                <li>Install proprietary drivers (Broadcom, Realtek).</li>
+                            </ol>
+
+                            <h3>Bluetooth Not Working</h3>
+                            <p>Ensure the service is running:</p>
+                            <pre><code>sudo systemctl enable --now bluetooth</code></pre>
+                            <p>If devices don't connect, install <code>blueman</code> for a better manager:</p>
+                            <pre><code>sudo apt install blueman</code></pre>
+
+                            <h3>Printers</h3>
+                            <p>Access the CUPS web interface for advanced management:</p>
+                            <ul>
+                                <li>Open browser: <a href="http://localhost:631"
+                                        target="_blank">http://localhost:631</a></li>
+                            </ul>
+                        </section>
+
+                        <section id="graphics" class="content-section">
+                            <h2><i class="fas fa-tv"></i> Graphics & Display</h2>
+
+                            <h3>Screen Tearing</h3>
+                            <ul>
+                                <li><strong>Boro (GNOME):</strong> Usually tear-free on Wayland. On X11, no manual
+                                    setting is needed.</li>
+                                <li><strong>Tyron (XFCE):</strong> Window Manager Tweaks -> Compositor -> Enable
+                                    "Synchronize drawing to the vertical blank".</li>
+                                <li><strong>Tyson (Plasma):</strong> Display Configuration -> Ensure Refresh Rate is
+                                    maxed.</li>
+                                <li><strong>NVIDIA:</strong> Open NVIDIA Settings -> "Force Full Composition Pipeline".
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html">Privacy Policy</a> |
+                    <a href="../../legal/terms.html">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <!-- <script src="../../js/language-loader.js"></script> -->
+    <!-- <script src="../../js/language-switcher.js"></script> -->
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

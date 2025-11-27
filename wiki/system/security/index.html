@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security - Soplos Linux Wiki</title>
+    <meta name="description" content="Basic security guide and firewall configuration in Soplos Linux.">
+    <meta name="keywords" content="soplos, linux, security, firewall, ufw, gufw, protection">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Security - Soplos Linux Wiki">
+    <meta property="og:description" content="Protect your Soplos Linux installation.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html#inicio">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../index.html#inicio" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System
+                                        Requirements</a></li>
+                                <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html" id="menuWiki">Wiki</a></li>
+                                <li><a href="../../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Security</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-shield-alt"></i> <span id="sec-hero-title">Security</span></h1>
+                    <p id="sec-hero-desc">Basic security guide and firewall configuration in Soplos Linux.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="sec-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#intro" id="sec-toc-1">Introduction</a></li>
+                            <li><a href="#fundamentals" id="sec-toc-2">Security Fundamentals</a></li>
+                            <li><a href="#sec-firewall-section" id="sec-toc-3">Firewall (UFW)</a></li>
+                            <li><a href="#gufw" id="sec-toc-4">Graphical Firewall</a></li>
+                            <li><a href="#users" id="sec-toc-5">User Security</a></li>
+                            <li><a href="#ssh" id="sec-toc-6">SSH Security</a></li>
+                            <li><a href="#auto-updates" id="sec-toc-7">Auto Updates</a></li>
+                            <li><a href="#hardening" id="sec-toc-8">System Hardening</a></li>
+                            <li><a href="#encryption" id="sec-toc-9">Encryption</a></li>
+                            <li><a href="#privacy" id="sec-toc-10">Privacy & Browsing</a></li>
+                            <li><a href="#physical" id="sec-toc-11">Physical Security</a></li>
+                            <li><a href="#monitoring" id="sec-toc-12">Monitoring</a></li>
+                            <li><a href="#threats" id="sec-toc-13">Common Threats</a></li>
+                            <li><a href="#best-practices" id="sec-toc-14">Best Practices</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+                        <section id="intro" class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> <span id="sec-intro-title">Security in Soplos
+                                    Linux</span></h2>
+                            <p id="sec-intro-p1">Soplos Linux inherits the robustness and security of Debian. However,
+                                it is always
+                                recommended to take additional measures to protect your equipment, especially if you
+                                connect
+                                to public networks.</p>
+
+                            <p id="sec-intro-p2">This guide will help you implement multiple layers of security to
+                                protect your system
+                                against
+                                common threats and vulnerabilities.</p>
+                        </section>
+
+                        <section id="fundamentals" class="content-section">
+                            <h2><i class="fas fa-shield-alt"></i> <span id="sec-fund-title">Security
+                                    Fundamentals</span></h2>
+
+                            <h3 id="sec-fund-why-h">Why Security Matters</h3>
+                            <p id="sec-fund-why-p">Even though Linux systems are generally more secure than other
+                                operating systems, no
+                                system
+                                is completely immune to threats. Security is essential to:</p>
+                            <ul>
+                                <li id="sec-fund-why-1">Protect your personal data and privacy</li>
+                                <li id="sec-fund-why-2">Prevent unauthorized access to your system</li>
+                                <li id="sec-fund-why-3">Avoid malware and exploitation</li>
+                                <li id="sec-fund-why-4">Maintain system integrity and stability</li>
+                            </ul>
+
+                            <h3 id="sec-fund-deb-h">Debian's Security Model</h3>
+                            <p id="sec-fund-deb-p">Soplos Linux benefits from Debian's strong security foundation:</p>
+                            <ul>
+                                <li id="sec-fund-deb-1"><strong>Security updates:</strong> Regular patches for
+                                    vulnerabilities</li>
+                                <li id="sec-fund-deb-2"><strong>Package verification:</strong> All packages are
+                                    cryptographically signed
+                                </li>
+                                <li id="sec-fund-deb-3"><strong>Minimal default installation:</strong> Only essential
+                                    services enabled</li>
+                                <li id="sec-fund-deb-4"><strong>Strong permissions model:</strong> Proper file and user
+                                    permissions by
+                                    default</li>
+                            </ul>
+
+                            <h3 id="sec-fund-def-h">Defense in Depth</h3>
+                            <p id="sec-fund-def-p">Security is not a single solution but multiple layers of protection:
+                            </p>
+                            <ol>
+                                <li id="sec-fund-def-1"><strong>Physical security:</strong> Protect hardware access</li>
+                                <li id="sec-fund-def-2"><strong>User security:</strong> Strong passwords and account
+                                    policies</li>
+                                <li id="sec-fund-def-3"><strong>Network security:</strong> Firewall and encrypted
+                                    connections</li>
+                                <li id="sec-fund-def-4"><strong>Application security:</strong> Keep software updated
+                                </li>
+                                <li id="sec-fund-def-5"><strong>Data security:</strong> Encryption and backups</li>
+                            </ol>
+
+                            <div class="info-box info">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span id="sec-fund-tip"><strong>Most Important:</strong> Keep your system updated!
+                                        The majority of
+                                        successful
+                                        attacks exploit known vulnerabilities that have already been patched.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="sec-firewall-section" class="content-section">
+                            <h2><i class="fas fa-fire"></i> <span id="sec-fw-title">Firewall (UFW)</span></h2>
+                            <p id="sec-fw-intro">Soplos Linux comes with <strong>UFW</strong> (Uncomplicated Firewall)
+                                installed by
+                                default,
+                                but <strong>inactive</strong> to avoid initial conflicts with user network services.</p>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <span id="sec-fw-warn">It is recommended to activate the firewall if your computer
+                                        is directly exposed to
+                                        the internet or on untrusted networks.</span>
+                                </div>
+                            </div>
+
+                            <h3 id="sec-fw-basic-h">Basic UFW Commands</h3>
+                            <div class="code-example">
+                                <h4 id="sec-fw-basic-term">Terminal</h4>
+                                <pre><code># Enable firewall
+sudo ufw enable
+
+# Check status
+sudo ufw status
+
+# Check detailed status with numbered rules
+sudo ufw status numbered
+
+# Disable firewall
+sudo ufw disable</code></pre>
+                            </div>
+
+                            <h3 id="sec-fw-rules-h">Managing Rules</h3>
+                            <h4 id="sec-fw-allow-h">Allow Connections</h4>
+                            <div class="code-example">
+                                <h4 id="sec-fw-allow-term">Terminal</h4>
+                                <pre><code># Allow specific port
+sudo ufw allow 22/tcp        # SSH
+sudo ufw allow 80/tcp        # HTTP
+sudo ufw allow 443/tcp       # HTTPS
+
+# Allow port range
+sudo ufw allow 6000:6007/tcp
+
+# Allow from specific IP
+sudo ufw allow from 192.168.1.100
+
+# Allow specific IP to specific port
+sudo ufw allow from 192.168.1.100 to any port 22</code></pre>
+                            </div>
+
+                            <h4 id="sec-fw-deny-h">Deny Connections</h4>
+                            <div class="code-example">
+                                <h4 id="sec-fw-deny-term">Terminal</h4>
+                                <pre><code># Deny specific port
+sudo ufw deny 23/tcp         # Telnet
+
+# Deny from specific IP
+sudo ufw deny from 192.168.1.50</code></pre>
+                            </div>
+
+                            <h4 id="sec-fw-del-h">Delete Rules</h4>
+                            <div class="code-example">
+                                <h4 id="sec-fw-del-term">Terminal</h4>
+                                <pre><code># Delete by rule number
+sudo ufw status numbered
+sudo ufw delete 3
+
+# Delete by specification
+sudo ufw delete allow 80/tcp</code></pre>
+                            </div>
+
+                            <h3 id="sec-fw-app-h">Application Profiles</h3>
+                            <p id="sec-fw-app-p">UFW includes predefined profiles for common applications:</p>
+                            <div class="code-example">
+                                <h4 id="sec-fw-app-term">Terminal</h4>
+                                <pre><code># List available application profiles
+sudo ufw app list
+
+# Allow application
+sudo ufw allow 'OpenSSH'
+sudo ufw allow 'Apache Full'
+
+# View application info
+sudo ufw app info 'OpenSSH'</code></pre>
+                            </div>
+
+                            <h3 id="sec-fw-pol-h">Default Policies</h3>
+                            <div class="code-example">
+                                <h4 id="sec-fw-pol-term">Terminal</h4>
+                                <pre><code># Set default policies (recommended)
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Allow routed packets (for router/gateway)
+sudo ufw default deny routed</code></pre>
+                            </div>
+
+                            <h3 id="sec-fw-log-h">Logging</h3>
+                            <div class="code-example">
+                                <h4 id="sec-fw-log-term">Terminal</h4>
+                                <pre><code># Enable logging
+sudo ufw logging on
+
+# Set log level (low, medium, high, full)
+sudo ufw logging medium
+
+# View firewall logs
+sudo tail -f /var/log/ufw.log</code></pre>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="sec-fw-tip"><strong>Pro Tip:</strong> After enabling UFW, make sure SSH
+                                        (port 22) is allowed if
+                                        you
+                                        use remote access, or you'll lock yourself out!</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="gufw" class="content-section">
+                            <h2><i class="fas fa-window-maximize"></i> <span id="sec-gufw-title">Graphical Management:
+                                    GUFW</span></h2>
+                            <p id="sec-gufw-intro">If you prefer not to use the terminal, Soplos Linux makes it easy to
+                                install
+                                <strong>GUFW</strong>, a simple graphical interface to control the firewall.
+                            </p>
+
+                            <div class="step-list">
+                                <ol>
+                                    <li id="sec-gufw-1">Install GUFW from your package manager (Synaptic, Discover,
+                                        GNOME Software) or
+                                        terminal:
+                                        <br><code>sudo apt install gufw</code>
+                                    </li>
+                                    <li id="sec-gufw-2">Open "Firewall Configuration" from the menu.</li>
+                                    <li id="sec-gufw-3">Unlock the configuration (padlock) with your password.</li>
+                                    <li id="sec-gufw-4">Change the "Status" switch to <strong>ON</strong>.</li>
+                                </ol>
+                            </div>
+
+                            <p id="sec-gufw-end">With this, your system will block unsolicited incoming connections by
+                                default,
+                                significantly
+                                improving your security.</p>
+                        </section>
+
+                        <section id="users" class="content-section">
+                            <h2><i class="fas fa-user-shield"></i> <span id="sec-users-title">User Account
+                                    Security</span></h2>
+
+                            <h3 id="sec-users-pass-h">Strong Passwords</h3>
+                            <p id="sec-users-pass-p">Use strong, unique passwords for all accounts:</p>
+                            <ul>
+                                <li id="sec-users-pass-1">At least 12 characters long</li>
+                                <li id="sec-users-pass-2">Mix of uppercase, lowercase, numbers, and symbols</li>
+                                <li id="sec-users-pass-3">Avoid dictionary words and personal information</li>
+                                <li id="sec-users-pass-4">Never reuse passwords across different accounts</li>
+                            </ul>
+
+                            <h3 id="sec-users-pm-h">Password Managers</h3>
+                            <p id="sec-users-pm-p">Consider using a password manager to generate and store secure
+                                passwords:</p>
+                            <ul>
+                                <li id="sec-users-pm-1"><strong>KeePassXC:</strong> Open-source, offline password
+                                    manager</li>
+                                <li id="sec-users-pm-2"><strong>Bitwarden:</strong> Open-source, cloud-based option</li>
+                                <li id="sec-users-pm-3"><strong>pass:</strong> Command-line password manager</li>
+                            </ul>
+
+                            <div class="code-example">
+                                <h4 id="sec-users-pm-term">Terminal</h4>
+                                <pre><code># Install KeePassXC
+sudo apt install keepassxc
+
+# Install Bitwarden (Flatpak)
+flatpak install flathub com.bitwarden.desktop</code></pre>
+                            </div>
+
+                            <h3 id="sec-users-sudo-h">sudo vs root</h3>
+                            <p id="sec-users-sudo-p">Soplos Linux follows Debian's approach:</p>
+                            <ul>
+                                <li id="sec-users-sudo-1"><strong>Don't use root account:</strong> The root account is
+                                    disabled by default
+                                </li>
+                                <li id="sec-users-sudo-2"><strong>Use sudo:</strong> Run administrative commands with
+                                    <code>sudo</code>
+                                </li>
+                                <li id="sec-users-sudo-3"><strong>Audit sudo access:</strong> Only trusted users should
+                                    have sudo privileges
+                                </li>
+                            </ul>
+
+                            <div class="code-example">
+                                <h4 id="sec-users-sudo-term">Terminal</h4>
+                                <pre><code># View users with sudo access
+grep '^sudo:' /etc/group
+
+# Add user to sudo group
+sudo usermod -aG sudo username</code></pre>
+                            </div>
+
+                            <h3 id="sec-users-lock-h">Account Lockout</h3>
+                            <p id="sec-users-lock-p">Protect against brute-force attacks:</p>
+                            <div class="code-example">
+                                <h4 id="sec-users-lock-term">Terminal</h4>
+                                <pre><code># Install fail2ban
+sudo apt install fail2ban
+
+# Check status
+sudo systemctl status fail2ban
+
+# View banned IPs
+sudo fail2ban-client status sshd</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="ssh" class="content-section">
+                            <h2><i class="fas fa-terminal"></i> <span id="sec-ssh-title">SSH Security</span></h2>
+
+                            <p id="sec-ssh-intro">If you use SSH for remote access, securing it is critical:</p>
+
+                            <h3 id="sec-ssh-key-h">Key-Based Authentication</h3>
+                            <p id="sec-ssh-key-p">SSH keys are more secure than passwords:</p>
+
+                            <div class="step-list">
+                                <ul>
+                                    <li id="sec-ssh-key-1">Generate SSH key pair on your client machine</li>
+                                    <li id="sec-ssh-key-2">Copy public key to server</li>
+                                    <li id="sec-ssh-key-3">Disable password authentication</li>
+                                    <li id="sec-ssh-key-4">Test connection before closing current session</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-example">
+                                <h4 id="sec-ssh-key-term">Terminal (Client)</h4>
+                                <pre><code># Generate SSH key (ED25519 is recommended)
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Copy key to server
+ssh-copy-id user@server_ip
+
+# Test connection
+ssh user@server_ip</code></pre>
+                            </div>
+
+                            <h3 id="sec-ssh-conf-h">SSH Configuration</h3>
+                            <p id="sec-ssh-conf-p">Harden your SSH server configuration:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-ssh-conf-term1">Terminal (Server)</h4>
+                                <pre><code># Edit SSH config
+sudo nano /etc/ssh/sshd_config</code></pre>
+                            </div>
+
+                            <p id="sec-ssh-conf-rec">Recommended settings:</p>
+                            <div class="code-example">
+                                <h4 id="sec-ssh-conf-file">/etc/ssh/sshd_config</h4>
+                                <pre><code># Disable root login
+PermitRootLogin no
+
+# Disable password authentication (use keys only)
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+
+# Change default port (optional but adds security through obscurity)
+Port 2222
+
+# Allow only specific users
+AllowUsers your_username
+
+# Use Protocol 2 only
+Protocol 2</code></pre>
+                            </div>
+
+                            <div class="code-example">
+                                <h4 id="sec-ssh-conf-term2">Terminal</h4>
+                                <pre><code># Restart SSH service
+sudo systemctl restart sshd
+
+# Check SSH status
+sudo systemctl status sshd</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <span id="sec-ssh-warn"><strong>Important:</strong> Always test SSH connections in a
+                                        separate terminal
+                                        before
+                                        closing your current session. If something goes wrong, you could lock yourself
+                                        out!</span>
+                                </div>
+                            </div>
+
+                            <h3 id="sec-ssh-f2b-h">Fail2ban for SSH</h3>
+                            <p id="sec-ssh-f2b-p">Fail2ban automatically bans IPs with too many failed login attempts:
+                            </p>
+
+                            <div class="code-example">
+                                <h4 id="sec-ssh-f2b-term1">Terminal</h4>
+                                <pre><code># Install fail2ban
+sudo apt install fail2ban
+
+# Create local config
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+
+# Edit configuration
+sudo nano /etc/fail2ban/jail.local</code></pre>
+                            </div>
+
+                            <p id="sec-ssh-f2b-conf">Basic SSH jail configuration:</p>
+                            <div class="code-example">
+                                <h4 id="sec-ssh-f2b-file">/etc/fail2ban/jail.local</h4>
+                                <pre><code>[sshd]
+enabled = true
+port = 22  # Change if you changed SSH port
+maxretry = 3
+bantime = 3600  # Ban for 1 hour
+findtime = 600  # 10 minutes window</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="auto-updates" class="content-section">
+                            <h2><i class="fas fa-sync-alt"></i> <span id="sec-auto-title">Automatic Security
+                                    Updates</span></h2>
+
+                            <p id="sec-auto-intro">Keeping your system updated is one of the most important security
+                                measures:</p>
+
+                            <h3 id="sec-auto-un-h">Unattended Upgrades</h3>
+                            <p id="sec-auto-un-p">Install and configure automatic security updates:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-auto-un-term">Terminal</h4>
+                                <pre><code># Install unattended-upgrades
+sudo apt install unattended-upgrades apt-listchanges
+
+# Configure
+sudo dpkg-reconfigure -plow unattended-upgrades</code></pre>
+                            </div>
+
+                            <h3 id="sec-auto-conf-h">Configuration</h3>
+                            <p id="sec-auto-conf-p">Edit the configuration file for more control:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-auto-conf-term">Terminal</h4>
+                                <pre><code># Edit main config
+sudo nano /etc/apt/apt.conf.d/50unattended-upgrades</code></pre>
+                            </div>
+
+                            <p id="sec-auto-conf-rec">Recommended settings:</p>
+                            <div class="code-example">
+                                <h4 id="sec-auto-conf-file">50unattended-upgrades</h4>
+                                <pre><code>// Automatically upgrade packages from security updates
+Unattended-Upgrade::Origins-Pattern {
+        "origin=Debian,codename=trixie-security";
+};
+
+// Email notifications (optional)
+Unattended-Upgrade::Mail "your-email@example.com";
+Unattended-Upgrade::MailReport "on-change";
+
+// Remove unused dependencies
+Unattended-Upgrade::Remove-Unused-Dependencies "true";
+
+// Automatically reboot if needed
+Unattended-Upgrade::Automatic-Reboot "false";  # Set to true if desired
+Unattended-Upgrade::Automatic-Reboot-Time "03:00";</code></pre>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <span id="sec-auto-warn"><strong>Debian Testing Consideration:</strong> Since Soplos
+                                        is based on Debian
+                                        Testing,
+                                        be cautious with automatic updates. Security updates are important, but you may
+                                        want
+                                        to
+                                        review major updates manually.</span>
+                                </div>
+                            </div>
+
+                            <h3 id="sec-auto-mon-h">Monitoring</h3>
+                            <div class="code-example">
+                                <h4 id="sec-auto-mon-term">Terminal</h4>
+                                <pre><code># Check unattended-upgrades status
+sudo systemctl status unattended-upgrades
+
+# View logs
+sudo cat /var/log/unattended-upgrades/unattended-upgrades.log
+
+# Dry run to test configuration
+sudo unattended-upgrade --dry-run --debug</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="hardening" class="content-section">
+                            <h2><i class="fas fa-lock"></i> <span id="sec-hard-title">System Hardening</span></h2>
+
+                            <h3 id="sec-hard-srv-h">Disable Unnecessary Services</h3>
+                            <p id="sec-hard-srv-p">Reduce attack surface by disabling unused services:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-hard-srv-term">Terminal</h4>
+                                <pre><code># List all running services
+systemctl list-units --type=service --state=running
+
+# Disable unnecessary service
+sudo systemctl disable service-name
+sudo systemctl stop service-name
+
+# Check service status
+sudo systemctl status service-name</code></pre>
+                            </div>
+
+                            <h3 id="sec-hard-perm-h">File Permissions</h3>
+                            <p id="sec-hard-perm-p">Protect sensitive files:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-hard-perm-term">Terminal</h4>
+                                <pre><code># Secure home directory
+chmod 750 ~/
+
+# Find files with world-writable permissions
+find / -perm -002 -type f -ls 2>/dev/null
+
+# Find SUID files (potential security risk)
+find / -perm /4000 2>/dev/null</code></pre>
+                            </div>
+
+                            <h3 id="sec-hard-app-h">AppArmor</h3>
+                            <p id="sec-hard-app-p">Soplos Linux includes AppArmor for mandatory access control:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-hard-app-term">Terminal</h4>
+                                <pre><code># Check AppArmor status
+sudo aa-status
+
+# List profiles
+sudo aa-status --verbose
+
+# Install AppArmor utilities
+sudo apt install apparmor-utils</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="encryption" class="content-section">
+                            <h2><i class="fas fa-key"></i> <span id="sec-enc-title">Encryption</span></h2>
+
+                            <h3 id="sec-enc-luks-h">Full Disk Encryption (LUKS)</h3>
+                            <p id="sec-enc-luks-p">LUKS encryption is best set up during installation, but can encrypt
+                                additional
+                                partitions:</p>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <span id="sec-enc-luks-warn"><strong>Warning:</strong> Encrypting a partition will
+                                        erase all data. Always backup
+                                        first!</span>
+                                </div>
+                            </div>
+
+                            <h3 id="sec-enc-gpg-h">File Encryption with GPG</h3>
+                            <p id="sec-enc-gpg-p">Encrypt individual files or directories:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-enc-gpg-term">Terminal</h4>
+                                <pre><code># Install GPG (usually pre-installed)
+sudo apt install gnupg
+
+# Encrypt a file
+gpg -c sensitive_file.txt
+
+# Decrypt a file
+gpg sensitive_file.txt.gpg
+
+# Encrypt with your GPG key
+gpg -e -r your_email@example.com file.txt</code></pre>
+                            </div>
+
+                            <h3 id="sec-enc-arch-h">Password-Protected Archives</h3>
+                            <div class="code-example">
+                                <h4 id="sec-enc-arch-term">Terminal</h4>
+                                <pre><code># Create encrypted zip
+zip -e archive.zip file1 file2
+
+# Create encrypted 7z (stronger encryption)
+7z a -p -mhe=on archive.7z files/</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="privacy" class="content-section">
+                            <h2><i class="fas fa-user-secret"></i> <span id="sec-priv-title">Privacy & Browsing
+                                    Security</span></h2>
+
+                            <h3 id="sec-priv-browser-h">Browser Security</h3>
+                            <p id="sec-priv-browser-p">Essential browser security practices:</p>
+                            <ul>
+                                <li id="sec-priv-browser-1">Keep browser updated</li>
+                                <li id="sec-priv-browser-2">Use HTTPS Everywhere extension</li>
+                                <li id="sec-priv-browser-3">Install uBlock Origin for ad/tracker blocking</li>
+                                <li id="sec-priv-browser-4">Clear cookies regularly</li>
+                                <li id="sec-priv-browser-5">Avoid saving passwords in browser (use password manager)
+                                </li>
+                            </ul>
+
+                            <h3 id="sec-priv-priv-h">Privacy-Focused Browsers</h3>
+                            <ul>
+                                <li id="sec-priv-priv-1"><strong>Firefox:</strong> Pre-installed, good privacy settings
+                                </li>
+                                <li id="sec-priv-priv-2"><strong>Brave:</strong> Built-in ad blocking</li>
+                                <li id="sec-priv-priv-3"><strong>Tor Browser:</strong> Maximum anonymity</li>
+                            </ul>
+
+                            <div class="code-example">
+                                <h4 id="sec-priv-priv-term">Terminal</h4>
+                                <pre><code># Install Tor Browser (Flatpak)
+flatpak install flathub com.github.micahflee.torbrowser-launcher</code></pre>
+                            </div>
+
+                            <h3 id="sec-priv-dns-h">DNS over HTTPS</h3>
+                            <p id="sec-priv-dns-p">Encrypt DNS queries to prevent monitoring:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-priv-dns-term">Firefox</h4>
+                                <pre><code># In Firefox settings:
+# Privacy & Security > DNS over HTTPS > Enable
+# Choose provider: Cloudflare or Next DNS</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="physical" class="content-section">
+                            <h2><i class="fas fa-laptop"></i> <span id="sec-phys-title">Physical Security</span></h2>
+
+                            <h3 id="sec-phys-bios-h">BIOS/UEFI Password</h3>
+                            <p id="sec-phys-bios-p">Set a BIOS password to prevent unauthorized changes:</p>
+                            <ul>
+                                <li id="sec-phys-bios-1">Access BIOS/UEFI setup (usually F2, F10, or DEL at boot)</li>
+                                <li id="sec-phys-bios-2">Set supervisor/administrator password</li>
+                                <li id="sec-phys-bios-3">Disable booting from USB/CD without password</li>
+                            </ul>
+
+                            <h3 id="sec-phys-lock-h">Screen Lock</h3>
+                            <p id="sec-phys-lock-p">Configure automatic screen locking:</p>
+
+                            <div class="step-list">
+                                <ul>
+                                    <li id="sec-phys-lock-1"><strong>XFCE (Tyron):</strong> Settings → Screensaver →
+                                        Enable lock screen</li>
+                                    <li id="sec-phys-lock-2"><strong>Plasma (Tyson):</strong> Settings → Screen Locking
+                                        → configure timer
+                                    </li>
+                                    <li id="sec-phys-lock-3"><strong>GNOME (Boro):</strong> Settings → Privacy → Screen
+                                        Lock</li>
+                                </ul>
+                            </div>
+
+                            <p id="sec-phys-lock-short">Quick lock shortcuts:</p>
+                            <ul>
+                                <li id="sec-phys-lock-s1"><strong>XFCE:</strong> <code>Ctrl+Alt+L</code></li>
+                                <li id="sec-phys-lock-s2"><strong>Plasma:</strong> <code>Ctrl+Alt+L</code> or
+                                    <code>Meta+L</code>
+                                </li>
+                                <li id="sec-phys-lock-s3"><strong>GNOME:</strong> <code>Super+L</code></li>
+                            </ul>
+
+                            <h3 id="sec-phys-usb-h">USB Security</h3>
+                            <div class="info-box warning">
+                                <i class="fas fa-usb"></i>
+                                <div>
+                                    <span id="sec-phys-usb-warn"><strong>USB Caution:</strong> Never plug in unknown USB
+                                        drives. They can contain
+                                        malware
+                                        or exploit firmware vulnerabilities.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="monitoring" class="content-section">
+                            <h2><i class="fas fa-chart-line"></i> <span id="sec-mon-title">Monitoring & Auditing</span>
+                            </h2>
+
+                            <h3 id="sec-mon-logs-h">System Logs</h3>
+                            <p id="sec-mon-logs-p">Regularly check system logs for suspicious activity:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-mon-logs-term">Terminal</h4>
+                                <pre><code># View authentication logs
+sudo journalctl -u ssh -f
+
+# Check failed login attempts
+sudo journalctl _SYSTEMD_UNIT=sshd.service | grep "Failed"
+
+# View all logs from today
+sudo journalctl --since today
+
+# Check kernel messages
+sudo dmesg | tail</code></pre>
+                            </div>
+
+                            <h3 id="sec-mon-root-h">Rootkit Detection</h3>
+                            <p id="sec-mon-root-p">Scan for rootkits and malware:</p>
+
+                            <div class="code-example">
+                                <h4 id="sec-mon-root-term">Terminal</h4>
+                                <pre><code># Install rkhunter
+sudo apt install rkhunter
+
+# Update database
+sudo rkhunter --update
+
+# Run scan
+sudo rkhunter --check
+
+# Install chkrootkit
+sudo apt install chkrootkit
+sudo chkrootkit</code></pre>
+                            </div>
+
+                            <h3 id="sec-mon-conn-h">Active Connections</h3>
+                            <div class="code-example">
+                                <h4 id="sec-mon-conn-term">Terminal</h4>
+                                <pre><code># List active network connections
+sudo ss -tulpn
+
+# Check listening ports
+sudo netstat -tulpn | grep LISTEN
+
+# Show all active connections
+sudo lsof -i</code></pre>
+                            </div>
+                        </section>
+
+                        <section id="threats" class="content-section">
+                            <h2><i class="fas fa-bug"></i> <span id="sec-threat-title">Common Threats &
+                                    Protection</span></h2>
+
+                            <h3 id="sec-threat-phish-h">Phishing</h3>
+                            <p id="sec-threat-phish-p">Recognize and avoid phishing attempts:</p>
+                            <ul>
+                                <li id="sec-threat-phish-1">Verify sender email addresses carefully</li>
+                                <li id="sec-threat-phish-2">Don't click links in suspicious emails</li>
+                                <li id="sec-threat-phish-3">Check URLs before entering credentials</li>
+                                <li id="sec-threat-phish-4">Enable 2FA on important accounts</li>
+                            </ul>
+
+                            <h3 id="sec-threat-mal-h">Malware on Linux</h3>
+                            <p id="sec-threat-mal-p">While less common than on Windows, Linux malware exists:</p>
+                            <ul>
+                                <li id="sec-threat-mal-1">Only install software from trusted repositories</li>
+                                <li id="sec-threat-mal-2">Avoid running scripts from unknown sources</li>
+                                <li id="sec-threat-mal-3">Never use <code>curl | bash</code> installation methods</li>
+                                <li id="sec-threat-mal-4">Check file permissions before executing</li>
+                            </ul>
+
+                            <h3 id="sec-threat-soc-h">Social Engineering</h3>
+                            <p id="sec-threat-soc-p">The biggest security vulnerability is often human:</p>
+                            <ul>
+                                <li id="sec-threat-soc-1">Be skeptical of unexpected requests</li>
+                                <li id="sec-threat-soc-2">Verify identities through known channels</li>
+                                <li id="sec-threat-soc-3">Don't share sensitive information over phone/email</li>
+                                <li id="sec-threat-soc-4">Question urgency in requests</li>
+                            </ul>
+                        </section>
+
+                        <section id="best-practices" class="content-section">
+                            <h2><i class="fas fa-clipboard-check"></i> <span id="sec-best-title">Security Best Practices
+                                    Checklist</span></h2>
+
+                            <h3 id="sec-best-daily-h">Daily Tasks</h3>
+                            <ul class="step-list">
+                                <li id="sec-best-daily-1"><i class="fas fa-check"></i> Lock screen when away from
+                                    computer</li>
+                                <li id="sec-best-daily-2"><i class="fas fa-check"></i> Be cautious with email
+                                    attachments and links</li>
+                                <li id="sec-best-daily-3"><i class="fas fa-check"></i> Use VPN on public WiFi</li>
+                            </ul>
+
+                            <h3 id="sec-best-weekly-h">Weekly Tasks</h3>
+                            <ul class="step-list">
+                                <li id="sec-best-weekly-1"><i class="fas fa-check"></i> Check for system updates:
+                                    <code>sudo apt update && sudo apt upgrade</code>
+                                </li>
+                                <li id="sec-best-weekly-2"><i class="fas fa-check"></i> Review active network
+                                    connections</li>
+                                <li id="sec-best-weekly-3"><i class="fas fa-check"></i> Check firewall status</li>
+                            </ul>
+
+                            <h3 id="sec-best-monthly-h">Monthly Tasks</h3>
+                            <ul class="step-list">
+                                <li id="sec-best-monthly-1"><i class="fas fa-check"></i> Review installed packages and
+                                    remove unused ones</li>
+                                <li id="sec-best-monthly-2"><i class="fas fa-check"></i> Check system logs for anomalies
+                                </li>
+                                <li id="sec-best-monthly-3"><i class="fas fa-check"></i> Update passwords for critical
+                                    accounts</li>
+                                <li id="sec-best-monthly-4"><i class="fas fa-check"></i> Run rootkit scanner</li>
+                                <li id="sec-best-monthly-5"><i class="fas fa-check"></i> Verify backup integrity</li>
+                            </ul>
+
+                            <h3 id="sec-best-audit-h">Security Audit Checklist</h3>
+                            <div class="info-box tip">
+                                <i class="fas fa-tasks"></i>
+                                <div>
+                                    <span id="sec-best-audit-intro"><strong>Quick Security Check:</strong></span>
+                                    <ol style="margin: 10px 0 0 0; padding-left: 30px;">
+                                        <li id="sec-best-audit-1">Is UFW enabled? <code>sudo ufw status</code></li>
+                                        <li id="sec-best-audit-2">Are system updates current?</li>
+                                        <li id="sec-best-audit-3">Is automatic update configured?</li>
+                                        <li id="sec-best-audit-4">Are SSH keys used instead of passwords?</li>
+                                        <li id="sec-best-audit-5">Is fail2ban running?</li>
+                                        <li id="sec-best-audit-6">Are backups encrypted and current?</li>
+                                        <li id="sec-best-audit-7">Is screen lock enabled?</li>
+                                        <li id="sec-best-audit-8">Are unnecessary services disabled?</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h3 id="sec-best-inc-h">Incident Response</h3>
+                            <p id="sec-best-inc-p">If you suspect a security breach:</p>
+                            <div class="step-list">
+                                <ul>
+                                    <li id="sec-best-inc-1"><strong>Disconnect:</strong> Disconnect from network
+                                        immediately</li>
+                                    <li id="sec-best-inc-2"><strong>Change passwords:</strong> Change all important
+                                        passwords from a
+                                        different, secure device</li>
+                                    <li id="sec-best-inc-3"><strong>Scan:</strong> Run antivirus/rootkit scans</li>
+                                    <li id="sec-best-inc-4"><strong>Review logs:</strong> Check system logs for
+                                        suspicious activity</li>
+                                    <li id="sec-best-inc-5"><strong>Backup:</strong> Create backup of important data (if
+                                        not compromised)
+                                    </li>
+                                    <li id="sec-best-inc-6"><strong>Consider reinstalling:</strong> For serious
+                                        breaches, clean install may
+                                        be necessary</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <span id="sec-best-final"><strong>Remember:</strong> Security is an ongoing process,
+                                        not a one-time setup.
+                                        Stay informed
+                                        about new threats and keep your system updated!</span>
+                                </div>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2025 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                    <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>
