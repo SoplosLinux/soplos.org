@@ -2677,3 +2677,55 @@ pre, code {
     }
 }
 
+/* Ajuste específico de títulos para móvil */
+@media (max-width: 600px) {
+  .main-content h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+  .main-content h2 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  .main-content h3 {
+    font-size: 1.15em;
+    text-align: left;
+  }
+}
+
+/* Ajuste de capturas de pantalla en móvil */
+@media (max-width: 600px) {
+  .screenshots-section img {
+    display: block;
+    margin: 0 auto 16px auto;
+    max-width: 90vw;
+    height: auto;
+  }
+  .screenshots-section {
+    text-align: center;
+  }
+  .main-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 16px auto;
+  }
+}
+
+/* Apilo verticalmente las imágenes de .screenshot-row en móvil */
+@media (max-width: 600px) {
+  .screenshot-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .screenshot-row img {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px;
+    height: auto;
+    display: block;
+  }
+}
+
