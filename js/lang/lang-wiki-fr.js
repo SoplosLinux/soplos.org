@@ -1308,7 +1308,9 @@ Object.assign(window.LANG_FR, {
 
     // Overview Section
     "tyron-overview-title": "Aperçu",
-    "tyron-overview-intro": "Soplos Tyron est la variante légère de Soplos Linux, équipée de l'environnement de bureau XFCE. Elle est conçue pour les utilisateurs qui privilégient la performance, l'efficacité et la simplicité tout en conservant une interface moderne et attrayante.",
+    "tyron-overview-intro-pre": "Soplos Tyron est la variante légère de Soplos Linux, dotée de ",
+    "tyron-overview-xfce-label": "l'environnement de bureau XFCE",
+    "tyron-overview-intro-post": ". Elle est conçue pour les utilisateurs qui privilégient la performance, l'efficacité et la simplicité tout en conservant une interface moderne et attrayante.",
     "tyron-feat-perf-title": "Axé sur la Performance",
     "tyron-feat-perf-desc": "Optimisé pour la vitesse et une faible utilisation des ressources. Parfait pour le matériel ancien ou les utilisateurs qui veulent des performances maximales.",
     "tyron-feat-custom-title": "Hautement Personnalisable",
@@ -1317,7 +1319,8 @@ Object.assign(window.LANG_FR, {
     "tyron-feat-friendly-desc": "Design d'interface familier facile à utiliser pour les nouveaux venus sous Linux et les utilisateurs expérimentés.",
     "tyron-feat-battery-title": "Économe en Batterie",
     "tyron-feat-battery-desc": "Excellent pour les ordinateurs portables avec une autonomie prolongée grâce à la gestion d'alimentation optimisée.",
-    "tyron-overview-info": "Parfait pour : Ordinateurs anciens, portables, utilisateurs préférant des performances rapides, configurations minimalistes, et tous ceux qui valorisent l'efficacité plutôt que les effets visuels.",
+    "tyron-overview-info-label": "Parfait pour :",
+    "tyron-overview-info": "Ordinateurs anciens, portables, utilisateurs préférant des performances rapides, configurations minimalistes, et tous ceux qui valorisent l'efficacité plutôt que les effets visuels.",
 
     // Interface Tour
     "tyron-interface-title": "Visite de l'Interface",
@@ -1332,17 +1335,28 @@ Object.assign(window.LANG_FR, {
     "tyron-interface-system-title": "Accès Système",
     "tyron-interface-system-desc": "Clic droit sur le bureau pour un accès rapide aux paramètres, applications et options de configuration système.",
     "tyron-interface-docklike-title": "Soplos Docklike",
-    "tyron-interface-docklike-intro": "Tyron inclut l'application exclusive Soplos Docklike :",
-    "tyron-interface-docklike-desc": "Soplos Docklike est un outil graphique conçu pour gérer et organiser les icônes dans le plugin Docklike du panneau XFCE. Il fournit une interface intuitive pour personnaliser votre panneau style dock, organiser les applications et créer une expérience de bureau moderne. Accédez-y via le menu des applications ou Soplos Welcome.",
-    "tyron-interface-custom-info": "Interface Personnalisable : Bien que Tyron soit livré avec une configuration minimale par défaut, vous pouvez facilement ajouter des panneaux, des widgets, ou conserver l'interface Docklike épurée selon vos préférences via les outils de configuration XFCE.",
+    "tyron-interface-docklike-intro-pre": "Tyron inclut l'application exclusive ",
+    "tyron-interface-docklike-intro-label": "Soplos Docklike",
+    "tyron-interface-docklike-intro-post": " :",
+    "tyron-interface-docklike-desc-label": "Soplos Docklike",
+    "tyron-interface-docklike-desc": "est un outil graphique conçu pour gérer et organiser les icônes dans le plugin Docklike du panneau XFCE. Il fournit une interface intuitive pour personnaliser votre panneau style dock, organiser les applications et créer une expérience de bureau moderne. Accédez-y via le menu des applications ou Soplos Welcome.",
+    "tyron-interface-custom-info-label": "Interface Personnalisable :",
+    "tyron-interface-custom-info": "Bien que Tyron soit livré avec une configuration minimale par défaut, vous pouvez facilement ajouter des panneaux, des widgets, ou conserver l'interface Docklike épurée selon vos préférences via les outils de configuration XFCE.",
+
+    // Screenshots
+    "tyron-screenshots-title": "Captures d'écran",
+    "tyron-screenshots-desc": "Exemples de captures d'écran de Tyron depuis l'ISO :",
 
     // Customization
     "tyron-custom-title": "Personnalisation",
     "tyron-custom-appear-title": "Paramètres d'Apparence",
-    "tyron-custom-appear-intro": "Accédez aux paramètres d'apparence via Gestionnaire de Paramètres → Apparence :",
+    "tyron-custom-appear-intro-pre": "Accédez aux paramètres d'apparence via ",
+    "tyron-custom-appear-manager-label": "Gestionnaire de Paramètres → Apparence",
+    "tyron-custom-appear-intro-post": " :",
     "tyron-custom-themes-title": "Thèmes",
     "tyron-custom-themes-1": "Thèmes Soplos préinstallés optimisés pour XFCE",
-    "tyron-custom-themes-2": "Utilisez Soplos Theme Manager pour un changement facile",
+    "tyron-custom-themes-2-label": "Utilisez Soplos Theme Manager",
+    "tyron-custom-themes-2": "pour un changement facile",
     "tyron-custom-themes-3": "Téléchargez des thèmes supplémentaires depuis xfce-look.org",
     "tyron-custom-themes-4": "Variantes sombre et claire disponibles",
     "tyron-custom-icons-title": "Icônes",
@@ -1363,22 +1377,32 @@ Object.assign(window.LANG_FR, {
     "tyron-custom-desktop-title": "Personnalisation du Bureau",
     "tyron-custom-desktop-intro": "Personnalisez votre interface de bureau via les paramètres XFCE :",
     "tyron-custom-options-title": "Options de Personnalisation de l'Interface",
-    "tyron-custom-options-1": "Ajouter des panneaux : Créez des panneaux personnalisés si souhaité (en haut, en bas, à gauche ou à droite)",
-    "tyron-custom-options-2": "Icônes du bureau : Activer/désactiver et configurer les icônes du bureau",
-    "tyron-custom-options-3": "Soplos Docklike : Utilisez l'interface dock élégante par défaut",
-    "tyron-custom-options-4": "Raccourcis : Configurez les raccourcis clavier pour un accès rapide",
-    "tyron-custom-options-5": "Espaces de travail : Configurez plusieurs bureaux virtuels",
-    "tyron-custom-tip": "Astuce Pro : Utilisez Soplos Theme Manager (disponible dans Soplos Welcome) pour basculer rapidement entre différentes configurations d'apparence en un clic.",
+    "tyron-custom-options-1-label": "Ajouter des panneaux :",
+    "tyron-custom-options-1": "Créez des panneaux personnalisés si souhaité (en haut, en bas, à gauche ou à droite)",
+    "tyron-custom-options-2-label": "Icônes du bureau :",
+    "tyron-custom-options-2": "Activer/désactiver et configurer les icônes du bureau",
+    "tyron-custom-options-3-label": "Soplos Docklike :",
+    "tyron-custom-options-3": "Utilisez l'interface dock élégante par défaut",
+    "tyron-custom-options-4-label": "Raccourcis :",
+    "tyron-custom-options-4": "Configurez les raccourcis clavier pour un accès rapide",
+    "tyron-custom-options-5-label": "Espaces de travail :",
+    "tyron-custom-options-5": "Configurez plusieurs bureaux virtuels",
+    "tyron-custom-tip-label": "Astuce Pro :",
+    "tyron-custom-tip": "Utilisez Soplos Theme Manager (disponible dans Soplos Welcome) pour basculer rapidement entre différentes configurations d'apparence en un clic.",
 
     // Default Applications
     "tyron-apps-title": "Applications Par Défaut",
     "tyron-apps-intro": "Tyron est livré avec un ensemble d'applications légères et efficaces soigneusement sélectionnées, optimisées pour la performance et l'utilisabilité. La sélection exacte des applications est conçue pour fournir des fonctionnalités essentielles tout en maintenant la réactivité du système.",
-    "tyron-apps-need": "Besoin de plus d'applications ? Utilisez Soplos Welcome → onglet Logiciels pour accéder à des centres de logiciels supplémentaires, ou parcourez Soplos Welcome → onglet Recommandé pour des suggestions d'applications sélectionnées. Vous pouvez installer tout logiciel supplémentaire dont vous avez besoin via ces interfaces pratiques.",
-    "tyron-apps-mgmt": "Gestion des Applications : Toute installation et gestion de logiciels est gérée via Soplos Welcome, qui donne accès à plusieurs gestionnaires de paquets incluant APT, Flatpak et Snap, ainsi qu'à des centres de logiciels graphiques.",
+    "tyron-apps-need-label": "Besoin de plus d'applications ?",
+    "tyron-apps-need": "Utilisez Soplos Welcome → onglet Logiciels pour accéder à des centres de logiciels supplémentaires, ou parcourez Soplos Welcome → onglet Recommandé pour des suggestions d'applications sélectionnées. Vous pouvez installer tout logiciel supplémentaire dont vous avez besoin via ces interfaces pratiques.",
+    "tyron-apps-mgmt-label": "Gestion des Applications :",
+    "tyron-apps-mgmt": "Toute installation et gestion de logiciels est gérée via Soplos Welcome, qui donne accès à plusieurs gestionnaires de paquets incluant APT, Flatpak et Snap, ainsi qu'à des centres de logiciels graphiques.",
 
     // Soplos Exclusive Apps
     "tyron-soplos-title": "Applications Exclusives Soplos",
-    "tyron-soplos-intro": "Tyron inclut plusieurs applications exclusives Soplos accessibles via Soplos Welcome :",
+    "tyron-soplos-intro-pre": "Tyron inclut plusieurs applications exclusives Soplos accessibles via ",
+    "tyron-soplos-welcome-intro-label": "Soplos Welcome",
+    "tyron-soplos-intro-post": " :",
     "tyron-soplos-welcome-title": "Soplos Welcome",
     "tyron-soplos-welcome-desc": "Application de bienvenue qui guide les nouveaux utilisateurs à travers la configuration initiale et la personnalisation. Les fonctionnalités incluent l'installation de logiciels, la personnalisation du bureau, la détection matérielle, l'installation de pilotes et l'accès aux ressources d'aide.",
     "tyron-soplos-live-title": "Soplos Welcome Live",
@@ -1393,7 +1417,8 @@ Object.assign(window.LANG_FR, {
     "tyron-soplos-theme-desc": "Gestionnaire de thèmes de bureau simple et intuitif. Créez, sauvegardez et appliquez facilement des thèmes de bureau complets avec support de plusieurs styles de bureau et intégration complète XFCE.",
     "tyron-soplos-repo-title": "Soplos Repo Selector",
     "tyron-soplos-repo-desc": "Outil de gestion des dépôts pour basculer entre les sources logicielles, trouver les miroirs les plus rapides et activer des dépôts supplémentaires avec une interface conviviale.",
-    "tyron-soplos-exclusive": "Exclusif à Tyron : Soplos Docklike est spécifiquement conçu pour XFCE et fournit une belle expérience dock qui améliore le système de panneaux traditionnel.",
+    "tyron-soplos-exclusive-label": "Exclusif à Tyron :",
+    "tyron-soplos-exclusive": "Soplos Docklike est spécifiquement conçu pour XFCE et fournit une belle expérience dock qui améliore le système de panneaux traditionnel.",
 
     // Performance Tips
     "tyron-perf-title": "Conseils de Performance",
@@ -1418,7 +1443,9 @@ Object.assign(window.LANG_FR, {
     "tyron-perf-system-2": "Ajustez swappiness pour les systèmes SSD",
     "tyron-perf-system-3": "Configurez la gestion d'alimentation",
     "tyron-perf-system-4": "Mettez à jour le système régulièrement",
-    "tyron-perf-tip": "Avancé : Accédez aux noyaux de performance via Soplos Welcome → onglet Noyaux. Les noyaux Liquorix et XanMod peuvent fournir des améliorations de performance significatives pour l'utilisation de bureau.",
+    "tyron-perf-tip-label": "Avancé :",
+    "tyron-perf-tip": "Accédez aux noyaux de performance via Soplos Welcome → onglet Noyaux. Les noyaux Liquorix et XanMod peuvent fournir des améliorations de performance significatives pour l'utilisation de bureau.",
+    "tyron-perf-commands-title": "Commandes de performance rapides",
 
     // Common Issues
     "tyron-trouble-title": "Problèmes Courants",
@@ -1443,7 +1470,8 @@ Object.assign(window.LANG_FR, {
     "tyron-trouble-a4-2": "Sélectionnez \"Éditer les Applications\"",
     "tyron-trouble-a4-3": "Ou redémarrez la session : Déconnectez-vous et reconnectez-vous",
     "tyron-trouble-a4-4": "Pour un rafraîchissement manuel : update-desktop-database",
-    "tyron-trouble-help": "Besoin de plus d'aide ? Consultez la section dépannage dans le wiki ou demandez sur les forums communautaires pour de l'aide avec du matériel spécifique.",
+    "tyron-trouble-help-label": "Besoin de plus d'aide ?",
+    "tyron-trouble-help": "Consultez la section dépannage dans le wiki ou demandez sur les forums communautaires pour de l'aide avec du matériel spécifique.",
 
     // Footer
     "footer-privacy": "Politique de Confidentialité",

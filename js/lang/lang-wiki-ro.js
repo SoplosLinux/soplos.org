@@ -1308,7 +1308,9 @@ Object.assign(window.LANG_RO, {
 
     // Overview Section
     "tyron-overview-title": "Prezentare generală",
-    "tyron-overview-intro": "Soplos Tyron este varianta ușoară a Soplos Linux, cu mediul desktop XFCE. Este proiectat pentru utilizatorii care prioritizează performanța, eficiența și simplitatea, menținând totodată o interfață modernă și atractivă.",
+    "tyron-overview-intro-pre": "Soplos Tyron este varianta ușoară a Soplos Linux, cu ",
+    "tyron-overview-xfce-label": "mediul desktop XFCE",
+    "tyron-overview-intro-post": ". Este proiectat pentru utilizatorii care prioritizează performanța, eficiența și simplitatea, menținând totodată o interfață modernă și atractivă.",
     "tyron-feat-perf-title": "Focusat pe performanță",
     "tyron-feat-perf-desc": "Optimizat pentru viteză și utilizare redusă a resurselor. Perfect pentru hardware mai vechi sau utilizatori care doresc performanță maximă.",
     "tyron-feat-custom-title": "Extrem de personalizabil",
@@ -1317,7 +1319,8 @@ Object.assign(window.LANG_RO, {
     "tyron-feat-friendly-desc": "Design de interfață familiar care este ușor de folosit atât pentru începătorii Linux, cât și pentru utilizatorii experimențați.",
     "tyron-feat-battery-title": "Eficient energetic",
     "tyron-feat-battery-desc": "Excelent pentru laptopuri cu durată mai lungă a bateriei datorită gestionării energiei optimizate.",
-    "tyron-overview-info": "Perfect pentru: Computere mai vechi, laptopuri, utilizatori care preferă performanță rapidă, configurări minimaliste și oricine valorează eficiența în detrimentul efectelor vizuale.",
+    "tyron-overview-info-label": "Perfect pentru:",
+    "tyron-overview-info": "Computere mai vechi, laptopuri, utilizatori care preferă performanță rapidă, configurări minimaliste și oricine valorează eficiența în detrimentul efectelor vizuale.",
 
     // Interface Tour
     "tyron-interface-title": "Tur al interfeței",
@@ -1332,17 +1335,28 @@ Object.assign(window.LANG_RO, {
     "tyron-interface-system-title": "Acces la sistem",
     "tyron-interface-system-desc": "Clic dreapta pe desktop pentru acces rapid la setări, aplicații și opțiuni de configurare a sistemului.",
     "tyron-interface-docklike-title": "Soplos Docklike",
-    "tyron-interface-docklike-intro": "Tyron include aplicația exclusivă Soplos Docklike:",
-    "tyron-interface-docklike-desc": "Soplos Docklike este un instrument grafic proiectat pentru a gestiona și organiza pictogramele în plugin-ul Docklike al panoului XFCE. Oferă o interfață intuitivă pentru personalizarea panoului în stil dock, organizarea aplicațiilor și crearea unei experiențe de desktop modernă. Accesați prin meniul de aplicații sau Soplos Welcome.",
-    "tyron-interface-custom-info": "Interfață personalizabilă: Deși Tyron vine cu o configurație implicită minimală, puteți adăuga ușor panouri, widget-uri sau menține interfața Docklike curată pe baza preferințelor dvs. prin instrumentele de configurare XFCE.",
+    "tyron-interface-docklike-intro-pre": "Tyron include aplicația exclusivă ",
+    "tyron-interface-docklike-intro-label": "Soplos Docklike",
+    "tyron-interface-docklike-intro-post": ":",
+    "tyron-interface-docklike-desc-label": "Soplos Docklike",
+    "tyron-interface-docklike-desc": "este un instrument grafic proiectat pentru a gestiona și organiza pictogramele în plugin-ul Docklike al panoului XFCE. Oferă o interfață intuitivă pentru personalizarea panoului în stil dock, organizarea aplicațiilor și crearea unei experiențe de desktop modernă. Accesați prin meniul de aplicații sau Soplos Welcome.",
+    "tyron-interface-custom-info-label": "Interfață personalizabilă:",
+    "tyron-interface-custom-info": "Deși Tyron vine cu o configurație implicită minimală, puteți adăuga ușor panouri, widget-uri sau menține interfața Docklike curată pe baza preferințelor dvs. prin instrumentele de configurare XFCE.",
+
+    // Screenshots
+    "tyron-screenshots-title": "Capturi de ecran",
+    "tyron-screenshots-desc": "Exemple de capturi de ecran Tyron din ISO:",
 
     // Customization
     "tyron-custom-title": "Personalizare",
     "tyron-custom-appear-title": "Setări de aspect",
-    "tyron-custom-appear-intro": "Accesați setările de aspect prin Managerul de setări → Aspect:",
+    "tyron-custom-appear-intro-pre": "Accesați setările de aspect prin ",
+    "tyron-custom-appear-manager-label": "Managerul de setări → Aspect",
+    "tyron-custom-appear-intro-post": ":",
     "tyron-custom-themes-title": "Teme",
     "tyron-custom-themes-1": "Teme Soplos preinstalate optimizate pentru XFCE",
-    "tyron-custom-themes-2": "Folosiți Soplos Theme Manager pentru schimbare ușoară",
+    "tyron-custom-themes-2-label": "Folosiți Soplos Theme Manager",
+    "tyron-custom-themes-2": "pentru schimbare ușoară",
     "tyron-custom-themes-3": "Descărcați teme adiționale de pe xfce-look.org",
     "tyron-custom-themes-4": "Variante întunecată și deschisă disponibile",
     "tyron-custom-icons-title": "Pictograme",
@@ -1363,22 +1377,32 @@ Object.assign(window.LANG_RO, {
     "tyron-custom-desktop-title": "Personalizarea desktop-ului",
     "tyron-custom-desktop-intro": "Personalizați interfața desktop-ului prin setările XFCE:",
     "tyron-custom-options-title": "Opțiuni de personalizare a interfeței",
-    "tyron-custom-options-1": "Adăugați panouri: Creați panouri personalizate dacă doriți (sus, jos, stânga sau dreapta)",
-    "tyron-custom-options-2": "Pictograme desktop: Activați/dezactivați și configurați pictogramele desktop",
-    "tyron-custom-options-3": "Soplos Docklike: Folosiți interfața dock elegantă ca implicită",
-    "tyron-custom-options-4": "Scurtături: Configurați scurtături de tastatură pentru acces rapid",
-    "tyron-custom-options-5": "Spații de lucru: Configurați desktop-uri virtuale multiple",
-    "tyron-custom-tip": "Sfat: Folosiți Soplos Theme Manager (disponibil în Soplos Welcome) pentru a comuta rapid între diferite configurări de aspect cu un singur clic.",
+    "tyron-custom-options-1-label": "Adăugați panouri:",
+    "tyron-custom-options-1": "Creați panouri personalizate dacă doriți (sus, jos, stânga sau dreapta)",
+    "tyron-custom-options-2-label": "Pictograme desktop:",
+    "tyron-custom-options-2": "Activați/dezactivați și configurați pictogramele desktop",
+    "tyron-custom-options-3-label": "Soplos Docklike:",
+    "tyron-custom-options-3": "Folosiți interfața dock elegantă ca implicită",
+    "tyron-custom-options-4-label": "Scurtături:",
+    "tyron-custom-options-4": "Configurați scurtături de tastatură pentru acces rapid",
+    "tyron-custom-options-5-label": "Spații de lucru:",
+    "tyron-custom-options-5": "Configurați desktop-uri virtuale multiple",
+    "tyron-custom-tip-label": "Sfat:",
+    "tyron-custom-tip": "Folosiți Soplos Theme Manager (disponibil în Soplos Welcome) pentru a comuta rapid între diferite configurări de aspect cu un singur clic.",
 
     // Default Applications
     "tyron-apps-title": "Aplicații implicite",
     "tyron-apps-intro": "Tyron vine cu un set selectat cu atenție de aplicații ușoare și eficiente, optimizate pentru performanță și utilizabilitate. Selecția exactă de aplicații este proiectată pentru a oferi funcționalitate esențială, menținând totodată reactivitatea sistemului.",
-    "tyron-apps-need": "Aveți nevoie de mai multe aplicații? Folosiți Soplos Welcome → fila Software pentru a accesa centre software adiționale sau răsfoiți Soplos Welcome → fila Recomandate pentru sugestii de aplicații selectate. Puteți instala orice software adițional de care aveți nevoie prin aceste interfețe convenabile.",
-    "tyron-apps-mgmt": "Gestionarea aplicațiilor: Toată instalarea și gestionarea software-ului este gestionată prin Soplos Welcome, care oferă acces la multiple managere de pachete, inclusiv APT, Flatpak și Snap, precum și centre software grafice.",
+    "tyron-apps-need-label": "Aveți nevoie de mai multe aplicații?",
+    "tyron-apps-need": "Folosiți Soplos Welcome → fila Software pentru a accesa centre software adiționale sau răsfoiți Soplos Welcome → fila Recomandate pentru sugestii de aplicații selectate. Puteți instala orice software adițional de care aveți nevoie prin aceste interfețe convenabile.",
+    "tyron-apps-mgmt-label": "Gestionarea aplicațiilor:",
+    "tyron-apps-mgmt": "Toată instalarea și gestionarea software-ului este gestionată prin Soplos Welcome, care oferă acces la multiple managere de pachete, inclusiv APT, Flatpak și Snap, precum și centre software grafice.",
 
     // Soplos Exclusive Apps
     "tyron-soplos-title": "Aplicații exclusive Soplos",
-    "tyron-soplos-intro": "Tyron include mai multe aplicații exclusive Soplos accesibile prin Soplos Welcome:",
+    "tyron-soplos-intro-pre": "Tyron include mai multe aplicații exclusive Soplos accesibile prin ",
+    "tyron-soplos-welcome-intro-label": "Soplos Welcome",
+    "tyron-soplos-intro-post": ":",
     "tyron-soplos-welcome-title": "Soplos Welcome",
     "tyron-soplos-welcome-desc": "Aplicație de bun venit care ghidează noii utilizatori prin configurarea inițială și personalizare. Caracteristicile includ instalarea software-ului, personalizarea desktop-ului, detectarea hardware-ului, instalarea driver-elor și accesul la resurse de ajutor.",
     "tyron-soplos-live-title": "Soplos Welcome Live",
@@ -1393,7 +1417,8 @@ Object.assign(window.LANG_RO, {
     "tyron-soplos-theme-desc": "Manager de teme desktop simplu și intuitiv. Creați, salvați și aplicați ușor teme desktop complete cu suport pentru stiluri desktop multiple și integrare completă XFCE.",
     "tyron-soplos-repo-title": "Soplos Repo Selector",
     "tyron-soplos-repo-desc": "Instrument de gestionare a repository-urilor pentru comutarea între surse software, găsirea celor mai rapide mirror-uri și activarea repository-urilor adiționale cu o interfață ușor de utilizat.",
-    "tyron-soplos-exclusive": "Exclusiv pentru Tyron: Soplos Docklike este proiectat special pentru XFCE și oferă o experiență dock frumoasă care îmbunătățește sistemul tradițional de panouri.",
+    "tyron-soplos-exclusive-label": "Exclusiv pentru Tyron:",
+    "tyron-soplos-exclusive": "Soplos Docklike este proiectat special pentru XFCE și oferă o experiență dock frumoasă care îmbunătățește sistemul tradițional de panouri.",
 
     // Performance Tips
     "tyron-perf-title": "Sfaturi pentru performanță",
@@ -1418,7 +1443,9 @@ Object.assign(window.LANG_RO, {
     "tyron-perf-system-2": "Ajustați swappiness pentru sistemele SSD",
     "tyron-perf-system-3": "Configurați gestionarea energiei",
     "tyron-perf-system-4": "Actualizați sistemul regulat",
-    "tyron-perf-tip": "Avansat: Accesați kernel-uri de performanță prin Soplos Welcome → fila Kernels. Kernel-urile Liquorix și XanMod pot oferi îmbunătățiri semnificative ale performanței pentru utilizarea desktop.",
+    "tyron-perf-tip-label": "Avansat:",
+    "tyron-perf-tip": "Accesați kernel-uri de performanță prin Soplos Welcome → fila Kernels. Kernel-urile Liquorix și XanMod pot oferi îmbunătățiri semnificative ale performanței pentru utilizarea desktop.",
+    "tyron-perf-commands-title": "Comenzi rapide pentru performanță",
 
     // Common Issues
     "tyron-trouble-title": "Probleme comune",
@@ -1443,7 +1470,8 @@ Object.assign(window.LANG_RO, {
     "tyron-trouble-a4-2": "Selectați \"Editați Aplicațiile\"",
     "tyron-trouble-a4-3": "Sau reporniți sesiunea: Deconectați-vă și reconectați-vă",
     "tyron-trouble-a4-4": "Pentru reîmprospătare manuală: update-desktop-database",
-    "tyron-trouble-help": "Aveți nevoie de mai mult ajutor? Verificați secțiunea de depanare din wiki sau întrebați pe forumurile comunității pentru ajutor cu hardware specific.",
+    "tyron-trouble-help-label": "Aveți nevoie de mai mult ajutor?",
+    "tyron-trouble-help": "Verificați secțiunea de depanare din wiki sau întrebați pe forumurile comunității pentru ajutor cu hardware specific.",
 
     // Footer
     "footer-privacy": "Politica de Confidențialitate",
