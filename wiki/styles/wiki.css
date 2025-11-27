@@ -1451,6 +1451,42 @@ footer .container p {
     color: var(--text-color, #333);
 }
 
+/* Subsection header: icon + orange rule (used for Screenshots, Personalización) */
+.subsection-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* control spacing explicitly on children */
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.subsection-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color, #333);
+    margin: 0; /* remove default bottom margin so spacing is controlled */
+}
+
+.subsection-header h3 i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color, #333);
+    font-size: 1.5rem;
+}
+
+.subsection-header .accent-hr {
+    height: 3px; /* match .content-section h2 border-bottom thickness (3px) */
+    width: 100%;
+    background: linear-gradient(90deg, var(--primary-color), color-mix(in srgb, var(--primary-color) 70%, black));
+    border-radius: 3px;
+    margin-top: 10px; /* space between title and rule to mimic h2 padding */
+    margin-bottom: 15px; /* space between rule and following content to match h2 margin/padding */
+}
+
 .content-section h4 {
     font-size: 1.2rem;
     font-weight: 600;
@@ -1501,6 +1537,22 @@ footer .container p {
     background-color: #d4edda;
     border-left: 4px solid #4caf50;
     color: #2e7d32;
+}
+
+/* Accent class to reuse success decoration for specific tip/info boxes */
+.info-box.accent-success {
+    /* Use Soplos primary/orange accent instead of success/green */
+    background-color: #fff4e6;
+    border-left: 4px solid var(--primary-color);
+    color: #cc5500;
+}
+
+/* Accent class to reuse warning decoration for specific tip/info boxes */
+.info-box.accent-warning {
+    /* Use Soplos secondary/yellow accent for warnings */
+    background-color: #fff3cd;
+    border-left: 4px solid var(--secondary-color);
+    color: #e65100;
 }
 
 .info-box i {
@@ -1907,6 +1959,13 @@ footer .container p {
         color: #a5d6a7;
     }
 
+    .info-box.accent-success {
+        /* Dark mode orange variant */
+        background-color: rgba(255, 153, 102, 0.15);
+        border-left-color: #ff9966;
+        color: #ffb380;
+    }
+
     .help-section {
         background-color: rgba(255, 153, 102, 0.15);
         border-left-color: #ff9966;
@@ -1973,38 +2032,59 @@ footer .container p {
 }
 
 .feature-item {
-    background: var(--bg-secondary, #f8f9fa);
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color, #007bff);
-    color: var(--text-color, #333);
+    /* Match .settings-card visuals */
+    background: #2b2b2b;
+    color: rgba(230,230,230,0.95);
+    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 18px 18px 18px 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 10px;
     min-height: 140px;
-    transition: all 0.3s ease;
 }
 
 .feature-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
-    border-left-color: #ff6b35;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
+.feature-item h3,
 .feature-item h4 {
-    color: var(--primary-color, #007bff);
-    margin-bottom: 15px;
-    display: flex;
+    margin: 0 0 8px 0;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 1.1em;
+    gap: 10px;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--light-text, #fff);
+    background: rgba(255,255,255,0.03);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.feature-item h3 i,
+.feature-item h3 img,
+.feature-item h4 i,
+.feature-item h4 img {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--primary-color, #ff7d2e);
+    background: rgba(0,0,0,0.18);
+    border-radius: 8px;
 }
 
 .feature-item p {
-    flex-grow: 1;
-    line-height: 1.6;
+    color: rgba(230,230,230,0.9);
     margin: 0;
+    line-height: 1.55;
+    font-size: 0.98rem;
 }
 
 /* Code Examples */
@@ -2049,22 +2129,64 @@ footer .container p {
     margin: 30px 0;
 }
 
+.settings-card,
 .setting-card {
-    background: var(--bg-light, #fff);
-    border: 1px solid var(--border-color, #e9ecef);
-    border-radius: 8px;
-    padding: 20px;
-    color: var(--text-color, #333);
+    background: #2b2b2b;
+    color: rgba(230,230,230,0.95);
+    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 18px 18px 18px 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+.settings-card:hover,
+.setting-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.settings-card h4,
 .setting-card h4 {
-    color: var(--primary-color, #007bff);
-    margin-bottom: 10px;
+    margin: 0 0 8px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--light-text, #fff);
+    background: rgba(255,255,255,0.03);
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
+.settings-card h4 i,
+.setting-card h4 i {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--primary-color, #ff7d2e);
+    background: rgba(0,0,0,0.18);
+    border-radius: 8px;
+}
+
+.settings-card p,
 .setting-card p {
-    color: var(--text-muted, #6c757d);
-    margin-bottom: 15px;
+    color: rgba(230,230,230,0.9);
+    margin: 0;
+    line-height: 1.55;
+    font-size: 0.98rem;
+}
+
+@media (max-width: 768px) {
+    .settings-card,
+    .setting-card { padding: 14px; }
 }
 
 /* App Categories */
