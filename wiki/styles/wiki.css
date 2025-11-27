@@ -19,11 +19,11 @@
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --transition: all 0.3s ease;
 
-    /* Wiki specific colors */
-    --bg-light: #fff;
-    --bg-secondary: #f8f9fa;
-    --text-muted: #6c757d;
-    --border-color: #e1e5e9;
+    /* Wiki specific colors - DARK THEME ONLY */
+    --bg-light: #252527;
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --text-muted: #c0c0c0;
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Reset and base styles */
@@ -410,14 +410,14 @@ nav ul>li>.menu-dropdown-toggle {
    8. BREADCRUMB NAVIGATION
    ========================= */
 .breadcrumb-container {
-    background-color: var(--bg-secondary, #f8f9fa);
-    border-bottom: 1px solid var(--border-color, #e1e5e9);
+    background-color: var(--dark-color, #252527);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 0;
     margin-bottom: 30px;
     position: sticky;
     top: 72px;
     z-index: 990;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumb {
@@ -568,14 +568,14 @@ footer .container p {
 
 /* Breadcrumb Navigation */
 .breadcrumb-container {
-    background-color: var(--bg-secondary, #f8f9fa);
-    border-bottom: 1px solid var(--border-color, #e1e5e9);
+    background-color: var(--dark-color, #252527);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 0;
     margin-bottom: 30px;
     position: sticky;
     top: 72px;
     z-index: 990;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumb {
@@ -601,7 +601,7 @@ footer .container p {
 }
 
 .breadcrumb-current {
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
     font-weight: 500;
 }
 
@@ -681,13 +681,13 @@ footer .container p {
 }
 
 .quick-access-card {
-    background: white;
+    background: var(--dark-color, #252527);
     border-radius: 15px;
     padding: 30px;
     text-align: center;
     transition: all 0.4s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .quick-access-card:hover {
@@ -707,11 +707,11 @@ footer .container p {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
 }
 
 .quick-access-card p {
-    color: var(--text-muted, #6c757d);
+    color: var(--text-color, #c0c0c0);
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -854,7 +854,7 @@ footer .container p {
 /* Recent Updates */
 .recent-updates {
     padding: 80px 0;
-    background: var(--bg-light, #f5f5f5);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .recent-updates h2 {
@@ -1357,7 +1357,7 @@ footer .container p {
 /* Wiki Content Pages */
 .wiki-content {
     padding: 60px 0;
-    background-color: var(--bg-light, #fff);
+    background-color: var(--dark-color, #252527);
 }
 
 .content-wrapper {
@@ -1373,17 +1373,17 @@ footer .container p {
     position: sticky;
     top: 100px;
     height: fit-content;
-    background: white;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .toc h3 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
     border-bottom: 2px solid var(--primary-color, #007bff);
     padding-bottom: 10px;
 }
@@ -1417,7 +1417,7 @@ footer .container p {
 
 /* Main Content */
 .main-content {
-    background: white;
+    background: var(--dark-color, #252527);
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -1436,7 +1436,7 @@ footer .container p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 25px;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
     border-bottom: 3px solid var(--primary-color, #007bff);
     padding-bottom: 10px;
     display: flex;
@@ -1448,7 +1448,7 @@ footer .container p {
     font-size: 1.4rem;
     font-weight: 600;
     margin: 30px 0 15px 0;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
 }
 
 /* Subsection header: icon + orange rule (used for Screenshots, Personalización) */
@@ -1466,7 +1466,7 @@ footer .container p {
     gap: 12px;
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
     margin: 0; /* remove default bottom margin so spacing is controlled */
 }
 
@@ -1474,7 +1474,7 @@ footer .container p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
     font-size: 1.5rem;
 }
 
@@ -1491,13 +1491,13 @@ footer .container p {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 25px 0 10px 0;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
 }
 
 .content-section p {
     line-height: 1.7;
     margin-bottom: 15px;
-    color: var(--text-color, #333);
+    color: var(--text-color, #c0c0c0);
 }
 
 .content-section ul,
@@ -1522,37 +1522,37 @@ footer .container p {
 }
 
 .info-box.info {
-    background-color: #fff4e6;
+    background-color: rgba(255, 153, 102, 0.1);
     border-left: 4px solid #ff9966;
-    color: #cc5500;
+    color: #ff9966;
 }
 
 .info-box.warning {
-    background-color: #fff3cd;
+    background-color: rgba(255, 152, 0, 0.1);
     border-left: 4px solid #ff9800;
-    color: #e65100;
+    color: #ff9800;
 }
 
 .info-box.success {
-    background-color: #d4edda;
+    background-color: rgba(76, 175, 80, 0.1);
     border-left: 4px solid #4caf50;
-    color: #2e7d32;
+    color: #4caf50;
 }
 
 /* Accent class to reuse success decoration for specific tip/info boxes */
 .info-box.accent-success {
     /* Use Soplos primary/orange accent instead of success/green */
-    background-color: #fff4e6;
+    background-color: rgba(255, 125, 46, 0.1);
     border-left: 4px solid var(--primary-color);
-    color: #cc5500;
+    color: var(--primary-color);
 }
 
 /* Accent class to reuse warning decoration for specific tip/info boxes */
 .info-box.accent-warning {
     /* Use Soplos secondary/yellow accent for warnings */
-    background-color: #fff3cd;
+    background-color: rgba(254, 196, 49, 0.1);
     border-left: 4px solid var(--secondary-color);
-    color: #e65100;
+    color: var(--secondary-color);
 }
 
 .info-box i {
@@ -1569,11 +1569,11 @@ footer .container p {
 }
 
 .requirement-card {
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 25px;
-    border: 2px solid var(--border-color, #e9ecef);
-    color: var(--text-color, #333);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color, #c0c0c0);
 }
 
 .requirement-card h3 {
@@ -1592,7 +1592,7 @@ footer .container p {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
 }
 
 .req-section ul {
@@ -1609,8 +1609,8 @@ footer .container p {
 }
 
 .download-card {
-    background: white;
-    border: 2px solid #e9ecef;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 25px;
     text-align: center;
@@ -1640,7 +1640,7 @@ footer .container p {
 
 .file-size {
     font-weight: 600;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
 }
 
 .checksum {
@@ -1659,7 +1659,7 @@ footer .container p {
 }
 
 .tool-card {
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     padding: 20px;
     border: 1px solid var(--border-color, #e9ecef);
@@ -1755,6 +1755,12 @@ footer .container p {
     flex-shrink: 0;
 }
 
+.step-number h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--light-text, #ffffff);
+}
+
 .step-content h4 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -1772,8 +1778,8 @@ footer .container p {
 }
 
 .boot-step {
-    background: white;
-    border: 1px solid #e9ecef;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 25px;
     margin-bottom: 20px;
@@ -1807,7 +1813,7 @@ footer .container p {
 }
 
 .trouble-card {
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-color, #e9ecef);
     border-radius: 8px;
     padding: 20px;
@@ -1833,7 +1839,7 @@ footer .container p {
 
 /* Help Section */
 .help-section {
-    background: #fff4e6;
+    background: rgba(255, 125, 46, 0.1);
     border-radius: 8px;
     padding: 25px;
     margin-top: 30px;
@@ -1912,111 +1918,7 @@ footer .container p {
     }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-light: #1a1a1a;
-        --bg-secondary: #2d2d2d;
-        --text-color: #ffffff;
-        --text-muted: #a0a0a0;
-        --border-color: #404040;
-    }
 
-    .quick-access-card,
-    .category-card,
-    .toc,
-    .main-content,
-    .requirement-card,
-    .download-card,
-    .tool-card,
-    .boot-step,
-    .trouble-card {
-        background: #2d2d2d;
-        color: var(--text-color);
-        border-color: #404040;
-    }
-
-    .breadcrumb-container {
-        background-color: #2d2d2d;
-        border-bottom-color: #404040;
-    }
-
-    .info-box.info {
-        background-color: rgba(255, 153, 102, 0.15);
-        border-left-color: #ff9966;
-        color: #ffb380;
-    }
-
-    .info-box.warning {
-        background-color: rgba(255, 152, 0, 0.2);
-        border-left-color: #ff9800;
-        color: #ffcc02;
-    }
-
-    .info-box.success {
-        background-color: rgba(76, 175, 80, 0.2);
-        border-left-color: #4caf50;
-        color: #a5d6a7;
-    }
-
-    .info-box.accent-success {
-        /* Dark mode orange variant */
-        background-color: rgba(255, 153, 102, 0.15);
-        border-left-color: #ff9966;
-        color: #ffb380;
-    }
-
-    .help-section {
-        background-color: rgba(255, 153, 102, 0.15);
-        border-left-color: #ff9966;
-    }
-
-    /* New components dark mode */
-    .feature-item,
-    .app-category,
-    .variant-section,
-    .security-item {
-        background: #2d2d2d;
-        color: var(--text-color);
-    }
-
-    .setting-card,
-    .app-item,
-    .next-step-card {
-        background: #2d2d2d;
-        color: var(--text-color);
-        border-color: #404040;
-    }
-
-    .faq-question {
-        background: #2d2d2d;
-        border-bottom-color: #404040;
-        color: var(--text-color);
-    }
-
-    .faq-question:hover {
-        background: #404040;
-    }
-
-    .faq-item {
-        background: #2d2d2d;
-        border-color: #404040;
-    }
-
-    .faq-answer {
-        background: #2d2d2d;
-    }
-
-    .app-item code,
-    .faq-answer code {
-        background: #404040;
-        color: var(--text-color);
-    }
-
-    .category-card a:hover {
-        background: rgba(0, 123, 255, 0.15);
-    }
-}
 
 /* Additional styles for new components */
 
@@ -2196,10 +2098,10 @@ footer .container p {
 
 .app-category {
     margin-bottom: 30px;
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     padding: 20px;
-    color: var(--text-color, #333);
+    color: var(--text-color, #c0c0c0);
 }
 
 .app-category h4 {
@@ -2217,23 +2119,23 @@ footer .container p {
 }
 
 .app-item {
-    background: var(--bg-light, #fff);
+    background: rgba(255, 255, 255, 0.05);
     padding: 15px;
     border-radius: 6px;
     border-left: 3px solid var(--primary-color, #007bff);
-    color: var(--text-color, #333);
+    color: var(--text-color, #c0c0c0);
 }
 
 .app-item strong {
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
 }
 
 .app-item code {
-    background: var(--bg-secondary, #e9ecef);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 0.85rem;
-    color: var(--text-muted, #495057);
+    color: var(--primary-color);
 }
 
 /* Desktop Variants */
@@ -2242,11 +2144,11 @@ footer .container p {
 }
 
 .variant-section {
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
-    color: var(--text-color, #333);
+    color: var(--text-color, #c0c0c0);
 }
 
 .variant-section h3 {
@@ -2276,12 +2178,12 @@ footer .container p {
 }
 
 .security-item {
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
     border-left: 4px solid #28a745;
-    color: var(--text-color, #333);
+    color: var(--text-color, #c0c0c0);
 }
 
 .security-item h4 {
@@ -2301,13 +2203,13 @@ footer .container p {
 }
 
 .next-step-card {
-    background: var(--bg-light, #fff);
-    border: 2px solid var(--border-color, #e9ecef);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 25px;
     text-align: center;
     transition: all 0.3s ease;
-    color: var(--text-color, #333);
+    color: var(--text-color, #c0c0c0);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2339,13 +2241,13 @@ footer .container p {
 
 /* FAQ Styles */
 .faq-item {
-    border: 1px solid #e9ecef;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     margin-bottom: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
-    background: var(--bg-light, #fff);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .faq-item:hover {
@@ -2359,7 +2261,7 @@ footer .container p {
 }
 
 .faq-question {
-    background: var(--bg-light, #fff);
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     margin: 0;
     cursor: pointer;
@@ -2369,7 +2271,7 @@ footer .container p {
     align-items: center;
     justify-content: space-between;
     font-weight: 600;
-    color: var(--text-color, #333);
+    color: var(--light-text, #ffffff);
     border: none;
     border-bottom: 1px solid transparent;
 }
@@ -2415,8 +2317,8 @@ footer .container p {
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s ease;
-    background: var(--bg-light, #fff);
-    color: var(--text-color, #333);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-color, #c0c0c0);
 }
 
 .faq-item.active .faq-answer {
@@ -2438,7 +2340,7 @@ footer .container p {
 }
 
 .faq-answer code {
-    background: var(--bg-secondary, #f8f9fa);
+    background: rgba(255, 255, 255, 0.05);
     padding: 2px 6px;
     border-radius: 4px;
     font-family: 'Courier New', monospace;
@@ -2488,11 +2390,11 @@ footer .container p {
 }
 
 .edition-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border-color, #e1e5e9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
@@ -2510,8 +2412,8 @@ footer .container p {
     margin-top: 0;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--bg-secondary, #f8f9fa);
-    color: var(--text-color, #333);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--light-text, #ffffff);
 }
 
 .edition-card ul {
@@ -2522,7 +2424,7 @@ footer .container p {
 
 .edition-card li {
     margin-bottom: 12px;
-    color: var(--text-muted, #6c757d);
+    color: var(--text-color, #c0c0c0);
 }
 
 .edition-card strong {
@@ -2728,4 +2630,6 @@ pre, code {
     display: block;
   }
 }
+
+
 
