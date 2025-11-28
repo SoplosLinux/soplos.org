@@ -1801,6 +1801,98 @@ Object.assign(window.LANG_ES, {
     "boro-trouble-a4-4-code": "update-desktop-database",
     "boro-trouble-help-label": "¿Necesitas más ayuda?",
     "boro-trouble-help": "Revisa la sección de solución de problemas en la wiki o pregunta en los foros de la comunidad para ayuda con hardware específico.",
+    // Customization Page (/wiki/customization/)
+    "custom-breadcrumb-home": "Inicio",
+    "custom-breadcrumb-wiki": "Wiki",
+    "custom-breadcrumb": "Personalización",
+    "custom-hero-title": "Personalización",
+    "custom-hero-desc": "Cómo personalizar la apariencia y el diseño en Soplos Tyron (XFCE), Tyson (Plasma) y Boro (GNOME).",
+    
+    // TOC
+    "custom-toc-title": "Contenido",
+    "custom-toc-1": "Resumen",
+    "custom-toc-2": "Temas Globales",
+    "custom-toc-3": "Iconos y Cursores",
+    "custom-toc-4": "Fuentes y DPI",
+    "custom-toc-5": "Fondos de Pantalla y Bloqueo",
+    "custom-toc-6": "Paneles, Docklike y Widgets",
+    "custom-toc-7": "Atajos y Áreas de Trabajo",
+    "custom-toc-8": "Soplos Theme Manager",
+    "custom-toc-9": "Solución de Problemas",
+
+    // Overview
+    "custom-overview-title": "Resumen",
+    "custom-overview-text": "La personalización en Soplos se centra en ofrecer un aspecto coherente manteniendo disponibles las opciones de rendimiento. Plasma (Tyson) proporciona características visuales profundas; XFCE (Tyron) se centra en la flexibilidad ligera; GNOME (Boro) ofrece un flujo de trabajo pulido y moderno. Esta página documenta tareas de personalización comunes y mejores prácticas compartidas entre todas las variantes.",
+
+    // Global Themes
+    "custom-themes-title": "Temas Globales",
+    "custom-themes-intro": "Los temas globales cambian colores, decoraciones de ventanas, estilos de plasmoides/paneles y a veces iconos. Usa estas herramientas:",
+    "custom-themes-1": "<strong>Tyson (Plasma):</strong> Configuración del Sistema → Tema Global / Aspecto.",
+    "custom-themes-2": "<strong>Tyron (XFCE):</strong> Administrador de Configuración → Apariencia y Gestor de Ventanas.",
+    "custom-themes-3": "<strong>Boro (GNOME):</strong> Configuración → Apariencia (o Retoques de GNOME para temas avanzados).",
+    "custom-themes-rec-label": "Recomendaciones:",
+    "custom-themes-rec-1": "Usa un solo tema global para colores consistentes en todas las aplicaciones.",
+    "custom-themes-rec-2": "Prefiere el modo oscuro para uso con poca luz; verifica el contraste para las entradas de diálogo.",
+    "custom-themes-rec-3": "Prueba el rendimiento después de habilitar efectos pesados y desactívalos si es necesario.",
+
+    // Icons & Cursors
+    "custom-icons-title": "Iconos y Cursores",
+    "custom-icons-intro": "Los iconos afectan los menús del sistema, administradores de archivos y barras de herramientas de aplicaciones. Soplos viene con un conjunto de iconos consistente, pero puedes cambiar o instalar nuevos temas de iconos:",
+    "custom-icons-1": "<strong>Instalar nuevos iconos:</strong> Coloca las carpetas de iconos en <code>/usr/share/icons</code> (sistema) o <code>~/.icons</code> (usuario).",
+    "custom-icons-2": "<strong>Cambiar iconos:</strong> Tyson: Configuración del Sistema → Iconos. Tyron: Apariencia → Iconos. Boro: Retoques de GNOME → Apariencia.",
+    "custom-icons-3": "<strong>Cursores:</strong> Cambia los temas de cursor en los mismos diálogos; cierra sesión/inicia sesión para aplicar completamente en algunos entornos.",
+
+    // Fonts & DPI
+    "custom-fonts-title": "Fuentes y DPI",
+    "custom-fonts-intro": "Las fuentes y el escalado son importantes para la legibilidad, especialmente en pantallas HiDPI.",
+    "custom-fonts-1": "<strong>Ajustar tamaño de fuente:</strong> Tyson: Configuración del Sistema → Fuentes. Tyron: Apariencia → Fuentes. Boro: Retoques de GNOME → Fuentes.",
+    "custom-fonts-2": "<strong>Escalado / HiDPI:</strong> En Plasma usa Configuración de Pantalla → Escala; en XFCE ajusta DPI o usa escalado fraccionario si es compatible.",
+    "custom-fonts-3": "<strong>Hinting y Anti-aliasing:</strong> Habilita hinting de subpíxeles y configura niveles de hinting para mejor nitidez.",
+
+    // Wallpapers
+    "custom-wall-title": "Fondos de Pantalla y Bloqueo",
+    "custom-wall-intro": "Los fondos de pantalla se pueden configurar por actividad (Plasma) o por escritorio; la configuración de la pantalla de bloqueo es separada en ambos entornos.",
+    "custom-wall-1": "<strong>Tyson (Plasma):</strong> Fondo de pantalla y Pantalla de Bloqueo configurables desde Configuración del Sistema; soporta presentación de diapositivas y fondos por actividad.",
+    "custom-wall-2": "<strong>Tyron (XFCE):</strong> Escritorio → Fondo para fondos de pantalla; usa Light Locker o xfce4-screensaver para configuración de pantalla de bloqueo.",
+    "custom-wall-3": "<strong>Boro (GNOME):</strong> Configuración → Apariencia (Fondo). La pantalla de bloqueo usa el mismo fondo por defecto (desenfocado).",
+    "custom-wall-4": "<strong>Mejor práctica:</strong> Mantén los fondos de pantalla en <code>~/Pictures/Wallpapers</code> o <code>/usr/share/backgrounds</code> y referéncialos desde el diálogo de configuración para evitar enlaces rotos.",
+
+    // Panels
+    "custom-panels-title": "Paneles, Docklike y Widgets",
+    "custom-panels-intro": "Soplos proporciona Docklike para XFCE; Plasma usa widgets nativos (plasmoides). Consejos para configurar paneles y widgets:",
+    "custom-panels-1": "<strong>Soplos Docklike (Tyron):</strong> Usa Soplos Docklike para emular un dock; configura a través de la aplicación o el plugin del Panel XFCE.",
+    "custom-panels-2": "<strong>Paneles Plasma (Tyson):</strong> Clic derecho en el panel → Editar Panel para añadir widgets, elementos de la bandeja del sistema y ajustar alineación.",
+    "custom-panels-3": "<strong>Boro (GNOME):</strong> Usa la configuración de <strong>Dash to Panel</strong> (clic derecho en el panel) para configurar la barra de tareas. Usa la configuración de <strong>ArcMenu</strong> (clic derecho en el icono del menú) para personalizar el lanzador de aplicaciones.",
+    "custom-panels-4": "<strong>Widgets/Plasmoides:</strong> Añade fecha, monitor del sistema o lanzadores de aplicaciones; mantén solo lo que usas para evitar desorden.",
+    "custom-panels-5": "<strong>Guarda tu diseño:</strong> Plasma soporta Actividades; en XFCE exporta la configuración del panel o crea una copia de seguridad de <code>~/.config/xfce4</code>.",
+
+    // Shortcuts
+    "custom-shortcuts-title": "Atajos y Áreas de Trabajo",
+    "custom-shortcuts-intro": "Los atajos de teclado y escritorios virtuales aumentan la productividad.",
+    "custom-shortcuts-1": "<strong>Configurar atajos:</strong> Tyson: Configuración del Sistema → Atajos. Tyron: Configuración → Teclado → Atajos de Aplicación. Boro: Configuración → Teclado → Ver y Personalizar Atajos.",
+    "custom-shortcuts-2": "<strong>Áreas de Trabajo:</strong> Configura número de áreas de trabajo y atajos de cambio; usa actividades (Plasma) o cambiador de áreas de trabajo (XFCE).",
+
+    // Soplos Theme Manager
+    "custom-stm-title": "Soplos Theme Manager",
+    "custom-stm-note": "<strong>Nota:</strong> <em>Soplos Theme Manager</em> es solo para XFCE y está destinado a <strong>Tyron (XFCE)</strong>. No aplica temas globales completos para Plasma; en <strong>Tyson (Plasma)</strong> usa <code>Configuración del Sistema → Tema Global</code> o las herramientas nativas de Plasma.",
+    "custom-stm-intro": "Si tienes Soplos Theme Manager instalado en Tyron, puntos clave:",
+    "custom-stm-1": "Abre <strong>Soplos Theme Manager</strong> desde Soplos Welcome o el menú de aplicaciones (Tyron).",
+    "custom-stm-2": "Aplica conjuntos de temas completos (fondo, iconos, tema GTK) en una sola acción para XFCE.",
+    "custom-stm-3": "Si algo no se aplica correctamente, revierte el tema o cierra/inicia sesión para forzar la recarga de componentes.",
+
+    // Troubleshooting
+    "custom-trouble-title": "Solución de Problemas",
+    "custom-trouble-intro": "Problemas comunes y soluciones:",
+    "custom-trouble-1": "Si los iconos o cursores no se actualizan, limpia la caché de iconos: <code>sudo gtk-update-icon-cache /usr/share/icons/TU_TEMA</code> y vuelve a iniciar sesión.",
+    "custom-trouble-2": "Si las fuentes se ven borrosas, ajusta DPI o desactiva el escalado fraccionario; reinicia la sesión después de los cambios.",
+    "custom-trouble-3": "Restaurar panel XFCE: copia de seguridad de config desde <code>~/.config/xfce4/panel</code> o restablece si está roto.",
+    "custom-trouble-4": "Para fallos visuales en Plasma, prueba <code>plasmashell --replace &amp;</code> y verifica la configuración del compositor.",
+    "custom-trouble-5": "Para problemas de extensiones GNOME (Boro), reinicia el shell (Alt+F2, escribe 'r', Enter) o desactiva extensiones desde la aplicación Extensiones.",
+    "custom-trouble-tip-label": "Consejo:",
+    "custom-trouble-tip": "Prueba los cambios de tema en un usuario local primero antes de aplicar en todo el sistema, para que puedas revertir fácilmente sin afectar a otros usuarios.",
+    "custom-next-label": "Siguiente:",
+    "custom-next": "Después de personalizar, visita la <a href=\"../tyron/\">guía Tyron</a>, <a href=\"../tyson/\">guía Tyson</a> o <a href=\"../boro/\">guía Boro</a> para consejos y capturas de pantalla específicos del escritorio.",
+
     // Footer
     "footer-privacy": "Política de Privacidad",
     "footer-terms": "Términos de Uso"

@@ -1801,6 +1801,98 @@ Object.assign(window.LANG_EN, {
     "boro-trouble-a4-4-code": "update-desktop-database",
     "boro-trouble-help-label": "Need more help?",
     "boro-trouble-help": "Check the troubleshooting section in the wiki or\n ask on the community forums for help with specific hardware.",
+    // Customization Page (/wiki/customization/)
+    "custom-breadcrumb-home": "Home",
+    "custom-breadcrumb-wiki": "Wiki",
+    "custom-breadcrumb": "Customization",
+    "custom-hero-title": "Customization",
+    "custom-hero-desc": "How to customize appearance and layout on Soplos Tyron (XFCE), Tyson (Plasma) and Boro (GNOME).",
+    
+    // TOC
+    "custom-toc-title": "Contents",
+    "custom-toc-1": "Overview",
+    "custom-toc-2": "Global Themes",
+    "custom-toc-3": "Icons & Cursors",
+    "custom-toc-4": "Fonts & DPI",
+    "custom-toc-5": "Wallpapers & Lock Screen",
+    "custom-toc-6": "Panels, Docklike & Widgets",
+    "custom-toc-7": "Shortcuts & Workspaces",
+    "custom-toc-8": "Soplos Theme Manager",
+    "custom-toc-9": "Troubleshooting",
+
+    // Overview
+    "custom-overview-title": "Overview",
+    "custom-overview-text": "Customization in Soplos focuses on delivering a cohesive look while keeping performance options available. Plasma (Tyson) provides deep visual features; XFCE (Tyron) focuses on lightweight flexibility; GNOME (Boro) offers a polished, modern workflow. This page documents common customization tasks and best practices shared across all variants.",
+
+    // Global Themes
+    "custom-themes-title": "Global Themes",
+    "custom-themes-intro": "Global themes change colors, window decorations, plasmoids/panel styles and sometimes icons. Use these tools:",
+    "custom-themes-1": "<strong>Tyson (Plasma):</strong> System Settings → Global Theme / Appearance.",
+    "custom-themes-2": "<strong>Tyron (XFCE):</strong> Settings Manager → Appearance and Window Manager.",
+    "custom-themes-3": "<strong>Boro (GNOME):</strong> Settings → Appearance (or GNOME Tweaks for advanced themes).",
+    "custom-themes-rec-label": "Recommendations:",
+    "custom-themes-rec-1": "Use a single global theme for consistent colors across apps.",
+    "custom-themes-rec-2": "Prefer dark mode for low-light use; check contrast for dialog inputs.",
+    "custom-themes-rec-3": "Test performance after enabling heavy effects and disable if necessary.",
+
+    // Icons & Cursors
+    "custom-icons-title": "Icons & Cursors",
+    "custom-icons-intro": "Icons affect system menus, file managers and application toolbars. Soplos ships with a consistent icon set, but you can switch or install new icon themes:",
+    "custom-icons-1": "<strong>Install new icons:</strong> Place icon folders in <code>/usr/share/icons</code> (system) or <code>~/.icons</code> (user).",
+    "custom-icons-2": "<strong>Change icons:</strong> Tyson: System Settings → Icons. Tyron: Appearance → Icons. Boro: GNOME Tweaks → Appearance.",
+    "custom-icons-3": "<strong>Cursors:</strong> Change cursor themes in the same dialogs; logout/login to fully apply in some environments.",
+
+    // Fonts & DPI
+    "custom-fonts-title": "Fonts & DPI",
+    "custom-fonts-intro": "Fonts and scaling are important for readability, especially on HiDPI displays.",
+    "custom-fonts-1": "<strong>Adjust font size:</strong> Tyson: System Settings → Fonts. Tyron: Appearance → Fonts. Boro: GNOME Tweaks → Fonts.",
+    "custom-fonts-2": "<strong>Scaling / HiDPI:</strong> In Plasma use Display Configuration → Scale; in XFCE adjust DPI or use fractional scaling if supported.",
+    "custom-fonts-3": "<strong>Hinting & Anti-aliasing:</strong> Enable subpixel hinting and configure hinting levels for best sharpness.",
+
+    // Wallpapers
+    "custom-wall-title": "Wallpapers & Lock Screen",
+    "custom-wall-intro": "Wallpapers can be set per-activity (Plasma) or per-desktop; lock screen settings are separate in both environments.",
+    "custom-wall-1": "<strong>Tyson (Plasma):</strong> Wallpaper and Lock Screen configurable from System Settings; supports slideshow and per-activity wallpapers.",
+    "custom-wall-2": "<strong>Tyron (XFCE):</strong> Desktop → Background for wallpapers; use Light Locker or xfce4-screensaver for lock screen settings.",
+    "custom-wall-3": "<strong>Boro (GNOME):</strong> Settings → Appearance (Background). Lock screen uses the same background by default (blurred).",
+    "custom-wall-4": "<strong>Best practice:</strong> Keep wallpapers in <code>~/Pictures/Wallpapers</code> or <code>/usr/share/backgrounds</code> and reference them from the settings dialog to avoid broken links.",
+
+    // Panels
+    "custom-panels-title": "Panels, Docklike & Widgets",
+    "custom-panels-intro": "Soplos provides Docklike for XFCE; Plasma uses native widgets (plasmoids). Tips to configure panels and widgets:",
+    "custom-panels-1": "<strong>Soplos Docklike (Tyron):</strong> Use Soplos Docklike to emulate a dock; configure via the app or XFCE Panel plugin.",
+    "custom-panels-2": "<strong>Plasma panels (Tyson):</strong> Right-click the panel → Edit Panel to add widgets, system tray items and adjust alignment.",
+    "custom-panels-3": "<strong>Boro (GNOME):</strong> Use <strong>Dash to Panel</strong> settings (right-click panel) to configure the taskbar. Use <strong>ArcMenu</strong> settings (right-click menu icon) to customize the app launcher.",
+    "custom-panels-4": "<strong>Widgets/Plasmoids:</strong> Add date, system monitor or application launchers; keep only what you use to avoid clutter.",
+    "custom-panels-5": "<strong>Save your layout:</strong> Plasma supports Activities; in XFCE export panel config or create a backup of <code>~/.config/xfce4</code>.",
+
+    // Shortcuts
+    "custom-shortcuts-title": "Shortcuts & Workspaces",
+    "custom-shortcuts-intro": "Keyboard shortcuts and virtual desktops boost productivity.",
+    "custom-shortcuts-1": "<strong>Configure shortcuts:</strong> Tyson: System Settings → Shortcuts. Tyron: Settings → Keyboard → Application Shortcuts. Boro: Settings → Keyboard → View and Customize Shortcuts.",
+    "custom-shortcuts-2": "<strong>Workspaces:</strong> Configure number of workspaces and switcher shortcuts; use activities (Plasma) or workspace switcher (XFCE).",
+
+    // Soplos Theme Manager
+    "custom-stm-title": "Soplos Theme Manager",
+    "custom-stm-note": "<strong>Note:</strong> <em>Soplos Theme Manager</em> is XFCE-only and intended for <strong>Tyron (XFCE)</strong>. It does not apply full global themes for Plasma; on <strong>Tyson (Plasma)</strong> use <code>System Settings → Global Theme</code> or the native Plasma tools.",
+    "custom-stm-intro": "If you have Soplos Theme Manager installed on Tyron, key points:",
+    "custom-stm-1": "Open <strong>Soplos Theme Manager</strong> from Soplos Welcome or the applications menu (Tyron).",
+    "custom-stm-2": "Apply complete theme sets (wallpaper, icons, GTK theme) in a single action for XFCE.",
+    "custom-stm-3": "If something does not apply correctly, revert the theme or log out/in to force components to reload.",
+
+    // Troubleshooting
+    "custom-trouble-title": "Troubleshooting",
+    "custom-trouble-intro": "Common issues and fixes:",
+    "custom-trouble-1": "If icons or cursors don't update, clear icon cache: <code>sudo gtk-update-icon-cache /usr/share/icons/YOUR_THEME</code> and relogin.",
+    "custom-trouble-2": "If fonts look blurry, adjust DPI or disable fractional scaling; restart session after changes.",
+    "custom-trouble-3": "Restore XFCE panel: backup config from <code>~/.config/xfce4/panel</code> or reset if broken.",
+    "custom-trouble-4": "For Plasma visual glitches, try <code>plasmashell --replace &amp;</code> and check compositor settings.",
+    "custom-trouble-5": "For GNOME (Boro) extensions issues, restart the shell (Alt+F2, type 'r', Enter) or disable extensions from the Extensions app.",
+    "custom-trouble-tip-label": "Tip:",
+    "custom-trouble-tip": "Test theme changes on a local user first before applying system-wide, so you can easily revert without affecting other users.",
+    "custom-next-label": "Next:",
+    "custom-next": "After customizing, visit <a href=\"../tyron/\">Tyron guide</a>, <a href=\"../tyson/\">Tyson guide</a> or <a href=\"../boro/\">Boro guide</a> for desktop-specific tips and screenshots.",
+
     // Footer
     "footer-privacy": "Privacy Policy",
     "footer-terms": "Terms of Use"
