@@ -93,11 +93,11 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../"><i class="fas fa-home"></i> Home</a>
+                <a href="../../"><i class="fas fa-home"></i> <span id="boro-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <a href="../">Wiki</a>
+                <a href="../"><span id="boro-breadcrumb-wiki">Wiki</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Boro (GNOME) Guide</span>
+                <span class="breadcrumb-current" id="boro-breadcrumb">Boro (GNOME) Guide</span>
             </nav>
         </div>
     </div>
@@ -108,8 +108,8 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><i class="fas fa-desktop"></i> Soplos Boro (GNOME) Guide</h1>
-                        <p>Complete guide for the modern and elegant GNOME desktop environment</p>
+                        <h1><i class="fas fa-desktop"></i> <span id="boro-hero-title">Soplos Boro (GNOME) Guide</span></h1>
+                        <p id="boro-hero-desc">Complete guide for the modern and elegant GNOME desktop environment</p>
                     </div>
                 </div>
             </section>
@@ -121,15 +121,15 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="boro-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#overview">Overview</a></li>
-                            <li><a href="#interface">Interface Tour</a></li>
-                            <li><a href="#customization">Customization</a></li>
-                            <li><a href="#applications">Default Applications</a></li>
-                            <li><a href="#soplos-apps">Soplos Exclusive Apps</a></li>
-                            <li><a href="#performance">Performance Tips</a></li>
-                            <li><a href="#troubleshooting">Common Issues</a></li>
+                            <li><a href="#overview" id="boro-toc-1">Overview</a></li>
+                            <li><a href="#interface" id="boro-toc-2">Interface Tour</a></li>
+                            <li><a href="#customization" id="boro-toc-3">Customization</a></li>
+                            <li><a href="#applications" id="boro-toc-4">Default Applications</a></li>
+                            <li><a href="#soplos-apps" id="boro-toc-5">Soplos Exclusive Applications</a></li>
+                            <li><a href="#performance" id="boro-toc-6">Performance Tips</a></li>
+                            <li><a href="#troubleshooting" id="boro-toc-7">Common Issues</a></li>
                         </ul>
                     </aside>
 
@@ -137,48 +137,38 @@
                     <article class="main-content">
                         <!-- Overview -->
                         <section id="overview" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <h2><i class="fas fa-info-circle"></i> <span id="boro-overview-title">Overview</span></h2>
 
-                            <p>Soplos Boro is the GNOME edition of Soplos Linux, featuring the <strong>GNOME 49
-                                    desktop environment</strong>. Like Tyron and Tyson, it is based on <strong>Debian
-                                    Testing</strong>, offering a perfect balance between stability and updated software.
+                            <p><span id="boro-overview-intro-pre">Soplos Boro is the GNOME edition of Soplos Linux, featuring the </span><strong id="boro-overview-gnome-label">GNOME 49
+                                    desktop environment</strong><span id="boro-overview-intro-mid">. Like Tyron and Tyson, it is based on </span><strong id="boro-overview-debian-label">Debian
+                                    Testing</strong><span id="boro-overview-intro-post">, offering a perfect balance between stability and updated software.</span>
                             </p>
 
                             <div class="feature-grid">
-
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-paint-brush"></i>
-                                    </div>
-                                    <h3>Visually Stunning</h3>
-                                    <p>Includes an exclusive Soplos Linux customization package and a carefully defined
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-paint-brush"></i> <span id="boro-feat-visual-title">Visually Stunning</span></h3>
+                                    <p id="boro-feat-visual-desc">Includes an exclusive Soplos Linux customization package and a carefully defined
                                         selection of GNOME shells to make it visually attractive out of the box.</p>
                                 </div>
 
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-sliders-h"></i>
-                                    </div>
-                                    <h3>Highly Customizable</h3>
-                                    <p>GNOME's modern design allows extensive customization through extensions and
-                                        settings.</p>
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-sliders-h"></i> <span id="boro-feat-custom-title">Highly Customizable</span></h3>
+                                    <p id="boro-feat-custom-desc">GNOME's modern design allows extensive customization
+                                        without sacrificing
+                                        stability or performance.</p>
                                 </div>
 
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-heart"></i>
-                                    </div>
-                                    <h3>User Friendly</h3>
-                                    <p>Familiar interface design that's easy to use for both Linux newcomers and
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-heart"></i> <span id="boro-feat-friendly-title">User Friendly</span></h3>
+                                    <p id="boro-feat-friendly-desc">Familiar interface design that's easy to use for
+                                        both Linux newcomers and
                                         experienced users.</p>
                                 </div>
 
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-battery-full"></i>
-                                    </div>
-                                    <h3>Battery Efficient</h3>
-                                    <p>Excellent for laptops with longer battery life thanks to optimized power
+                                <div class="feature-item">
+                                    <h3><i class="fas fa-battery-full"></i> <span id="boro-feat-battery-title">Battery Efficient</span></h3>
+                                    <p id="boro-feat-battery-desc">Excellent for laptops with longer battery life
+                                        thanks to optimized power
                                         management.</p>
                                 </div>
                             </div>
@@ -186,42 +176,42 @@
                             <div class="info-box info">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
-                                    <strong>Perfect for:</strong> Older computers, laptops, users who prefer snappy
+                                    <strong id="boro-overview-info-label">Perfect for:</strong> <span id="boro-overview-info">Older computers, laptops, users who prefer snappy
                                     performance, minimalist setups, and anyone who values efficiency over visual
-                                    effects.
+                                    effects.</span>
                                 </div>
                             </div>
                         </section>
 
                         <!-- Interface Tour -->
                         <section id="interface" class="content-section">
-                            <h2><i class="fas fa-eye"></i> Interface Tour</h2>
+                            <h2><i class="fas fa-eye"></i> <span id="boro-interface-title">Interface Tour</span></h2>
 
-                            <h3>Desktop Experience</h3>
-                            <p>Boro offers a polished GNOME 49 experience enhanced by Soplos Linux:</p>
+                            <h3 id="boro-interface-desktop-title">Desktop Experience</h3>
+                            <p id="boro-interface-desktop-intro">Boro offers a polished GNOME 49 experience enhanced by Soplos Linux:</p>
 
                             <div class="settings-grid">
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-desktop"></i> GNOME 49</h4>
-                                    <p>The latest version of the GNOME desktop, providing a modern, distraction-free
+                                    <h4><i class="fas fa-desktop"></i> <span id="boro-interface-gnome-title">GNOME 49</span></h4>
+                                    <p id="boro-interface-gnome-desc">The latest version of the GNOME desktop, providing a modern, distraction-free
                                         workspace.</p>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-th"></i> Activities Overview</h4>
-                                    <p>Press the Super key to view open windows, workspaces, and the application grid
+                                    <h4><i class="fas fa-th"></i> <span id="boro-interface-activities-title">Activities Overview</span></h4>
+                                    <p id="boro-interface-activities-desc">Press the Super key to view open windows, workspaces, and the application grid
                                         all in one place. Search for apps, files, and settings instantly.</p>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-folder"></i> Files (Nautilus)</h4>
-                                    <p>The default file manager designed to be simple and elegant, with support for
+                                    <h4><i class="fas fa-folder"></i> <span id="boro-interface-files-title">Files (Nautilus)</span></h4>
+                                    <p id="boro-interface-files-desc">The default file manager designed to be simple and elegant, with support for
                                         tabs, quick search, and seamless integration with cloud services.</p>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-magic"></i> Exclusive Customization</h4>
-                                    <p>Comes with a specific selection of GNOME shells and themes designed to provide a
+                                    <h4><i class="fas fa-magic"></i> <span id="boro-interface-exclusive-title">Exclusive Customization</span></h4>
+                                    <p id="boro-interface-exclusive-desc">Comes with a specific selection of GNOME shells and themes designed to provide a
                                         unique and attractive look and feel, exclusive to Soplos Linux.</p>
                                 </div>
                             </div>
@@ -229,183 +219,146 @@
                             <div class="info-box tip">
                                 <i class="fas fa-magic"></i>
                                 <div>
-                                    <strong>Customizable Interface:</strong> Boro uses <strong>Dash to Panel</strong>
-                                    and <strong>ArcMenu</strong> for a familiar and efficient workflow. You can easily
-                                    customize them using GNOME Extensions and Tweaks.
+                                    <strong id="boro-interface-custom-info-label">Customizable Interface:</strong> <span id="boro-interface-custom-info-pre">Boro uses </span><strong id="boro-interface-dash-label">Dash to Panel</strong>
+                                    <span id="boro-interface-custom-info-mid"> and </span><strong id="boro-interface-arc-label">ArcMenu</strong> <span id="boro-interface-custom-info-post">for a familiar and efficient workflow. You can easily
+                                    customize them using GNOME Extensions and Tweaks.</span>
                                 </div>
                             </div>
 
-                            <h3>Screenshots</h3>
-                            <p>Example Boro screenshots from the ISO:</p>
-                            <div class="screenshot-row" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                            <h3 id="boro-screenshots-title">Screenshots</h3>
+                            <p id="boro-screenshots-desc">Example Boro screenshots from the ISO:</p>
+                            <div class="screenshot-row">
                                 <img src="../../images/boro/boro/004-desktop.png" alt="Boro Desktop"
-                                    style="max-width: 100%; flex: 1 1 300px;">
+                                    style="max-width: 48%; margin-right: 1rem;">
                                 <img src="../../images/boro/boro/003-greeter.png" alt="Boro Greeter"
-                                    style="max-width: 100%; flex: 1 1 300px;">
+                                    style="max-width: 48%;">
                             </div>
                         </section>
 
                         <!-- Customization -->
                         <section id="customization" class="content-section">
-                            <h2><i class="fas fa-paint-brush"></i> Customization</h2>
+                            <h2><i class="fas fa-paint-brush"></i> <span id="boro-custom-title">Customization</span></h2>
 
-                            <h3>Appearance Settings</h3>
-                            <p>Access appearance settings through <strong>Settings → Appearance</strong>:</p>
+                            <h3 id="boro-custom-appear-title">Appearance Settings</h3>
+                            <p><span id="boro-custom-appear-intro-pre">Access appearance settings through </span><strong id="boro-custom-appear-path">Settings → Appearance</strong><span id="boro-custom-appear-intro-post">:</span></p>
 
                             <div class="settings-grid">
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-palette"></i> Themes</h4>
+                                    <h4><i class="fas fa-palette"></i> <span id="boro-custom-themes-title">Themes</span></h4>
                                     <ul>
-                                        <li>Pre-installed Soplos themes optimized for GNOME</li>
-                                        <li>Use <strong>GNOME Tweaks</strong> for easy switching</li>
-                                        <li>Download additional themes from gnome-look.org</li>
-                                        <li>Dark and light variants available</li>
+                                        <li id="boro-custom-themes-1">Pre-installed Soplos themes optimized for GNOME</li>
+                                        <li><span id="boro-custom-themes-2-pre">Use </span><strong id="boro-custom-themes-2-label">GNOME Tweaks</strong> <span id="boro-custom-themes-2-post">for easy switching</span></li>
+                                        <li id="boro-custom-themes-3">Download additional themes from gnome-look.org</li>
+                                        <li id="boro-custom-themes-4">Dark and light variants available</li>
                                     </ul>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-icons"></i> Icons</h4>
+                                    <h4><i class="fas fa-icons"></i> <span id="boro-custom-icons-title">Icons</span></h4>
                                     <ul>
-                                        <li>Multiple icon sets included</li>
-                                        <li>Consistent Soplos icon theme</li>
-                                        <li>Support for custom icon themes</li>
-                                        <li>Scalable SVG icons for crisp display</li>
+                                        <li id="boro-custom-icons-1">Multiple icon sets included</li>
+                                        <li id="boro-custom-icons-2">Consistent Soplos icon theme</li>
+                                        <li id="boro-custom-icons-3">Support for custom icon themes</li>
+                                        <li id="boro-custom-icons-4">Scalable SVG icons for crisp display</li>
                                     </ul>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-font"></i> Fonts</h4>
+                                    <h4><i class="fas fa-font"></i> <span id="boro-custom-fonts-title">Fonts</span></h4>
                                     <ul>
-                                        <li>Optimized font rendering</li>
-                                        <li>System-wide font configuration</li>
-                                        <li>Subpixel hinting support</li>
-                                        <li>Easy font size adjustment</li>
+                                        <li id="boro-custom-fonts-1">Optimized font rendering</li>
+                                        <li id="boro-custom-fonts-2">System-wide font configuration</li>
+                                        <li id="boro-custom-fonts-3">Subpixel hinting support</li>
+                                        <li id="boro-custom-fonts-4">Easy font size adjustment</li>
                                     </ul>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-image"></i> Wallpapers</h4>
+                                    <h4><i class="fas fa-image"></i> <span id="boro-custom-wallpaper-title">Wallpapers</span></h4>
                                     <ul>
-                                        <li>Curated Soplos wallpaper collection</li>
-                                        <li>Custom wallpaper support</li>
-                                        <li>Multiple monitor configurations</li>
+                                        <li id="boro-custom-wallpaper-1">Curated Soplos wallpaper collection</li>
+                                        <li id="boro-custom-wallpaper-2">Custom wallpaper support</li>
+                                        <li id="boro-custom-wallpaper-3">Multiple monitor configurations</li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <h3>Desktop Customization</h3>
-                            <p>Boro (GNOME) offers unique customization options:</p>
+                            <h3 id="boro-custom-desktop-title">Desktop Customization</h3>
+                            <p id="boro-custom-desktop-intro">Boro (GNOME) offers unique customization options:</p>
                             <ul>
-                                <li><strong>Dash to Panel:</strong> Combine the dash and top bar into a single panel
-                                    (like Windows 10/11). Right-click the panel to configure.</li>
-                                <li><strong>ArcMenu:</strong> A powerful and customizable application menu. Right-click
-                                    the menu icon to choose layouts (Start menu, KRunner style, etc.).</li>
-                                <li><strong>GNOME Extensions:</strong> Use the "Extensions" app to manage pre-installed
-                                    extensions like Dash to Panel, ArcMenu, and more.</li>
+                                <li><strong id="boro-custom-dash-label">Dash to Panel:</strong> <span id="boro-custom-dash-desc">Combine the dash and top bar into a single panel
+                                    (like Windows 10/11). Right-click the panel to configure.</span></li>
+                                <li><strong id="boro-custom-arc-label">ArcMenu:</strong> <span id="boro-custom-arc-desc">A powerful and customizable application menu. Right-click
+                                    the menu icon to choose layouts (Start menu, KRunner style, etc.).</span></li>
+                                <li><strong id="boro-custom-ext-label">GNOME Extensions:</strong> <span id="boro-custom-ext-desc">Use the "Extensions" app to manage pre-installed
+                                    extensions like Dash to Panel, ArcMenu, and more.</span></li>
                             </ul>
                         </section>
 
                         <!-- Default Applications -->
                         <section id="applications" class="content-section">
-                            <h2><i class="fas fa-box-open"></i> Default Applications</h2>
+                            <h2><i class="fas fa-th-large"></i> <span id="boro-apps-title">Default Applications</span></h2>
 
-                            <p>Boro comes with a curated selection of GNOME applications:</p>
-                            <div class="app-categories">
-                                <div class="app-category">
-                                    <h4><i class="fas fa-globe"></i> Internet</h4>
-                                    <ul>
-                                        <li><strong>Firefox:</strong> Web Browser</li>
-                                        <li><strong>Transmission:</strong> Torrent Client</li>
-                                    </ul>
-                                </div>
-                                <div class="app-category">
-                                    <h4><i class="fas fa-file-alt"></i> Office</h4>
-                                    <ul>
-                                        <li><strong>LibreOffice:</strong> Full Office Suite</li>
-                                        <li><strong>Evince:</strong> Document Viewer</li>
-                                    </ul>
-                                </div>
-                                <div class="app-category">
-                                    <h4><i class="fas fa-music"></i> Multimedia</h4>
-                                    <ul>
-                                        <li><strong>Rhythmbox:</strong> Music Player</li>
-                                        <li><strong>Totem:</strong> Video Player</li>
-                                    </ul>
-                                </div>
-                                <div class="app-category">
-                                    <h4><i class="fas fa-tools"></i> System</h4>
-                                    <ul>
-                                        <li><strong>GParted:</strong> Partition Editor</li>
-                                        <li><strong>GNOME Software:</strong> App Store</li>
-                                        <li><strong>Synaptic:</strong> Package Manager</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <p id="boro-apps-intro">Boro comes with a carefully selected set of GNOME applications
+                                optimized for performance and usability. The exact application selection is designed to
+                                provide essential functionality while maintaining system responsiveness.</p>
 
                             <div class="info-box info">
                                 <i class="fas fa-download"></i>
                                 <div>
-                                    <strong>Need more applications?</strong> Use Soplos Welcome → Software tab to access
+                                    <strong id="boro-apps-need-label">Need more applications?</strong> <span id="boro-apps-need">Use Soplos Welcome → Software tab to access
                                     additional software centers, or browse Soplos Welcome → Recommended tab for curated
                                     application suggestions. You can install any additional software you need through
-                                    these convenient interfaces.
+                                    these convenient interfaces.</span>
                                 </div>
                             </div>
 
-                            <div class="info-box tip">
+                            <div class="info-box warning">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
-                                    <strong>Application Management:</strong> All software installation and management is
+                                    <strong id="boro-apps-mgmt-label">Application Management:</strong> <span id="boro-apps-mgmt">All software installation and management is
                                     handled through Soplos Welcome, which provides access to multiple package managers
-                                    including APT, Flatpak, and Snap, as well as graphical software centers.
+                                    including APT, Flatpak, and Snap, as well as graphical software centers.</span>
                                 </div>
                             </div>
                         </section>
 
                         <!-- Soplos Exclusive Apps -->
-                        <!-- Soplos Exclusive Apps -->
                         <section id="soplos-apps" class="content-section">
-                            <h2><i class="fas fa-star"></i> Soplos Exclusive Apps</h2>
-                            <p>Tools developed by the Soplos team to enhance your experience:</p>
+                            <h2><i class="fas fa-gem"></i> <span id="boro-soplos-title">Soplos Exclusive Applications</span></h2>
+
+                            <p>
+                                <span id="boro-soplos-intro-pre">Boro includes several exclusive Soplos applications accessible through&nbsp;</span>
+                                <strong id="boro-soplos-intro-label">Soplos Welcome</strong>
+                                <span id="boro-soplos-intro-post">:</span>
+                            </p>
 
                             <div class="feature-grid">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img src="../../images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor"
-                                            style="width: 48px; height: 48px;">
-                                    </div>
-                                    <h3>Soplos GRUB Editor</h3>
-                                    <p>Easily customize your boot menu appearance and settings. Manage entries, fonts,
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.grubeditor.png" alt="Soplos GRUB Editor"
+                                            style="width: 48px; height: 48px;"> <span id="boro-soplos-grub-title">Soplos GRUB Editor</span></h3>
+                                    <p id="boro-soplos-grub-desc">Easily customize your boot menu appearance and settings. Manage entries, fonts,
                                         and themes visually.</p>
                                 </div>
 
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img src="../../images/icons/com.soplos.plymouthmanager.png"
-                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;">
-                                    </div>
-                                    <h3>Soplos Plymouth Manager</h3>
-                                    <p>Change and preview boot splash themes with a simple click. Customize the startup
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.plymouthmanager.png"
+                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;"> <span id="boro-soplos-plymouth-title">Soplos Plymouth Manager</span></h3>
+                                    <p id="boro-soplos-plymouth-desc">Change and preview boot splash themes with a simple click. Customize the startup
                                         animation.</p>
                                 </div>
 
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img src="../../images/icons/com.soplos.reposelector.png"
-                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;">
-                                    </div>
-                                    <h3>Soplos Repo Selector</h3>
-                                    <p>Select the fastest mirrors for updates and software installation to ensure
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.reposelector.png"
+                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;"> <span id="boro-soplos-repo-title">Soplos Repo Selector</span></h3>
+                                    <p id="boro-soplos-repo-desc">Select the fastest mirrors for updates and software installation to ensure
                                         maximum download speeds.</p>
                                 </div>
 
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <img src="../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome"
-                                            style="width: 48px; height: 48px;">
-                                    </div>
-                                    <h3>Soplos Welcome</h3>
-                                    <p>Your first stop after installation. Install drivers, software, and customize your
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome"
+                                            style="width: 48px; height: 48px;"> <span id="boro-soplos-welcome-title">Soplos Welcome</span></h3>
+                                    <p id="boro-soplos-welcome-desc">Your first stop after installation. Install drivers, software, and customize your
                                         desktop easily.</p>
                                 </div>
                             </div>
@@ -413,63 +366,63 @@
                             <div class="info-box success">
                                 <i class="fas fa-star"></i>
                                 <div>
-                                    <strong>Exclusive to Boro:</strong> Soplos Linux Boro combines the power of GNOME 49
-                                    with the exclusive Soplos customization suite for a unique user experience.
+                                    <strong id="boro-soplos-exclusive-label">Exclusive to Boro:</strong> <span id="boro-soplos-exclusive">Soplos Linux Boro combines the power of GNOME 49
+                                    with the exclusive Soplos customization suite for a unique user experience.</span>
                                 </div>
                             </div>
                         </section>
 
                         <!-- Performance Tips -->
                         <section id="performance" class="content-section">
-                            <h2><i class="fas fa-rocket"></i> Performance Tips</h2>
+                            <h2><i class="fas fa-rocket"></i> <span id="boro-perf-title">Performance Tips</span></h2>
 
-                            <p>Maximize Boro's performance with these optimization techniques:</p>
+                            <p id="boro-perf-intro">Maximize Boro's performance with these optimization techniques:</p>
 
                             <div class="settings-grid">
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-memory"></i> Memory Optimization</h4>
+                                    <h4><i class="fas fa-memory"></i> <span id="boro-perf-memory-title">Memory Optimization</span></h4>
                                     <ul>
-                                        <li>Disable animations in GNOME Tweaks</li>
-                                        <li>Reduce startup applications</li>
-                                        <li>Use lightweight alternatives when available</li>
-                                        <li>Close unused applications regularly</li>
+                                        <li id="boro-perf-memory-1">Disable animations in GNOME Tweaks</li>
+                                        <li id="boro-perf-memory-2">Reduce startup applications</li>
+                                        <li id="boro-perf-memory-3">Use lightweight alternatives when available</li>
+                                        <li id="boro-perf-memory-4">Close unused applications regularly</li>
                                     </ul>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-desktop"></i> Visual Effects</h4>
+                                    <h4><i class="fas fa-desktop"></i> <span id="boro-perf-visual-title">Visual Effects</span></h4>
                                     <ul>
-                                        <li>Disable window animations for speed</li>
-                                        <li>Use static workspaces if possible</li>
-                                        <li>Disable unused extensions</li>
-                                        <li>Choose lightweight themes</li>
+                                        <li id="boro-perf-visual-1">Disable window animations for speed</li>
+                                        <li id="boro-perf-visual-2">Use static workspaces if possible</li>
+                                        <li id="boro-perf-visual-3">Disable unused extensions</li>
+                                        <li id="boro-perf-visual-4">Choose lightweight themes</li>
                                     </ul>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-hdd"></i> Storage Management</h4>
+                                    <h4><i class="fas fa-hdd"></i> <span id="boro-perf-storage-title">Storage Management</span></h4>
                                     <ul>
-                                        <li>Clean package cache regularly</li>
-                                        <li>Remove unused packages</li>
-                                        <li>Use disk cleanup tools</li>
-                                        <li>Monitor disk usage</li>
+                                        <li id="boro-perf-storage-1">Clean package cache regularly</li>
+                                        <li id="boro-perf-storage-2">Remove unused packages</li>
+                                        <li id="boro-perf-storage-3">Use disk cleanup tools</li>
+                                        <li id="boro-perf-storage-4">Monitor disk usage</li>
                                     </ul>
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-microchip"></i> System Tuning</h4>
+                                    <h4><i class="fas fa-microchip"></i> <span id="boro-perf-tuning-title">System Tuning</span></h4>
                                     <ul>
-                                        <li>Try performance kernels (Liquorix, XanMod)</li>
-                                        <li>Adjust swappiness for SSD systems</li>
-                                        <li>Configure power management</li>
-                                        <li>Update system regularly</li>
+                                        <li id="boro-perf-tuning-1">Try performance kernels (Liquorix, XanMod)</li>
+                                        <li id="boro-perf-tuning-2">Adjust swappiness for SSD systems</li>
+                                        <li id="boro-perf-tuning-3">Configure power management</li>
+                                        <li id="boro-perf-tuning-4">Update system regularly</li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="code-example">
-                                <h4>Quick Performance Commands</h4>
-                                <pre><code># Clean package cache
+                                <h4 id="boro-perf-commands-title">Quick Performance Commands</h4>
+                                <pre><code id="boro-perf-commands"># Clean package cache
 sudo apt autoclean
 
 # Remove unused packages
@@ -485,28 +438,28 @@ df -h
 free -h</code></pre>
                             </div>
 
-                            <div class="info-box tip">
+                            <div class="info-box warning">
                                 <i class="fas fa-tachometer-alt"></i>
                                 <div>
-                                    <strong>Advanced:</strong> Access performance kernels through Soplos Welcome →
+                                    <strong id="boro-perf-advanced-label">Advanced:</strong> <span id="boro-perf-advanced">Access performance kernels through Soplos Welcome →
                                     Kernels tab. Liquorix and XanMod kernels can provide significant performance
-                                    improvements for desktop use.
+                                    improvements for desktop use.</span>
                                 </div>
                             </div>
                         </section>
 
                         <!-- Common Issues -->
                         <section id="troubleshooting" class="content-section">
-                            <h2><i class="fas fa-wrench"></i> Common Issues</h2>
+                            <h2><i class="fas fa-wrench"></i> <span id="boro-trouble-title">Common Issues</span></h2>
 
                             <div class="faq-item">
                                 <h4 class="faq-question">
-                                    <i class="fas fa-chevron-right"></i> Panel disappeared or corrupted
+                                    <i class="fas fa-chevron-right"></i> <span id="boro-trouble-q1">Panel disappeared or corrupted</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p>Restart GNOME Shell (Wayland):</p>
+                                    <p id="boro-trouble-a1-intro">Restart GNOME Shell (Wayland):</p>
                                     <div class="code-example">
-                                        <pre><code># Log out and back in is recommended for Wayland
+                                        <pre><code id="boro-trouble-a1-code"># Log out and back in is recommended for Wayland
 # Or restart the session
 gnome-session-quit</code></pre>
                                     </div>
@@ -515,46 +468,46 @@ gnome-session-quit</code></pre>
 
                             <div class="faq-item">
                                 <h4 class="faq-question">
-                                    <i class="fas fa-chevron-right"></i> Desktop icons not showing
+                                    <i class="fas fa-chevron-right"></i> <span id="boro-trouble-q2">Desktop icons not showing</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p>Enable desktop icons in settings:</p>
+                                    <p id="boro-trouble-a2-intro">GNOME requires an extension for desktop icons:</p>
                                     <ol>
-                                        <li>Right-click on desktop → Desktop Settings</li>
-                                        <li>Go to Icons tab</li>
-                                        <li>Check "Show desktop icons"</li>
-                                        <li>Configure which icons to display</li>
+                                        <li id="boro-trouble-a2-1">Open Extensions app (preinstalled)</li>
+                                        <li id="boro-trouble-a2-2">Look for "Desktop Icons" or install "Desktop Icons NG" from extensions.gnome.org</li>
+                                        <li id="boro-trouble-a2-3">Enable the extension</li>
+                                        <li id="boro-trouble-a2-4">Configure icon visibility in extension settings</li>
                                     </ol>
                                 </div>
                             </div>
 
                             <div class="faq-item">
                                 <h4 class="faq-question">
-                                    <i class="fas fa-chevron-right"></i> Slow performance issues
+                                    <i class="fas fa-chevron-right"></i> <span id="boro-trouble-q3">Slow performance issues</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p>Try these performance fixes:</p>
+                                    <p id="boro-trouble-a3-intro">Try these performance fixes:</p>
                                     <ol>
-                                        <li>Disable animations: GNOME Tweaks → Appearance</li>
-                                        <li>Reduce startup applications: GNOME Tweaks → Startup Applications</li>
-                                        <li>Check system resources with Task Manager</li>
-                                        <li>Clean system: <code>sudo apt autoremove && sudo apt autoclean</code></li>
-                                        <li>Consider switching to a lightweight theme</li>
+                                        <li id="boro-trouble-a3-1">Disable animations: GNOME Tweaks → Appearance</li>
+                                        <li id="boro-trouble-a3-2">Reduce startup applications: GNOME Tweaks → Startup Applications</li>
+                                        <li id="boro-trouble-a3-3">Check system resources with Task Manager</li>
+                                        <li><span id="boro-trouble-a3-4-pre">Clean system: </span><code id="boro-trouble-a3-4-code">sudo apt autoremove && sudo apt autoclean</code></li>
+                                        <li id="boro-trouble-a3-5">Consider switching to a lightweight theme</li>
                                     </ol>
                                 </div>
                             </div>
 
                             <div class="faq-item">
                                 <h4 class="faq-question">
-                                    <i class="fas fa-chevron-right"></i> Applications not appearing in menu
+                                    <i class="fas fa-chevron-right"></i> <span id="boro-trouble-q4">Applications not appearing in menu</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p>Refresh the applications menu:</p>
+                                    <p id="boro-trouble-a4-intro">Refresh the applications menu:</p>
                                     <ol>
-                                        <li>Right-click on Applications menu</li>
-                                        <li>Select "Edit Applications"</li>
-                                        <li>Or restart the session: Log out and back in</li>
-                                        <li>For manual refresh: <code>update-desktop-database</code></li>
+                                        <li id="boro-trouble-a4-1">Right-click on Applications menu</li>
+                                        <li id="boro-trouble-a4-2">Select "Edit Applications"</li>
+                                        <li id="boro-trouble-a4-3">Or restart the session: Log out and back in</li>
+                                        <li><span id="boro-trouble-a4-4-pre">For manual refresh: </span><code id="boro-trouble-a4-4-code">update-desktop-database</code></li>
                                     </ol>
                                 </div>
                             </div>
@@ -562,8 +515,8 @@ gnome-session-quit</code></pre>
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 <div>
-                                    <strong>Need more help?</strong> Check the troubleshooting section in the wiki or
-                                    ask on the community forums for help with specific hardware.
+                                    <strong id="boro-trouble-help-label">Need more help?</strong> <span id="boro-trouble-help">Check the troubleshooting section in the wiki or
+                                    ask on the community forums for help with specific hardware.</span>
                                 </div>
                             </div>
                         </section>
@@ -578,8 +531,8 @@ gnome-session-quit</code></pre>
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../legal/terms.html">Terms of Use</a>
+                    <a href="../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>

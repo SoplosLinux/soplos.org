@@ -800,7 +800,6 @@ Object.assign(window.LANG_ES, {
     "inst-trouble-help-4": "Contáctanos a través de nuestros <a href=\"../../#community\">canales de redes sociales</a>",
 
     // FIRST STEPS GUIDE (/wiki/start/)
-
     // Breadcrumb & Hero
     "start-breadcrumb": "Primeros Pasos",
     "start-hero-title": "Primeros Pasos",
@@ -1043,7 +1042,6 @@ Object.assign(window.LANG_ES, {
     "start-next-congrats-text": "Ahora estás listo para disfrutar de tu experiencia con Soplos Linux. ¡Bienvenido a la comunidad!",
 
     // PÁGINA FAQ (/wiki/faq/)
-
     // Breadcrumb y Hero
     "faq-breadcrumb": "FAQ",
     "faq-hero-title": "Preguntas Frecuentes",
@@ -1290,7 +1288,6 @@ Object.assign(window.LANG_ES, {
     "faq-support-info-text": "No dudes en preguntar en nuestros foros de la comunidad o consulta nuestras otras secciones de documentación. ¡La comunidad de Soplos es amigable y siempre dispuesta a ayudar!",
 
     // PÁGINA TYRON (/wiki/tyron/)
-
     // Breadcrumb y Hero
     "tyron-breadcrumb": "Guía Tyron (XFCE)",
     "tyron-hero-title": "Guía de Soplos Tyron (XFCE)",
@@ -1474,7 +1471,6 @@ Object.assign(window.LANG_ES, {
     "tyron-trouble-help": "Consulta la sección de solución de problemas en la wiki o pregunta en los foros de la comunidad para ayuda con hardware específico.",
 
     // PÁGINA TYSON (/wiki/tyson/)
-
     // Breadcrumb y Hero
     "tyson-breadcrumb": "Guía Tyson (Plasma)",
     "tyson-breadcrumb-home": "Inicio",
@@ -1567,7 +1563,6 @@ Object.assign(window.LANG_ES, {
     "tyson-apps-intro": "Tyson viene con un conjunto cuidadosamente seleccionado de aplicaciones KDE y de escritorio cruzado elegidas por el equilibrio entre características e integración. Para software adicional, usa Soplos Welcome → Software.",
     "tyson-apps-need-label": "¿Necesitas más aplicaciones?",
     "tyson-apps-need": "Soplos Welcome proporciona acceso a APT, Flatpak y recomendaciones curadas para extender tu escritorio rápidamente.",
-
     "tyson-apps-mgmt-label": "Gestión de Aplicaciones:",
     "tyson-apps-mgmt": "Toda la instalación y gestión de software se maneja a través de Soplos Welcome, que proporciona acceso a múltiples gestores de paquetes incluyendo APT, Flatpak y Snap, así como centros de software gráficos.",
 
@@ -1620,6 +1615,192 @@ Object.assign(window.LANG_ES, {
     "tyson-trouble-help-label": "¿Necesitas más ayuda?",
     "tyson-trouble-help": "Consulta la sección de solución de problemas en la wiki o pregunta en los foros de la comunidad para ayuda con hardware específico.",
 
+        // BORO PAGE (/wiki/boro/)
+    // Breadcrumb & Hero
+    "boro-breadcrumb-home": "Inicio",
+    "boro-breadcrumb-wiki": "Wiki",
+    "boro-breadcrumb": "Guía Boro (GNOME)",
+    "boro-hero-title": "Guía Soplos Boro (GNOME)",
+    "boro-hero-desc": "Guía completa para el entorno de escritorio moderno y elegante GNOME",
+
+    // Table of Contents
+    "boro-toc-title": "Contenidos",
+    "boro-toc-1": "Visión General",
+    "boro-toc-2": "Tour de Interfaz",
+    "boro-toc-3": "Personalización",
+    "boro-toc-4": "Aplicaciones Predeterminadas",
+    "boro-toc-5": "Aplicaciones Exclusivas de Soplos",
+    "boro-toc-6": "Consejos de Rendimiento",
+    "boro-toc-7": "Problemas Comunes",
+
+    // Overview Section
+    "boro-overview-title": "Visión General",
+    "boro-overview-intro-pre": "Soplos Boro es la edición GNOME de Soplos Linux, presentando el",
+    "boro-overview-gnome-label": "entorno de escritorio\n GNOME 49",
+    "boro-overview-intro-mid": ". Al igual que Tyron y Tyson, está basado en",
+    "boro-overview-debian-label": "Debian\n Testing",
+    "boro-overview-intro-post": ", ofreciendo un equilibrio perfecto entre estabilidad y software actualizado.",
+    "boro-feat-visual-title": "Visualmente Impactante",
+    "boro-feat-visual-desc": "Incluye un paquete de personalización exclusivo de Soplos Linux y una selección\n cuidadosamente definida de shells de GNOME para hacerlo visualmente atractivo desde el primer momento.",
+
+    // Customization
+    "boro-feat-custom-title": "Altamente Personalizable",
+    "boro-feat-custom-desc": "El diseño moderno de GNOME permite una amplia personalización a través de extensiones y\n configuraciones.",
+    "boro-feat-friendly-title": "Fácil de Usar",
+    "boro-feat-friendly-desc": "Diseño de interfaz familiar que es fácil de usar tanto para recién llegados a Linux como para\n usuarios experimentados.",
+    "boro-feat-battery-title": "Eficiente en Batería",
+    "boro-feat-battery-desc": "Excelente para portátiles con mayor duración de batería gracias a una gestión de energía\n optimizada.",
+
+    // Overview Section
+    "boro-overview-info-label": "Perfecto para:",
+    "boro-overview-info": "Computadoras antiguas, portátiles, usuarios que prefieren un rendimiento rápido,\n configuraciones minimalistas y cualquiera que valore la eficiencia sobre los efectos visuales.",
+
+    // Interface Tour
+    "boro-interface-title": "Tour de Interfaz",
+    "boro-interface-desktop-title": "Experiencia de Escritorio",
+    "boro-interface-desktop-intro": "Boro ofrece una experiencia GNOME 49 pulida mejorada por Soplos Linux:",
+    "boro-interface-gnome-title": "GNOME 49",
+    "boro-interface-gnome-desc": "La última versión del escritorio GNOME, proporcionando un espacio de trabajo moderno y libre de distracciones.",
+    "boro-interface-activities-title": "Vista de Actividades",
+    "boro-interface-activities-desc": "Presiona la tecla Super para ver ventanas abiertas, espacios de trabajo y la cuadrícula de aplicaciones todo en un solo lugar. Busca aplicaciones, archivos y configuraciones al instante.",
+    "boro-interface-files-title": "Archivos (Nautilus)",
+    "boro-interface-files-desc": "El gestor de archivos predeterminado diseñado para ser simple y elegante, con soporte para pestañas, búsqueda rápida e integración perfecta con servicios en la nube.",
+    "boro-interface-exclusive-title": "Personalización Exclusiva",
+    "boro-interface-exclusive-desc": "Viene con una selección específica de shells y temas de GNOME diseñados para proporcionar una apariencia y sensación únicas y atractivas, exclusivas de Soplos Linux.",
+
+    // Customization
+    "boro-interface-custom-info-label": "Interfaz Personalizable:",
+
+    // Interface Tour
+    "boro-interface-custom-info-pre": "Boro usa",
+    "boro-interface-dash-label": "Dash to Panel",
+
+    // Customization
+    "boro-interface-custom-info-mid": "y",
+
+    // Interface Tour
+    "boro-interface-arc-label": "ArcMenu",
+
+    // Customization
+    "boro-interface-custom-info-post": "para un flujo de trabajo familiar y eficiente. Puedes personalizarlos fácilmente usando Extensiones de GNOME y Retoques.",
+    "boro-screenshots-title": "Capturas de Pantalla",
+    "boro-screenshots-desc": "Ejemplos de capturas de pantalla de Boro desde la ISO:",
+    "boro-custom-title": "Personalización",
+    "boro-custom-appear-title": "Configuración de Apariencia",
+    "boro-custom-appear-intro-pre": "Accede a la configuración de apariencia a través de",
+    "boro-custom-appear-path": "Configuración → Apariencia",
+    "boro-custom-appear-intro-post": ":",
+    "boro-custom-themes-title": "Temas",
+    "boro-custom-themes-1": "Temas Soplos preinstalados optimizados para GNOME",
+    "boro-custom-themes-2-pre": "Usa",
+    "boro-custom-themes-2-label": "Retoques de GNOME",
+    "boro-custom-themes-2-post": "para cambiar fácilmente",
+    "boro-custom-themes-3": "Descarga temas adicionales desde gnome-look.org",
+    "boro-custom-themes-4": "Variantes claras y oscuras disponibles",
+    "boro-custom-icons-title": "Iconos",
+    "boro-custom-icons-1": "Múltiples conjuntos de iconos incluidos",
+    "boro-custom-icons-2": "Tema de iconos consistente de Soplos",
+    "boro-custom-icons-3": "Soporte para temas de iconos personalizados",
+    "boro-custom-icons-4": "Iconos SVG escalables para una visualización nítida",
+    "boro-custom-fonts-title": "Fuentes",
+    "boro-custom-fonts-1": "Renderizado de fuentes optimizado",
+    "boro-custom-fonts-2": "Configuración de fuentes en todo el sistema",
+    "boro-custom-fonts-3": "Soporte de hinting de subpíxeles",
+    "boro-custom-fonts-4": "Ajuste fácil del tamaño de fuente",
+    "boro-custom-wallpaper-title": "Fondos de Pantalla",
+    "boro-custom-wallpaper-1": "Colección curada de fondos de pantalla de Soplos",
+    "boro-custom-wallpaper-2": "Soporte para fondos de pantalla personalizados",
+    "boro-custom-wallpaper-3": "Configuraciones de múltiples monitores",
+    "boro-custom-desktop-title": "Personalización del Escritorio",
+    "boro-custom-desktop-intro": "Boro (GNOME) ofrece opciones de personalización únicas:",
+    "boro-custom-dash-label": "Dash to Panel:",
+    "boro-custom-dash-desc": "Combina el dash y la barra superior en un solo panel (como Windows 10/11). Haz clic derecho en el panel para configurar.",
+    "boro-custom-arc-label": "ArcMenu:",
+    "boro-custom-arc-desc": "Un menú de aplicaciones potente y personalizable. Haz clic derecho en el icono del menú para elegir diseños (Menú Inicio, estilo KRunner, etc.).",
+    "boro-custom-ext-label": "Extensiones de GNOME:",
+    "boro-custom-ext-desc": "Usa la aplicación \"Extensiones\" para gestionar extensiones preinstaladas como Dash to Panel, ArcMenu y más.",
+
+    // Default Applications
+    "boro-apps-title": "Aplicaciones Predeterminadas",
+    "boro-apps-intro": "Boro viene con un conjunto cuidadosamente seleccionado de aplicaciones GNOME optimizadas para el rendimiento y la usabilidad. La selección exacta de aplicaciones está diseñada para proporcionar funcionalidad esencial mientras se mantiene la capacidad de respuesta del sistema.",
+    "boro-apps-need-label": "¿Necesitas más aplicaciones?",
+    "boro-apps-need": "Usa Soplos Welcome → Pestaña Software para acceder a centros de software adicionales, o navega por Soplos Welcome → Pestaña Recomendados para sugerencias de aplicaciones curadas. Puedes instalar cualquier software adicional que necesites a través de estas interfaces convenientes.",
+    "boro-apps-mgmt-label": "Gestión de Aplicaciones:",
+    "boro-apps-mgmt": "Toda la instalación y gestión de software se maneja a través de Soplos Welcome, que proporciona acceso a múltiples gestores de paquetes incluyendo APT, Flatpak y Snap, así como centros de software gráficos.",
+
+
+    // Soplos Exclusive Apps
+    "boro-soplos-title": "Aplicaciones Exclusivas de Soplos",
+    "boro-soplos-intro-pre": "Boro incluye varias aplicaciones exclusivas de Soplos accesibles a través de ",
+    "boro-soplos-intro-label": "Soplos Welcome",
+    "boro-soplos-intro-post": ":",
+    "boro-soplos-grub-title": "Editor GRUB de Soplos",
+    "boro-soplos-grub-desc": "Personaliza fácilmente la apariencia y configuración de tu menú de arranque. Gestiona entradas, fuentes y temas visualmente.",
+    "boro-soplos-plymouth-title": "Gestor Plymouth de Soplos",
+    "boro-soplos-plymouth-desc": "Cambia y previsualiza temas de arranque con un simple clic. Personaliza la animación de inicio.",
+    "boro-soplos-repo-title": "Selector de Repositorios de Soplos",
+    "boro-soplos-repo-desc": "Selecciona los espejos más rápidos para actualizaciones e instalación de software para asegurar velocidades de descarga máximas.",
+    "boro-soplos-welcome-title": "Bienvenida de Soplos",
+    "boro-soplos-welcome-desc": "Tu primera parada después de la instalación. Instala controladores, software y personaliza tu escritorio fácilmente.",
+    "boro-soplos-exclusive-label": "Exclusivo de Boro:",
+    "boro-soplos-exclusive": "Soplos Linux Boro combina el poder de GNOME 49 con la suite de personalización exclusiva de Soplos para una experiencia de usuario única.",
+
+    // Performance Tips
+    "boro-perf-title": "Consejos de Rendimiento",
+    "boro-perf-intro": "Maximiza el rendimiento de Boro con estas técnicas de optimización:",
+    "boro-perf-memory-title": "Optimización de Memoria",
+    "boro-perf-memory-1": "Desactivar animaciones en Retoques de GNOME",
+    "boro-perf-memory-2": "Reducir aplicaciones de inicio",
+    "boro-perf-memory-3": "Usar alternativas ligeras cuando estén disponibles",
+    "boro-perf-memory-4": "Cerrar aplicaciones no utilizadas regularmente",
+    "boro-perf-visual-title": "Efectos Visuales",
+    "boro-perf-visual-1": "Desactivar animaciones de ventana para velocidad",
+    "boro-perf-visual-2": "Usar espacios de trabajo estáticos si es posible",
+    "boro-perf-visual-3": "Desactivar extensiones no utilizadas",
+    "boro-perf-visual-4": "Elegir temas ligeros",
+    "boro-perf-storage-title": "Gestión de Almacenamiento",
+    "boro-perf-storage-1": "Limpiar caché de paquetes regularmente",
+    "boro-perf-storage-2": "Eliminar paquetes no utilizados",
+    "boro-perf-storage-3": "Usar herramientas de limpieza de disco",
+    "boro-perf-storage-4": "Monitorear uso de disco",
+    "boro-perf-tuning-title": "Ajuste del Sistema",
+    "boro-perf-tuning-1": "Probar kernels de rendimiento (Liquorix, XanMod)",
+    "boro-perf-tuning-2": "Ajustar swappiness para sistemas SSD",
+    "boro-perf-tuning-3": "Configurar gestión de energía",
+    "boro-perf-tuning-4": "Actualizar el sistema regularmente",
+    "boro-perf-commands-title": "Comandos Rápidos de Rendimiento",
+    "boro-perf-commands": "# Limpiar caché de paquetes\nsudo apt autoclean\n\n# Eliminar paquetes no utilizados\nsudo apt autoremove\n\n# Verificar recursos del sistema\nhtop\n\n# Verificar uso de disco\ndf -h\n\n# Monitorear uso de memoria\nfree -h",
+    "boro-perf-advanced-label": "Avanzado:",
+    "boro-perf-advanced": "Accede a kernels de rendimiento a través de Soplos Welcome → Pestaña Kernels. Los kernels Liquorix y XanMod pueden proporcionar mejoras significativas de rendimiento para uso de escritorio.",
+
+    // Common Issues
+    "boro-trouble-title": "Problemas Comunes",
+    "boro-trouble-q1": "El panel desapareció o está corrupto",
+    "boro-trouble-a1-intro": "Reiniciar GNOME Shell (Wayland):",
+    "boro-trouble-a1-code": "# Cerrar sesión y volver a entrar es recomendado para Wayland\n# O reiniciar la sesión\ngnome-session-quit",
+    "boro-trouble-q2": "Iconos del escritorio no se muestran",
+    "boro-trouble-a2-intro": "GNOME requiere una extensión para iconos de escritorio:",
+    "boro-trouble-a2-1": "Abre la aplicación Extensiones (preinstalada)",
+    "boro-trouble-a2-2": "Busca \"Desktop Icons\" o instala \"Desktop Icons NG\" desde extensions.gnome.org",
+    "boro-trouble-a2-3": "Habilita la extensión",
+    "boro-trouble-a2-4": "Configura la visibilidad de iconos en ajustes de la extensión",
+    "boro-trouble-q3": "Problemas de rendimiento lento",
+    "boro-trouble-a3-intro": "Prueba estas correcciones de rendimiento:",
+    "boro-trouble-a3-1": "Desactivar animaciones: Retoques de GNOME → Apariencia",
+    "boro-trouble-a3-2": "Reducir aplicaciones de inicio: Retoques de GNOME → Aplicaciones de Inicio",
+    "boro-trouble-a3-3": "Verificar recursos del sistema con el Gestor de Tareas",
+    "boro-trouble-a3-4-pre": "Limpiar sistema:",
+    "boro-trouble-a3-4-code": "sudo apt autoremove && sudo apt autoclean",
+    "boro-trouble-a3-5": "Considerar cambiar a un tema ligero",
+    "boro-trouble-q4": "Aplicaciones no aparecen en el menú",
+    "boro-trouble-a4-intro": "Refrescar el menú de aplicaciones:",
+    "boro-trouble-a4-1": "Clic derecho en menú de Aplicaciones",
+    "boro-trouble-a4-2": "Seleccionar \"Editar Aplicaciones\"",
+    "boro-trouble-a4-3": "O reiniciar la sesión: Cerrar sesión y volver a entrar",
+    "boro-trouble-a4-4-pre": "Para refresco manual:",
+    "boro-trouble-a4-4-code": "update-desktop-database",
+    "boro-trouble-help-label": "¿Necesitas más ayuda?",
+    "boro-trouble-help": "Revisa la sección de solución de problemas en la wiki o pregunta en los foros de la comunidad para ayuda con hardware específico.",
     // Footer
     "footer-privacy": "Política de Privacidad",
     "footer-terms": "Términos de Uso"
