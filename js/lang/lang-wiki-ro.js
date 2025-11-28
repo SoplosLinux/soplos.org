@@ -1730,8 +1730,8 @@ Object.assign(window.LANG_RO, {
 
 
     // Soplos Exclusive Apps
-    "boro-soplos-title": "Soplos Exclusive Applications",
-    "boro-soplos-intro-pre": "Boro includes several exclusive Soplos applications accessible through ",
+    "boro-soplos-title": "Aplicații Exclusive Soplos",
+    "boro-soplos-intro-pre": "Boro include mai multe aplicații exclusive Soplos accesibile prin ",
     "boro-soplos-intro-label": "Soplos Welcome",
     "boro-soplos-intro-post": ":",
     "boro-soplos-grub-title": "Soplos GRUB Editor",
@@ -1779,11 +1779,11 @@ Object.assign(window.LANG_RO, {
     "boro-trouble-a1-intro": "Restart GNOME Shell (Wayland):",
     "boro-trouble-a1-code": "# Log out and back in is recommended for Wayland\n# Or restart the session\ngnome-session-quit",
     "boro-trouble-q2": "Desktop icons not showing",
-    "boro-trouble-a2-intro": "GNOME requires an extension for desktop icons:",
-    "boro-trouble-a2-1": "Open Extensions app (preinstalled)",
-    "boro-trouble-a2-2": "Look for \"Desktop Icons\" or install \"Desktop Icons NG\" from extensions.gnome.org",
-    "boro-trouble-a2-3": "Enable the extension",
-    "boro-trouble-a2-4": "Configure icon visibility in extension settings",
+    "boro-trouble-a2-intro": "GNOME necesită o extensie pentru pictogramele de pe desktop:",
+    "boro-trouble-a2-1": "Deschide aplicația Extensii (preinstalată)",
+    "boro-trouble-a2-2": "Caută \"Desktop Icons\" sau instalează \"Desktop Icons NG\" de la extensions.gnome.org",
+    "boro-trouble-a2-3": "Activează extensia",
+    "boro-trouble-a2-4": "Configurează vizibilitatea pictogramelor în setările extensiei",
     "boro-trouble-q3": "Slow performance issues",
     "boro-trouble-a3-intro": "Try these performance fixes:",
     "boro-trouble-a3-1": "Disable animations: GNOME Tweaks → Appearance",

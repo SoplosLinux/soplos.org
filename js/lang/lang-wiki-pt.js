@@ -1730,8 +1730,8 @@ Object.assign(window.LANG_PT, {
 
 
     // Soplos Exclusive Apps
-    "boro-soplos-title": "Soplos Exclusive Applications",
-    "boro-soplos-intro-pre": "Boro includes several exclusive Soplos applications accessible through ",
+    "boro-soplos-title": "Aplicações Exclusivas Soplos",
+    "boro-soplos-intro-pre": "Boro inclui várias aplicações exclusivas Soplos acessíveis através de ",
     "boro-soplos-intro-label": "Soplos Welcome",
     "boro-soplos-intro-post": ":",
     "boro-soplos-grub-title": "Soplos GRUB Editor",
@@ -1779,11 +1779,11 @@ Object.assign(window.LANG_PT, {
     "boro-trouble-a1-intro": "Restart GNOME Shell (Wayland):",
     "boro-trouble-a1-code": "# Log out and back in is recommended for Wayland\n# Or restart the session\ngnome-session-quit",
     "boro-trouble-q2": "Desktop icons not showing",
-    "boro-trouble-a2-intro": "GNOME requires an extension for desktop icons:",
-    "boro-trouble-a2-1": "Open Extensions app (preinstalled)",
-    "boro-trouble-a2-2": "Look for \"Desktop Icons\" or install \"Desktop Icons NG\" from extensions.gnome.org",
-    "boro-trouble-a2-3": "Enable the extension",
-    "boro-trouble-a2-4": "Configure icon visibility in extension settings",
+    "boro-trouble-a2-intro": "GNOME requer uma extensão para ícones da área de trabalho:",
+    "boro-trouble-a2-1": "Abra o aplicativo Extensões (pré-instalado)",
+    "boro-trouble-a2-2": "Procure por \"Desktop Icons\" ou instale \"Desktop Icons NG\" de extensions.gnome.org",
+    "boro-trouble-a2-3": "Ative a extensão",
+    "boro-trouble-a2-4": "Configure a visibilidade dos ícones nas configurações da extensão",
     "boro-trouble-q3": "Slow performance issues",
     "boro-trouble-a3-intro": "Try these performance fixes:",
     "boro-trouble-a3-1": "Disable animations: GNOME Tweaks → Appearance",
