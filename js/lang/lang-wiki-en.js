@@ -1801,6 +1801,7 @@ Object.assign(window.LANG_EN, {
     "boro-trouble-a4-4-code": "update-desktop-database",
     "boro-trouble-help-label": "Need more help?",
     "boro-trouble-help": "Check the troubleshooting section in the wiki or\n ask on the community forums for help with specific hardware.",
+    
     // Customization Page (/wiki/customization/)
     "custom-breadcrumb-home": "Home",
     "custom-breadcrumb-wiki": "Wiki",
@@ -1892,6 +1893,73 @@ Object.assign(window.LANG_EN, {
     "custom-trouble-tip": "Test theme changes on a local user first before applying system-wide, so you can easily revert without affecting other users.",
     "custom-next-label": "Next:",
     "custom-next": "After customizing, visit <a href=\"../tyron/\">Tyron guide</a>, <a href=\"../tyson/\">Tyson guide</a> or <a href=\"../boro/\">Boro guide</a> for desktop-specific tips and screenshots.",
+
+    // Themes Page (/wiki/themes/)
+    "themes-hero-title": "Themes & Appearance",
+    "themes-hero-desc": "Manage GTK/Qt themes, icons, cursors, and global appearance for Tyron (XFCE), Tyson (Plasma), and Boro (GNOME).",
+    
+    // TOC
+    "themes-toc-title": "Contents",
+    "themes-toc-1": "Overview",
+    "themes-toc-2": "GTK & Qt Themes",
+    "themes-toc-3": "Icon Themes",
+    "themes-toc-4": "Cursor Themes",
+    "themes-toc-5": "Installing Themes",
+    "themes-toc-6": "Applying Themes",
+    "themes-toc-7": "Creating a Simple Theme",
+    "themes-toc-8": "Troubleshooting",
+
+    // Overview
+    "themes-overview-title": "Overview",
+    "themes-overview-text": "Theming in Soplos covers two environments: GTK (used by many apps and XFCE) and Qt (used by Plasma and KDE apps). Additionally, icon and cursor themes influence the overall look. Tyron (XFCE) and Boro (GNOME) use GTK-based themes; Tyson (Plasma) uses global Qt and Plasma themes.",
+
+    // GTK & Qt
+    "themes-gtk-title": "GTK & Qt Themes",
+    "themes-gtk-text": "GTK themes affect GTK2/GTK3/GTK4 applications. Qt apps in XFCE can respect the GTK theme via qt5ct or qt6ct. In Plasma, use native Qt/Plasma themes.",
+    "themes-gtk-1": "<strong>XFCE (Tyron):</strong> GTK theme + GTK engine controls most apps.",
+    "themes-gtk-2": "<strong>GNOME (Boro):</strong> GTK theme (libadwaita/GTK4) controls apps. Use GNOME Tweaks for legacy GTK3 themes.",
+    "themes-gtk-3": "<strong>Plasma (Tyson):</strong> Use System Settings → Global Theme and Plasma style for consistent Qt visuals.",
+    "themes-gtk-4": "<strong>Qt apps in XFCE:</strong> install and configure <code>qt5ct</code> or <code>qt6ct</code> and set environment variable <code>QT_QPA_PLATFORMTHEME=qt5ct</code> for consistent look.",
+
+    // Icons
+    "themes-icons-title": "Icon Themes",
+    "themes-icons-text": "Icon themes are installed in <code>/usr/share/icons</code> (system) or <code>~/.icons</code> (user). After copying icons, update the cache:",
+    "themes-icons-text-2": "Finally, activate the icon theme from each desktop's settings (Tyson: System Settings → Icons; Tyron: Appearance → Icons; Boro: GNOME Tweaks → Appearance).",
+
+    // Cursors
+    "themes-cursors-title": "Cursor Themes",
+    "themes-cursors-text": "Cursor themes follow the same paths as icons. Install in <code>/usr/share/icons</code> or <code>~/.icons</code> and select in Appearance → Cursors. Logout/login may be required to apply globally.",
+
+    // Installing
+    "themes-install-title": "Installing Themes",
+    "themes-install-text": "Common approaches:",
+    "themes-install-1": "<strong>Package manager:</strong> many themes are available via APT (search with <code>apt search theme</code>).",
+    "themes-install-2": "<strong>Manual installation:</strong> extract to <code>~/.themes</code> (GTK/window themes) or <code>~/.icons</code> for icons.",
+    "themes-install-3": "<strong>System-wide installation:</strong> copy to <code>/usr/share/themes</code> or <code>/usr/share/icons</code> with sudo.",
+
+    // Applying
+    "themes-apply-title": "Applying Themes",
+    "themes-apply-1": "<strong>Tyron (XFCE):</strong> Settings → Appearance (GTK theme, icons, fonts) and Settings → Window Manager (window decorations).",
+    "themes-apply-2": "<strong>Boro (GNOME):</strong> Settings → Appearance (Background, Style) or GNOME Tweaks (Themes, Icons, Shell).",
+    "themes-apply-3": "<strong>Tyson (Plasma):</strong> System Settings → Global Theme → Apply. Use Plasma-specific widgets and KWin settings for effects.",
+    "themes-apply-4": "<strong>Qt apps on GTK desktops:</strong> configure qt5ct/qt6ct and set platform theme environment variable.",
+
+    // Creating
+    "themes-create-title": "Creating a Simple Theme",
+    "themes-create-text": "Quick guide to create a minimal GTK theme:",
+    "themes-create-1": "Create folder <code>~/.themes/MyTheme/gtk-3.0/</code> and place a <code>gtk.css</code> with custom rules.",
+    "themes-create-2": "Add an index.theme file in <code>~/.themes/MyTheme/</code> describing the theme.",
+    "themes-create-3": "Restart GTK apps or logout/login to test.",
+
+    // Troubleshooting
+    "themes-trouble-title": "Troubleshooting",
+    "themes-trouble-1": "If icons don't display correctly, clean and update icon cache: <code>sudo gtk-update-icon-cache /usr/share/icons/YourTheme</code>.",
+    "themes-trouble-2": "If GTK and Qt apps look inconsistent, ensure <code>QT_QPA_PLATFORMTHEME</code> is set and qt5ct/qt6ct configured.",
+    "themes-trouble-3": "For cursors not updating system-wide, run <code>sudo update-alternatives --config x-cursor-theme</code> or re-login.",
+    "themes-trouble-4": "When Plasma ignores a theme, open System Settings → Global Theme and check if components (Plasma, GTK) apply separately.",
+    "themes-trouble-5": "For Boro (GNOME), ensure the <strong>User Themes</strong> extension is enabled to change Shell theme.",
+    "themes-see-also": "See also:",
+    "themes-see-also-custom": "Customization",
 
     // Footer
     "footer-privacy": "Privacy Policy",

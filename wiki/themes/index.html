@@ -1,269 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Themes & Appearance - Soplos Linux Wiki</title>
-    <meta name="description"
-        content="How to manage and install themes (GTK, Qt, icons, cursors) on Soplos Tyron and Tyson.">
-    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
-    
-    <link rel="stylesheet" href="../styles/wiki.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta
+      name="description"
+      content="How to manage and install themes (GTK, Qt, icons, cursors) on Soplos Tyron and Tyson."
+    />
+    <link
+      rel="icon"
+      href="../../images/logo/soplos-logo.png"
+      type="image/png"
+    />
 
-</head>
+    <link rel="stylesheet" href="../styles/wiki.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="../../">
-                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
-                </a>
-            </div>
-            <div class="header-right">
-                <button class="mobile-menu-toggle" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <nav>
-                    <ul>
-                        <li><a href="../../" id="menuHome">Home</a></li>
-                        <li class="menu-dropdown">
-                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
-                                    class="fas fa-chevron-down"></i></a>
-                            <ul class="submenu">
-                                <li><a href="../../#features" id="menuFeatures">Features</a></li>
-                                <li><a href="../../#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
-                                <li><a href="../../#requirements" id="menuRequirements">System Requirements</a></li>
-                                <li><a href="../../#download" id="menuDownload">Download</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-dropdown">
-                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
-                                    class="fas fa-chevron-down"></i></a>
-                            <ul class="submenu">
-                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
-                                <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
-                                <li><a href="/forums/" id="menuForum">Forum</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-dropdown">
-                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
-                                    class="fas fa-chevron-down"></i></a>
-                            <ul class="submenu">
-                                <li><a href="../../#community" id="menuCommunity">Join</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
-                                </li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
-                                </li>
-                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="language-selector" id="language-selector">
-                    <div class="selected-language">
-                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
-                        <span>EN</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="language-dropdown">
-                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
-                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
-                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
-                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
-                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
-                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
-                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
-                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <a href="../../">
+            <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo" />
+          </a>
         </div>
+        <div class="header-right">
+          <button class="mobile-menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <nav>
+            <ul>
+              <li><a href="../../" id="menuHome">Home</a></li>
+              <li class="menu-dropdown">
+                <a href="#" class="menu-dropdown-toggle" id="menuDiscover"
+                  >Discover <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="submenu">
+                  <li>
+                    <a href="../../#features" id="menuFeatures">Features</a>
+                  </li>
+                  <li>
+                    <a href="../../#galleries" id="menuGalleries">Galleries</a>
+                  </li>
+                  <li><a href="../../#apps" id="menuApps">Soplos Apps</a></li>
+                  <li>
+                    <a href="../../#requirements" id="menuRequirements"
+                      >System Requirements</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../../#download" id="menuDownload">Download</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-dropdown">
+                <a href="#" class="menu-dropdown-toggle" id="menuResources"
+                  >Resources <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="submenu">
+                  <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                  <li><a href="../../#docs" id="menuDocs">Documentation</a></li>
+                  <li><a href="/forums/" id="menuForum">Forum</a></li>
+                </ul>
+              </li>
+              <li class="menu-dropdown">
+                <a
+                  href="#"
+                  class="menu-dropdown-toggle"
+                  id="menuCommunityDropdown"
+                  >Community <i class="fas fa-chevron-down"></i
+                ></a>
+                <ul class="submenu">
+                  <li>
+                    <a href="../../#community" id="menuCommunity">Join</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/SoplosLinux"
+                      id="menuGitHub"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/soploslinux"
+                      id="menuTwitter"
+                      target="_blank"
+                      >X (Twitter)</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://paypal.me/isubdes"
+                      id="menuDonate"
+                      target="_blank"
+                      >PayPal</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="language-selector" id="language-selector">
+            <div class="selected-language">
+              <img src="https://flagcdn.com/w20/gb.png" alt="English" />
+              <span>EN</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="language-dropdown">
+              <a href="#" data-lang="en"
+                ><img src="https://flagcdn.com/w20/gb.png" alt="English" />
+                EN</a
+              >
+              <a href="#" data-lang="es"
+                ><img src="https://flagcdn.com/w20/es.png" alt="Español" />
+                ES</a
+              >
+              <a href="#" data-lang="fr"
+                ><img src="https://flagcdn.com/w20/fr.png" alt="Français" />
+                FR</a
+              >
+              <a href="#" data-lang="pt"
+                ><img src="https://flagcdn.com/w20/pt.png" alt="Português" />
+                PT</a
+              >
+              <a href="#" data-lang="de"
+                ><img src="https://flagcdn.com/w20/de.png" alt="Deutsch" />
+                DE</a
+              >
+              <a href="#" data-lang="it"
+                ><img src="https://flagcdn.com/w20/it.png" alt="Italiano" />
+                IT</a
+              >
+              <a href="#" data-lang="ro"
+                ><img src="https://flagcdn.com/w20/ro.png" alt="Română" /> RO</a
+              >
+              <a href="#" data-lang="ru"
+                ><img src="https://flagcdn.com/w20/ru.png" alt="Русский" />
+                RU</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <div class="breadcrumb-container">
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="/"><i class="fas fa-home"></i> Home</a>
-                <span class="breadcrumb-separator">›</span>
-                <a href="/wiki/">Wiki</a>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Themes & Appearance</span>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator">›</span>
+          <a href="/wiki/">Wiki</a>
+          <span class="breadcrumb-separator">›</span>
+          <span class="breadcrumb-current">Themes & Appearance</span>
+        </nav>
+      </div>
     </div>
 
     <main>
-        <div class="wiki-header-group">
-            <section class="wiki-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1><i class="fas fa-paint-brush"></i> Themes & Appearance</h1>
-                    <p>Manage GTK/Qt themes, icons, cursors and global appearance for Tyron (XFCE), Tyson (Plasma) and
-                        Boro (GNOME).
-                    </p>
-                </div>
+      <div class="wiki-header-group">
+        <section class="wiki-hero">
+          <div class="container">
+            <div class="hero-content">
+              <h1 id="themes-hero-title">
+                <i class="fas fa-paint-brush"></i> Themes & Appearance
+              </h1>
+              <p id="themes-hero-desc">
+                Manage GTK/Qt themes, icons, cursors and global appearance for
+                Tyron (XFCE), Tyson (Plasma) and Boro (GNOME).
+              </p>
             </div>
+          </div>
         </section>
-        </div>
+      </div>
 
-        <section class="wiki-content">
-            <div class="container">
-                <div class="content-wrapper">
-                    <aside class="toc">
-                        <h3>Contents</h3>
-                        <ul>
-                            <li><a href="#overview">Overview</a></li>
-                            <li><a href="#gtk-qt">GTK & Qt Themes</a></li>
-                            <li><a href="#icons">Icon Themes</a></li>
-                            <li><a href="#cursors">Cursor Themes</a></li>
-                            <li><a href="#installing">Installing Themes</a></li>
-                            <li><a href="#applying">Applying Themes</a></li>
-                            <li><a href="#creating">Creating a Simple Theme</a></li>
-                            <li><a href="#troubleshooting">Troubleshooting</a></li>
-                        </ul>
-                    </aside>
+      <section class="wiki-content">
+        <div class="container">
+          <div class="content-wrapper">
+            <aside class="toc">
+              <h3 id="themes-toc-title">Contents</h3>
+              <ul>
+                <li><a href="#overview" id="themes-toc-1">Overview</a></li>
+                <li><a href="#gtk-qt" id="themes-toc-2">GTK & Qt Themes</a></li>
+                <li><a href="#icons" id="themes-toc-3">Icon Themes</a></li>
+                <li><a href="#cursors" id="themes-toc-4">Cursor Themes</a></li>
+                <li>
+                  <a href="#installing" id="themes-toc-5">Installing Themes</a>
+                </li>
+                <li>
+                  <a href="#applying" id="themes-toc-6">Applying Themes</a>
+                </li>
+                <li>
+                  <a href="#creating" id="themes-toc-7"
+                    >Creating a Simple Theme</a
+                  >
+                </li>
+                <li>
+                  <a href="#troubleshooting" id="themes-toc-8"
+                    >Troubleshooting</a
+                  >
+                </li>
+              </ul>
+            </aside>
 
-                    <article class="main-content">
-                        <section id="overview" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
-                            <p>Theming on Soplos covers two stacks: GTK (used by many apps and XFCE) and Qt (used by
-                                Plasma and KDE apps). Additionally, icon and cursor themes influence the overall look.
-                                Tyron (XFCE) and Boro (GNOME) use GTK-first themes; Tyson (Plasma) uses Qt and Plasma
-                                global themes.</p>
-                        </section>
+            <article class="main-content">
+              <section id="overview" class="content-section">
+                <h2 id="themes-overview-title">
+                  <i class="fas fa-info-circle"></i> Overview
+                </h2>
+                <p id="themes-overview-text">
+                  Theming on Soplos covers two stacks: GTK (used by many apps
+                  and XFCE) and Qt (used by Plasma and KDE apps). Additionally,
+                  icon and cursor themes influence the overall look. Tyron
+                  (XFCE) and Boro (GNOME) use GTK-first themes; Tyson (Plasma)
+                  uses Qt and Plasma global themes.
+                </p>
+              </section>
 
-                        <section id="gtk-qt" class="content-section">
-                            <h2><i class="fas fa-desktop"></i> GTK & Qt Themes</h2>
-                            <p>GTK themes affect GTK2/GTK3/GTK4 applications. Qt apps on XFCE may respect GTK theme via
-                                qt5ct or qt6ct. On Plasma, use native Qt/Plasma themes.</p>
-                            <ul>
-                                <li><strong>XFCE (Tyron):</strong> GTK theme + GTK engine controls most apps.</li>
-                                <li><strong>GNOME (Boro):</strong> GTK theme (libadwaita/GTK4) controls apps. Use GNOME
-                                    Tweaks for legacy GTK3 themes.</li>
-                                <li><strong>Plasma (Tyson):</strong> Use System Settings → Global Theme and Plasma style
-                                    for consistent Qt visuals.</li>
-                                <li><strong>Qt apps on XFCE:</strong> install and configure <code>qt5ct</code> or
-                                    <code>qt6ct</code> and set environment variable
-                                    <code>QT_QPA_PLATFORMTHEME=qt5ct</code> for consistent appearance.
-                                </li>
-                            </ul>
-                        </section>
+              <section id="gtk-qt" class="content-section">
+                <h2 id="themes-gtk-title">
+                  <i class="fas fa-desktop"></i> GTK & Qt Themes
+                </h2>
+                <p id="themes-gtk-text">
+                  GTK themes affect GTK2/GTK3/GTK4 applications. Qt apps on XFCE
+                  may respect GTK theme via qt5ct or qt6ct. On Plasma, use
+                  native Qt/Plasma themes.
+                </p>
+                <ul>
+                  <li id="themes-gtk-1">
+                    <strong>XFCE (Tyron):</strong> GTK theme + GTK engine
+                    controls most apps.
+                  </li>
+                  <li id="themes-gtk-2">
+                    <strong>GNOME (Boro):</strong> GTK theme (libadwaita/GTK4)
+                    controls apps. Use GNOME Tweaks for legacy GTK3 themes.
+                  </li>
+                  <li id="themes-gtk-3">
+                    <strong>Plasma (Tyson):</strong> Use System Settings →
+                    Global Theme and Plasma style for consistent Qt visuals.
+                  </li>
+                  <li id="themes-gtk-4">
+                    <strong>Qt apps on XFCE:</strong> install and configure
+                    <code>qt5ct</code> or <code>qt6ct</code> and set environment
+                    variable <code>QT_QPA_PLATFORMTHEME=qt5ct</code> for
+                    consistent appearance.
+                  </li>
+                </ul>
+              </section>
 
-                        <section id="icons" class="content-section">
-                            <h2><i class="fas fa-icons"></i> Icon Themes</h2>
-                            <p>Icon themes are installed to <code>/usr/share/icons</code> (system) or
-                                <code>~/.icons</code> (user). After copying icons, update the cache:
-                            </p>
-                            <div class="code-example">
-                                <pre><code>sudo cp -r YourIconTheme /usr/share/icons/
+              <section id="icons" class="content-section">
+                <h2 id="themes-icons-title">
+                  <i class="fas fa-icons"></i> Icon Themes
+                </h2>
+                <p id="themes-icons-text">
+                  Icon themes are installed to
+                  <code>/usr/share/icons</code> (system) or
+                  <code>~/.icons</code> (user). After copying icons, update the
+                  cache:
+                </p>
+                <div class="code-example">
+                  <pre><code>sudo cp -r YourIconTheme /usr/share/icons/
 sudo gtk-update-icon-cache /usr/share/icons/YourIconTheme</code></pre>
-                            </div>
-                            <p>Then select the icon theme in Appearance dialogs (Tyson: System Settings → Icons; Tyron:
-                                Appearance → Icons; Boro: GNOME Tweaks → Appearance).</p>
-                        </section>
+                </div>
+                <p id="themes-icons-text-2">Finally, activate the icon theme from the settings of each desktop (Tyson: System Settings → Icons; Tyron: Appearance → Icons; Boro: GNOME Tweaks → Appearance).</p>
+              </section>
 
-                        <section id="cursors" class="content-section">
-                            <h2><i class="fas fa-mouse-pointer"></i> Cursor Themes</h2>
-                            <p>Cursor themes follow the same paths as icons. Install to <code>/usr/share/icons</code> or
-                                <code>~/.icons</code> and select in Appearance → Cursors. A logout/login may be required
-                                to apply globally.
-                            </p>
-                        </section>
+              <section id="cursors" class="content-section">
+                <h2 id="themes-cursors-title">
+                  <i class="fas fa-mouse-pointer"></i> Cursor Themes
+                </h2>
+                <p id="themes-cursors-text">
+                  Cursor themes follow the same paths as icons. Install to
+                  <code>/usr/share/icons</code> or <code>~/.icons</code> and
+                  select in Appearance → Cursors. A logout/login may be required
+                  to apply globally.
+                </p>
+              </section>
 
-                        <section id="installing" class="content-section">
-                            <h2><i class="fas fa-download"></i> Installing Themes</h2>
-                            <p>Common approaches:</p>
-                            <ul>
-                                <li><strong>Package manager:</strong> many themes are available via APT (search with
-                                    <code>apt search theme</code>).
-                                </li>
-                                <li><strong>Manual install:</strong> extract into <code>~/.themes</code> (GTK/window
-                                    themes) or <code>~/.icons</code> for icons.</li>
-                                <li><strong>System-wide install:</strong> copy to <code>/usr/share/themes</code> or
-                                    <code>/usr/share/icons</code> with sudo.
-                                </li>
-                            </ul>
-                            <div class="code-example">
-                                <pre><code># Example: install to user folder
+              <section id="installing" class="content-section">
+                <h2 id="themes-install-title">
+                  <i class="fas fa-download"></i> Installing Themes
+                </h2>
+                <p id="themes-install-text">Common approaches:</p>
+                <ul>
+                  <li id="themes-install-1">
+                    <strong>Package manager:</strong> many themes are available
+                    via APT (search with <code>apt search theme</code>).
+                  </li>
+                  <li id="themes-install-2">
+                    <strong>Manual install:</strong> extract into
+                    <code>~/.themes</code> (GTK/window themes) or
+                    <code>~/.icons</code> for icons.
+                  </li>
+                  <li id="themes-install-3">
+                    <strong>System-wide install:</strong> copy to
+                    <code>/usr/share/themes</code> or
+                    <code>/usr/share/icons</code> with sudo.
+                  </li>
+                </ul>
+                <div class="code-example">
+                  <pre><code># Example: install to user folder
 mkdir -p ~/.themes ~/.icons
 unzip SomeTheme.zip -d ~/.themes/
 unzip SomeIcons.zip -d ~/.icons/</code></pre>
-                            </div>
-                        </section>
-
-                        <section id="applying" class="content-section">
-                            <h2><i class="fas fa-check"></i> Applying Themes</h2>
-                            <ul>
-                                <li><strong>Tyron (XFCE):</strong> Settings → Appearance (GTK theme, icons, fonts) and
-                                    Settings → Window Manager (window decorations).</li>
-                                <li><strong>Boro (GNOME):</strong> Settings → Appearance (Background, Style) or GNOME
-                                    Tweaks (Themes, Icons, Shell).</li>
-                                <li><strong>Tyson (Plasma):</strong> System Settings → Global Theme → Apply. Use
-                                    Plasma-specific widgets and KWin settings for effects.</li>
-                                <li><strong>Qt apps on GTK desktops:</strong> configure qt5ct/qt6ct and set the platform
-                                    theme env var.</li>
-                            </ul>
-                        </section>
-
-                        <section id="creating" class="content-section">
-                            <h2><i class="fas fa-tools"></i> Creating a Simple Theme</h2>
-                            <p>Quick guide to create a minimal GTK theme:</p>
-                            <ol>
-                                <li>Create folder <code>~/.themes/MyTheme/gtk-3.0/</code> and place a
-                                    <code>gtk.css</code> with custom rules.
-                                </li>
-                                <li>Add an index.theme file in <code>~/.themes/MyTheme/</code> describing the theme.
-                                </li>
-                                <li>Restart GTK apps or logout/login to test.</li>
-                            </ol>
-                        </section>
-
-                        <section id="troubleshooting" class="content-section">
-                            <h2><i class="fas fa-wrench"></i> Troubleshooting</h2>
-                            <ul>
-                                <li>If icons don't show correctly, clear and update icon cache:
-                                    <code>sudo gtk-update-icon-cache /usr/share/icons/YourTheme</code>.
-                                </li>
-                                <li>If GTK and Qt apps look inconsistent, ensure <code>QT_QPA_PLATFORMTHEME</code> is
-                                    set and qt5ct/qt6ct configured.</li>
-                                <li>For cursor not updating system-wide, run
-                                    <code>sudo update-alternatives --config x-cursor-theme</code> or relogin.
-                                </li>
-                                <li>When Plasma ignores a theme, open System Settings → Global Theme and check if
-                                    components (Plasma, GTK) are applied separately.</li>
-                                <li>For Boro (GNOME), ensure <strong>User Themes</strong> extension is enabled to change
-                                    the Shell theme.</li>
-                            </ul>
-                        </section>
-
-                        <div class="info-box success">
-                            <i class="fas fa-link"></i>
-                            <div>
-                                <strong>See also:</strong> <a href="../customization/">Customization</a>, <a
-                                    href="../tyron/">Tyron (XFCE)</a>, <a href="../tyson/">Tyson (Plasma)</a>, <a
-                                    href="../boro/">Boro (GNOME)</a>.
-                            </div>
-                        </div>
-                    </article>
                 </div>
-            </div>
-        </section>
+              </section>
+
+              <section id="applying" class="content-section">
+                <h2 id="themes-apply-title">
+                  <i class="fas fa-check"></i> Applying Themes
+                </h2>
+                <ul>
+                  <li id="themes-apply-1">
+                    <strong>Tyron (XFCE):</strong> Settings → Appearance (GTK
+                    theme, icons, fonts) and Settings → Window Manager (window
+                    decorations).
+                  </li>
+                  <li id="themes-apply-2">
+                    <strong>Boro (GNOME):</strong> Settings → Appearance
+                    (Background, Style) or GNOME Tweaks (Themes, Icons, Shell).
+                  </li>
+                  <li id="themes-apply-3">
+                    <strong>Tyson (Plasma):</strong> System Settings → Global
+                    Theme → Apply. Use Plasma-specific widgets and KWin settings
+                    for effects.
+                  </li>
+                  <li id="themes-apply-4">
+                    <strong>Qt apps on GTK desktops:</strong> configure
+                    qt5ct/qt6ct and set the platform theme env var.
+                  </li>
+                </ul>
+              </section>
+
+              <section id="creating" class="content-section">
+                <h2 id="themes-create-title">
+                  <i class="fas fa-tools"></i> Creating a Simple Theme
+                </h2>
+                <p id="themes-create-text">
+                  Quick guide to create a minimal GTK theme:
+                </p>
+                <ol>
+                  <li id="themes-create-1">
+                    Create folder <code>~/.themes/MyTheme/gtk-3.0/</code> and
+                    place a <code>gtk.css</code> with custom rules.
+                  </li>
+                  <li id="themes-create-2">
+                    Add an index.theme file in
+                    <code>~/.themes/MyTheme/</code> describing the theme.
+                  </li>
+                  <li id="themes-create-3">
+                    Restart GTK apps or logout/login to test.
+                  </li>
+                </ol>
+              </section>
+
+              <section id="troubleshooting" class="content-section">
+                <h2 id="themes-trouble-title">
+                  <i class="fas fa-wrench"></i> Troubleshooting
+                </h2>
+                <ul>
+                  <li id="themes-trouble-1">
+                    If icons don't show correctly, clear and update icon cache:
+                    <code
+                      >sudo gtk-update-icon-cache
+                      /usr/share/icons/YourTheme</code
+                    >.
+                  </li>
+                  <li id="themes-trouble-2">
+                    If GTK and Qt apps look inconsistent, ensure
+                    <code>QT_QPA_PLATFORMTHEME</code> is set and qt5ct/qt6ct
+                    configured.
+                  </li>
+                  <li id="themes-trouble-3">
+                    For cursor not updating system-wide, run
+                    <code
+                      >sudo update-alternatives --config x-cursor-theme</code
+                    >
+                    or relogin.
+                  </li>
+                  <li id="themes-trouble-4">
+                    When Plasma ignores a theme, open System Settings → Global
+                    Theme and check if components (Plasma, GTK) are applied
+                    separately.
+                  </li>
+                  <li id="themes-trouble-5">
+                    For Boro (GNOME), ensure
+                    <strong>User Themes</strong> extension is enabled to change
+                    the Shell theme.
+                  </li>
+                </ul>
+              </section>
+
+              <div class="info-box success">
+                <i class="fas fa-link"></i>
+                <div>
+                  <strong id="themes-see-also">See also:</strong>
+                  <a href="../customization/"><span id="themes-see-also-custom">Customization</span></a>,
+                  <a href="../tyron/">Tyron (XFCE)</a>,
+                  <a href="../tyson/">Tyson (Plasma)</a>,
+                  <a href="../boro/">Boro (GNOME)</a>.
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
+      <div class="container">
         <div class="container">
-            <div class="container">
-                <p>&copy; 2025 Sergi Perich</p>
-                <p class="legal-links">
-                    <a href="../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../legal/terms.html">Terms of Use</a>
-                </p>
-            </div>
+          <p>&copy; 2025 Sergi Perich</p>
+          <p class="legal-links">
+            <a href="../../legal/privacy.html" id="footer-privacy"
+              >Privacy Policy</a
+            >
+            |
+            <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
+          </p>
         </div>
+      </div>
     </footer>
 
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
@@ -272,6 +434,5 @@ unzip SomeIcons.zip -d ~/.icons/</code></pre>
     <script src="../../js/language-switcher.js"></script>
     <script src="../../js/soplos-ui.js"></script>
     <script src="../../js/main.js"></script>
-</body>
-
+  </body>
 </html>

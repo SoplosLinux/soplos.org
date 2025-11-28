@@ -1801,6 +1801,7 @@ Object.assign(window.LANG_RO, {
     "boro-trouble-a4-4-code": "update-desktop-database",
     "boro-trouble-help-label": "Aveți nevoie de mai mult ajutor?",
     "boro-trouble-help": "Verificați secțiunea de depanare din wiki sau\n întrebați pe forumurile comunității pentru ajutor cu hardware specific.",
+    
     // Customization Page (/wiki/customization/)
     "custom-breadcrumb-home": "Acasă",
     "custom-breadcrumb-wiki": "Wiki",
@@ -1892,6 +1893,73 @@ Object.assign(window.LANG_RO, {
     "custom-trouble-tip": "Testați modificările de temă pe un utilizator local mai întâi înainte de a aplica la nivel de sistem, astfel încât să puteți reveni ușor fără a afecta alți utilizatori.",
     "custom-next-label": "Următorul:",
     "custom-next": "După personalizare, vizitați <a href=\"../tyron/\">ghidul Tyron</a>, <a href=\"../tyson/\">ghidul Tyson</a> sau <a href=\"../boro/\">ghidul Boro</a> pentru sfaturi și capturi de ecran specifice desktop-ului.",
+
+    // Themes Page (/wiki/themes/)
+    "themes-hero-title": "Teme și Aspect",
+    "themes-hero-desc": "Gestionați teme GTK/Qt, pictograme, cursoare și aspectul global pentru Tyron (XFCE), Tyson (Plasma) și Boro (GNOME).",
+    
+    // TOC
+    "themes-toc-title": "Cuprins",
+    "themes-toc-1": "Prezentare Generală",
+    "themes-toc-2": "Teme GTK și Qt",
+    "themes-toc-3": "Teme de Pictograme",
+    "themes-toc-4": "Teme de Cursoare",
+    "themes-toc-5": "Instalare Teme",
+    "themes-toc-6": "Aplicare Teme",
+    "themes-toc-7": "Creare Temă Simplă",
+    "themes-toc-8": "Depanare",
+
+    // Overview
+    "themes-overview-title": "Prezentare Generală",
+    "themes-overview-text": "Personalizarea în Soplos acoperă două stive: GTK (folosit de multe aplicații și XFCE) și Qt (folosit de Plasma și aplicații KDE). În plus, temele de pictograme și cursoare influențează aspectul general. Tyron (XFCE) și Boro (GNOME) folosesc teme bazate pe GTK; Tyson (Plasma) folosește Qt și teme globale Plasma.",
+
+    // GTK & Qt
+    "themes-gtk-title": "Teme GTK și Qt",
+    "themes-gtk-text": "Temele GTK afectează aplicațiile GTK2/GTK3/GTK4. Aplicațiile Qt pe XFCE pot respecta tema GTK via qt5ct sau qt6ct. Pe Plasma, folosiți teme native Qt/Plasma.",
+    "themes-gtk-1": "<strong>XFCE (Tyron):</strong> Temă GTK + motor GTK controlează majoritatea aplicațiilor.",
+    "themes-gtk-2": "<strong>GNOME (Boro):</strong> Temă GTK (libadwaita/GTK4) controlează aplicațiile. Folosiți GNOME Tweaks pentru teme GTK3 vechi.",
+    "themes-gtk-3": "<strong>Plasma (Tyson):</strong> Folosiți Setări de Sistem → Temă Globală și stil Plasma pentru vizualuri Qt consistente.",
+    "themes-gtk-4": "<strong>Aplicații Qt pe XFCE:</strong> instalați și configurați <code>qt5ct</code> sau <code>qt6ct</code> și setați variabila de mediu <code>QT_QPA_PLATFORMTHEME=qt5ct</code> pentru un aspect consistent.",
+
+    // Icons
+    "themes-icons-title": "Teme de Pictograme",
+    "themes-icons-text": "Temele de pictograme sunt instalate în <code>/usr/share/icons</code> (sistem) sau <code>~/.icons</code> (utilizator). După copierea pictogramelor, actualizați cache-ul:",
+    "themes-icons-text-2": "În cele din urmă, activați tema de pictograme din setările fiecărui desktop (Tyson: Setări de Sistem → Pictograme; Tyron: Aspect → Pictograme; Boro: GNOME Tweaks → Aspect).",
+
+    // Cursors
+    "themes-cursors-title": "Teme de Cursoare",
+    "themes-cursors-text": "Temele de cursoare urmează aceleași căi ca și pictogramele. Instalați în <code>/usr/share/icons</code> sau <code>~/.icons</code> și selectați în Aspect → Cursoare. Poate fi necesară deconectarea/reconectarea pentru a aplica global.",
+
+    // Installing
+    "themes-install-title": "Instalare Teme",
+    "themes-install-text": "Abordări comune:",
+    "themes-install-1": "<strong>Manager de pachete:</strong> multe teme sunt disponibile via APT (căutați cu <code>apt search theme</code>).",
+    "themes-install-2": "<strong>Instalare manuală:</strong> extrageți în <code>~/.themes</code> (teme GTK/fereastră) sau <code>~/.icons</code> pentru pictograme.",
+    "themes-install-3": "<strong>Instalare la nivel de sistem:</strong> copiați în <code>/usr/share/themes</code> sau <code>/usr/share/icons</code> cu sudo.",
+
+    // Applying
+    "themes-apply-title": "Aplicare Teme",
+    "themes-apply-1": "<strong>Tyron (XFCE):</strong> Setări → Aspect (temă GTK, pictograme, fonturi) și Setări → Manager Ferestre (decorațiuni ferestre).",
+    "themes-apply-2": "<strong>Boro (GNOME):</strong> Setări → Aspect (Fundal, Stil) sau GNOME Tweaks (Teme, Pictograme, Shell).",
+    "themes-apply-3": "<strong>Tyson (Plasma):</strong> Setări de Sistem → Temă Globală → Aplicare. Folosiți widget-uri specifice Plasma și setări KWin pentru efecte.",
+    "themes-apply-4": "<strong>Aplicații Qt pe desktop-uri GTK:</strong> configurați qt5ct/qt6ct și setați variabila de mediu a temei platformei.",
+
+    // Creating
+    "themes-create-title": "Creare Temă Simplă",
+    "themes-create-text": "Ghid rapid pentru a crea o temă GTK minimă:",
+    "themes-create-1": "Creați folderul <code>~/.themes/MyTheme/gtk-3.0/</code> și plasați un <code>gtk.css</code> cu reguli personalizate.",
+    "themes-create-2": "Adăugați un fișier index.theme în <code>~/.themes/MyTheme/</code> descriind tema.",
+    "themes-create-3": "Reporniți aplicațiile GTK sau deconectați-vă/reconectați-vă pentru a testa.",
+
+    // Troubleshooting
+    "themes-trouble-title": "Depanare",
+    "themes-trouble-1": "Dacă pictogramele nu se afișează corect, goliți și actualizați cache-ul de pictograme: <code>sudo gtk-update-icon-cache /usr/share/icons/TemaDvs</code>.",
+    "themes-trouble-2": "Dacă aplicațiile GTK și Qt par inconsistente, asigurați-vă că <code>QT_QPA_PLATFORMTHEME</code> este setat și qt5ct/qt6ct configurat.",
+    "themes-trouble-3": "Pentru cursor care nu se actualizează la nivel de sistem, rulați <code>sudo update-alternatives --config x-cursor-theme</code> sau reconectați-vă.",
+    "themes-trouble-4": "Când Plasma ignoră o temă, deschideți Setări de Sistem → Temă Globală și verificați dacă componentele (Plasma, GTK) sunt aplicate separat.",
+    "themes-trouble-5": "Pentru Boro (GNOME), asigurați-vă că extensia <strong>User Themes</strong> este activată pentru a schimba tema Shell.",
+    "themes-see-also": "Vedeți și:",
+    "themes-see-also-custom": "Personalizare",
 
     // Footer
     "footer-privacy": "Politica de Confidențialitate",
