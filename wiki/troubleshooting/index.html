@@ -94,11 +94,11 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../"><i class="fas fa-home"></i> Home</a>
+                <a href="../../"><i class="fas fa-home"></i> <span id="trouble-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <a href="../">Wiki</a>
+                <a href="../"><span id="trouble-breadcrumb-wiki">Wiki</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Troubleshooting</span>
+                <span class="breadcrumb-current" id="trouble-breadcrumb">Troubleshooting</span>
             </nav>
         </div>
     </div>
@@ -108,8 +108,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-tools"></i> Troubleshooting</h1>
-                    <p>Common solutions to issues you might encounter. If you don't find the answer here, please check
+                    <h1><i class="fas fa-tools"></i> <span id="trouble-hero-title">Troubleshooting</span></h1>
+                    <p id="trouble-hero-desc">Common solutions to issues you might encounter. If you don't find the answer here, please check
                         our Community Forums.</p>
                 </div>
             </div>
@@ -121,166 +121,166 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="trouble-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#install">Installation Issues</a></li>
-                            <li><a href="#boot">Boot Problems</a></li>
-                            <li><a href="#desktop">Desktop Environments</a></li>
-                            <li><a href="#packages">Package Management</a></li>
-                            <li><a href="#hardware">Hardware & Network</a></li>
-                            <li><a href="#graphics">Graphics & Display</a></li>
+                            <li><a href="#install" id="trouble-toc-1">Installation Issues</a></li>
+                            <li><a href="#boot" id="trouble-toc-2">Boot Problems</a></li>
+                            <li><a href="#desktop" id="trouble-toc-3">Desktop Environments</a></li>
+                            <li><a href="#packages" id="trouble-toc-4">Package Management</a></li>
+                            <li><a href="#hardware" id="trouble-toc-5">Hardware & Network</a></li>
+                            <li><a href="#graphics" id="trouble-toc-6">Graphics & Display</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section id="intro" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> Troubleshooting Guide</h2>
-                            <p>Before trying complex fixes, always ensure your system is up to date:</p>
+                            <h2><i class="fas fa-info-circle"></i> <span id="trouble-intro-title">Troubleshooting Guide</span></h2>
+                            <p id="trouble-intro-text">Before trying complex fixes, always ensure your system is up to date:</p>
                             <pre><code>sudo apt update && sudo apt upgrade</code></pre>
                         </section>
 
                         <section id="install" class="content-section">
-                            <h2><i class="fas fa-compact-disc"></i> Installation Issues</h2>
+                            <h2><i class="fas fa-compact-disc"></i> <span id="trouble-install-title">Installation Issues</span></h2>
 
-                            <h3>Calamares Installer Fails</h3>
-                            <p>If the installer crashes with a "Boost.Python" error:</p>
+                            <h3 id="trouble-install-calam-title">Calamares Installer Fails</h3>
+                            <p id="trouble-install-calam-intro">If the installer crashes with a "Boost.Python" error:</p>
                             <ul>
-                                <li><strong>Cause:</strong> Often due to an unstable internet connection during
-                                    installation.</li>
-                                <li><strong>Fix:</strong> Disconnect from the internet (unplug cable/disable WiFi) and
-                                    try installing again. You can update the system <em>after</em> installation.</li>
+                                <li><strong id="trouble-install-calam-cause-label">Cause:</strong> <span id="trouble-install-calam-cause">Often due to an unstable internet connection during
+                                    installation.</span></li>
+                                <li><strong id="trouble-install-calam-fix-label">Fix:</strong> <span id="trouble-install-calam-fix">Disconnect from the internet (unplug cable/disable WiFi) and
+                                    try installing again. You can update the system <em>after</em> installation.</span></li>
                             </ul>
 
-                            <h3>Partitioning Errors</h3>
-                            <p><strong>"Not enough space" or EFI errors:</strong></p>
+                            <h3 id="trouble-install-part-title">Partitioning Errors</h3>
+                            <p id="trouble-install-part-intro"><strong>"Not enough space" or EFI errors:</strong></p>
                             <ul>
-                                <li>Ensure you have disabled <strong>Secure Boot</strong> and <strong>Fast Boot</strong>
+                                <li id="trouble-install-part-1">Ensure you have disabled <strong>Secure Boot</strong> and <strong>Fast Boot</strong>
                                     in BIOS.</li>
-                                <li>If dual-booting, shrink your Windows partition from Windows first.</li>
-                                <li>Create a manual partition table if automatic fails:
+                                <li id="trouble-install-part-2">If dual-booting, shrink your Windows partition from Windows first.</li>
+                                <li id="trouble-install-part-3-intro">Create a manual partition table if automatic fails:
                                     <ul>
-                                        <li><strong>EFI:</strong> 512MB (FAT32, flag: boot/esp)</li>
-                                        <li><strong>Root (/):</strong> Remaining space (BTRFS or EXT4)</li>
+                                        <li id="trouble-install-part-3-efi"><strong>EFI:</strong> 512MB (FAT32, flag: boot/esp)</li>
+                                        <li id="trouble-install-part-3-root"><strong>Root (/):</strong> Remaining space (BTRFS or EXT4)</li>
                                     </ul>
                                 </li>
                             </ul>
                         </section>
 
                         <section id="boot" class="content-section">
-                            <h2><i class="fas fa-power-off"></i> Boot Problems</h2>
+                            <h2><i class="fas fa-power-off"></i> <span id="trouble-boot-title">Boot Problems</span></h2>
 
-                            <h3>GRUB Rescue / Bootloader Missing</h3>
-                            <p>If you can't boot into Soplos after installing Windows or another OS:</p>
+                            <h3 id="trouble-boot-grub-title">GRUB Rescue / Bootloader Missing</h3>
+                            <p id="trouble-boot-grub-intro">If you can't boot into Soplos after installing Windows or another OS:</p>
                             <ol class="step-list">
-                                <li>Boot from your Soplos Live USB.</li>
-                                <li>Install <strong>Boot Repair</strong> (if available) or use the terminal.</li>
-                                <li><strong>Terminal Method:</strong>
+                                <li id="trouble-boot-grub-1">Boot from your Soplos Live USB.</li>
+                                <li id="trouble-boot-grub-2">Install <strong>Boot Repair</strong> (if available) or use the terminal.</li>
+                                <li id="trouble-boot-grub-3"><strong>Terminal Method:</strong>
                                     <pre><code>sudo mount /dev/sdX2 /mnt  # Your root partition
 sudo mount /dev/sdX1 /mnt/boot/efi  # Your EFI partition
 sudo grub-install --boot-directory=/mnt/boot --efi-directory=/mnt/boot/efi /dev/sdX</code></pre>
                                 </li>
                             </ol>
 
-                            <h3>Initramfs Error</h3>
-                            <p>If you drop to an <code>(initramfs)</code> prompt, your file system might have errors:
+                            <h3 id="trouble-boot-initramfs-title">Initramfs Error</h3>
+                            <p id="trouble-boot-initramfs-intro">If you drop to an <code>(initramfs)</code> prompt, your file system might have errors:
                             </p>
                             <pre><code>fsck /dev/sda2 -y</code></pre>
-                            <p>Replace <code>/dev/sda2</code> with your root partition.</p>
+                            <p id="trouble-boot-initramfs-note">Replace <code>/dev/sda2</code> with your root partition.</p>
                         </section>
 
                         <section id="desktop" class="content-section">
-                            <h2><i class="fas fa-desktop"></i> Desktop Environment Specifics</h2>
+                            <h2><i class="fas fa-desktop"></i> <span id="trouble-desktop-title">Desktop Environment Specifics</span></h2>
 
-                            <h3>Boro (GNOME)</h3>
+                            <h3 id="trouble-desktop-boro-title">Boro (GNOME)</h3>
                             <div class="info-box info">
                                 <i class="fas fa-info-circle"></i>
                                 <div>
-                                    <strong>Boro</strong> uses GNOME, which relies heavily on extensions.
+                                    <strong id="trouble-desktop-boro-note">Boro</strong> <span id="trouble-desktop-boro-desc"></span>uses GNOME, which relies heavily on extensions.</span>
                                 </div>
                             </div>
 
-                            <h4>Extensions Crashing</h4>
-                            <p>If the shell freezes or extensions act up:</p>
+                            <h4 id="trouble-desktop-boro-ext-title">Extensions Crashing</h4>
+                            <p id="trouble-desktop-boro-ext-intro">If the shell freezes or extensions act up:</p>
                             <pre><code># Reset GNOME extensions
 dconf reset -f /org/gnome/shell/extensions/</code></pre>
 
-                            <h4>Wayland vs X11</h4>
-                            <p>If you have issues with <strong>Screen Sharing</strong> (Discord, Zoom) or
+                            <h4 id="trouble-desktop-boro-wayland-title">Wayland vs X11</h4>
+                            <p id="trouble-desktop-boro-wayland-intro">If you have issues with <strong>Screen Sharing</strong> (Discord, Zoom) or
                                 <strong>Gaming</strong>:
                             </p>
                             <ol>
-                                <li>Log out.</li>
-                                <li>Click your user name.</li>
-                                <li>Click the gear icon <i class="fas fa-cog"></i> in the bottom right.</li>
-                                <li>Select <strong>"GNOME on Xorg"</strong>.</li>
+                                <li id="trouble-desktop-boro-wayland-1">Log out.</li>
+                                <li id="trouble-desktop-boro-wayland-2">Click your user name.</li>
+                                <li id="trouble-desktop-boro-wayland-3">Click the gear icon <i class="fas fa-cog"></i> in the bottom right.</li>
+                                <li id="trouble-desktop-boro-wayland-4">Select <strong>"GNOME on Xorg"</strong>.</li>
                             </ol>
 
-                            <h3>Tyron (XFCE)</h3>
-                            <h4>Panel Missing</h4>
-                            <p>If your taskbar disappears:</p>
+                            <h3 id="trouble-desktop-tyron-title">Tyron (XFCE)</h3>
+                            <h4 id="trouble-desktop-tyron-panel-title">Panel Missing</h4>
+                            <p id="trouble-desktop-tyron-panel-intro">If your taskbar disappears:</p>
                             <pre><code>xfce4-panel -r</code></pre>
 
-                            <h3>Tyson (KDE Plasma)</h3>
-                            <h4>Reset Configuration</h4>
-                            <p>If Plasma becomes unstable:</p>
+                            <h3 id="trouble-desktop-tyson-title">Tyson (KDE Plasma)</h3>
+                            <h4 id="trouble-desktop-tyson-reset-title">Reset Configuration</h4>
+                            <p id="trouble-desktop-tyson-reset-intro">If Plasma becomes unstable:</p>
                             <pre><code>rm -rf ~/.config/plasma*
 kquitapp5 plasmashell && kstart5 plasmashell</code></pre>
                         </section>
 
                         <section id="packages" class="content-section">
-                            <h2><i class="fas fa-box-open"></i> Package Management Errors</h2>
+                            <h2><i class="fas fa-box-open"></i> <span id="trouble-packages-title">Package Management Errors</span></h2>
 
-                            <h3>"Could not get lock"</h3>
-                            <p>Error: <code>Could not get lock /var/lib/dpkg/lock</code></p>
-                            <p>This means another process (like an auto-updater) is using APT. If you are sure nothing
+                            <h3 id="trouble-packages-lock-title">"Could not get lock"</h3>
+                            <p id="trouble-packages-lock-error"><span>Error:</span> <code>Could not get lock /var/lib/dpkg/lock</code></p>
+                            <p id="trouble-packages-lock-intro">This means another process (like an auto-updater) is using APT. If you are sure nothing
                                 is running:</p>
                             <pre><code>sudo rm /var/lib/apt/lists/lock
 sudo rm /var/cache/apt/archives/lock
 sudo rm /var/lib/dpkg/lock*
 sudo dpkg --configure -a</code></pre>
 
-                            <h3>Broken Packages</h3>
-                            <p>If an installation failed halfway:</p>
+                            <h3 id="trouble-packages-broken-title">Broken Packages</h3>
+                            <p id="trouble-packages-broken-intro">If an installation failed halfway:</p>
                             <pre><code>sudo apt --fix-broken install</code></pre>
                         </section>
 
                         <section id="hardware" class="content-section">
-                            <h2><i class="fas fa-microchip"></i> Hardware & Network</h2>
+                            <h2><i class="fas fa-microchip"></i> <span id="trouble-hardware-title">Hardware & Network</span></h2>
 
-                            <h3>WiFi Not Detected</h3>
+                            <h3 id="trouble-hardware-wifi-title">WiFi Not Detected</h3>
                             <ol class="step-list">
-                                <li>Connect via Ethernet or USB Tethering.</li>
-                                <li>Open <strong>Soplos Welcome</strong> -> <strong>Drivers</strong>.</li>
-                                <li>Install proprietary drivers (Broadcom, Realtek).</li>
+                                <li id="trouble-hardware-wifi-1">Connect via Ethernet or USB Tethering.</li>
+                                <li id="trouble-hardware-wifi-2">Open <strong>Soplos Welcome</strong> -> <strong>Drivers</strong>.</li>
+                                <li id="trouble-hardware-wifi-3">Install proprietary drivers (Broadcom, Realtek).</li>
                             </ol>
 
-                            <h3>Bluetooth Not Working</h3>
-                            <p>Ensure the service is running:</p>
+                            <h3 id="trouble-hardware-bluetooth-title">Bluetooth Not Working</h3>
+                            <p id="trouble-hardware-bluetooth-intro">Ensure the service is running:</p>
                             <pre><code>sudo systemctl enable --now bluetooth</code></pre>
-                            <p>If devices don't connect, install <code>blueman</code> for a better manager:</p>
+                            <p id="trouble-hardware-bluetooth-alt">If devices don't connect, install <code>blueman</code> for a better manager:</p>
                             <pre><code>sudo apt install blueman</code></pre>
 
-                            <h3>Printers</h3>
-                            <p>Access the CUPS web interface for advanced management:</p>
+                            <h3 id="trouble-hardware-printers-title">Printers</h3>
+                            <p id="trouble-hardware-printers-intro">Access the CUPS web interface for advanced management:</p>
                             <ul>
-                                <li>Open browser: <a href="http://localhost:631"
+                                <li id="trouble-hardware-printers-1">Open browser: <a href="http://localhost:631"
                                         target="_blank">http://localhost:631</a></li>
                             </ul>
                         </section>
 
                         <section id="graphics" class="content-section">
-                            <h2><i class="fas fa-tv"></i> Graphics & Display</h2>
+                            <h2><i class="fas fa-tv"></i> <span id="trouble-graphics-title">Graphics & Display</span></h2>
 
-                            <h3>Screen Tearing</h3>
+                            <h3 id="trouble-graphics-tearing-title">Screen Tearing</h3>
                             <ul>
-                                <li><strong>Boro (GNOME):</strong> Usually tear-free on Wayland. On X11, no manual
+                                <li id="trouble-graphics-tearing-boro"><strong>Boro (GNOME):</strong> Usually tear-free on Wayland. On X11, no manual
                                     setting is needed.</li>
-                                <li><strong>Tyron (XFCE):</strong> Window Manager Tweaks -> Compositor -> Enable
+                                <li id="trouble-graphics-tearing-tyron"><strong>Tyron (XFCE):</strong> Window Manager Tweaks -> Compositor -> Enable
                                     "Synchronize drawing to the vertical blank".</li>
-                                <li><strong>Tyson (Plasma):</strong> Display Configuration -> Ensure Refresh Rate is
+                                <li id="trouble-graphics-tearing-tyson"><strong>Tyson (Plasma):</strong> Display Configuration -> Ensure Refresh Rate is
                                     maxed.</li>
-                                <li><strong>NVIDIA:</strong> Open NVIDIA Settings -> "Force Full Composition Pipeline".
+                                <li id="trouble-graphics-tearing-nvidia"><strong>NVIDIA:</strong> Open NVIDIA Settings -> "Force Full Composition Pipeline".
                                 </li>
                             </ul>
                         </section>
@@ -295,8 +295,8 @@ sudo dpkg --configure -a</code></pre>
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../legal/terms.html">Terms of Use</a>
+                    <a href="../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
@@ -305,8 +305,8 @@ sudo dpkg --configure -a</code></pre>
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../../js/logger.js"></script>
-    <!-- <script src="../../js/language-loader.js"></script> -->
-    <!-- <script src="../../js/language-switcher.js"></script> -->
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
     <script src="../../js/soplos-ui.js"></script>
     <script src="../../js/main.js"></script>
 </body>
