@@ -93,7 +93,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Tyron Apps</span>
+                <span class="breadcrumb-current" id="tyron-apps-breadcrumb">Tyron Apps</span>
             </nav>
         </div>
     </div>
@@ -104,8 +104,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-th"></i> Tyron Applications</h1>
-                    <p>Exclusive tools developed for Soplos Tyron (XFCE), designed to enhance your desktop experience
+                    <h1><i class="fas fa-th"></i> <span id="tyron-apps-hero-title">Tyron Applications</span></h1>
+                    <p id="tyron-apps-hero-desc">Exclusive tools developed for Soplos Tyron (XFCE), designed to enhance your desktop experience
                         and customization.</p>
                 </div>
             </div>
@@ -119,23 +119,23 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="tyron-apps-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#docklike">Soplos Docklike</a></li>
-                            <li><a href="#grub">Soplos GRUB Editor</a></li>
-                            <li><a href="#plymouth">Soplos Plymouth Manager</a></li>
-                            <li><a href="#repo">Soplos Repo Selector</a></li>
-                            <li><a href="#theme">Soplos Theme Manager</a></li>
-                            <li><a href="#welcome">Soplos Welcome</a></li>
-                            <li><a href="#welcomelive">Soplos Welcome Live</a></li>
+                            <li><a href="#docklike" id="tyron-apps-toc-docklike">Soplos Docklike</a></li>
+                            <li><a href="#grub" id="tyron-apps-toc-grub">Soplos GRUB Editor</a></li>
+                            <li><a href="#plymouth" id="tyron-apps-toc-plymouth">Soplos Plymouth Manager</a></li>
+                            <li><a href="#repo" id="tyron-apps-toc-repo">Soplos Repo Selector</a></li>
+                            <li><a href="#theme" id="tyron-apps-toc-theme">Soplos Theme Manager</a></li>
+                            <li><a href="#welcome" id="tyron-apps-toc-welcome">Soplos Welcome</a></li>
+                            <li><a href="#welcomelive" id="tyron-apps-toc-welcomelive">Soplos Welcome Live</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section class="content-section">
-                            <h2><i class="fas fa-star"></i> Exclusive Applications for Tyron</h2>
-                            <p>The Tyron (XFCE) edition includes a set of tools developed by the Soplos Linux team to
+                            <h2><i class="fas fa-star"></i> <span id="tyron-apps-intro-title">Exclusive Applications for Tyron</span></h2>
+                            <p id="tyron-apps-intro-desc">The Tyron (XFCE) edition includes a set of tools developed by the Soplos Linux team to
                                 facilitate system configuration and customization.</p>
                         </section>
 
@@ -144,16 +144,16 @@
                                 <div class="tool-icon">
                                     <img src="../../../images/icons/com.soplos.docklike.png" alt="Soplos Docklike Icon">
                                 </div>
-                                <h4>Soplos Docklike</h4>
-                                <p>A modern dock for XFCE inspired by macOS. Features include auto-hide, icon
+                                <h4 id="tyron-apps-docklike-title">Soplos Docklike</h4>
+                                <p id="tyron-apps-docklike-desc">A modern dock for XFCE inspired by macOS. Features include auto-hide, icon
                                     magnification, and
                                     customizable themes.</p>
                                 <ul>
-                                    <li>Auto-hide functionality</li>
-                                    <li>Icon zoom on hover</li>
-                                    <li>Customizable position and size</li>
+                                    <li id="tyron-apps-docklike-feature-1">Auto-hide functionality</li>
+                                    <li id="tyron-apps-docklike-feature-2">Icon zoom on hover</li>
+                                    <li id="tyron-apps-docklike-feature-3">Customizable position and size</li>
                                 </ul>
-                                <a href="../soplos-docklike/" class="tool-link">Learn More <i
+                                <a href="../soplos-docklike/" class="tool-link" id="tyron-apps-docklike-link">Learn More <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -162,16 +162,16 @@
                                     <img src="../../../images/icons/com.soplos.grubeditor.png"
                                         alt="Soplos GRUB Editor Icon">
                                 </div>
-                                <h4>Soplos GRUB Editor</h4>
-                                <p>Graphical interface to customize the GRUB bootloader. Easily change boot order,
+                                <h4 id="tyron-apps-grub-title">Soplos GRUB Editor</h4>
+                                <p id="tyron-apps-grub-desc">Graphical interface to customize the GRUB bootloader. Easily change boot order,
                                     themes, and
                                     timeout settings.</p>
                                 <ul>
-                                    <li>Change default boot entry</li>
-                                    <li>Apply custom GRUB themes</li>
-                                    <li>Set boot timeout</li>
+                                    <li id="tyron-apps-grub-feature-1">Change default boot entry</li>
+                                    <li id="tyron-apps-grub-feature-2">Apply custom GRUB themes</li>
+                                    <li id="tyron-apps-grub-feature-3">Set boot timeout</li>
                                 </ul>
-                                <a href="../soplos-grub-editor/" class="tool-link">Learn more <i
+                                <a href="../soplos-grub-editor/" class="tool-link" id="tyron-apps-grub-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -180,16 +180,16 @@
                                     <img src="../../../images/icons/com.soplos.plymouthmanager.png"
                                         alt="Soplos Plymouth Manager Icon">
                                 </div>
-                                <h4>Soplos Plymouth Manager</h4>
-                                <p>Manage and customize Plymouth boot splash screens. Preview and apply themes with a
+                                <h4 id="tyron-apps-plymouth-title">Soplos Plymouth Manager</h4>
+                                <p id="tyron-apps-plymouth-desc">Manage and customize Plymouth boot splash screens. Preview and apply themes with a
                                     simple
                                     interface.</p>
                                 <ul>
-                                    <li>Preview Plymouth themes</li>
-                                    <li>Apply custom splash screens</li>
-                                    <li>Backup and restore settings</li>
+                                    <li id="tyron-apps-plymouth-feature-1">Preview Plymouth themes</li>
+                                    <li id="tyron-apps-plymouth-feature-2">Apply custom splash screens</li>
+                                    <li id="tyron-apps-plymouth-feature-3">Backup and restore settings</li>
                                 </ul>
-                                <a href="../soplos-plymouth-manager/" class="tool-link">Learn more <i
+                                <a href="../soplos-plymouth-manager/" class="tool-link" id="tyron-apps-plymouth-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -198,16 +198,16 @@
                                     <img src="../../../images/icons/com.soplos.reposelector.png"
                                         alt="Soplos Repo Selector Icon">
                                 </div>
-                                <h4>Soplos Repo Selector</h4>
-                                <p>Select and configure software repositories intuitively. Add official and third-party
+                                <h4 id="tyron-apps-repo-title">Soplos Repo Selector</h4>
+                                <p id="tyron-apps-repo-desc">Select and configure software repositories intuitively. Add official and third-party
                                     repos
                                     with ease.</p>
                                 <ul>
-                                    <li>Add/remove repositories</li>
-                                    <li>Enable/disable sources</li>
-                                    <li>Update package lists</li>
+                                    <li id="tyron-apps-repo-feature-1">Add/remove repositories</li>
+                                    <li id="tyron-apps-repo-feature-2">Enable/disable sources</li>
+                                    <li id="tyron-apps-repo-feature-3">Update package lists</li>
                                 </ul>
-                                <a href="../soplos-repo-selector/" class="tool-link">Learn more <i
+                                <a href="../soplos-repo-selector/" class="tool-link" id="tyron-apps-repo-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -216,16 +216,16 @@
                                     <img src="../../../images/icons/com.soplos.thememanager.png"
                                         alt="Soplos Theme Manager Icon">
                                 </div>
-                                <h4>Soplos Theme Manager</h4>
-                                <p>Apply and manage GTK themes, icons, and cursors for XFCE. Browse and install themes
+                                <h4 id="tyron-apps-theme-title">Soplos Theme Manager</h4>
+                                <p id="tyron-apps-theme-desc">Apply and manage GTK themes, icons, and cursors for XFCE. Browse and install themes
                                     from
                                     online sources.</p>
                                 <ul>
-                                    <li>Install GTK themes</li>
-                                    <li>Change icon sets</li>
-                                    <li>Customize cursor themes</li>
+                                    <li id="tyron-apps-theme-feature-1">Install GTK themes</li>
+                                    <li id="tyron-apps-theme-feature-2">Change icon sets</li>
+                                    <li id="tyron-apps-theme-feature-3">Customize cursor themes</li>
                                 </ul>
-                                <a href="../soplos-theme-manager/" class="tool-link">Learn more <i
+                                <a href="../soplos-theme-manager/" class="tool-link" id="tyron-apps-theme-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -233,16 +233,16 @@
                                 <div class="tool-icon">
                                     <img src="../../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome Icon">
                                 </div>
-                                <h4>Soplos Welcome</h4>
-                                <p>Welcome assistant that guides you through first steps with Tyron. Includes tutorials
+                                <h4 id="tyron-apps-welcome-title">Soplos Welcome</h4>
+                                <p id="tyron-apps-welcome-desc">Welcome assistant that guides you through first steps with Tyron. Includes tutorials
                                     and
                                     system info.</p>
                                 <ul>
-                                    <li>System overview</li>
-                                    <li>Basic configuration tips</li>
-                                    <li>Links to documentation</li>
+                                    <li id="tyron-apps-welcome-feature-1">System overview</li>
+                                    <li id="tyron-apps-welcome-feature-2">Basic configuration tips</li>
+                                    <li id="tyron-apps-welcome-feature-3">Links to documentation</li>
                                 </ul>
-                                <a href="../soplos-welcome/" class="tool-link">Learn more <i
+                                <a href="../soplos-welcome/" class="tool-link" id="tyron-apps-welcome-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -251,16 +251,16 @@
                                     <img src="../../../images/icons/com.soplos.welcomelive.png"
                                         alt="Soplos Welcome Live Icon">
                                 </div>
-                                <h4>Soplos Welcome Live</h4>
-                                <p>Special version of the welcome assistant for Tyron live sessions. Optimized for demo
+                                <h4 id="tyron-apps-welcomelive-title">Soplos Welcome Live</h4>
+                                <p id="tyron-apps-welcomelive-desc">Special version of the welcome assistant for Tyron live sessions. Optimized for demo
                                     and
                                     testing.</p>
                                 <ul>
-                                    <li>Live session info</li>
-                                    <li>Installation prompts</li>
-                                    <li>System requirements check</li>
+                                    <li id="tyron-apps-welcomelive-feature-1">Live session info</li>
+                                    <li id="tyron-apps-welcomelive-feature-2">Installation prompts</li>
+                                    <li id="tyron-apps-welcomelive-feature-3">System requirements check</li>
                                 </ul>
-                                <a href="../soplos-welcome-live/" class="tool-link">Learn more <i
+                                <a href="../soplos-welcome-live/" class="tool-link" id="tyron-apps-welcomelive-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -275,8 +275,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
