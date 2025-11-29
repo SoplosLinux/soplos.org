@@ -2093,9 +2093,13 @@ Object.assign(window.LANG_IT, {
     "community-events-release-1": "<strong>Dicembre 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Prossimamente:</strong> Boro 1.0.0 Alpha (Data da definire)",
     "community-donate-title": "Sponsorizzazione",
-    "community-donate-text": "Soplos Linux è gratuito, ma i server e il caffè no. Le tue donazioni aiutano a mantenere vivo il progetto.",
-    "community-donate-btn": "Dona via PayPal",
-    "community-donate-note": "<small>Tutte le donazioni vanno direttamente ai costi del server e alle ricompense per lo sviluppo.</small>",
+    "community-donate-text": "Soplos Linux è gratuito, ma i server e il caffè non lo sono. Le tue donazioni aiutano a mantenere il progetto vivo.",
+    "community-donate-btn": "Dona tramite PayPal",
+    "community-donate-note": "<small>Tutte le donazioni vanno direttamente ai costi del server e ai premi di sviluppo.</small>",
+
+    // Home - Soplos Welcome 2.0
+    "home-welcome-title": "In Sviluppo",
+    "home-welcome-text": "<strong>Lavoro in Corso:</strong> Soplos Welcome 2.0",
 
     // Footer
     "footer-privacy": "Politica sulla Privacy",

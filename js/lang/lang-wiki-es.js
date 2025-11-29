@@ -2097,6 +2097,10 @@ Object.assign(window.LANG_ES, {
     "community-donate-btn": "Donar vía PayPal",
     "community-donate-note": "<small>Todas las donaciones van directamente a costos de servidor y recompensas de desarrollo.</small>",
 
+    // Home - Soplos Welcome 2.0
+    "home-welcome-title": "En Desarrollo",
+    "home-welcome-text": "<strong>Trabajo en Progreso:</strong> Soplos Welcome 2.0",
+
     // Footer
     "footer-privacy": "Política de Privacidad",
     "footer-terms": "Términos de Uso"
