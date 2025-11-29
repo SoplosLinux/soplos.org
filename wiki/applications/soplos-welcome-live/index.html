@@ -89,11 +89,11 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../"><i class="fas fa-home"></i> Home</a>
+                <a href="../../../"><i class="fas fa-home"></i> <span id="welcome-live-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <a href="../../">Wiki</a>
+                <a href="../../"><span id="welcome-live-breadcrumb-wiki">Wiki</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Soplos Welcome Live</span>
+                <span class="breadcrumb-current" id="welcome-live-breadcrumb">Soplos Welcome Live</span>
             </nav>
         </div>
     </div>
@@ -104,8 +104,8 @@
             <div class="container">
                 <div class="hero-content">
                     <h1><img src="../../../images/icons/com.soplos.welcomelive.png" alt="Icon"
-                            style="height: 48px; vertical-align: middle; margin-right: 10px;"> Soplos Welcome Live</h1>
-                    <p>The essential guide for your live session. Install Soplos Linux or explore the system.</p>
+                            style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span id="welcome-live-hero-title">Soplos Welcome Live</span></h1>
+                    <p id="welcome-live-hero-desc">The essential guide for your live session. Install Soplos Linux or explore the system.</p>
                 </div>
             </div>
         </section>
@@ -116,56 +116,56 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="welcome-live-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#overview">Overview</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#screenshots">Screenshots</a></li>
+                            <li><a href="#overview" id="welcome-live-toc-1">Overview</a></li>
+                            <li><a href="#features" id="welcome-live-toc-2">Features</a></li>
+                            <li><a href="#screenshots" id="welcome-live-toc-3">Screenshots</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section class="content-section" id="overview">
-                            <h2>Overview</h2>
-                            <p>Soplos Welcome Live is the specialized welcome screen for the Soplos Linux Live
+                            <h2><span id="welcome-live-overview-title">Overview</span></h2>
+                            <p id="welcome-live-overview-p1">Soplos Welcome Live is the specialized welcome screen for the Soplos Linux Live
                                 environment. It helps users navigate the live system, perform the installation, or
                                 recover an existing system.</p>
-                            <p>Beyond just a welcome screen, it includes powerful tools for system administrators and
+                            <p id="welcome-live-overview-p2">Beyond just a welcome screen, it includes powerful tools for system administrators and
                                 advanced users, such as a robust CHROOT recovery environment and intelligent partition
                                 detection.</p>
                         </section>
 
                         <section class="content-section" id="features">
-                            <h2>Key Features</h2>
+                            <h2><span id="welcome-live-features-title">Key Features</span></h2>
                             <ul>
-                                <li><strong>Direct Installation:</strong> Seamless integration with the Calamares
-                                    installer for a smooth setup.</li>
-                                <li><strong>System Recovery:</strong> Advanced CHROOT tools to recover broken systems,
-                                    with intelligent partition detection.</li>
-                                <li><strong>Language Configuration:</strong> Automatically configures the system
-                                    language and keyboard layout based on your selection.</li>
-                                <li><strong>XDG Folder Migration:</strong> Smart migration of user folders (Documents,
-                                    Downloads, etc.) when changing languages.</li>
-                                <li><strong>NumLock Management:</strong> Control NumLock state for the live session and
-                                    the installed system.</li>
-                                <li><strong>GParted Integration:</strong> Quick access to partition management tools for
-                                    disk preparation.</li>
+                                <li><strong id="welcome-live-feat-1-title">Direct Installation:</strong> <span id="welcome-live-feat-1-desc">Seamless integration with the Calamares
+                                    installer for a smooth setup.</span></li>
+                                <li><strong id="welcome-live-feat-2-title">System Recovery:</strong> <span id="welcome-live-feat-2-desc">Advanced CHROOT tools to recover broken systems,
+                                    with intelligent partition detection.</span></li>
+                                <li><strong id="welcome-live-feat-3-title">Language Configuration:</strong> <span id="welcome-live-feat-3-desc">Automatically configures the system
+                                    language and keyboard layout based on your selection.</span></li>
+                                <li><strong id="welcome-live-feat-4-title">XDG Folder Migration:</strong> <span id="welcome-live-feat-4-desc">Smart migration of user folders (Documents,
+                                    Downloads, etc.) when changing languages.</span></li>
+                                <li><strong id="welcome-live-feat-5-title">NumLock Management:</strong> <span id="welcome-live-feat-5-desc">Control NumLock state for the live session and
+                                    the installed system.</span></li>
+                                <li><strong id="welcome-live-feat-6-title">GParted Integration:</strong> <span id="welcome-live-feat-6-desc">Quick access to partition management tools for
+                                    disk preparation.</span></li>
                             </ul>
                         </section>
 
                         <section class="content-section" id="screenshots">
-                            <h2>Screenshots</h2>
+                            <h2><span id="welcome-live-screenshots-title">Screenshots</span></h2>
                             <div class="gallery-grid">
                                 <figure>
                                     <img src="../../../images/Tyron/welcome-live/001-welcome-live.png"
                                         alt="Soplos Welcome Live on Tyron">
-                                    <figcaption>Soplos Welcome Live (Tyron)</figcaption>
+                                    <figcaption id="welcome-live-screenshot-1">Soplos Welcome Live (Tyron)</figcaption>
                                 </figure>
                                 <figure>
                                     <img src="../../../images/Tyson/welcome-live/001-welcome-live.png"
                                         alt="Soplos Welcome Live on Tyson">
-                                    <figcaption>Soplos Welcome Live (Tyson)</figcaption>
+                                    <figcaption id="welcome-live-screenshot-2">Soplos Welcome Live (Tyson)</figcaption>
                                 </figure>
                             </div>
                         </section>
@@ -180,8 +180,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
