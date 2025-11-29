@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">API</span>
+                <span class="breadcrumb-current" id="api-breadcrumb">API</span>
             </nav>
         </div>
     </div>
@@ -107,8 +107,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-code"></i> API Documentation</h1>
-                    <p>Technical documentation for Soplos Linux internal APIs and tools.</p>
+                    <h1><i class="fas fa-code"></i> <span id="api-hero-title">API Documentation</span></h1>
+                    <p id="api-hero-desc">Technical documentation for Soplos Linux internal APIs and tools.</p>
                 </div>
             </div>
         </section>
@@ -119,67 +119,67 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="api-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#overview">Overview</a></li>
-                            <li><a href="#tools">Tool APIs</a></li>
-                            <li><a href="#apps">Application APIs</a></li>
-                            <li><a href="#future">Future Documentation</a></li>
+                            <li><a href="#overview" id="api-toc-overview">Overview</a></li>
+                            <li><a href="#tools" id="api-toc-tools">Tool APIs</a></li>
+                            <li><a href="#apps" id="api-toc-apps">Application APIs</a></li>
+                            <li><a href="#future" id="api-toc-future">Future Documentation</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section id="overview" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
-                            <p>This section provides documentation for the internal APIs used by Soplos Linux tools and
+                            <h2><i class="fas fa-info-circle"></i> <span id="api-overview-title">Overview</span></h2>
+                            <p id="api-overview-desc">This section provides documentation for the internal APIs used by Soplos Linux tools and
                                 applications. Most of these are Python-based and designed for internal use by the Core
                                 Team.</p>
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 <div>
-                                    <strong>Note:</strong> These APIs are primarily for internal infrastructure. They
-                                    may change without notice between releases.
+                                    <strong id="api-note-label">Note:</strong> <span id="api-note-text">These APIs are primarily for internal infrastructure. They
+                                    may change without notice between releases.</span>
                                 </div>
                             </div>
                         </section>
 
                         <section id="tools" class="content-section">
-                            <h2><i class="fas fa-toolbox"></i> Build Tool APIs</h2>
-                            <p>The Soplos build infrastructure exposes several internal Python modules:</p>
+                            <h2><i class="fas fa-toolbox"></i> <span id="api-tools-title">Build Tool APIs</span></h2>
+                            <p id="api-tools-intro">The Soplos build infrastructure exposes several internal Python modules:</p>
                             <ul>
-                                <li><strong>soplos_packager:</strong> Python API for creating and manipulating
-                                    <code>.deb</code> packages programmatically.</li>
-                                <li><strong>soplos_repo:</strong> Repository management interface for package indexing,
-                                    signing, and metadata generation.</li>
-                                <li><strong>soplos_iso:</strong> Core API for ISO image creation, filesystem assembly,
-                                    and live environment configuration.</li>
+                                <li><strong id="api-tools-packager-label">soplos_packager:</strong> <span id="api-tools-packager-desc">Python API for creating and manipulating
+                                    <code>.deb</code> packages programmatically.</span></li>
+                                <li><strong id="api-tools-repo-label">soplos_repo:</strong> <span id="api-tools-repo-desc">Repository management interface for package indexing,
+                                    signing, and metadata generation.</span></li>
+                                <li><strong id="api-tools-iso-label">soplos_iso:</strong> <span id="api-tools-iso-desc">Core API for ISO image creation, filesystem assembly,
+                                    and live environment configuration.</span></li>
                             </ul>
-                            <p>Detailed API documentation for these modules is maintained internally and will be
+                            <p id="api-tools-outro">Detailed API documentation for these modules is maintained internally and will be
                                 published when stabilized.</p>
                         </section>
 
                         <section id="apps" class="content-section">
-                            <h2><i class="fas fa-window-restore"></i> Application APIs</h2>
-                            <p>Soplos-specific applications expose APIs for system integration:</p>
+                            <h2><i class="fas fa-window-restore"></i> <span id="api-apps-title">Application APIs</span></h2>
+                            <p id="api-apps-intro">Soplos-specific applications expose APIs for system integration:</p>
                             <ul>
-                                <li><strong>Soplos Welcome:</strong> Backend modules for the welcome screen, including
-                                    system detection and post-install configuration.</li>
-                                <li><strong>Soplos Settings:</strong> Qt/Python API for unified system settings
-                                    management across desktop environments.</li>
-                                <li><strong>Soplos Updater:</strong> Update notification and package upgrade API.</li>
+                                <li><strong id="api-apps-welcome-label">Soplos Welcome:</strong> <span id="api-apps-welcome-desc">Backend modules for the welcome screen, including
+                                    system detection and post-install configuration.</span></li>
+                                <li><strong id="api-apps-settings-label">Soplos Settings:</strong> <span id="api-apps-settings-desc">Qt/Python API for unified system settings
+                                    management across desktop environments.</span></li>
+                                <li><strong id="api-apps-updater-label">Soplos Updater:</strong> <span id="api-apps-updater-desc">Update notification and package upgrade API.</span></li>
                             </ul>
                         </section>
 
                         <section id="future" class="content-section">
-                            <h2><i class="fas fa-rocket"></i> Future Documentation</h2>
-                            <p>Comprehensive API documentation, including:</p>
+                            <h2><i class="fas fa-rocket"></i> <span id="api-future-title">Future Documentation</span></h2>
+                            <p id="api-future-intro">Comprehensive API documentation, including:</p>
                             <ul>
-                                <li>Python module references with examples</li>
-                                <li>DBus interfaces for desktop integration</li>
-                                <li>CLI tool scripting guides</li>
+                                <li id="api-future-list-1">Python module references with examples</li>
+                                <li id="api-future-list-2">DBus interfaces for desktop integration</li>
+                                <li id="api-future-list-3">CLI tool scripting guides</li>
                             </ul>
-                            <p>Will be published as part of the upcoming <strong>Soplos Linux Developer Kit</strong>.
+                            <p id="api-future-outro">Will be published as part of the upcoming <strong>Soplos Linux Developer Kit</strong>.
                             </p>
                         </section>
 
@@ -194,8 +194,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
@@ -204,8 +204,8 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../../../js/logger.js"></script>
-    <!-- <script src="../../../js/language-loader.js"></script> -->
-    <!-- <script src="../../../js/language-switcher.js"></script> -->
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
     <script src="../../../js/soplos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
