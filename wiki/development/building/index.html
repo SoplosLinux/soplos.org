@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Building</span>
+                <span class="breadcrumb-current" id="building-breadcrumb">Building</span>
             </nav>
         </div>
     </div>
@@ -107,8 +107,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-hammer"></i> Building from Source</h1>
-                    <p>Learn how to compile the kernel and build the Soplos Linux ISO from scratch.</p>
+                    <h1><i class="fas fa-hammer"></i> <span id="building-hero-title">Building from Source</span></h1>
+                    <p id="building-hero-desc">Learn how to compile the kernel and build the Soplos Linux ISO from scratch.</p>
                 </div>
             </div>
         </section>
@@ -119,74 +119,74 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="building-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#overview">Overview</a></li>
-                            <li><a href="#tools">Soplos Tools</a></li>
-                            <li><a href="#kernel">Kernel Compilation</a></li>
-                            <li><a href="#iso">ISO Builder</a></li>
+                            <li><a href="#overview" id="building-toc-overview">Overview</a></li>
+                            <li><a href="#tools" id="building-toc-tools">Soplos Tools</a></li>
+                            <li><a href="#kernel" id="building-toc-kernel">Kernel Compilation</a></li>
+                            <li><a href="#iso" id="building-toc-iso">ISO Builder</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section id="overview" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
-                            <p>Soplos Linux is built using a set of custom tools developed specifically for the
+                            <h2><i class="fas fa-info-circle"></i> <span id="building-overview-title">Overview</span></h2>
+                            <p id="building-overview-desc">Soplos Linux is built using a set of custom tools developed specifically for the
                                 distribution. This page provides an overview of the build infrastructure.</p>
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 <div>
-                                    <strong>Note:</strong> These tools are maintained by the Core Team and are primarily
-                                    for internal use. Official ISOs are built in a controlled environment.
+                                    <strong id="building-note-label">Note:</strong> <span id="building-note-text">These tools are maintained by the Core Team and are primarily
+                                    for internal use. Official ISOs are built in a controlled environment.</span>
                                 </div>
                             </div>
                         </section>
 
                         <section id="tools" class="content-section">
-                            <h2><i class="fas fa-toolbox"></i> Soplos Tools</h2>
-                            <p>The Soplos build infrastructure consists of several specialized tools:</p>
+                            <h2><i class="fas fa-toolbox"></i> <span id="building-tools-title">Soplos Tools</span></h2>
+                            <p id="building-tools-intro">The Soplos build infrastructure consists of several specialized tools:</p>
                             <ul>
-                                <li><strong>Soplos ISO Builder:</strong> Creates bootable ISO images for all Soplos
-                                    editions (Boro, Tyron, Tyson).</li>
-                                <li><strong>Soplos Packager:</strong> Simplifies the creation of <code>.deb</code>
-                                    packages with proper metadata and dependencies.</li>
-                                <li><strong>Soplos Repo Manager:</strong> Manages the official package repositories,
-                                    handles signing, and updates metadata.</li>
-                                <li><strong>Kernel Build Tool:</strong> Custom tooling for compiling and packaging the
-                                    Soplos-optimized Linux kernel.</li>
+                                <li><strong id="building-tools-iso-label">Soplos ISO Builder:</strong> <span id="building-tools-iso-desc">Creates bootable ISO images for all Soplos
+                                    editions (Boro, Tyron, Tyson).</span></li>
+                                <li><strong id="building-tools-pkg-label">Soplos Packager:</strong> <span id="building-tools-pkg-desc">Simplifies the creation of <code>.deb</code>
+                                    packages with proper metadata and dependencies.</span></li>
+                                <li><strong id="building-tools-repo-label">Soplos Repo Manager:</strong> <span id="building-tools-repo-desc">Manages the official package repositories,
+                                    handles signing, and updates metadata.</span></li>
+                                <li><strong id="building-tools-kernel-label">Kernel Build Tool:</strong> <span id="building-tools-kernel-desc">Custom tooling for compiling and packaging the
+                                    Soplos-optimized Linux kernel.</span></li>
                             </ul>
                             <div class="info-box tip">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
-                                    <strong>Coming Soon:</strong> The <strong>Soplos Linux Developer Kit</strong> will
+                                    <strong id="building-tools-soon-label">Coming Soon:</strong> <span id="building-tools-soon-text">The <strong>Soplos Linux Developer Kit</strong> will
                                     provide a unified set of tools for contributors to build and test Soplos components
-                                    locally.
+                                    locally.</span>
                                 </div>
                             </div>
                         </section>
 
                         <section id="kernel" class="content-section">
-                            <h2><i class="fas fa-microchip"></i> Kernel Compilation</h2>
-                            <p>Soplos Linux uses a custom-configured Linux kernel optimized for desktop performance. The
+                            <h2><i class="fas fa-microchip"></i> <span id="building-kernel-title">Kernel Compilation</span></h2>
+                            <p id="building-kernel-desc-1">Soplos Linux uses a custom-configured Linux kernel optimized for desktop performance. The
                                 kernel is compiled using internal tooling that automates configuration and packaging.
                             </p>
-                            <p>Kernel source code is based on upstream Linux with Soplos-specific patches and
+                            <p id="building-kernel-desc-2">Kernel source code is based on upstream Linux with Soplos-specific patches and
                                 configuration.</p>
                         </section>
 
                         <section id="iso" class="content-section">
-                            <h2><i class="fas fa-compact-disc"></i> Soplos ISO Builder</h2>
-                            <p>The <strong>Soplos ISO Builder</strong> is the tool used to generate the official
+                            <h2><i class="fas fa-compact-disc"></i> <span id="building-iso-title">Soplos ISO Builder</span></h2>
+                            <p id="building-iso-intro">The <strong>Soplos ISO Builder</strong> is the tool used to generate the official
                                 installation images. It handles:</p>
                             <ul>
-                                <li>Package selection for each edition</li>
-                                <li>Desktop environment configuration</li>
-                                <li>Live environment setup</li>
-                                <li>Installer integration (Calamares)</li>
-                                <li>The resulting ISO is for <strong>internal testing only</strong>.</li>
+                                <li id="building-iso-list-1">Package selection for each edition</li>
+                                <li id="building-iso-list-2">Desktop environment configuration</li>
+                                <li id="building-iso-list-3">Live environment setup</li>
+                                <li id="building-iso-list-4">Installer integration (Calamares)</li>
+                                <li id="building-iso-list-5">The resulting ISO is for <strong>internal testing only</strong>.</li>
                             </ul>
-                            <p>ISOs created with this tool are tested extensively before public release.</p>
+                            <p id="building-iso-desc">ISOs created with this tool are tested extensively before public release.</p>
                         </section>
 
                     </article>
@@ -200,8 +200,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
@@ -210,8 +210,8 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../../../js/logger.js"></script>
-    <!-- <script src="../../../js/language-loader.js"></script> -->
-    <!-- <script src="../../../js/language-switcher.js"></script> -->
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
     <script src="../../../js/soplos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
