@@ -27,7 +27,7 @@
     <meta name="twitter:image" content="https://soplos.org/images/hero/wallpaper.jpg">
 
     <link rel="icon" href="images/logo/soplos-logo.png" type="image/png">
-    <link rel="stylesheet" href="styles/styles.css">
+    <script>document.write('<link rel="stylesheet" href="styles/styles.css?v=' + Date.now() + '">');</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -888,12 +888,20 @@
         </div>
     </footer>
     <a href="#inicio" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-    <script src="js/logger.js"></script>
-    <script src="js/language-loader.js"></script>
-    <script src="js/language-switcher.js"></script>
-    <script src="js/soplos-ui.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/hash-loader.js"></script>
+    <script>
+        var v = Date.now();
+        var scripts = [
+            "js/logger.js",
+            "js/language-loader.js",
+            "js/language-switcher.js",
+            "js/soplos-ui.js",
+            "js/main.js",
+            "js/hash-loader.js"
+        ];
+        scripts.forEach(function(src) {
+            document.write('<script src="' + src + '?v=' + v + '"><\/script>');
+        });
+    </script>
 </body>
 
 </html>

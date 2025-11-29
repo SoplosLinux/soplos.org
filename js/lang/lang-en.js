@@ -21,7 +21,7 @@ window.LANG_EN = {
 
     // Home Page
     "communityTitle": "Join the Community",
-    "deviceReadyDesc": "Check the minimum and recommended requirements to enjoy Soplos Linux without limits. Your next experience starts here!",
+    "deviceReadyDesc": "Check the minimum and recommended requirements to enjoy Soplos Linux without limits.<br>Your next experience starts here!",
     "deviceReadyTitle": "Is your device ready?",
     "featureBrowsingDesc": "Enjoy effortless internet browsing with Firefox. Access your favorite websites and watch YouTube videos with a fast, secure and user-friendly experience.",
     "featureBrowsingTitle": "Easy Browsing",
@@ -43,9 +43,9 @@ window.LANG_EN = {
     "heroTysonBtn": "Installation Guide",
     "installGuideDesc": "Step-by-step installation instructions for Tyron, Tyson and Boro",
     "installGuideTitle": "Installation Guide",
-    "readyMoreDesc": "Discover the unique tools that make Soplos Linux truly yours. Welcome, customize, manage and enjoy your desktop experience.",
+    "readyMoreDesc": "Discover the unique tools that make Soplos Linux truly yours.<br>Welcome, customize, manage and enjoy your desktop experience.",
     "readyMoreTitle": "Ready for More?",
-    "transitionDesc": "The first step to escape Windows is easy with Soplos Linux. We make your transition simple, friendly and pleasant.",
+    "transitionDesc": "The first step to escape Windows is easy with Soplos Linux.<br>We make your transition simple, friendly and pleasant.",
     "transitionTitle": "Feel Free",
 
     // Downloads
@@ -58,6 +58,7 @@ window.LANG_EN = {
     "modalTyronTitle": "Tyron (XFCE) - System Requirements",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Applications for Tyron",
+    "tyronDesktopAlt": "Tyron Desktop",
     "tyronGalleryCaption": "Tyron XFCE Desktop",
     "tyronGuideLink": "Tyron (XFCE) Guide",
     "tyronVersion": "Soplos Linux Tyron 1.0.0 Beta",
@@ -98,6 +99,7 @@ window.LANG_EN = {
     "systemReqTitleTyson": "System requirements",
     "themeManagerTyson": "Integrated theme manager for quick changes",
     "tysonAppsLink": "Applications for Tyson",
+    "tysonDesktopAlt": "Tyson Desktop",
     "tysonGalleryCaption": "Tyson Plasma Desktop",
     "tysonGuideLink": "Tyson (Plasma) Guide",
     "tysonVersion": "Soplos Linux Tyson 1.0.0 Beta",

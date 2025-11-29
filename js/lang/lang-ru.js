@@ -21,7 +21,7 @@ window.LANG_RU = {
 
     // Home Page
     "communityTitle": "Присоединиться к сообществу",
-    "deviceReadyDesc": "Проверьте минимальные и рекомендуемые требования, чтобы наслаждаться Soplos Linux без ограничений. Ваш следующий опыт начинается здесь!",
+    "deviceReadyDesc": "Проверьте минимальные и рекомендуемые требования, чтобы наслаждаться Soplos Linux без ограничений.<br>Ваш следующий опыт начинается здесь!",
     "deviceReadyTitle": "Готово ли ваше устройство?",
     "featureBrowsingDesc": "Наслаждайтесь легкой навигацией в интернете с Firefox. Получите доступ к любимым сайтам и смотрите видео на YouTube с быстрым, безопасным и удобным опытом.",
     "featureBrowsingTitle": "Легкий просмотр",
@@ -43,9 +43,9 @@ window.LANG_RU = {
     "heroTysonBtn": "Руководство по установке",
     "installGuideDesc": "Пошаговые инструкции по установке для Tyron, Tyson и Boro",
     "installGuideTitle": "Руководство по Установке",
-    "readyMoreDesc": "Откройте для себя уникальные инструменты, которые делают Soplos Linux по-настоящему вашим. Добро пожаловать, настраивайте, управляйте и наслаждайтесь опытом рабочего стола.",
+    "readyMoreDesc": "Откройте для себя уникальные инструменты, которые делают Soplos Linux по-настоящему вашим.<br>Добро пожаловать, настраивайте, управляйте и наслаждайтесь опытом рабочего стола.",
     "readyMoreTitle": "Готовы к большему?",
-    "transitionDesc": "Первый шаг к освобождению от Windows легко сделать с Soplos Linux. Мы делаем ваш переход простым, дружелюбным и приятным.",
+    "transitionDesc": "Первый шаг к освобождению от Windows легко сделать с Soplos Linux.<br>Мы делаем ваш переход простым, дружелюбным и приятным.",
     "transitionTitle": "Почувствуйте свободу",
 
     // Downloads
@@ -69,6 +69,7 @@ window.LANG_RU = {
     "archSupportTyson": "Поддержка архитектуры x86_64",
     "customizationTitleTyson": "Настройка",
     "debianSecurityTyson": "Основан на надежной безопасности Debian",
+    "debianBaseTyson": "Основан на Debian Testing",
     "fastBootTyson": "Быстрая загрузка с оптимизированным systemd",
     "firewallTyson": "Предварительно настроенный брандмауэр для повышенной защиты",
     "fontOptionsTyson": "Простая настройка шрифтов и внешнего вида",
@@ -93,7 +94,8 @@ window.LANG_RU = {
     "requirementsTysonTitle": "Tyson (Plasma 6)",
     "securityTitleTyson": "Безопасность и конфиденциальность",
     "securityUpdatesTyson": "Регулярные обновления безопасности",
-    "ssdTunedTyson": "Файловая система настроена для SSD",
+    "ssdTunedTyson": "Файловая система, оптимизированная для SSD",
+    "systemBaseTitleTyson": "Системная база",
     "systemReqTitleTyson": "Системные требования",
     "themeManagerTyson": "Интегрированный менеджер тем для быстрых изменений",
     "tysonAppsLink": "Приложения для Tyson",
@@ -257,8 +259,7 @@ window.LANG_RU = {
     "loginCaption": "Экран входа",
     "plymouthCaption": "Экран загрузки",
     "welcomeCaption": "Экран приветствия",
-    "welcomedesktopCaption": "Рабочий стол приветствия"
-    ,
+    "welcomedesktopCaption": "Рабочий стол приветствия",
 
     // Footer
     "footer-privacy": "Политика Конфиденциальности",

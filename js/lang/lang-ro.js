@@ -21,7 +21,7 @@ window.LANG_RO = {
 
     // Home Page
     "communityTitle": "Alătură-te Comunității",
-    "deviceReadyDesc": "Verifică cerințele minime și recomandate pentru a te bucura de Soplos Linux fără limite. Următoarea ta experiență începe aici!",
+    "deviceReadyDesc": "Verifică cerințele minime și recomandate pentru a te bucura de Soplos Linux fără limite.<br>Următoarea ta experiență începe aici!",
     "deviceReadyTitle": "Este dispozitivul tău pregătit?",
     "featureBrowsingDesc": "Bucură-te de navigarea pe internet fără efort cu Firefox. Accesează site-urile tale preferate și urmărește videoclipuri YouTube cu o experiență rapidă, sigură și prietenoasă.",
     "featureBrowsingTitle": "Navigare Ușoară",
@@ -43,9 +43,9 @@ window.LANG_RO = {
     "heroTysonBtn": "Ghid de Instalare",
     "installGuideDesc": "Instrucțiuni de instalare pas cu pas pentru Tyron, Tyson și Boro",
     "installGuideTitle": "Ghid de Instalare",
-    "readyMoreDesc": "Descoperă instrumentele unice care fac Soplos Linux cu adevărat al tău. Bun venit, personalizează, gestionează și bucură-te de experiența ta desktop.",
+    "readyMoreDesc": "Descoperă instrumentele unice care fac Soplos Linux cu adevărat al tău.<br>Bun venit, personalizează, gestionează și bucură-te de experiența ta desktop.",
     "readyMoreTitle": "Pregătit pentru Mai Mult?",
-    "transitionDesc": "Primul pas pentru a scăpa de Windows este ușor cu Soplos Linux. Facem tranziția ta simplă, prietenoasă și plăcută.",
+    "transitionDesc": "Primul pas pentru a scăpa de Windows este ușor cu Soplos Linux.<br>Facem tranziția ta simplă, prietenoasă și plăcută.",
     "transitionTitle": "Simte-te Liber",
 
     // Downloads
@@ -58,6 +58,7 @@ window.LANG_RO = {
     "modalTyronTitle": "Tyron (XFCE) - Cerințe de Sistem",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Aplicații pentru Tyron",
+    "tyronDesktopAlt": "Desktop Tyron",
     "tyronGalleryCaption": "Desktop Tyron XFCE",
     "tyronGuideLink": "Ghid Tyron (XFCE)",
     "tyronVersion": "Soplos Linux Tyron 1.0.0 Beta",
@@ -98,6 +99,7 @@ window.LANG_RO = {
     "systemReqTitleTyson": "Cerințe de sistem",
     "themeManagerTyson": "Manager de teme integrat pentru schimbări rapide",
     "tysonAppsLink": "Aplicații pentru Tyson",
+    "tysonDesktopAlt": "Desktop Tyson",
     "tysonGalleryCaption": "Desktop Tyson Plasma",
     "tysonGuideLink": "Ghid Tyson (Plasma)",
     "tysonVersion": "Soplos Linux Tyson 1.0.0 Beta",
@@ -257,8 +259,7 @@ window.LANG_RO = {
     "loginCaption": "Ecran de conectare",
     "plymouthCaption": "Ecran de pornire",
     "welcomeCaption": "Ecran de bun venit",
-    "welcomedesktopCaption": "Desktop de bun venit"
-    ,
+    "welcomedesktopCaption": "Desktop de bun venit",
 
     // Footer
     "footer-privacy": "Politica de Confidențialitate",

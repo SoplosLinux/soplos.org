@@ -21,7 +21,7 @@ window.LANG_FR = {
 
     // Home Page
     "communityTitle": "Rejoindre la Communauté",
-    "deviceReadyDesc": "Vérifiez les exigences minimales et recommandées pour profiter de Soplos Linux sans limites. Votre prochaine expérience commence ici !",
+    "deviceReadyDesc": "Vérifiez les exigences minimales et recommandées pour profiter de Soplos Linux sans limites.<br>Votre prochaine expérience commence ici !",
     "deviceReadyTitle": "Votre appareil est-il prêt ?",
     "featureBrowsingDesc": "Profitez d'une navigation internet sans effort avec Firefox. Accédez à vos sites web préférés et regardez des vidéos YouTube avec une expérience rapide, sécurisée et conviviale.",
     "featureBrowsingTitle": "Navigation Facile",
@@ -43,9 +43,9 @@ window.LANG_FR = {
     "heroTysonBtn": "Guide d'Installation",
     "installGuideDesc": "Instructions d'installation étape par étape pour Tyron, Tyson et Boro",
     "installGuideTitle": "Guide d'Installation",
-    "readyMoreDesc": "Découvrez les outils uniques qui rendent Soplos Linux vraiment vôtre. Bienvenue, personnalisez, gérez et profitez de votre expérience de bureau.",
+    "readyMoreDesc": "Découvrez les outils uniques qui rendent Soplos Linux vraiment vôtre.<br>Bienvenue, personnalisez, gérez et profitez de votre expérience de bureau.",
     "readyMoreTitle": "Prêt pour Plus ?",
-    "transitionDesc": "La première étape pour échapper à Windows est facile avec Soplos Linux. Nous rendons votre transition simple, conviviale et agréable.",
+    "transitionDesc": "La première étape pour échapper à Windows est facile avec Soplos Linux.<br>Nous rendons votre transition simple, conviviale et agréable.",
     "transitionTitle": "Sentez-vous Libre",
 
     // Downloads
@@ -58,6 +58,7 @@ window.LANG_FR = {
     "modalTyronTitle": "Tyron (XFCE) - Configuration Système",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Applications pour Tyron",
+    "tyronDesktopAlt": "Bureau Tyron",
     "tyronGalleryCaption": "Bureau Tyron XFCE",
     "tyronGuideLink": "Guide Tyron (XFCE)",
     "tyronVersion": "Soplos Linux Tyron 1.0.0 Beta",
@@ -98,6 +99,7 @@ window.LANG_FR = {
     "systemReqTitleTyson": "Configuration système",
     "themeManagerTyson": "Gestionnaire de thèmes intégré pour des changements rapides",
     "tysonAppsLink": "Applications pour Tyson",
+    "tysonDesktopAlt": "Bureau Tyson",
     "tysonGalleryCaption": "Bureau Tyson Plasma",
     "tysonGuideLink": "Guide Tyson (Plasma)",
     "tysonVersion": "Soplos Linux Tyson 1.0.0 Beta",
@@ -257,8 +259,7 @@ window.LANG_FR = {
     "loginCaption": "Écran de connexion",
     "plymouthCaption": "Écran de démarrage",
     "welcomeCaption": "Écran de bienvenue",
-    "welcomedesktopCaption": "Bureau de bienvenue"
-    ,
+    "welcomedesktopCaption": "Bureau de bienvenue",
 
     // Footer
     "footer-privacy": "Politique de Confidentialité",

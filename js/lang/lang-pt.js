@@ -21,7 +21,7 @@ window.LANG_PT = {
 
     // Home Page
     "communityTitle": "Junte-se à Comunidade",
-    "deviceReadyDesc": "Verifique os requisitos mínimos e recomendados para desfrutar do Soplos Linux sem limites. Sua próxima experiência começa aqui!",
+    "deviceReadyDesc": "Verifique os requisitos mínimos e recomendados para desfrutar do Soplos Linux sem limites.<br>Sua próxima experiência começa aqui!",
     "deviceReadyTitle": "Seu dispositivo está pronto?",
     "featureBrowsingDesc": "Desfrute de navegação na internet sem esforço com Firefox. Acesse seus sites favoritos e assista vídeos do YouTube com uma experiência rápida, segura e amigável.",
     "featureBrowsingTitle": "Navegação Fácil",
@@ -43,9 +43,9 @@ window.LANG_PT = {
     "heroTysonBtn": "Guia de Instalação",
     "installGuideDesc": "Instruções de instalação passo a passo para Tyron, Tyson e Boro",
     "installGuideTitle": "Guia de Instalação",
-    "readyMoreDesc": "Descubra as ferramentas únicas que tornam o Soplos Linux verdadeiramente seu. Bem-vindo, personalize, gerencie e desfrute de sua experiência desktop.",
+    "readyMoreDesc": "Descubra as ferramentas únicas que tornam o Soplos Linux verdadeiramente seu.<br>Bem-vindo, personalize, gerencie e desfrute de sua experiência desktop.",
     "readyMoreTitle": "Pronto para Mais?",
-    "transitionDesc": "O primeiro passo para escapar do Windows é fácil com Soplos Linux. Tornamos sua transição simples, amigável e agradável.",
+    "transitionDesc": "O primeiro passo para escapar do Windows é fácil com Soplos Linux.<br>Tornamos sua transição simples, amigável e agradável.",
     "transitionTitle": "Sinta-se Livre",
 
     // Downloads
@@ -69,6 +69,7 @@ window.LANG_PT = {
     "archSupportTyson": "Suporte a arquitetura x86_64",
     "customizationTitleTyson": "Personalização",
     "debianSecurityTyson": "Baseado na segurança sólida do Debian",
+    "debianBaseTyson": "Baseado no Debian Testing",
     "fastBootTyson": "Boot rápido com systemd otimizado",
     "firewallTyson": "Firewall pré-configurado para maior proteção",
     "fontOptionsTyson": "Configuração simples de fonte e aparência",
@@ -94,6 +95,7 @@ window.LANG_PT = {
     "securityTitleTyson": "Segurança e Privacidade",
     "securityUpdatesTyson": "Atualizações de segurança regulares",
     "ssdTunedTyson": "Sistema de arquivos otimizado para SSD",
+    "systemBaseTitleTyson": "Base do sistema",
     "systemReqTitleTyson": "Requisitos do sistema",
     "themeManagerTyson": "Gerenciador de temas integrado para mudanças rápidas",
     "tysonAppsLink": "Aplicações para Tyson",
@@ -257,8 +259,7 @@ window.LANG_PT = {
     "loginCaption": "Tela de login",
     "plymouthCaption": "Tela de inicialização",
     "welcomeCaption": "Tela de boas-vindas",
-    "welcomedesktopCaption": "Desktop de boas-vindas"
-    ,
+    "welcomedesktopCaption": "Desktop de boas-vindas",
 
     // Footer
     "footer-privacy": "Política de Privacidade",

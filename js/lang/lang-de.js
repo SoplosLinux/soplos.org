@@ -21,7 +21,7 @@ window.LANG_DE = {
 
     // Home Page
     "communityTitle": "Der Community beitreten",
-    "deviceReadyDesc": "Überprüfen Sie die Mindest- und empfohlenen Anforderungen, um Soplos Linux ohne Grenzen zu genießen. Ihr nächstes Erlebnis beginnt hier!",
+    "deviceReadyDesc": "Überprüfen Sie die Mindest- und empfohlenen Anforderungen, um Soplos Linux ohne Grenzen zu genießen.<br>Ihr nächstes Erlebnis beginnt hier!",
     "deviceReadyTitle": "Ist Ihr Gerät bereit?",
     "featureBrowsingDesc": "Genießen Sie mühelose Internetnavigation mit Firefox. Greifen Sie auf Ihre Lieblings-Websites zu und schauen Sie YouTube-Videos mit einer schnellen, sicheren und benutzerfreundlichen Erfahrung.",
     "featureBrowsingTitle": "Einfaches Surfen",
@@ -43,9 +43,9 @@ window.LANG_DE = {
     "heroTysonBtn": "Installationsanleitung",
     "installGuideDesc": "Schritt-für-Schritt-Installationsanleitung für Tyron, Tyson und Boro",
     "installGuideTitle": "Installationsanleitung",
-    "readyMoreDesc": "Entdecken Sie die einzigartigen Tools, die Soplos Linux wirklich zu Ihrem machen. Willkommen, anpassen, verwalten und genießen Sie Ihr Desktop-Erlebnis.",
+    "readyMoreDesc": "Entdecken Sie die einzigartigen Tools, die Soplos Linux wirklich zu Ihrem machen.<br>Willkommen, anpassen, verwalten und genießen Sie Ihr Desktop-Erlebnis.",
     "readyMoreTitle": "Bereit für mehr?",
-    "transitionDesc": "Der erste Schritt zur Befreiung von Windows ist einfach mit Soplos Linux. Wir machen Ihren Übergang einfach, freundlich und angenehm.",
+    "transitionDesc": "Der erste Schritt zur Befreiung von Windows ist einfach mit Soplos Linux.<br>Wir machen Ihren Übergang einfach, freundlich und angenehm.",
     "transitionTitle": "Fühlen Sie sich frei",
 
     // Downloads
@@ -69,6 +69,7 @@ window.LANG_DE = {
     "archSupportTyson": "x86_64-Architektur-Unterstützung",
     "customizationTitleTyson": "Anpassung",
     "debianSecurityTyson": "Basierend auf Debians solider Sicherheit",
+    "debianBaseTyson": "Basierend auf Debian Testing",
     "fastBootTyson": "Schneller Start mit optimiertem systemd",
     "firewallTyson": "Vorkonfigurierte Firewall für erhöhten Schutz",
     "fontOptionsTyson": "Einfache Schrift- und Erscheinungskonfiguration",
@@ -94,6 +95,7 @@ window.LANG_DE = {
     "securityTitleTyson": "Sicherheit und Datenschutz",
     "securityUpdatesTyson": "Regelmäßige Sicherheitsupdates",
     "ssdTunedTyson": "Für SSD optimiertes Dateisystem",
+    "systemBaseTitleTyson": "Systembasis",
     "systemReqTitleTyson": "Systemanforderungen",
     "themeManagerTyson": "Integrierter Theme-Manager für schnelle Änderungen",
     "tysonAppsLink": "Anwendungen für Tyson",

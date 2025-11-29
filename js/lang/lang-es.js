@@ -21,7 +21,7 @@ window.LANG_ES = {
 
     // Home Page
     "communityTitle": "Únete a la Comunidad",
-    "deviceReadyDesc": "Comprueba los requisitos mínimos y recomendados para disfrutar de Soplos Linux sin límites. ¡Tu próxima experiencia comienza aquí!",
+    "deviceReadyDesc": "Comprueba los requisitos mínimos y recomendados para disfrutar de Soplos Linux sin límites.<br>¡Tu próxima experiencia comienza aquí!",
     "deviceReadyTitle": "¿Está tu dispositivo listo?",
     "featureBrowsingDesc": "Disfruta de una navegación por internet sin esfuerzo con Firefox. Accede a tus sitios web favoritos y ve vídeos de YouTube con una experiencia rápida, segura y fácil de usar.",
     "featureBrowsingTitle": "Navegación Fácil",
@@ -43,9 +43,9 @@ window.LANG_ES = {
     "heroTysonBtn": "Guía de Instalación",
     "installGuideDesc": "Instrucciones paso a paso para instalar Tyron, Tyson y Boro",
     "installGuideTitle": "Guía de Instalación",
-    "readyMoreDesc": "Descubre las herramientas únicas que hacen que Soplos Linux sea verdaderamente tuyo. Bienvenida, personaliza, gestiona y disfruta de tu experiencia de escritorio.",
+    "readyMoreDesc": "Descubre las herramientas únicas que hacen que Soplos Linux sea verdaderamente tuyo.<br>Bienvenida, personaliza, gestiona y disfruta de tu experiencia de escritorio.",
     "readyMoreTitle": "¿Listo para Más?",
-    "transitionDesc": "El primer paso para escapar de Windows es fácil con Soplos Linux. Hacemos tu transición simple, amigable y placentera.",
+    "transitionDesc": "El primer paso para escapar de Windows es fácil con Soplos Linux.<br>Hacemos tu transición simple, amigable y placentera.",
     "transitionTitle": "Siéntete Libre",
 
     // Downloads
@@ -58,6 +58,7 @@ window.LANG_ES = {
     "modalTyronTitle": "Tyron (XFCE) - Requisitos del Sistema",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Aplicaciones para Tyron",
+    "tyronDesktopAlt": "Escritorio Tyron",
     "tyronGalleryCaption": "Escritorio Tyron XFCE",
     "tyronGuideLink": "Guía de Tyron (XFCE)",
     "tyronVersion": "Soplos Linux Tyron 1.0.0 Beta",
@@ -98,6 +99,7 @@ window.LANG_ES = {
     "systemReqTitleTyson": "Requisitos del sistema",
     "themeManagerTyson": "Gestor de temas integrado para cambios rápidos",
     "tysonAppsLink": "Aplicaciones para Tyson",
+    "tysonDesktopAlt": "Escritorio Tyson",
     "tysonGalleryCaption": "Escritorio Tyson Plasma",
     "tysonGuideLink": "Guía de Tyson (Plasma)",
     "tysonVersion": "Soplos Linux Tyson 1.0.0 Beta",
@@ -108,7 +110,6 @@ window.LANG_ES = {
     "boroDescription": "Guía completa para la edición GNOME de Soplos Linux. Descubre el poder y la elegancia del entorno de escritorio GNOME 49.",
     "boroGalleryCaption": "Escritorio Boro GNOME",
     "boroGuideLink": "Guía de Boro (GNOME)",
-    "boroAppsLink": "Aplicaciones para Boro",
     "boroTitle": "Soplos Linux Boro",
     "boroVersion": "Soplos Linux Boro 1.0.0 Alpha",
     "gnomeDesktop": "Entorno de escritorio GNOME 49",

@@ -21,7 +21,7 @@ window.LANG_IT = {
 
     // Home Page
     "communityTitle": "Unisciti alla Community",
-    "deviceReadyDesc": "Controlla i requisiti minimi e raccomandati per goderti Soplos Linux senza limiti. La tua prossima esperienza inizia qui!",
+    "deviceReadyDesc": "Controlla i requisiti minimi e raccomandati per goderti Soplos Linux senza limiti.<br>La tua prossima esperienza inizia qui!",
     "deviceReadyTitle": "Il tuo dispositivo è pronto?",
     "featureBrowsingDesc": "Goditi la navigazione internet senza sforzo con Firefox. Accedi ai tuoi siti web preferiti e guarda video YouTube con un'esperienza veloce, sicura e user-friendly.",
     "featureBrowsingTitle": "Navigazione Facile",
@@ -43,9 +43,9 @@ window.LANG_IT = {
     "heroTysonBtn": "Guida all'Installazione",
     "installGuideDesc": "Istruzioni di installazione passo dopo passo per Tyron, Tyson e Boro",
     "installGuideTitle": "Guida all'Installazione",
-    "readyMoreDesc": "Scopri gli strumenti unici che rendono Soplos Linux veramente tuo. Benvenuto, personalizza, gestisci e goditi la tua esperienza desktop.",
+    "readyMoreDesc": "Scopri gli strumenti unici che rendono Soplos Linux veramente tuo.<br>Benvenuto, personalizza, gestisci e goditi la tua esperienza desktop.",
     "readyMoreTitle": "Pronto per di Più?",
-    "transitionDesc": "Il primo passo per liberarsi da Windows è facile con Soplos Linux. Rendiamo la tua transizione semplice, amichevole e piacevole.",
+    "transitionDesc": "Il primo passo per liberarsi da Windows è facile con Soplos Linux.<br>Rendiamo la tua transizione semplice, amichevole e piacevole.",
     "transitionTitle": "Sentiti Libero",
 
     // Downloads
@@ -69,6 +69,7 @@ window.LANG_IT = {
     "archSupportTyson": "Supporto architettura x86_64",
     "customizationTitleTyson": "Personalizzazione",
     "debianSecurityTyson": "Basato sulla sicurezza solida di Debian",
+    "debianBaseTyson": "Basato su Debian Testing",
     "fastBootTyson": "Avvio rapido con systemd ottimizzato",
     "firewallTyson": "Firewall preconfigurato per maggiore protezione",
     "fontOptionsTyson": "Configurazione semplice per font e aspetto",
@@ -94,6 +95,7 @@ window.LANG_IT = {
     "securityTitleTyson": "Sicurezza e Privacy",
     "securityUpdatesTyson": "Aggiornamenti di sicurezza regolari",
     "ssdTunedTyson": "File system ottimizzato per SSD",
+    "systemBaseTitleTyson": "Base di sistema",
     "systemReqTitleTyson": "Requisiti di sistema",
     "themeManagerTyson": "Gestore temi integrato per cambi rapidi",
     "tysonAppsLink": "Applicazioni per Tyson",
@@ -257,8 +259,7 @@ window.LANG_IT = {
     "loginCaption": "Schermata di login",
     "plymouthCaption": "Schermata di avvio",
     "welcomeCaption": "Schermata di benvenuto",
-    "welcomedesktopCaption": "Desktop di benvenuto"
-,
+    "welcomedesktopCaption": "Desktop di benvenuto",
 
     // Footer
     "footer-privacy": "Informativa sulla Privacy",

@@ -34,7 +34,7 @@ function loadLanguage(lang) {
 
     const script = document.createElement('script');
     // Use dynamic base path to find lang folder
-    script.src = basePath + `lang/lang-${lang}.js`;
+    script.src = basePath + `lang/lang-${lang}.js?v=${Date.now()}`;
 
     script.onload = function () {
         console.log(`Language file loaded: ${lang}`);
@@ -42,7 +42,7 @@ function loadLanguage(lang) {
         // Check if we are in the wiki section and load wiki-specific translations
         if (window.location.href.includes('/wiki/')) {
             const wikiScript = document.createElement('script');
-            wikiScript.src = basePath + `lang/lang-wiki-${lang}.js`;
+            wikiScript.src = basePath + `lang/lang-wiki-${lang}.js?v=${Date.now()}`;
 
             wikiScript.onload = function () {
                 console.log(`Wiki language file loaded: ${lang}`);
