@@ -93,11 +93,11 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../"><i class="fas fa-home"></i> Home</a>
+                <a href="../../"><i class="fas fa-home"></i> <span id="community-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <a href="../">Wiki</a>
+                <a href="../" id="community-breadcrumb-wiki">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Community</span>
+                <span class="breadcrumb-current" id="community-breadcrumb">Community</span>
             </nav>
         </div>
     </div>
@@ -107,8 +107,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-users"></i> Community</h1>
-                    <p>Join the Soplos Linux community. Connect, contribute, and help us build a better OS.</p>
+                    <h1><i class="fas fa-users"></i> <span id="community-hero-title">Community</span></h1>
+                    <p id="community-hero-desc">Join the Soplos Linux community. Connect, contribute, and help us build a better OS.</p>
                 </div>
             </div>
         </section>
@@ -119,132 +119,131 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="community-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#coc">Code of Conduct</a></li>
-                            <li><a href="#channels">Communication</a></li>
-                            <li><a href="#contribute">Get Involved</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="#donate">Sponsorship</a></li>
+                            <li><a href="#coc" id="community-toc-coc">Code of Conduct</a></li>
+                            <li><a href="#channels" id="community-toc-channels">Communication</a></li>
+                            <li><a href="#contribute" id="community-toc-contribute">Get Involved</a></li>
+                            <li><a href="#events" id="community-toc-events">Events</a></li>
+                            <li><a href="#donate" id="community-toc-donate">Sponsorship</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section id="intro" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> Welcome Home</h2>
-                            <p>Soplos Linux is built by people like you. Whether you're a developer, a writer, or just a
+                            <h2><i class="fas fa-info-circle"></i> <span id="community-intro-title">Welcome Home</span></h2>
+                            <p id="community-intro-text">Soplos Linux is built by people like you. Whether you're a developer, a writer, or just a
                                 passionate user, there's a place for you here.</p>
                         </section>
 
                         <section id="coc" class="content-section">
-                            <h2><i class="fas fa-heart"></i> Code of Conduct</h2>
-                            <p>To ensure a welcoming environment for everyone, we follow a strict Code of Conduct.</p>
+                            <h2><i class="fas fa-heart"></i> <span id="community-coc-title">Code of Conduct</span></h2>
+                            <p id="community-coc-text">To ensure a welcoming environment for everyone, we follow a strict Code of Conduct.</p>
                             <div class="info-box success">
                                 <i class="fas fa-check"></i>
                                 <div>
-                                    <strong>Core Values:</strong>
+                                    <strong id="community-coc-values-title">Core Values:</strong>
                                     <ul>
-                                        <li><strong>Be Respectful:</strong> Treat everyone with kindness and patience.
+                                        <li id="community-coc-value-1"><strong>Be Respectful:</strong> Treat everyone with kindness and patience.
                                         </li>
-                                        <li><strong>Be Inclusive:</strong> We welcome people of all backgrounds and
+                                        <li id="community-coc-value-2"><strong>Be Inclusive:</strong> We welcome people of all backgrounds and
                                             skill levels.</li>
-                                        <li><strong>Be Constructive:</strong> Critique ideas, not people.</li>
+                                        <li id="community-coc-value-3"><strong>Be Constructive:</strong> Critique ideas, not people.</li>
                                     </ul>
                                 </div>
                             </div>
-                            <p>If you witness harassment or unacceptable behavior, please report it to <a
+                            <p id="community-coc-report">If you witness harassment or unacceptable behavior, please report it to <a
                                     href="mailto:info@soploslinux.com">info@soploslinux.com</a>.</p>
                         </section>
 
                         <section id="channels" class="content-section">
-                            <h2><i class="fas fa-comments"></i> Communication Channels</h2>
+                            <h2><i class="fas fa-comments"></i> <span id="community-channels-title">Communication Channels</span></h2>
 
-                            <h3>Official Forums</h3>
-                            <p>The best place for long-term discussions, support, and feature requests.</p>
-                            <a href="../../forums/" class="button primary"><i class="fas fa-external-link-alt"></i>
-                                Visit Forums</a>
+                            <h3 id="community-channels-forums-title">Official Forums</h3>
+                            <p id="community-channels-forums-text">The best place for long-term discussions, support, and feature requests.</p>
+                            <a href="../../forums/" class="button primary"><i class="fas fa-external-link-alt"></i> <span id="community-channels-forums-btn">Visit Forums</span></a>
 
-                            <h3>Social Media</h3>
+                            <h3 id="community-channels-social-title">Social Media</h3>
                             <div class="social-links-grid">
                                 <a href="https://x.com/soploslinux" target="_blank" class="social-card twitter">
                                     <i class="fab fa-twitter"></i>
-                                    <span>X (Twitter)</span>
+                                    <span id="community-channels-social-twitter">X (Twitter)</span>
                                 </a>
                                 <a href="https://github.com/SoplosLinux" target="_blank" class="social-card github">
                                     <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
+                                    <span id="community-channels-social-github">GitHub</span>
                                 </a>
                             </div>
                         </section>
 
                         <section id="contribute" class="content-section">
-                            <h2><i class="fas fa-hands-helping"></i> Get Involved</h2>
-                            <p>You don't need to be a coder to help Soplos Linux grow!</p>
+                            <h2><i class="fas fa-hands-helping"></i> <span id="community-contribute-title">Get Involved</span></h2>
+                            <p id="community-contribute-text">You don't need to be a coder to help Soplos Linux grow!</p>
 
                             <div class="grid-2-col">
                                 <div>
-                                    <h3><i class="fas fa-code"></i> Development</h3>
-                                    <p>Help us fix bugs and build new features.</p>
+                                    <h3><i class="fas fa-code"></i> <span id="community-contribute-dev-title">Development</span></h3>
+                                    <p id="community-contribute-dev-text">Help us fix bugs and build new features.</p>
                                     <ul>
-                                        <li><a href="https://github.com/SoplosLinux" target="_blank">Browse GitHub
+                                        <li><a href="https://github.com/SoplosLinux" target="_blank" id="community-contribute-dev-1">Browse GitHub
                                                 Issues</a></li>
-                                        <li><a href="../development/contribute/">Read Contribution Guide</a></li>
+                                        <li><a href="../development/contribute/" id="community-contribute-dev-2">Read Contribution Guide</a></li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3><i class="fas fa-book"></i> Documentation</h3>
-                                    <p>Improve this Wiki or write tutorials.</p>
+                                    <h3><i class="fas fa-book"></i> <span id="community-contribute-docs-title">Documentation</span></h3>
+                                    <p id="community-contribute-docs-text">Improve this Wiki or write tutorials.</p>
                                     <ul>
-                                        <li>Edit pages on GitHub</li>
-                                        <li>Write blog posts</li>
+                                        <li id="community-contribute-docs-1">Edit pages on GitHub</li>
+                                        <li id="community-contribute-docs-2">Write blog posts</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3><i class="fas fa-language"></i> Translation</h3>
-                                    <p>Make Soplos accessible to everyone.</p>
+                                    <h3><i class="fas fa-language"></i> <span id="community-contribute-trans-title">Translation</span></h3>
+                                    <p id="community-contribute-trans-text">Make Soplos accessible to everyone.</p>
                                     <ul>
-                                        <li>Help translate the OS installer</li>
-                                        <li>Translate Wiki pages</li>
+                                        <li id="community-contribute-trans-1">Help translate the OS installer</li>
+                                        <li id="community-contribute-trans-2">Translate Wiki pages</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3><i class="fas fa-paint-brush"></i> Design</h3>
-                                    <p>Create art for the community.</p>
+                                    <h3><i class="fas fa-paint-brush"></i> <span id="community-contribute-design-title">Design</span></h3>
+                                    <p id="community-contribute-design-text">Create art for the community.</p>
                                     <ul>
-                                        <li>Submit Wallpapers</li>
-                                        <li>Design Themes & Icons</li>
+                                        <li id="community-contribute-design-1">Submit Wallpapers</li>
+                                        <li id="community-contribute-design-2">Design Themes & Icons</li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
                         <section id="events" class="content-section">
-                            <h2><i class="fas fa-calendar-alt"></i> Events & Meetups</h2>
-                            <p>Upcoming milestones for Soplos Linux:</p>
+                            <h2><i class="fas fa-calendar-alt"></i> <span id="community-events-title">Events & Meetups</span></h2>
+                            <p id="community-events-text">Upcoming milestones for Soplos Linux:</p>
                             <div class="info-box info">
                                 <i class="fas fa-calendar-check"></i>
                                 <div>
-                                    <strong>Upcoming Releases:</strong>
+                                    <strong id="community-events-releases-label">Upcoming Releases:</strong>
                                     <ul>
-                                        <li><strong>December 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta</li>
-                                        <li><strong>Coming Soon:</strong> Boro 1.0.0 Alpha (Date TBD)</li>
+                                        <li id="community-events-release-1"><strong>December 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta</li>
+                                        <li id="community-events-release-2"><strong>Coming Soon:</strong> Boro 1.0.0 Alpha (Date TBD)</li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
                         <section id="donate" class="content-section">
-                            <h2><i class="fas fa-donate"></i> Sponsorship</h2>
-                            <p>Soplos Linux is free, but servers and coffee aren't. Your donations help keep the project
+                            <h2><i class="fas fa-donate"></i> <span id="community-donate-title">Sponsorship</span></h2>
+                            <p id="community-donate-text">Soplos Linux is free, but servers and coffee aren't. Your donations help keep the project
                                 alive.</p>
 
                             <div class="donation-options">
                                 <a href="https://paypal.me/isubdes" target="_blank" class="button success"><i
-                                        class="fab fa-paypal"></i> Donate via PayPal</a>
+                                        class="fab fa-paypal"></i> <span id="community-donate-btn">Donate via PayPal</span></a>
                                 <!-- Add Patreon/OpenCollective later -->
                             </div>
-                            <p><small>All donations go directly to server costs and development bounties.</small></p>
+                            <p id="community-donate-note"><small>All donations go directly to server costs and development bounties.</small></p>
                         </section>
 
                     </article>
@@ -258,8 +257,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../legal/terms.html">Terms of Use</a>
+                    <a href="../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
@@ -268,8 +267,8 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../../js/logger.js"></script>
-    <!-- <script src="../../js/language-loader.js"></script> -->
-    <!-- <script src="../../js/language-switcher.js"></script> -->
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
     <script src="../../js/soplos-ui.js"></script>
     <script src="../../js/main.js"></script>
 </body>
