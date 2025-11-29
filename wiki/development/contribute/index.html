@@ -98,7 +98,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Contribute</span>
+                <span class="breadcrumb-current" id="contribute-breadcrumb">Contribute</span>
             </nav>
         </div>
     </div>
@@ -108,8 +108,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-hands-helping"></i> Contribute</h1>
-                    <p>Help us build the future of Soplos Linux. Code, design, translate, or write.</p>
+                    <h1><i class="fas fa-hands-helping"></i> <span id="contribute-hero-title">Contribute</span></h1>
+                    <p id="contribute-hero-desc">Help us build the future of Soplos Linux. Code, design, translate, or write.</p>
                 </div>
             </div>
         </section>
@@ -120,73 +120,72 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="contribute-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#start">Getting Started</a></li>
-                            <li><a href="#workflow">Workflow</a></li>
-                            <li><a href="#standards">Coding Standards</a></li>
-                            <li><a href="#docs">Documentation</a></li>
-                            <li><a href="#translate">Translation</a></li>
+                            <li><a href="#start" id="contribute-toc-1">Getting Started</a></li>
+                            <li><a href="#workflow" id="contribute-toc-2">Workflow</a></li>
+                            <li><a href="#standards" id="contribute-toc-3">Coding Standards</a></li>
+                            <li><a href="#docs" id="contribute-toc-4">Documentation</a></li>
+                            <li><a href="#translate" id="contribute-toc-5">Translation</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section id="start" class="content-section">
-                            <h2><i class="fas fa-flag-checkered"></i> Getting Started</h2>
-                            <p>Before you start contributing, you'll need a few things set up:</p>
+                            <h2><i class="fas fa-flag-checkered"></i> <span id="contribute-start-title">Getting Started</span></h2>
+                            <p id="contribute-start-intro">Before you start contributing, you'll need a few things set up:</p>
                             <ul>
-                                <li><strong>GitHub Account:</strong> We use GitHub for all our code and issue tracking.
+                                <li><strong id="contribute-start-req1-label">GitHub Account:</strong> <span id="contribute-start-req1">We use GitHub for all our code and issue tracking.</span>
                                 </li>
-                                <li><strong>Git:</strong> Make sure you have <code>git</code> installed and configured.
+                                <li><strong id="contribute-start-req2-label">Git:</strong> <span id="contribute-start-req2">Make sure you have <code>git</code> installed and configured.</span>
                                 </li>
-                                <li><strong>Development Environment:</strong> Depending on what you work on, you might
-                                    need Python, C compilers, or web tools.</li>
+                                <li><strong id="contribute-start-req3-label">Development Environment:</strong> <span id="contribute-start-req3">Depending on what you work on, you might
+                                    need Python, C compilers, or web tools.</span></li>
                             </ul>
                         </section>
 
                         <section id="workflow" class="content-section">
-                            <h2><i class="fas fa-code-branch"></i> Workflow</h2>
-                            <p>We follow a standard Fork-and-Pull workflow:</p>
+                            <h2><i class="fas fa-code-branch"></i> <span id="contribute-workflow-title">Workflow</span></h2>
+                            <p id="contribute-workflow-intro">We follow a standard Fork-and-Pull workflow:</p>
                             <ol class="step-list">
-                                <li><strong>Fork</strong> the repository you want to work on.</li>
-                                <li><strong>Clone</strong> your fork locally.</li>
-                                <li><strong>Create a Branch</strong> for your feature or fix (e.g.,
+                                <li id="contribute-workflow-step1"><strong>Fork</strong> the repository you want to work on.</li>
+                                <li id="contribute-workflow-step2"><strong>Clone</strong> your fork locally.</li>
+                                <li id="contribute-workflow-step3"><strong>Create a Branch</strong> for your feature or fix (e.g.,
                                     <code>fix/login-bug</code>).</li>
-                                <li><strong>Commit</strong> your changes with clear messages.</li>
-                                <li><strong>Push</strong> to your fork and submit a <strong>Pull Request (PR)</strong>.
+                                <li id="contribute-workflow-step4"><strong>Commit</strong> your changes with clear messages.</li>
+                                <li id="contribute-workflow-step5"><strong>Push</strong> to your fork and submit a <strong>Pull Request (PR)</strong>.
                                 </li>
                             </ol>
                         </section>
 
                         <section id="standards" class="content-section">
-                            <h2><i class="fas fa-ruler-combined"></i> Coding Standards</h2>
-                            <p>To keep our codebase clean, please adhere to these rules:</p>
+                            <h2><i class="fas fa-ruler-combined"></i> <span id="contribute-standards-title">Coding Standards</span></h2>
+                            <p id="contribute-standards-intro">To keep our codebase clean, please adhere to these rules:</p>
                             <ul>
-                                <li><strong>Python:</strong> Follow PEP 8.</li>
-                                <li><strong>Bash:</strong> Use <code>shellcheck</code> to verify scripts.</li>
-                                <li><strong>Commits:</strong> Use imperative mood (e.g., "Fix login bug" not "Fixed
-                                    login bug").</li>
+                                <li><strong id="contribute-standards-py-label">Python:</strong> <span id="contribute-standards-py">Follow PEP 8.</span></li>
+                                <li><strong id="contribute-standards-bash-label">Bash:</strong> <span id="contribute-standards-bash">Use <code>shellcheck</code> to verify scripts.</span></li>
+                                <li><strong id="contribute-standards-commit-label">Commits:</strong> <span id="contribute-standards-commit">Use imperative mood (e.g., "Fix login bug" not "Fixed
+                                    login bug").</span></li>
                             </ul>
                         </section>
 
                         <section id="docs" class="content-section">
-                            <h2><i class="fas fa-book"></i> Documentation</h2>
-                            <p>Our Wiki is built with simple HTML/CSS. To contribute:</p>
+                            <h2><i class="fas fa-book"></i> <span id="contribute-docs-title">Documentation</span></h2>
+                            <p id="contribute-docs-intro">Our Wiki is built with simple HTML/CSS. To contribute:</p>
                             <ul>
-                                <li>Edit the pages directly in the <code>wiki/</code> directory.</li>
-                                <li>Ensure all links are relative and working.</li>
-                                <li>Use the existing CSS classes for consistency.</li>
+                                <li id="contribute-docs-1">Edit the pages directly in the <code>wiki/</code> directory.</li>
+                                <li id="contribute-docs-2">Ensure all links are relative and working.</li>
+                                <li id="contribute-docs-3">Use the existing CSS classes for consistency.</li>
                             </ul>
                         </section>
 
                         <section id="translate" class="content-section">
-                            <h2><i class="fas fa-language"></i> Translation</h2>
-                            <p>We use standard tools for localization:</p>
+                            <h2><i class="fas fa-language"></i> <span id="contribute-translate-title">Translation</span></h2>
+                            <p id="contribute-translate-intro">We use standard tools for localization:</p>
                             <ul>
-                                <li><strong>Applications:</strong> We use <code>.po</code> files (Gettext).</li>
-                                <li><strong>Website:</strong> We are transitioning to a JSON-based system (currently
-                                    disabled for stability).</li>
+                                <li><strong id="contribute-translate-apps-label">Applications:</strong> <span id="contribute-translate-apps">We use <code>.po</code> files (Gettext).</span></li>
+                                <li><strong id="contribute-translate-web-label">Website:</strong> <span id="contribute-translate-web">We use a JavaScript-based dictionary system for dynamic translation.</span></li>
                             </ul>
                         </section>
 
@@ -201,8 +200,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
@@ -211,8 +210,8 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="../../../js/logger.js"></script>
-    <!-- <script src="../../../js/language-loader.js"></script> -->
-    <!-- <script src="../../../js/language-switcher.js"></script> -->
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
     <script src="../../../js/soplos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
