@@ -93,7 +93,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Tyson Apps</span>
+                <span class="breadcrumb-current" id="tyson-apps-breadcrumb">Tyson Apps</span>
             </nav>
         </div>
     </div>
@@ -104,8 +104,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-th"></i> Tyson Applications</h1>
-                    <p>Exclusive tools developed for Soplos Tyson (KDE Plasma), designed to enhance your desktop
+                    <h1><i class="fas fa-th"></i> <span id="tyson-apps-hero-title">Tyson Applications</span></h1>
+                    <p id="tyson-apps-hero-desc">Exclusive tools developed for Soplos Tyson (KDE Plasma), designed to enhance your desktop
                         experience and customization.</p>
                 </div>
             </div>
@@ -119,21 +119,21 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="tyson-apps-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#grub">Soplos GRUB Editor</a></li>
-                            <li><a href="#plymouth">Soplos Plymouth Manager</a></li>
-                            <li><a href="#repo">Soplos Repo Selector</a></li>
-                            <li><a href="#welcome">Soplos Welcome</a></li>
-                            <li><a href="#welcomelive">Soplos Welcome Live</a></li>
+                            <li><a href="#grub" id="tyson-apps-toc-grub">Soplos GRUB Editor</a></li>
+                            <li><a href="#plymouth" id="tyson-apps-toc-plymouth">Soplos Plymouth Manager</a></li>
+                            <li><a href="#repo" id="tyson-apps-toc-repo">Soplos Repo Selector</a></li>
+                            <li><a href="#welcome" id="tyson-apps-toc-welcome">Soplos Welcome</a></li>
+                            <li><a href="#welcomelive" id="tyson-apps-toc-welcomelive">Soplos Welcome Live</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section class="content-section">
-                            <h2><i class="fas fa-star"></i> Exclusive Applications for Tyson</h2>
-                            <p>The Tyson (KDE Plasma) edition includes a set of tools developed by the Soplos Linux team
+                            <h2><i class="fas fa-star"></i> <span id="tyson-apps-intro-title">Exclusive Applications for Tyson</span></h2>
+                            <p id="tyson-apps-intro-desc">The Tyson (KDE Plasma) edition includes a set of tools developed by the Soplos Linux team
                                 to
                                 facilitate system configuration and customization.</p>
                         </section>
@@ -144,16 +144,16 @@
                                     <img src="../../../images/icons/com.soplos.grubeditor.png"
                                         alt="Soplos GRUB Editor Icon">
                                 </div>
-                                <h4>Soplos GRUB Editor</h4>
-                                <p>Graphical interface to customize the GRUB bootloader. Easily change boot order,
+                                <h4 id="tyson-apps-grub-title">Soplos GRUB Editor</h4>
+                                <p id="tyson-apps-grub-desc">Graphical interface to customize the GRUB bootloader. Easily change boot order,
                                     themes, and
                                     timeout settings.</p>
                                 <ul>
-                                    <li>Change default boot entry</li>
-                                    <li>Apply custom GRUB themes</li>
-                                    <li>Set boot timeout</li>
+                                    <li id="tyson-apps-grub-feature-1">Change default boot entry</li>
+                                    <li id="tyson-apps-grub-feature-2">Apply custom GRUB themes</li>
+                                    <li id="tyson-apps-grub-feature-3">Set boot timeout</li>
                                 </ul>
-                                <a href="../soplos-grub-editor/" class="tool-link">Learn more <i
+                                <a href="../soplos-grub-editor/" class="tool-link" id="tyson-apps-grub-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -162,16 +162,16 @@
                                     <img src="../../../images/icons/com.soplos.plymouthmanager.png"
                                         alt="Soplos Plymouth Manager Icon">
                                 </div>
-                                <h4>Soplos Plymouth Manager</h4>
-                                <p>Manage and customize Plymouth boot splash screens. Preview and apply themes with a
+                                <h4 id="tyson-apps-plymouth-title">Soplos Plymouth Manager</h4>
+                                <p id="tyson-apps-plymouth-desc">Manage and customize Plymouth boot splash screens. Preview and apply themes with a
                                     simple
                                     interface.</p>
                                 <ul>
-                                    <li>Preview Plymouth themes</li>
-                                    <li>Apply custom splash screens</li>
-                                    <li>Backup and restore settings</li>
+                                    <li id="tyson-apps-plymouth-feature-1">Preview Plymouth themes</li>
+                                    <li id="tyson-apps-plymouth-feature-2">Apply custom splash screens</li>
+                                    <li id="tyson-apps-plymouth-feature-3">Backup and restore settings</li>
                                 </ul>
-                                <a href="../soplos-plymouth-manager/" class="tool-link">Learn more <i
+                                <a href="../soplos-plymouth-manager/" class="tool-link" id="tyson-apps-plymouth-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -180,16 +180,16 @@
                                     <img src="../../../images/icons/com.soplos.reposelector.png"
                                         alt="Soplos Repo Selector Icon">
                                 </div>
-                                <h4>Soplos Repo Selector</h4>
-                                <p>Select and configure software repositories intuitively. Add official and third-party
+                                <h4 id="tyson-apps-repo-title">Soplos Repo Selector</h4>
+                                <p id="tyson-apps-repo-desc">Select and configure software repositories intuitively. Add official and third-party
                                     repos
                                     with ease.</p>
                                 <ul>
-                                    <li>Add/remove repositories</li>
-                                    <li>Enable/disable sources</li>
-                                    <li>Update package lists</li>
+                                    <li id="tyson-apps-repo-feature-1">Add/remove repositories</li>
+                                    <li id="tyson-apps-repo-feature-2">Enable/disable sources</li>
+                                    <li id="tyson-apps-repo-feature-3">Update package lists</li>
                                 </ul>
-                                <a href="../soplos-repo-selector/" class="tool-link">Learn more <i
+                                <a href="../soplos-repo-selector/" class="tool-link" id="tyson-apps-repo-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -197,16 +197,16 @@
                                 <div class="tool-icon">
                                     <img src="../../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome Icon">
                                 </div>
-                                <h4>Soplos Welcome</h4>
-                                <p>Welcome assistant that guides you through first steps with Tyson. Includes tutorials
+                                <h4 id="tyson-apps-welcome-title">Soplos Welcome</h4>
+                                <p id="tyson-apps-welcome-desc">Welcome assistant that guides you through first steps with Tyson. Includes tutorials
                                     and
                                     system info.</p>
                                 <ul>
-                                    <li>System overview</li>
-                                    <li>Basic configuration tips</li>
-                                    <li>Links to documentation</li>
+                                    <li id="tyson-apps-welcome-feature-1">System overview</li>
+                                    <li id="tyson-apps-welcome-feature-2">Basic configuration tips</li>
+                                    <li id="tyson-apps-welcome-feature-3">Links to documentation</li>
                                 </ul>
-                                <a href="../soplos-welcome/" class="tool-link">Learn more <i
+                                <a href="../soplos-welcome/" class="tool-link" id="tyson-apps-welcome-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -215,16 +215,16 @@
                                     <img src="../../../images/icons/com.soplos.welcomelive.png"
                                         alt="Soplos Welcome Live Icon">
                                 </div>
-                                <h4>Soplos Welcome Live</h4>
-                                <p>Special version of the welcome assistant for Tyson live sessions. Optimized for demo
+                                <h4 id="tyson-apps-welcomelive-title">Soplos Welcome Live</h4>
+                                <p id="tyson-apps-welcomelive-desc">Special version of the welcome assistant for Tyson live sessions. Optimized for demo
                                     and
                                     testing.</p>
                                 <ul>
-                                    <li>Live session info</li>
-                                    <li>Installation prompts</li>
-                                    <li>System requirements check</li>
+                                    <li id="tyson-apps-welcomelive-feature-1">Live session info</li>
+                                    <li id="tyson-apps-welcomelive-feature-2">Installation prompts</li>
+                                    <li id="tyson-apps-welcomelive-feature-3">System requirements check</li>
                                 </ul>
-                                <a href="../soplos-welcome-live/" class="tool-link">Learn more <i
+                                <a href="../soplos-welcome-live/" class="tool-link" id="tyson-apps-welcomelive-link">Learn more <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -239,8 +239,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
