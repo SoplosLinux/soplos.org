@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_FR, {
     "tyson-apps-welcomelive-feature-3": "Vérification de la configuration système",
     "tyson-apps-welcomelive-link": "En savoir plus",
 
+    // Wiki des Applications Boro
+    "boro-apps-breadcrumb": "Apps Boro",
+    "boro-apps-hero-title": "Applications Boro",
+    "boro-apps-hero-desc": "Applications et outils exclusifs conçus pour l'édition Soplos Linux Boro (GNOME).",
+    "boro-apps-toc-title": "Sommaire",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Applications Exclusives pour Boro",
+    "boro-apps-intro-desc": "L'édition Boro (GNOME) comprend un ensemble d'outils développés par l'équipe Soplos Linux pour faciliter la configuration et la personnalisation du système.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Votre point de départ. Cette application vous accueille au premier démarrage et vous aide à configurer les aspects essentiels du système, installer des pilotes, choisir des logiciels et plus encore.",
+    "boro-apps-welcome-link": "En Savoir Plus",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Gérez vos dépôts APT graphiquement. Sélectionnez les miroirs les plus rapides pour votre emplacement et optimisez les vitesses de téléchargement des mises à jour.",
+    "boro-apps-repo-link": "En Savoir Plus",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Personnalisez le menu de démarrage (GRUB) facilement. Changez l'ordre de démarrage, le délai, l'image de fond et d'autres paramètres sans toucher aux fichiers de configuration.",
+    "boro-apps-grub-link": "En Savoir Plus",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Changez l'animation de démarrage du système (Plymouth). Choisissez parmi plusieurs thèmes préinstallés ou installez-en de nouveaux pour donner une touche unique à votre Boro.",
+    "boro-apps-plymouth-link": "En Savoir Plus",
+
     // Footer
     "footer-privacy": "Politique de Confidentialité",
     "footer-terms": "Conditions d'Utilisation"

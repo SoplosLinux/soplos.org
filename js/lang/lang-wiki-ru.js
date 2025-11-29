@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_RU, {
     "tyson-apps-welcomelive-feature-3": "Проверка системных требований",
     "tyson-apps-welcomelive-link": "Узнать больше",
 
+    // Вики приложений Boro
+    "boro-apps-breadcrumb": "Приложения Boro",
+    "boro-apps-hero-title": "Приложения Boro",
+    "boro-apps-hero-desc": "Эксклюзивные приложения и инструменты, разработанные для редакции Soplos Linux Boro (GNOME).",
+    "boro-apps-toc-title": "Содержание",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Эксклюзивные приложения для Boro",
+    "boro-apps-intro-desc": "Редакция Boro (GNOME) включает набор инструментов, разработанных командой Soplos Linux для облегчения настройки и персонализации системы.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Ваша отправная точка. Это приложение приветствует вас при первой загрузке и помогает настроить основные аспекты системы, установить драйверы, выбрать программное обеспечение и многое другое.",
+    "boro-apps-welcome-link": "Узнать Больше",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Управляйте репозиториями APT графически. Выбирайте самые быстрые зеркала для вашего местоположения и оптимизируйте скорость загрузки обновлений.",
+    "boro-apps-repo-link": "Узнать Больше",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Легко настраивайте меню загрузки (GRUB). Изменяйте порядок загрузки, время ожидания, фоновое изображение и другие параметры, не касаясь конфигурационных файлов.",
+    "boro-apps-grub-link": "Узнать Больше",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Измените анимацию загрузки системы (Plymouth). Выбирайте из нескольких предустановленных тем или устанавливайте новые, чтобы придать вашему Boro уникальный вид.",
+    "boro-apps-plymouth-link": "Узнать Больше",
+
     // Footer
     "footer-privacy": "Политика конфиденциальности",
     "footer-terms": "Условия использования"

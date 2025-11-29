@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_DE, {
     "tyson-apps-welcomelive-feature-3": "Systemanforderungsprüfung",
     "tyson-apps-welcomelive-link": "Mehr erfahren",
 
+    // Boro Anwendungen Wiki
+    "boro-apps-breadcrumb": "Boro Apps",
+    "boro-apps-hero-title": "Boro Anwendungen",
+    "boro-apps-hero-desc": "Exklusive Anwendungen und Tools, die für die Soplos Linux Boro (GNOME) Edition entwickelt wurden.",
+    "boro-apps-toc-title": "Inhalt",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Exklusive Anwendungen für Boro",
+    "boro-apps-intro-desc": "Die Boro (GNOME) Edition enthält eine Reihe von Tools, die vom Soplos Linux Team entwickelt wurden, um die Systemkonfiguration und Anpassung zu erleichtern.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Ihr Startpunkt. Diese Anwendung begrüßt Sie beim ersten Start und hilft Ihnen, wesentliche Systemaspekte zu konfigurieren, Treiber zu installieren, Software auszuwählen und mehr.",
+    "boro-apps-welcome-link": "Mehr Erfahren",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Verwalten Sie Ihre APT-Repositories grafisch. Wählen Sie die schnellsten Spiegelserver für Ihren Standort und optimieren Sie die Download-Geschwindigkeiten für Updates.",
+    "boro-apps-repo-link": "Mehr Erfahren",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Passen Sie das Boot-Menü (GRUB) einfach an. Ändern Sie die Boot-Reihenfolge, das Timeout, das Hintergrundbild und andere Parameter, ohne Konfigurationsdateien zu berühren.",
+    "boro-apps-grub-link": "Mehr Erfahren",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Ändern Sie die Boot-Animation des Systems (Plymouth). Wählen Sie aus mehreren vorinstallierten Themen oder installieren Sie neue, um Ihrem Boro eine einzigartige Note zu verleihen.",
+    "boro-apps-plymouth-link": "Mehr Erfahren",
+
     // Footer
     "footer-privacy": "Datenschutzrichtlinie",
     "footer-terms": "Nutzungsbedingungen"

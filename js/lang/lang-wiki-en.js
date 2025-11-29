@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_EN, {
     "tyson-apps-welcomelive-feature-3": "System requirements check",
     "tyson-apps-welcomelive-link": "Learn more",
 
+    // Boro Applications Wiki
+    "boro-apps-breadcrumb": "Boro Apps",
+    "boro-apps-hero-title": "Boro Applications",
+    "boro-apps-hero-desc": "Exclusive applications and tools designed for the Soplos Linux Boro (GNOME) edition.",
+    "boro-apps-toc-title": "Contents",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Exclusive Applications for Boro",
+    "boro-apps-intro-desc": "The Boro (GNOME) edition includes a set of tools developed by the Soplos Linux team to facilitate system configuration and customization.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Your starting point. This application welcomes you on the first boot and helps you configure essential system aspects, install drivers, choose software, and more.",
+    "boro-apps-welcome-link": "Learn More",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Manage your APT repositories graphically. Select the fastest mirrors for your location and optimize update download speeds.",
+    "boro-apps-repo-link": "Learn More",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Customize the boot menu (GRUB) easily. Change boot order, timeout, background image, and other parameters without touching configuration files.",
+    "boro-apps-grub-link": "Learn More",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Change the system boot animation (Plymouth). Choose from several pre-installed themes or install new ones to give your Boro a unique touch.",
+    "boro-apps-plymouth-link": "Learn More",
+
     // Footer
     "footer-privacy": "Privacy Policy",
     "footer-terms": "Terms of Use"

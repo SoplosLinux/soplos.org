@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_IT, {
     "tyson-apps-welcomelive-feature-3": "Controllo requisiti di sistema",
     "tyson-apps-welcomelive-link": "Scopri di più",
 
+    // Wiki Applicazioni Boro
+    "boro-apps-breadcrumb": "App Boro",
+    "boro-apps-hero-title": "Applicazioni Boro",
+    "boro-apps-hero-desc": "Applicazioni e strumenti esclusivi progettati per l'edizione Soplos Linux Boro (GNOME).",
+    "boro-apps-toc-title": "Contenuti",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Applicazioni Esclusive per Boro",
+    "boro-apps-intro-desc": "L'edizione Boro (GNOME) include un set di strumenti sviluppati dal team Soplos Linux per facilitare la configurazione e la personalizzazione del sistema.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Il tuo punto di partenza. Questa applicazione ti dà il benvenuto al primo avvio e ti aiuta a configurare aspetti essenziali del sistema, installare driver, scegliere software e altro.",
+    "boro-apps-welcome-link": "Scopri di Più",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Gestisci i tuoi repository APT graficamente. Seleziona i mirror più veloci per la tua posizione e ottimizza le velocità di download degli aggiornamenti.",
+    "boro-apps-repo-link": "Scopri di Più",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Personalizza il menu di avvio (GRUB) facilmente. Cambia l'ordine di avvio, il timeout, l'immagine di sfondo e altri parametri senza toccare i file di configurazione.",
+    "boro-apps-grub-link": "Scopri di Più",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Cambia l'animazione di avvio del sistema (Plymouth). Scegli tra diversi temi preinstallati o installane di nuovi per dare un tocco unico al tuo Boro.",
+    "boro-apps-plymouth-link": "Scopri di Più",
+
     // Footer
     "footer-privacy": "Politica sulla Privacy",
     "footer-terms": "Termini di Servizio"

@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_ES, {
     "tyson-apps-welcomelive-feature-3": "Verificación de requisitos del sistema",
     "tyson-apps-welcomelive-link": "Saber más",
 
+    // Wiki de Aplicaciones Boro
+    "boro-apps-breadcrumb": "Apps Boro",
+    "boro-apps-hero-title": "Aplicaciones Boro",
+    "boro-apps-hero-desc": "Aplicaciones y herramientas exclusivas diseñadas para la edición Soplos Linux Boro (GNOME).",
+    "boro-apps-toc-title": "Contenidos",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Aplicaciones Exclusivas para Boro",
+    "boro-apps-intro-desc": "La edición Boro (GNOME) incluye un conjunto de herramientas desarrolladas por el equipo de Soplos Linux para facilitar la configuración y personalización del sistema.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Tu punto de partida. Esta aplicación te da la bienvenida en el primer arranque y te ayuda a configurar aspectos esenciales del sistema, instalar controladores, elegir software y más.",
+    "boro-apps-welcome-link": "Saber Más",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Gestiona tus repositorios APT gráficamente. Selecciona los espejos más rápidos para tu ubicación y optimiza las velocidades de descarga de actualizaciones.",
+    "boro-apps-repo-link": "Saber Más",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Personaliza el menú de arranque (GRUB) fácilmente. Cambia el orden de arranque, el tiempo de espera, la imagen de fondo y otros parámetros sin tocar archivos de configuración.",
+    "boro-apps-grub-link": "Saber Más",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Cambia la animación de arranque del sistema (Plymouth). Elige entre varios temas preinstalados o instala nuevos para darle un toque único a tu Boro.",
+    "boro-apps-plymouth-link": "Saber Más",
+
     // Footer
     "footer-privacy": "Política de Privacidad",
     "footer-terms": "Términos de Uso"

@@ -2398,6 +2398,30 @@ Object.assign(window.LANG_RO, {
     "tyson-apps-welcomelive-feature-3": "Verificare cerințe de sistem",
     "tyson-apps-welcomelive-link": "Află mai multe",
 
+    // Wiki Aplicații Boro
+    "boro-apps-breadcrumb": "Aplicații Boro",
+    "boro-apps-hero-title": "Aplicații Boro",
+    "boro-apps-hero-desc": "Aplicații și instrumente exclusive concepute pentru ediția Soplos Linux Boro (GNOME).",
+    "boro-apps-toc-title": "Cuprins",
+    "boro-apps-toc-welcome": "Soplos Welcome",
+    "boro-apps-toc-repo": "Repo Selector",
+    "boro-apps-toc-grub": "Grub Editor",
+    "boro-apps-toc-plymouth": "Plymouth Manager",
+    "boro-apps-intro-title": "Aplicații Exclusive pentru Boro",
+    "boro-apps-intro-desc": "Ediția Boro (GNOME) include un set de instrumente dezvoltate de echipa Soplos Linux pentru a facilita configurarea și personalizarea sistemului.",
+    "boro-apps-welcome-title": "Soplos Welcome",
+    "boro-apps-welcome-desc": "Punctul tău de plecare. Această aplicație te întâmpină la prima pornire și te ajută să configurezi aspecte esențiale ale sistemului, să instalezi drivere, să alegi software și multe altele.",
+    "boro-apps-welcome-link": "Află Mai Multe",
+    "boro-apps-repo-title": "Soplos Repo Selector",
+    "boro-apps-repo-desc": "Gestionează depozitele APT grafic. Selectează cele mai rapide oglinzi pentru locația ta și optimizează vitezele de descărcare a actualizărilor.",
+    "boro-apps-repo-link": "Află Mai Multe",
+    "boro-apps-grub-title": "Soplos Grub Editor",
+    "boro-apps-grub-desc": "Personalizează meniul de pornire (GRUB) cu ușurință. Schimbă ordinea de pornire, timpul de așteptare, imaginea de fundal și alți parametri fără a atinge fișierele de configurare.",
+    "boro-apps-grub-link": "Află Mai Multe",
+    "boro-apps-plymouth-title": "Soplos Plymouth Manager",
+    "boro-apps-plymouth-desc": "Schimbă animația de pornire a sistemului (Plymouth). Alege dintre mai multe teme preinstalate sau instalează altele noi pentru a oferi Boro-ului tău o notă unică.",
+    "boro-apps-plymouth-link": "Află Mai Multe",
+
     // Footer
     "footer-privacy": "Politica de Confidențialitate",
     "footer-terms": "Termeni de Serviciu"

@@ -98,7 +98,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../">Wiki</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Boro Apps</span>
+                <span class="breadcrumb-current" id="boro-apps-breadcrumb">Boro Apps</span>
             </nav>
         </div>
     </div>
@@ -108,8 +108,8 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-th"></i> Boro Applications</h1>
-                    <p>Exclusive applications and tools designed for the Soplos Linux Boro (GNOME) edition.</p>
+                    <h1><i class="fas fa-th"></i> <span id="boro-apps-hero-title">Boro Applications</span></h1>
+                    <p id="boro-apps-hero-desc">Exclusive applications and tools designed for the Soplos Linux Boro (GNOME) edition.</p>
                 </div>
             </div>
         </section>
@@ -120,20 +120,20 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3>Contents</h3>
+                        <h3 id="boro-apps-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#welcome">Soplos Welcome</a></li>
-                            <li><a href="#repo">Repo Selector</a></li>
-                            <li><a href="#grub">Grub Editor</a></li>
-                            <li><a href="#plymouth">Plymouth Manager</a></li>
+                            <li><a href="#welcome" id="boro-apps-toc-welcome">Soplos Welcome</a></li>
+                            <li><a href="#repo" id="boro-apps-toc-repo">Repo Selector</a></li>
+                            <li><a href="#grub" id="boro-apps-toc-grub">Grub Editor</a></li>
+                            <li><a href="#plymouth" id="boro-apps-toc-plymouth">Plymouth Manager</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section class="content-section">
-                            <h2><i class="fas fa-star"></i> Exclusive Applications for Boro</h2>
-                            <p>The Boro (GNOME) edition includes a set of tools developed by the Soplos Linux team to
+                            <h2><i class="fas fa-star"></i> <span id="boro-apps-intro-title">Exclusive Applications for Boro</span></h2>
+                            <p id="boro-apps-intro-desc">The Boro (GNOME) edition includes a set of tools developed by the Soplos Linux team to
                                 facilitate system configuration and customization.</p>
                         </section>
 
@@ -141,10 +141,10 @@
                             <!-- Soplos Welcome -->
                             <div class="tool-card" id="welcome">
                                 <img src="../../../../images/icons/com.soplos.welcome.png" alt="Soplos Welcome">
-                                <h4>Soplos Welcome</h4>
-                                <p>Your starting point. This application welcomes you on the first boot and helps you
+                                <h4 id="boro-apps-welcome-title">Soplos Welcome</h4>
+                                <p id="boro-apps-welcome-desc">Your starting point. This application welcomes you on the first boot and helps you
                                     configure essential system aspects, install drivers, choose software, and more.</p>
-                                <a href="../soplos-welcome/" class="tool-link">Learn More <i
+                                <a href="../soplos-welcome/" class="tool-link" id="boro-apps-welcome-link">Learn More <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -152,22 +152,22 @@
                             <div class="tool-card" id="repo">
                                 <img src="../../../../images/icons/com.soplos.reposelector.png"
                                     alt="Soplos Repo Selector">
-                                <h4>Soplos Repo Selector</h4>
-                                <p>Manage your APT repositories graphically. Select the fastest mirrors for your
+                                <h4 id="boro-apps-repo-title">Soplos Repo Selector</h4>
+                                <p id="boro-apps-repo-desc">Manage your APT repositories graphically. Select the fastest mirrors for your
                                     location
                                     and optimize update download speeds.</p>
-                                <a href="../soplos-repo-selector/" class="tool-link">Learn More <i
+                                <a href="../soplos-repo-selector/" class="tool-link" id="boro-apps-repo-link">Learn More <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <!-- Grub Editor -->
                             <div class="tool-card" id="grub">
                                 <img src="../../../../images/icons/com.soplos.grubeditor.png" alt="Soplos Grub Editor">
-                                <h4>Soplos Grub Editor</h4>
-                                <p>Customize the boot menu (GRUB) easily. Change boot order, timeout, background image,
+                                <h4 id="boro-apps-grub-title">Soplos Grub Editor</h4>
+                                <p id="boro-apps-grub-desc">Customize the boot menu (GRUB) easily. Change boot order, timeout, background image,
                                     and
                                     other parameters without touching configuration files.</p>
-                                <a href="../soplos-grub-editor/" class="tool-link">Learn More <i
+                                <a href="../soplos-grub-editor/" class="tool-link" id="boro-apps-grub-link">Learn More <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
 
@@ -175,11 +175,11 @@
                             <div class="tool-card" id="plymouth">
                                 <img src="../../../../images/icons/com.soplos.plymouthmanager.png"
                                     alt="Soplos Plymouth Manager">
-                                <h4>Soplos Plymouth Manager</h4>
-                                <p>Change the system boot animation (Plymouth). Choose from several pre-installed themes
+                                <h4 id="boro-apps-plymouth-title">Soplos Plymouth Manager</h4>
+                                <p id="boro-apps-plymouth-desc">Change the system boot animation (Plymouth). Choose from several pre-installed themes
                                     or
                                     install new ones to give your Boro a unique touch.</p>
-                                <a href="../soplos-plymouth-manager/" class="tool-link">Learn More <i
+                                <a href="../soplos-plymouth-manager/" class="tool-link" id="boro-apps-plymouth-link">Learn More <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -195,8 +195,8 @@
             <div class="container">
                 <p>&copy; 2025 Sergi Perich</p>
                 <p class="legal-links">
-                    <a href="../../../legal/privacy.html">Privacy Policy</a> |
-                    <a href="../../../legal/terms.html">Terms of Use</a>
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
                 </p>
             </div>
         </div>
