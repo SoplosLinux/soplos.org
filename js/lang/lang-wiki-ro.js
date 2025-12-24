@@ -2072,6 +2072,8 @@ Object.assign(window.LANG_RO, {
     "community-contribute-title": "Implică-te",
     "community-contribute-text": "Nu trebuie să fii programator pentru a ajuta Soplos Linux să crească!",
     "community-contribute-dev-title": "Dezvoltare",
+    "community-contribute-dev-title-2": "Dezvoltare",
+    "community-contribute-dev-title-3": "Dezvoltare",
     "community-contribute-dev-text": "Ajută-ne să reparăm bug-uri și să construim noi funcții.",
     "community-contribute-dev-1": "Răsfoiți Issues pe GitHub",
     "community-contribute-dev-2": "Citiți Ghidul de Contribuție",
@@ -2089,17 +2091,19 @@ Object.assign(window.LANG_RO, {
     "community-contribute-design-2": "Proiectați Teme și Icoane",
     "community-events-title": "Evenimente și Întâlniri",
     "community-events-text": "Următoarele etape pentru Soplos Linux:",
-    "community-events-releases-label": "Lansări Viitoare:",
-    "community-events-release-1": "<strong>Decembrie 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
-    "community-events-release-2": "<strong>În Curând:</strong> Boro 1.0.0 Alpha (Data TBD)",
+    "community-events-releases-label": "Ultimele Lansări:",
+    "community-events-release-1": "<strong>Finalizat:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
+    "community-events-release-2": "<strong>Finalizat:</strong> Boro 1.0.0 Alpha - Prima versiune alpha este deja terminată.",
+    "community-events-release-3": "<strong>În Dezvoltare:</strong> Refactorizarea Soplos GRUB Editor 2.0.",
+    "community-events-release-4": "<strong>În Dezvoltare:</strong> Compatibilitate cu seriile Nvidia RTX 40 și 50.",
     "community-donate-title": "Sponsorizare",
     "community-donate-text": "Soplos Linux este gratuit, dar serverele și cafeaua nu sunt. Donațiile tale ajută la menținerea proiectului în viață.",
     "community-donate-btn": "Donați prin PayPal",
     "community-donate-note": "<small>Toate donațiile merg direct către costurile serverului și recompensele de dezvoltare.</small>",
 
     // Home - Soplos Welcome 2.0
-    "home-welcome-title": "În Dezvoltare",
-    "home-welcome-text": "<strong>Lucru în Curs:</strong> Soplos Welcome 2.0",
+    "home-welcome-title": "Stare",
+    "home-welcome-text": "<strong>Finalizat:</strong> Soplos Welcome 2.0, Soplos Welcome Live 2.0 & Soplos Repo Selector 2.0",
 
     // Pagina Contact
     "contact-breadcrumb": "Contact",

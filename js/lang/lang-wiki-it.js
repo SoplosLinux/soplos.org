@@ -2072,6 +2072,8 @@ Object.assign(window.LANG_IT, {
     "community-contribute-title": "Partecipa",
     "community-contribute-text": "Non devi essere un programmatore per aiutare Soplos Linux a crescere!",
     "community-contribute-dev-title": "Sviluppo",
+    "community-contribute-dev-title-2": "Sviluppo",
+    "community-contribute-dev-title-3": "Sviluppo",
     "community-contribute-dev-text": "Aiutaci a correggere bug e costruire nuove funzionalità.",
     "community-contribute-dev-1": "Sfoglia le segnalazioni su GitHub",
     "community-contribute-dev-2": "Leggi la Guida al Contributo",
@@ -2089,17 +2091,19 @@ Object.assign(window.LANG_IT, {
     "community-contribute-design-2": "Progetta Temi e Icone",
     "community-events-title": "Eventi e Incontri",
     "community-events-text": "Prossimi traguardi per Soplos Linux:",
-    "community-events-releases-label": "Prossime Versioni:",
-    "community-events-release-1": "<strong>Dicembre 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
-    "community-events-release-2": "<strong>Prossimamente:</strong> Boro 1.0.0 Alpha (Data da definire)",
+    "community-events-releases-label": "Ultime Versioni:",
+    "community-events-release-1": "<strong>Finalizzato:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
+    "community-events-release-2": "<strong>Finalizzato:</strong> Boro 1.0.0 Alpha - La prima alpha è già terminata.",
+    "community-events-release-3": "<strong>In Sviluppo:</strong> Refactoring di Soplos GRUB Editor 2.0.",
+    "community-events-release-4": "<strong>In Sviluppo:</strong> Compatibilità con le serie Nvidia RTX 40 e 50.",
     "community-donate-title": "Sponsorizzazione",
     "community-donate-text": "Soplos Linux è gratuito, ma i server e il caffè non lo sono. Le tue donazioni aiutano a mantenere il progetto vivo.",
     "community-donate-btn": "Dona tramite PayPal",
     "community-donate-note": "<small>Tutte le donazioni vanno direttamente ai costi del server e ai premi di sviluppo.</small>",
 
     // Home - Soplos Welcome 2.0
-    "home-welcome-title": "In Sviluppo",
-    "home-welcome-text": "<strong>Lavoro in Corso:</strong> Soplos Welcome 2.0",
+    "home-welcome-title": "Stato",
+    "home-welcome-text": "<strong>Finalizzato:</strong> Soplos Welcome 2.0, Soplos Welcome Live 2.0 & Soplos Repo Selector 2.0",
 
     // Pagina Contatto
     "contact-breadcrumb": "Contatto",

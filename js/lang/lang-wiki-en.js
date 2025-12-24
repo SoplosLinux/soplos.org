@@ -2072,6 +2072,8 @@ Object.assign(window.LANG_EN, {
     "community-contribute-title": "Contribute",
     "community-contribute-text": "You don't need to be a programmer to help Soplos Linux grow!",
     "community-contribute-dev-title": "Development",
+    "community-contribute-dev-title-2": "Development",
+    "community-contribute-dev-title-3": "Development",
     "community-contribute-dev-text": "Help us fix bugs and develop new features.",
     "community-contribute-dev-1": "Browse GitHub Issues",
     "community-contribute-dev-2": "Read Contribution Guide",
@@ -2089,17 +2091,19 @@ Object.assign(window.LANG_EN, {
     "community-contribute-design-2": "Design themes & icons",
     "community-events-title": "Events & Meetups",
     "community-events-text": "Upcoming milestones for Soplos Linux:",
-    "community-events-releases-label": "Upcoming Releases:",
-    "community-events-release-1": "<strong>December 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
-    "community-events-release-2": "<strong>Coming Soon:</strong> Boro 1.0.0 Alpha (Date TBD)",
+    "community-events-releases-label": "Latest Releases:",
+    "community-events-release-1": "<strong>Finalized:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
+    "community-events-release-2": "<strong>Finalized:</strong> Boro 1.0.0 Alpha - The first alpha is already finished.",
+    "community-events-release-3": "<strong>In Development:</strong> Soplos GRUB Editor 2.0 refactoring.",
+    "community-events-release-4": "<strong>In Development:</strong> Nvidia RTX 40 & 50 series compatibility.",
     "community-donate-title": "Sponsorship",
     "community-donate-text": "Soplos Linux is free, but servers and coffee are not. Your donations help keep the project alive.",
     "community-donate-btn": "Donate via PayPal",
     "community-donate-note": "<small>All donations go directly to server costs and development bounties.</small>",
 
     // Home - Soplos Welcome 2.0
-    "home-welcome-title": "In Development",
-    "home-welcome-text": "<strong>Work in Progress:</strong> Soplos Welcome 2.0",
+    "home-welcome-title": "Status",
+    "home-welcome-text": "<strong>Finalized:</strong> Soplos Welcome 2.0, Soplos Welcome Live 2.0 & Soplos Repo Selector 2.0",
 
     // Contact Page
     "contact-breadcrumb": "Contact",

@@ -2072,6 +2072,8 @@ Object.assign(window.LANG_RU, {
     "community-contribute-title": "Участвовать",
     "community-contribute-text": "Вам не нужно быть программистом, чтобы помочь Soplos Linux расти!",
     "community-contribute-dev-title": "Разработка",
+    "community-contribute-dev-title-2": "Разработка",
+    "community-contribute-dev-title-3": "Разработка",
     "community-contribute-dev-text": "Помогите нам исправлять ошибки и создавать новые функции.",
     "community-contribute-dev-1": "Просмотр задач на GitHub",
     "community-contribute-dev-2": "Читать руководство по участию",
@@ -2089,17 +2091,19 @@ Object.assign(window.LANG_RU, {
     "community-contribute-design-2": "Дизайн тем и иконок",
     "community-events-title": "События и встречи",
     "community-events-text": "Предстоящие вехи для Soplos Linux:",
-    "community-events-releases-label": "Предстоящие релизы:",
-    "community-events-release-1": "<strong>Декабрь 2025:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
-    "community-events-release-2": "<strong>Скоро:</strong> Boro 1.0.0 Alpha (Дата уточняется)",
+    "community-events-releases-label": "Последние выпуски:",
+    "community-events-release-1": "<strong>Завершено:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
+    "community-events-release-2": "<strong>Завершено:</strong> Boro 1.0.0 Alpha - Первая альфа-версия уже готова.",
+    "community-events-release-3": "<strong>В разработке:</strong> Рефакторинг Soplos GRUB Editor 2.0.",
+    "community-events-release-4": "<strong>В разработке:</strong> Совместимость с сериями Nvidia RTX 40 и 50.",
     "community-donate-title": "Спонсорство",
     "community-donate-text": "Soplos Linux бесплатен, но серверы и кофе — нет. Ваши пожертвования помогают поддерживать проект.",
     "community-donate-btn": "Пожертвовать через PayPal",
     "community-donate-note": "<small>Все пожертвования идут непосредственно на расходы на сервер и вознаграждения за разработку.</small>",
 
     // Home - Soplos Welcome 2.0
-    "home-welcome-title": "В Разработке",
-    "home-welcome-text": "<strong>Работа в процессе:</strong> Soplos Welcome 2.0",
+    "home-welcome-title": "Статус",
+    "home-welcome-text": "<strong>Завершено:</strong> Soplos Welcome 2.0, Soplos Welcome Live 2.0 & Soplos Repo Selector 2.0",
 
     // Страница контактов
     "contact-breadcrumb": "Контакт",
