@@ -1306,7 +1306,7 @@ Object.assign(window.LANG_FR, {
     // Overview Section
     "tyron-overview-title": "Aperçu",
     "tyron-overview-intro-pre": "Soplos Tyron est la variante légère de Soplos Linux, dotée de ",
-    "tyron-overview-xfce-label": "l'environnement de bureau XFCE",
+    "tyron-overview-xfce-label": "l'environnement de bureau XFCE 4.22",
     "tyron-overview-intro-post": ". Elle est conçue pour les utilisateurs qui privilégient la performance, l'efficacité et la simplicité tout en conservant une interface moderne et attrayante.",
     "tyron-feat-perf-title": "Axé sur la Performance",
     "tyron-feat-perf-desc": "Optimisé pour la vitesse et une faible utilisation des ressources. Parfait pour le matériel ancien ou les utilisateurs qui veulent des performances maximales.",
@@ -1491,7 +1491,7 @@ Object.assign(window.LANG_FR, {
     // Overview Section
     "tyson-overview-title": "Présentation",
     "tyson-overview-intro-pre": "Soplos Tyson est la variante moderne de Soplos Linux, construite autour de l'",
-    "tyson-overview-plasma-label": "environnement de bureau KDE Plasma",
+    "tyson-overview-plasma-label": "environnement de bureau KDE Plasma 6.5.4",
     "tyson-overview-intro-post": ". Tyson se concentre sur une expérience visuelle soignée, une personnalisation puissante et des fonctionnalités de bureau intégrées tout en restant réactif sur du matériel de milieu de gamme.",
     "tyson-feat-visual-title": "Visuellement riche",
     "tyson-feat-visual-desc": "Plasma offre des effets visuels avancés, des widgets natifs et des animations fluides tout en restant configurable pour réduire les effets sur les machines plus anciennes.",
@@ -1636,7 +1636,7 @@ Object.assign(window.LANG_FR, {
     // Overview Section
     "boro-overview-title": "Vue d'ensemble",
     "boro-overview-intro-pre": "Soplos Boro est l'édition GNOME de Soplos Linux, avec l'",
-    "boro-overview-gnome-label": "environnement de bureau\n GNOME 49",
+    "boro-overview-gnome-label": "environnement de bureau\n GNOME 49.2",
     "boro-overview-intro-mid": ". Comme Tyron et Tyson, il est basé sur",
     "boro-overview-debian-label": "Debian\n Testing",
     "boro-overview-intro-post": ", offrant un équilibre parfait entre stabilité et logiciels mis à jour.",
@@ -1658,8 +1658,8 @@ Object.assign(window.LANG_FR, {
     // Interface Tour
     "boro-interface-title": "Tour de l'interface",
     "boro-interface-desktop-title": "Expérience de Bureau",
-    "boro-interface-desktop-intro": "Boro offre une expérience GNOME 49 polie améliorée par Soplos Linux :",
-    "boro-interface-gnome-title": "GNOME 49",
+    "boro-interface-desktop-intro": "Boro offre une expérience GNOME 49.2 polie améliorée par Soplos Linux :",
+    "boro-interface-gnome-title": "GNOME 49.2",
     "boro-interface-gnome-desc": "La dernière version du bureau GNOME, offrant un espace de travail moderne et\n sans distraction.",
     "boro-interface-activities-title": "Vue d'ensemble des Activités",
     "boro-interface-activities-desc": "Appuyez sur la touche Super pour voir les fenêtres ouvertes, les espaces de travail et la grille d'applications\n tout en un seul endroit. Recherchez des applications, fichiers et paramètres instantanément.",
@@ -1743,7 +1743,7 @@ Object.assign(window.LANG_FR, {
     "boro-soplos-welcome-title": "Soplos Welcome",
     "boro-soplos-welcome-desc": "Votre premier arrêt après l'installation. Installez des pilotes, des logiciels et personnalisez votre\n bureau facilement.",
     "boro-soplos-exclusive-label": "Exclusif à Boro :",
-    "boro-soplos-exclusive": "Soplos Linux Boro combine la puissance de GNOME 49\n avec la suite de personnalisation exclusive Soplos pour une expérience utilisateur unique.",
+    "boro-soplos-exclusive": "Soplos Linux Boro combine la puissance de GNOME 49.2\n avec la suite de personnalisation exclusive Soplos pour une expérience utilisateur unique.",
 
     // Performance Tips
     "boro-perf-title": "Conseils de Performance",

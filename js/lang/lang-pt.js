@@ -54,7 +54,7 @@ window.LANG_PT = {
     "downloadTitle": "Baixar Soplos Linux",
 
     // Tyron (XFCE)
-    "appsTyronTitle": "Xfce 4.20",
+    "appsTyronTitle": "Xfce 4.22",
     "modalTyronTitle": "Tyron (XFCE) - Requisitos do Sistema",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Aplicações para Tyron",
@@ -62,10 +62,10 @@ window.LANG_PT = {
     "tyronGalleryCaption": "Desktop Tyron XFCE",
     "tyronGuideLink": "Guia Tyron (XFCE)",
     "tyronVersion": "Soplos Linux Tyron 1.0.0 Beta",
-    "xfceDesktop": "Ambiente desktop XFCE 4.20.1",
+    "xfceDesktop": "Ambiente desktop XFCE 4.22",
 
     // Tyson (Plasma)
-    "appsTysonTitle": "Plasma 6.5.2",
+    "appsTysonTitle": "Plasma 6.5.4",
     "archSupportTyson": "Suporte a arquitetura x86_64",
     "customizationTitleTyson": "Personalização",
     "debianSecurityTyson": "Baseado na segurança sólida do Debian",
@@ -84,7 +84,7 @@ window.LANG_PT = {
     "modalTysonTitle": "Tyson (Plasma 6) - Requisitos do Sistema",
     "optimizationsTitleTyson": "Otimizações",
     "pipewireTyson": "PipeWire 1.4.2",
-    "plasmaDesktop": "Ambiente desktop KDE Plasma 6.3.6",
+    "plasmaDesktop": "Ambiente desktop KDE Plasma 6.5.4",
     "privacyOptionsTyson": "Opções de privacidade aprimoradas",
     "recGraphicsTyson": "Gráficos: Dedicada 4GB VRAM",
     "recProcessorTyson": "Processador: Quad core 3.0 GHz ou superior",
@@ -106,14 +106,14 @@ window.LANG_PT = {
     "visualThemesTyson": "Temas visuais e estilos pré-configurados",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 49.1",
-    "boroDescription": "Guia completo para a edição GNOME do Soplos Linux. Descubra o poder e a elegância do ambiente de trabalho GNOME 49.",
+    "appsBoroTitle": "GNOME 49.2",
+    "boroDescription": "Guia completo para a edição GNOME do Soplos Linux. Descubra o poder e a elegância do ambiente de trabalho GNOME 49.2.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Guia Boro (GNOME)",
     "boroTitle": "Soplos Linux Boro",
     "boroVersion": "Soplos Linux Boro 1.0.0 Alpha",
-    "gnomeDesktop": "Ambiente de trabalho GNOME 49",
-    "modalBoroTitle": "Boro (GNOME 49) - Requisitos do Sistema",
+    "gnomeDesktop": "Ambiente de trabalho GNOME 49.2",
+    "modalBoroTitle": "Boro (GNOME 49.2) - Requisitos do Sistema",
     "requirementsBoroTitle": "Boro (GNOME)",
     "waylandSystemBoro": "Sistema de janelas: Wayland",
 

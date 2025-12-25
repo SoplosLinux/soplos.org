@@ -54,7 +54,7 @@ window.LANG_RO = {
     "downloadTitle": "Descarcă Soplos Linux",
 
     // Tyron (XFCE)
-    "appsTyronTitle": "Xfce 4.20",
+    "appsTyronTitle": "Xfce 4.22",
     "modalTyronTitle": "Tyron (XFCE) - Cerințe de Sistem",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Aplicații pentru Tyron",
@@ -62,10 +62,10 @@ window.LANG_RO = {
     "tyronGalleryCaption": "Desktop Tyron XFCE",
     "tyronGuideLink": "Ghid Tyron (XFCE)",
     "tyronVersion": "Soplos Linux Tyron 1.0.0 Beta",
-    "xfceDesktop": "Mediul desktop XFCE 4.20.1",
+    "xfceDesktop": "Mediul desktop XFCE 4.22",
 
     // Tyson (Plasma)
-    "appsTysonTitle": "Plasma 6.5.2",
+    "appsTysonTitle": "Plasma 6.5.4",
     "archSupportTyson": "Suport pentru arhitectura x86_64",
     "customizationTitleTyson": "Personalizare",
     "debianBaseTyson": "Bazat pe Debian Testing",
@@ -84,7 +84,7 @@ window.LANG_RO = {
     "modalTysonTitle": "Tyson (Plasma 6) - Cerințe de Sistem",
     "optimizationsTitleTyson": "Optimizări",
     "pipewireTyson": "PipeWire 1.4.2",
-    "plasmaDesktop": "Mediul desktop KDE Plasma 6.3.6",
+    "plasmaDesktop": "Mediul desktop KDE Plasma 6.5.4",
     "privacyOptionsTyson": "Opțiuni de confidențialitate îmbunătățite",
     "recGraphicsTyson": "Grafică: Dedicată 4GB VRAM",
     "recProcessorTyson": "Procesor: Quad core 3.0 GHz sau superior",
@@ -106,14 +106,14 @@ window.LANG_RO = {
     "visualThemesTyson": "Teme vizuale și stiluri preconfigurate",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 49.1",
-    "boroDescription": "Ghid complet pentru ediția GNOME a Soplos Linux. Descoperă puterea și eleganța mediului desktop GNOME 49.",
+    "appsBoroTitle": "GNOME 49.2",
+    "boroDescription": "Ghid complet pentru ediția GNOME a Soplos Linux. Descoperă puterea și eleganța mediului desktop GNOME 49.2.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Ghid Boro (GNOME)",
     "boroTitle": "Soplos Linux Boro",
     "boroVersion": "Soplos Linux Boro 1.0.0 Alpha",
-    "gnomeDesktop": "Mediul desktop GNOME 49",
-    "modalBoroTitle": "Boro (GNOME 49) - Cerințe de Sistem",
+    "gnomeDesktop": "Mediul desktop GNOME 49.2",
+    "modalBoroTitle": "Boro (GNOME 49.2) - Cerințe de Sistem",
     "requirementsBoroTitle": "Boro (GNOME)",
     "waylandSystemBoro": "Sistem de ferestre: Wayland",
 

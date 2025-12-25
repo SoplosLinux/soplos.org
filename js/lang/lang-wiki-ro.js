@@ -1306,7 +1306,7 @@ Object.assign(window.LANG_RO, {
     // Overview Section
     "tyron-overview-title": "Prezentare generală",
     "tyron-overview-intro-pre": "Soplos Tyron este varianta ușoară a Soplos Linux, cu ",
-    "tyron-overview-xfce-label": "mediul desktop XFCE",
+    "tyron-overview-xfce-label": "mediul desktop XFCE 4.22",
     "tyron-overview-intro-post": ". Este proiectat pentru utilizatorii care prioritizează performanța, eficiența și simplitatea, menținând totodată o interfață modernă și atractivă.",
     "tyron-feat-perf-title": "Focusat pe performanță",
     "tyron-feat-perf-desc": "Optimizat pentru viteză și utilizare redusă a resurselor. Perfect pentru hardware mai vechi sau utilizatori care doresc performanță maximă.",
@@ -1491,7 +1491,7 @@ Object.assign(window.LANG_RO, {
     // Overview Section
     "tyson-overview-title": "Prezentare generală",
     "tyson-overview-intro-pre": "Soplos Tyson este varianta modernă a Soplos Linux, construită în jurul ",
-    "tyson-overview-plasma-label": "mediului desktop KDE Plasma",
+    "tyson-overview-plasma-label": "mediului desktop KDE Plasma 6.5.4",
     "tyson-overview-intro-post": ". Tyson se concentrează pe o experiență vizuală rafinată, personalizare puternică și caracteristici desktop integrate, rămânând totuși receptiv pe hardware de nivel mediu.",
     "tyson-feat-visual-title": "Vizual bogat",
     "tyson-feat-visual-desc": "Plasma oferă efecte vizuale avansate, widget-uri native și animații fluide, rămânând configurabil pentru a reduce efectele pe mașini mai vechi.",
@@ -1636,7 +1636,7 @@ Object.assign(window.LANG_RO, {
     // Overview Section
     "boro-overview-title": "Prezentare Generală",
     "boro-overview-intro-pre": "Soplos Boro este ediția GNOME a Soplos Linux, oferind",
-    "boro-overview-gnome-label": "mediul desktop\n GNOME 49",
+    "boro-overview-gnome-label": "mediul desktop\n GNOME 49.2",
     "boro-overview-intro-mid": ". La fel ca Tyron și Tyson, este bazat pe",
     "boro-overview-debian-label": "Debian\n Testing",
     "boro-overview-intro-post": ", oferind un echilibru perfect între stabilitate și software actualizat.",
@@ -1658,8 +1658,8 @@ Object.assign(window.LANG_RO, {
     // Interface Tour
     "boro-interface-title": "Turul Interfeței",
     "boro-interface-desktop-title": "Experiența Desktop",
-    "boro-interface-desktop-intro": "Boro oferă o experiență GNOME 49 rafinată, îmbunătățită de Soplos Linux:",
-    "boro-interface-gnome-title": "GNOME 49",
+    "boro-interface-desktop-intro": "Boro oferă o experiență GNOME 49.2 rafinată, îmbunătățită de Soplos Linux:",
+    "boro-interface-gnome-title": "GNOME 49.2",
     "boro-interface-gnome-desc": "Cea mai recentă versiune a desktop-ului GNOME, oferind un spațiu de lucru modern și\n fără distrageri.",
     "boro-interface-activities-title": "Prezentare Generală Activități",
     "boro-interface-activities-desc": "Apăsați tasta Super pentru a vedea ferestrele deschise, spațiile de lucru și grila de aplicații\n toate într-un singur loc. Căutați aplicații, fișiere și setări instantaneu.",
@@ -1743,7 +1743,7 @@ Object.assign(window.LANG_RO, {
     "boro-soplos-welcome-title": "Soplos Welcome",
     "boro-soplos-welcome-desc": "Prima oprire după instalare. Instalați drivere, software și personalizați-vă\n desktop-ul cu ușurință.",
     "boro-soplos-exclusive-label": "Exclusiv pentru Boro:",
-    "boro-soplos-exclusive": "Soplos Linux Boro combină puterea GNOME 49\n cu suita de personalizare exclusivă Soplos pentru o experiență unică de utilizare.",
+    "boro-soplos-exclusive": "Soplos Linux Boro combină puterea GNOME 49.2\n cu suita de personalizare exclusivă Soplos pentru o experiență unică de utilizare.",
 
     // Performance Tips
     "boro-perf-title": "Sfaturi de Performanță",

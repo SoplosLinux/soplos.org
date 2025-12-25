@@ -1306,7 +1306,7 @@ Object.assign(window.LANG_RU, {
     // Overview Section
     "tyron-overview-title": "Обзор",
     "tyron-overview-intro-pre": "Soplos Tyron — это легкий вариант Soplos Linux с ",
-    "tyron-overview-xfce-label": "рабочей средой XFCE",
+    "tyron-overview-xfce-label": "рабочей средой XFCE 4.22",
     "tyron-overview-intro-post": ". Он разработан для пользователей, которые ценят производительность, эффективность и простоту, сохраняя при этом современный и привлекательный интерфейс.",
     "tyron-feat-perf-title": "Ориентирован на производительность",
     "tyron-feat-perf-desc": "Оптимизирован для скорости и низкого использования ресурсов. Идеален для старого оборудования или пользователей, которым нужна максимальная производительность.",
@@ -1491,7 +1491,7 @@ Object.assign(window.LANG_RU, {
     // Overview Section
     "tyson-overview-title": "Обзор",
     "tyson-overview-intro-pre": "Soplos Tyson — это современный вариант Soplos Linux, построенный вокруг ",
-    "tyson-overview-plasma-label": "рабочей среды KDE Plasma",
+    "tyson-overview-plasma-label": "рабочей среды KDE Plasma 6.5.4",
     "tyson-overview-intro-post": ". Tyson фокусируется на отточенном визуальном опыте, мощной настройке и интегрированных функциях рабочего стола, сохраняя при этом отзывчивость на оборудовании среднего класса.",
     "tyson-feat-visual-title": "Визуально богатый",
     "tyson-feat-visual-desc": "Plasma предлагает продвинутые визуальные эффекты, нативные виджеты и плавные анимации, оставаясь настраиваемым для уменьшения эффектов на старых машинах.",
@@ -1636,7 +1636,7 @@ Object.assign(window.LANG_RU, {
     // Overview Section
     "boro-overview-title": "Обзор",
     "boro-overview-intro-pre": "Soplos Boro — это редакция GNOME дистрибутива Soplos Linux, включающая",
-    "boro-overview-gnome-label": "среду рабочего стола\n GNOME 49",
+    "boro-overview-gnome-label": "среду рабочего стола\n GNOME 49.2",
     "boro-overview-intro-mid": ". Как Tyron и Tyson, она основана на",
     "boro-overview-debian-label": "Debian\n Testing",
     "boro-overview-intro-post": ", предлагая идеальный баланс между стабильностью и обновленным ПО.",
@@ -1658,8 +1658,8 @@ Object.assign(window.LANG_RU, {
     // Interface Tour
     "boro-interface-title": "Тур по интерфейсу",
     "boro-interface-desktop-title": "Опыт рабочего стола",
-    "boro-interface-desktop-intro": "Boro предлагает отточенный опыт GNOME 49, улучшенный Soplos Linux:",
-    "boro-interface-gnome-title": "GNOME 49",
+    "boro-interface-desktop-intro": "Boro предлагает отточенный опыт GNOME 49.2, улучшенный Soplos Linux:",
+    "boro-interface-gnome-title": "GNOME 49.2",
     "boro-interface-gnome-desc": "Последняя версия рабочего стола GNOME, обеспечивающая современное рабочее пространство\n без отвлекающих факторов.",
     "boro-interface-activities-title": "Обзор деятельности",
     "boro-interface-activities-desc": "Нажмите клавишу Super, чтобы увидеть открытые окна, рабочие пространства и сетку приложений\n в одном месте. Мгновенный поиск приложений, файлов и настроек.",
@@ -1743,7 +1743,7 @@ Object.assign(window.LANG_RU, {
     "boro-soplos-welcome-title": "Soplos Welcome",
     "boro-soplos-welcome-desc": "Ваша первая остановка после установки. Устанавливайте драйверы, ПО и настраивайте ваш\n рабочий стол легко.",
     "boro-soplos-exclusive-label": "Эксклюзивно для Boro:",
-    "boro-soplos-exclusive": "Soplos Linux Boro сочетает мощь GNOME 49\n с эксклюзивным пакетом настройки Soplos для уникального пользовательского опыта.",
+    "boro-soplos-exclusive": "Soplos Linux Boro сочетает мощь GNOME 49.2\n с эксклюзивным пакетом настройки Soplos для уникального пользовательского опыта.",
 
     // Performance Tips
     "boro-perf-title": "Советы по производительности",
