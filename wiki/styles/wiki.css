@@ -868,10 +868,37 @@ footer .container p {
 
 .recent-updates h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-color, #333);
+}
+
+.updates-grid {
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 50px;
+  margin: 0 -20px;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for updates */
+.updates-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.updates-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.updates-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff6b35, #f7931e);
+  border-radius: 10px;
+}
+
+.updates-grid::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f7931e, #ff6b35);
 }
 
 .updates-timeline {
@@ -1319,9 +1346,57 @@ footer .container p {
     padding-left: 12px;
   }
 
+  /* =========================
+       RECENT UPDATES CAROUSEL (MOBILE)
+       ========================= */
+  .recent-updates {
+    padding: 40px 0;
+  }
+
+  .recent-updates h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .updates-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    padding: 20px 15px;
+    margin: 0;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .updates-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .updates-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+
+  .updates-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #ff6b35, #f7931e);
+    border-radius: 10px;
+  }
+
   .update-item {
+    flex: 0 0 85vw;
+    max-width: 85vw;
+    min-width: 280px;
+    scroll-snap-align: center;
     flex-direction: column;
     text-align: center;
+    padding: 30px 20px !important;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   }
 
   .update-date {
