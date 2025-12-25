@@ -1741,7 +1741,9 @@ Object.assign(window.LANG_RU, {
     "boro-soplos-repo-title": "Soplos Repo Selector",
     "boro-soplos-repo-desc": "Выберите самые быстрые зеркала для обновлений и установки ПО, чтобы обеспечить\n максимальную скорость загрузки.",
     "boro-soplos-welcome-title": "Soplos Welcome",
-    "boro-soplos-welcome-desc": "Ваша первая остановка после установки. Устанавливайте драйверы, ПО и настраивайте ваш\n рабочий стол легко.",
+    "boro-soplos-welcome-desc": "Ваша первая остановка после установки. Устанавливайте драйверы, программы и\n настраивайте рабочий стол легко.",
+    "boro-soplos-welcome-live-title": "Soplos Welcome Live",
+    "boro-soplos-welcome-live-desc": "Интегрированный помощник для Live-сессии. Помогает подготовить диски,\n разметить разделы и запустить установку с полезными инструментами.",
     "boro-soplos-exclusive-label": "Эксклюзивно для Boro:",
     "boro-soplos-exclusive": "Soplos Linux Boro сочетает мощь GNOME 49.2\n с эксклюзивным пакетом настройки Soplos для уникального пользовательского опыта.",
 
@@ -2091,6 +2093,8 @@ Object.assign(window.LANG_RU, {
     "community-contribute-design-2": "Дизайн тем и иконок",
     "community-events-title": "События и встречи",
     "community-events-text": "Предстоящие вехи для Soplos Linux:",
+    "anniversary-title": "1-я Годовщина",
+    "anniversary-text": "<strong>28 декабря 2025:</strong> Отмечаем 1 год Soplos Linux! Проект родился 28 декабря 2024 года.",
     "community-events-releases-label": "Последние выпуски:",
     "community-events-release-1": "<strong>Завершено:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Завершено:</strong> Boro 1.0.0 Alpha - Первая альфа-версия уже готова.",
@@ -2360,6 +2364,9 @@ Object.assign(window.LANG_RU, {
     "tyron-apps-welcomelive-link": "Узнать больше",
 
     // Вики приложений Tyson
+    "tysonAppsLink": "Приложения для Tyson",
+    "boroAppsLink": "Приложения для Boro",
+    "systemTitle": "Управление системой",
     "tyson-apps-breadcrumb": "Приложения Tyson",
     "tyson-apps-hero-title": "Приложения Tyson",
     "tyson-apps-hero-desc": "Эксклюзивные инструменты, разработанные для Soplos Tyson (KDE Plasma), предназначенные для улучшения вашего опыта работы с рабочим столом и настройки.",
@@ -2425,6 +2432,7 @@ Object.assign(window.LANG_RU, {
     "boro-apps-plymouth-title": "Soplos Plymouth Manager",
     "boro-apps-plymouth-desc": "Измените анимацию загрузки системы (Plymouth). Выбирайте из нескольких предустановленных тем или устанавливайте новые, чтобы придать вашему Boro уникальный вид.",
     "boro-apps-plymouth-link": "Узнать Больше",
+    "boro-apps-welcomelive-link": "Узнать Больше",
 
     // Soplos Docklike Wiki
     "docklike-breadcrumb-home": "Главная",
@@ -2632,6 +2640,7 @@ Object.assign(window.LANG_RU, {
     "welcome-live-feat-6-desc": "Быстрый доступ к инструментам управления разделами для подготовки диска.",
     "welcome-live-screenshots-title": "Скриншоты",
     "welcome-live-screenshot-1": "Soplos Welcome Live (Tyron)",
+    "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
     // Footer

@@ -1559,6 +1559,8 @@ Object.assign(window.LANG_PT, {
     "tyson-custom-tip": "Use Atividades para criar layouts diferentes para trabalho, jogos ou apresentações e alternar rapidamente entre eles.",
 
     // Default Applications
+    "tysonAppsLink": "Aplicações para Tyson",
+    "boroAppsLink": "Aplicações para Boro",
     "tyson-apps-title": "Aplicações padrão",
     "tyson-apps-intro": "Tyson vem com uma seleção curada de aplicações KDE e multi-desktop escolhidas para equilíbrio entre recursos e integração. Para software adicional, use Soplos Welcome → Software.",
     "tyson-apps-need-label": "Precisa de mais aplicações?",
@@ -1742,6 +1744,8 @@ Object.assign(window.LANG_PT, {
     "boro-soplos-repo-desc": "Selecione os espelhos mais rápidos para atualizações e instalação de software para garantir\n velocidades máximas de download.",
     "boro-soplos-welcome-title": "Soplos Welcome",
     "boro-soplos-welcome-desc": "Sua primeira parada após a instalação. Instale drivers, software e personalize seu\n desktop facilmente.",
+    "boro-soplos-welcome-live-title": "Soplos Welcome Live",
+    "boro-soplos-welcome-live-desc": "Assistente integrado para a sessão Live. Ajuda a preparar discos,\n particionar e iniciar a instalação com ferramentas úteis.",
     "boro-soplos-exclusive-label": "Exclusivo para Boro:",
     "boro-soplos-exclusive": "Soplos Linux Boro combina o poder do GNOME 49.2\n com a suíte de personalização exclusiva Soplos para uma experiência de usuário única.",
 
@@ -2091,6 +2095,8 @@ Object.assign(window.LANG_PT, {
     "community-contribute-design-2": "Projetar Temas e Ícones",
     "community-events-title": "Eventos e Encontros",
     "community-events-text": "Próximos marcos para o Soplos Linux:",
+    "anniversary-title": "1º Aniversário",
+    "anniversary-text": "<strong>28 de dezembro de 2025:</strong> Comemorando 1 ano de Soplos Linux! O projeto nasceu em 28 de dezembro de 2024.",
     "community-events-releases-label": "Últimos Lançamentos:",
     "community-events-release-1": "<strong>Finalizado:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Finalizado:</strong> Boro 1.0.0 Alpha - A primeira alpha já está terminada.",
@@ -2333,8 +2339,6 @@ Object.assign(window.LANG_PT, {
     "tyron-apps-plymouth-feature-1": "Visualizar temas do Plymouth",
     "tyron-apps-plymouth-feature-2": "Aplicar telas de inicialização personalizadas",
     "tyron-apps-plymouth-feature-3": "Backup e restauração de configurações",
-    "tyron-apps-plymouth-link": "Saiba mais",
-    "tyron-apps-repo-title": "Soplos Repo Selector",
     "tyron-apps-repo-desc": "Selecione e configure repositórios de software intuitivamente. Adicione repositórios oficiais e de terceiros com facilidade.",
     "tyron-apps-repo-feature-1": "Adicionar/remover repositórios",
     "tyron-apps-repo-feature-2": "Ativar/desativar fontes",
@@ -2425,6 +2429,7 @@ Object.assign(window.LANG_PT, {
     "boro-apps-plymouth-title": "Soplos Plymouth Manager",
     "boro-apps-plymouth-desc": "Altere a animação de inicialização do sistema (Plymouth). Escolha entre vários temas pré-instalados ou instale novos para dar um toque único ao seu Boro.",
     "boro-apps-plymouth-link": "Saiba Mais",
+    "boro-apps-welcomelive-link": "Saiba Mais",
 
     // Soplos Docklike Wiki
     "docklike-breadcrumb-home": "Início",
@@ -2632,6 +2637,7 @@ Object.assign(window.LANG_PT, {
     "welcome-live-feat-6-desc": "Acesso r\u00e1pido a ferramentas de gest\u00e3o de parti\u00e7\u00f5es para prepara\u00e7\u00e3o do disco.",
     "welcome-live-screenshots-title": "Capturas de Ecr\u00e3",
     "welcome-live-screenshot-1": "Soplos Welcome Live (Tyron)",
+    "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
     // Footer

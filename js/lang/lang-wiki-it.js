@@ -811,8 +811,9 @@ Object.assign(window.LANG_IT, {
     "start-toc-2": "Aggiornamenti di Sistema",
     "start-toc-3": "Centri Software",
     "start-toc-4": "Impostazioni Base",
-    "start-toc-5": "Applicazioni Essenziali",
-    "start-toc-6": "Gestione Driver",
+    "tysonAppsLink": "Applicazioni per Tyson",
+    "boroAppsLink": "Applicazioni per Boro",
+    "systemTitle": "Gestione del Sistema",
     "start-toc-7": "Personalizzazione Kernel",
     "start-toc-8": "Personalizzazione Desktop",
     "start-toc-9": "Supporto Multimediale",
@@ -1741,11 +1742,12 @@ Object.assign(window.LANG_IT, {
     "boro-soplos-repo-title": "Soplos Repo Selector",
     "boro-soplos-repo-desc": "Seleziona i mirror più veloci per aggiornamenti e installazione software per garantire\n velocità di download massime.",
     "boro-soplos-welcome-title": "Soplos Welcome",
-    "boro-soplos-welcome-desc": "La tua prima tappa dopo l'installazione. Installa driver, software e personalizza il tuo\n desktop facilmente.",
+    "boro-soplos-welcome-desc": "La tua prima fermata dopo l'installazione. Installa driver, software e personalizza\n il tuo desktop facilmente.",
+    "boro-soplos-welcome-live-title": "Soplos Welcome Live",
+    "boro-soplos-welcome-live-desc": "Assistente integrato per la sessione Live. Ti aiuta a preparare dischi,\n partizionare e avviare l'installazione con strumenti utili.",
     "boro-soplos-exclusive-label": "Esclusivo per Boro:",
     "boro-soplos-exclusive": "Soplos Linux Boro combina la potenza di GNOME 49.2\n con la suite di personalizzazione esclusiva Soplos per un'esperienza utente unica.",
 
-    // Performance Tips
     "boro-perf-title": "Consigli sulle Prestazioni",
     "boro-perf-intro": "Massimizza le prestazioni di Boro con queste tecniche di ottimizzazione:",
     "boro-perf-memory-title": "Ottimizzazione Memoria",
@@ -2091,6 +2093,8 @@ Object.assign(window.LANG_IT, {
     "community-contribute-design-2": "Progetta Temi e Icone",
     "community-events-title": "Eventi e Incontri",
     "community-events-text": "Prossimi traguardi per Soplos Linux:",
+    "anniversary-title": "1° Anniversario",
+    "anniversary-text": "<strong>28 dicembre 2025:</strong> Festeggiamo 1 anno di Soplos Linux! Il progetto è nato il 28 dicembre 2024.",
     "community-events-releases-label": "Ultime Versioni:",
     "community-events-release-1": "<strong>Finalizzato:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Finalizzato:</strong> Boro 1.0.0 Alpha - La prima alpha è già terminata.",
@@ -2425,6 +2429,7 @@ Object.assign(window.LANG_IT, {
     "boro-apps-plymouth-title": "Soplos Plymouth Manager",
     "boro-apps-plymouth-desc": "Cambia l'animazione di avvio del sistema (Plymouth). Scegli tra diversi temi preinstallati o installane di nuovi per dare un tocco unico al tuo Boro.",
     "boro-apps-plymouth-link": "Scopri di Più",
+    "boro-apps-welcomelive-link": "Scopri di Più",
 
     // Soplos Docklike Wiki
     "docklike-breadcrumb-home": "Home",
@@ -2632,6 +2637,7 @@ Object.assign(window.LANG_IT, {
     "welcome-live-feat-6-desc": "Accesso rapido agli strumenti di gestione delle partizioni per la preparazione del disco.",
     "welcome-live-screenshots-title": "Screenshot",
     "welcome-live-screenshot-1": "Soplos Welcome Live (Tyron)",
+    "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
     // Footer

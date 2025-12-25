@@ -1487,6 +1487,7 @@ Object.assign(window.LANG_RO, {
     "tyson-toc-5": "Aplicații exclusive Soplos",
     "tyson-toc-6": "Sfaturi pentru performanță",
     "tyson-toc-7": "Probleme comune",
+    "boroAppsLink": "Aplicații pentru Boro",
 
     // Overview Section
     "tyson-overview-title": "Prezentare generală",
@@ -1741,7 +1742,9 @@ Object.assign(window.LANG_RO, {
     "boro-soplos-repo-title": "Soplos Repo Selector",
     "boro-soplos-repo-desc": "Selectați cele mai rapide oglinzi pentru actualizări și instalarea software-ului pentru a asigura\n viteze maxime de descărcare.",
     "boro-soplos-welcome-title": "Soplos Welcome",
-    "boro-soplos-welcome-desc": "Prima oprire după instalare. Instalați drivere, software și personalizați-vă\n desktop-ul cu ușurință.",
+    "boro-soplos-welcome-desc": "Prima oprire după instalare. Instalați drivere, software și personalizați\n desktop-ul cu ușurință.",
+    "boro-soplos-welcome-live-title": "Soplos Welcome Live",
+    "boro-soplos-welcome-live-desc": "Asistent integrat pentru sesiunea Live. Vă ajută să pregătiți discurile,\n să partiționați și să lansați instalarea cu instrumente utile.",
     "boro-soplos-exclusive-label": "Exclusiv pentru Boro:",
     "boro-soplos-exclusive": "Soplos Linux Boro combină puterea GNOME 49.2\n cu suita de personalizare exclusivă Soplos pentru o experiență unică de utilizare.",
 
@@ -2091,6 +2094,8 @@ Object.assign(window.LANG_RO, {
     "community-contribute-design-2": "Proiectați Teme și Icoane",
     "community-events-title": "Evenimente și Întâlniri",
     "community-events-text": "Următoarele etape pentru Soplos Linux:",
+    "anniversary-title": "1a Aniversare",
+    "anniversary-text": "<strong>28 decembrie 2025:</strong> Sărbătorim 1 an de Soplos Linux! Proiectul s-a născut pe 28 decembrie 2024.",
     "community-events-releases-label": "Ultimele Lansări:",
     "community-events-release-1": "<strong>Finalizat:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Finalizat:</strong> Boro 1.0.0 Alpha - Prima versiune alpha este deja terminată.",
@@ -2333,8 +2338,6 @@ Object.assign(window.LANG_RO, {
     "tyron-apps-plymouth-feature-1": "Previzualizează teme Plymouth",
     "tyron-apps-plymouth-feature-2": "Aplică ecrane de pornire personalizate",
     "tyron-apps-plymouth-feature-3": "Backup și restaurare setări",
-    "tyron-apps-plymouth-link": "Află mai multe",
-    "tyron-apps-repo-title": "Soplos Repo Selector",
     "tyron-apps-repo-desc": "Selectează și configurează depozitele software intuitiv. Adaugă depozite oficiale și terțe cu ușurință.",
     "tyron-apps-repo-feature-1": "Adaugă/elimină depozite",
     "tyron-apps-repo-feature-2": "Activează/dezactivează surse",
@@ -2425,6 +2428,7 @@ Object.assign(window.LANG_RO, {
     "boro-apps-plymouth-title": "Soplos Plymouth Manager",
     "boro-apps-plymouth-desc": "Schimbă animația de pornire a sistemului (Plymouth). Alege dintre mai multe teme preinstalate sau instalează altele noi pentru a oferi Boro-ului tău o notă unică.",
     "boro-apps-plymouth-link": "Află Mai Multe",
+    "boro-apps-welcomelive-link": "Află Mai Multe",
 
     // Soplos Docklike Wiki
     "docklike-breadcrumb-home": "Acasă",
@@ -2632,6 +2636,7 @@ Object.assign(window.LANG_RO, {
     "welcome-live-feat-6-desc": "Acces rapid la instrumentele de gestionare a parti\u021biilor pentru preg\u0103tirea discului.",
     "welcome-live-screenshots-title": "Capturi de Ecran",
     "welcome-live-screenshot-1": "Soplos Welcome Live (Tyron)",
+    "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
     // Footer

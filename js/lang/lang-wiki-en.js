@@ -812,7 +812,9 @@ Object.assign(window.LANG_EN, {
     "start-toc-3": "Software Centers",
     "start-toc-4": "Basic Settings",
     "start-toc-5": "Essential Applications",
-    "start-toc-6": "Driver Management",
+    "tysonAppsLink": "Applications for Tyson",
+    "boroAppsLink": "Applications for Boro",
+    "systemTitle": "System Management",
     "start-toc-7": "Kernel Customization",
     "start-toc-8": "Desktop Customization",
     "start-toc-9": "Multimedia Support",
@@ -1742,6 +1744,8 @@ Object.assign(window.LANG_EN, {
     "boro-soplos-repo-desc": "Choose the fastest mirrors for updates and software installation to\n ensure maximum download speeds.",
     "boro-soplos-welcome-title": "Soplos Welcome",
     "boro-soplos-welcome-desc": "Your first stop after installation. Install drivers, software, and customize your\n desktop easily.",
+    "boro-soplos-welcome-live-title": "Soplos Welcome Live",
+    "boro-soplos-welcome-live-desc": "Integrated assistant for the Live session. Helps you prepare disks,\n partition, and launch the installation with useful tools.",
     "boro-soplos-exclusive-label": "Exclusive to Boro:",
     "boro-soplos-exclusive": "Soplos Linux Boro combines the power of GNOME 49.2\n with the exclusive Soplos customization suite for a unique user experience.",
 
@@ -2091,6 +2095,8 @@ Object.assign(window.LANG_EN, {
     "community-contribute-design-2": "Design themes & icons",
     "community-events-title": "Events & Meetups",
     "community-events-text": "Upcoming milestones for Soplos Linux:",
+    "anniversary-title": "1st Anniversary",
+    "anniversary-text": "<strong>December 28, 2025:</strong> Celebrating 1 year of Soplos Linux! The project was born on December 28, 2024.",
     "community-events-releases-label": "Latest Releases:",
     "community-events-release-1": "<strong>Finalized:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Finalized:</strong> Boro 1.0.0 Alpha - The first alpha is already finished.",
@@ -2425,6 +2431,7 @@ Object.assign(window.LANG_EN, {
     "boro-apps-plymouth-title": "Soplos Plymouth Manager",
     "boro-apps-plymouth-desc": "Change the system boot animation (Plymouth). Choose from several pre-installed themes or install new ones to give your Boro a unique touch.",
     "boro-apps-plymouth-link": "Learn More",
+    "boro-apps-welcomelive-link": "Learn More",
 
     // Soplos Docklike Wiki
     "docklike-breadcrumb-home": "Home",
@@ -2632,6 +2639,7 @@ Object.assign(window.LANG_EN, {
     "welcome-live-feat-6-desc": "Quick access to partition management tools for disk preparation.",
     "welcome-live-screenshots-title": "Screenshots",
     "welcome-live-screenshot-1": "Soplos Welcome Live (Tyron)",
+    "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
     // Footer

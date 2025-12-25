@@ -1559,6 +1559,8 @@ Object.assign(window.LANG_FR, {
     "tyson-custom-tip": "Utilisez les Activités pour créer différentes dispositions pour le travail, le jeu ou les présentations et basculez rapidement entre elles.",
 
     // Default Applications
+    "tysonAppsLink": "Applications pour Tyson",
+    "boroAppsLink": "Applications pour Boro",
     "tyson-apps-title": "Applications par défaut",
     "tyson-apps-intro": "Tyson est livré avec une sélection organisée d'applications KDE et multi-bureaux choisies pour l'équilibre entre fonctionnalités et intégration. Pour des logiciels supplémentaires, utilisez Soplos Welcome → Logiciels.",
     "tyson-apps-need-label": "Besoin de plus d'applications ?",
@@ -1741,7 +1743,9 @@ Object.assign(window.LANG_FR, {
     "boro-soplos-repo-title": "Soplos Repo Selector",
     "boro-soplos-repo-desc": "Sélectionnez les miroirs les plus rapides pour les mises à jour et l'installation de logiciels pour assurer\n des vitesses de téléchargement maximales.",
     "boro-soplos-welcome-title": "Soplos Welcome",
-    "boro-soplos-welcome-desc": "Votre premier arrêt après l'installation. Installez des pilotes, des logiciels et personnalisez votre\n bureau facilement.",
+    "boro-soplos-welcome-desc": "Votre premier arrêt après l'installation. Installez des pilotes, des logiciels et\n personnalisez votre bureau facilement.",
+    "boro-soplos-welcome-live-title": "Soplos Welcome Live",
+    "boro-soplos-welcome-live-desc": "Assistant intégré pour la session Live. Vous aide à préparer les disques,\n partitionner et lancer l'installation avec des outils utiles.",
     "boro-soplos-exclusive-label": "Exclusif à Boro :",
     "boro-soplos-exclusive": "Soplos Linux Boro combine la puissance de GNOME 49.2\n avec la suite de personnalisation exclusive Soplos pour une expérience utilisateur unique.",
 
@@ -2091,6 +2095,8 @@ Object.assign(window.LANG_FR, {
     "community-contribute-design-2": "Concevoir des thèmes et des icônes",
     "community-events-title": "Événements et rencontres",
     "community-events-text": "Prochaines étapes pour Soplos Linux :",
+    "anniversary-title": "1er Anniversaire",
+    "anniversary-text": "<strong>28 décembre 2025 :</strong> Nous célébrons 1 an de Soplos Linux ! Le projet est né le 28 décembre 2024.",
     "community-events-releases-label": "Dernières versions :",
     "community-events-release-1": "<strong>Finalisé :</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
     "community-events-release-2": "<strong>Finalisé :</strong> Boro 1.0.0 Alpha - La première alpha est déjà terminée.",
@@ -2333,8 +2339,6 @@ Object.assign(window.LANG_FR, {
     "tyron-apps-plymouth-feature-1": "Prévisualiser les thèmes Plymouth",
     "tyron-apps-plymouth-feature-2": "Appliquer des écrans de démarrage personnalisés",
     "tyron-apps-plymouth-feature-3": "Sauvegarder et restaurer les paramètres",
-    "tyron-apps-plymouth-link": "En savoir plus",
-    "tyron-apps-repo-title": "Soplos Repo Selector",
     "tyron-apps-repo-desc": "Sélectionnez et configurez les dépôts logiciels intuitivement. Ajoutez facilement des dépôts officiels et tiers.",
     "tyron-apps-repo-feature-1": "Ajouter/supprimer des dépôts",
     "tyron-apps-repo-feature-2": "Activer/désactiver des sources",
@@ -2425,6 +2429,7 @@ Object.assign(window.LANG_FR, {
     "boro-apps-plymouth-title": "Soplos Plymouth Manager",
     "boro-apps-plymouth-desc": "Changez l'animation de démarrage du système (Plymouth). Choisissez parmi plusieurs thèmes préinstallés ou installez-en de nouveaux pour donner une touche unique à votre Boro.",
     "boro-apps-plymouth-link": "En Savoir Plus",
+    "boro-apps-welcomelive-link": "En Savoir Plus",
 
     // Soplos Docklike Wiki
     "docklike-breadcrumb-home": "Accueil",
@@ -2632,6 +2637,7 @@ Object.assign(window.LANG_FR, {
     "welcome-live-feat-6-desc": "Accès rapide aux outils de gestion de partition pour la préparation du disque.",
     "welcome-live-screenshots-title": "Captures d'écran",
     "welcome-live-screenshot-1": "Soplos Welcome Live (Tyron)",
+    "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
     // Footer
