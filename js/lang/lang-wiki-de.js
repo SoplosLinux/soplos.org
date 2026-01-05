@@ -2098,7 +2098,7 @@ Object.assign(window.LANG_DE, {
     "anniversary-title": "1. Jubiläum",
     "anniversary-text": "<strong>28. Dezember 2025:</strong> Wir feiern 1 Jahr Soplos Linux! Das Projekt wurde am 28. Dezember 2024 gegründet.",
     "community-events-releases-label": "Neueste Veröffentlichungen:",
-    "community-events-release-1": "<strong>Abgeschlossen:</strong> Tyron 1.0.2 Beta & Tyson 1.0.2 Beta",
+    "community-events-release-1": "<strong>Abgeschlossen:</strong> Tyron 1.0.3 Beta & Tyson 1.0.3 Beta",
     "community-events-release-2": "<strong>Abgeschlossen:</strong> Boro 1.0.0 Alpha - Die erste Alpha ist bereits fertiggestellt.",
     "community-events-release-3": "<strong>In Entwicklung:</strong> Refactoring des Soplos GRUB Editor 2.0.",
     "community-events-release-4": "<strong>In Entwicklung:</strong> Kompatibilität mit den Nvidia RTX 40er und 50er Serien.",
