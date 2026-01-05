@@ -10,3 +10,4 @@ __pycache__/
 .idea/
 # Ignorar archivos temporales de sistema
 Thumbs.db
+soplos-press/
