@@ -498,4 +498,34 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+  // 6. Wiki Recent Updates Year Filter
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const updateItems = document.querySelectorAll(".update-item");
+
+  if (filterBtns.length > 0 && updateItems.length > 0) {
+    function filterByYear(year) {
+      updateItems.forEach((item) => {
+        if (item.getAttribute("data-year") === year) {
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      });
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Update active button
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // Filter items
+        const selectedYear = btn.getAttribute("data-filter");
+        filterByYear(selectedYear);
+      });
+    });
+
+    // Default to 2026 on load
+    filterByYear("2026");
+  }
 });

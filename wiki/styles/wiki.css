@@ -362,8 +362,10 @@ nav ul > li > .menu-dropdown-toggle {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(12px) scale(0.98);
-  transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.22s;
+  transition:
+    opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.22s;
 }
 
 /* Bridge the gap so mouse doesn't lose hover */
@@ -393,7 +395,9 @@ nav ul > li > .menu-dropdown-toggle {
   font-weight: 500;
   border: none;
   background: none;
-  transition: background 0.18s, color 0.18s;
+  transition:
+    background 0.18s,
+    color 0.18s;
   border-radius: 6px;
   text-align: left;
 }
@@ -607,10 +611,8 @@ footer .container p {
 
 /* Wiki Hero Section */
 .wiki-hero {
-  background: linear-gradient(
-      rgba(255, 107, 53, 0.85),
-      rgba(247, 147, 30, 0.75)
-    ),
+  background:
+    linear-gradient(rgba(255, 107, 53, 0.85), rgba(247, 147, 30, 0.75)),
     url("../../images/hero/background.jpg");
   background-size: cover;
   background-position: center;
@@ -638,10 +640,8 @@ footer .container p {
 
 /* Quick Access Cards */
 .quick-access {
-  background: linear-gradient(
-      rgba(255, 107, 53, 0.85),
-      rgba(247, 147, 30, 0.75)
-    ),
+  background:
+    linear-gradient(rgba(255, 107, 53, 0.85), rgba(247, 147, 30, 0.75)),
     url("../../images/hero/background.jpg");
   background-size: cover;
   background-position: center;
@@ -652,10 +652,8 @@ footer .container p {
 
 /* Group wrapper for continuous background on main page */
 .wiki-header-group {
-  background: linear-gradient(
-      rgba(255, 107, 53, 0.85),
-      rgba(247, 147, 30, 0.75)
-    ),
+  background:
+    linear-gradient(rgba(255, 107, 53, 0.85), rgba(247, 147, 30, 0.75)),
     url("../../images/hero/background.jpg");
   background-size: cover;
   background-position: center;
@@ -874,11 +872,76 @@ footer .container p {
   color: var(--text-color, #333);
 }
 
+.updates-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.year-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: sticky;
+  top: 100px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.update-item.hidden {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .updates-wrapper {
+    flex-direction: column;
+  }
+
+  .year-filter {
+    flex-direction: row;
+    position: static;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .filter-btn:hover {
+    transform: translateY(-3px);
+  }
+}
+
 .updates-grid {
-  max-height: 600px;
+  flex-grow: 1;
+  max-height: 480px; /* Reduced from 800px as requested */
   overflow-y: auto;
-  padding: 50px;
-  margin: 0 -20px;
+  padding-right: 20px;
+  padding-left: 60px; /* Crucial: clears space for the timeline dots */
   scroll-behavior: smooth;
 }
 
@@ -907,26 +970,16 @@ footer .container p {
   position: relative;
 }
 
-.updates-timeline::before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, #ff6b35, #f7931e);
-}
-
 .update-item {
   position: relative;
-  padding-left: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   background: #2a2a2a;
   color: white;
   border-radius: 15px;
-  padding: 25px 25px 25px 80px;
+  padding: 30px 20px; /* Balanced padding for centered layout */
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  text-align: center; /* Ensure everything is centered since dots are gone */
 }
 
 .update-item:hover {
@@ -934,23 +987,18 @@ footer .container p {
   box-shadow: 0 10px 30px rgba(255, 107, 53, 0.15);
 }
 
-.update-item::before {
-  content: "";
-  position: absolute;
-  left: -45px;
-  top: 25px;
-  width: 20px;
-  height: 20px;
-  background: #ff6b35;
-  border-radius: 50%;
-  border: 4px solid #2a2a2a;
-  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+.update-item i {
+  font-size: 2.5rem; /* Icons are now big and visible */
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  display: block;
 }
 
 .update-item h4 {
   color: #ff6b35;
   margin-bottom: 10px;
   font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .update-date {
@@ -1254,7 +1302,9 @@ footer .container p {
     flex-direction: column;
     gap: 0;
     padding: 6px 0;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
   }
 
   .language-dropdown.show {
@@ -2031,7 +2081,9 @@ footer .container p {
   border-radius: 12px;
   padding: 18px 18px 18px 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -2129,7 +2181,9 @@ footer .container p {
   border-radius: 12px;
   padding: 18px 18px 18px 18px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
   display: flex;
   flex-direction: column;
   gap: 10px;
