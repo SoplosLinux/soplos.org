@@ -2723,6 +2723,14 @@ Object.assign(window.LANG_EN, {
     "<strong>Finalized:</strong> Tyron 1.0.3 Beta & Tyson 1.0.3 Beta",
   "community-events-release-2":
     "<strong>Finalized:</strong> Boro 1.0.0 Alpha - The first alpha is already finished.",
+  "community-events-release-5":
+    "<strong>Finalized:</strong> Boro Alpha 1.0.1 development finalized.",
+  "community-events-release-6":
+    "<strong>Finalized:</strong> Soplos GRUB Editor and Soplos Repo Selector refactoring to version 2.0 finished.",
+  "community-events-release-7":
+    "<strong>In Development:</strong> Kernel Installer pre-release 1.0.0 with Alexia Michelle.",
+  "community-events-release-8":
+    "<strong>In Development:</strong> Full UKUI fork for a new version of Soplos Linux.",
   "community-events-release-3":
     "<strong>In Development:</strong> Soplos GRUB Editor 2.0 refactoring.",
   "community-events-release-4":
