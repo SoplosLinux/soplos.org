@@ -1,4 +1,50 @@
 Object.assign(window.LANG_EN, {
+  "community-contribute-dev-title-13": "Development",
+  "community-events-release-13": "<strong>Finalized:</strong> Coordination of the 3 versions to Beta 1.0.4. See <a href=\"/wiki/releases/\">releases</a>.",
+  "community-contribute-dev-title-12": "Development",
+  "community-events-release-12":
+    "<strong>Finalized:</strong> Release of Soplos Welcome 2.0.6 featuring a new Utilities section, critical Kernel cleanup improvements, and batch installation optimizations.",
+  "community-contribute-dev-title-11": "Development",
+  "community-events-release-11":
+    "<strong>Canceled:</strong> The Kernel Installer project has been canceled.",
+  "community-contribute-dev-title-10": "Development",
+  "community-events-release-10":
+    "<strong>New Program:</strong> Release of Soplos WebApp Manager. Create desktop applications from websites with isolated profiles.",
+  "community-contribute-dev-title-9": "Development",
+  "community-events-release-9":
+    "<strong>Finalized:</strong> Release of Soplos GRUB Editor 2.0.1 and improvements to Soplos GRUB Theme to fix system conflicts.",
+
+  // Releases Wiki
+  "rel-page-title": "Releases - Soplos Linux Wiki",
+  "releasesLink": "Releases",
+  "rel-breadcrumb": "Releases",
+  "rel-hero-title": "Releases",
+  "rel-hero-subtitle": "History and release notes for all Soplos Linux versions.",
+  "rel-toc-title": "Versions",
+  "rel-104-link": "Soplos Linux 1.0.4 Beta",
+  "rel-104-title": "Soplos Linux 1.0.4 Beta",
+  "rel-104-subtitle": "This update focuses on securing hardware compatibility during installation and polishing the desktop experience to the millimeter.",
+  "rel-104-base-title": "Base Engine & System",
+  "rel-104-base-desc": "Common improvements for Boro, Tyron, and Tyson:",
+  "rel-104-base-li1": "<strong>All-Terrain Initrd:</strong> Boot image generation (initramfs) rewritten. A boosted initrd (~400MB) is now deployed, integrating network (WiFi), GPU (AMD/Intel/NVIDIA), and storage (NVMe) drivers by default.",
+  "rel-104-base-li2": "<strong>Auto-optimization (Dracut):</strong> Smart configuration (hostonly=\"yes\"). On the first Kernel update, the system will automatically slim down the initrd, optimizing it for your machine.",
+  "rel-104-base-li3": "<strong>Installer Stability:</strong> Fixed a conflict with APT hooks and Plymouth that incorrectly overwrote the initrd at the end of installation.",
+  "rel-104-base-li4": "<strong>Post-Installation Cleanup:</strong> Calamares \"sweeper\" script refined to delete all traces of the Live environment while respecting first-boot icons and purging Nvidia configs if no GPU is detected.",
+  "rel-104-base-li5": "<strong>Service Hygiene:</strong> Excluded dmsquash-live module and masked Exim4 service. Zero errors in systemctl --failed from the first boot.",
+  "rel-104-boro-title": "Soplos Boro 1.0.4 Beta (GNOME 49.4)",
+  "rel-104-boro-li1": "<strong>Flawless GDM3 Boot:</strong> Removed a residual bookmark script in PAM rules (common-session), completely eliminating the \"exit code 2\" error.",
+  "rel-104-boro-li2": "<strong>Pure GNOME Ecosystem:</strong> Deep cleanup of file associations and removal of legacy mimeapps.list to erradicate references to apps like Thunar or Mousepad.",
+  "rel-104-boro-li3": "<strong>Hardened Interface:</strong> New gsettings configuration injection method in skel. The Orchis-Orange theme is applied natively without altering permissions.",
+  "rel-104-tyson-title": "Soplos Tyson 1.0.4 Beta (KDE Plasma 6.5.4)",
+  "rel-104-tyson-li1": "<strong>Shielded KWin:</strong> Injected minimal kwinrc into skel to ensure the bottom panel always starts with the Blur effect active.",
+  "rel-104-tyson-li2": "<strong>GTK/Qt Visual Integration:</strong> Unified third-party app aesthetics via xsettingsd. Apps like Firefox or GIMP respect the Orchis theme and Tela icons natively.",
+  "rel-104-tyson-li3": "<strong>Dynamic Trash Can:</strong> The trash icon now correctly recognizes its status under Plasma 6 via the EmptyIcon variable.",
+  "rel-104-tyson-li4": "<strong>Clean Start Menu (Kickoff):</strong> Modified appletsrc to disable the highlighting of newly installed applications by default.",
+  "rel-104-tyson-li5": "<strong>Wayland:</strong> Fluid Drag & Drop behavior within the file manager Dolphin in native Wayland session.",
+  "rel-104-tyron-title": "Soplos Tyron 1.0.4 Beta (XFCE 4.20)",
+  "rel-104-tyron-li1": "<strong>Environment Isolation:</strong> Thunar configurations and XFCE 4.20 scripts stay isolated, preventing leaks to other environments.",
+  "rel-104-tyron-li2": "<strong>Core:</strong> Inherits the new All-Terrain Initrd and all stability improvements from the base system.",
+
   // Security Wiki
   "sec-auto-conf-file": "50unattended-upgrades",
   "sec-auto-conf-h": "Configuration",

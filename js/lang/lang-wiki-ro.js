@@ -1,4 +1,47 @@
 Object.assign(window.LANG_RO, {
+    "community-contribute-dev-title-13": "Dezvoltare",
+    "community-events-release-13": "<strong>Finalizat:</strong> Coordonarea celor 3 versiuni la Beta 1.0.4. Vezi <a href=\"/wiki/releases/\">lansările</a>.",
+    "community-contribute-dev-title-12": "Dezvoltare",
+    "community-events-release-12": "<strong>Finalizat:</strong> Lansarea Soplos Welcome 2.0.6 cu o nouă secțiune de Utilități, îmbunătățiri critice pentru curățarea Kernel-ului și optimizări pentru instalarea în masă.",
+    "community-contribute-dev-title-11": "Dezvoltare",
+    "community-events-release-11": "<strong>Anulat:</strong> Proiectul Kernel Installer a fost anulat.",
+    "community-contribute-dev-title-10": "Dezvoltare",
+    "community-events-release-10": "<strong>Program Nou:</strong> Lansarea Soplos WebApp Manager. Creați aplicații desktop din site-uri web cu profiluri izolate.",
+    "community-contribute-dev-title-9": "Dezvoltare",
+    "community-events-release-9": "<strong>Finalizat:</strong> Lansarea Soplos GRUB Editor 2.0.1 și îmbunătățiri pentru Soplos GRUB Theme pentru a remedia conflictele de sistem.",
+
+    // Releases Wiki
+    // Releases Wiki
+    "rel-page-title": "Lansări - Soplos Linux Wiki",
+    "releasesLink": "Lansări",
+    "rel-breadcrumb": "Lansări",
+    "rel-hero-title": "Lansări",
+    "rel-hero-subtitle": "Istoricul și notele de lansare pentru toate versiunile Soplos Linux.",
+    "rel-toc-title": "Versiuni",
+    "rel-104-link": "Soplos Linux 1.0.4 Beta",
+    "rel-104-title": "Soplos Linux 1.0.4 Beta",
+    "rel-104-subtitle": "Această actualizare se concentrează pe blindarea compatibilității hardware în timpul instalării și pe finisarea la milimetru a experienței desktop.",
+    "rel-104-base-title": "Motor și Sistem de Bază",
+    "rel-104-base-desc": "Îmbunătățiri comune pentru Boro, Tyron și Tyson:",
+    "rel-104-base-li1": "<strong>Initrd Tot-Teren:</strong> Rescrierea generării imaginii de pornire (initramfs). Acum se implementează un initrd vitaminizat (~400MB) care integrează nativ toate driverele de rețea (WiFi), GPU (AMD/Intel/NVIDIA) și stocare (NVMe).",
+    "rel-104-base-li2": "<strong>Auto-optimizare (Dracut):</strong> Configurare inteligentă (hostonly=\"yes\"). La prima actualizare de Kernel, sistemul va reduce automat initrd-ul pentru optimizarea exclusivă a hardware-ului gazdă.",
+    "rel-104-base-li3": "<strong>Stabilitatea Instalatorului:</strong> S-a corectat un conflict cu hook-urile APT și Plymouth care suprascria incorect initrd-ul la finalul instalării.",
+    "rel-104-base-li4": "<strong>Curățare Post-Instalare:</strong> Scriptul \"măturător\" din Calamares a fost optimizat pentru a șterge orice urmă a mediului Live, respectând pictogramele de primă pornire și eliminând configurațiile Nvidia dacă nu se detectează GPU.",
+    "rel-104-base-li5": "<strong>Igienă Servicii:</strong> Excluderea modulului dmsquash-live și mascarea serviciului Exim4. Zero erori în systemctl --failed de la prima pornire.",
+    "rel-104-boro-title": "Soplos Boro 1.0.4 Beta (GNOME 49.4)",
+    "rel-104-boro-li1": "<strong>Pornire GDM3 Impecabilă:</strong> S-a eliminat un script de semne de carte rezidual în regulile PAM (common-session), eliminând eroarea \"cod de ieșire 2\".",
+    "rel-104-boro-li2": "<strong>Ecosistem GNOME Pur:</strong> Curățare profundă a asocierilor de fișiere și eliminarea mimeapps.list legacy pentru a eradica referințele către Thunar sau Mousepad.",
+    "rel-104-boro-li3": "<strong>Interfață:</strong> Nouă metodă de injecție gsettings în skel. Tema Orchis-Orange este aplicată nativ fără a altera permisiunile.",
+    "rel-104-tyson-title": "Soplos Tyson 1.0.4 Beta (KDE Plasma 6.5.4)",
+    "rel-104-tyson-li1": "<strong>KWin Blindat:</strong> Injecție de kwinrc în skel pentru a asigura că panoul inferior pornește întotdeauna cu efectul Blur activ.",
+    "rel-104-tyson-li2": "<strong>Integrare Vizuală GTK/Qt:</strong> Unificare estetică prin xsettingsd. Aplicații precum Firefox sau GIMP respectă acum tema Orchis și pictogramele Tela nativ.",
+    "rel-104-tyson-li3": "<strong>Coș de Reciclare Dinamic:</strong> Pictograma coșului recunoaște corect starea sa sub Plasma 6 prin variabila EmptyIcon.",
+    "rel-104-tyson-li4": "<strong>Meniu Kickoff:</strong> Dezactivarea evidențierii noilor aplicații instalate implicit.",
+    "rel-104-tyson-li5": "<strong>Wayland:</strong> Fluiditate Drag & Drop în Dolphin în sesiune nativă Wayland.",
+    "rel-104-tyron-title": "Soplos Tyron 1.0.4 Beta (XFCE 4.20)",
+    "rel-104-tyron-li1": "<strong>Izolarea Mediului:</strong> Configurațiile Thunar și scripturile XFCE 4.20 rămân izolate pentru a evita scurgerile către alte medii.",
+    "rel-104-tyron-li2": "<strong>Core:</strong> Moștenește noul Initrd Tot-Teren și toate îmbunătățirile de stabilitate ale sistemului de bază.",
+
     // Security Wiki
     "sec-auto-conf-file": "50unattended-upgrades",
     "sec-auto-conf-h": "Configurare",
@@ -1616,7 +1659,7 @@ Object.assign(window.LANG_RO, {
     "tyson-trouble-help-label": "Aveți nevoie de mai mult ajutor?",
     "tyson-trouble-help": "Verificați secțiunea de depanare din wiki sau întrebați pe forumurile comunității pentru ajutor cu hardware specific.",
 
-        // BORO PAGE (/wiki/boro/)
+    // BORO PAGE (/wiki/boro/)
     // Breadcrumb & Hero
     "boro-breadcrumb-home": "Acasă",
     "boro-breadcrumb-wiki": "Wiki",
@@ -1804,14 +1847,14 @@ Object.assign(window.LANG_RO, {
     "boro-trouble-a4-4-code": "update-desktop-database",
     "boro-trouble-help-label": "Aveți nevoie de mai mult ajutor?",
     "boro-trouble-help": "Verificați secțiunea de depanare din wiki sau\n întrebați pe forumurile comunității pentru ajutor cu hardware specific.",
-    
+
     // Customization Page (/wiki/customization/)
     "custom-breadcrumb-home": "Acasă",
     "custom-breadcrumb-wiki": "Wiki",
     "custom-breadcrumb": "Personalizare",
     "custom-hero-title": "Personalizare",
     "custom-hero-desc": "Cum să personalizați aspectul și layout-ul pe Soplos Tyron (XFCE), Tyson (Plasma) și Boro (GNOME).",
-    
+
     // TOC
     "custom-toc-title": "Cuprins",
     "custom-toc-1": "Prezentare Generală",
@@ -1900,7 +1943,7 @@ Object.assign(window.LANG_RO, {
     // Themes Page (/wiki/themes/)
     "themes-hero-title": "Teme și Aspect",
     "themes-hero-desc": "Gestionați teme GTK/Qt, pictograme, cursoare și aspectul global pentru Tyron (XFCE), Tyson (Plasma) și Boro (GNOME).",
-    
+
     // TOC
     "themes-toc-title": "Cuprins",
     "themes-toc-1": "Prezentare Generală",

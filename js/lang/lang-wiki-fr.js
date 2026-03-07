@@ -1,4 +1,46 @@
 Object.assign(window.LANG_FR, {
+    "community-contribute-dev-title-13": "Développement",
+    "community-events-release-13": "<strong>Finalisé :</strong> Coordination des 3 versions vers la Beta 1.0.4. Voir les <a href=\"/wiki/releases/\">versions</a>.",
+    "community-contribute-dev-title-12": "Développement",
+    "community-events-release-12": "<strong>Finalisé :</strong> Lancement de Soplos Welcome 2.0.6 avec une nouvelle section Utilitaires, des améliorations critiques du nettoyage du noyau et des optimisations de l'installation par lot.",
+    "community-contribute-dev-title-11": "Développement",
+    "community-events-release-11": "<strong>Annulé :</strong> Le projet Kernel Installer a été annulé.",
+    "community-contribute-dev-title-10": "Développement",
+    "community-events-release-10": "<strong>Nouveau Programme :</strong> Lancement de Soplos WebApp Manager. Créez des applications de bureau à partir de sites web avec des profils isolés.",
+    "community-contribute-dev-title-9": "Développement",
+    "community-events-release-9": "<strong>Finalisé :</strong> Lancement de Soplos GRUB Editor 2.0.1 et améliorations de Soplos GRUB Theme pour corriger les conflits système.",
+
+    // Releases Wiki
+    "rel-page-title": "Sorties - Soplos Linux Wiki",
+    "releasesLink": "Sorties",
+    "rel-breadcrumb": "Sorties",
+    "rel-hero-title": "Sorties",
+    "rel-hero-subtitle": "Historique et notes de mise à jour pour toutes les versions de Soplos Linux.",
+    "rel-toc-title": "Versions",
+    "rel-104-link": "Soplos Linux 1.0.4 Beta",
+    "rel-104-title": "Soplos Linux 1.0.4 Beta",
+    "rel-104-subtitle": "Cette mise à jour s'attache à blinder la compatibilité matérielle lors de l'installation et à peaufiner au millimètre l'expérience de bureau.",
+    "rel-104-base-title": "Moteur et Système de Base",
+    "rel-104-base-desc": "Améliorations communes pour Boro, Tyron et Tyson :",
+    "rel-104-base-li1": "<strong>Initrd Tout-Terrain :</strong> Réécriture de la génération de l'image de démarrage (initramfs). Désormais, un initrd boosté (~400 Mo) est déployé lors de l'installation, intégrant nativement tous les pilotes réseau (WiFi), GPU (AMD/Intel/NVIDIA) et stockage (NVMe).",
+    "rel-104-base-li2": "<strong>Auto-optimisation (Dracut) :</strong> Configuration intelligente (hostonly=\"yes\"). Lors de la première mise à jour du noyau, le système réduira automatiquement l'initrd pour une optimisation exclusive du matériel hôte.",
+    "rel-104-base-li3": "<strong>Stabilité de l'Installateur :</strong> Correction d'un conflit avec les hooks APT et Plymouth qui écrasait incorrectement l'initrd à la fin de l'installation.",
+    "rel-104-base-li4": "<strong>Nettoyage Post-Installation :</strong> Le script \"balayeur\" de Calamares a été affiné pour effacer toute trace de l'environnement Live, en respectant les icônes de premier démarrage et en nettoyant les configurations Nvidia si aucun GPU n'est détecté.",
+    "rel-104-base-li5": "<strong>Hygiène des Services :</strong> Exclusion du module dmsquash-live et masquage du service Exim4. Zéro erreur dans systemctl --failed dès le premier démarrage.",
+    "rel-104-boro-title": "Soplos Boro 1.0.4 Beta (GNOME 49.4)",
+    "rel-104-boro-li1": "<strong>Démarrage GDM3 Impeccable :</strong> Suppression d'un script de marque-pages résiduel dans les règles PAM (common-session), éliminant l'erreur \"code de sortie 2\".",
+    "rel-104-boro-li2": "<strong>Écosystème GNOME Pur :</strong> Nettoyage approfondi des associations de fichiers et suppression de mimeapps.list hérité pour éradiquer les références à Thunar ou Mousepad.",
+    "rel-104-boro-li3": "<strong>Interface :</strong> Nouvelle méthode d'injection gsettings dans le skel. Le thème Orchis-Orange est appliqué nativement sans altérer les permissions.",
+    "rel-104-tyson-title": "Soplos Tyson 1.0.4 Beta (KDE Plasma 6.5.4)",
+    "rel-104-tyson-li1": "<strong>KWin Blindé :</strong> Injection de kwinrc dans le skel pour garantir que le panneau inférieur démarre toujours avec l'effet Blur actif.",
+    "rel-104-tyson-li2": "<strong>Intégration Visuelle GTK/Qt :</strong> Unification esthétique via xsettingsd. Des applications comme Firefox ou GIMP respectent désormais le thème Orchis et les icônes Tela nativement.",
+    "rel-104-tyson-li3": "<strong>Corbeille Dynamique :</strong> L'icône de la corbeille reconnaît correctement son état sous Plasma 6 via la variable EmptyIcon.",
+    "rel-104-tyson-li4": "<strong>Menu Kickoff :</strong> Désactivation de la mise en évidence des nouvelles applications installées par défaut.",
+    "rel-104-tyson-li5": "<strong>Wayland :</strong> Fluidité du Drag & Drop dans Dolphin en session native Wayland.",
+    "rel-104-tyron-title": "Soplos Tyron 1.0.4 Beta (XFCE 4.20)",
+    "rel-104-tyron-li1": "<strong>Isolation de l'Environnement :</strong> Les configurations de Thunar et les scripts de XFCE 4.20 restent isolés pour éviter les fuites vers d'autres environnements.",
+    "rel-104-tyron-li2": "<strong>Core :</strong> Hérite du nouvel Initrd Tout-Terrain et de toutes les améliorations de stabilité du système de base.",
+
     // Security Wiki
     "sec-auto-conf-file": "50unattended-upgrades",
     "sec-auto-conf-h": "Configuration",
@@ -1617,7 +1659,7 @@ Object.assign(window.LANG_FR, {
     "tyson-trouble-help-label": "Besoin de plus d'aide ?",
     "tyson-trouble-help": "Consultez la section dépannage dans le wiki ou demandez sur les forums communautaires pour de l'aide avec du matériel spécifique.",
 
-        // BORO PAGE (/wiki/boro/)
+    // BORO PAGE (/wiki/boro/)
     // Breadcrumb & Hero
     "boro-breadcrumb-home": "Accueil",
     "boro-breadcrumb-wiki": "Wiki",
@@ -1805,14 +1847,14 @@ Object.assign(window.LANG_FR, {
     "boro-trouble-a4-4-code": "update-desktop-database",
     "boro-trouble-help-label": "Besoin de plus d'aide ?",
     "boro-trouble-help": "Consultez la section de dépannage dans le wiki ou\n demandez sur les forums communautaires pour de l'aide avec du matériel spécifique.",
-    
+
     // Customization Page (/wiki/customization/)
     "custom-breadcrumb-home": "Accueil",
     "custom-breadcrumb-wiki": "Wiki",
     "custom-breadcrumb": "Personnalisation",
     "custom-hero-title": "Personnalisation",
     "custom-hero-desc": "Comment personnaliser l'apparence et la mise en page sur Soplos Tyron (XFCE), Tyson (Plasma) et Boro (GNOME).",
-    
+
     // TOC
     "custom-toc-title": "Sommaire",
     "custom-toc-1": "Aperçu",
@@ -1901,7 +1943,7 @@ Object.assign(window.LANG_FR, {
     // Themes Page (/wiki/themes/)
     "themes-hero-title": "Thèmes et Apparence",
     "themes-hero-desc": "Gérez les thèmes GTK/Qt, les icônes, les curseurs et l'apparence globale pour Tyron (XFCE), Tyson (Plasma) et Boro (GNOME).",
-    
+
     // TOC
     "themes-toc-title": "Sommaire",
     "themes-toc-1": "Aperçu",
