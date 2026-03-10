@@ -1,4 +1,10 @@
 Object.assign(window.LANG_RO, {
+    "breadcrumb-home": " Acasă",
+    "breadcrumb-wiki": "Wiki",
+    "apps-tyron-breadcrumb": "Aplicații Tyron",
+    "apps-tyson-breadcrumb": "Aplicații Tyson",
+    "apps-boro-breadcrumb": "Aplicații Boro",
+
     "community-contribute-dev-title-13": "Dezvoltare",
     "community-events-release-13": "<strong>Finalizat:</strong> Coordonarea celor 3 versiuni la Beta 1.0.4. Vezi <a href=\"/wiki/releases/\">lansările</a>.",
     "community-contribute-dev-title-12": "Dezvoltare",
@@ -844,6 +850,8 @@ Object.assign(window.LANG_RO, {
 
     // FIRST STEPS GUIDE (/wiki/start/)
     // Breadcrumb & Hero
+    "breadcrumb-home": " Acasă",
+    "breadcrumb-wiki": "Wiki",
     "start-breadcrumb": "Primi Pași",
     "start-hero-title": "Primi Pași",
     "start-hero-desc": "Configurare esențială pentru a profita la maximum de experiența dvs. cu Soplos Linux",
@@ -1516,7 +1524,7 @@ Object.assign(window.LANG_RO, {
     // TYSON PAGE (/wiki/tyson/)
     // Breadcrumb & Hero
     "tyson-breadcrumb": "Ghid Tyson (Plasma)",
-    "tyson-breadcrumb-home": "Acasă",
+    "tyson-breadcrumb-home": " Acasă",
     "tyson-breadcrumb-wiki": "Wiki",
     "tyson-hero-title": "Ghid Soplos Tyson (Plasma)",
     "tyson-hero-desc": "Ghid complet pentru varianta desktop modernă și bogată în funcții KDE Plasma",
@@ -1661,7 +1669,7 @@ Object.assign(window.LANG_RO, {
 
     // BORO PAGE (/wiki/boro/)
     // Breadcrumb & Hero
-    "boro-breadcrumb-home": "Acasă",
+    "boro-breadcrumb-home": " Acasă",
     "boro-breadcrumb-wiki": "Wiki",
     "boro-breadcrumb": "Ghid Boro (GNOME)",
     "boro-hero-title": "Ghid Soplos Boro (GNOME)",
@@ -1849,7 +1857,7 @@ Object.assign(window.LANG_RO, {
     "boro-trouble-help": "Verificați secțiunea de depanare din wiki sau\n întrebați pe forumurile comunității pentru ajutor cu hardware specific.",
 
     // Customization Page (/wiki/customization/)
-    "custom-breadcrumb-home": "Acasă",
+    "custom-breadcrumb-home": " Acasă",
     "custom-breadcrumb-wiki": "Wiki",
     "custom-breadcrumb": "Personalizare",
     "custom-hero-title": "Personalizare",
@@ -2008,7 +2016,7 @@ Object.assign(window.LANG_RO, {
     "themes-see-also-custom": "Personalizare",
 
     // Pagina de Depanare (/wiki/troubleshooting/)
-    "trouble-breadcrumb-home": "Acasă",
+    "trouble-breadcrumb-home": " Acasă",
     "trouble-breadcrumb-wiki": "Wiki",
     "trouble-breadcrumb": "Depanare",
     "trouble-hero-title": "Depanare",
@@ -2088,7 +2096,7 @@ Object.assign(window.LANG_RO, {
     "trouble-graphics-tearing-nvidia": "<strong>NVIDIA:</strong> Deschideți NVIDIA Settings -> \"Force Full Composition Pipeline\".",
 
     // Pagina Comunității (/wiki/community/)
-    "community-breadcrumb-home": "Acasă",
+    "community-breadcrumb-home": " Acasă",
     "community-breadcrumb-wiki": "Wiki",
     "community-breadcrumb": "Comunitate",
     "community-hero-title": "Comunitate",
@@ -2482,7 +2490,7 @@ Object.assign(window.LANG_RO, {
     "boro-apps-welcomelive-link": "Află Mai Multe",
 
     // Soplos Docklike Wiki
-    "docklike-breadcrumb-home": "Acasă",
+    "docklike-breadcrumb-home": " Acasă",
     "docklike-breadcrumb-wiki": "Wiki",
     "docklike-breadcrumb": "Soplos Docklike",
     "docklike-hero-title": "Soplos Docklike",
@@ -2512,7 +2520,7 @@ Object.assign(window.LANG_RO, {
     "docklike-screenshot-2": "Setări Docklike",
 
     // Soplos GRUB Editor Wiki
-    "grub-editor-breadcrumb-home": "Acasă",
+    "grub-editor-breadcrumb-home": " Acasă",
     "grub-editor-breadcrumb-wiki": "Wiki",
     "grub-editor-breadcrumb": "Soplos GRUB Editor",
     "grub-editor-hero-title": "Soplos GRUB Editor",
@@ -2543,7 +2551,7 @@ Object.assign(window.LANG_RO, {
     "grub-editor-screenshot-3": "GRUB Editor (Tyson)",
 
     // Soplos Plymouth Manager Wiki
-    "plymouth-manager-breadcrumb-home": "Acasă",
+    "plymouth-manager-breadcrumb-home": " Acasă",
     "plymouth-manager-breadcrumb-wiki": "Wiki",
     "plymouth-manager-breadcrumb": "Soplos Plymouth Manager",
     "plymouth-manager-hero-title": "Soplos Plymouth Manager",
@@ -2572,7 +2580,7 @@ Object.assign(window.LANG_RO, {
     "plymouth-manager-screenshot-3": "Plymouth Manager (Tyson)",
 
     // Soplos Repo Selector Wiki
-    "repo-selector-breadcrumb-home": "Acas\u0103",
+    "repo-selector-breadcrumb-home": " Acas\u0103",
     "repo-selector-breadcrumb-wiki": "Wiki",
     "repo-selector-breadcrumb": "Soplos Repo Selector",
     "repo-selector-hero-title": "Soplos Repo Selector",
@@ -2601,7 +2609,7 @@ Object.assign(window.LANG_RO, {
     "repo-selector-screenshot-3": "Repo Selector (Tyson)",
 
     // Soplos Theme Manager Wiki
-    "theme-manager-breadcrumb-home": "Acas\u0103",
+    "theme-manager-breadcrumb-home": " Acas\u0103",
     "theme-manager-breadcrumb-wiki": "Wiki",
     "theme-manager-breadcrumb": "Soplos Theme Manager",
     "theme-manager-hero-title": "Soplos Theme Manager",
@@ -2632,7 +2640,7 @@ Object.assign(window.LANG_RO, {
     "theme-manager-screenshot-3": "Crearea unei Teme Noi",
 
     // Soplos Welcome Wiki
-    "welcome-breadcrumb-home": "Acas\u0103",
+    "welcome-breadcrumb-home": " Acas\u0103",
     "welcome-breadcrumb-wiki": "Wiki",
     "welcome-breadcrumb": "Soplos Welcome",
     "welcome-hero-title": "Soplos Welcome",
@@ -2660,7 +2668,7 @@ Object.assign(window.LANG_RO, {
     "welcome-screenshot-3": "Soplos Welcome (Edi\u021bia Tyson)",
 
     // Soplos Welcome Live Wiki
-    "welcome-live-breadcrumb-home": "Acas\u0103",
+    "welcome-live-breadcrumb-home": " Acas\u0103",
     "welcome-live-breadcrumb-wiki": "Wiki",
     "welcome-live-breadcrumb": "Soplos Welcome Live",
     "welcome-live-hero-title": "Soplos Welcome Live",
@@ -2730,5 +2738,5 @@ Object.assign(window.LANG_RO, {
     "boro-soplos-webapp-title": "Soplos WebApp Manager",
     "boro-soplos-webapp-desc": "Transformă site-urile web în aplicații desktop independente cu profiluri izolate și integrare în meniu.",
 
-    "footer-terms": "Termeni de Serviciu"
+    "footer-terms": "Termeni de Serviciu",
 });

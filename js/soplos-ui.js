@@ -671,24 +671,26 @@ class BreadcrumbController {
         const referrer = document.referrer;
         if (!referrer) return;
 
-        let parentName = '';
+        let dictKey = '';
         let parentUrl = '';
 
         if (referrer.includes('/tyron/')) {
-            parentName = 'Tyron Apps';
+            dictKey = 'apps-tyron-breadcrumb';
             parentUrl = '../tyron/index.html';
         } else if (referrer.includes('/tyson/')) {
-            parentName = 'Tyson Apps';
+            dictKey = 'apps-tyson-breadcrumb';
             parentUrl = '../tyson/index.html';
         } else if (referrer.includes('/boro/')) {
-            parentName = 'Boro Apps';
+            dictKey = 'apps-boro-breadcrumb';
             parentUrl = '../boro/index.html';
         }
 
-        if (parentName && parentUrl) {
-            // Find the "Wiki" link. It should be the second link usually.
-            // We look for a link with text "Wiki" to be robust against path variations (../index.html, ../../index.html)
-            const wikiLink = Array.from(breadcrumbs.querySelectorAll('a')).find(a => a.textContent.trim() === 'Wiki');
+        if (dictKey && parentUrl) {
+            // Find the "Wiki" link using the new ID if available, or fallback to text
+            let wikiLink = document.getElementById('breadcrumb-wiki');
+            if (!wikiLink) {
+                wikiLink = Array.from(breadcrumbs.querySelectorAll('a')).find(a => a.textContent.trim() === 'Wiki');
+            }
 
             if (wikiLink) {
                 // Create separator
@@ -699,7 +701,12 @@ class BreadcrumbController {
                 // Create new link
                 const newLink = document.createElement('a');
                 newLink.href = parentUrl;
-                newLink.textContent = parentName;
+                newLink.id = dictKey;
+                // Try translation first
+                newLink.textContent = window.getTranslatedText ? window.getTranslatedText(dictKey) : (
+                    dictKey === 'apps-tyron-breadcrumb' ? 'Tyron Apps' : 
+                    dictKey === 'apps-boro-breadcrumb' ? 'Boro Apps' : 'Tyson Apps'
+                );
 
                 // Insert after Wiki link: Wiki > Parent > App
                 wikiLink.after(separator, newLink);

@@ -1,4 +1,10 @@
 Object.assign(window.LANG_EN, {
+    "breadcrumb-home": " Home",
+    "breadcrumb-wiki": "Wiki",
+    "apps-tyron-breadcrumb": "Tyron Apps",
+    "apps-tyson-breadcrumb": "Tyson Apps",
+    "apps-boro-breadcrumb": "Boro Apps",
+
   "community-contribute-dev-title-13": "Development",
   "community-events-release-13": "<strong>Finalized:</strong> Coordination of the 3 versions to Beta 1.0.4. See <a href=\"/wiki/releases/\">releases</a>.",
   "community-contribute-dev-title-12": "Development",
@@ -52,7 +58,7 @@ Object.assign(window.LANG_EN, {
   "sec-auto-conf-rec": "Recommended settings:",
   "sec-auto-conf-term": "Terminal",
   "sec-auto-intro":
-    "Keeping the system up to date is one of the most important security measures:",
+    "Keeping the system up to date is one of the most important security measures: "",
   "sec-auto-mon-h": "Monitoring",
   "sec-auto-mon-term": "Terminal",
   "sec-auto-title": "Automatic Security Updates",
@@ -117,7 +123,7 @@ Object.assign(window.LANG_EN, {
   "sec-enc-gpg-term": "Terminal",
   "sec-enc-luks-h": "Disk Encryption (LUKS)",
   "sec-enc-luks-p":
-    "LUKS encryption is best set up during installation, but can also encrypt additional partitions:",
+    "LUKS encryption is best set up during installation, but can also encrypt additional partitions: "",
   "sec-enc-luks-warn":
     "<strong>Warning:</strong> Encrypting a partition will delete all data. Always make a backup first!",
   "sec-enc-title": "Encryption",
@@ -131,7 +137,7 @@ Object.assign(window.LANG_EN, {
     "<strong>Strong permissions model:</strong> Correct file and user permissions by default",
   "sec-fund-deb-h": "Debian's Security Model",
   "sec-fund-deb-p":
-    "Soplos Linux benefits from Debian's strong security foundation:",
+    "Soplos Linux benefits from Debian's strong security foundation: "",
   "sec-fund-def-1":
     "<strong>Physical security:</strong> Protect hardware access",
   "sec-fund-def-2":
@@ -143,7 +149,7 @@ Object.assign(window.LANG_EN, {
   "sec-fund-def-5": "<strong>Data security:</strong> Encryption and backups",
   "sec-fund-def-h": "Defense in Depth",
   "sec-fund-def-p":
-    "Security is not a single solution, but consists of multiple layers of protection:",
+    "Security is not a single solution, but consists of multiple layers of protection: "",
   "sec-fund-tip":
     "<strong>Most important:</strong> Keep your system up to date! The majority of successful attacks use known vulnerabilities that have already been patched.",
   "sec-fund-title": "Security Fundamentals",
@@ -153,7 +159,7 @@ Object.assign(window.LANG_EN, {
   "sec-fund-why-4": "Maintain system integrity and stability",
   "sec-fund-why-h": "Why Security is Important",
   "sec-fund-why-p":
-    "Even though Linux systems are generally more secure than other operating systems, no system is completely immune to threats. Security is essential to:",
+    "Even though Linux systems are generally more secure than other operating systems, no system is completely immune to threats. Security is essential to: "",
   "sec-fw-allow-h": "Allow Connections",
   "sec-fw-allow-term": "Terminal",
   "sec-fw-app-h": "Application Profiles",
@@ -189,7 +195,7 @@ Object.assign(window.LANG_EN, {
   "sec-gufw-title": "Graphical Management: GUFW",
   "sec-hard-app-h": "AppArmor",
   "sec-hard-app-p":
-    "Soplos Linux contains AppArmor for mandatory access control:",
+    "Soplos Linux contains AppArmor for mandatory access control: "",
   "sec-hard-app-term": "Terminal",
   "sec-hard-perm-h": "File Permissions",
   "sec-hard-perm-p": "Protect sensitive files:",
@@ -265,7 +271,7 @@ Object.assign(window.LANG_EN, {
   "sec-ssh-f2b-file": "/etc/fail2ban/jail.local",
   "sec-ssh-f2b-h": "Fail2ban for SSH",
   "sec-ssh-f2b-p":
-    "Fail2ban automatically blocks IPs with too many failed login attempts:",
+    "Fail2ban automatically blocks IPs with too many failed login attempts: "",
   "sec-ssh-f2b-term1": "Terminal",
   "sec-ssh-intro": "If you use SSH for remote access, hardening is essential:",
   "sec-ssh-key-1": "Generate SSH key pair on your client computer",
@@ -284,7 +290,7 @@ Object.assign(window.LANG_EN, {
   "sec-threat-mal-4": "Check file permissions before execution",
   "sec-threat-mal-h": "Malware under Linux",
   "sec-threat-mal-p":
-    "Although less common than under Windows, Linux malware exists:",
+    "Although less common than under Windows, Linux malware exists: "",
   "sec-threat-phish-1": "Carefully check sender email addresses",
   "sec-threat-phish-2": "Do not click on links in suspicious emails",
   "sec-threat-phish-3": "Check URLs before entering login information",
@@ -329,7 +335,7 @@ Object.assign(window.LANG_EN, {
   "sec-users-pm-3": "<strong>pass:</strong> Command-line Password Manager",
   "sec-users-pm-h": "Password Managers",
   "sec-users-pm-p":
-    "Consider using a password manager to generate and store secure passwords:",
+    "Consider using a password manager to generate and store secure passwords: "",
   "sec-users-pm-term": "Terminal",
   "sec-users-sudo-1":
     "<strong>Do not use root account:</strong> The root account is disabled by default",
@@ -458,7 +464,7 @@ Object.assign(window.LANG_EN, {
   "pkg-apt-inst-h": "Install Packages",
   "pkg-apt-inst-term": "Terminal",
   "pkg-apt-intro":
-    "While graphical tools are convenient, the command line provides more control and is essential for troubleshooting. Here are the most common APT commands:",
+    "While graphical tools are convenient, the command line provides more control and is essential for troubleshooting. Here are the most common APT commands: "",
   "pkg-apt-list-h": "Listing & Managing",
   "pkg-apt-list-term": "Terminal",
   "pkg-apt-rem-h": "Remove Packages",
@@ -527,7 +533,7 @@ Object.assign(window.LANG_EN, {
   "pkg-deb-m3-p": "Gdebi is a graphical tool for installing .deb files:",
   "pkg-deb-rem-h": "Remove Installed .deb Packages",
   "pkg-deb-rem-p":
-    "Once installed, .deb packages are managed like any other package:",
+    "Once installed, .deb packages are managed like any other package: "",
   "pkg-deb-rem-term": "Terminal",
   "pkg-deb-title": "Manage Local .deb Files",
   "pkg-deb-warn":
@@ -553,7 +559,7 @@ Object.assign(window.LANG_EN, {
   "pkg-find-inst-p": "Once you've found the right package:",
   "pkg-find-srch-h": "Search for Packages",
   "pkg-find-srch-p":
-    "Before installing, you need to find the correct package name:",
+    "Before installing, you need to find the correct package name: "",
   "pkg-find-srch-term": "Terminal",
   "pkg-find-tip":
     '<strong>Pro Tip:</strong> Use tab completion in the terminal. Type <code>sudo apt install fir</code> and press TAB to see available packages starting with "fir".',
@@ -562,7 +568,7 @@ Object.assign(window.LANG_EN, {
   "pkg-flat-cmd-term": "Terminal",
   "pkg-flat-inst-h": "Install Flatpak Support",
   "pkg-flat-inst-p":
-    "You can easily install Flatpak via <strong>Soplos Welcome</strong> → Software tab or via the terminal:",
+    "You can easily install Flatpak via <strong>Soplos Welcome</strong> → Software tab or via the terminal: "",
   "pkg-flat-inst-term": "Terminal",
   "pkg-flat-tip":
     "<strong>Integration:</strong> Flatpak applications appear in your application menu alongside regular packages and can be managed via GNOME Software or KDE Discover.",
@@ -574,7 +580,7 @@ Object.assign(window.LANG_EN, {
   "pkg-flat-what-4": "Easy installation and updates",
   "pkg-flat-what-h": "What is Flatpak?",
   "pkg-flat-what-p":
-    "<strong>Flatpak</strong> is the recommended format for modern desktop applications. It offers:",
+    "<strong>Flatpak</strong> is the recommended format for modern desktop applications. It offers: "",
   "pkg-flat-when-1":
     "<strong>Latest Versions:</strong> When Debian repos have older versions",
   "pkg-flat-when-2":
@@ -594,7 +600,7 @@ Object.assign(window.LANG_EN, {
   "pkg-intro-title": "Software Management",
   "pkg-repo-add-h": "Add Third-party Repositories",
   "pkg-repo-add-p":
-    "Sometimes you need to add external repositories for specific software:",
+    "Sometimes you need to add external repositories for specific software: "",
   "pkg-repo-add-term": "Terminal",
   "pkg-repo-rem-h": "Remove Repositories",
   "pkg-repo-rem-term": "Terminal",
@@ -610,7 +616,7 @@ Object.assign(window.LANG_EN, {
   "pkg-snap-cmd-term": "Terminal",
   "pkg-snap-inst-h": "Install Snap Support",
   "pkg-snap-inst-p":
-    "Install via <strong>Soplos Welcome</strong> or via the terminal:",
+    "Install via <strong>Soplos Welcome</strong> or via the terminal: "",
   "pkg-snap-inst-term": "Terminal",
   "pkg-snap-rec":
     "<strong>Recommendation:</strong> For desktop applications, Flatpak is generally recommended under Soplos Linux. Use Snap only if the required application is exclusively available there.",
@@ -658,7 +664,7 @@ Object.assign(window.LANG_EN, {
   "pkg-trb-dsk-term": "Terminal",
   "pkg-trb-not-h": "Package Not Found",
   "pkg-trb-not-p":
-    "If APT cannot find a package, first try updating the lists:",
+    "If APT cannot find a package, first try updating the lists: "",
   "pkg-trb-not-term": "Terminal",
   "pkg-trb-rep-h": "Repository Errors",
   "pkg-trb-rep-term": "Terminal",
@@ -674,7 +680,7 @@ Object.assign(window.LANG_EN, {
   "pkg-tyr-2-3":
     "<strong>GNOME Software:</strong> Full graphical store. When installed via Welcome, it is automatically configured with Flatpak and Snap plugins.",
   "pkg-tyr-p":
-    "The Tyron edition follows a minimalist and lightweight philosophy:",
+    "The Tyron edition follows a minimalist and lightweight philosophy: "",
   "pkg-tyr-title": "Tyron (XFCE Edition)",
   "pkg-tys-1":
     "<strong>Default:</strong> Comes with <strong>Discover</strong>, the KDE Software Center.",
@@ -683,7 +689,7 @@ Object.assign(window.LANG_EN, {
   "pkg-tys-3":
     "<strong>Alternatives:</strong> As in Tyron, you can install Synaptic or Gdebi if you prefer more traditional tools.",
   "pkg-tys-p":
-    "The Tyson edition offers a modern experience, integrated with KDE:",
+    "The Tyson edition offers a modern experience, integrated with KDE: "",
   "pkg-tys-title": "Tyson (Plasma Edition)",
   "pkg-und-apt-1":
     "<strong>Installation:</strong> Downloads packages and installs them",
@@ -693,7 +699,7 @@ Object.assign(window.LANG_EN, {
   "pkg-und-apt-4": "<strong>Removal:</strong> Uninstalls packages cleanly",
   "pkg-und-apt-h": "APT: Advanced Package Tool",
   "pkg-und-apt-p":
-    "Soplos Linux uses <strong>APT</strong>, the same package manager as Debian and Ubuntu. APT handles:",
+    "Soplos Linux uses <strong>APT</strong>, the same package manager as Debian and Ubuntu. APT handles: "",
   "pkg-und-deb-1": "Binary packages, pre-compiled for your system",
   "pkg-und-deb-2": "Compatible with all Debian-based distributions",
   "pkg-und-deb-3":
@@ -709,11 +715,11 @@ Object.assign(window.LANG_EN, {
   "pkg-und-what-4": "Metadata (version, description, dependencies)",
   "pkg-und-what-h": "What are Packages?",
   "pkg-und-what-p":
-    "Under Linux, software is distributed as <strong>packages</strong> - compressed archives that contain:",
+    "Under Linux, software is distributed as <strong>packages</strong> - compressed archives that contain: "",
 
   // Updates Wiki
   "upd-auto-desc":
-    "You can configure automatic security updates with unattended-upgrades:",
+    "You can configure automatic security updates with unattended-upgrades: "",
   "upd-auto-recommend":
     "For most users, manual updates are recommended to maintain better control over system changes.",
   "upd-auto-title": "Automatic Updates",
@@ -739,7 +745,7 @@ Object.assign(window.LANG_EN, {
   "upd-freq-sched-4":
     "Before installing new software: To avoid dependency conflicts",
   "upd-freq-sched-desc":
-    "Since Soplos is based on Debian Testing (partially rolling release), it is recommended to check for updates:",
+    "Since Soplos is based on Debian Testing (partially rolling release), it is recommended to check for updates: "",
   "upd-freq-sched-title": "Recommended Schedule",
   "upd-freq-tip":
     "Pro Tip: Check /var/log/apt/history.log to see your update history and troubleshoot issues.",
@@ -777,7 +783,7 @@ Object.assign(window.LANG_EN, {
   "upd-term-basic-desc": "Open your favorite terminal and run:",
   "upd-term-basic-title": "Basic Commands",
   "upd-term-clean-desc":
-    "To remove packages that are no longer needed (orphaned dependencies):",
+    "To remove packages that are no longer needed (orphaned dependencies): "",
   "upd-term-clean-title": "Cleanup (Optional)",
   "upd-term-cmd-label1": "Terminal",
   "upd-term-cmd-label2": "Example Output",
@@ -791,7 +797,7 @@ Object.assign(window.LANG_EN, {
   "upd-term-desc":
     "If you prefer full control or are used to Debian/Ubuntu, you can use the terminal. Soplos Linux uses the APT package manager.",
   "upd-term-full-desc":
-    "Sometimes you need to use full-upgrade instead of upgrade:",
+    "Sometimes you need to use full-upgrade instead of upgrade: "",
   "upd-term-full-title": "Full Upgrade",
   "upd-term-full-warn":
     "Difference: apt upgrade never removes packages, while apt full-upgrade can install or remove packages if required for the upgrade. Use full-upgrade when packages are being held back.",
@@ -801,7 +807,7 @@ Object.assign(window.LANG_EN, {
   "upd-term-output-4":
     'N not upgraded: Packages that are "held back" (see troubleshooting)',
   "upd-term-output-desc":
-    "When you run apt upgrade, you will see output like this:",
+    "When you run apt upgrade, you will see output like this: "",
   "upd-term-output-explain": "Here's what each line means:",
   "upd-term-output-title": "Understanding APT Output",
   "upd-term-title": "Advanced Method: Terminal",
@@ -836,7 +842,7 @@ Object.assign(window.LANG_EN, {
     "No need for major distribution upgrades - your system evolves continuously",
   "upd-under-rolling-4": "Balance between currency and stability",
   "upd-under-rolling-desc":
-    "Soplos Linux is based on Debian Testing, which follows a partial rolling release model. This means:",
+    "Soplos Linux is based on Debian Testing, which follows a partial rolling release model. This means: "",
   "upd-under-rolling-title": "Debian Testing & Rolling Release",
   "upd-under-title": "Understanding Updates",
   "upd-under-types-1":
@@ -855,7 +861,7 @@ Object.assign(window.LANG_EN, {
   "upd-under-what-4": "Drivers: Hardware support and firmware",
   "upd-under-what-5": "Security patches: Critical fixes for vulnerabilities",
   "upd-under-what-desc":
-    "When you update your Soplos Linux system, several components can receive updates:",
+    "When you update your Soplos Linux system, several components can receive updates: "",
   "upd-under-what-title": "What Gets Updated?",
 
   // Installation Guide
@@ -959,7 +965,7 @@ Object.assign(window.LANG_EN, {
     "The Soplos Welcome Live application starts automatically at boot and provides a central interface for system configuration and installation.",
   "inst-boot-step4-title": "Configure system language",
   "inst-boot-step4-intro":
-    "Select your preferred language from the dropdown menu. This will:",
+    "Select your preferred language from the dropdown menu. This will: "",
   "inst-boot-step4-1": "Change the Live system interface language",
   "inst-boot-step4-2": "Automatically configure the keyboard layout",
   "inst-boot-step4-3": "Update XDG directories (Desktop, Documents, etc.)",
@@ -1002,7 +1008,7 @@ Object.assign(window.LANG_EN, {
   // Dual Boot Guide
   "inst-dual-title": "Dual Boot Guide",
   "inst-dual-intro":
-    "Installing Soplos Linux alongside Windows is fully supported. Follow these specific steps for a successful dual-boot setup:",
+    "Installing Soplos Linux alongside Windows is fully supported. Follow these specific steps for a successful dual-boot setup: "",
   "inst-dual-prep-title": "1. Prepare Windows",
   "inst-dual-prep-1":
     '<strong>Disable Fast Startup:</strong> In Windows Control Panel → Power Options → Choose what the power buttons do → Disable "Turn on fast startup".',
@@ -1026,7 +1032,7 @@ Object.assign(window.LANG_EN, {
   // First Boot
   "inst-first-title": "First Boot",
   "inst-first-intro":
-    "Congratulations! You have successfully installed Soplos Linux. Here's what happens next:",
+    "Congratulations! You have successfully installed Soplos Linux. Here's what happens next: "",
   "inst-first-step1-title":
     '<i class="fas fa-power-off"></i> Reboot your computer',
   "inst-first-step1-desc":
@@ -1080,6 +1086,8 @@ Object.assign(window.LANG_EN, {
 
   // FIRST STEPS GUIDE (/wiki/start/)
   // Breadcrumb & Hero
+  "breadcrumb-home": " Home",
+  "breadcrumb-wiki": "Wiki",
   "start-breadcrumb": "First Steps",
   "start-hero-title": "First Steps",
   "start-hero-desc":
@@ -1143,7 +1151,7 @@ Object.assign(window.LANG_EN, {
   "start-soft-info-text":
     "Soplos Welcome includes a dedicated software management area for installing package managers and software centers.",
   "start-soft-intro":
-    "The Software tab in Soplos Welcome allows installation and management of various software centers and package managers:",
+    "The Software tab in Soplos Welcome allows installation and management of various software centers and package managers: "",
   "start-soft-avail-title": "Available Software Centers",
   "start-soft-avail-1":
     "<strong>Synaptic Package Manager:</strong> Advanced APT package management with GUI",
@@ -1384,7 +1392,7 @@ Object.assign(window.LANG_EN, {
   "start-sec-title": "Security & Privacy",
   "start-sec-fw-title": "Firewall",
   "start-sec-fw-intro":
-    "Soplos Linux includes a pre-configured firewall with both command-line and graphical management:",
+    "Soplos Linux includes a pre-configured firewall with both command-line and graphical management: "",
   "start-sec-fw-gui-title": "Graphical Interface (GUFW)",
   "start-sec-fw-gui-desc":
     "For users who prefer a GUI, Soplos Linux includes GUFW (Graphical Uncomplicated Firewall) - a user-friendly interface for managing firewall rules without terminal commands.",
@@ -1489,7 +1497,7 @@ Object.assign(window.LANG_EN, {
   "faq-sys-title": "System & Hardware",
   "faq-sys-q1": "Will my hardware work with Soplos Linux?",
   "faq-sys-a1-intro":
-    "Soplos Linux has excellent hardware support thanks to its comprehensive driver collection accessible through <strong>Soplos Welcome</strong>. The Drivers tab includes support for:",
+    "Soplos Linux has excellent hardware support thanks to its comprehensive driver collection accessible through <strong>Soplos Welcome</strong>. The Drivers tab includes support for: "",
   "faq-sys-a1-graphics": "Graphics:",
   "faq-sys-a1-graphics-1": "NVIDIA Legacy and Latest drivers",
   "faq-sys-a1-graphics-2": "AMD graphics drivers",
@@ -1506,7 +1514,7 @@ Object.assign(window.LANG_EN, {
     "Most hardware works out of the box, and additional drivers can be easily installed through Soplos Welcome's intuitive interface. You can test compatibility with the Live USB before installation.",
   "faq-sys-q2": "How do I install NVIDIA graphics drivers?",
   "faq-sys-a2-intro":
-    "Installing NVIDIA drivers in Soplos Linux is simple with Soplos Welcome:",
+    "Installing NVIDIA drivers in Soplos Linux is simple with Soplos Welcome: "",
   "faq-sys-a2-1":
     "Open <strong>Soplos Welcome</strong> from the application menu",
   "faq-sys-a2-2": "Go to the <strong>Drivers</strong> tab",
@@ -1519,7 +1527,7 @@ Object.assign(window.LANG_EN, {
     "<strong>Alternative method:</strong> You can also install via terminal:",
   "faq-sys-q3": "Does Soplos Linux support BTRFS and system snapshots?",
   "faq-sys-a3-intro":
-    "Yes! Soplos Linux offers comprehensive BTRFS support across all variants (Tyron, Tyson, and Boro):",
+    "Yes! Soplos Linux offers comprehensive BTRFS support across all variants (Tyron, Tyson, and Boro): "",
   "faq-sys-a3-1":
     "<strong>BTRFS Filesystem:</strong> Modern copy-on-write filesystem with advanced features",
   "faq-sys-a3-2":
@@ -1541,11 +1549,11 @@ Object.assign(window.LANG_EN, {
     "You can choose BTRFS during installation or manage snapshots through Timeshift's user-friendly interface.",
   "faq-sys-q4": "My Wi-Fi isn't working. How can I fix it?",
   "faq-sys-a4-intro":
-    "Soplos Linux includes comprehensive Wi-Fi driver support. Try these solutions:",
+    "Soplos Linux includes comprehensive Wi-Fi driver support. Try these solutions: "",
   "faq-sys-a4-welcome": "<strong>Use Soplos Welcome (Recommended):</strong>",
   "faq-sys-a4-welcome-1": "Open Soplos Welcome → <strong>Drivers</strong> tab",
   "faq-sys-a4-welcome-2":
-    "Check the <strong>WiFi</strong> section for your specific adapter:",
+    "Check the <strong>WiFi</strong> section for your specific adapter: "",
   "faq-sys-a4-welcome-2-1": "MediaTek WiFi drivers",
   "faq-sys-a4-welcome-2-2": "Intel WiFi drivers",
   "faq-sys-a4-welcome-2-3": "Realtek WiFi drivers",
@@ -1563,7 +1571,7 @@ Object.assign(window.LANG_EN, {
     "Most Wi-Fi adapters work out of the box thanks to Soplos' extensive driver collection.",
   "faq-sys-q5": "How do I manage the firewall in Soplos Linux?",
   "faq-sys-a5-intro":
-    "Soplos Linux comes with <strong>GUFW (Graphical Uncomplicated Firewall)</strong> pre-installed for easy firewall management:",
+    "Soplos Linux comes with <strong>GUFW (Graphical Uncomplicated Firewall)</strong> pre-installed for easy firewall management: "",
   "faq-sys-a5-1":
     "<strong>Access GUFW:</strong> Available from the application menu or system settings",
   "faq-sys-a5-2":
@@ -1581,7 +1589,7 @@ Object.assign(window.LANG_EN, {
   "faq-soft-title": "Software & Applications",
   "faq-soft-q1": "How do I install software in Soplos Linux?",
   "faq-soft-a1-intro":
-    "Soplos Linux offers multiple ways to install software, all accessible through <strong>Soplos Welcome</strong>:",
+    "Soplos Linux offers multiple ways to install software, all accessible through <strong>Soplos Welcome</strong>: "",
   "faq-soft-a1-welcome-soft": "Soplos Welcome → Software tab:",
   "faq-soft-a1-welcome-soft-1":
     "Software centers (Discover, Synaptic, GNOME Software)",
@@ -1612,7 +1620,7 @@ Object.assign(window.LANG_EN, {
     "Many popular applications also have native Linux alternatives.",
   "faq-soft-q3": "What are the exclusive Soplos applications?",
   "faq-soft-a3-intro":
-    "Soplos Linux includes several exclusive applications accessible through <strong>Soplos Welcome</strong>:",
+    "Soplos Linux includes several exclusive applications accessible through <strong>Soplos Welcome</strong>: "",
   "faq-soft-a3-1":
     "<strong>Soplos Welcome:</strong> Central hub for system configuration, software installation, and driver management with 6 comprehensive tabs",
   "faq-soft-a3-2":
@@ -1629,7 +1637,7 @@ Object.assign(window.LANG_EN, {
     "Additionally, Soplos Welcome provides access to advanced kernel management (Liquorix, XanMod) and comprehensive hardware driver installation.",
   "faq-soft-q4": "Can I install different kernels in Soplos Linux?",
   "faq-soft-a4-intro":
-    "Yes! Soplos Welcome includes a dedicated <strong>Kernels</strong> tab with advanced kernel options:",
+    "Yes! Soplos Welcome includes a dedicated <strong>Kernels</strong> tab with advanced kernel options: "",
   "faq-soft-a4-1":
     "<strong>Liquorix Kernel:</strong> Low-latency kernel optimized for desktop performance and gaming",
   "faq-soft-a4-2":
@@ -1782,7 +1790,7 @@ Object.assign(window.LANG_EN, {
   "tyron-interface-title": "Interface Tour",
   "tyron-interface-layout-title": "Desktop Layout",
   "tyron-interface-layout-intro":
-    "Tyron offers a clean, minimalist desktop layout optimized for efficiency:",
+    "Tyron offers a clean, minimalist desktop layout optimized for efficiency: "",
   "tyron-interface-clean-title": "Clean Desktop",
   "tyron-interface-clean-desc":
     "Minimal desktop surface focused on productivity. Clean workspace without unnecessary elements, keeping applications at the center.",
@@ -1839,7 +1847,7 @@ Object.assign(window.LANG_EN, {
   "tyron-custom-wallpaper-4": "Multiple monitor configurations",
   "tyron-custom-desktop-title": "Desktop Customization",
   "tyron-custom-desktop-intro":
-    "Customize your desktop interface through XFCE settings:",
+    "Customize your desktop interface through XFCE settings: "",
   "tyron-custom-options-title": "Interface Customization Options",
   "tyron-custom-options-1-label": "Add Panels:",
   "tyron-custom-options-1":
@@ -1901,7 +1909,7 @@ Object.assign(window.LANG_EN, {
   // Leistungstipps
   "tyron-perf-title": "Performance Tips",
   "tyron-perf-intro":
-    "Maximize Tyron's performance with these optimization techniques:",
+    "Maximize Tyron's performance with these optimization techniques: "",
   "tyron-perf-mem-title": "Memory Optimization",
   "tyron-perf-mem-1": "Disable compositor for maximum performance",
   "tyron-perf-mem-2": "Reduce startup applications",
@@ -1960,7 +1968,7 @@ Object.assign(window.LANG_EN, {
   // TYSON PAGE (/wiki/tyson/)
   // Breadcrumb & Hero
   "tyson-breadcrumb": "Tyson (Plasma) Guide",
-  "tyson-breadcrumb-home": "Home",
+  "tyson-breadcrumb-home": " Home",
   "tyson-breadcrumb-wiki": "Wiki",
   "tyson-hero-title": "Soplos Tyson (Plasma) Guide",
   "tyson-hero-desc":
@@ -2048,7 +2056,7 @@ Object.assign(window.LANG_EN, {
 
   "tyson-custom-desktop-title": "Desktop Customization",
   "tyson-custom-desktop-intro":
-    "Customize your desktop interface via System Settings:",
+    "Customize your desktop interface via System Settings: "",
   "tyson-custom-options-title": "Interface Customization Options",
   "tyson-custom-options-1-label": "Panels & Widgets:",
   "tyson-custom-options-1":
@@ -2108,7 +2116,7 @@ Object.assign(window.LANG_EN, {
   // Performance Tips
   "tyson-perf-title": "Performance Tips",
   "tyson-perf-intro":
-    "Plasma is configurable to be lightweight or visually rich. Use these tips to balance performance and effects:",
+    "Plasma is configurable to be lightweight or visually rich. Use these tips to balance performance and effects: "",
   "tyson-perf-mem-title": "Memory Optimization",
   "tyson-perf-mem-1":
     "Disable or reduce desktop effects in System Settings → Workspace Behavior → Desktop Effects",
@@ -2137,7 +2145,7 @@ Object.assign(window.LANG_EN, {
   "tyson-trouble-a1": "Try restarting the Plasma shell:",
   "tyson-trouble-q2": "Login screen issues",
   "tyson-trouble-a2-intro":
-    "Check SDDM configuration and greeter logs in /var/log. Reconfigure SDDM if needed:",
+    "Check SDDM configuration and greeter logs in /var/log. Reconfigure SDDM if needed: "",
   "tyson-trouble-q3": "Slow animations or effects",
   "tyson-trouble-a3":
     "Disable or tune effects in System Settings → Workspace Behavior → Desktop Effects and adjust compositor backend.",
@@ -2147,7 +2155,7 @@ Object.assign(window.LANG_EN, {
 
   // BORO PAGE (/wiki/boro/)
   // Breadcrumb & Hero
-  "boro-breadcrumb-home": "Home",
+  "boro-breadcrumb-home": " Home",
   "boro-breadcrumb-wiki": "Wiki",
   "boro-breadcrumb": "Boro (GNOME) Guide",
   "boro-hero-title": "Soplos Boro (GNOME) Guide",
@@ -2197,7 +2205,7 @@ Object.assign(window.LANG_EN, {
   "boro-interface-title": "Interface Tour",
   "boro-interface-desktop-title": "Desktop Experience",
   "boro-interface-desktop-intro":
-    "Boro offers a polished GNOME 49.2 experience enhanced by Soplos Linux:",
+    "Boro offers a polished GNOME 49.2 experience enhanced by Soplos Linux: "",
   "boro-interface-gnome-title": "GNOME 49.2",
   "boro-interface-gnome-desc":
     "The latest version of the GNOME desktop offers a modern, distraction-free\n workspace.",
@@ -2257,7 +2265,7 @@ Object.assign(window.LANG_EN, {
   "boro-custom-wallpaper-3": "Multiple monitor configurations",
   "boro-custom-desktop-title": "Desktop Customization",
   "boro-custom-desktop-intro":
-    "Boro (GNOME) offers unique customization options:",
+    "Boro (GNOME) offers unique customization options: "",
   "boro-custom-dash-label": "Dash to Panel:",
   "boro-custom-dash-desc":
     "Combine dash and top bar into a single panel\n (like Windows 10/11). Right-click on the panel to configure.",
@@ -2307,7 +2315,7 @@ Object.assign(window.LANG_EN, {
   // Performance Tips
   "boro-perf-title": "Performance Tips",
   "boro-perf-intro":
-    "Maximize Boro's performance with these optimization techniques:",
+    "Maximize Boro's performance with these optimization techniques: "",
   "boro-perf-memory-title": "Memory Optimization",
   "boro-perf-memory-1": "Disable animations in GNOME Tweaks",
   "boro-perf-memory-2": "Reduce startup applications",
@@ -2369,7 +2377,7 @@ Object.assign(window.LANG_EN, {
     "Check the troubleshooting section in the wiki or\n ask in the community forums for help with specific hardware.",
 
   // Customization Page (/wiki/customization/)
-  "custom-breadcrumb-home": "Home",
+  "custom-breadcrumb-home": " Home",
   "custom-breadcrumb-wiki": "Wiki",
   "custom-breadcrumb": "Customization",
   "custom-hero-title": "Customization",
@@ -2396,7 +2404,7 @@ Object.assign(window.LANG_EN, {
   // Global Themes
   "custom-themes-title": "Global Themes",
   "custom-themes-intro":
-    "Global themes change colors, window decorations, plasmoid/panel styles, and sometimes icons. Use these tools:",
+    "Global themes change colors, window decorations, plasmoid/panel styles, and sometimes icons. Use these tools: "",
   "custom-themes-1":
     "<strong>Tyson (Plasma):</strong> System Settings → Global Theme / Appearance.",
   "custom-themes-2":
@@ -2414,7 +2422,7 @@ Object.assign(window.LANG_EN, {
   // Icons & Cursors
   "custom-icons-title": "Icons & Cursors",
   "custom-icons-intro":
-    "Icons affect system menus, file managers, and application toolbars. Soplos comes with a consistent icon set, but you can switch or install new icon themes:",
+    "Icons affect system menus, file managers, and application toolbars. Soplos comes with a consistent icon set, but you can switch or install new icon themes: "",
   "custom-icons-1":
     "<strong>Install New Icons:</strong> Place icon folders in <code>/usr/share/icons</code> (system) or <code>~/.icons</code> (user).",
   "custom-icons-2":
@@ -2449,7 +2457,7 @@ Object.assign(window.LANG_EN, {
   // Panels
   "custom-panels-title": "Panels, Docklike & Widgets",
   "custom-panels-intro":
-    "Soplos offers Docklike for XFCE; Plasma uses native widgets (Plasmoids). Tips for configuring panels and widgets:",
+    "Soplos offers Docklike for XFCE; Plasma uses native widgets (Plasmoids). Tips for configuring panels and widgets: "",
   "custom-panels-1":
     "<strong>Soplos Docklike (Tyron):</strong> Use Soplos Docklike to emulate a dock; configure via the app or XFCE panel plugin.",
   "custom-panels-2":
@@ -2475,7 +2483,7 @@ Object.assign(window.LANG_EN, {
   "custom-stm-note":
     "<strong>Note:</strong> <em>Soplos Theme Manager</em> is intended for XFCE and <strong>Tyron (XFCE)</strong> only. It does not apply full global themes for Plasma; on <strong>Tyson (Plasma)</strong> use <code>System Settings → Global Theme</code> or native Plasma tools.",
   "custom-stm-intro":
-    "If you have Soplos Theme Manager installed on Tyron, here are the key points:",
+    "If you have Soplos Theme Manager installed on Tyron, here are the key points: "",
   "custom-stm-1":
     "Open <strong>Soplos Theme Manager</strong> via Soplos Welcome or application menu (Tyron).",
   "custom-stm-2":
@@ -2540,7 +2548,7 @@ Object.assign(window.LANG_EN, {
   // Icons
   "themes-icons-title": "Icon Themes",
   "themes-icons-text":
-    "Icon themes are installed in <code>/usr/share/icons</code> (system) or <code>~/.icons</code> (user). After copying icons, update the cache:",
+    "Icon themes are installed in <code>/usr/share/icons</code> (system) or <code>~/.icons</code> (user). After copying icons, update the cache: "",
   "themes-icons-text-2":
     "Finally, enable the icon theme in the respective desktop settings (Tyson: System Settings → Icons; Tyron: Appearance → Icons; Boro: GNOME Tweaks → Appearance).",
 
@@ -2595,7 +2603,7 @@ Object.assign(window.LANG_EN, {
   "themes-see-also-custom": "Customization",
 
   // Troubleshooting Page (/wiki/troubleshooting/)
-  "trouble-breadcrumb-home": "Home",
+  "trouble-breadcrumb-home": " Home",
   "trouble-breadcrumb-wiki": "Wiki",
   "trouble-breadcrumb": "Troubleshooting",
   "trouble-hero-title": "Troubleshooting",
@@ -2610,7 +2618,7 @@ Object.assign(window.LANG_EN, {
   "trouble-toc-6": "Graphics & Display",
   "trouble-intro-title": "Troubleshooting Guide",
   "trouble-intro-text":
-    "Before attempting complex fixes, always ensure your system is up to date:",
+    "Before attempting complex fixes, always ensure your system is up to date: "",
   "trouble-install-title": "Installation Issues",
   "trouble-install-calam-title": "Calamares Installer Fails",
   "trouble-install-calam-intro":
@@ -2629,7 +2637,7 @@ Object.assign(window.LANG_EN, {
   "trouble-install-part-2":
     "If dual-booting, shrink your Windows partition from Windows first.",
   "trouble-install-part-3-intro":
-    "Create a manual partition table if automatic fails:",
+    "Create a manual partition table if automatic fails: "",
   "trouble-install-part-3-efi":
     "<strong>EFI:</strong> 512MB (FAT32, flag: boot/esp)",
   "trouble-install-part-3-root":
@@ -2637,14 +2645,14 @@ Object.assign(window.LANG_EN, {
   "trouble-boot-title": "Boot Issues",
   "trouble-boot-grub-title": "GRUB Rescue / Bootloader Missing",
   "trouble-boot-grub-intro":
-    "If you cannot boot into Soplos after installing Windows or another OS:",
+    "If you cannot boot into Soplos after installing Windows or another OS: "",
   "trouble-boot-grub-1": "Boot from your Soplos Live USB.",
   "trouble-boot-grub-2":
     "Install <strong>Boot Repair</strong> (if available) or use the terminal.",
   "trouble-boot-grub-3": "<strong>Terminal Method:</strong>",
   "trouble-boot-initramfs-title": "Initramfs Errors",
   "trouble-boot-initramfs-intro":
-    "If you land in an <code>(initramfs)</code> prompt, your filesystem may have errors:",
+    "If you land in an <code>(initramfs)</code> prompt, your filesystem may have errors: "",
   "trouble-boot-initramfs-note":
     "Replace <code>/dev/sda2</code> with your root partition.",
   "trouble-desktop-title": "Desktop Environment Specifics",
@@ -2654,10 +2662,10 @@ Object.assign(window.LANG_EN, {
     "uses GNOME, which relies heavily on extensions.",
   "trouble-desktop-boro-ext-title": "Extensions Crashing",
   "trouble-desktop-boro-ext-intro":
-    "If the shell freezes or extensions act up:",
+    "If the shell freezes or extensions act up: "",
   "trouble-desktop-boro-wayland-title": "Wayland vs X11",
   "trouble-desktop-boro-wayland-intro":
-    "If you have issues with <strong>Screen Sharing</strong> (Discord, Zoom) or <strong>Gaming</strong>:",
+    "If you have issues with <strong>Screen Sharing</strong> (Discord, Zoom) or <strong>Gaming</strong>: "",
   "trouble-desktop-boro-wayland-1": "Log out.",
   "trouble-desktop-boro-wayland-2": "Click on your username.",
   "trouble-desktop-boro-wayland-3": "Click the gear icon at the bottom right.",
@@ -2673,7 +2681,7 @@ Object.assign(window.LANG_EN, {
   "trouble-packages-lock-error":
     "<span>Error:</span> <code>Could not get lock /var/lib/dpkg/lock</code>",
   "trouble-packages-lock-intro":
-    "This means another process (like an auto-updater) is using APT. If you are sure nothing is running:",
+    "This means another process (like an auto-updater) is using APT. If you are sure nothing is running: "",
   "trouble-packages-broken-title": "Broken Packages",
   "trouble-packages-broken-intro": "If an installation failed halfway:",
   "trouble-hardware-title": "Hardware & Network",
@@ -2685,10 +2693,10 @@ Object.assign(window.LANG_EN, {
   "trouble-hardware-bluetooth-title": "Bluetooth Not Working",
   "trouble-hardware-bluetooth-intro": "Ensure the service is running:",
   "trouble-hardware-bluetooth-alt":
-    "If devices don't connect, install <code>blueman</code> for a better manager:",
+    "If devices don't connect, install <code>blueman</code> for a better manager: "",
   "trouble-hardware-printers-title": "Printers",
   "trouble-hardware-printers-intro":
-    "Access the CUPS web interface for advanced management:",
+    "Access the CUPS web interface for advanced management: "",
   "trouble-hardware-printers-1":
     "Open browser: <a href='http://localhost:631' target='_blank'>http://localhost:631</a>",
   "trouble-graphics-title": "Graphics & Display",
@@ -2703,7 +2711,7 @@ Object.assign(window.LANG_EN, {
     '<strong>NVIDIA:</strong> Open NVIDIA Settings -> "Force Full Composition Pipeline".',
 
   // Community Page (/wiki/community/)
-  "community-breadcrumb-home": "Home",
+  "community-breadcrumb-home": " Home",
   "community-breadcrumb-wiki": "Wiki",
   "community-breadcrumb": "Community",
   "community-hero-title": "Community",
@@ -2813,7 +2821,7 @@ Object.assign(window.LANG_EN, {
   "contact-support-warning":
     "<strong>Please do not use email for technical support or bug reports.</strong>",
   "contact-support-desc":
-    "To ensure you get the best help and that fixes benefit everyone, please use our public channels:",
+    "To ensure you get the best help and that fixes benefit everyone, please use our public channels: "",
   "contact-support-forums-label": "Community Forums:",
   "contact-support-forums-text": "(General help, questions)",
   "contact-support-github-label": "GitHub Issues:",
@@ -2830,7 +2838,7 @@ Object.assign(window.LANG_EN, {
   "contact-business-email-pre": "Contact us at:",
   "contact-press-title": "Press & Media",
   "contact-press-desc":
-    "For press kits, interview requests, or media inquiries:",
+    "For press kits, interview requests, or media inquiries: "",
   "contact-social-title": "Connect with Us",
   "contact-social-twitter": "X (Twitter)",
   "contact-social-github": "GitHub",
@@ -2848,7 +2856,7 @@ Object.assign(window.LANG_EN, {
   "contribute-toc-5": "Translation",
   "contribute-start-title": "Getting Started",
   "contribute-start-intro":
-    "Before you start contributing, you'll need a few things set up:",
+    "Before you start contributing, you'll need a few things set up: "",
   "contribute-start-req1-label": "GitHub Account:",
   "contribute-start-req1": "We use GitHub for all our code and issue tracking.",
   "contribute-start-req2-label": "Git:",
@@ -2870,7 +2878,7 @@ Object.assign(window.LANG_EN, {
     "<strong>Push</strong> to your fork and submit a <strong>Pull Request (PR)</strong>.",
   "contribute-standards-title": "Coding Standards",
   "contribute-standards-intro":
-    "To keep our codebase clean, please adhere to these rules:",
+    "To keep our codebase clean, please adhere to these rules: "",
   "contribute-standards-py-label": "Python:",
   "contribute-standards-py": "Follow PEP 8.",
   "contribute-standards-bash-label": "Bash:",
@@ -2880,7 +2888,7 @@ Object.assign(window.LANG_EN, {
     'Use imperative mood (e.g., "Fix login bug" not "Fixed login bug").',
   "contribute-docs-title": "Documentation",
   "contribute-docs-intro":
-    "Our Wiki is built with simple HTML/CSS. To contribute:",
+    "Our Wiki is built with simple HTML/CSS. To contribute: "",
   "contribute-docs-1":
     "Edit the pages directly in the <code>wiki/</code> directory.",
   "contribute-docs-2": "Ensure all links are relative and working.",
@@ -2911,7 +2919,7 @@ Object.assign(window.LANG_EN, {
     "These tools are maintained by the Core Team and are primarily for internal use. Official ISOs are built in a controlled environment.",
   "building-tools-title": "Soplos Tools",
   "building-tools-intro":
-    "The Soplos build infrastructure consists of several specialized tools:",
+    "The Soplos build infrastructure consists of several specialized tools: "",
   "building-tools-iso-label": "Soplos ISO Builder:",
   "building-tools-iso-desc":
     "Creates bootable ISO images for all Soplos editions (Boro, Tyron, Tyson).",
@@ -2934,7 +2942,7 @@ Object.assign(window.LANG_EN, {
     "Kernel source code is based on upstream Linux with Soplos-specific patches and configuration.",
   "building-iso-title": "Soplos ISO Builder",
   "building-iso-intro":
-    "The <strong>Soplos ISO Builder</strong> is the tool used to generate the official installation images. It handles:",
+    "The <strong>Soplos ISO Builder</strong> is the tool used to generate the official installation images. It handles: "",
   "building-iso-list-1": "Package selection for each edition",
   "building-iso-list-2": "Desktop environment configuration",
   "building-iso-list-3": "Live environment setup",
@@ -2959,7 +2967,7 @@ Object.assign(window.LANG_EN, {
     "Soplos Linux maintains a <strong>strictly curated</strong> repository. Quality and security are our top priorities. All packages are reviewed, built, and signed by the Core Team.",
   "packaging-packager-title": "Soplos Packager",
   "packaging-packager-intro":
-    "<strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code> packages for the Soplos repositories. It automates:",
+    "<strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code> packages for the Soplos repositories. It automates: "",
   "packaging-packager-list-1": "Debian package structure generation",
   "packaging-packager-list-2": "Dependency resolution and metadata",
   "packaging-packager-list-3": "Build process standardization",
@@ -2968,7 +2976,7 @@ Object.assign(window.LANG_EN, {
     "This tool ensures all packages follow the same quality standards and structure.",
   "packaging-standards-title": "Quality Standards",
   "packaging-standards-intro":
-    "All packages submitted to Soplos repositories must meet these requirements:",
+    "All packages submitted to Soplos repositories must meet these requirements: "",
   "packaging-standards-list-1-label": "Debian Policy Compliance:",
   "packaging-standards-list-1-text": "Follow the Debian Policy Manual",
   "packaging-standards-list-2-label": "No Lintian Errors:",
@@ -2987,7 +2995,7 @@ Object.assign(window.LANG_EN, {
   "packaging-submission-warning-text":
     "Direct binary uploads are <strong>NOT</strong> permitted. All packages undergo manual security audit by the Core Team.",
   "packaging-submission-intro":
-    "To propose a new package for Soplos repositories:",
+    "To propose a new package for Soplos repositories: "",
   "packaging-submission-step-1-label": "Prepare Source Package:",
   "packaging-submission-step-1-text":
     "Create a clean, well-documented source package following Debian standards.",
@@ -3025,7 +3033,7 @@ Object.assign(window.LANG_EN, {
     "These APIs are primarily for internal infrastructure. They may change without notice between releases.",
   "api-tools-title": "Build Tool APIs",
   "api-tools-intro":
-    "The Soplos build infrastructure exposes several internal Python modules:",
+    "The Soplos build infrastructure exposes several internal Python modules: "",
   "api-tools-packager-label": "soplos_packager:",
   "api-tools-packager-desc":
     "Python API for creating and manipulating <code>.deb</code> packages programmatically.",
@@ -3039,7 +3047,7 @@ Object.assign(window.LANG_EN, {
     "Detailed API documentation for these modules is maintained internally and will be published when stabilized.",
   "api-apps-title": "Application APIs",
   "api-apps-intro":
-    "Soplos-specific applications expose APIs for system integration:",
+    "Soplos-specific applications expose APIs for system integration: "",
   "api-apps-welcome-label": "Soplos Welcome:",
   "api-apps-welcome-desc":
     "Backend modules for the welcome screen, including system detection and post-install configuration.",
@@ -3204,7 +3212,7 @@ Object.assign(window.LANG_EN, {
   "boro-apps-welcomelive-link": "Learn More",
 
   // Soplos Docklike Wiki
-  "docklike-breadcrumb-home": "Home",
+  "docklike-breadcrumb-home": " Home",
   "docklike-breadcrumb-wiki": "Wiki",
   "docklike-breadcrumb": "Soplos Docklike",
   "docklike-hero-title": "Soplos Docklike",
@@ -3243,7 +3251,7 @@ Object.assign(window.LANG_EN, {
   "docklike-screenshot-2": "Docklike Settings",
 
   // Soplos GRUB Editor Wiki
-  "grub-editor-breadcrumb-home": "Home",
+  "grub-editor-breadcrumb-home": " Home",
   "grub-editor-breadcrumb-wiki": "Wiki",
   "grub-editor-breadcrumb": "Soplos GRUB Editor",
   "grub-editor-hero-title": "Soplos GRUB Editor",
@@ -3283,7 +3291,7 @@ Object.assign(window.LANG_EN, {
   "grub-editor-screenshot-3": "GRUB Editor (Tyson)",
 
   // Soplos Plymouth Manager Wiki
-  "plymouth-manager-breadcrumb-home": "Home",
+  "plymouth-manager-breadcrumb-home": " Home",
   "plymouth-manager-breadcrumb-wiki": "Wiki",
   "plymouth-manager-breadcrumb": "Soplos Plymouth Manager",
   "plymouth-manager-hero-title": "Soplos Plymouth Manager",
@@ -3318,7 +3326,7 @@ Object.assign(window.LANG_EN, {
   "plymouth-manager-screenshot-3": "Plymouth Manager (Tyson)",
 
   // Soplos Repo Selector Wiki
-  "repo-selector-breadcrumb-home": "Home",
+  "repo-selector-breadcrumb-home": " Home",
   "repo-selector-breadcrumb-wiki": "Wiki",
   "repo-selector-breadcrumb": "Soplos Repo Selector",
   "repo-selector-hero-title": "Soplos Repo Selector",
@@ -3355,7 +3363,7 @@ Object.assign(window.LANG_EN, {
   "repo-selector-screenshot-3": "Repo Selector (Tyson)",
 
   // Soplos Theme Manager Wiki
-  "theme-manager-breadcrumb-home": "Home",
+  "theme-manager-breadcrumb-home": " Home",
   "theme-manager-breadcrumb-wiki": "Wiki",
   "theme-manager-breadcrumb": "Soplos Theme Manager",
   "theme-manager-hero-title": "Soplos Theme Manager",
@@ -3395,7 +3403,7 @@ Object.assign(window.LANG_EN, {
   "theme-manager-screenshot-3": "Creating a New Theme",
 
   // Soplos Welcome Wiki
-  "welcome-breadcrumb-home": "Home",
+  "welcome-breadcrumb-home": " Home",
   "welcome-breadcrumb-wiki": "Wiki",
   "welcome-breadcrumb": "Soplos Welcome",
   "welcome-hero-title": "Soplos Welcome",
@@ -3428,7 +3436,7 @@ Object.assign(window.LANG_EN, {
   "welcome-screenshot-3": "Soplos Welcome (Tyson Edition)",
 
   // Soplos Welcome Live Wiki
-  "welcome-live-breadcrumb-home": "Home",
+  "welcome-live-breadcrumb-home": " Home",
   "welcome-live-breadcrumb-wiki": "Wiki",
   "welcome-live-breadcrumb": "Soplos Welcome Live",
   "welcome-live-hero-title": "Soplos Welcome Live",

@@ -1,4 +1,10 @@
 Object.assign(window.LANG_DE, {
+    "breadcrumb-home": " Startseite",
+    "breadcrumb-wiki": "Wiki",
+    "apps-tyron-breadcrumb": "Tyron Apps",
+    "apps-tyson-breadcrumb": "Tyson Apps",
+    "apps-boro-breadcrumb": "Boro Apps",
+
     "community-contribute-dev-title-13": "Entwicklung",
     "community-events-release-13": "<strong>Abgeschlossen:</strong> Koordination der 3 Versionen auf Beta 1.0.4. Siehe <a href=\"/wiki/releases/\">Releases</a>.",
     "community-contribute-dev-title-12": "Entwicklung",
@@ -843,6 +849,8 @@ Object.assign(window.LANG_DE, {
 
     // FIRST STEPS GUIDE (/wiki/start/)
     // Breadcrumb & Hero
+    "breadcrumb-home": " Startseite",
+    "breadcrumb-wiki": "Wiki",
     "start-breadcrumb": "Erste Schritte",
     "start-hero-title": "Erste Schritte",
     "start-hero-desc": "Wesentliche Konfiguration und Einrichtung, um das Beste aus Ihrer Soplos Linux-Erfahrung herauszuholen",
@@ -1517,7 +1525,7 @@ Object.assign(window.LANG_DE, {
     // TYSON PAGE (/wiki/tyson/)
     // Breadcrumb & Hero
     "tyson-breadcrumb": "Tyson (Plasma) Leitfaden",
-    "tyson-breadcrumb-home": "Startseite",
+    "tyson-breadcrumb-home": " Startseite",
     "tyson-breadcrumb-wiki": "Wiki",
     "tyson-hero-title": "Soplos Tyson (Plasma) Leitfaden",
     "tyson-hero-desc": "Vollständiger Leitfaden für die moderne und funktionsreiche KDE Plasma Desktop-Variante",
@@ -1661,7 +1669,7 @@ Object.assign(window.LANG_DE, {
 
     // BORO PAGE (/wiki/boro/)
     // Breadcrumb & Hero
-    "boro-breadcrumb-home": "Startseite",
+    "boro-breadcrumb-home": " Startseite",
     "boro-breadcrumb-wiki": "Wiki",
     "boro-breadcrumb": "Boro (GNOME) Anleitung",
     "boro-hero-title": "Soplos Boro (GNOME) Anleitung",
@@ -1849,7 +1857,7 @@ Object.assign(window.LANG_DE, {
     "boro-trouble-help": "Überprüfen Sie den Fehlerbehebungsbereich im Wiki oder\n fragen Sie in den Community-Foren nach Hilfe bei spezifischer Hardware.",
 
     // Customization Page (/wiki/customization/)
-    "custom-breadcrumb-home": "Startseite",
+    "custom-breadcrumb-home": " Startseite",
     "custom-breadcrumb-wiki": "Wiki",
     "custom-breadcrumb": "Anpassung",
     "custom-hero-title": "Anpassung",
@@ -2008,7 +2016,7 @@ Object.assign(window.LANG_DE, {
     "themes-see-also-custom": "Anpassung",
 
     // Seite zur Fehlerbehebung (/wiki/troubleshooting/)
-    "trouble-breadcrumb-home": "Startseite",
+    "trouble-breadcrumb-home": " Startseite",
     "trouble-breadcrumb-wiki": "Wiki",
     "trouble-breadcrumb": "Fehlerbehebung",
     "trouble-hero-title": "Fehlerbehebung",
@@ -2088,7 +2096,7 @@ Object.assign(window.LANG_DE, {
     "trouble-graphics-tearing-nvidia": "<strong>NVIDIA:</strong> Öffnen Sie NVIDIA Settings -> \"Force Full Composition Pipeline\".",
 
     // Community-Seite (/wiki/community/)
-    "community-breadcrumb-home": "Startseite",
+    "community-breadcrumb-home": " Startseite",
     "community-breadcrumb-wiki": "Wiki",
     "community-breadcrumb": "Community",
     "community-hero-title": "Community",
@@ -2484,7 +2492,7 @@ Object.assign(window.LANG_DE, {
     "boro-apps-welcomelive-link": "Mehr Erfahren",
 
     // Soplos Docklike Wiki
-    "docklike-breadcrumb-home": "Startseite",
+    "docklike-breadcrumb-home": " Startseite",
     "docklike-breadcrumb-wiki": "Wiki",
     "docklike-breadcrumb": "Soplos Docklike",
     "docklike-hero-title": "Soplos Docklike",
@@ -2514,7 +2522,7 @@ Object.assign(window.LANG_DE, {
     "docklike-screenshot-2": "Docklike Einstellungen",
 
     // Soplos GRUB Editor Wiki
-    "grub-editor-breadcrumb-home": "Startseite",
+    "grub-editor-breadcrumb-home": " Startseite",
     "grub-editor-breadcrumb-wiki": "Wiki",
     "grub-editor-breadcrumb": "Soplos GRUB Editor",
     "grub-editor-hero-title": "Soplos GRUB Editor",
@@ -2545,7 +2553,7 @@ Object.assign(window.LANG_DE, {
     "grub-editor-screenshot-3": "GRUB Editor (Tyson)",
 
     // Soplos Plymouth Manager Wiki
-    "plymouth-manager-breadcrumb-home": "Startseite",
+    "plymouth-manager-breadcrumb-home": " Startseite",
     "plymouth-manager-breadcrumb-wiki": "Wiki",
     "plymouth-manager-breadcrumb": "Soplos Plymouth Manager",
     "plymouth-manager-hero-title": "Soplos Plymouth Manager",
@@ -2574,7 +2582,7 @@ Object.assign(window.LANG_DE, {
     "plymouth-manager-screenshot-3": "Plymouth Manager (Tyson)",
 
     // Soplos Repo Selector Wiki
-    "repo-selector-breadcrumb-home": "Startseite",
+    "repo-selector-breadcrumb-home": " Startseite",
     "repo-selector-breadcrumb-wiki": "Wiki",
     "repo-selector-breadcrumb": "Soplos Repo Selector",
     "repo-selector-hero-title": "Soplos Repo Selector",
@@ -2603,7 +2611,7 @@ Object.assign(window.LANG_DE, {
     "repo-selector-screenshot-3": "Repo Selector (Tyson)",
 
     // Soplos Theme Manager Wiki
-    "theme-manager-breadcrumb-home": "Startseite",
+    "theme-manager-breadcrumb-home": " Startseite",
     "theme-manager-breadcrumb-wiki": "Wiki",
     "theme-manager-breadcrumb": "Soplos Theme Manager",
     "theme-manager-hero-title": "Soplos Theme Manager",
@@ -2634,7 +2642,7 @@ Object.assign(window.LANG_DE, {
     "theme-manager-screenshot-3": "Neues Thema erstellen",
 
     // Soplos Welcome Wiki
-    "welcome-breadcrumb-home": "Startseite",
+    "welcome-breadcrumb-home": " Startseite",
     "welcome-breadcrumb-wiki": "Wiki",
     "welcome-breadcrumb": "Soplos Welcome",
     "welcome-hero-title": "Soplos Welcome",
@@ -2662,7 +2670,7 @@ Object.assign(window.LANG_DE, {
     "welcome-screenshot-3": "Soplos Welcome (Tyson Edition)",
 
     // Soplos Welcome Live Wiki
-    "welcome-live-breadcrumb-home": "Startseite",
+    "welcome-live-breadcrumb-home": " Startseite",
     "welcome-live-breadcrumb-wiki": "Wiki",
     "welcome-live-breadcrumb": "Soplos Welcome Live",
     "welcome-live-hero-title": "Soplos Welcome Live",
@@ -2732,5 +2740,5 @@ Object.assign(window.LANG_DE, {
     "boro-soplos-webapp-title": "Soplos WebApp Manager",
     "boro-soplos-webapp-desc": "Verwandeln Sie Websites in unabhängige Desktop-Anwendungen mit isolierten Profilen und Menüintegration.",
 
-    "footer-terms": "Nutzungsbedingungen"
+    "footer-terms": "Nutzungsbedingungen",
 });

@@ -1,4 +1,10 @@
 Object.assign(window.LANG_ES, {
+    "breadcrumb-home": " Inicio",
+    "breadcrumb-wiki": "Wiki",
+    "apps-tyron-breadcrumb": "Apps Tyron",
+    "apps-tyson-breadcrumb": "Apps Tyson",
+    "apps-boro-breadcrumb": "Apps Boro",
+
     "community-contribute-dev-title-13": "Desarrollo",
     "community-events-release-13": "<strong>Finalizado:</strong> Coordinación de las 3 versiones a la Beta 1.0.4. Ver <a href=\"/wiki/releases/\">lanzamientos</a>.",
     "community-contribute-dev-title-12": "Desarrollo",
@@ -843,6 +849,8 @@ Object.assign(window.LANG_ES, {
 
     // FIRST STEPS GUIDE (/wiki/start/)
     // Breadcrumb & Hero
+    "breadcrumb-home": " Inicio",
+    "breadcrumb-wiki": "Wiki",
     "start-breadcrumb": "Primeros Pasos",
     "start-hero-title": "Primeros Pasos",
     "start-hero-desc": "Configuración esencial para aprovechar al máximo tu experiencia con Soplos Linux",
@@ -1518,7 +1526,7 @@ Object.assign(window.LANG_ES, {
     // PÁGINA TYSON (/wiki/tyson/)
     // Breadcrumb y Hero
     "tyson-breadcrumb": "Guía Tyson (Plasma)",
-    "tyson-breadcrumb-home": "Inicio",
+    "tyson-breadcrumb-home": " Inicio",
     "tyson-breadcrumb-wiki": "Wiki",
     "tyson-hero-title": "Guía de Soplos Tyson (Plasma)",
     "tyson-hero-desc": "Guía completa para la variante de escritorio moderna y rica en funciones KDE Plasma",
@@ -1662,7 +1670,7 @@ Object.assign(window.LANG_ES, {
 
     // BORO PAGE (/wiki/boro/)
     // Breadcrumb & Hero
-    "boro-breadcrumb-home": "Inicio",
+    "boro-breadcrumb-home": " Inicio",
     "boro-breadcrumb-wiki": "Wiki",
     "boro-breadcrumb": "Guía Boro (GNOME)",
     "boro-hero-title": "Guía Soplos Boro (GNOME)",
@@ -1850,7 +1858,7 @@ Object.assign(window.LANG_ES, {
     "boro-trouble-help": "Revisa la sección de solución de problemas en la wiki o pregunta en los foros de la comunidad para ayuda con hardware específico.",
 
     // Customization Page (/wiki/customization/)
-    "custom-breadcrumb-home": "Inicio",
+    "custom-breadcrumb-home": " Inicio",
     "custom-breadcrumb-wiki": "Wiki",
     "custom-breadcrumb": "Personalización",
     "custom-hero-title": "Personalización",
@@ -2009,7 +2017,7 @@ Object.assign(window.LANG_ES, {
     "themes-see-also-custom": "Personalización",
 
     // Página de Resolución de Problemas (/wiki/troubleshooting/)
-    "trouble-breadcrumb-home": "Inicio",
+    "trouble-breadcrumb-home": " Inicio",
     "trouble-breadcrumb-wiki": "Wiki",
     "trouble-breadcrumb": "Resolución de Problemas",
     "trouble-hero-title": "Resolución de Problemas",
@@ -2089,7 +2097,7 @@ Object.assign(window.LANG_ES, {
     "trouble-graphics-tearing-nvidia": "<strong>NVIDIA:</strong> Abre NVIDIA Settings -> \"Force Full Composition Pipeline\".",
 
     // Página de Comunidad (/wiki/community/)
-    "community-breadcrumb-home": "Inicio",
+    "community-breadcrumb-home": " Inicio",
     "community-breadcrumb-wiki": "Wiki",
     "community-breadcrumb": "Comunidad",
     "community-hero-title": "Comunidad",
@@ -2485,7 +2493,7 @@ Object.assign(window.LANG_ES, {
     "boro-apps-welcomelive-link": "Saber Más",
 
     // Soplos Docklike Wiki
-    "docklike-breadcrumb-home": "Inicio",
+    "docklike-breadcrumb-home": " Inicio",
     "docklike-breadcrumb-wiki": "Wiki",
     "docklike-breadcrumb": "Soplos Docklike",
     "docklike-hero-title": "Soplos Docklike",
@@ -2515,7 +2523,7 @@ Object.assign(window.LANG_ES, {
     "docklike-screenshot-2": "Configuración de Docklike",
 
     // Soplos GRUB Editor Wiki
-    "grub-editor-breadcrumb-home": "Inicio",
+    "grub-editor-breadcrumb-home": " Inicio",
     "grub-editor-breadcrumb-wiki": "Wiki",
     "grub-editor-breadcrumb": "Soplos GRUB Editor",
     "grub-editor-hero-title": "Soplos GRUB Editor",
@@ -2546,7 +2554,7 @@ Object.assign(window.LANG_ES, {
     "grub-editor-screenshot-3": "GRUB Editor (Tyson)",
 
     // Soplos Plymouth Manager Wiki
-    "plymouth-manager-breadcrumb-home": "Inicio",
+    "plymouth-manager-breadcrumb-home": " Inicio",
     "plymouth-manager-breadcrumb-wiki": "Wiki",
     "plymouth-manager-breadcrumb": "Soplos Plymouth Manager",
     "plymouth-manager-hero-title": "Soplos Plymouth Manager",
@@ -2575,7 +2583,7 @@ Object.assign(window.LANG_ES, {
     "plymouth-manager-screenshot-3": "Plymouth Manager (Tyson)",
 
     // Soplos Repo Selector Wiki
-    "repo-selector-breadcrumb-home": "Inicio",
+    "repo-selector-breadcrumb-home": " Inicio",
     "repo-selector-breadcrumb-wiki": "Wiki",
     "repo-selector-breadcrumb": "Soplos Repo Selector",
     "repo-selector-hero-title": "Soplos Repo Selector",
@@ -2604,7 +2612,7 @@ Object.assign(window.LANG_ES, {
     "repo-selector-screenshot-3": "Repo Selector (Tyson)",
 
     // Soplos Theme Manager Wiki
-    "theme-manager-breadcrumb-home": "Inicio",
+    "theme-manager-breadcrumb-home": " Inicio",
     "theme-manager-breadcrumb-wiki": "Wiki",
     "theme-manager-breadcrumb": "Soplos Theme Manager",
     "theme-manager-hero-title": "Soplos Theme Manager",
@@ -2635,7 +2643,7 @@ Object.assign(window.LANG_ES, {
     "theme-manager-screenshot-3": "Creando un Nuevo Tema",
 
     // Soplos Welcome Wiki
-    "welcome-breadcrumb-home": "Inicio",
+    "welcome-breadcrumb-home": " Inicio",
     "welcome-breadcrumb-wiki": "Wiki",
     "welcome-breadcrumb": "Soplos Welcome",
     "welcome-hero-title": "Soplos Welcome",
@@ -2663,7 +2671,7 @@ Object.assign(window.LANG_ES, {
     "welcome-screenshot-3": "Soplos Welcome (Edición Tyson)",
 
     // Soplos Welcome Live Wiki
-    "welcome-live-breadcrumb-home": "Inicio",
+    "welcome-live-breadcrumb-home": " Inicio",
     "welcome-live-breadcrumb-wiki": "Wiki",
     "welcome-live-breadcrumb": "Soplos Welcome Live",
     "welcome-live-hero-title": "Soplos Welcome Live",
@@ -2751,5 +2759,5 @@ Object.assign(window.LANG_ES, {
 
     // Footer
     "footer-privacy": "Política de Privacidad",
-    "footer-terms": "Términos de Uso"
+    "footer-terms": "Términos de Uso",
 });
