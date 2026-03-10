@@ -132,6 +132,8 @@ window.LANG_RU = {
     "appWelcomeDesc": "Ваш путь к началу работы с Soplos Linux.",
     "appWelcomeLiveDesc": "Необходимые инструменты для вашего опыта в live-сессии.",
     "appWelcomeLiveTitle": "Приветствие Soplos Live",
+    "appWebAppManagerTitle": "Soplos WebApp Manager",
+    "appWebAppManagerDesc": "Создавайте настольные приложения из веб-сайтов с изолированными профилями.",
     "appWelcomeTitle": "Приветствие Soplos",
     "appsDesc": "Откройте для себя приложения, разработанные исключительно для Soplos Linux. Эти инструменты позволяют настраивать, управлять и улучшать ваш опыт на рабочих столах Tyron и Tyson.",
     "appsTitle": "Эксклюзивные приложения Soplos",

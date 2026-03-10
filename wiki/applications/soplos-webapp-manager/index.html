@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soplos Welcome Live - Soplos Linux Wiki</title>
-    <meta name="description" content="Documentation for Soplos Welcome Live, the assistant for live sessions.">
-    <meta name="keywords" content="soplos, welcome live, installer, live session">
+    <title>Soplos WebApp Manager - Soplos Linux Wiki</title>
+    <meta name="description" content="Documentation for Soplos WebApp Manager">
+    <meta name="keywords" content="soplos, webapp, manager, web applications">
 
     <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
     
@@ -90,11 +90,11 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../"><i class="fas fa-home"></i> <span id="welcome-live-breadcrumb-home">Home</span></a>
+                <a href="../../../"><i class="fas fa-home"></i> <span id="webappmanager-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <a href="../../"><span id="welcome-live-breadcrumb-wiki">Wiki</span></a>
+                <a href="../../"><span id="webappmanager-breadcrumb-wiki">Wiki</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current" id="welcome-live-breadcrumb">Soplos Welcome Live</span>
+                <span class="breadcrumb-current" id="webappmanager-breadcrumb">Soplos WebApp Manager</span>
             </nav>
         </div>
     </div>
@@ -104,9 +104,9 @@
             <section class="wiki-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><img src="../../../images/icons/org.soplos.welcomelive.png" alt="Icon"
-                            style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span id="welcome-live-hero-title">Soplos Welcome Live</span></h1>
-                    <p id="welcome-live-hero-desc">The essential guide for your live session. Install Soplos Linux or explore the system.</p>
+                    <h1><img src="../../../images/icons/org.soplos.webappmanager.png" alt="Icon"
+                            style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span id="webappmanager-hero-title">Soplos WebApp Manager</span></h1>
+                    <p id="webappmanager-hero-desc">Soplos WebApp Manager is a tool that allows you to create and manage desktop applications from your favorite websites.</p>
                 </div>
             </div>
         </section>
@@ -117,61 +117,49 @@
                 <div class="content-wrapper">
                     <!-- Table of Contents -->
                     <aside class="toc">
-                        <h3 id="welcome-live-toc-title">Contents</h3>
+                        <h3 id="webappmanager-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#overview" id="welcome-live-toc-1">Overview</a></li>
-                            <li><a href="#features" id="welcome-live-toc-2">Features</a></li>
-                            <li><a href="#screenshots" id="welcome-live-toc-3">Screenshots</a></li>
+                            <li><a href="#overview" id="webappmanager-toc-1">Overview</a></li>
+                            <li><a href="#features" id="webappmanager-toc-2">Features</a></li>
+                            <li><a href="#screenshots" id="webappmanager-toc-3">Screenshots</a></li>
                         </ul>
                     </aside>
 
                     <!-- Main Content -->
                     <article class="main-content">
                         <section class="content-section" id="overview">
-                            <h2><span id="welcome-live-overview-title">Overview</span></h2>
-                            <p id="welcome-live-overview-p1">Soplos Welcome Live is the specialized welcome screen for the Soplos Linux Live
-                                environment. It helps users navigate the live system, perform the installation, or
-                                recover an existing system.</p>
-                            <p id="welcome-live-overview-p2">Beyond just a welcome screen, it includes powerful tools for system administrators and
-                                advanced users, such as a robust CHROOT recovery environment and intelligent partition
-                                detection.</p>
+                            <h2><span id="webappmanager-overview-title">Overview</span></h2>
+                            <p id="webappmanager-overview-p1"><strong>Soplos WebApp Manager</strong> provides an easy way to transform web applications into desktop applications using sandboxed browser instances. By keeping your web apps separate from your browser, it brings seamless integration directly into your desktop environment.</p>
                         </section>
 
                         <section class="content-section" id="features">
-                            <h2><span id="welcome-live-features-title">Key Features</span></h2>
+                            <h2><span id="webappmanager-features-title">Key Features</span></h2>
                             <ul>
-                                <li><strong id="welcome-live-feat-1-title">Direct Installation:</strong> <span id="welcome-live-feat-1-desc">Seamless integration with the Calamares
-                                    installer for a smooth setup.</span></li>
-                                <li><strong id="welcome-live-feat-2-title">System Recovery:</strong> <span id="welcome-live-feat-2-desc">Advanced CHROOT tools to recover broken systems,
-                                    with intelligent partition detection.</span></li>
-                                <li><strong id="welcome-live-feat-3-title">Language Configuration:</strong> <span id="welcome-live-feat-3-desc">Automatically configures the system
-                                    language and keyboard layout based on your selection.</span></li>
-                                <li><strong id="welcome-live-feat-4-title">XDG Folder Migration:</strong> <span id="welcome-live-feat-4-desc">Smart migration of user folders (Documents,
-                                    Downloads, etc.) when changing languages.</span></li>
-                                <li><strong id="welcome-live-feat-5-title">NumLock Management:</strong> <span id="welcome-live-feat-5-desc">Control NumLock state for the live session and
-                                    the installed system.</span></li>
-                                <li><strong id="welcome-live-feat-6-title">GParted Integration:</strong> <span id="welcome-live-feat-6-desc">Quick access to partition management tools for
-                                    disk preparation.</span></li>
+                                <li><strong id="webappmanager-feat-1-title">Visual Configuration:</strong> <span id="webappmanager-feat-1-desc">Graphic interface to organize, add, and manage web applications directly from your desktop.</span></li>
+                                <li><strong id="webappmanager-feat-2-title">Desktop Integration:</strong> <span id="webappmanager-feat-2-desc">Websites open in independent windows functioning just like regular desktop software with app menu integration.</span></li>
+                                <li><strong id="webappmanager-feat-3-title">Isolated Profiles:</strong> <span id="webappmanager-feat-3-desc">Protects user privacy. Each application runs with a dedicated and completely isolated profile.</span></li>
+                                <li><strong id="webappmanager-feat-4-title">Custom Icons:</strong> <span id="webappmanager-feat-4-desc">Download website icons automatically or select custom ones for better menu customization.</span>
+                                </li>
                             </ul>
                         </section>
 
                         <section class="content-section" id="screenshots">
-                            <h2><span id="welcome-live-screenshots-title">Screenshots</span></h2>
+                            <h2><span id="webappmanager-screenshots-title">Screenshots</span></h2>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/boro/welcome-live/001-welcome-live.png"
-                                        alt="Soplos Welcome Live on Boro">
-                                    <figcaption id="welcome-live-screenshot-boro">Soplos Welcome Live (Boro)</figcaption>
+                                    <img src="../../../images/Tyron/webapp-manager/01-webapp-manager.png"
+                                        alt="WebApp Manager list">
+                                    <figcaption id="webappmanager-screenshot-1">List WebApps</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/Tyron/welcome-live/001-welcome-live.png"
-                                        alt="Soplos Welcome Live on Tyron">
-                                    <figcaption id="welcome-live-screenshot-1">Soplos Welcome Live (Tyron)</figcaption>
+                                    <img src="../../../images/Tyron/webapp-manager/02-create-webapp.png"
+                                        alt="Create WebApp">
+                                    <figcaption id="webappmanager-screenshot-2">Create a WebApp</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/Tyson/welcome-live/001-welcome-live.png"
-                                        alt="Soplos Welcome Live on Tyson">
-                                    <figcaption id="welcome-live-screenshot-2">Soplos Welcome Live (Tyson)</figcaption>
+                                    <img src="../../../images/Tyron/webapp-manager/03-list-webapps.png"
+                                        alt="Running WebApp">
+                                    <figcaption id="webappmanager-screenshot-3">Managed Apps List</figcaption>
                                 </figure>
                             </div>
                         </section>

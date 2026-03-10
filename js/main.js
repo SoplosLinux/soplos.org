@@ -235,7 +235,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyron/grub-editor/001-grub-editor.png",
           "images/Tyron/grub-editor/002-boot-entries.png",
           "images/Tyron/grub-editor/003-themes.png",
-          "images/Tyron/grub-editor/004-fonts.png",
+          "images/Tyron/grub-editor/004-backgrounds.png",
+          "images/Tyron/grub-editor/005-fonts.png",
         ],
       },
       "repo-selector": {
@@ -274,6 +275,15 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyron/welcome-live/004-terminal.png",
         ],
       },
+      "webapp-manager": {
+        titleKey: "appWebAppManagerTitle",
+        descKey: "appWebAppManagerDesc",
+        images: [
+          "images/Tyron/webapp-manager/01-webapp-manager.png",
+          "images/Tyron/webapp-manager/02-create-webapp.png",
+          "images/Tyron/webapp-manager/03-list-webapps.png",
+        ],
+      },
     },
     tyson: {
       "plymouth-manager": {
@@ -299,7 +309,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyson/grub-editor/001-grub-editor.png",
           "images/Tyson/grub-editor/002-boot-entries.png",
           "images/Tyson/grub-editor/003-select-theme.png",
-          "images/Tyson/grub-editor/004-select-font.png",
+          "images/Tyson/grub-editor/004-backgrounds.png",
+          "images/Tyson/grub-editor/005-select-font.png",
         ],
       },
       "repo-selector": {
@@ -338,6 +349,15 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyson/welcome-live/004-terminal.png",
         ],
       },
+      "webapp-manager": {
+        titleKey: "appWebAppManagerTitle",
+        descKey: "appWebAppManagerDesc",
+        images: [
+          "images/Tyson/webapp-manager/01-webapp-manager.png",
+          "images/Tyson/webapp-manager/02-create-webapp.png",
+          "images/Tyson/webapp-manager/03-list-webapps.png",
+        ],
+      },
     },
     boro: {
       "grub-editor": {
@@ -347,7 +367,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/boro/grub-editor/001-grub-editor.png",
           "images/boro/grub-editor/002-boot-entries.png",
           "images/boro/grub-editor/003-themes.png",
-          "images/boro/grub-editor/004-fonts.png",
+          "images/boro/grub-editor/004-backgrounds.png",
+          "images/boro/grub-editor/005-fonts.png",
         ],
       },
       "plymouth-manager": {
@@ -393,6 +414,15 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/boro/welcome-live/002-chroot.png",
           "images/boro/welcome-live/003-partitions.png",
           "images/boro/welcome-live/004-terminal.png",
+        ],
+      },
+      "webapp-manager": {
+        titleKey: "appWebAppManagerTitle",
+        descKey: "appWebAppManagerDesc",
+        images: [
+          "images/boro/webapp-manager/01-webapp-manager.png",
+          "images/boro/webapp-manager/02-create-webapp.png",
+          "images/boro/webapp-manager/03-list-webapps.png",
         ],
       },
     },

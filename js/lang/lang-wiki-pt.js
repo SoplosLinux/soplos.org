@@ -2690,7 +2690,45 @@ Object.assign(window.LANG_PT, {
     "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
+    // Soplos WebApp Manager
+    "webappmanager-breadcrumb": "Soplos WebApp Manager",
+    "webappmanager-hero-title": "Soplos WebApp Manager",
+    "webappmanager-hero-desc": "Soplos WebApp Manager é uma ferramenta que lhe permite criar e gerir aplicações de ambiente de trabalho a partir dos seus sites favoritos.",
+    "webappmanager-toc-title": "Índice",
+    "webappmanager-toc-1": "Visão Geral",
+    "webappmanager-toc-2": "Características",
+    "webappmanager-toc-3": "Capturas de Ecrã",
+    "webappmanager-overview-title": "Visão Geral",
+    "webappmanager-overview-p1": "O Soplos WebApp Manager oferece uma forma fácil de transformar aplicações web em aplicações de ambiente de trabalho utilizando instâncias de navegador isoladas (sandbox). Ao manter as suas aplicações web separadas do seu navegador, traz uma integração perfeita diretamente para o seu ambiente de trabalho.",
+    "webappmanager-features-title": "Principais Características",
+    "webappmanager-feat-1-title": "Configuração Visual:",
+    "webappmanager-feat-1-desc": "Interface gráfica para organizar, adicionar e gerir aplicações web diretamente do seu ambiente de trabalho.",
+    "webappmanager-feat-2-title": "Integração com o Ambiente de Trabalho:",
+    "webappmanager-feat-2-desc": "Os sites abrem em janelas independentes que funcionam exatamente como software de ambiente de trabalho normal, com integração no menu de aplicações.",
+    "webappmanager-feat-3-title": "Perfiles Isolados:",
+    "webappmanager-feat-3-desc": "Protege a privacidade do utilizador. Cada aplicação corre com um perfil dedicado e completamente isolado.",
+    "webappmanager-feat-4-title": "Ícones Personalizados:",
+    "webappmanager-feat-4-desc": "Descarregue ícones de sites automaticamente ou selecione ícones personalizados para uma melhor personalização do menu.",
+    "webappmanager-screenshots-title": "Capturas de Ecrã",
+    "webappmanager-screenshot-1": "Lista do Gestor de WebApps",
+    "webappmanager-screenshot-2": "Criar uma WebApp",
+    "webappmanager-screenshot-3": "WebApp em Execução",
+
     // Footer
     "footer-privacy": "Política de Privacidade",
+    "boro-apps-webappmanager-title": "Soplos WebApp Manager",
+    "boro-apps-webappmanager-desc": "Transforme sites em aplicações de desktop independentes com perfis isolados e integração no menu.",
+    "boro-apps-webappmanager-link": "Saiba mais",
+
+    // Distro Guides - WebApp Manager
+    "tyron-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyron-soplos-webapp-desc": "Transforme sites em aplicações de desktop independentes com perfis isolados e integração no menu.",
+
+    "tyson-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyson-soplos-webapp-desc": "Transforme sites em aplicações de desktop independentes com perfis isolados e integração no menu.",
+
+    "boro-soplos-webapp-title": "Soplos WebApp Manager",
+    "boro-soplos-webapp-desc": "Transforme sites em aplicações de desktop independentes com perfis isolados e integração no menu.",
+
     "footer-terms": "Termos de Serviço"
 });

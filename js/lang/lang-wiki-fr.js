@@ -2690,6 +2690,62 @@ Object.assign(window.LANG_FR, {
     "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
+    // Soplos WebApp Manager
+    "webappmanager-breadcrumb": "Soplos WebApp Manager",
+    "webappmanager-hero-title": "Soplos WebApp Manager",
+    "webappmanager-hero-desc": "Soplos WebApp Manager est un outil qui vous permet de créer et de gérer des applications de bureau à partir de vos sites web préférés.",
+    "webappmanager-toc-title": "Sommaire",
+    "webappmanager-toc-1": "Aperçu",
+    "webappmanager-toc-2": "Caractéristiques",
+    "webappmanager-toc-3": "Captures d'écran",
+    "webappmanager-overview-title": "Aperçu",
+    "webappmanager-overview-p1": "Soplos WebApp Manager offre un moyen simple de transformer des applications web en applications de bureau à l'aide d'instances de navigateur sandboxées. En gardant vos applications web séparées de votre moteur de recherche, il apporte une intégration transparente directement dans votre environnement de bureau.",
+    "webappmanager-features-title": "Caractéristiques principales",
+    "webappmanager-feat-1-title": "Configuration Visuelle :",
+    "webappmanager-feat-1-desc": "Interface graphique pour organiser, ajouter et gérer des applications web directement depuis votre bureau.",
+    "webappmanager-feat-2-title": "Intégration au Bureau :",
+    "webappmanager-feat-2-desc": "Les sites web s'ouvrent dans des fenêtres indépendantes fonctionnant comme des logiciels de bureau normaux avec une intégration au menu des applications.",
+    "webappmanager-feat-3-title": "Profils Isolés :",
+    "webappmanager-feat-3-desc": "Protège la vie privée de l'utilisateur. Chaque application s'exécute avec un profil dédié et complètement isolé.",
+    "webappmanager-feat-4-title": "Icônes Personnalisées :",
+    "webappmanager-feat-4-desc": "Téléchargez automatiquement les icônes des sites web ou sélectionnez des icônes personnalisées pour une meilleure personnalisation du menu.",
+    "webappmanager-screenshots-title": "Captures d'écran",
+    "webappmanager-screenshot-1": "Liste du gestionnaire de WebApps",
+    "webappmanager-screenshot-2": "Créer une WebApp",
+    "webappmanager-screenshot-3": "WebApp en cours d'exécution",
+
+    // Distro Apps - WebApp Manager
+    "tyron-apps-toc-webappmanager": "Soplos WebApp Manager",
+    "tyron-apps-webappmanager-title": "Soplos WebApp Manager",
+    "tyron-apps-webappmanager-desc": "Transformez vos sites web en applications de bureau indépendantes avec des profils isolés et une intégration au menu.",
+    "tyron-apps-webappmanager-feature-1": "Crée des fenêtres d'application autonomes",
+    "tyron-apps-webappmanager-feature-2": "Profils de navigation isolés",
+    "tyron-apps-webappmanager-feature-3": "Prise en charge d'icônes personnalisées",
+    "tyron-apps-webappmanager-link": "En savoir plus",
+
+    "tyson-apps-toc-webappmanager": "Soplos WebApp Manager",
+    "tyson-apps-webappmanager-title": "Soplos WebApp Manager",
+    "tyson-apps-webappmanager-desc": "Transformez vos sites web en applications de bureau indépendantes con des profils isolés et une intégration au menu.",
+    "tyson-apps-webappmanager-feature-1": "Crée des fenêtres d'application autonomes",
+    "tyson-apps-webappmanager-feature-2": "Profils de navigation isolés",
+    "tyson-apps-webappmanager-feature-3": "Prise en charge d'icônes personnalisées",
+    "tyson-apps-webappmanager-link": "En savoir plus",
+
+    "boro-apps-toc-webappmanager": "Soplos WebApp Manager",
+    "boro-apps-webappmanager-title": "Soplos WebApp Manager",
+    "boro-apps-webappmanager-desc": "Transformez vos sites web en applications de bureau indépendantes avec des profils isolés et une intégration au menu.",
+    "boro-apps-webappmanager-link": "En savoir plus",
+
+    // Distro Guides - WebApp Manager
+    "tyron-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyron-soplos-webapp-desc": "Transformez vos sites web en applications de bureau indépendantes avec des profils isolés et une intégration au menu.",
+
+    "tyson-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyson-soplos-webapp-desc": "Transformez vos sites web en applications de bureau indépendantes avec des profils isolés et une intégration au menu.",
+
+    "boro-soplos-webapp-title": "Soplos WebApp Manager",
+    "boro-soplos-webapp-desc": "Transformez vos sites web en applications de bureau indépendantes avec des profils isolés et une intégration au menu.",
+
     // Footer
     "footer-privacy": "Politique de Confidentialité",
     "footer-terms": "Conditions d'Utilisation"

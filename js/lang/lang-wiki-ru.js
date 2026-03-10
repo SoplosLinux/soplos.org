@@ -2694,7 +2694,45 @@ Object.assign(window.LANG_RU, {
     "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
+    // Soplos WebApp Manager
+    "webappmanager-breadcrumb": "Soplos WebApp Manager",
+    "webappmanager-hero-title": "Soplos WebApp Manager",
+    "webappmanager-hero-desc": "Soplos WebApp Manager — это инструмент, который позволяет создавать настольные приложения из ваших любимых веб-сайтов и управлять ими.",
+    "webappmanager-toc-title": "Содержание",
+    "webappmanager-toc-1": "Обзор",
+    "webappmanager-toc-2": "Особенности",
+    "webappmanager-toc-3": "Скриншоты",
+    "webappmanager-overview-title": "Обзор",
+    "webappmanager-overview-p1": "Soplos WebApp Manager предоставляет простой способ превратить веб-приложения в настольные приложения с использованием изолированных экземпляров браузера. Благодаря отделению ваших веб-приложений от браузера, он обеспечивает бесшовную интеграцию непосредственно в вашу среду рабочего стола.",
+    "webappmanager-features-title": "Основные особенности",
+    "webappmanager-feat-1-title": "Визуальная настройка:",
+    "webappmanager-feat-1-desc": "Графический интерфейс для организации, добавления и управления веб-приложениями прямо с вашего рабочего стола.",
+    "webappmanager-feat-2-title": "Интеграция с рабочим столом:",
+    "webappmanager-feat-2-desc": "Веб-сайты открываются в независимых окнах, работающих так же, как обычное программное обеспечение для рабочего стола, с интеграцией в меню приложений.",
+    "webappmanager-feat-3-title": "Изолированные профили:",
+    "webappmanager-feat-3-desc": "Защищает конфиденциальность пользователя. Каждое приложение запускается с выделенным и полностью изолированным профилем.",
+    "webappmanager-feat-4-title": "Пользовательские иконки:",
+    "webappmanager-feat-4-desc": "Автоматически загружайте иконки веб-сайтов или выбирайте собственные иконки для лучшей настройки меню.",
+    "webappmanager-screenshots-title": "Скриншоты",
+    "webappmanager-screenshot-1": "Список WebApp Manager",
+    "webappmanager-screenshot-2": "Создать WebApp",
+    "webappmanager-screenshot-3": "Запущенное WebApp",
+
     // Footer
+    "boro-apps-webappmanager-title": "Soplos WebApp Manager",
+    "boro-apps-webappmanager-desc": "Превращайте веб-сайты в независимые настольные приложения с изолированными профилями и интеграцией в меню.",
+    "boro-apps-webappmanager-link": "Узнать больше",
+
+    // Distro Guides - WebApp Manager
+    "tyron-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyron-soplos-webapp-desc": "Превращайте веб-сайты в независимые настольные приложения с изолированными профилями и интеграцией в меню.",
+
+    "tyson-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyson-soplos-webapp-desc": "Превращайте веб-сайты в независимые настольные приложения с изолированными профилями и интеграцией в меню.",
+
+    "boro-soplos-webapp-title": "Soplos WebApp Manager",
+    "boro-soplos-webapp-desc": "Превращайте веб-сайты в независимые настольные приложения с изолированными профилями и интеграцией в меню.",
+
     "footer-privacy": "Политика конфиденциальности",
     "footer-terms": "Условия использования"
 });

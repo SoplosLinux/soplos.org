@@ -2690,7 +2690,45 @@ Object.assign(window.LANG_RO, {
     "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
     "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
+    // Soplos WebApp Manager
+    "webappmanager-breadcrumb": "Soplos WebApp Manager",
+    "webappmanager-hero-title": "Soplos WebApp Manager",
+    "webappmanager-hero-desc": "Soplos WebApp Manager este un instrument care vă permite să creați și să gestionați aplicații desktop din site-urile web preferate.",
+    "webappmanager-toc-title": "Conținut",
+    "webappmanager-toc-1": "Prezentare Generală",
+    "webappmanager-toc-2": "Caracteristici",
+    "webappmanager-toc-3": "Capturi de Ecran",
+    "webappmanager-overview-title": "Prezentare Generală",
+    "webappmanager-overview-p1": "Soplos WebApp Manager oferă o modalitate ușoară de a transforma aplicațiile web în aplicații desktop folosind instanțe de browser izolate. Prin păstrarea aplicațiilor web separate de browser, aduce o integrare perfectă direct în mediul dumneavoastră desktop.",
+    "webappmanager-features-title": "Caracteristici Principale",
+    "webappmanager-feat-1-title": "Configurare Vizuală:",
+    "webappmanager-feat-1-desc": "Interfață grafică pentru a organiza, adăuga și gestiona aplicații web direct de pe desktop.",
+    "webappmanager-feat-2-title": "Integrare Desktop:",
+    "webappmanager-feat-2-desc": "Site-urile se deschid în ferestre independente care funcționează exact ca software-ul desktop obișnuit, cu integrare în meniul aplicațiilor.",
+    "webappmanager-feat-3-title": "Profiluri Izolate:",
+    "webappmanager-feat-3-desc": "Protejează confidențialitatea utilizatorului. Fiecare aplicație rulează cu un profil dedicat și complet izolat.",
+    "webappmanager-feat-4-title": "Pictograme Personalizate:",
+    "webappmanager-feat-4-desc": "Descărcați automat pictogramele site-urilor web sau selectați pictograme personalizate pentru o mai bună personalizare a meniului.",
+    "webappmanager-screenshots-title": "Capturi de Ecran",
+    "webappmanager-screenshot-1": "Listă WebApp Manager",
+    "webappmanager-screenshot-2": "Creați o WebApp",
+    "webappmanager-screenshot-3": "WebApp în Execuție",
+
     // Footer
     "footer-privacy": "Politica de Confidențialitate",
+    "boro-apps-webappmanager-title": "Soplos WebApp Manager",
+    "boro-apps-webappmanager-desc": "Transformă site-urile web în aplicații desktop independente cu profiluri izolate și integrare în meniu.",
+    "boro-apps-webappmanager-link": "Află mai multe",
+
+    // Distro Guides - WebApp Manager
+    "tyron-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyron-soplos-webapp-desc": "Transformă site-urile web în aplicații desktop independente cu profiluri izolate și integrare în meniu.",
+
+    "tyson-soplos-webapp-title": "Soplos WebApp Manager",
+    "tyson-soplos-webapp-desc": "Transformă site-urile web în aplicații desktop independente cu profiluri izolate și integrare în meniu.",
+
+    "boro-soplos-webapp-title": "Soplos WebApp Manager",
+    "boro-soplos-webapp-desc": "Transformă site-urile web în aplicații desktop independente cu profiluri izolate și integrare în meniu.",
+
     "footer-terms": "Termeni de Serviciu"
 });

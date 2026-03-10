@@ -132,6 +132,8 @@ window.LANG_DE = {
     "appWelcomeDesc": "Ihr Einstieg in Soplos Linux.",
     "appWelcomeLiveDesc": "Wichtige Tools für Ihre Live-Sitzung.",
     "appWelcomeLiveTitle": "Soplos Welcome Live",
+    "appWebAppManagerTitle": "Soplos WebApp Manager",
+    "appWebAppManagerDesc": "Erstellen Sie Desktop-Anwendungen aus Websites mit isolierten Profilen.",
     "appWelcomeTitle": "Soplos Welcome",
     "appsDesc": "Entdecken Sie die Anwendungen, die ausschließlich für Soplos Linux entwickelt wurden. Diese Tools ermöglichen es Ihnen, Ihr Erlebnis auf Tyron- und Tyson-Desktops anzupassen, zu verwalten und zu verbessern.",
     "appsTitle": "Exklusive Soplos-Anwendungen",

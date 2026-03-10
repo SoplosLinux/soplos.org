@@ -3467,6 +3467,62 @@ Object.assign(window.LANG_EN, {
   "welcome-live-screenshot-boro": "Soplos Welcome Live (Boro)",
   "welcome-live-screenshot-2": "Soplos Welcome Live (Tyson)",
 
+  // Soplos WebApp Manager
+  "webappmanager-breadcrumb": "Soplos WebApp Manager",
+  "webappmanager-hero-title": "Soplos WebApp Manager",
+  "webappmanager-hero-desc": "Soplos WebApp Manager is a tool that allows you to create and manage desktop applications from your favorite websites.",
+  "webappmanager-toc-title": "Contents",
+  "webappmanager-toc-1": "Overview",
+  "webappmanager-toc-2": "Features",
+  "webappmanager-toc-3": "Screenshots",
+  "webappmanager-overview-title": "Overview",
+  "webappmanager-overview-p1": "Soplos WebApp Manager provides an easy way to transform web applications into desktop applications using sandboxed browser instances. By keeping your web apps separate from your browser, it brings seamless integration directly into your desktop environment.",
+  "webappmanager-features-title": "Key Features",
+  "webappmanager-feat-1-title": "Visual Configuration:",
+  "webappmanager-feat-1-desc": "Graphic interface to organize, add, and manage web applications directly from your desktop.",
+  "webappmanager-feat-2-title": "Desktop Integration:",
+  "webappmanager-feat-2-desc": "Websites open in independent windows functioning just like regular desktop software with app menu integration.",
+  "webappmanager-feat-3-title": "Isolated Profiles:",
+  "webappmanager-feat-3-desc": "Protects user privacy. Each application runs with a dedicated and completely isolated profile.",
+  "webappmanager-feat-4-title": "Custom Icons:",
+  "webappmanager-feat-4-desc": "Download website icons automatically or select custom ones for better menu customization.",
+  "webappmanager-screenshots-title": "Screenshots",
+  "webappmanager-screenshot-1": "WebApp Manager List",
+  "webappmanager-screenshot-2": "Create a WebApp",
+  "webappmanager-screenshot-3": "Running WebApp",
+
+  // Distro Apps - WebApp Manager
+  "tyron-apps-toc-webappmanager": "Soplos WebApp Manager",
+  "tyron-apps-webappmanager-title": "Soplos WebApp Manager",
+  "tyron-apps-webappmanager-desc": "Transform websites into independent desktop applications with isolated profiles and menu integration.",
+  "tyron-apps-webappmanager-feature-1": "Creates standalone app windows",
+  "tyron-apps-webappmanager-feature-2": "Isolated browsing profiles",
+  "tyron-apps-webappmanager-feature-3": "Custom icon support",
+  "tyron-apps-webappmanager-link": "Learn more",
+
+  "tyson-apps-toc-webappmanager": "Soplos WebApp Manager",
+  "tyson-apps-webappmanager-title": "Soplos WebApp Manager",
+  "tyson-apps-webappmanager-desc": "Transform websites into independent desktop applications with isolated profiles and menu integration.",
+  "tyson-apps-webappmanager-feature-1": "Creates standalone app windows",
+  "tyson-apps-webappmanager-feature-2": "Isolated browsing profiles",
+  "tyson-apps-webappmanager-feature-3": "Custom icon support",
+  "tyson-apps-webappmanager-link": "Learn more",
+
+  "boro-apps-toc-webappmanager": "Soplos WebApp Manager",
+  "boro-apps-webappmanager-title": "Soplos WebApp Manager",
+  "boro-apps-webappmanager-desc": "Transform websites into independent desktop applications with isolated profiles and menu integration.",
+  "boro-apps-webappmanager-link": "Learn More",
+
+  // Distro Guides - WebApp Manager
+  "tyron-soplos-webapp-title": "Soplos WebApp Manager",
+  "tyron-soplos-webapp-desc": "Transform websites into independent desktop applications with isolated profiles and menu integration.",
+
+  "tyson-soplos-webapp-title": "Soplos WebApp Manager",
+  "tyson-soplos-webapp-desc": "Transform websites into independent desktop applications with isolated profiles and menu integration.",
+
+  "boro-soplos-webapp-title": "Soplos WebApp Manager",
+  "boro-soplos-webapp-desc": "Transform websites into independent desktop applications with isolated profiles and menu integration.",
+
   // Footer
   "footer-privacy": "Privacy Policy",
   "footer-terms": "Terms of Use",
