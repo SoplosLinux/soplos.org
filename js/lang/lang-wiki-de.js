@@ -1688,7 +1688,7 @@ Object.assign(window.LANG_DE, {
     // Overview Section
     "boro-overview-title": "Übersicht",
     "boro-overview-intro-pre": "Soplos Boro ist die GNOME-Edition von Soplos Linux mit der",
-    "boro-overview-gnome-label": "GNOME 49.2\n Desktop-Umgebung",
+    "boro-overview-gnome-label": "GNOME 49.4\n Desktop-Umgebung",
     "boro-overview-intro-mid": ". Wie Tyron und Tyson basiert es auf",
     "boro-overview-debian-label": "Debian\n Testing",
     "boro-overview-intro-post": " und bietet eine perfekte Balance zwischen Stabilität und aktueller Software.",
@@ -1710,8 +1710,8 @@ Object.assign(window.LANG_DE, {
     // Interface Tour
     "boro-interface-title": "Interface-Tour",
     "boro-interface-desktop-title": "Desktop-Erlebnis",
-    "boro-interface-desktop-intro": "Boro bietet ein poliertes GNOME 49.2 Erlebnis verbessert durch Soplos Linux:",
-    "boro-interface-gnome-title": "GNOME 49.2",
+    "boro-interface-desktop-intro": "Boro bietet ein poliertes GNOME 49.4 Erlebnis verbessert durch Soplos Linux:",
+    "boro-interface-gnome-title": "GNOME 49.4",
     "boro-interface-gnome-desc": "Die neueste Version des GNOME Desktops bietet einen modernen, ablenkungsfreien\n Arbeitsbereich.",
     "boro-interface-activities-title": "Übersicht der Aktivitäten",
     "boro-interface-activities-desc": "Drücken Sie die Super-Taste um geöffnete Fenster, Arbeitsbereiche und das Anwendungsraster\n an einem Ort zu sehen. Suchen Sie sofort nach Apps, Dateien und Einstellungen.",
@@ -1797,7 +1797,7 @@ Object.assign(window.LANG_DE, {
     "boro-soplos-welcome-live-title": "Soplos Welcome Live",
     "boro-soplos-welcome-live-desc": "Integrierter Assistent für die Live-Sitzung. Hilft Ihnen, Festplatten vorzubereiten,\n zu partitionieren und die Installation mit nützlichen Tools zu starten.",
     "boro-soplos-exclusive-label": "Exklusiv für Boro:",
-    "boro-soplos-exclusive": "Soplos Linux Boro kombiniert die Leistung von GNOME 49.2\n mit der exklusiven Soplos Anpassungssuite für ein einzigartiges Benutzererlebnis.",
+    "boro-soplos-exclusive": "Soplos Linux Boro kombiniert die Leistung von GNOME 49.4\n mit der exklusiven Soplos Anpassungssuite für ein einzigartiges Benutzererlebnis.",
 
     // Performance Tips
     "boro-perf-title": "Performance-Tipps",

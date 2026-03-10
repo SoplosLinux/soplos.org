@@ -107,14 +107,14 @@ window.LANG_RO = {
     "visualThemesTyson": "Teme vizuale și stiluri preconfigurate",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 49.2",
-    "boroDescription": "Ghid complet pentru ediția GNOME a Soplos Linux. Descoperă puterea și eleganța mediului desktop GNOME 49.2.",
+    "appsBoroTitle": "GNOME 49.4",
+    "boroDescription": "Ghid complet pentru ediția GNOME a Soplos Linux. Descoperă puterea și eleganța mediului desktop GNOME 49.4.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Ghid Boro (GNOME)",
     "boroTitle": "Soplos Linux Boro",
     "boroVersion": "Soplos Linux Boro 1.0.0 Alpha",
-    "gnomeDesktop": "Mediul desktop GNOME 49.2",
-    "modalBoroTitle": "Boro (GNOME 49.2) - Cerințe de Sistem",
+    "gnomeDesktop": "Mediul desktop GNOME 49.4",
+    "modalBoroTitle": "Boro (GNOME 49.4) - Cerințe de Sistem",
     "requirementsBoroTitle": "Boro (GNOME)",
     "waylandSystemBoro": "Sistem de ferestre: Wayland",
 

@@ -107,14 +107,14 @@ window.LANG_RU = {
     "visualThemesTyson": "Предварительно настроенные визуальные темы и стили",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 49.2",
-    "boroDescription": "Полное руководство для редакции GNOME Soplos Linux. Откройте для себя мощь и элегантность рабочего окружения GNOME 49.2.",
+    "appsBoroTitle": "GNOME 49.4",
+    "boroDescription": "Полное руководство для редакции GNOME Soplos Linux. Откройте для себя мощь и элегантность рабочего окружения GNOME 49.4.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Руководство Boro (GNOME)",
     "boroTitle": "Soplos Linux Boro",
     "boroVersion": "Soplos Linux Boro 1.0.0 Alpha",
-    "gnomeDesktop": "Рабочее окружение GNOME 49.2",
-    "modalBoroTitle": "Boro (GNOME 49.2) - Системные Требования",
+    "gnomeDesktop": "Рабочее окружение GNOME 49.4",
+    "modalBoroTitle": "Boro (GNOME 49.4) - Системные Требования",
     "requirementsBoroTitle": "Boro (GNOME)",
     "waylandSystemBoro": "Оконная система: Wayland",
 

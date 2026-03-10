@@ -107,14 +107,14 @@ window.LANG_FR = {
     "visualThemesTyson": "Thèmes visuels et styles préconfigurés",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 49.2",
-    "boroDescription": "Guide complet pour l'édition GNOME de Soplos Linux. Découvrez la puissance et l'élégance de l'environnement de bureau GNOME 49.2.",
+    "appsBoroTitle": "GNOME 49.4",
+    "boroDescription": "Guide complet pour l'édition GNOME de Soplos Linux. Découvrez la puissance et l'élégance de l'environnement de bureau GNOME 49.4.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Guide Boro (GNOME)",
     "boroTitle": "Soplos Linux Boro",
     "boroVersion": "Soplos Linux Boro 1.0.0 Alpha",
-    "gnomeDesktop": "Environnement de bureau GNOME 49.2",
-    "modalBoroTitle": "Boro (GNOME 49.2) - Configuration Système Requise",
+    "gnomeDesktop": "Environnement de bureau GNOME 49.4",
+    "modalBoroTitle": "Boro (GNOME 49.4) - Configuration Système Requise",
     "requirementsBoroTitle": "Boro (GNOME)",
     "waylandSystemBoro": "Système de fenêtres : Wayland",
 

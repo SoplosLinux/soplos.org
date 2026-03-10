@@ -2176,7 +2176,7 @@ Object.assign(window.LANG_EN, {
   "boro-overview-title": "Overview",
   "boro-overview-intro-pre":
     "Soplos Boro is the GNOME edition of Soplos Linux featuring the",
-  "boro-overview-gnome-label": "GNOME 49.2\n desktop environment",
+  "boro-overview-gnome-label": "GNOME 49.4\n desktop environment",
   "boro-overview-intro-mid": ". Like Tyron and Tyson, it is based on",
   "boro-overview-debian-label": "Debian\n Testing",
   "boro-overview-intro-post":
@@ -2205,8 +2205,8 @@ Object.assign(window.LANG_EN, {
   "boro-interface-title": "Interface Tour",
   "boro-interface-desktop-title": "Desktop Experience",
   "boro-interface-desktop-intro":
-    "Boro offers a polished GNOME 49.2 experience enhanced by Soplos Linux: "",
-  "boro-interface-gnome-title": "GNOME 49.2",
+    "Boro offers a polished GNOME 49.4 experience enhanced by Soplos Linux: "",
+  "boro-interface-gnome-title": "GNOME 49.4",
   "boro-interface-gnome-desc":
     "The latest version of the GNOME desktop offers a modern, distraction-free\n workspace.",
   "boro-interface-activities-title": "Activities Overview",
@@ -2310,7 +2310,7 @@ Object.assign(window.LANG_EN, {
     "Integrated assistant for the Live session. Helps you prepare disks,\n partition, and launch the installation with useful tools.",
   "boro-soplos-exclusive-label": "Exclusive to Boro:",
   "boro-soplos-exclusive":
-    "Soplos Linux Boro combines the power of GNOME 49.2\n with the exclusive Soplos customization suite for a unique user experience.",
+    "Soplos Linux Boro combines the power of GNOME 49.4\n with the exclusive Soplos customization suite for a unique user experience.",
 
   // Performance Tips
   "boro-perf-title": "Performance Tips",
