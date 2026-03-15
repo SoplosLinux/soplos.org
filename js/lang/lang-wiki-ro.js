@@ -1357,7 +1357,7 @@ Object.assign(window.LANG_RO, {
     // Overview Section
     "tyron-overview-title": "Prezentare generală",
     "tyron-overview-intro-pre": "Soplos Tyron este varianta ușoară a Soplos Linux, cu ",
-    "tyron-overview-xfce-label": "mediul desktop XFCE 4.22",
+    "tyron-overview-xfce-label": "mediul desktop XFCE 4.20",
     "tyron-overview-intro-post": ". Este proiectat pentru utilizatorii care prioritizează performanța, eficiența și simplitatea, menținând totodată o interfață modernă și atractivă.",
     "tyron-feat-perf-title": "Focusat pe performanță",
     "tyron-feat-perf-desc": "Optimizat pentru viteză și utilizare redusă a resurselor. Perfect pentru hardware mai vechi sau utilizatori care doresc performanță maximă.",

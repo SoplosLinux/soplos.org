@@ -1356,7 +1356,7 @@ Object.assign(window.LANG_PT, {
     // Overview Section
     "tyron-overview-title": "Visão Geral",
     "tyron-overview-intro-pre": "Soplos Tyron é a variante leve do Soplos Linux, apresentando o ",
-    "tyron-overview-xfce-label": "ambiente de desktop XFCE 4.22",
+    "tyron-overview-xfce-label": "ambiente de desktop XFCE 4.20",
     "tyron-overview-intro-post": ". Foi projetado para usuários que priorizam desempenho, eficiência e simplicidade, mantendo uma interface moderna e atraente.",
     "tyron-feat-perf-title": "Focado em Desempenho",
     "tyron-feat-perf-desc": "Otimizado para velocidade e baixo uso de recursos. Perfeito para hardware mais antigo ou usuários que desejam desempenho máximo.",
