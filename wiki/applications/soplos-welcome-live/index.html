@@ -106,7 +106,7 @@
                 <div class="hero-content">
                     <h1><img src="../../../images/icons/org.soplos.welcomelive.png" alt="Icon"
                             style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span id="welcome-live-hero-title">Soplos Welcome Live</span></h1>
-                    <p id="welcome-live-hero-desc">The essential guide for your live session. Install Soplos Linux or explore the system.</p>
+                    <p id="welcome-live-hero-desc">Your live session companion: install Soplos Linux via Calamares, recover broken systems with CHROOT, or explore the desktop.</p>
                 </div>
             </div>
         </section>
@@ -129,29 +129,19 @@
                     <article class="main-content">
                         <section class="content-section" id="overview">
                             <h2><span id="welcome-live-overview-title">Overview</span></h2>
-                            <p id="welcome-live-overview-p1">Soplos Welcome Live is the specialized welcome screen for the Soplos Linux Live
-                                environment. It helps users navigate the live system, perform the installation, or
-                                recover an existing system.</p>
-                            <p id="welcome-live-overview-p2">Beyond just a welcome screen, it includes powerful tools for system administrators and
-                                advanced users, such as a robust CHROOT recovery environment and intelligent partition
-                                detection.</p>
+                            <p id="welcome-live-overview-p1">Soplos Welcome Live 2.0 is a modular GTK3 application that serves as the central hub during a Soplos Linux Live session. From a single interface you can launch the Calamares installer, enter a full CHROOT recovery environment with BTRFS subvolume support, or adjust the system language and screen resolution — all without opening a terminal.</p>
+                            <p id="welcome-live-overview-p2">Built on the same universal architecture as Soplos Welcome 2.0, it auto-detects the running desktop environment (XFCE, KDE Plasma, GNOME) and display protocol (X11, Wayland) to adapt its behavior, terminal selection, and window integration accordingly.</p>
                         </section>
 
                         <section class="content-section" id="features">
                             <h2><span id="welcome-live-features-title">Key Features</span></h2>
                             <ul>
-                                <li><strong id="welcome-live-feat-1-title">Direct Installation:</strong> <span id="welcome-live-feat-1-desc">Seamless integration with the Calamares
-                                    installer for a smooth setup.</span></li>
-                                <li><strong id="welcome-live-feat-2-title">System Recovery:</strong> <span id="welcome-live-feat-2-desc">Advanced CHROOT tools to recover broken systems,
-                                    with intelligent partition detection.</span></li>
-                                <li><strong id="welcome-live-feat-3-title">Language Configuration:</strong> <span id="welcome-live-feat-3-desc">Automatically configures the system
-                                    language and keyboard layout based on your selection.</span></li>
-                                <li><strong id="welcome-live-feat-4-title">XDG Folder Migration:</strong> <span id="welcome-live-feat-4-desc">Smart migration of user folders (Documents,
-                                    Downloads, etc.) when changing languages.</span></li>
-                                <li><strong id="welcome-live-feat-5-title">NumLock Management:</strong> <span id="welcome-live-feat-5-desc">Control NumLock state for the live session and
-                                    the installed system.</span></li>
-                                <li><strong id="welcome-live-feat-6-title">GParted Integration:</strong> <span id="welcome-live-feat-6-desc">Quick access to partition management tools for
-                                    disk preparation.</span></li>
+                                <li><strong id="welcome-live-feat-1-title">Calamares Installer:</strong> <span id="welcome-live-feat-1-desc">Launch the system installation directly from the welcome screen with automatic locale detection and privilege management.</span></li>
+                                <li><strong id="welcome-live-feat-2-title">CHROOT Recovery Engine:</strong> <span id="welcome-live-feat-2-desc">Enter a professional recovery environment with intelligent partition detection, full BTRFS subvolume support, automatic mount-point suggestions, and cross-desktop terminal selection (kitty, konsole, gnome-terminal, and more).</span></li>
+                                <li><strong id="welcome-live-feat-3-title">Live Language Switching:</strong> <span id="welcome-live-feat-3-desc">Change the system language on the fly with automatic keyboard layout reconfiguration and screen resolution persistence across session restarts.</span></li>
+                                <li><strong id="welcome-live-feat-4-title">XDG Folder Migration:</strong> <span id="welcome-live-feat-4-desc">Automatically renames user directories (Documents, Downloads, Music, etc.) to match the newly selected locale.</span></li>
+                                <li><strong id="welcome-live-feat-5-title">Display Resolution Manager:</strong> <span id="welcome-live-feat-5-desc">Adjust and persist screen resolution changes for both X11 (autostart script) and Wayland (D-Bus ApplyMonitorsConfig) sessions.</span></li>
+                                <li><strong id="welcome-live-feat-6-title">GParted Integration:</strong> <span id="welcome-live-feat-6-desc">One-click access to the GParted disk editor for partition creation, resizing, and formatting before installation.</span></li>
                             </ul>
                         </section>
 

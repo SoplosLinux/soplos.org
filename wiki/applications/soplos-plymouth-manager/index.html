@@ -10,7 +10,7 @@
     <meta name="keywords" content="soplos, plymouth, boot splash, animation, customize">
 
     <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
-    
+
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -91,7 +91,8 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../../"><i class="fas fa-home"></i> <span id="plymouth-manager-breadcrumb-home">Home</span></a>
+                <a href="../../../"><i class="fas fa-home"></i> <span
+                        id="plymouth-manager-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
                 <a href="../../"><span id="plymouth-manager-breadcrumb-wiki">Wiki</span></a>
                 <span class="breadcrumb-separator">›</span>
@@ -103,15 +104,16 @@
     <main>
         <div class="wiki-header-group">
             <section class="wiki-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1><img src="../../../images/icons/com.soplos.plymouthmanager.png" alt="Icon"
-                            style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span id="plymouth-manager-hero-title">Soplos Plymouth Manager</span>
-                    </h1>
-                    <p id="plymouth-manager-hero-desc">Change the boot animation (splash screen) of your system with ease.</p>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/com.soplos.plymouthmanager.png" alt="Icon"
+                                style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span
+                                id="plymouth-manager-hero-title">Soplos Plymouth Manager</span>
+                        </h1>
+                        <p id="plymouth-manager-hero-desc">Customize Soplos Linux's boot animation from a visual gallery with real-time preview support.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
 
         <section class="wiki-content">
@@ -131,23 +133,25 @@
                     <article class="main-content">
                         <section class="content-section" id="overview">
                             <h2><span id="plymouth-manager-overview-title">Overview</span></h2>
-                            <p id="plymouth-manager-overview-p1">Soplos Plymouth Manager is a graphical utility to manage Plymouth boot themes. It allows
-                                you to preview, install, and apply boot animations with ease.</p>
-                            <p id="plymouth-manager-overview-p2">Whether you want a minimalist boot screen or a vibrant animation, Soplos Plymouth Manager
-                                makes it simple to customize the startup experience of your Soplos Linux system.</p>
+                            <p id="plymouth-manager-overview-p1">Soplos Plymouth Manager is a robust GTK3 graphical application that serves as a central hub for managing your boot (Plymouth) themes. Beyond a simple selector, the tool dynamically analyzes your system's configuration to generate visual thumbnails for each design, bringing them together in a responsive, interactive gallery.</p>
+                            <p id="plymouth-manager-overview-p2">You can effortlessly import packaged themes straight from the interface, preview exactly how the boot animation will look on your screen, and apply your choice with an initramfs rebuild running in the background. The tool also includes intelligent safeguards to prevent accidental removal of active or critical system animations.</p>
                         </section>
 
                         <section class="content-section" id="features">
                             <h2><span id="plymouth-manager-features-title">Key Features</span></h2>
                             <ul>
-                                <li><strong id="plymouth-manager-feat-1-title">Theme Preview:</strong> <span id="plymouth-manager-feat-1-desc">Visual preview of Plymouth themes before applying
-                                    them.</span></li>
-                                <li><strong id="plymouth-manager-feat-2-title">One-Click Install:</strong> <span id="plymouth-manager-feat-2-desc">Install and apply new themes instantly.</span></li>
-                                <li><strong id="plymouth-manager-feat-3-title">Advanced Configuration:</strong> <span id="plymouth-manager-feat-3-desc">Fine-tune Plymouth settings and resolution.</span>
+                                <li><strong id="plymouth-manager-feat-1-title">Smart Visual Gallery:</strong> <span
+                                        id="plymouth-manager-feat-1-desc">Browse all your available themes through dynamic cards generated from real-time module data and thumbnails.</span></li>
+                                <li><strong id="plymouth-manager-feat-2-title">Isolated Preview Engine:</strong> <span
+                                        id="plymouth-manager-feat-2-desc">Want to see how your splash screen looks before rebooting? The app launches a temporary, isolated display using Xephyr to emulate the true loading animation, supporting both X11 and Wayland display protocols.</span>
                                 </li>
-                                <li><strong id="plymouth-manager-feat-4-title">Wayland & X11 Support:</strong> <span id="plymouth-manager-feat-4-desc">Works seamlessly across different display
-                                    servers and desktop environments.</span></li>
-                                <li><strong id="plymouth-manager-feat-5-title">Multi-language:</strong> <span id="plymouth-manager-feat-5-desc">Localized interface for a better user experience.</span>
+                                <li><strong id="plymouth-manager-feat-3-title">Streamlined Installer:</strong> <span
+                                        id="plymouth-manager-feat-3-desc">Easily import compressed tarball graphics. The app recursively detects Plymouth configuration files and moves them exactly where they need to be in the system tree.</span>
+                                </li>
+                                <li><strong id="plymouth-manager-feat-4-title">Initramfs Application Process:</strong> <span
+                                        id="plymouth-manager-feat-4-desc">Setting an active theme triggers deep system integration, with real-time progress tracking as it updates and reconstructs the initial ramdisk (initramfs) modules.</span></li>
+                                <li><strong id="plymouth-manager-feat-5-title">Context-Aware Environment:</strong> <span
+                                        id="plymouth-manager-feat-5-desc">Built on the Soplos 2.0 standard, it seamlessly integrates its window decorations whether you use XFCE's native window manager or the modernized GNOME and Plasma frameworks.</span>
                                 </li>
                             </ul>
                         </section>

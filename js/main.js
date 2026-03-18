@@ -215,8 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descKey: "appPlymouthManagerDesc",
         images: [
           "images/Tyron/plymouth-manager/001-plymouth-manager.png",
-          "images/Tyron/plymouth-manager/002-apply-changes.png",
-          "images/Tyron/plymouth-manager/003-Plymouth.png",
+          "images/Tyron/plymouth-manager/002-Plymouth.png",
         ],
       },
       docklike: {
@@ -291,8 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descKey: "appPlymouthManagerDesc",
         images: [
           "images/Tyson/plymouth-manager/001-plymouth-manager.png",
-          "images/Tyson/plymouth-manager/002-apply-theme.png",
-          "images/Tyson/plymouth-manager/003-Plymouth.png",
+          "images/Tyson/plymouth-manager/002-Plymouth.png",
         ],
       },
       docklike: {
@@ -376,8 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
         descKey: "appPlymouthManagerDesc",
         images: [
           "images/boro/plymouth-manager/001-plymouth-manager.png",
-          "images/boro/plymouth-manager/002-appy-theme.png",
-          "images/boro/plymouth-manager/003-Plymouth.png",
+          "images/boro/plymouth-manager/002-Plymouth.png",
         ],
       },
       "repo-selector": {
