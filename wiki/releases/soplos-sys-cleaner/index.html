@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1022" class="toc-link">1.0.2-2 <span class="toc-date">— 2026-05-29</span></a></li>
                             <li><a href="#v1021" class="toc-link">1.0.2-1 <span class="toc-date">— 2026-04-17</span></a></li>
                             <li><a href="#v102" class="toc-link">1.0.2 <span class="toc-date">— 2026-03-29</span></a></li>
                             <li><a href="#v101" class="toc-link">1.0.1 <span class="toc-date">— 2026-03-25</span></a></li>
@@ -125,6 +126,36 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-2 -->
+                        <section id="v1022" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-1022-title">1.0.2-2 — May 2026</span></h2>
+                            <p id="sc-rel-1022-subtitle" class="lead">Extended hardware detection in the Drivers tab (VM guest tools, printer drivers, Wacom tablets, Broadcom WiFi) and critical fixes for Intel GPU false positives in VMs, dracut firmware protection and progress bar display.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-1022-added-li1"><strong>Drivers tab — VM guest tools:</strong> New <code>VM_GUEST_PACKAGES</code> dict maps <code>systemd-detect-virt</code> output to guest tool packages. Tools for the current hypervisor are protected; all others are shown as removable. Covers VirtualBox (<code>virtualbox-guest-x11/utils/dkms</code>), VMware (<code>xserver-xorg-video-vmware</code>, <code>open-vm-tools</code>, <code>open-vm-tools-desktop</code>), KVM/QEMU (<code>spice-vdagent</code>, <code>spice-webdavd</code>), Hyper-V (<code>hyperv-daemons</code>), Xen (<code>xen-utils-guest</code>, <code>xe-guest-utilities</code>).</li>
+                                <li id="sc-rel-1022-added-li2"><strong>Drivers tab — printer drivers:</strong> USB vendor detection for HP (<code>hplip</code>, <code>hplip-data</code>), Epson (<code>epson-inkjet-printer-escpr/2</code>), Canon (<code>cnijfilter2</code>, <code>scangearmp2</code>), Brother (<code>printer-driver-brlaser</code>), Samsung (<code>printer-driver-splix</code>), Kyocera (<code>printer-driver-c2esp</code>). Packages only shown as removable when the corresponding USB vendor is not detected.</li>
+                                <li id="sc-rel-1022-added-li3"><strong>Drivers tab — Wacom tablets:</strong> <code>xserver-xorg-input-wacom</code>, <code>libwacom2</code> shown as removable when USB vendor <code>056a</code> (Wacom) is absent.</li>
+                                <li id="sc-rel-1022-added-li4"><strong>Drivers tab — Broadcom proprietary WiFi:</strong> <code>broadcom-sta-dkms</code>, <code>bcmwl-kernel-source</code> shown as removable when PCI vendor <code>14e4</code> (Broadcom) is absent.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-1022-fixed-li1"><strong>Drivers tab — Intel GPU false positive in VMs:</strong> VMs expose Intel chipset devices (i440FX, ICH9) with vendor <code>8086</code> in <code>lspci</code>, causing Intel GPU driver packages to be incorrectly protected. A new <code>_scan_gpu_pci_vendors()</code> function uses <code>lspci -n</code> to check PCI class <code>03xx</code> and only protects Intel GPU packages when a real Intel GPU is present.</li>
+                                <li id="sc-rel-1022-fixed-li2"><strong>Drivers tab — VMware tools shown as removable when running in VMware:</strong> When VirtualBox is configured with VMSVGA display, the VMware PCI vendor <code>15ad</code> appears in <code>lspci</code>, incorrectly protecting <code>open-vm-tools</code>. VM tools are now managed exclusively via <code>systemd-detect-virt</code>, not PCI vendor detection.</li>
+                                <li id="sc-rel-1022-fixed-li3"><strong>Drivers tab — fixes not applying in production:</strong> All hardware detection improvements were applied to <code>root_scan.py</code> but the live app uses <code>root_helper.py</code> via pkexec. <code>root_helper.py</code> was not updated with <code>gpu_pci_vendors</code> and <code>vm_guest_type</code> parameters — this is now corrected.</li>
+                                <li id="sc-rel-1022-fixed-li4"><strong>Firmwares tab — dracut protection layer missing client-side:</strong> <code>root_helper.py</code> was not exporting <code>dracut_fw_dirs</code> in the scan JSON. The client-side firmware protection set rebuild now correctly includes firmware directories declared in <code>/etc/dracut.conf.d/</code>.</li>
+                                <li id="sc-rel-1022-fixed-li5"><strong>Progress bar — showing 100% during operations:</strong> <code>set_ui_state(..., pulse=True)</code> now resets <code>fraction</code> to <code>0.0</code> before calling <code>pulse()</code>. Previously the leftover <code>1.0</code> fraction from a completed scan persisted as "100%" text during all subsequent indeterminate operations.</li>
+                                <li id="sc-rel-1022-fixed-li6"><strong>"Select all" checkbox not resetting after cleanup:</strong> The checkbox remained checked after a successful cleanup and re-scan. Added reset via <code>handler_block_by_func</code> + <code>set_active(False)</code> in the <code>on_done</code> callback of <code>drivers_tab</code>, <code>firmware_tab</code>, <code>temp_tab</code>, <code>logs_tab</code>, <code>user_cache_tab</code>, and <code>flatpak_tab</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-1 -->
                         <section id="v1021" class="content-section">
