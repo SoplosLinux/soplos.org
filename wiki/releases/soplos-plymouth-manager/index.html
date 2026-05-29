@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pm-rel-page-title">Soplos Plymouth Manager — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos Plymouth Manager.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="pm-rel-breadcrumb">Soplos Plymouth Manager</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager" class="hero-app-icon"> <span id="pm-rel-hero-title">Soplos Plymouth Manager</span></h1>
+                        <p id="pm-rel-hero-subtitle">Graphical GTK3 boot splash theme manager — preview, install and apply Plymouth themes with Wayland/X11 support, advanced Xephyr previews and full 8-language internationalisation.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v200-5" class="toc-link">2.0.0-5 <span class="toc-date">— 2026-05-22</span></a></li>
+                            <li><a href="#v200-4" class="toc-link">2.0.0-4 <span class="toc-date">— 2026-05-18</span></a></li>
+                            <li><a href="#v200-3" class="toc-link">2.0.0-3 <span class="toc-date">— 2026-05-16</span></a></li>
+                            <li><a href="#v200-2" class="toc-link">2.0.0-2 <span class="toc-date">— 2026-04-21</span></a></li>
+                            <li><a href="#v200-1" class="toc-link">2.0.0-1 <span class="toc-date">— 2026-03-20</span></a></li>
+                            <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2026-03-18</span></a></li>
+                            <li><a href="#tr-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#ts-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#tr-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#ts-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-07-15</span></a></li>
+                            <li><a href="#tr-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-07-15</span></a></li>
+                            <li><a href="#tr-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-05-06</span></a></li>
+                            <li><a href="#ts-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-06-18</span></a></li>
+                            <li><a href="#tr-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-05-02</span></a></li>
+                            <li><a href="#ts-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-06-15</span></a></li>
+                            <li><a href="#tr-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-05-02</span></a></li>
+                            <li><a href="#ts-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-09</span></a></li>
+                            <li><a href="#tr-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-04-13</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 2.0.0-5 -->
+                        <section id="v200-5" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-200-5-title">2.0.0-5 — May 2026</span></h2>
+                            <p id="pm-rel-200-5-subtitle" class="lead">Documentation-only release — comprehensive historical documentation for Legacy 1.x branches and metainfo cleanup.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-file-alt"></i> <span data-i18n="rel-label-docs">Docs</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-5-docs-li1"><strong>Historical documentation:</strong> Added comprehensive historical documentation for Legacy 1.x branches (Tyron and Tyson) in CHANGELOG and README.</li>
+                                <li id="pm-rel-200-5-docs-li2"><strong>Metainfo cleanup:</strong> Removed obsolete AppStream metadata elements from <code>metainfo.xml</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0-4 -->
+                        <section id="v200-4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-200-4-title">2.0.0-4 — May 2026</span></h2>
+                            <p id="pm-rel-200-4-subtitle" class="lead">Documentation-only release: version history corrected across the release page, CHANGELOG, README and metainfo.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-file-alt"></i> <span data-i18n="rel-label-docs">Docs</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-4-docs-li1"><strong>Version history:</strong> All release dates corrected to match the forensic audit of the official package archive. Updated across the release page, CHANGELOG, README and metainfo.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0-3 -->
+                        <section id="v200-3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-200-3-title">2.0.0-3 — May 2026</span></h2>
+                            <p id="pm-rel-200-3-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern Soplos layout standard.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-3-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern Soplos standard layout (<code>XFCE · X11</code>).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0-2 -->
+                        <section id="v200-2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-200-2-title">2.0.0-2 — April 2026</span></h2>
+                            <p id="pm-rel-200-2-subtitle" class="lead">About dialog transparency fix on KDE and icon size standardisation.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-2-fixed-li1"><strong>About dialog on KDE:</strong> Credits panel now displays with an opaque dark background instead of being transparent (caused by a global <code>scrolledwindow { background-color: transparent }</code> CSS rule).</li>
+                                <li id="pm-rel-200-2-fixed-li2"><strong>About dialog icon:</strong> App icon standardised to 48×48 pixels across all desktop environments.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0-1 -->
+                        <section id="v200-1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-200-1-title">2.0.0-1 — March 2026</span></h2>
+                            <p id="pm-rel-200-1-subtitle" class="lead">About dialog, HeaderBar CSS fix and removal of the version subtitle from the header.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-1-added-li1"><strong>F1 — About dialog:</strong> Press F1 to open the About dialog with version, author, license and website.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-1-fixed-li1"><strong>HeaderBar CSS:</strong> Global <code>button {}</code> rule no longer overrides CSD window controls (close/minimise/maximise) on GNOME.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span data-i18n="rel-label-removed">Removed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-1-removed-li1"><strong>Version subtitle:</strong> Removed from the HeaderBar for a cleaner header layout.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0 -->
+                        <section id="v200" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-200-title">2.0.0 — March 2026</span></h2>
+                            <p id="pm-rel-200-subtitle" class="lead">Major release unifying Tyron and Tyson branches — complete modular rewrite, Wayland support, advanced Xephyr previews, smart dark theme detection, robust theme installer and full 8-language internationalisation.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-added-li1"><strong>Complete modular architecture:</strong> Codebase restructured into <code>core/</code>, <code>ui/</code>, <code>utils/</code>, <code>config/</code>, <code>locale/</code> and <code>assets/</code>.</li>
+                                <li id="pm-rel-200-added-li2"><strong>Unified environment detection (<code>core/environment.py</code>):</strong> Accurate detection of Desktop Environment, display protocol and system theme before privilege elevation.</li>
+                                <li id="pm-rel-200-added-li3"><strong>Advanced KDE dark theme detection:</strong> Background mathematical brightness analysis and <code>LookAndFeelPackage</code> inspection for reliable Plasma dark mode detection.</li>
+                                <li id="pm-rel-200-added-li4"><strong>Advanced GNOME &amp; KDE previews:</strong> Xephyr bridge for Wayland sessions; <code>xterm</code> fallback for TTY-based themes.</li>
+                                <li id="pm-rel-200-added-li5"><strong>Single-password prompt:</strong> Unified <code>pkexec</code> logic minimises privilege prompts across all Wayland sessions.</li>
+                                <li id="pm-rel-200-added-li6"><strong>Responsive gallery:</strong> Dynamically adapts column count to window width with no rigid limits.</li>
+                                <li id="pm-rel-200-added-li7"><strong>Standard keyboard shortcuts:</strong> Ctrl+Q, F5, Ctrl+A, Ctrl+P, Ctrl+I, Delete.</li>
+                                <li id="pm-rel-200-added-li8"><strong>Robust theme installer:</strong> Deep recursive search for compressed archives with nested folder structures (<code>.tar.gz</code>, <code>.tar.xz</code>, <code>.tar.bz2</code>, <code>.zip</code>).</li>
+                                <li id="pm-rel-200-added-li9"><strong>Full dynamic theme detection:</strong> Eliminates all hardcoded theme names and module lists.</li>
+                                <li id="pm-rel-200-added-li10"><strong>Complete internationalisation:</strong> Native support for 8 languages (ES, EN, DE, FR, IT, PT, RO, RU) via gettext.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-changed-li1"><strong>App ID:</strong> Changed to <code>org.soplos.plymouthmanager</code>.</li>
+                                <li id="pm-rel-200-changed-li2"><strong>Total visual renewal</strong> following Soplos v2.0 design standards.</li>
+                                <li id="pm-rel-200-changed-li3"><strong>Progress bar:</strong> Relocated to a dynamic <code>Revealer</code> above the footer with smooth updates during initramfs generation.</li>
+                                <li id="pm-rel-200-changed-li4"><strong>Dynamic protection</strong> of active and critical system themes to prevent accidental removal.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-improved-li1"><strong>Native Dracut support:</strong> Correct initramfs regeneration on Soplos Linux (Dracut-based).</li>
+                                <li id="pm-rel-200-improved-li2"><strong>Standard-compliant logging:</strong> Log files stored at <code>~/.cache/soplos-plymouth-manager/</code>.</li>
+                                <li id="pm-rel-200-improved-li3"><strong>Thumbnail centering and scaling:</strong> Premium alignment of theme previews in the gallery.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-200-fixed-li1"><strong>Duplicated footer</strong> removed.</li>
+                                <li id="pm-rel-200-fixed-li2"><strong>Asymmetric preview centering</strong> corrected.</li>
+                                <li id="pm-rel-200-fixed-li3"><strong>CSS syntax errors</strong> for GTK 3 compatibility fixed.</li>
+                                <li id="pm-rel-200-fixed-li4"><strong>Progress bar stuck at 20%</strong> during long initramfs operations fixed.</li>
+                                <li id="pm-rel-200-fixed-li5"><strong>Installation issues</strong> with nested folder structures in theme bundles fixed.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 Tyron (May 2025) -->
+                        <section id="tr-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-106-title">1.0.6 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-106-subtitle" class="lead">Stability fixes and compatibility improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-106-fixed-li1"><strong>Stability and compatibility:</strong> Internal fixes and improvements for the Tyron environment.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyson (July 2025) -->
+                        <section id="ts-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-ts-105-title">1.0.5 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="pm-rel-ts-105-subtitle" class="lead">Minor UI and compatibility fixes for the Plasma environment.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-ts-105-fixed-li1"><strong>UI and compatibility:</strong> Minor UI and compatibility fixes for the Tyson/Plasma build.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyron (May 2025) -->
+                        <section id="tr-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-105-title">1.0.5 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-105-subtitle" class="lead">Patch release with minor corrections and internal cleanup.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-105-fixed-li1"><strong>Minor corrections:</strong> Internal cleanup and minor corrections for the Tyron build.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyson (July 2025) -->
+                        <section id="ts-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-ts-104-title">1.0.4 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="pm-rel-ts-104-subtitle" class="lead">Metainfo finalized for AppStream/DEP-11 compliance and multi-size program icons added for software center integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-ts-104-improved-li1"><strong>Metainfo finalized:</strong> Validated for AppStream/DEP-11 compliance.</li>
+                                <li id="pm-rel-ts-104-improved-li2"><strong>Program icons:</strong> Added in 48×48, 64×64 and 128×128 for software center compatibility.</li>
+                                <li id="pm-rel-ts-104-improved-li3"><strong>Minor structure and tag improvements.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyron (May 2025) -->
+                        <section id="tr-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-104-title">1.0.4 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-104-subtitle" class="lead">Icon update and developer information update.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-104-changed-li1"><strong>Program icon</strong> updated.</li>
+                                <li id="pm-rel-tr-104-changed-li2"><strong>Developer information</strong> updated to Sergi Perich.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyson (July 2025) -->
+                        <section id="ts-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-ts-103-title">1.0.3 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="pm-rel-ts-103-subtitle" class="lead">Metainfo corrections for software center visibility across Plasma Discover, GNOME Software and other AppStream-compatible centers.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-ts-103-fixed-li1"><strong>Metainfo corrections:</strong> Fixes to ensure full visibility in software centers.</li>
+                                <li id="pm-rel-ts-103-fixed-li2"><strong>Minor AppStream structure improvements.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyron (May 2025) -->
+                        <section id="tr-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-103-title">1.0.3 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-103-subtitle" class="lead">Metainfo update for AppStream/DEP-11 compliance — no functional changes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-103-changed-li1"><strong>Metainfo updated</strong> for AppStream/DEP-11 compliance.</li>
+                                <li id="pm-rel-tr-103-changed-li2"><strong>Screenshots renamed</strong> to <code>screenshot1.png</code>, <code>screenshot2.png</code>, etc.</li>
+                                <li id="pm-rel-tr-103-changed-li3"><strong>Minor documentation and metadata improvements.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyson (June 2025) -->
+                        <section id="ts-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-ts-102-title">1.0.2 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="pm-rel-ts-102-subtitle" class="lead">Stability improvements and compatibility fixes for Plasma 6.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-ts-102-improved-li1"><strong>Plasma 6 compatibility:</strong> Stability improvements and internal fixes for the Tyson environment.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyron (May 2025) -->
+                        <section id="tr-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-102-title">1.0.2 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-102-subtitle" class="lead">Internal improvements and minor fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-102-fixed-li1"><strong>Internal improvements:</strong> Minor fixes and internal cleanup for the Tyron build.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyson (June 2025) -->
+                        <section id="ts-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-ts-101-title">1.0.1 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="pm-rel-ts-101-subtitle" class="lead">Stability and compatibility improvements for the Plasma environment.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-ts-101-improved-li1"><strong>Plasma compatibility:</strong> Stability and compatibility improvements for the Tyson/Plasma 6 build.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyron (May 2025) -->
+                        <section id="tr-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-101-title">1.0.1 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-101-subtitle" class="lead">Stability and compatibility improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-101-improved-li1"><strong>Stability:</strong> Stability and compatibility improvements for the Tyron environment.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyson (May 2025) -->
+                        <section id="ts-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-ts-100-title">1.0.0 — May 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="pm-rel-ts-100-subtitle" class="lead">Initial Tyson release — Plymouth theme manager for Plasma 6 with preview, install and apply capabilities and multi-language support.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-ts-100-added-li1"><strong>Graphical Plymouth theme manager</strong> with intuitive GTK3 interface for Plasma 6.</li>
+                                <li id="pm-rel-ts-100-added-li2"><strong>Theme gallery:</strong> List and browse all installed Plymouth themes.</li>
+                                <li id="pm-rel-ts-100-added-li3"><strong>Theme preview</strong> with live rendering.</li>
+                                <li id="pm-rel-ts-100-added-li4"><strong>Theme installer:</strong> Install new themes from archives.</li>
+                                <li id="pm-rel-ts-100-added-li5"><strong>One-click theme apply</strong> with privilege management via <code>pkexec</code>.</li>
+                                <li id="pm-rel-ts-100-added-li6"><strong>Multi-language support</strong> (8 languages).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyron (April 2025) -->
+                        <section id="tr-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="pm-rel-tr-100-title">1.0.0 — April 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="pm-rel-tr-100-subtitle" class="lead">Initial Tyron release — Plymouth theme manager for XFCE with preview, install and apply capabilities and multi-language support.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="pm-rel-tr-100-added-li1"><strong>Graphical Plymouth theme manager</strong> with intuitive GTK3 interface for XFCE.</li>
+                                <li id="pm-rel-tr-100-added-li2"><strong>Theme gallery:</strong> List and browse all installed Plymouth themes.</li>
+                                <li id="pm-rel-tr-100-added-li3"><strong>Theme preview</strong> with live rendering.</li>
+                                <li id="pm-rel-tr-100-added-li4"><strong>Theme installer:</strong> Install new themes from archives.</li>
+                                <li id="pm-rel-tr-100-added-li5"><strong>One-click theme apply</strong> with privilege management via <code>pkexec</code>.</li>
+                                <li id="pm-rel-tr-100-added-li6"><strong>Multi-language support</strong> (8 languages).</li>
+                                <li id="pm-rel-tr-100-added-li7"><strong>Advanced configuration</strong> options for Plymouth parameters.</li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>

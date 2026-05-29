@@ -56,6 +56,8 @@
                                     class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
@@ -123,13 +125,15 @@
                     <aside class="toc">
                         <h3 id="tyson-apps-toc-title">Contents</h3>
                         <ul>
+                            <li><a href="#appimagemanager" id="tyson-apps-toc-appimage">Soplos AppImage Manager</a></li>
                             <li><a href="#grub" id="tyson-apps-toc-grub">Soplos GRUB Editor</a></li>
+                            <li><a href="#kernelinstaller" id="tyson-apps-toc-kernelinstaller">Soplos Kernel Installer</a></li>
                             <li><a href="#plymouth" id="tyson-apps-toc-plymouth">Soplos Plymouth Manager</a></li>
                             <li><a href="#repo" id="tyson-apps-toc-repo">Soplos Repo Selector</a></li>
+                            <li><a href="#syscleaner" id="tyson-apps-toc-syscleaner">Soplos Sys Cleaner</a></li>
+                            <li><a href="#webappmanager" id="tyson-apps-toc-webappmanager">Soplos WebApp Manager</a></li>
                             <li><a href="#welcome" id="tyson-apps-toc-welcome">Soplos Welcome</a></li>
                             <li><a href="#welcomelive" id="tyson-apps-toc-welcomelive">Soplos Welcome Live</a></li>
-                            <li><a href="#webappmanager" id="tyson-apps-toc-webappmanager">Soplos WebApp Manager</a>
-                            </li>
                         </ul>
                     </aside>
 
@@ -145,6 +149,22 @@
                         </section>
 
                         <div class="tools-grid">
+                            <div class="tool-card" id="appimagemanager">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.appimagemanager.png"
+                                        alt="Soplos AppImage Manager Icon">
+                                </div>
+                                <h4 id="tyson-apps-appimage-title">Soplos AppImage Manager</h4>
+                                <p id="tyson-apps-appimage-desc">Portable application manager for AppImage files. Integrate, launch and update AppImage packages with desktop and menu support.</p>
+                                <ul>
+                                    <li id="tyson-apps-appimage-feature-1">Automatic desktop integration with icon extraction</li>
+                                    <li id="tyson-apps-appimage-feature-2">Built-in update checker for installed AppImages</li>
+                                    <li id="tyson-apps-appimage-feature-3">Property editor with custom icon and name support</li>
+                                </ul>
+                                <a href="../soplos-appimage-manager/" class="tool-link"
+                                    id="tyson-apps-appimage-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
                             <div class="tool-card" id="grub">
                                 <div class="tool-icon">
                                     <img src="../../../images/icons/org.soplos.grubeditor.png"
@@ -161,6 +181,22 @@
                                 </ul>
                                 <a href="../soplos-grub-editor/" class="tool-link" id="tyson-apps-grub-link">Learn more
                                     <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="kernelinstaller">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.kernel-installer.png"
+                                        alt="Soplos Kernel Installer Icon">
+                                </div>
+                                <h4 id="tyson-apps-kernelinstaller-title">Soplos Kernel Installer</h4>
+                                <p id="tyson-apps-kernelinstaller-desc">Build and install custom Linux kernels with a graphical interface. Select kernel profiles and patches optimized for gaming, audio, or minimal setups.</p>
+                                <ul>
+                                    <li id="tyson-apps-kernelinstaller-feature-1">Multiple profiles: Gaming, Audio/Video, Minimal/Office, Soplos Stock</li>
+                                    <li id="tyson-apps-kernelinstaller-feature-2">Patch support: BORE, PREEMPT_RT, Zen, NTSYNC</li>
+                                    <li id="tyson-apps-kernelinstaller-feature-3">One-click Soplos Kernels repository integration</li>
+                                </ul>
+                                <a href="../soplos-kernel-installer/" class="tool-link"
+                                    id="tyson-apps-kernelinstaller-link">Learn more <i class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <div class="tool-card" id="plymouth">
@@ -199,6 +235,39 @@
                                     more <i class="fas fa-arrow-right"></i></a>
                             </div>
 
+                            <div class="tool-card" id="syscleaner">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.sys-cleaner.png"
+                                        alt="Soplos Sys Cleaner Icon">
+                                </div>
+                                <h4 id="tyson-apps-syscleaner-title">Soplos Sys Cleaner</h4>
+                                <p id="tyson-apps-syscleaner-desc">System cleaner for removing orphaned packages, cache, logs and temporary files. Keeps your system fast and lean.</p>
+                                <ul>
+                                    <li id="tyson-apps-syscleaner-feature-1">Package cache and orphaned dependency cleanup</li>
+                                    <li id="tyson-apps-syscleaner-feature-2">Log and temporary file management</li>
+                                    <li id="tyson-apps-syscleaner-feature-3">Disk usage analysis</li>
+                                </ul>
+                                <a href="../soplos-sys-cleaner/" class="tool-link"
+                                    id="tyson-apps-syscleaner-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="webappmanager">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.webappmanager.png"
+                                        alt="Soplos WebApp Manager Icon">
+                                </div>
+                                <h4 id="tyson-apps-webappmanager-title">Soplos WebApp Manager</h4>
+                                <p id="tyson-apps-webappmanager-desc">Transform websites into independent desktop
+                                    applications with isolated profiles and menu integration.</p>
+                                <ul>
+                                    <li id="tyson-apps-webappmanager-feature-1">Creates standalone app windows</li>
+                                    <li id="tyson-apps-webappmanager-feature-2">Isolated browsing profiles</li>
+                                    <li id="tyson-apps-webappmanager-feature-3">Custom icon support</li>
+                                </ul>
+                                <a href="../soplos-webapp-manager/" class="tool-link"
+                                    id="tyson-apps-webappmanager-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
                             <div class="tool-card" id="welcome">
                                 <div class="tool-icon">
                                     <img src="../../../images/icons/org.soplos.welcome.png" alt="Soplos Welcome Icon">
@@ -232,23 +301,6 @@
                                 </ul>
                                 <a href="../soplos-welcome-live/" class="tool-link"
                                     id="tyson-apps-welcomelive-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                            </div>
-
-                            <div class="tool-card" id="webappmanager">
-                                <div class="tool-icon">
-                                    <img src="../../../images/icons/org.soplos.webappmanager.png"
-                                        alt="Soplos WebApp Manager Icon">
-                                </div>
-                                <h4 id="tyson-apps-webappmanager-title">Soplos WebApp Manager</h4>
-                                <p id="tyson-apps-webappmanager-desc">Transform websites into independent desktop
-                                    applications with isolated profiles and menu integration.</p>
-                                <ul>
-                                    <li id="tyson-apps-webappmanager-feature-1">Creates standalone app windows</li>
-                                    <li id="tyson-apps-webappmanager-feature-2">Isolated browsing profiles</li>
-                                    <li id="tyson-apps-webappmanager-feature-3">Custom icon support</li>
-                                </ul>
-                                <a href="../soplos-webapp-manager/" class="tool-link"
-                                    id="tyson-apps-webappmanager-link">Learn more <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </article>

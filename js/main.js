@@ -198,35 +198,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const sharedApps = {
+    "appimage-manager": {
+      titleKey: "appAppImageManagerTitle",
+      descKey: "appAppImageManagerDesc",
+      images: [
+        "images/apps/soplos-appimage-manager/screenshot1.png",
+        "images/apps/soplos-appimage-manager/screenshot2.png",
+        "images/apps/soplos-appimage-manager/screenshot3.png",
+        "images/apps/soplos-appimage-manager/screenshot4.png",
+        "images/apps/soplos-appimage-manager/screenshot5.png",
+      ],
+    },
+    "kernel-installer": {
+      titleKey: "appKernelInstallerTitle",
+      descKey: "appKernelInstallerDesc",
+      images: [
+        "images/apps/soplos-kernel-installer/screenshot1.png",
+        "images/apps/soplos-kernel-installer/screenshot2.png",
+        "images/apps/soplos-kernel-installer/screenshot3.png",
+        "images/apps/soplos-kernel-installer/screenshot4.png",
+        "images/apps/soplos-kernel-installer/screenshot5.png",
+      ],
+    },
+    "sys-cleaner": {
+      titleKey: "appSysCleanerTitle",
+      descKey: "appSysCleanerDesc",
+      images: [
+        "images/apps/soplos-sys-cleaner/screenshot01.png",
+        "images/apps/soplos-sys-cleaner/screenshot02.png",
+        "images/apps/soplos-sys-cleaner/screenshot03.png",
+        "images/apps/soplos-sys-cleaner/screenshot04.png",
+        "images/apps/soplos-sys-cleaner/screenshot05.png",
+      ],
+    },
+    "webapp-manager": {
+      titleKey: "appWebAppManagerTitle",
+      descKey: "appWebAppManagerDesc",
+      images: [
+        "images/apps/soplos-webapp-manager/screenshot1.png",
+        "images/apps/soplos-webapp-manager/screenshot2.png",
+        "images/apps/soplos-webapp-manager/screenshot3.png",
+      ],
+    },
+    "welcome-live": {
+      titleKey: "appWelcomeLiveTitle",
+      descKey: "appWelcomeLiveDesc",
+      images: [
+        "images/apps/soplos-welcome-live/screenshot1.png",
+        "images/apps/soplos-welcome-live/screenshot2.png",
+        "images/apps/soplos-welcome-live/screenshot3.png",
+        "images/apps/soplos-welcome-live/screenshot4.png",
+        "images/apps/soplos-welcome-live/screenshot5.png",
+      ],
+    },
+
+  };
+
   const appData = {
     tyron: {
-      "theme-manager": {
-        titleKey: "appThemeManagerTitle",
-        descKey: "appThemeManagerDesc",
-        images: [
-          "images/Tyron/theme-manager/001-theme-manager.png",
-          "images/Tyron/theme-manager/002-theme-selector.png",
-          "images/Tyron/theme-manager/003-remove-themes.png",
-          "images/Tyron/theme-manager/004-create-theme.png",
-        ],
-      },
-      "plymouth-manager": {
-        titleKey: "appPlymouthManagerTitle",
-        descKey: "appPlymouthManagerDesc",
-        images: [
-          "images/Tyron/plymouth-manager/001-plymouth-manager.png",
-          "images/Tyron/plymouth-manager/002-Plymouth.png",
-        ],
-      },
-      docklike: {
-        titleKey: "appDocklikeTitle",
-        descKey: "appDocklikeDesc",
-        images: [
-          "images/Tyron/docklike/001-docklike-interface.png",
-          "images/Tyron/docklike/002-select-items.png",
-          "images/Tyron/docklike/003-docklike-panel.png",
-        ],
-      },
+      "appimage-manager": sharedApps["appimage-manager"],
       "grub-editor": {
         titleKey: "appGrubEditorTitle",
         descKey: "appGrubEditorDesc",
@@ -236,6 +267,15 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyron/grub-editor/003-themes.png",
           "images/Tyron/grub-editor/004-backgrounds.png",
           "images/Tyron/grub-editor/005-fonts.png",
+        ],
+      },
+      "kernel-installer": sharedApps["kernel-installer"],
+      "plymouth-manager": {
+        titleKey: "appPlymouthManagerTitle",
+        descKey: "appPlymouthManagerDesc",
+        images: [
+          "images/Tyron/plymouth-manager/001-plymouth-manager.png",
+          "images/Tyron/plymouth-manager/002-Plymouth.png",
         ],
       },
       "repo-selector": {
@@ -248,58 +288,42 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyron/repo-selector/004-gpg-keys.png",
         ],
       },
+      "sys-cleaner": sharedApps["sys-cleaner"],
+      "theme-manager": {
+        titleKey: "appThemeManagerTitle",
+        descKey: "appThemeManagerDesc",
+        images: [
+          "images/apps/soplos-theme-manager/screenshot1.png",
+          "images/apps/soplos-theme-manager/screenshot2.png",
+          "images/apps/soplos-theme-manager/screenshot3.png",
+          "images/apps/soplos-theme-manager/screenshot4.png",
+          "images/apps/soplos-theme-manager/screenshot5.png",
+        ],
+      },
       welcome: {
         titleKey: "appWelcomeTitle",
         descKey: "appWelcomeDesc",
         images: [
-          "images/Tyron/welcome/001-welcome.png",
-          "images/Tyron/welcome/002-software.png",
-          "images/Tyron/welcome/003-drives-01.png",
-          "images/Tyron/welcome/004-drivers-02.png",
-          "images/Tyron/welcome/005-kernels-01.png",
-          "images/Tyron/welcome/006-kernels-02.png",
-          "images/Tyron/welcome/007-security.png",
-          "images/Tyron/welcome/008-recomendations.png",
-          "images/Tyron/welcome/009-customization-01.png",
-          "images/Tyron/welcome/010-customization-02.png",
+          "images/apps/soplos-welcome/screenshot01.png",
+          "images/apps/soplos-welcome/screenshot02.png",
+          "images/apps/soplos-welcome/screenshot03.png",
+          "images/apps/soplos-welcome/screenshot04.png",
+          "images/apps/soplos-welcome/screenshot05.png",
+          "images/apps/soplos-welcome/screenshot06.png",
+          "images/apps/soplos-welcome/screenshot07.png",
+          "images/apps/soplos-welcome/screenshot08.png",
+          "images/apps/soplos-welcome/screenshot09.png",
+          "images/apps/soplos-welcome/screenshot10.png",
+          "images/apps/soplos-welcome/screenshot11.png",
+          "images/apps/soplos-welcome/screenshot12.png",
+          "images/apps/soplos-welcome/screenshot13.png",
         ],
       },
-      "welcome-live": {
-        titleKey: "appWelcomeLiveTitle",
-        descKey: "appWelcomeLiveDesc",
-        images: [
-          "images/Tyron/welcome-live/001-welcome-live.png",
-          "images/Tyron/welcome-live/002-chroot.png",
-          "images/Tyron/welcome-live/003-partitions.png",
-          "images/Tyron/welcome-live/004-terminal.png",
-        ],
-      },
-      "webapp-manager": {
-        titleKey: "appWebAppManagerTitle",
-        descKey: "appWebAppManagerDesc",
-        images: [
-          "images/Tyron/webapp-manager/01-webapp-manager.png",
-          "images/Tyron/webapp-manager/02-create-webapp.png",
-          "images/Tyron/webapp-manager/03-list-webapps.png",
-        ],
-      },
+      "welcome-live": sharedApps["welcome-live"],
+      "webapp-manager": sharedApps["webapp-manager"],
     },
     tyson: {
-      "plymouth-manager": {
-        titleKey: "appPlymouthManagerTitle",
-        descKey: "appPlymouthManagerDesc",
-        images: [
-          "images/Tyson/plymouth-manager/001-plymouth-manager.png",
-          "images/Tyson/plymouth-manager/002-Plymouth.png",
-        ],
-      },
-      docklike: {
-        // Tyson uses Tyron's docklike images or doesn't have it?
-        // Index.html doesn't show docklike for Tyson. Removing it.
-        titleKey: "appDocklikeTitle",
-        descKey: "appDocklikeDesc",
-        images: [],
-      },
+      "appimage-manager": sharedApps["appimage-manager"],
       "grub-editor": {
         titleKey: "appGrubEditorTitle",
         descKey: "appGrubEditorDesc",
@@ -309,6 +333,15 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyson/grub-editor/003-select-theme.png",
           "images/Tyson/grub-editor/004-backgrounds.png",
           "images/Tyson/grub-editor/005-select-font.png",
+        ],
+      },
+      "kernel-installer": sharedApps["kernel-installer"],
+      "plymouth-manager": {
+        titleKey: "appPlymouthManagerTitle",
+        descKey: "appPlymouthManagerDesc",
+        images: [
+          "images/Tyson/plymouth-manager/001-plymouth-manager.png",
+          "images/Tyson/plymouth-manager/002-Plymouth.png",
         ],
       },
       "repo-selector": {
@@ -321,43 +354,31 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyson/repo-selector/004-gpg-keys.png",
         ],
       },
+      "sys-cleaner": sharedApps["sys-cleaner"],
       welcome: {
         titleKey: "appWelcomeTitle",
         descKey: "appWelcomeDesc",
         images: [
-          "images/Tyson/welcome/001-welcome.png",
-          "images/Tyson/welcome/002-software.png",
-          "images/Tyson/welcome/003-drives-01.png",
-          "images/Tyson/welcome/004-drivers-02.png",
-          "images/Tyson/welcome/005-kernels-01.png",
-          "images/Tyson/welcome/006-kernels-02.png",
-          "images/Tyson/welcome/007-security.png",
-          "images/Tyson/welcome/008-recomendations.png",
-          "images/Tyson/welcome/009-customization-01.png",
-          "images/Tyson/welcome/010-customization-02.png",
+          "images/apps/soplos-welcome/screenshot01.png",
+          "images/apps/soplos-welcome/screenshot02.png",
+          "images/apps/soplos-welcome/screenshot03.png",
+          "images/apps/soplos-welcome/screenshot04.png",
+          "images/apps/soplos-welcome/screenshot05.png",
+          "images/apps/soplos-welcome/screenshot06.png",
+          "images/apps/soplos-welcome/screenshot07.png",
+          "images/apps/soplos-welcome/screenshot08.png",
+          "images/apps/soplos-welcome/screenshot09.png",
+          "images/apps/soplos-welcome/screenshot10.png",
+          "images/apps/soplos-welcome/screenshot11.png",
+          "images/apps/soplos-welcome/screenshot12.png",
+          "images/apps/soplos-welcome/screenshot13.png",
         ],
       },
-      "welcome-live": {
-        titleKey: "appWelcomeLiveTitle",
-        descKey: "appWelcomeLiveDesc",
-        images: [
-          "images/Tyson/welcome-live/001-welcome-live.png",
-          "images/Tyson/welcome-live/002-chroot.png",
-          "images/Tyson/welcome-live/003-partitions.png",
-          "images/Tyson/welcome-live/004-terminal.png",
-        ],
-      },
-      "webapp-manager": {
-        titleKey: "appWebAppManagerTitle",
-        descKey: "appWebAppManagerDesc",
-        images: [
-          "images/Tyson/webapp-manager/01-webapp-manager.png",
-          "images/Tyson/webapp-manager/02-create-webapp.png",
-          "images/Tyson/webapp-manager/03-list-webapps.png",
-        ],
-      },
+      "welcome-live": sharedApps["welcome-live"],
+      "webapp-manager": sharedApps["webapp-manager"],
     },
     boro: {
+      "appimage-manager": sharedApps["appimage-manager"],
       "grub-editor": {
         titleKey: "appGrubEditorTitle",
         descKey: "appGrubEditorDesc",
@@ -369,6 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/boro/grub-editor/005-fonts.png",
         ],
       },
+      "kernel-installer": sharedApps["kernel-installer"],
       "plymouth-manager": {
         titleKey: "appPlymouthManagerTitle",
         descKey: "appPlymouthManagerDesc",
@@ -387,41 +409,28 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/boro/repo-selector/004-gpg-keys.png",
         ],
       },
+      "sys-cleaner": sharedApps["sys-cleaner"],
       welcome: {
         titleKey: "appWelcomeTitle",
         descKey: "appWelcomeDesc",
         images: [
-          "images/boro/welcome/001-soplos-welcome.png",
-          "images/boro/welcome/002-software-tab.png",
-          "images/boro/welcome/003-drivers-tab-01.png",
-          "images/boro/welcome/004-drivers-tab-02.png",
-          "images/boro/welcome/005-kernels-tab-01.png",
-          "images/boro/welcome/005-kernels-tab-02.png",
-          "images/boro/welcome/006-security-tab-01.png",
-          "images/boro/welcome/007-recommends-tab.png",
-          "images/boro/welcome/008-customization-tab-01.png",
-          "images/boro/welcome/009-customization-tab-02.png",
+          "images/apps/soplos-welcome/screenshot01.png",
+          "images/apps/soplos-welcome/screenshot02.png",
+          "images/apps/soplos-welcome/screenshot03.png",
+          "images/apps/soplos-welcome/screenshot04.png",
+          "images/apps/soplos-welcome/screenshot05.png",
+          "images/apps/soplos-welcome/screenshot06.png",
+          "images/apps/soplos-welcome/screenshot07.png",
+          "images/apps/soplos-welcome/screenshot08.png",
+          "images/apps/soplos-welcome/screenshot09.png",
+          "images/apps/soplos-welcome/screenshot10.png",
+          "images/apps/soplos-welcome/screenshot11.png",
+          "images/apps/soplos-welcome/screenshot12.png",
+          "images/apps/soplos-welcome/screenshot13.png",
         ],
       },
-      "welcome-live": {
-        titleKey: "appWelcomeLiveTitle",
-        descKey: "appWelcomeLiveDesc",
-        images: [
-          "images/boro/welcome-live/001-welcome-live.png",
-          "images/boro/welcome-live/002-chroot.png",
-          "images/boro/welcome-live/003-partitions.png",
-          "images/boro/welcome-live/004-terminal.png",
-        ],
-      },
-      "webapp-manager": {
-        titleKey: "appWebAppManagerTitle",
-        descKey: "appWebAppManagerDesc",
-        images: [
-          "images/boro/webapp-manager/01-webapp-manager.png",
-          "images/boro/webapp-manager/02-create-webapp.png",
-          "images/boro/webapp-manager/03-list-webapps.png",
-        ],
-      },
+      "welcome-live": sharedApps["welcome-live"],
+      "webapp-manager": sharedApps["webapp-manager"],
     },
   };
 

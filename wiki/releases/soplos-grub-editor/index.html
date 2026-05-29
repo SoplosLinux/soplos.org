@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="ge-rel-page-title">Soplos GRUB Editor — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos GRUB Editor.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="ge-rel-breadcrumb">Soplos GRUB Editor</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor" class="hero-app-icon"> <span id="ge-rel-hero-title">Soplos GRUB Editor</span></h1>
+                        <p id="ge-rel-hero-subtitle">Graphical GTK3 editor for GRUB2 — theme management, font conversion, background configuration, boot entry editing and advanced kernel parameters, with full 8-language internationalisation.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v202-4" class="toc-link">2.0.2-4 <span class="toc-date">— 2026-05-22</span></a></li>
+                            <li><a href="#v202-3" class="toc-link">2.0.2-3 <span class="toc-date">— 2026-05-18</span></a></li>
+                            <li><a href="#v202-2" class="toc-link">2.0.2-2 <span class="toc-date">— 2026-04-30</span></a></li>
+                            <li><a href="#v202-1" class="toc-link">2.0.2-1 <span class="toc-date">— 2026-03-21</span></a></li>
+                            <li><a href="#v202" class="toc-link">2.0.2 <span class="toc-date">— 2026-03-11</span></a></li>
+                            <li><a href="#v201" class="toc-link">2.0.1 <span class="toc-date">— 2026-03-07</span></a></li>
+                            <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2026-01-10</span></a></li>
+                            <li><a href="#tr-v109" class="toc-link">1.0.9 <span class="toc-date">— 2025-08-03</span></a></li>
+                            <li><a href="#tr-v108" class="toc-link">1.0.8 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#tr-v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#tr-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#tr-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-07-15</span></a></li>
+                            <li><a href="#tr-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-07-14</span></a></li>
+                            <li><a href="#tr-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-05-06</span></a></li>
+                            <li><a href="#ts-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-06-24</span></a></li>
+                            <li><a href="#tr-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-05-05</span></a></li>
+                            <li><a href="#ts-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-06-15</span></a></li>
+                            <li><a href="#tr-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-04-25</span></a></li>
+                            <li><a href="#ts-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-09</span></a></li>
+                            <li><a href="#tr-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-04-13</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 2.0.2-4 -->
+                        <section id="v202-4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-4-title">2.0.2-4 — May 2026</span></h2>
+                            <p id="ge-rel-202-4-subtitle" class="lead">Documentation-only release — aligned Tyson legacy 1.x timestamps and cleaned up obsolete metainfo tags.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-book"></i> <span data-i18n="rel-label-docs">Documentation</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-4-docs-li1"><strong>Tyson legacy timeline:</strong> Aligned Tyson legacy 1.x release timeline to correct July 2025 timestamps.</li>
+                                <li id="ge-rel-202-4-docs-li2"><strong>Metainfo cleanup:</strong> Removed obsolete metadata tags from <code>metainfo.xml</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-3 -->
+                        <section id="v202-3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-3-title">2.0.2-3 — May 2026</span></h2>
+                            <p id="ge-rel-202-3-subtitle" class="lead">Documentation-only release — historical correction of Tyron legacy versioning.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-book"></i> <span data-i18n="rel-label-docs">Documentation</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-3-docs-li1"><strong>Historical correction (Tyron legacy):</strong> The August 2025 package mislabelled as <code>1.0.4</code> is now correctly documented as <code>1.0.9</code>. The original Tyron <code>1.0.4</code> from the May 2025 sequence has also been restored to the changelog (its <code>.deb</code> was overwritten and lost when the packaging error reused the version number).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-2 -->
+                        <section id="v202-2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-2-title">2.0.2-2 — April 2026</span></h2>
+                            <p id="ge-rel-202-2-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern Soplos layout standard.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-2-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern Soplos standard layout (<code>XFCE · X11</code>).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-1 -->
+                        <section id="v202-1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-1-title">2.0.2-1 — March 2026</span></h2>
+                            <p id="ge-rel-202-1-subtitle" class="lead">About dialog, Ctrl+Shift+Tab navigation, icon naming fix, CSS architecture refactor and several bug fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-1-added-li1"><strong>F1 — About dialog:</strong> Press F1 to open the About dialog with version, author, license and website.</li>
+                                <li id="ge-rel-202-1-added-li2"><strong>GNOME menu About:</strong> Application menu About action now opens the actual dialog.</li>
+                                <li id="ge-rel-202-1-added-li3"><strong>Ctrl+Shift+Tab:</strong> Keyboard shortcut to navigate to the previous tab.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-1-fixed-li1"><strong>Inactive tab label color:</strong> Tab labels no longer appear orange in inactive tabs — removed <code>color: inherit</code> rule that incorrectly propagated the active tab color.</li>
+                                <li id="ge-rel-202-1-fixed-li2"><strong>Icon naming:</strong> Icon files renamed from <code>com.soplos</code> to <code>org.soplos</code> for consistency.</li>
+                                <li id="ge-rel-202-1-fixed-li3"><strong>Duplicate GTK_THEME env var:</strong> Duplicate <code>GTK_THEME</code> environment variable entry in the pkexec launcher eliminated.</li>
+                                <li id="ge-rel-202-1-fixed-li4"><strong>Wrong i18n domain:</strong> Default domain corrected from <code>soplos-repo-selector</code> to <code>soplos-grub-editor</code>.</li>
+                                <li id="ge-rel-202-1-fixed-li5"><strong>Inline imports:</strong> Inline <code>import subprocess</code> statements moved to module level in <code>appearance_view.py</code>.</li>
+                                <li id="ge-rel-202-1-fixed-li6"><strong>Debug print removed:</strong> <code>[DEBUG]</code> print statement removed from production code.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-1-improved-li1"><strong>CSS architecture:</strong> Refactored to <code>base.css</code> (structural styles) + <code>dark.css</code>/<code>light.css</code> (color variables only), matching the Soplos standard.</li>
+                                <li id="ge-rel-202-1-improved-li2"><strong>About dialog:</strong> Appearance standardized across XFCE, GNOME and KDE to match all other Soplos apps.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2 -->
+                        <section id="v202" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-title">2.0.2 — March 2026</span></h2>
+                            <p id="ge-rel-202-subtitle" class="lead">Hierarchical submenu support, submenu toggle, auto-sync on startup and enhanced boot entry path display.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-added-li1"><strong>Hierarchical submenu support:</strong> Full parsing and display of GRUB submenus (e.g., "Advanced &gt; Kernel").</li>
+                                <li id="ge-rel-202-added-li2"><strong>Submenu toggle:</strong> New option in Advanced Settings to enable/disable submenus (<code>GRUB_DISABLE_SUBMENU</code>).</li>
+                                <li id="ge-rel-202-added-li3"><strong>Auto-sync on startup:</strong> Silent <code>update-grub</code> runs on launch for better synchronisation.</li>
+                                <li id="ge-rel-202-added-li4"><strong>Enhanced path display:</strong> Hierarchical naming in Boot Entries list and Default Entry selection.</li>
+                                <li id="ge-rel-202-added-li5"><strong>Updated translations:</strong> All 8 languages updated with new feature strings.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-fixed-li1"><strong>Selection bug:</strong> Choosing alternative kernels no longer incorrectly defaults to the primary kernel.</li>
+                                <li id="ge-rel-202-fixed-li2"><strong>Boot Entries table:</strong> Removed excessive padding for a cleaner, more compact look.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.1 -->
+                        <section id="v201" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-201-title">2.0.1 — March 2026</span></h2>
+                            <p id="ge-rel-201-subtitle" class="lead">Theme management robustness, GRUB crash prevention via cache cleanup and smart boot menu automation.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-201-fixed-li1"><strong>Robust theme management:</strong> Now correctly disables both <code>05_debian_theme</code> and <code>05_soplos_theme</code> to prevent system conflicts.</li>
+                                <li id="ge-rel-201-fixed-li2"><strong>Cache cleanup:</strong> Automatically removes problematic <code>.background_cache.*</code> images (such as progressive JPEGs) that caused the "invalid argument" GRUB crash.</li>
+                                <li id="ge-rel-201-fixed-li3"><strong>Smart UI automation:</strong> "Show boot menu" checkbox is automatically disabled and unchecked when Timeout is set to 0.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0 -->
+                        <section id="v200" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-200-title">2.0.0 — January 2026</span></h2>
+                            <p id="ge-rel-200-subtitle" class="lead">Major release unifying Tyron and Tyson branches — complete i18n (8 languages), smart light/dark theme detection, GRUB theme installer/remover, UUID option, expanded resolutions and enhanced boot entry management.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-200-added-li1"><strong>Complete internationalisation:</strong> Native support for 8 languages (ES, EN, DE, FR, IT, PT, RO, RU).</li>
+                                <li id="ge-rel-200-added-li2"><strong>Smart light/dark theme detection:</strong> Automatically detects the user theme (GNOME, KDE, XFCE) before privilege elevation.</li>
+                                <li id="ge-rel-200-added-li3"><strong>Improved desktop detection:</strong> Accurate identification of Desktop Environment and Display Protocol.</li>
+                                <li id="ge-rel-200-added-li4"><strong>Refined UI layout:</strong> New compact split-view for Advanced Options and Kernel Parameters.</li>
+                                <li id="ge-rel-200-added-li5"><strong>GRUB Theme Installer:</strong> Install themes from <code>.tar.gz</code>, <code>.tar.xz</code>, <code>.tar.bz2</code> and <code>.zip</code> archives.</li>
+                                <li id="ge-rel-200-added-li6"><strong>GRUB Theme Remover:</strong> Remove installed themes with confirmation dialog.</li>
+                                <li id="ge-rel-200-added-li7"><strong>UUID option:</strong> Checkbox to enable/disable <code>GRUB_DISABLE_LINUX_UUID</code>.</li>
+                                <li id="ge-rel-200-added-li8"><strong>Expanded resolutions:</strong> Support for 16:9, 16:10, 4:3 and legacy resolutions up to 4K.</li>
+                                <li id="ge-rel-200-added-li9"><strong>Enhanced theme preview:</strong> Checks for <code>preview.png</code>, <code>preview.jpg</code>, <code>background.png</code>/<code>jpg</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-200-improved-li1"><strong>Rewritten save_config:</strong> Updates existing lines in place, handling commented lines correctly.</li>
+                                <li id="ge-rel-200-improved-li2"><strong>Colors loaded from GRUB:</strong> Color buttons now reflect actual <code>GRUB_COLOR_*</code> values.</li>
+                                <li id="ge-rel-200-improved-li3"><strong>State synchronisation:</strong> <code>read_config()</code> called after save to keep internal state in sync.</li>
+                                <li id="ge-rel-200-improved-li4"><strong>Optimised get_config:</strong> Only sends keys that have changed or already exist.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-200-fixed-li1"><strong>Duplicate lines:</strong> No longer adds duplicate lines to GRUB config.</li>
+                                <li id="ge-rel-200-fixed-li2"><strong>Empty lines:</strong> Prevents accumulation of blank lines in the config file.</li>
+                                <li id="ge-rel-200-fixed-li3"><strong>Dynamic preview:</strong> Background preview updates correctly when typing a path.</li>
+                                <li id="ge-rel-200-fixed-li4"><strong>Default colors on disable:</strong> Sets white/black defaults when a theme is disabled.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-book"></i> <span data-i18n="rel-label-docs">Documentation</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-200-docs-li1"><strong>Man page, Debian copyright and updated metainfo</strong> with 8-language release notes added.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.9 Tyron (August 2025 - correct version, mislabelled as 1.0.4 by packaging error) -->
+                        <section id="tr-v109" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-109-title">1.0.9 — August 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-109-subtitle" class="lead">Complete internationalisation — 8 languages, full Tyron desktop integration and asset optimisation. <em>Note: due to a packaging error this release was labelled 1.0.4 instead of 1.0.9 — the project was already at 1.0.8 by May 2025.</em></p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-109-added-li1"><strong>Complete internationalisation:</strong> 8 languages natively supported via <code>translations/strings.py</code> and <code>app_locale/</code>.</li>
+                                <li id="ge-rel-tr-109-added-li2"><strong>Full Tyron desktop integration:</strong> Native integration with the Tyron window manager and taskbars.</li>
+                                <li id="ge-rel-tr-109-added-li3"><strong>Asset optimisation:</strong> Massive optimisation of screenshots and icon assets; multi-size icon packaging (48×48, 64×64, 128×128).</li>
+                                <li id="ge-rel-tr-109-added-li4"><strong>Updated authorship:</strong> <code>setup.py</code> updated to Sergi Perich &lt;info@soploslinux.com&gt;.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.8 Tyron -->
+                        <section id="tr-v108" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-108-title">1.0.8 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-108-subtitle" class="lead">Stability fixes and compatibility improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-108-fixed-li1"><strong>Stability and compatibility:</strong> Internal fixes and improvements for the Tyron environment.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 Tyron (App ID restored) -->
+                        <section id="tr-v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-107-title">1.0.7 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-107-subtitle" class="lead">Application ID restored and strings module relocated.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-107-fixed-li1"><strong>Application ID restored</strong> to <code>com.soplos.grubeditor</code>.</li>
+                                <li id="ge-rel-tr-107-fixed-li2"><strong>Strings module relocated</strong> back to <code>translations/strings.py</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 Tyron -->
+                        <section id="tr-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-106-title">1.0.6 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-106-subtitle" class="lead">Minor UI and compatibility fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-106-fixed-li1"><strong>UI and compatibility:</strong> Minor UI and compatibility fixes for the Tyron build.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyson -->
+                        <section id="ts-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-ts-105-title">1.0.5 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="ge-rel-ts-105-subtitle" class="lead">Metainfo finalized for AppStream/DEP-11, multi-size program icons and icon refresh.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-105-improved-li1"><strong>Metainfo finalized:</strong> Validated for AppStream/DEP-11 compliance.</li>
+                                <li id="ge-rel-ts-105-improved-li2"><strong>Program icons:</strong> Added in 48×48, 64×64 and 128×128 for software center compatibility.</li>
+                                <li id="ge-rel-ts-105-improved-li3"><strong>Program icon updated.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyron -->
+                        <section id="tr-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-105-title">1.0.5 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-105-subtitle" class="lead">Patch release with minor corrections and internal cleanup.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-105-fixed-li1"><strong>Minor corrections:</strong> Internal cleanup and minor corrections for the Tyron build.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyson -->
+                        <section id="ts-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-ts-104-title">1.0.4 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="ge-rel-ts-104-subtitle" class="lead">Metainfo finalized for AppStream/DEP-11 compliance and program icons added for software center integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-104-improved-li1"><strong>Metainfo finalized:</strong> Validated for AppStream/DEP-11 compliance.</li>
+                                <li id="ge-rel-ts-104-improved-li2"><strong>Program icons:</strong> Added in 48×48, 64×64 and 128×128 for software center compatibility.</li>
+                                <li id="ge-rel-ts-104-improved-li3"><strong>Minor structure and tag improvements.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyron (original May 2025 release — .deb overwritten and lost) -->
+                        <section id="tr-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-104-title">1.0.4 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-104-subtitle" class="lead">Minor corrections from the May 2025 release sequence. <em>Note: the original .deb file for this version was overwritten and lost when a packaging error in August 2025 reused the 1.0.4 version number (see 1.0.9).</em></p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-104-changed-li1"><strong>Package unavailable:</strong> The .deb file for this release no longer exists — it was overwritten when the August 2025 packaging error reused this version number.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyson -->
+                        <section id="ts-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-ts-103-title">1.0.3 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="ge-rel-ts-103-subtitle" class="lead">Final metainfo corrections for software center visibility across Plasma Discover, GNOME Software and others.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-103-fixed-li1"><strong>Metainfo corrections:</strong> Final fixes to ensure full visibility in software centers.</li>
+                                <li id="ge-rel-ts-103-fixed-li2"><strong>Validation:</strong> Tested across Plasma Discover, GNOME Software and other AppStream-compatible centers.</li>
+                                <li id="ge-rel-ts-103-fixed-li3"><strong>Minor AppStream structure improvements.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyron -->
+                        <section id="tr-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-103-title">1.0.3 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-103-subtitle" class="lead">Metainfo update for AppStream/DEP-11 compliance — no functional changes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-103-changed-li1"><strong>Metainfo updated</strong> for AppStream/DEP-11 compliance.</li>
+                                <li id="ge-rel-tr-103-changed-li2"><strong>Screenshots renamed</strong> to <code>screenshot1.png</code>, <code>screenshot2.png</code>, etc.</li>
+                                <li id="ge-rel-tr-103-changed-li3"><strong>Minor documentation and metadata improvements.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyson -->
+                        <section id="ts-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-ts-102-title">1.0.2 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="ge-rel-ts-102-subtitle" class="lead">Complete internationalisation — 8 languages, dynamic translation system and improved Plasma Discover compatibility.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-102-added-li1"><strong>Dynamic translation system</strong> with on-demand loading.</li>
+                                <li id="ge-rel-ts-102-added-li2"><strong>8 languages fully supported:</strong> ES, EN, FR, PT, DE, IT, RU, RO.</li>
+                                <li id="ge-rel-ts-102-added-li3"><strong>Automatic language detection</strong> based on <code>$LANG</code> with English fallback.</li>
+                                <li id="ge-rel-ts-102-added-li4"><strong><code>set_language()</code> and <code>get_available_languages()</code></strong> functions for runtime language management.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-102-fixed-li1"><strong>Hardcoded strings</strong> completely removed from all UI elements.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-102-changed-li1"><strong>New <code>translations/</code> module structure</strong> with centralised <code>strings.py</code> and separate per-language modules in <code>locales/</code>.</li>
+                                <li id="ge-rel-ts-102-changed-li2"><strong>Plasma Discover compatibility:</strong> Package now visible and accessible from Plasma Discover via updated AppStream metainfo.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyron (strings refactoring) -->
+                        <section id="tr-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-102-title">1.0.2 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-102-subtitle" class="lead">Internal strings refactoring — UI strings extracted to a centralised module and application ID update.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-102-changed-li1"><strong>Strings module:</strong> UI strings extracted to <code>strings.py</code> in the project root.</li>
+                                <li id="ge-rel-tr-102-changed-li2"><strong>Application ID:</strong> Changed to <code>com.soplosgrubeditor</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyson -->
+                        <section id="ts-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-ts-101-title">1.0.1 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="ge-rel-ts-101-subtitle" class="lead">Improved font conversion pipeline, better error handling and UI responsiveness fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-101-improved-li1"><strong>Font conversion system:</strong> More robust TTF/OTF → PF2 conversion pipeline.</li>
+                                <li id="ge-rel-ts-101-improved-li2"><strong>Error handling:</strong> Improved error handling during font installation.</li>
+                                <li id="ge-rel-ts-101-improved-li3"><strong>User interface:</strong> More responsive UI under heavy operations.</li>
+                                <li id="ge-rel-ts-101-improved-li4"><strong>Theme installation:</strong> Optimised theme installation process.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-101-fixed-li1"><strong>TTF/OTF conversion errors</strong> during font processing.</li>
+                                <li id="ge-rel-ts-101-fixed-li2"><strong>Permission issues</strong> in <code>/boot/grub/fonts/</code>.</li>
+                                <li id="ge-rel-ts-101-fixed-li3"><strong>UI crashes</strong> when loading large themes.</li>
+                                <li id="ge-rel-ts-101-fixed-li4"><strong>Memory errors</strong> when processing fonts.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyron -->
+                        <section id="tr-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-101-title">1.0.1 — April 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-101-subtitle" class="lead">Improved font conversion pipeline, better error handling and UI responsiveness fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-101-improved-li1"><strong>Font conversion system:</strong> More robust TTF/OTF → PF2 conversion pipeline.</li>
+                                <li id="ge-rel-tr-101-improved-li2"><strong>Error handling:</strong> Improved error handling during font installation.</li>
+                                <li id="ge-rel-tr-101-improved-li3"><strong>User interface:</strong> More responsive UI under heavy operations.</li>
+                                <li id="ge-rel-tr-101-improved-li4"><strong>Theme installation:</strong> Optimised theme installation process.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-101-fixed-li1"><strong>TTF/OTF conversion errors</strong> during font processing.</li>
+                                <li id="ge-rel-tr-101-fixed-li2"><strong>Permission issues</strong> in <code>/boot/grub/fonts/</code>.</li>
+                                <li id="ge-rel-tr-101-fixed-li3"><strong>UI crashes</strong> when loading large themes.</li>
+                                <li id="ge-rel-tr-101-fixed-li4"><strong>Memory errors</strong> when processing fonts.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyson -->
+                        <section id="ts-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-ts-100-title">1.0.0 — May 2025 <em>(Tyson)</em></span></h2>
+                            <p id="ge-rel-ts-100-subtitle" class="lead">Initial Tyson release — full GTK3 GRUB2 editor with theme management, font conversion, background configuration, boot entry management and advanced kernel parameters.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-ts-100-added-li1"><strong>Complete graphical GRUB2 editor</strong> with intuitive GTK3 interface and organised tabs.</li>
+                                <li id="ge-rel-ts-100-added-li2"><strong>GRUB Theme management:</strong> Install and apply themes.</li>
+                                <li id="ge-rel-ts-100-added-li3"><strong>Font conversion:</strong> TTF/OTF → PF2 conversion for GRUB fonts.</li>
+                                <li id="ge-rel-ts-100-added-li4"><strong>Background wallpaper</strong> configuration.</li>
+                                <li id="ge-rel-ts-100-added-li5"><strong>Custom boot entries</strong> management.</li>
+                                <li id="ge-rel-ts-100-added-li6"><strong>Advanced kernel configuration</strong> (parameters, timeout, default entry, resolution).</li>
+                                <li id="ge-rel-ts-100-added-li7"><strong>Automatic OS detection.</strong></li>
+                                <li id="ge-rel-ts-100-added-li8"><strong>Automatic backup system</strong> before applying changes.</li>
+                                <li id="ge-rel-ts-100-added-li9"><strong>Secure integration</strong> with <code>update-grub</code> using minimum privileges.</li>
+                                <li id="ge-rel-ts-100-added-li10"><strong>Keyboard shortcuts</strong> and configuration validation before applying.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyron -->
+                        <section id="tr-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-tr-100-title">1.0.0 — April 2025 <em>(Tyron)</em></span></h2>
+                            <p id="ge-rel-tr-100-subtitle" class="lead">Initial Tyron release — full GTK3 GRUB2 editor with theme management, font conversion, background configuration, boot entry management and advanced kernel parameters.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-tr-100-added-li1"><strong>Complete graphical GRUB2 editor</strong> with intuitive GTK3 interface and organised tabs.</li>
+                                <li id="ge-rel-tr-100-added-li2"><strong>GRUB Theme management:</strong> Install and apply themes.</li>
+                                <li id="ge-rel-tr-100-added-li3"><strong>Font conversion:</strong> TTF/OTF → PF2 conversion for GRUB fonts.</li>
+                                <li id="ge-rel-tr-100-added-li4"><strong>Background wallpaper</strong> configuration.</li>
+                                <li id="ge-rel-tr-100-added-li5"><strong>Custom boot entries</strong> management.</li>
+                                <li id="ge-rel-tr-100-added-li6"><strong>Advanced kernel configuration</strong> (parameters, timeout, default entry, resolution).</li>
+                                <li id="ge-rel-tr-100-added-li7"><strong>Automatic OS detection.</strong></li>
+                                <li id="ge-rel-tr-100-added-li8"><strong>Automatic backup system</strong> before applying changes.</li>
+                                <li id="ge-rel-tr-100-added-li9"><strong>Secure integration</strong> with <code>update-grub</code> using minimum privileges.</li>
+                                <li id="ge-rel-tr-100-added-li10"><strong>Keyboard shortcuts</strong> and configuration validation before applying.</li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>

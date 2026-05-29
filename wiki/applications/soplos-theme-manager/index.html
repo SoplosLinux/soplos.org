@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soplos Theme Manager - Soplos Linux Wiki</title>
-    <meta name="description" content="Documentation for Soplos Theme Manager, a tool to manage desktop themes.">
-    <meta name="keywords" content="soplos, theme manager, customization, appearance, style">
+    <meta name="description" content="Documentation for Soplos Theme Manager v2.0, the complete desktop theming tool for Soplos Linux Tyron (XFCE).">
+    <meta name="keywords" content="soplos, theme manager, xfce, customization, wallpaper, dock, panel, avatar">
 
     <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
-    
+
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -30,20 +30,17 @@
                     <ul>
                         <li><a href="../../../" id="menuHome">Home</a></li>
                         <li class="menu-dropdown">
-                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
-                                    class="fas fa-chevron-down"></i></a>
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
                                 <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
-                                <li><a href="../../../index.html#requirements" id="menuRequirements">System
-                                        Requirements</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
                             </ul>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
-                                    class="fas fa-chevron-down"></i></a>
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
                                 <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
@@ -52,14 +49,13 @@
                             </ul>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
-                                    class="fas fa-chevron-down"></i></a>
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
-                                </li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
-                                </li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
                                 <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
                             </ul>
                         </li>
@@ -86,7 +82,6 @@
         </div>
     </header>
 
-    <!-- Breadcrumb Navigation -->
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
@@ -102,20 +97,22 @@
     <main>
         <div class="wiki-header-group">
             <section class="wiki-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1><img src="../../../images/icons/com.soplos.thememanager.png" alt="Icon"
-                            style="height: 48px; vertical-align: middle; margin-right: 10px;"> <span id="theme-manager-hero-title">Soplos Theme Manager</span></h1>
-                    <p id="theme-manager-hero-desc">Switch between different desktop styles and manage your themes effortlessly.</p>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>
+                            <img src="../../../images/icons/com.soplos.thememanager.png" alt="Icon"
+                                style="height: 48px; vertical-align: middle; margin-right: 10px;">
+                            <span id="theme-manager-hero-title">Soplos Theme Manager</span>
+                        </h1>
+                        <p id="theme-manager-hero-desc">Complete desktop theming tool for Soplos Linux Tyron — apply themes, manage wallpapers, configure the panel and dock, and set your user avatar.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
 
         <section class="wiki-content">
             <div class="container">
                 <div class="content-wrapper">
-                    <!-- Table of Contents -->
                     <aside class="toc">
                         <h3 id="theme-manager-toc-title">Contents</h3>
                         <ul>
@@ -125,33 +122,23 @@
                         </ul>
                     </aside>
 
-                    <!-- Main Content -->
                     <article class="main-content">
+
                         <section class="content-section" id="overview">
                             <h2><span id="theme-manager-overview-title">Overview</span></h2>
-                            <p id="theme-manager-overview-p1">Soplos Theme Manager is a simple yet powerful tool for Soplos Linux that simplifies
-                                desktop customization. It allows users to create, save, and apply complete desktop
-                                themes, ensuring a consistent look and feel across the XFCE environment.</p>
-                            <p id="theme-manager-overview-p2">Whether you prefer a dark, modern look or a classic light interface, Soplos Theme Manager
-                                helps you save your preferences and switch between them instantly. It handles window
-                                styles, icons, fonts, and wallpapers as a single cohesive "theme".</p>
+                            <p id="theme-manager-overview-p1">Soplos Theme Manager v2.0 is the official theming tool for Soplos Linux Tyron (XFCE). It brings together in a single application everything needed to control the look and feel of the desktop: theme gallery, wallpaper browser, user manager, panel configuration and dock management.</p>
+                            <p id="theme-manager-overview-p2">Themes can be exported and imported as .sth files — a portable bundle that captures the complete desktop state and can be shared or restored on any Tyron installation.</p>
                         </section>
 
                         <section class="content-section" id="features">
                             <h2><span id="theme-manager-features-title">Key Features</span></h2>
                             <ul>
-                                <li><strong id="theme-manager-feat-1-title">Theme Creation:</strong> <span id="theme-manager-feat-1-desc">Create custom themes by combining your favorite
-                                    window styles, icons, and wallpapers.</span></li>
-                                <li><strong id="theme-manager-feat-2-title">Backup & Restore:</strong> <span id="theme-manager-feat-2-desc">Save your current desktop configuration as a
-                                    named theme to restore it later.</span></li>
-                                <li><strong id="theme-manager-feat-3-title">One-Click Apply:</strong> <span id="theme-manager-feat-3-desc">Switch between different saved themes instantly
-                                    with a single click.</span></li>
-                                <li><strong id="theme-manager-feat-4-title">Visual Preview:</strong> <span id="theme-manager-feat-4-desc">See a preview of your themes before applying them.</span>
-                                </li>
-                                <li><strong id="theme-manager-feat-5-title">XFCE Integration:</strong> <span id="theme-manager-feat-5-desc">Designed specifically for the XFCE desktop
-                                    environment used in Soplos Tyron.</span></li>
-                                <li><strong id="theme-manager-feat-6-title">User Friendly:</strong> <span id="theme-manager-feat-6-desc">Simple and intuitive interface suitable for all
-                                    users.</span></li>
+                                <li><strong id="theme-manager-feat-1-title">Theme Gallery:</strong> <span id="theme-manager-feat-1-desc">Apply, create, export and import complete XFCE desktop themes. Each theme card shows an automatic screenshot preview captured with the desktop minimized.</span></li>
+                                <li><strong id="theme-manager-feat-2-title">Wallpaper Browser:</strong> <span id="theme-manager-feat-2-desc">Browse and apply wallpapers from system directories. Thumbnails are decoded in a background thread for near-instant loading.</span></li>
+                                <li><strong id="theme-manager-feat-3-title">User Manager:</strong> <span id="theme-manager-feat-3-desc">Set the user avatar with a crop dialog, edit personal data and manage group membership with checkboxes — changes applied via polkit. Replaces Mugshot.</span></li>
+                                <li><strong id="theme-manager-feat-4-title">Panel:</strong> <span id="theme-manager-feat-4-desc">Full XFCE panel configuration — position, size, icon size, length, rows, auto-hide, dark mode and lock. Add, remove and reorder plugins from a single interface.</span></li>
+                                <li><strong id="theme-manager-feat-5-title">Dock:</strong> <span id="theme-manager-feat-5-desc">Manage Docklike Taskbar pinned applications — add, remove and reorder from a browsable app list. Docklike configuration is fully integrated here.</span></li>
+                                <li><strong id="theme-manager-feat-6-title">Theme Bundles (.sth):</strong> <span id="theme-manager-feat-6-desc">Export and import themes as .sth files (tar.gz + manifest). A single file captures the entire desktop configuration and can be shared across Tyron installations.</span></li>
                             </ul>
                         </section>
 
@@ -159,22 +146,28 @@
                             <h2><span id="theme-manager-screenshots-title">Screenshots</span></h2>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/Tyron/theme-manager/001-theme-manager.png"
-                                        alt="Theme Manager Interface">
-                                    <figcaption id="theme-manager-screenshot-1">Theme Manager Interface</figcaption>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot1.png" alt="Theme Manager gallery">
+                                    <figcaption id="theme-manager-screenshot-1">Theme Gallery</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/Tyron/theme-manager/002-theme-selector.png"
-                                        alt="Selecting a Theme">
-                                    <figcaption id="theme-manager-screenshot-2">Selecting a Theme</figcaption>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot2.png" alt="Wallpaper browser">
+                                    <figcaption id="theme-manager-screenshot-2">Wallpaper Browser</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/Tyron/theme-manager/004-create-theme.png"
-                                        alt="Creating a New Theme">
-                                    <figcaption id="theme-manager-screenshot-3">Creating a New Theme</figcaption>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot3.png" alt="User manager">
+                                    <figcaption id="theme-manager-screenshot-3">User Manager</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot4.png" alt="Panel configuration">
+                                    <figcaption id="theme-manager-screenshot-4">Panel Configuration</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot5.png" alt="Dock management">
+                                    <figcaption id="theme-manager-screenshot-5">Dock Management</figcaption>
                                 </figure>
                             </div>
                         </section>
+
                     </article>
                 </div>
             </div>

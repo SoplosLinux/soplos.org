@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="wl-rel-page-title">Soplos Welcome Live — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos Welcome Live.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="wl-rel-breadcrumb">Soplos Welcome Live</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.welcomelive.png" alt="Soplos Welcome Live" class="hero-app-icon"> <span id="wl-rel-hero-title">Soplos Welcome Live</span></h1>
+                        <p id="wl-rel-hero-subtitle">Welcome application for Soplos Linux Live — Calamares installer integration and advanced CHROOT system recovery with full BTRFS support for XFCE, KDE Plasma and GNOME.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v202" class="toc-link">2.0.2 <span class="toc-date">— 2026-03-31</span></a></li>
+                            <li><a href="#v201-1" class="toc-link">2.0.1-1 <span class="toc-date">— 2026-03-21</span></a></li>
+                            <li><a href="#v201" class="toc-link">2.0.1 <span class="toc-date">— 2026-01-09</span></a></li>
+                            <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2025-12-07</span></a></li>
+                            <li><a href="#ts-v116" class="toc-link">1.1.6 <span class="toc-date">— 2025-11-29</span></a></li>
+                            <li><a href="#ts-v115" class="toc-link">1.1.5 <span class="toc-date">— 2025-09-08</span></a></li>
+                            <li><a href="#ts-v114" class="toc-link">1.1.4 <span class="toc-date">— 2025-08-02</span></a></li>
+                            <li><a href="#ts-v113" class="toc-link">1.1.3 <span class="toc-date">— 2025-08-02</span></a></li>
+                            <li><a href="#tr-v112" class="toc-link">1.1.2 <span class="toc-date">— 2025-11-29</span></a></li>
+                            <li><a href="#ts-v112" class="toc-link">1.1.2 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#tr-v111" class="toc-link">1.1.1 <span class="toc-date">— 2025-09-08</span></a></li>
+                            <li><a href="#ts-v111" class="toc-link">1.1.1 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#tr-v110" class="toc-link">1.1.0 <span class="toc-date">— 2025-08-03</span></a></li>
+                            <li><a href="#ts-v110" class="toc-link">1.1.0 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#tr-v109" class="toc-link">1.0.9 <span class="toc-date">— 2025-08-02</span></a></li>
+                            <li><a href="#ts-v109" class="toc-link">1.0.9 <span class="toc-date">— 2025-07-15</span></a></li>
+                            <li><a href="#tr-v108" class="toc-link">1.0.8 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#ts-v108" class="toc-link">1.0.8 <span class="toc-date">— 2025-07-13</span></a></li>
+                            <li><a href="#tr-v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#ts-v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-07-13</span></a></li>
+                            <li><a href="#tr-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#ts-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-06-24</span></a></li>
+                            <li><a href="#tr-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-06-20</span></a></li>
+                            <li><a href="#ts-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-06-15</span></a></li>
+                            <li><a href="#tr-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-06-14</span></a></li>
+                            <li><a href="#tr-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-05-06</span></a></li>
+                            <li><a href="#ts-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-06-09</span></a></li>
+                            <li><a href="#tr-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-05-02</span></a></li>
+                            <li><a href="#ts-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-05-28</span></a></li>
+                            <li><a href="#tr-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-04-25</span></a></li>
+                            <li><a href="#ts-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-16</span></a></li>
+                            <li><a href="#tr-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-04-22</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 2.0.2 -->
+                        <section id="v202" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-202-title">2.0.2 — March 2026</span></h2>
+                            <p id="wl-rel-202-subtitle" class="lead">Guided Rescue Operations window, internet connectivity indicator, hardware info button, GParted shortcut, fade-in animation and tooltips.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-202-added-li1"><strong>Fade-in animation:</strong> Smooth window opacity transition on startup.</li>
+                                <li id="wl-rel-202-added-li2"><strong>Tooltips:</strong> Descriptive tooltips on all interactive elements (feature switches, action buttons, links, settings).</li>
+                                <li id="wl-rel-202-added-li3"><strong>Internet connectivity indicator:</strong> Live green/red dot in the status bar, checked every 15 seconds in a background thread.</li>
+                                <li id="wl-rel-202-added-li4"><strong>Hardware Info button:</strong> Opens a dialog showing CPU model, total RAM and connected storage devices.</li>
+                                <li id="wl-rel-202-added-li5"><strong>GParted button:</strong> Direct access to GParted from the main window action bar.</li>
+                                <li id="wl-rel-202-added-li6"><strong>Guided Rescue Operations window:</strong> After mounting the system in CHROOT, a new window provides: reset user password (<code>chpasswd</code>), repair GRUB (auto-detects UEFI/BIOS), update GRUB, regenerate initramfs (<code>dracut --regenerate-all --force</code>), interactive terminal button and real-time output panel.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-202-fixed-li1"><strong>Partition auto-assignment fallback removed:</strong> Unidentified partitions now show "Select option" instead of an incorrect automatic assignment.</li>
+                                <li id="wl-rel-202-fixed-li2"><strong>Partition selection dialog dark strip:</strong> Fixed by replacing <code>action_area</code> buttons with a manual button box inside <code>content_area</code>.</li>
+                                <li id="wl-rel-202-fixed-li3"><strong>Misleading column headers</strong> removed from the partition assignment grid.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-globe"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-202-trans-li1"><strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for all the above features. All <code>.po</code> files compiled to <code>.mo</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.1-1 -->
+                        <section id="v201-1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-201-1-title">2.0.1-1 — March 2026</span></h2>
+                            <p id="wl-rel-201-1-subtitle" class="lead">About dialog added; code quality improvements and cleanup of debug prints.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-201-1-added-li1"><strong>About dialog:</strong> Press <kbd>F1</kbd> or use the GNOME application menu to open the About dialog with version, author, license and website.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-201-1-fixed-li1"><strong>Duplicate <code>_initialize_theming()</code> call</strong> on startup eliminated.</li>
+                                <li id="wl-rel-201-1-fixed-li2"><strong>Inline imports moved to module level:</strong> <code>shutil</code>, <code>gettext</code>, <code>sys</code>, <code>traceback</code> in <code>application.py</code>.</li>
+                                <li id="wl-rel-201-1-fixed-li3"><strong>Duplicate <code>import os</code></strong> inside <code>main()</code> function removed.</li>
+                                <li id="wl-rel-201-1-fixed-li4"><strong>CSS theme priority</strong> changed from <code>PRIORITY_USER</code> to <code>PRIORITY_APPLICATION</code> so the About dialog CSS correctly overrides the application theme.</li>
+                                <li id="wl-rel-201-1-fixed-li5"><strong>Duplicate accessibility environment variable</strong> setup removed from <code>core/environment.py</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-broom"></i> <span data-i18n="rel-label-cleanup">Cleanup</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-201-1-cleanup-li1"><strong>All <code>[DEBUG]</code> and <code>[DIAG]</code> print statements</strong> removed from <code>ui/main_window.py</code>, <code>core/chroot_operations.py</code> and HeaderBar setup.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.1 -->
+                        <section id="v201" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-201-title">2.0.1 — January 2026</span></h2>
+                            <p id="wl-rel-201-subtitle" class="lead">Documentation release: man page and Debian copyright file.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-201-added-li1"><strong>Man page</strong> (<code>docs/soplos-welcome-live.1</code>) with standard sections: NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT, SEE ALSO.</li>
+                                <li id="wl-rel-201-added-li2"><strong>Debian copyright file</strong> (<code>debian/copyright</code>) following Debian 1.0 format with full GPL-3.0+ license block.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0 -->
+                        <section id="v200" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-200-title">2.0.0 — December 2025</span></h2>
+                            <p id="wl-rel-200-subtitle" class="lead">Complete architecture rewrite unifying Tyron (XFCE), Tyson (KDE Plasma) and Boro (GNOME) into a single codebase — GNU Gettext i18n, enhanced CHROOT recovery and full Wayland support.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-200-added-li1"><strong>Modular architecture:</strong> Core, UI, Config and Utils layers matching Soplos Welcome 2.0. Clean separation of concerns for maintainability.</li>
+                                <li id="wl-rel-200-added-li2"><strong>Universal desktop support:</strong> Single codebase for XFCE with NumLock integration, KDE Plasma with native integration and GNOME (Boro) with full compatibility. Smart DE detection.</li>
+                                <li id="wl-rel-200-added-li3"><strong>Full Wayland support:</strong> Complete X11 and Wayland compatibility with automatic protocol detection.</li>
+                                <li id="wl-rel-200-added-li4"><strong>GNU Gettext i18n:</strong> Migrated to <code>.po</code>/<code>.mo</code> files. 8 languages at 100%: ES, EN, FR, DE, PT, IT, RO, RU. Keyboard mnemonics in all languages and automatic locale detection.</li>
+                                <li id="wl-rel-200-added-li5"><strong>Enhanced CHROOT recovery:</strong> Universal hardware/VM partition detection, full BTRFS subvolume support with hierarchical selection, GParted integration and robust filesystem validation.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-200-changed-li1"><strong>Patch 2025-12-08 — UI:</strong> Normalized application switch styling across desktop themes. Applied focused CSS overrides with <code>PRIORITY_APPLICATION</code>.</li>
+                                <li id="wl-rel-200-changed-li2"><strong>Patch 2025-12-09 — KDE bookmarks:</strong> Removed remapping logic; language switcher now deletes <code>~/.local/share/user-places.xbel</code> before restarting the session so KDE/Dolphin regenerates localized bookmarks.</li>
+                                <li id="wl-rel-200-changed-li3"><strong>Patch 2025-12-09 — GNOME/Wayland display:</strong> Robust D-Bus parsing for <code>GetCurrentState</code>, GDK-first fallback for screen geometry, safer <code>ApplyMonitorsConfig</code> usage, increased D-Bus timeout to 5 s, best refresh rate selection when multiple modes match.</li>
+                                <li id="wl-rel-200-changed-li4"><strong>Patch 2025-12-10 — CHROOT:</strong> Re-implemented robust chroot logic with <code>safe_umount</code>, strict mounting sequence and validation. Cross-DE terminal detection (Kitty/Xfce4-terminal for XFCE, Konsole for Plasma, Gnome-terminal/Ptyxis for GNOME).</li>
+                                <li id="wl-rel-200-changed-li5"><strong>Patch 2025-12-10 — Resolution persistence:</strong> GNOME Wayland switched to persistent <code>ApplyMonitorsConfig</code>; XFCE X11 generates autostart script (<code>soplos-resolution.desktop</code>).</li>
+                                <li id="wl-rel-200-changed-li6"><strong>Patch 2025-12-10 — Translations:</strong> Complete quality review and refinement of all 8 languages ensuring 100% string coverage and natural phrasing.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.6 Tyson -->
+                        <section id="ts-v116" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-116-title">1.1.6 — November 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-116-subtitle" class="lead">Universal disk detection, JSON partition parsing and BTRFS subvolume improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-116-li1"><strong>Removed restrictive <code>lsblk</code> filter</strong> so all disk types are detected (MMC, NVMe, USB, loop, etc.).</li>
+                                <li id="wl-rel-ts-116-li2"><strong>Partition parsing switched to JSON</strong> (<code>lsblk -J</code>) with a robust text fallback for older systems.</li>
+                                <li id="wl-rel-ts-116-li3"><strong>Improved BTRFS subvolume detection</strong> and added debug output for troubleshooting.</li>
+                                <li id="wl-rel-ts-116-li4"><strong>Ported fixes from the Tyron tree</strong> and cleaned up indentation and error handling.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.5 Tyson -->
+                        <section id="ts-v115" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-115-title">1.1.5 — September 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-115-subtitle" class="lead">Welcome tab link update.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-115-li1"><strong>Welcome tab URLs</strong> updated to soplos.org.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.4 Tyson -->
+                        <section id="ts-v114" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-114-title">1.1.4 — August 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-114-subtitle" class="lead">Dictionary fixes, full i18n completion and CHROOT/BTRFS improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-114-li1"><strong>Dictionary issues fixed</strong> and full i18n completed across all 8 languages.</li>
+                                <li id="wl-rel-ts-114-li2"><strong>CHROOT function improved</strong> for systems with BTRFS subvolumes.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.3 Tyson -->
+                        <section id="ts-v113" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-113-title">1.1.3 — August 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-113-subtitle" class="lead">Program icon update and maintainer change.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-113-li1"><strong>Program icon</strong> updated to new design.</li>
+                                <li id="wl-rel-ts-113-li2"><strong>Maintainer</strong> changed to Sergi Perich.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.2 Tyron -->
+                        <section id="tr-v112" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-112-title">1.1.2 — November 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-112-subtitle" class="lead">Universal disk detection in CHROOT for all hardware and VM types.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-112-li1"><strong>Universal disk detection in CHROOT:</strong> Removed restrictive <code>lsblk</code> filter; now detects all disk types on any hardware and VM (MMC, NVMe, USB, loop, etc.).</li>
+                                <li id="wl-rel-tr-112-li2"><strong>Fixed indentation errors</strong> in <code>core/chroot_operations.py</code>.</li>
+                                <li id="wl-rel-tr-112-li3"><strong>Added debug message</strong> showing detected disks for troubleshooting.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.2 Tyson -->
+                        <section id="ts-v112" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-112-title">1.1.2 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-112-subtitle" class="lead">Advanced partition and BTRFS subvolume detection, /home mounting and multi-terminal support.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-112-li1"><strong>Advanced partition and BTRFS subvolume detection</strong> in the CHROOT environment.</li>
+                                <li id="wl-rel-ts-112-li2"><strong>Full <code>/home</code> mounting support</strong> as a partition or BTRFS subvolume.</li>
+                                <li id="wl-rel-ts-112-li3"><strong>Improved recovery flow</strong> robustness and compatibility with multiple terminals.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.1 Tyron -->
+                        <section id="tr-v111" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-111-title">1.1.1 — September 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-111-subtitle" class="lead">Welcome tab link update.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-111-li1"><strong>Welcome tab URLs</strong> updated to soplos.org.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.1 Tyson -->
+                        <section id="ts-v111" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-111-title">1.1.1 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-111-subtitle" class="lead">Minor maintenance, translation fixes and startup robustness.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-111-li1"><strong>Language detection and startup robustness</strong> improvements. Minor translation fixes.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.0 Tyron -->
+                        <section id="tr-v110" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-110-title">1.1.0 — August 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-110-subtitle" class="lead">Internationalization refactor and BTRFS fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-110-li1"><strong>Complete i18n refactor:</strong> Translation dictionaries split into 8 separate files for easier maintenance and language addition.</li>
+                                <li id="wl-rel-tr-110-li2"><strong>BTRFS partition mounting</strong> and subvolume selection in CHROOT: all known issues and errors fixed.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.0 Tyson -->
+                        <section id="ts-v110" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-110-title">1.1.0 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-110-subtitle" class="lead">AppStream/DEP-11 metainfo and program icons in multiple sizes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-110-li1"><strong>Metainfo</strong> finalized to AppStream/DEP-11 standard.</li>
+                                <li id="wl-rel-ts-110-li2"><strong>Program icons</strong> added in 48×48, 64×64 and 128×128 px.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.9 Tyron -->
+                        <section id="tr-v109" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-109-title">1.0.9 — August 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-109-subtitle" class="lead">Program icon redesign.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-109-li1"><strong>Program icon</strong> updated to new design for better Soplos Linux branding integration.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.9 Tyson -->
+                        <section id="ts-v109" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-109-title">1.0.9 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-109-subtitle" class="lead">Metainfo corrections for software center visibility.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-109-li1"><strong>Metainfo corrections</strong> for proper appearance in software centers (AppStream/Discover).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.8 Tyron -->
+                        <section id="tr-v108" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-108-title">1.0.8 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-108-subtitle" class="lead">Advanced partition and BTRFS subvolume detection, /home mounting support and multi-terminal compatibility.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-108-li1"><strong>Advanced partition and BTRFS subvolume detection</strong> in the CHROOT environment.</li>
+                                <li id="wl-rel-tr-108-li2"><strong>Full <code>/home</code> mounting support</strong> as a partition or BTRFS subvolume.</li>
+                                <li id="wl-rel-tr-108-li3"><strong>Improved recovery flow</strong> robustness and compatibility with multiple terminals.</li>
+                                <li id="wl-rel-tr-108-li4"><strong>Maintainer</strong> updated to Sergi Perich.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.8 Tyson -->
+                        <section id="ts-v108" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-108-title">1.0.8 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-108-subtitle" class="lead">Metainfo fix for Discover/AppStream visualization.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-108-li1"><strong>Metainfo file fixed</strong> for proper visualization in Discover/AppStream.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 Tyron -->
+                        <section id="tr-v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-107-title">1.0.7 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-107-subtitle" class="lead">Version bump on same day as 1.0.8 — identical content, immediately superseded.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-107-li1"><strong>Advanced partition and BTRFS subvolume detection</strong> in the CHROOT environment.</li>
+                                <li id="wl-rel-tr-107-li2"><strong>Full <code>/home</code> mounting support</strong> as a partition or BTRFS subvolume.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 Tyson -->
+                        <section id="ts-v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-107-title">1.0.7 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-107-subtitle" class="lead">Full BTRFS subvolume support in CHROOT recovery, NumLock removed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-107-li1"><strong>Full BTRFS subvolume support</strong> in CHROOT recovery.</li>
+                                <li id="wl-rel-ts-107-li2"><strong>Dictionary string corrections</strong> and review across all languages.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span data-i18n="rel-label-removed">Removed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-107-li3"><strong>NumLockX</strong> completely removed (not applicable to KDE Plasma).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 Tyron -->
+                        <section id="tr-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-106-title">1.0.6 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-106-subtitle" class="lead">Metainfo update for AppStream/DEP-11 compliance.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-106-li1"><strong>Metainfo</strong> updated for AppStream/DEP-11 compliance. Full validation for software centers. No functional changes.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 Tyson -->
+                        <section id="ts-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-106-title">1.0.6 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-106-subtitle" class="lead">AppStream integration — now visible in Discover.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-106-li1"><strong>AppStream integration:</strong> Application now visible in KDE Discover.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyron -->
+                        <section id="tr-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-105-title">1.0.5 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-105-subtitle" class="lead">Full BTRFS subvolume support in CHROOT recovery and complete i18n in 8 languages.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-105-li1"><strong>Full BTRFS subvolume support</strong> in CHROOT recovery.</li>
+                                <li id="wl-rel-tr-105-li2"><strong>Complete i18n in 8 languages</strong> with keyboard mnemonics.</li>
+                                <li id="wl-rel-tr-105-li3"><strong>Dictionary string corrections</strong> and review across all languages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyson -->
+                        <section id="ts-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-105-title">1.0.5 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-105-subtitle" class="lead">Complete internationalization, stability fixes and UI optimizations.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-105-li1"><strong>Complete program internationalization.</strong> Label refinement to English for consistency.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-105-li2"><strong>Minor bug fixes</strong> and general stability improvements.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-105-li3"><strong>User interface optimizations</strong> and performance improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyson -->
+                        <section id="ts-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-104-title">1.0.4 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-104-subtitle" class="lead">Minor interface fixes and stability improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-104-li1"><strong>Minor interface fixes</strong> and stability improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyron -->
+                        <section id="tr-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-104-title">1.0.4 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-104-subtitle" class="lead">Advanced CHROOT with intelligent partition detection, NumLock integration, XDG folder migration and GParted integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-104-li1"><strong>Intelligent partition detection</strong> in CHROOT environment.</li>
+                                <li id="wl-rel-tr-104-li2"><strong>NumLock integration</strong> and automatic XDG folder migration on language change.</li>
+                                <li id="wl-rel-tr-104-li3"><strong>Real-time Python cache cleanup</strong> and memory optimization.</li>
+                                <li id="wl-rel-tr-104-li4"><strong>GParted integration</strong> and robust filesystem validation.</li>
+                                <li id="wl-rel-tr-104-li5"><strong>Complete i18n in 8 languages.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyson -->
+                        <section id="ts-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-103-title">1.0.3 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-103-subtitle" class="lead">Initial release of Soplos Welcome Live for KDE Plasma.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-103-li1"><strong>Basic welcome interface</strong> with Calamares integration, locale/keyboard configuration.</li>
+                                <li id="wl-rel-ts-103-li2"><strong>CHROOT recovery tools</strong> and GParted integration.</li>
+                                <li id="wl-rel-ts-103-li3"><strong>Multi-language support</strong> (8 languages) and hardware detection.</li>
+                                <li id="wl-rel-ts-103-li4"><strong>NumLock activation toggle.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyron -->
+                        <section id="tr-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-103-title">1.0.3 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-103-subtitle" class="lead">Internationalization improvements and interface optimizations.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-103-li1"><strong>Locale configuration fixes</strong> and interface optimizations.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyson -->
+                        <section id="ts-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-102-title">1.0.2 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-102-subtitle" class="lead">Minor bug fixes and stability improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-102-li1"><strong>Minor bug fixes</strong> and stability improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyron -->
+                        <section id="tr-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-102-title">1.0.2 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-102-subtitle" class="lead">Hardware detection improvements and CHROOT fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-102-li1"><strong>CHROOT operation fixes</strong> and general stability improvements.</li>
+                                <li id="wl-rel-tr-102-li2"><strong>Hardware detection</strong> improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyson -->
+                        <section id="ts-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-101-title">1.0.1 — May 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-101-subtitle" class="lead">Minor interface fixes and stability improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-101-li1"><strong>Minor interface fixes</strong> and stability improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyron -->
+                        <section id="tr-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-101-title">1.0.1 — April 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-101-subtitle" class="lead">Minor bug fixes and interface improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-101-li1"><strong>User interface improvements</strong> and configuration optimizations.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyson -->
+                        <section id="ts-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-100-title">1.0.0 — May 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="wl-rel-ts-100-subtitle" class="lead">Initial release of Soplos Welcome Live for KDE Plasma.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-ts-100-li1"><strong>Basic welcome interface</strong> with Calamares integration, locale/keyboard configuration.</li>
+                                <li id="wl-rel-ts-100-li2"><strong>CHROOT recovery tools</strong> and GParted integration.</li>
+                                <li id="wl-rel-ts-100-li3"><strong>Multi-language support</strong> (8 languages) and hardware detection.</li>
+                                <li id="wl-rel-ts-100-li4"><strong>NumLock activation toggle.</strong></li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyron -->
+                        <section id="tr-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-100-title">1.0.0 — April 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="wl-rel-tr-100-subtitle" class="lead">Initial release of Soplos Welcome Live for XFCE.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-tr-100-li1"><strong>Basic welcome interface</strong> for Soplos Linux Live.</li>
+                                <li id="wl-rel-tr-100-li2"><strong>Basic CHROOT functionality</strong> for system recovery.</li>
+                                <li id="wl-rel-tr-100-li3"><strong>Initial multi-language support.</strong></li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>

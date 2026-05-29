@@ -92,7 +92,9 @@ class ScrollController {
         if (targetElement) {
             e.preventDefault();
             const headerHeight = this.header ? this.header.offsetHeight : 0;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            const breadcrumb = document.querySelector('.breadcrumb-container');
+            const breadcrumbHeight = breadcrumb ? breadcrumb.offsetHeight : 0;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - breadcrumbHeight - 16;
 
             if (Math.abs(window.pageYOffset - targetPosition) > 2) {
                 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
@@ -587,7 +589,6 @@ class SoplosImageModal extends SoplosModal {
                 left: '50%',
                 transform: `translate(-50%, -50%) translateX(${(idx - this.currentIndex) * 100}%)`,
                 maxWidth: '85vw',
-                maxHeight: '75vh',
                 opacity: idx === this.currentIndex ? '1' : '0',
                 transition: 'transform 0.3s ease, opacity 0.3s ease',
                 pointerEvents: idx === this.currentIndex ? 'auto' : 'none'
@@ -674,13 +675,13 @@ class BreadcrumbController {
         let dictKey = '';
         let parentUrl = '';
 
-        if (referrer.includes('/tyron/')) {
+        if (referrer.includes('/applications/tyron/')) {
             dictKey = 'apps-tyron-breadcrumb';
             parentUrl = '../tyron/index.html';
-        } else if (referrer.includes('/tyson/')) {
+        } else if (referrer.includes('/applications/tyson/')) {
             dictKey = 'apps-tyson-breadcrumb';
             parentUrl = '../tyson/index.html';
-        } else if (referrer.includes('/boro/')) {
+        } else if (referrer.includes('/applications/boro/')) {
             dictKey = 'apps-boro-breadcrumb';
             parentUrl = '../boro/index.html';
         }
@@ -725,11 +726,92 @@ window.getTranslatedText = function (key) {
     return dict && dict[key] ? dict[key] : key;
 };
 
+/* =========================================
+   Table Expand Controller
+   ========================================= */
+class TableExpandController {
+    constructor() {
+        document.querySelectorAll('.table-responsive').forEach(wrapper => {
+            const table = wrapper.querySelector('.wiki-table');
+            if (!table) return;
+
+            const outer = document.createElement('div');
+            outer.className = 'table-expand-wrapper';
+            wrapper.parentNode.insertBefore(outer, wrapper);
+
+            const toolbar = document.createElement('div');
+            toolbar.className = 'table-toolbar';
+
+            const btn = document.createElement('button');
+            btn.className = 'table-expand-btn';
+            btn.innerHTML = '<i class="fas fa-expand-alt"></i> <span data-i18n="table-expand-btn">Expand</span>';
+            btn.setAttribute('aria-label', 'Expand');
+
+            toolbar.appendChild(btn);
+            outer.appendChild(toolbar);
+            outer.appendChild(wrapper);
+
+            btn.addEventListener('click', () => this._open(table));
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') this._close();
+        });
+    }
+
+    _open(table) {
+        const overlay = document.createElement('div');
+        overlay.className = 'table-modal-overlay';
+
+        const box = document.createElement('div');
+        box.className = 'table-modal-box';
+
+        const header = document.createElement('div');
+        header.className = 'table-modal-header';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'table-modal-close';
+        closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+        closeBtn.setAttribute('aria-label', 'Close');
+        closeBtn.addEventListener('click', () => this._close());
+
+        const body = document.createElement('div');
+        body.className = 'table-modal-body';
+        body.appendChild(table.closest('table').cloneNode(true));
+
+        header.appendChild(closeBtn);
+        box.appendChild(header);
+        box.appendChild(body);
+        overlay.appendChild(box);
+        document.body.appendChild(overlay);
+        document.body.style.overflow = 'hidden';
+
+        requestAnimationFrame(() => overlay.classList.add('visible'));
+
+        overlay.addEventListener('click', e => {
+            if (e.target === overlay) this._close();
+        });
+
+        this._overlay = overlay;
+    }
+
+    _close() {
+        if (!this._overlay) return;
+        this._overlay.classList.remove('visible');
+        this._overlay.addEventListener('transitionend', () => {
+            this._overlay.remove();
+            document.body.style.overflow = '';
+            this._overlay = null;
+        }, { once: true });
+    }
+}
+
 // Export classes globally
 window.SoplosUI = {
     ScrollController,
     SoplosCarousel,
     SoplosModal,
     SoplosImageModal,
-    BreadcrumbController
+    BreadcrumbController,
+    TableExpandController
 };

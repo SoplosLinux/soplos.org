@@ -84,6 +84,12 @@ function applyLanguage(lang) {
 
     let translatedCount = 0;
 
+    // Collect data-i18n keys before main loop to suppress false warnings
+    const dataI18nKeys = new Set();
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        dataI18nKeys.add(el.getAttribute('data-i18n'));
+    });
+
     for (let key in dict) {
         const element = document.getElementById(key);
         if (element) {
@@ -138,12 +144,17 @@ function applyLanguage(lang) {
 
             translatedCount++;
         } else {
-            // Only warn for non-special keys
-            if (!key.endsWith('Alt') && !key.endsWith('Caption') && !key.startsWith('_')) {
+            if (!key.endsWith('Alt') && !key.endsWith('Caption') && !key.startsWith('_') && !dataI18nKeys.has(key)) {
                 console.warn(`Element not found for key: ${key}`);
             }
         }
     }
+
+    // Apply translations to data-i18n elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+    });
 
     console.log(`Translated ${translatedCount} elements for language: ${lang}`);
 }

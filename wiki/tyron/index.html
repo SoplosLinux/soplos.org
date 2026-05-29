@@ -55,6 +55,8 @@
                                     class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
@@ -89,9 +91,9 @@
     <div class="breadcrumb-container">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <a href="../../"><i class="fas fa-home"></i> <span id="tyron-breadcrumb-home">Home</span></a>
                 <span class="breadcrumb-separator">›</span>
-                <a href="../" id="breadcrumb-wiki">Wiki</a>
+                <a href="../"><span id="tyron-breadcrumb-wiki">Wiki</span></a>
                 <span class="breadcrumb-separator">›</span>
                 <span class="breadcrumb-current" id="tyron-breadcrumb">Tyron (XFCE) Guide</span>
             </nav>
@@ -226,34 +228,6 @@
                                 </div>
                             </div>
 
-                            <h3 id="tyron-interface-docklike-title">Soplos Docklike</h3>
-                            <p>
-                                <span id="tyron-interface-docklike-intro-pre">Tyron includes the exclusive&nbsp;</span>
-                                <strong id="tyron-interface-docklike-intro-label">Soplos Docklike</strong>
-                                <span id="tyron-interface-docklike-intro-post"> application:</span>
-                            </p>
-
-                            <div class="info-box success">
-                                <i class="fas fa-star"></i>
-                                <div>
-                                    <strong id="tyron-interface-docklike-desc-label">Soplos Docklike</strong>&nbsp;
-                                    <span id="tyron-interface-docklike-desc">is a graphical tool designed to manage and organize
-                                    icons in the XFCE panel's Docklike plugin. It provides an intuitive interface for
-                                    customizing your dock-style panel, organizing applications, and creating a modern
-                                    desktop experience. Access it through the applications menu or Soplos Welcome.</span>
-                                </div>
-                            </div>
-
-                            <div class="info-box tip accent-success">
-                                <i class="fas fa-magic"></i>
-                                <div>
-                                    <strong id="tyron-interface-custom-info-label">Customizable Interface:</strong>&nbsp;
-                                    <span id="tyron-interface-custom-info">While Tyron comes with a minimal default
-                                    setup, you can easily add panels, widgets, or keep the clean Docklike interface
-                                    based on your preferences through XFCE's configuration tools.</span>
-                                </div>
-                            </div>
-
                             <div class="subsection-header">
                                 <h3><i class="fas fa-camera"></i> <span id="tyron-screenshots-title">Screenshots</span></h3>
                                 <div class="accent-hr"></div>
@@ -348,10 +322,6 @@
                                         <span id="tyron-custom-options-2">Enable/disable and configure desktop icons</span>
                                     </li>
                                     <li>
-                                        <strong id="tyron-custom-options-3-label">Soplos Docklike:</strong>&nbsp;
-                                        <span id="tyron-custom-options-3">Use the elegant dock interface as default</span>
-                                    </li>
-                                    <li>
                                         <strong id="tyron-custom-options-4-label">Shortcuts:</strong>&nbsp;
                                         <span id="tyron-custom-options-4">Configure keyboard shortcuts for quick access</span>
                                     </li>
@@ -415,6 +385,65 @@
 
                             <div class="feature-grid">
                                 <div class="feature-item">
+                                    <h3><img src="../../images/icons/org.soplos.appimagemanager.png"
+                                            alt="Soplos AppImage Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-appimage-title">Soplos AppImage Manager</span></h3>
+                                    <p id="tyron-soplos-appimage-desc">Portable application manager for AppImage files. Integrate, launch and update AppImage packages with desktop and menu support.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor"
+                                            style="width: 48px; height: 48px;"> <span id="tyron-soplos-grub-title">Soplos GRUB Editor</span></h3>
+                                    <p id="tyron-soplos-grub-desc">Advanced graphical GTK3 editor for GRUB2
+                                        configuration. Features visual editing,
+                                        theme management, custom fonts, backgrounds, boot entries, kernel parameters,
+                                        and automatic backups.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/org.soplos.kernel-installer.png"
+                                            alt="Soplos Kernel Installer" style="width: 48px; height: 48px;"> <span id="tyron-soplos-kernelinstaller-title">Soplos Kernel Installer</span></h3>
+                                    <p id="tyron-soplos-kernelinstaller-desc">Build and install custom Linux kernels with a graphical interface. Select profiles and patches optimized for gaming, audio, or minimal setups.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.plymouthmanager.png"
+                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-plymouth-title">Soplos Plymouth Manager</span></h3>
+                                    <p id="tyron-soplos-plymouth-desc">Boot splash screen manager for customizing
+                                        Plymouth themes. Install, preview, and
+                                        apply beautiful boot animations with an intuitive graphical interface.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/org.soplos.reposelector.png"
+                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;"> <span id="tyron-soplos-repo-title">Soplos Repo Selector</span></h3>
+                                    <p id="tyron-soplos-repo-desc">Repository management tool for switching between
+                                        software sources, finding
+                                        fastest mirrors, and enabling additional repositories with a user-friendly
+                                        interface.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/org.soplos.sys-cleaner.png"
+                                            alt="Soplos Sys Cleaner" style="width: 48px; height: 48px;"> <span id="tyron-soplos-syscleaner-title">Soplos Sys Cleaner</span></h3>
+                                    <p id="tyron-soplos-syscleaner-desc">System maintenance tool for removing orphaned packages, cache, logs and temporary files. Keeps your system fast and lean.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/com.soplos.thememanager.png"
+                                            alt="Soplos Theme Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-theme-title">Soplos Theme Manager</span></h3>
+                                    <p id="tyron-soplos-theme-desc">Simple and intuitive desktop theme manager. Create,
+                                        save, and apply complete
+                                        desktop themes easily with support for multiple desktop styles and full XFCE
+                                        integration.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3><img src="../../images/icons/org.soplos.webappmanager.png"
+                                            alt="Soplos WebApp Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-webapp-title">Soplos WebApp Manager</span></h3>
+                                    <p id="tyron-soplos-webapp-desc">Transform websites into independent desktop applications with isolated profiles and menu integration.</p>
+                                </div>
+
+                                <div class="feature-item">
                                     <h3><img src="../../images/icons/org.soplos.welcome.png" alt="Soplos Welcome"
                                             style="width: 48px; height: 48px;"> <span id="tyron-soplos-welcome-title">Soplos Welcome</span></h3>
                                     <p id="tyron-soplos-welcome-desc">Welcome application that guides new users through
@@ -430,67 +459,8 @@
                                         installer image to choose
                                         language, test hardware, launch the Calamares installer, and includes automated chroot tools for system recovery.</p>
                                 </div>
-
-                                <div class="feature-item">
-                                    <h3><img src="../../images/icons/com.soplos.docklike.png" alt="Soplos Docklike"
-                                            style="width: 48px; height: 48px;"> <span id="tyron-soplos-docklike-title">Soplos Docklike</span></h3>
-                                    <p id="tyron-soplos-docklike-desc">Graphical tool to manage and organize icons in
-                                        the XFCE panel's Docklike plugin.
-                                        Provides an elegant dock-style interface with easy application organization and
-                                        customization.</p>
-                                </div>
-
-                                <div class="feature-item">
-                                    <h3><img src="../../images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor"
-                                            style="width: 48px; height: 48px;"> <span id="tyron-soplos-grub-title">Soplos GRUB Editor</span></h3>
-                                    <p id="tyron-soplos-grub-desc">Advanced graphical GTK3 editor for GRUB2
-                                        configuration. Features visual editing,
-                                        theme management, custom fonts, backgrounds, boot entries, kernel parameters,
-                                        and automatic backups.</p>
-                                </div>
-
-                                <div class="feature-item">
-                                    <h3><img src="../../images/icons/com.soplos.plymouthmanager.png"
-                                            alt="Soplos Plymouth Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-plymouth-title">Soplos Plymouth Manager</span></h3>
-                                    <p id="tyron-soplos-plymouth-desc">Boot splash screen manager for customizing
-                                        Plymouth themes. Install, preview, and
-                                        apply beautiful boot animations with an intuitive graphical interface.</p>
-                                </div>
-
-                                <div class="feature-item">
-                                    <h3><img src="../../images/icons/com.soplos.thememanager.png"
-                                            alt="Soplos Theme Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-theme-title">Soplos Theme Manager</span></h3>
-                                    <p id="tyron-soplos-theme-desc">Simple and intuitive desktop theme manager. Create,
-                                        save, and apply complete
-                                        desktop themes easily with support for multiple desktop styles and full XFCE
-                                        integration.</p>
-                                </div>
-
-                                <div class="feature-item">
-                                    <h3><img src="../../images/icons/org.soplos.reposelector.png"
-                                            alt="Soplos Repo Selector" style="width: 48px; height: 48px;"> <span id="tyron-soplos-repo-title">Soplos Repo Selector</span></h3>
-                                    <p id="tyron-soplos-repo-desc">Repository management tool for switching between
-                                        software sources, finding
-                                        fastest mirrors, and enabling additional repositories with a user-friendly
-                                        interface.</p>
-                                </div>
-
-                                <div class="feature-item">
-                                    <h3><img src="../../images/icons/org.soplos.webappmanager.png"
-                                            alt="Soplos WebApp Manager" style="width: 48px; height: 48px;"> <span id="tyron-soplos-webapp-title">Soplos WebApp Manager</span></h3>
-                                    <p id="tyron-soplos-webapp-desc">Transform websites into independent desktop applications with isolated profiles and menu integration.</p>
-                                </div>
                             </div>
 
-                            <div class="info-box success">
-                                <i class="fas fa-star"></i>
-                                <div>
-                                    <strong id="tyron-soplos-exclusive-label">Exclusive to Tyron:</strong>&nbsp;
-                                    <span id="tyron-soplos-exclusive">Soplos Docklike is specifically designed for
-                                    XFCE and provides a beautiful dock experience that enhances the traditional panel
-                                    system.</span>
-                                </div>
-                            </div>
                         </section>
 
                         <!-- Performance Tips -->

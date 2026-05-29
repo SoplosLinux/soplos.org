@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="rs-rel-page-title">Soplos Repo Selector — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos Repo Selector.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="rs-rel-breadcrumb">Soplos Repo Selector</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.reposelector.png" alt="Soplos Repo Selector" class="hero-app-icon"> <span id="rs-rel-hero-title">Soplos Repo Selector</span></h1>
+                        <p id="rs-rel-hero-subtitle">APT repository manager with real-time search, DEB822 moderniser, mirror speed testing, GPG key management and full 8-language internationalisation.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v202-8" class="toc-link">2.0.2-8 <span class="toc-date">— 2026-05-19</span></a></li>
+                            <li><a href="#v202-7" class="toc-link">2.0.2-7 <span class="toc-date">— 2026-04-30</span></a></li>
+                            <li><a href="#v202-6" class="toc-link">2.0.2-6 <span class="toc-date">— 2026-03-24</span></a></li>
+                            <li><a href="#v202-5" class="toc-link">2.0.2-5 <span class="toc-date">— 2026-03-20</span></a></li>
+                            <li><a href="#v202-4" class="toc-link">2.0.2-4 <span class="toc-date">— 2026-03-20</span></a></li>
+                            <li><a href="#v202-3" class="toc-link">2.0.2-3 <span class="toc-date">— 2026-03-13</span></a></li>
+                            <li><a href="#v202-2" class="toc-link">2.0.2-2 <span class="toc-date">— 2026-03-12</span></a></li>
+                            <li><a href="#v202-1" class="toc-link">2.0.2-1 <span class="toc-date">— 2026-03-10</span></a></li>
+                            <li><a href="#v202" class="toc-link">2.0.2 <span class="toc-date">— 2026-01-09</span></a></li>
+                            <li><a href="#v201" class="toc-link">2.0.1 <span class="toc-date">— 2026-01-02</span></a></li>
+                            <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2025-12-10</span></a></li>
+                            <li><a href="#ts-v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-08-02</span></a></li>
+                            <li><a href="#ts-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#ts-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-07-15</span></a></li>
+                            <li><a href="#tr-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-08-03</span></a></li>
+                            <li><a href="#ts-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-07-13</span></a></li>
+                            <li><a href="#tr-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#ts-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-06-17</span></a></li>
+                            <li><a href="#tr-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-06-17</span></a></li>
+                            <li><a href="#ts-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-06-14</span></a></li>
+                            <li><a href="#tr-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-06-14</span></a></li>
+                            <li><a href="#ts-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-06-14</span></a></li>
+                            <li><a href="#ts-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#tr-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-08</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 2.0.2-8 -->
+                        <section id="v202-8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-8-title">2.0.2-8 — May 2026</span></h2>
+                            <p id="rs-rel-202-8-subtitle" class="lead">Documentation-only release: version history corrected across the release page, CHANGELOG and forensic audit.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-file-alt"></i> <span data-i18n="rel-label-docs">Docs</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-8-docs-li1"><strong>Version history:</strong> All 1.0.x release dates corrected to match the dates extracted from the internal CHANGELOG of each official package. Updated across the release page, CHANGELOG and forensic audit.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-7 -->
+                        <section id="v202-7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-7-title">2.0.2-7 — April 2026</span></h2>
+                            <p id="rs-rel-202-7-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern Soplos layout standard.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-7-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern Soplos standard layout (<code>XFCE · X11</code>).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-6 -->
+                        <section id="v202-6" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-6-title">2.0.2-6 — March 2026</span></h2>
+                            <p id="rs-rel-202-6-subtitle" class="lead">Refresh button fix, instant Sources Generator sync and independent per-suite source files.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-6-fixed-li1"><strong>Refresh button:</strong> Was returning stale cached data instead of re-reading from disk; now always forces a fresh read.</li>
+                                <li id="rs-rel-202-6-fixed-li2"><strong>Sources Generator → Repositories sync:</strong> After generating new sources, the Repositories tab refreshes immediately instead of waiting for the filesystem watcher.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-6-added-li1"><strong>Per-suite source files:</strong> Each suite now gets its own independent <code>.sources</code> file, allowing individual toggle control per suite. Old grouped files are automatically removed on first generation.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-5 -->
+                        <section id="v202-5" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-5-title">2.0.2-5 — March 2026</span></h2>
+                            <p id="rs-rel-202-5-subtitle" class="lead">About dialog standardised across all desktop environments and minor CSS corrections.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-5-fixed-li1"><strong>About dialog:</strong> Dark background, button heights and pill button styling are now identical across XFCE, GNOME and KDE.</li>
+                                <li id="rs-rel-202-5-fixed-li2"><strong>About dialog icon:</strong> App icon standardised to 48×48 pixels.</li>
+                                <li id="rs-rel-202-5-fixed-li3"><strong>CSS:</strong> Removed <code>gtk-application-prefer-dark-theme</code> setting from ThemeManager that caused subtle color differences in some environments.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-4 -->
+                        <section id="v202-4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-4-title">2.0.2-4 — March 2026</span></h2>
+                            <p id="rs-rel-202-4-subtitle" class="lead">About dialog, new keyboard shortcuts, GPG multi-directory search and several bug fixes and code cleanups.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-4-added-li1"><strong>F1 — About dialog:</strong> Opens the About dialog with version, author, license and website.</li>
+                                <li id="rs-rel-202-4-added-li2"><strong>Ctrl+Shift+Tab:</strong> Keyboard shortcut to navigate to the previous tab.</li>
+                                <li id="rs-rel-202-4-added-li3"><strong>GNOME menu About:</strong> Application menu About action now opens the actual dialog instead of doing nothing.</li>
+                                <li id="rs-rel-202-4-added-li4"><strong>GPG multi-directory search:</strong> When modernising a <code>.list</code> repository, the signed key is now searched across all standard directories (<code>/usr/share/keyrings/</code>, <code>/etc/apt/keyrings/</code>, <code>/etc/apt/trusted.gpg.d/</code>). Fixes error when modernising repositories such as Google Chrome.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-4-fixed-li1"><strong>HeaderBar CSS:</strong> Global <code>button {}</code> rule no longer overrides CSD window controls (close/minimize/maximize) on GNOME.</li>
+                                <li id="rs-rel-202-4-fixed-li2"><strong>Double repository load:</strong> Repositories were loaded twice on startup and twice after each save/modernise operation; fixed by using the cache properly.</li>
+                                <li id="rs-rel-202-4-fixed-li3"><strong>Bare <code>except:</code> clauses:</strong> Replaced with <code>except Exception:</code> in <code>repo_file_manager.py</code>.</li>
+                                <li id="rs-rel-202-4-fixed-li4"><strong>Email and version docstring:</strong> Email corrected to <code>info@soploslinux.com</code> and version docstring updated to 2.0.2.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-trash-alt"></i> <span data-i18n="rel-label-removed">Removed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-4-removed-li1"><strong>Dead functions:</strong> <code>_remove_debian_file()</code>, <code>_open_url()</code> and <code>_on_get_started_clicked()</code> removed (never called).</li>
+                                <li id="rs-rel-202-4-removed-li2"><strong>Debug statements:</strong> Stale TODO comment and <code>print()</code> debug statements removed from production code.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-3 -->
+                        <section id="v202-3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-3-title">2.0.2-3 — March 2026</span></h2>
+                            <p id="rs-rel-202-3-subtitle" class="lead">Repository search, DEB822 moderniser, automatic backups, APT maintenance feedback, atomic privilege operations and full i18n update for all 8 languages.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-3-added-li1"><strong>Repository Search:</strong> Real-time search bar in the Repositories tab for quick filtering by name, URL or components.</li>
+                                <li id="rs-rel-202-3-added-li2"><strong>Repository Moderniser:</strong> Converts legacy <code>.list</code> repositories to the modern DEB822 (<code>.sources</code>) format.</li>
+                                <li id="rs-rel-202-3-added-li3"><strong>Automatic Backups:</strong> A <code>.bak</code> backup of the original <code>.list</code> file is created automatically before any conversion.</li>
+                                <li id="rs-rel-202-3-added-li4"><strong>APT Maintenance Feedback:</strong> Real-time progress reporting and detailed status messages during APT operations (update, clean, autoclean).</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-3-improved-li1"><strong>Atomic Operations:</strong> All privileged actions (file writing, deletions, APT tasks) grouped into a single batch — only one <code>pkexec</code> password prompt required.</li>
+                                <li id="rs-rel-202-3-improved-li2"><strong>Safe Path Handling:</strong> Repository file operations migrated to <code>pathlib</code> for robust, error-free path manipulation.</li>
+                                <li id="rs-rel-202-3-improved-li3"><strong>System State Detection:</strong> UI now reads directly from <code>/etc/apt/sources.list.d/</code> to accurately reflect active repositories.</li>
+                                <li id="rs-rel-202-3-improved-li4"><strong>Third-Party Protection:</strong> Guards prevent accidental deletion of third-party repositories and their corresponding GPG keys.</li>
+                                <li id="rs-rel-202-3-improved-li5"><strong>Full i18n update:</strong> All new strings manually translated into all 8 supported languages with validated <code>.mo</code> files.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-2 -->
+                        <section id="v202-2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-2-title">2.0.2-2 — March 2026</span></h2>
+                            <p id="rs-rel-202-2-subtitle" class="lead">DEB822 component deduplication fix and repository list UI improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-2-fixed-li1"><strong>DEB822 component deduplication:</strong> Fixed a bug where repository components were duplicated multiple times in generated <code>.sources</code> files when multiple suites shared the same block.</li>
+                                <li id="rs-rel-202-2-fixed-li2"><strong>Repository list UI:</strong> Added text ellipsis to repo row details to prevent excessively long component strings from forcing horizontal scrolling.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-1 -->
+                        <section id="v202-1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-1-title">2.0.2-1 — March 2026</span></h2>
+                            <p id="rs-rel-202-1-subtitle" class="lead">Improved repository detection, legacy parser fix and optimised privilege management.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-1-improved-li1"><strong>Repository Detection:</strong> Improved detection of Debian mirrors and regional repositories.</li>
+                                <li id="rs-rel-202-1-improved-li2"><strong>Repository Parser:</strong> Fixed legacy parser to correctly detect commented-out/disabled repositories.</li>
+                                <li id="rs-rel-202-1-improved-li3"><strong>Privilege Management:</strong> Optimised <code>pkexec</code> usage to group file deletions and additions into a single password prompt.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2 -->
+                        <section id="v202" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-title">2.0.2 — January 2026</span></h2>
+                            <p id="rs-rel-202-subtitle" class="lead">Man page, Debian copyright file and packager integration for automatic documentation in generated packages.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-book"></i> <span data-i18n="rel-label-docs">Documentation</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-202-docs-li1"><strong>Man page:</strong> Complete manual page (<code>docs/soplos-repo-selector.1</code>) with standard sections (NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT, SEE ALSO).</li>
+                                <li id="rs-rel-202-docs-li2"><strong>Debian copyright:</strong> Machine-readable copyright file (<code>debian/copyright</code>) following Debian 1.0 format with full GPL-3.0+ license block.</li>
+                                <li id="rs-rel-202-docs-li3"><strong>Packager integration:</strong> Updated <code>soplos-packager</code> to automatically include documentation in generated <code>.deb</code> packages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.1 -->
+                        <section id="v201" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-201-title">2.0.1 — January 2026</span></h2>
+                            <p id="rs-rel-201-subtitle" class="lead">Complete speed test rewrite with real TCP measurements, dynamic progress bars, live mirror updates and Sources Generator accuracy improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-201-improved-li1"><strong>Speed Test Service:</strong> Complete rewrite with real TCP latency measurement via socket connections and larger downloads (2–10 MB) for accurate speed calculation.</li>
+                                <li id="rs-rel-201-improved-li2"><strong>Parallelism:</strong> Increased from 3 to 6 workers for faster mirror testing; improved country detection from mirror URLs.</li>
+                                <li id="rs-rel-201-improved-li3"><strong>Dynamic Progress Bars:</strong> Progress bars now animate in real-time — shows "Measuring latency…" during TCP test and live download speed during bandwidth test.</li>
+                                <li id="rs-rel-201-improved-li4"><strong>Live Updates:</strong> Individual mirror rows update without rebuilding the entire list.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-201-fixed-li1"><strong>Sources Generator:</strong> Now detects real system state — distributions, components and backports checkboxes reflect actual system configuration.</li>
+                                <li id="rs-rel-201-fixed-li2"><strong>Backports removal:</strong> Properly removes <code>debian-backports.sources</code> file when backports is disabled.</li>
+                                <li id="rs-rel-201-fixed-li3"><strong>Translation shadowing:</strong> Fixed <code>UnboundLocalError</code> with <code>_</code> translation function caused by variable shadowing in tuple unpacking.</li>
+                                <li id="rs-rel-201-fixed-li4"><strong>Speed test accuracy:</strong> Fixed giving identical results regardless of geographic location; fixed progress bars not animating during mirror tests.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0 -->
+                        <section id="v200" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-200-title">2.0.0 — December 2025</span></h2>
+                            <p id="rs-rel-200-subtitle" class="lead">Complete architecture rewrite — unified cross-desktop support for GNOME, KDE and XFCE, gettext internationalisation, CSS theming engine, enhanced repository management and improved GPG key handling.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-200-added-li1"><strong>Modular architecture:</strong> Full separation of concerns — Core, UI, Services and Utils layers with professional project structure.</li>
+                                <li id="rs-rel-200-added-li2"><strong>Universal desktop support:</strong> Smart detection for GNOME 48+, KDE Plasma 6 and XFCE 4.20 with complete X11 and Wayland compatibility.</li>
+                                <li id="rs-rel-200-added-li3"><strong>Mirror speed test integration:</strong> Integrated directly into the Sources Generator tab — no external windows.</li>
+                                <li id="rs-rel-200-added-li4"><strong>GPG enhancements:</strong> Fingerprint/expiry display, export and delete actions with safe validation; streamlined key import and download from URLs.</li>
+                                <li id="rs-rel-200-added-li5"><strong>AppStream/DEP-11 integration:</strong> Updated metadata with improved compatibility for Discover, GNOME Software and other AppStream-compatible centres.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-200-changed-li1"><strong>App ID:</strong> Changed to <code>org.soplos.reposelector</code>.</li>
+                                <li id="rs-rel-200-changed-li2"><strong>i18n system:</strong> Migrated to GNU Gettext standard with <code>.mo</code> files; complete translation coverage for all 8 languages.</li>
+                                <li id="rs-rel-200-changed-li3"><strong>Theming engine:</strong> CSS-based engine aligned with Soplos Welcome; automatic dark/light theme detection with improved visual consistency.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-200-improved-li1"><strong>Repository management:</strong> Improved addition, editing and removal workflows with better validation, error handling and enhanced DEB822 format support.</li>
+                                <li id="rs-rel-200-improved-li2"><strong>Sources Generator:</strong> Fixed to preserve DEB822 block grouping and respect selected mirror; improved layout and selection bugs in the Repositories list tab.</li>
+                                <li id="rs-rel-200-improved-li3"><strong>Screenshots:</strong> Replaced all four screenshots (Welcome, Repositories, Sources Generator, GPG Keys).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 — Tyson only -->
+                        <section id="ts-v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-107-title">1.0.7 — August 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-107-subtitle" class="lead">Program icon updated to new design.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-107-changed-li1"><strong>Program icon changed</strong> to new design.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 — Tyson only -->
+                        <section id="ts-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-106-title">1.0.6 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-106-subtitle" class="lead">AppStream icons in multiple sizes and finalised metainfo for software centre compatibility.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-106-added-li1"><strong>AppStream icons:</strong> Added program icons in 48×48, 64×64 and 128×128 for AppStream/DEP-11 integration.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-106-improved-li1"><strong>Metainfo finalised:</strong> Metainfo file now fully complies with AppStream/DEP-11 standard for maximum compatibility in software centres.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 — Tyson only -->
+                        <section id="ts-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-105-title">1.0.5 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-105-subtitle" class="lead">Final metainfo corrections for proper appearance in software centres such as Plasma Discover and GNOME Software.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-105-improved-li1"><strong>Final Metainfo corrections:</strong> Metainfo file reviewed and finalised to ensure proper appearance in Plasma Discover, GNOME Software and other AppStream-compatible centres.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 — Tyron -->
+                        <section id="tr-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-tr-104-title">1.0.4 — August 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="rs-rel-tr-104-subtitle" class="lead">Program icon updated and developer credit updated.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-104-changed-li1"><strong>Program icon changed.</strong></li>
+                                <li id="rs-rel-tr-104-changed-li2"><strong>Developer:</strong> Updated to Sergi Perich.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 — Tyson -->
+                        <section id="ts-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-104-title">1.0.4 — July 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-104-subtitle" class="lead">Metainfo updates for improved visibility in Plasma Discover and AppStream, and corrected screenshot references.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-104-improved-li1"><strong>Metainfo:</strong> Improved visibility and compatibility in Plasma Discover and AppStream.</li>
+                                <li id="rs-rel-ts-104-improved-li2"><strong>Screenshot references:</strong> Screenshot names are now consistent and correct.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 — Tyron -->
+                        <section id="tr-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-tr-103-title">1.0.3 — July 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="rs-rel-tr-103-subtitle" class="lead">Metainfo update for AppStream/DEP-11 compliance — no functional changes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-103-changed-li1"><strong>Metainfo updated</strong> for AppStream/DEP-11 compliance.</li>
+                                <li id="rs-rel-tr-103-changed-li2"><strong>Minor improvements</strong> to integration and documentation. No functional changes.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 — Tyson -->
+                        <section id="ts-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-103-title">1.0.3 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-103-subtitle" class="lead">Improved KDE theme detection, Wayland compatibility, startup performance and fixed unwanted blue colour with Adwaita theme.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-103-added-li1"><strong>Improved KDE GTK theme detection:</strong> Directly reads KDE GTK configuration instead of forcing a specific theme.</li>
+                                <li id="rs-rel-ts-103-added-li2"><strong>Better XDG Portal integration:</strong> Improved Wayland compatibility.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-103-improved-li1"><strong>Startup performance:</strong> Reduced loading time and memory usage.</li>
+                                <li id="rs-rel-ts-103-improved-li2"><strong>Custom theme compatibility:</strong> Now respects custom colours and accents; reads <code>~/.config/kdeglobals</code> for KDE theme configuration.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-103-fixed-li1"><strong>Blue colour issue:</strong> Resolved forced Adwaita theme that caused incorrect colours in Soplos orange environments.</li>
+                                <li id="rs-rel-ts-103-fixed-li2"><strong>GTK configuration:</strong> Avoids overwriting user theme configurations.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 — Tyron -->
+                        <section id="tr-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-tr-102-title">1.0.2 — June 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="rs-rel-tr-102-subtitle" class="lead">Locale improvements, regional date/time format support, interface performance optimisations and minor localisation fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-102-added-li1"><strong>Regional date/time format support:</strong> Locale-specific formatting for dates and times.</li>
+                                <li id="rs-rel-tr-102-added-li2"><strong>Translation reset option:</strong> Option to manually reset translations to default values.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-102-improved-li1"><strong>Interface performance:</strong> Optimisations in the graphical interface rendering.</li>
+                                <li id="rs-rel-tr-102-improved-li2"><strong>Error handling:</strong> Improved error messages and user-facing feedback.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-102-fixed-li1"><strong>Localisation issues:</strong> Minor localisation bugs in existing languages.</li>
+                                <li id="rs-rel-tr-102-fixed-li2"><strong>Language detection:</strong> Fixed rare failures in automatic language detection.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 — Tyson -->
+                        <section id="ts-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-102-title">1.0.2 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-102-subtitle" class="lead">Automatic system theme detection, KDE dark theme support, Wayland integration improvements and stability fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-102-added-li1"><strong>Automatic system theme detection:</strong> Support for light and dark themes in KDE and GNOME via <code>detect_kde_theme()</code> and automatic <code>GTK_THEME</code> configuration.</li>
+                                <li id="rs-rel-ts-102-added-li2"><strong>Improved Wayland support:</strong> Better integration with Wayland compositors; <code>GDK_BACKEND</code> and <code>GTK_USE_PORTAL</code> configured automatically.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-102-improved-li1"><strong>KDE Plasma compatibility:</strong> Precise detection of Breeze/Breeze-Dark colour schemes.</li>
+                                <li id="rs-rel-ts-102-improved-li2"><strong>Language detection:</strong> Improved automatic system language detection.</li>
+                                <li id="rs-rel-ts-102-improved-li3"><strong>Startup performance:</strong> Optimisation in initial application loading.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-102-fixed-li1"><strong>Unwanted blue theme:</strong> Resolved blue tones issue in dark theme.</li>
+                                <li id="rs-rel-ts-102-fixed-li2"><strong>Wayland issues:</strong> Better support and stability in Wayland environments.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 — Tyron -->
+                        <section id="tr-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-tr-101-title">1.0.1 — June 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="rs-rel-tr-101-subtitle" class="lead">Complete 8-language internationalisation with Tyron distribution templates, automatic language detection and fully localised interface.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-101-added-li1"><strong>Complete i18n system:</strong> Support for 8 languages: ES, EN, FR, PT, DE, IT, RU, RO with full UI localisation.</li>
+                                <li id="rs-rel-tr-101-added-li2"><strong>Automatic language detection:</strong> Based on system configuration with robust fallback system.</li>
+                                <li id="rs-rel-tr-101-added-li3"><strong>Tyron distribution templates:</strong> Quick access to preconfigured repository templates for Soplos Linux Tyron.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-101-improved-li1"><strong>Fully localised interface:</strong> All components localised with clearer user-facing texts.</li>
+                                <li id="rs-rel-tr-101-improved-li2"><strong>Keyboard shortcuts:</strong> Consistent use of mnemonics and shortcuts across the localised interface.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-101-fixed-li1"><strong>Character encoding:</strong> Fixed encoding issues in different languages.</li>
+                                <li id="rs-rel-tr-101-fixed-li2"><strong>Locale detection:</strong> Improved system locale reading.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 — Tyson -->
+                        <section id="ts-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-101-title">1.0.1 — June 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-101-subtitle" class="lead">Complete 8-language internationalisation, GPG key management, mirror speed testing, predefined repository templates and UI improvements.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-101-added-li1"><strong>Complete multi-language support:</strong> 8 languages (ES, EN, FR, PT, DE, IT, RU, RO) with automatic system language detection.</li>
+                                <li id="rs-rel-ts-101-added-li2"><strong>GPG key management:</strong> Import, download and manage repository verification keys.</li>
+                                <li id="rs-rel-ts-101-added-li3"><strong>Mirror speed test:</strong> Speed test to find the fastest mirrors with optimised performance.</li>
+                                <li id="rs-rel-ts-101-added-li4"><strong>Predefined repositories:</strong> Quick access to Chrome, VSCode, Docker and OBS Studio repositories.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-101-improved-li1"><strong>User interface:</strong> More intuitive and responsive design.</li>
+                                <li id="rs-rel-ts-101-improved-li2"><strong>Compatibility:</strong> Better support for Wayland and X11.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-101-fixed-li1"><strong>Permission issues:</strong> Better handling of <code>sudo</code>/<code>pkexec</code>.</li>
+                                <li id="rs-rel-ts-101-fixed-li2"><strong>Repository validation:</strong> Improved syntax verification.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 — Tyson -->
+                        <section id="ts-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-ts-100-title">1.0.0 — May 2025 <em>(Tyson only)</em></span></h2>
+                            <p id="rs-rel-ts-100-subtitle" class="lead">Initial release for Tyson — full GTK3 APT repository manager with DEB822 format support, GPG key integration and intuitive repository management.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-ts-100-added-li1"><strong>Complete GTK3 graphical interface</strong> — native, responsive and intuitive.</li>
+                                <li id="rs-rel-ts-100-added-li2"><strong>Basic repository management:</strong> Add, edit and remove APT repositories.</li>
+                                <li id="rs-rel-ts-100-added-li3"><strong>DEB822 format support:</strong> Full compatibility with modern <code>.sources</code> repository format.</li>
+                                <li id="rs-rel-ts-100-added-li4"><strong>Secure privilege management</strong> via <code>pkexec</code> for all administrative operations.</li>
+                                <li id="rs-rel-ts-100-added-li5"><strong>Repository syntax validation</strong> and automatic configuration backup.</li>
+                                <li id="rs-rel-ts-100-added-li6"><strong>Complete management</strong> of <code>/etc/apt/sources.list.d/</code>.</li>
+                                <li id="rs-rel-ts-100-added-li7"><strong>Desktop integration</strong> via <code>.desktop</code> file for application menu.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 — Tyron -->
+                        <section id="tr-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-tr-100-title">1.0.0 — May 2025 <em>(Tyron only)</em></span></h2>
+                            <p id="rs-rel-tr-100-subtitle" class="lead">Initial release for Tyron — full GTK3 APT repository manager with PolicyKit authentication, DEB822 support, i18n and system integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-tr-100-added-li1"><strong>Complete GTK3 graphical interface</strong> with Adwaita styling.</li>
+                                <li id="rs-rel-tr-100-added-li2"><strong>Secure repository management</strong> with PolicyKit (<code>pkexec</code>) authentication.</li>
+                                <li id="rs-rel-tr-100-added-li3"><strong>Enable/disable APT repositories</strong> from a responsive UI.</li>
+                                <li id="rs-rel-tr-100-added-li4"><strong>Automatic package cache update</strong> after repository changes.</li>
+                                <li id="rs-rel-tr-100-added-li5"><strong>i18n support</strong> with automatic system language detection.</li>
+                                <li id="rs-rel-tr-100-added-li6"><strong>Validation and permission checking</strong> before applying changes.</li>
+                                <li id="rs-rel-tr-100-added-li7"><strong>Automatic backup system</strong> for repository configuration files.</li>
+                                <li id="rs-rel-tr-100-added-li8"><strong>Desktop integration</strong> via <code>.desktop</code> file and application menu entry.</li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>

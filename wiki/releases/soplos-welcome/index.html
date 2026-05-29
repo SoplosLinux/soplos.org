@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="wel-rel-page-title">Soplos Welcome — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos Welcome.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="wel-rel-breadcrumb">Soplos Welcome</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.welcome.png" alt="Soplos Welcome" class="hero-app-icon"> <span id="wel-rel-hero-title">Soplos Welcome</span></h1>
+                        <p id="wel-rel-hero-subtitle">First-run experience for Soplos Linux — driver setup, software installer, kernel manager and system configuration for XFCE, GNOME and KDE Plasma.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v209" class="toc-link">2.0.9 <span class="toc-date">— 2026-05-28</span></a></li>
+                            <li><a href="#v208-9" class="toc-link">2.0.8-9 <span class="toc-date">— 2026-05-27</span></a></li>
+                            <li><a href="#v208-8" class="toc-link">2.0.8-8 <span class="toc-date">— 2026-05-26</span></a></li>
+                            <li><a href="#v208-7" class="toc-link">2.0.8-7 <span class="toc-date">— 2026-05-25</span></a></li>
+                            <li><a href="#v208-6" class="toc-link">2.0.8-6 <span class="toc-date">— 2026-05-24</span></a></li>
+                            <li><a href="#v208-5" class="toc-link">2.0.8-5 <span class="toc-date">— 2026-05-23</span></a></li>
+                            <li><a href="#v208-4" class="toc-link">2.0.8-4 <span class="toc-date">— 2026-05-22</span></a></li>
+                            <li><a href="#v208-3" class="toc-link">2.0.8-3 <span class="toc-date">— 2026-05-18</span></a></li>
+                            <li><a href="#v208-2" class="toc-link">2.0.8-2 <span class="toc-date">— 2026-04-30</span></a></li>
+                            <li><a href="#v208-1" class="toc-link">2.0.8-1 <span class="toc-date">— 2026-04-04</span></a></li>
+                            <li><a href="#v208" class="toc-link">2.0.8 <span class="toc-date">— 2026-03-31</span></a></li>
+                            <li><a href="#v207-3" class="toc-link">2.0.7-3 <span class="toc-date">— 2026-03-24</span></a></li>
+                            <li><a href="#v207-2" class="toc-link">2.0.7-2 <span class="toc-date">— 2026-03-13</span></a></li>
+                            <li><a href="#v207-1" class="toc-link">2.0.7-1 <span class="toc-date">— 2026-03-12</span></a></li>
+                            <li><a href="#v207" class="toc-link">2.0.7 <span class="toc-date">— 2026-03-11</span></a></li>
+                            <li><a href="#v206-3" class="toc-link">2.0.6-3 <span class="toc-date">— 2026-03-08</span></a></li>
+                            <li><a href="#v206-2" class="toc-link">2.0.6-2 <span class="toc-date">— 2026-03-07</span></a></li>
+                            <li><a href="#v206" class="toc-link">2.0.6 <span class="toc-date">— 2026-03-04</span></a></li>
+                            <li><a href="#v205" class="toc-link">2.0.5 <span class="toc-date">— 2026-03-02</span></a></li>
+                            <li><a href="#v204" class="toc-link">2.0.4 <span class="toc-date">— 2026-02-24</span></a></li>
+                            <li><a href="#v203" class="toc-link">2.0.3 <span class="toc-date">— 2026-01-09</span></a></li>
+                            <li><a href="#v202" class="toc-link">2.0.2 <span class="toc-date">— 2026-01-04</span></a></li>
+                            <li><a href="#v201" class="toc-link">2.0.1 <span class="toc-date">— 2025-12-27</span></a></li>
+                            <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2025-12-06</span></a></li>
+                            <li><a href="#ts-v115" class="toc-link">1.1.5 <span class="toc-date">— 2025-09-08</span></a></li>
+                            <li><a href="#ts-v114" class="toc-link">1.1.4 <span class="toc-date">— 2025-09-08</span></a></li>
+                            <li><a href="#tr-v114" class="toc-link">1.1.4 <span class="toc-date">— 2025-09-08</span></a></li>
+                            <li><a href="#ts-v113" class="toc-link">1.1.3 <span class="toc-date">— 2025-08-02</span></a></li>
+                            <li><a href="#tr-v113" class="toc-link">1.1.3 <span class="toc-date">— 2025-08-03</span></a></li>
+                            <li><a href="#ts-v112" class="toc-link">1.1.2 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#tr-v112" class="toc-link">1.1.2 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#ts-v111" class="toc-link">1.1.1 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#tr-v111" class="toc-link">1.1.1 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#ts-v110" class="toc-link">1.1.0 <span class="toc-date">— 2025-07-24</span></a></li>
+                            <li><a href="#tr-v110" class="toc-link">1.1.0 <span class="toc-date">— 2025-07-25</span></a></li>
+                            <li><a href="#ts-v109" class="toc-link">1.0.9 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#tr-v109" class="toc-link">1.0.9 <span class="toc-date">— 2025-07-24</span></a></li>
+                            <li><a href="#ts-v108" class="toc-link">1.0.8 <span class="toc-date">— 2025-07-15</span></a></li>
+                            <li><a href="#tr-v108" class="toc-link">1.0.8 <span class="toc-date">— 2025-07-24</span></a></li>
+                            <li><a href="#ts-v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-07-13</span></a></li>
+                            <li><a href="#tr-v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-07-18</span></a></li>
+                            <li><a href="#ts-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-06-24</span></a></li>
+                            <li><a href="#tr-v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-05-20</span></a></li>
+                            <li><a href="#ts-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-06-14</span></a></li>
+                            <li><a href="#tr-v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#ts-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-06-09</span></a></li>
+                            <li><a href="#tr-v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#ts-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-06-05</span></a></li>
+                            <li><a href="#tr-v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-05-06</span></a></li>
+                            <li><a href="#ts-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-06-04</span></a></li>
+                            <li><a href="#tr-v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-05-05</span></a></li>
+                            <li><a href="#ts-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-05-28</span></a></li>
+                            <li><a href="#tr-v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-04-25</span></a></li>
+                            <li><a href="#ts-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-20</span></a></li>
+                            <li><a href="#tr-v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-04-08</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 2.0.9 -->
+                        <section id="v209" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-209-title">2.0.9 — May 2026</span></h2>
+                            <p id="wel-rel-209-subtitle" class="lead">Drivers tab: VirtualBox Guest Additions updated to 7.2.8 (first release with Linux 7.0 kernel support), now bundled in the package — no internet required at install time. Pango markup fix for the Security &amp; System Protection header.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-209-changed-li1"><strong>VirtualBox Guest Additions updated to 7.2.8</strong>: first release with official Linux 7.0 kernel support. The previous script downloaded the obsolete 7.0.20 ISO from Oracle's servers.</li>
+                                <li id="wel-rel-209-changed-li2"><strong>Installer bundled offline</strong>: <code>VBoxLinuxAdditions.run</code> is now included directly in the package under <code>assets/vbox/</code> — no internet connection required at install time.</li>
+                                <li id="wel-rel-209-changed-li3"><strong>DKMS modules compiled for kernel 7.0.9-soplos</strong>: compiles <code>vboxguest</code>, <code>vboxsf</code> and <code>vboxvideo</code> via DKMS. The "unable to load vboxguest kernel module" message is expected when the system runs in VMware/QEMU — the modules load correctly inside VirtualBox.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-209-fixed-li1"><strong>Pango markup — "Security &amp; System Protection" header</strong>: the <code>&amp;</code> character was unescaped in the <code>en</code> and <code>de</code> <code>.po</code> translations, causing a GTK warning (<code>Error on line 1: Entity did not end with a semicolon</code>) when the Security tab was created. Fixed by using <code>&amp;amp;</code> in the <code>msgstr</code> of both locales.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-9 -->
+                        <section id="v208-9" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-9-title">2.0.8-9 — May 2026</span></h2>
+                            <p id="wel-rel-208-9-subtitle" class="lead">Recommended tab fixes (Affinity URL, .desktop ownership, RapidRAW reverted to Flatpak, batch install isolation) and Kernels tab improvements (NVIDIA/Liquorix warning removed, Soplos Kernel Installer repositioned and with icon).</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-9-fixed-li1"><strong>Affinity AppImage URL updated to 3.2.0</strong>: the previous URL pointing to 3.0.2 returned HTTP 404, causing <code>wget</code> to exit with code 8 and aborting the entire batch install chain due to <code>set -e</code>.</li>
+                                <li id="wel-rel-208-9-fixed-li2"><strong>Affinity <code>.desktop</code> file ownership</strong>: <code>printf '...' > file</code> under pkexec wrote the file as root. Replaced with <code>sudo -u $REAL_USER tee</code> so the file is owned by the real user.</li>
+                                <li id="wel-rel-208-9-fixed-li3"><strong>ES-DE <code>.desktop</code> file ownership</strong>: same <code>tee</code> fix applied — <code>.desktop</code> file was being created as root under pkexec.</li>
+                                <li id="wel-rel-208-9-fixed-li4"><strong>RapidRAW reverted to Flatpak</strong>: a previous session had incorrectly changed RapidRAW from <code>flatpak install flathub io.github.CyberTimon.RapidRAW</code> to a Debian <code>.deb</code> install. Reverted to Flatpak.</li>
+                                <li id="wel-rel-208-9-fixed-li5"><strong>Batch install chain failure with <code>set -e</code></strong>: the consolidated batch script used a global <code>set -e</code>, so a single failed package aborted all remaining packages in the selection. Each package is now wrapped in its own subshell with <code>set -e</code> isolated — a failure prints a warning and the script continues with the next package.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-9-improved-li1"><strong>Removed NVIDIA/Liquorix warning</strong>: the notice advising against using Liquorix with NVIDIA has been removed from the Kernels tab.</li>
+                                <li id="wel-rel-208-9-improved-li2"><strong>Soplos Kernel Installer repositioned</strong>: moved from after XanMod to between Microcodes and the Available Kernels section.</li>
+                                <li id="wel-rel-208-9-improved-li3"><strong>Soplos Kernel Installer icon added</strong>: the section now displays the application icon (<code>org.soplos.kernel-installer.png</code>) with the same layout as packages in the Recommended tab.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-8 -->
+                        <section id="v208-8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-8-title">2.0.8-8 — May 2026</span></h2>
+                            <p id="wel-rel-208-8-subtitle" class="lead">Two bug fixes: DaVinci GPU patch permission error and Lutris Vulkan patch targeting stale Flatpak deployment.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-8-fixed-li1"><strong>Fixed permission error in <code>davinci-gpu-patch.sh</code></strong>: the <code>mkdir -p ~/.local/share/applications/</code> call was running as root (via pkexec), causing that directory to be owned by root. Subsequent writes from Soplos WebApp Manager and Soplos AppImage Manager failed with <code>PermissionError: [Errno 13]</code>. The command now uses <code>sudo -u "$REAL_USER"</code> to create the directory with the correct ownership.</li>
+                                <li id="wel-rel-208-8-fixed-li2"><strong>Fixed Lutris Vulkan fix targeting wrong deployment</strong>: <code>lutris-vulkan-patch.sh</code> used a plain <code>find</code> that could pick up <code>gpu.py</code> from an old Flatpak deployment instead of the active one. After a Flatpak update, the new deployment had the unpatched file and Lutris kept sending a GPU/vulkaninfo error notification repeatedly. The script now searches under the <code>active</code> symlink (<code>x86_64/stable/active</code>) with <code>-L</code> to follow symlinks, with a fallback that searches any <code>*/active/*</code> path for non-standard architectures or branches.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-7 -->
+                        <section id="v208-7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-7-title">2.0.8-7 — May 2026</span></h2>
+                            <p id="wel-rel-208-7-subtitle" class="lead">Recommended tab — MakeResolveDeb updated to 1.10.0 with split <code>-data</code> package support for DaVinci Resolve 21+.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-7-improved-li1"><strong>MakeResolveDeb updated to 1.10.0</strong> (Recommended tab — DaVinci Resolve): release 2026-05-15 by Daniel Tufvesson. Adds a split <code>-data</code> package for DaVinci Resolve 21+ — the plugins folder is now separated into a <code>davinci-resolve-data</code> package. Drops slow <code>xz -9</code> compression in favour of default gzip, resulting in significantly faster build times.</li>
+                                <li id="wel-rel-208-7-improved-li2"><strong>Install step now handles two <code>.deb</code> files</strong>: for Resolve 21+, MakeResolveDeb generates a main package and a <code>-data</code> package; both are now installed in sequence automatically.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-6 -->
+                        <section id="v208-6" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-6-title">2.0.8-6 — May 2026</span></h2>
+                            <p id="wel-rel-208-6-subtitle" class="lead">Drivers tab — Triple Wi-Fi detection strategy covering all broken-firmware scenarios.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-6-improved-li1"><strong>Triple Wi-Fi detection strategy</strong> (Drivers tab — Repair Wi-Fi button): (1) sysfs <code>/sys/class/net/*/wireless</code> — works when the interface is active; (2) <code>iw dev</code> — works when the interface is down but the module is loaded; (3) <code>lspci -k</code> — works when the module is not loaded at all, which is the exact case of broken Wi-Fi after reboot (module loads but fails to find firmware → circular dependency). The button can now always identify the driver and repair Wi-Fi regardless of the system state.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-5 -->
+                        <section id="v208-5" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-5-title">2.0.8-5 — May 2026</span></h2>
+                            <p id="wel-rel-208-5-subtitle" class="lead">Drivers tab — Wi-Fi auto-repair button with driver detection and NetworkManager restart.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-5-added-li1"><strong>Repair Wi-Fi button</strong> (Drivers tab): automatically detects the active Wi-Fi driver by reading <code>/sys/class/net/*/wireless</code> — no external commands needed. Shows a confirmation dialog with the detected driver and interface name. On confirmation runs <code>modprobe -r &lt;driver&gt;</code>, waits 1 second, <code>modprobe &lt;driver&gt;</code> and <code>systemctl restart NetworkManager</code>. Works with any brand — Intel (<code>iwlwifi</code>), Realtek, Atheros, MediaTek, Broadcom, etc. If no Wi-Fi interface is found, shows a warning dialog instead.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-globe"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-5-trans-li1"><strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with Wi-Fi Repair strings (button label, tooltip, confirmation and warning dialogs).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-4 -->
+                        <section id="v208-4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-4-title">2.0.8-4 — May 2026</span></h2>
+                            <p id="wel-rel-208-4-subtitle" class="lead">Drivers tab detection fixes for Nouveau, AMD and Wi-Fi; Syncthing Tray added to Recommended.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-4-fixed-li1"><strong>Nouveau false "installed" state:</strong> Now checks <code>/etc/modprobe.d/*.conf</code> for <code>blacklist nouveau</code> — the button correctly shows as not active when Nouveau is blacklisted, even if the package is present.</li>
+                                <li id="wel-rel-208-4-fixed-li2"><strong>AMD false "installed" state:</strong> Now requires all three packages (<code>firmware-amd-graphics</code>, <code>mesa-vulkan-drivers</code>, <code>xserver-xorg-video-all</code>) to be installed simultaneously instead of just one.</li>
+                                <li id="wel-rel-208-4-fixed-li3"><strong>Wi-Fi Intel/Realtek false "installed" state:</strong> Now combines package presence with <code>lsmod</code> module check — the button only shows as installed when the firmware package is present AND the corresponding kernel module is actually loaded.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-4-added-li1"><strong>Syncthing Tray</strong> (<code>io.github.martchus.syncthingtray</code>) added to Recommended → Utilities: tray application for Syncthing, available as Flatpak from Flathub.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-globe"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-4-trans-li1"><strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with the Syncthing Tray description string.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-3 -->
+                        <section id="v208-3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-3-title">2.0.8-3 — May 2026</span></h2>
+                            <p id="wel-rel-208-3-subtitle" class="lead">Gaming optimizations reworked: RyzenAdj and Lutris Vulkan Fix added, Ryzen Master Commander removed and Ctrl+Shift+Tab navigation fixed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-3-added-li1"><strong>RyzenAdj</strong> added to Gaming → Optimizations: compiles from source, installs the binary and shared library, and creates a systemd service that applies AMD thermal limits (<code>--tctl-temp=85</code>, <code>--stapm-limit=35000</code>, <code>--fast-limit=35000</code>, <code>--slow-limit=35000</code>) at boot. Designed for AMD mini PCs with proprietary EC firmware incompatible with NBFC.</li>
+                                <li id="wel-rel-208-3-added-li2"><strong>Lutris Vulkan Fix</strong> button added to Gaming → Optimizations: patches <code>gpu.py</code> inside the Lutris Flatpak sandbox to use <code>/app/bin/vulkaninfo</code> instead of the broken <code>/usr/bin/vulkaninfo</code> path. Must be run manually after Lutris has been launched at least once.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span data-i18n="rel-label-removed">Removed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-3-removed-li1"><strong>Ryzen Master Commander</strong> removed from Optimizations: incompatible with AMD mini PCs using proprietary EC firmware that blocks NBFC-based fan control tools.</li>
+                                <li id="wel-rel-208-3-removed-li2"><strong>Automatic Lutris Vulkan patch</strong> removed from <code>post_install_script</code>: the Flatpak sandbox is not yet initialized at install time, making the automatic patch unreliable. Replaced by the manual button above.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-3-fixed-li1"><strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-globe"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-3-trans-li1"><strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-2 -->
+                        <section id="v208-2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-2-title">2.0.8-2 — April 2026</span></h2>
+                            <p id="wel-rel-208-2-subtitle" class="lead">Software tab expansion with Snap Store and Bazaar, VPN section, CPU Power tool, Calligra/Collabora Office and Docklike removal from XFCE.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-2-added-li1"><strong>Snap Store &amp; Bazaar</strong> added to all three DEs (XFCE, GNOME, KDE/Plasma). Software grid is now 4 × 2. Dependency check dialog warns if <code>snapd</code> or <code>flatpak</code> is missing.</li>
+                                <li id="wel-rel-208-2-added-li2"><strong>VPN section:</strong> Surfshark (<code>com.surfshark.Surfshark</code>) and Mozilla VPN (<code>org.mozilla.vpn</code>) added to the Security tab as Flatpak apps.</li>
+                                <li id="wel-rel-208-2-added-li3"><strong>CPU Power</strong> tool added to Gaming → Optimizations: installs <code>linux-cpupower</code> and <code>cpupower-gui</code> for graphical CPU governor control.</li>
+                                <li id="wel-rel-208-2-added-li4"><strong>Calligra</strong> (<code>org.kde.calligra</code>) and <strong>Collabora Office</strong> (<code>org.collaboraoffice.CollaboraOffice</code>) added to Recommended → Office as Flatpak entries with batch install support.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-2-changed-li1"><strong>Footer:</strong> "Ready/Listo" status text removed — footer now shows only the desktop environment and display protocol.</li>
+                                <li id="wel-rel-208-2-changed-li2"><strong>Docklike removed from XFCE Customization tab</strong> — its functionality is now fully integrated into Soplos Theme Manager.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-2-fixed-li1"><strong>Snap/Flatpak install buttons</strong> now correctly show "Uninstall" state: <code>snap install/remove</code> uses <code>pkexec</code> and the post-operation callback no longer leaks a <code>GLib.idle_add</code> loop.</li>
+                                <li id="wel-rel-208-2-fixed-li2"><strong>Bazaar install hang:</strong> <code>flatpak install</code> now uses <code>--user --noninteractive</code> flags, avoiding interactive prompts that caused the program to freeze.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8-1 -->
+                        <section id="v208-1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-1-title">2.0.8-1 — April 2026</span></h2>
+                            <p id="wel-rel-208-1-subtitle" class="lead">NVIDIA hybrid graphics boot fix, PRIME Offload KDE fix, DaVinci Resolve 21 support, optional patches, Drivers tab rework and Hardware Scanner rework.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-1-added-li1"><strong>MakeResolveDeb 1.9.0</strong>: Full DaVinci Resolve 21 support with <code>process_21()</code>. Package compression changed from gzip level 1 to xz level 9.</li>
+                                <li id="wel-rel-208-1-added-li2"><strong>Virtual microphone patch</strong> for DaVinci Resolve: Creates a PipeWire virtual mic on systems without a physical capture device.</li>
+                                <li id="wel-rel-208-1-added-li3"><strong>Integrated GPU patch</strong> (AMD / Intel iGPU): Installs OpenCL stack, i915 firmware, libProResRAW stub and correct environment variables for mini PCs.</li>
+                                <li id="wel-rel-208-1-added-li4"><strong>Post-install patches dialog</strong>: After DaVinci Resolve install, optional checkboxes offer both patches before cleanup.</li>
+                                <li id="wel-rel-208-1-added-li5"><strong>New apps</strong>: ProtonVPN, ClamUI, LACT, Resources (system monitor), Soplos Kernel Installer, Portmaster, JoPDF, qBittorrent, JDownloader, PPSSPP, CoolerControl.</li>
+                                <li id="wel-rel-208-1-added-li6"><strong>Post-install hooks</strong>: Lutris Vulkan patch and PPSSPP Lutris runner execute automatically after install via a <code>post_install_script</code> key.</li>
+                                <li id="wel-rel-208-1-added-li7"><strong>Security tab icons</strong>: 48 px icons added to all 14 tools with row layout matching Gaming/Recommended tabs.</li>
+                                <li id="wel-rel-208-1-added-li8"><strong>Gaming — GeForce NOW WebApp</strong> launcher, Flatpak/AppImage/WebApp badges and optimization button tooltips.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-1-changed-li1"><strong>MangoHud</strong> now installs via Flatpak: six packages (MangoHud, GOverlay, VulkanInfo, vkBasalt, gamescope, DXVK) with corrected Flatpak IDs.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-1-fixed-li1"><strong>NVIDIA Primary mode boot failure:</strong> Dracut config files now created before <code>dracut --force</code> to prevent black screen on hybrid laptops.</li>
+                                <li id="wel-rel-208-1-fixed-li2"><strong>PRIME Render Offload on KDE Plasma:</strong> Script now detects Intel connector dynamically from <code>/sys/class/drm/</code> and generates <code>kwinoutputconfig.json</code> to prevent wallpaper loss after reboot.</li>
+                                <li id="wel-rel-208-1-fixed-li3"><strong>Drivers tab crash on startup:</strong> <code>_driver_buttons</code> dict not initialized and missing <code>subprocess</code> import caused <code>AttributeError</code> and <code>NameError</code>.</li>
+                                <li id="wel-rel-208-1-fixed-li4"><strong>Hardware Scanner GPU section:</strong> Was using <code>results['gpu']</code> instead of <code>results['gpus']</code>; sections now shown for all hardware including VM tools.</li>
+                                <li id="wel-rel-208-1-fixed-li5"><strong>NVIDIA 590/580 buttons</strong> not stored in <code>_driver_buttons</code> — state was never reflected. All 15 driver buttons now registered and auto-refreshed.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.8 -->
+                        <section id="v208" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-208-title">2.0.8 — March 2026</span></h2>
+                            <p id="wel-rel-208-subtitle" class="lead">Soplos tools install dialog, new Recommended apps, keyboard navigation, UI fixes and full translation quality pass (100% in all 8 languages).</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-added-li1"><strong>Soplos tools install dialog:</strong> Buttons for Soplos Theme Manager, Docklike, etc. now detect whether the tool is installed and offer to install it via <code>pkexec apt-get install</code>.</li>
+                                <li id="wel-rel-208-added-li2"><strong>6 new Flatpak apps in Recommended:</strong> Bitwig Studio, Reaper, Zrythm, Ardour (Multimedia), Warehouse (Flatpak manager), PeaZip (archive manager).</li>
+                                <li id="wel-rel-208-added-li3"><strong>Keyboard navigation:</strong> <kbd>Ctrl+Shift+Tab</kbd> navigates to previous tab; <kbd>F1</kbd> opens the About dialog.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-208-fixed-li1"><strong>About dialog:</strong> Dark strip between content and action area removed in both dark and light themes.</li>
+                                <li id="wel-rel-208-fixed-li2"><strong>Welcome tab:</strong> Security added to features list (was missing); icon order fixed to match tab order.</li>
+                                <li id="wel-rel-208-fixed-li3"><strong>Drivers tab:</strong> Emojis removed from Frame labels for better font compatibility.</li>
+                                <li id="wel-rel-208-fixed-li4"><strong>Code audit:</strong> Removed unused demo code, fixed deprecated <code>get_action_area()</code>, removed duplicate imports, unified version string.</li>
+                                <li id="wel-rel-208-fixed-li5"><strong>Translations:</strong> All 8 languages at 100% (565/565 messages) — full revision of FR, DE, IT, PT, RO, RU dictionaries with fuzzy fixes, missing entries and header corrections.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.7-3 -->
+                        <section id="v207-3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-207-3-title">2.0.7-3 — March 2026</span></h2>
+                            <p id="wel-rel-207-3-subtitle" class="lead">NVIDIA 580 SHA1/sqv workaround, hardware detection improvements and Soplos Sys Cleaner added to Security tab.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-207-3-added-li1"><strong>Soplos Sys Cleaner</strong> added to Security tab (Cleaning section) with install/uninstall and "Open" button.</li>
+                                <li id="wel-rel-207-3-added-li2"><strong>Soplos AppImage Manager</strong> added to Recommended → Utilities.</li>
+                                <li id="wel-rel-207-3-added-li3"><strong>AppImage badge:</strong> Packages installed as AppImage now display a badge. "Official" badge now only shown for APT installs.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-207-3-changed-li1"><strong>OBS Studio &amp; HandBrake</strong> switched to Flatpak (apt versions cause dependency issues on Debian 13).</li>
+                                <li id="wel-rel-207-3-changed-li2"><strong>Lutris</strong> switched to Flatpak in both Recommended and Gaming tabs.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-207-3-fixed-li1"><strong>NVIDIA 580 SHA1 rejection:</strong> Replaced cuda-keyring with <code>[trusted=yes]</code> in sources.list, added version pinning (<code>nvidia-driver-pinning-580</code>) and <code>--allow-downgrades</code> flag.</li>
+                                <li id="wel-rel-207-3-fixed-li2"><strong>GPU hardware detection:</strong> GTX 16xx/MX550/MX450 → driver 590; Maxwell GPUs (GTX 9xx/8xx) → driver 580. Added <code>_get_lspci_output()</code> caching helper.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.7-2 -->
+                        <section id="v207-2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-207-2-title">2.0.7-2 — March 2026</span></h2>
+                            <p id="wel-rel-207-2-subtitle" class="lead">NVIDIA driver detection improvements, mandatory confirmation dialogs and automatic conflict cleanup before installation.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-207-2-fixed-li1"><strong>GeForce 650M/750M (Kepler MacBooks)</strong> correctly mapped to driver 470 instead of nouveau.</li>
+                                <li id="wel-rel-207-2-fixed-li2"><strong>MX/GT series</strong> detection patterns improved.</li>
+                                <li id="wel-rel-207-2-fixed-li3"><strong>Installation workflow:</strong> Mandatory confirmation dialogs before install; automatic <code>apt purge</code> of existing NVIDIA drivers; explicit install of <code>nvidia-smi</code>, <code>nvidia-settings</code>, <code>nvidia-modprobe</code>, <code>libglu1-mesa</code>; fallback to <code>update-initramfs</code> when dracut is absent.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.7-1 -->
+                        <section id="v207-1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-207-1-title">2.0.7-1 — March 2026</span></h2>
+                            <p id="wel-rel-207-1-subtitle" class="lead">NVIDIA official repository refactor using cuda-keyring for GPG key management and improved fallback logic for Debian 12 and 13.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-207-1-li1"><strong>Official NVIDIA repository logic</strong> refactored to follow official documentation, using the <code>cuda-keyring</code> package to manage GPG keys.</li>
+                                <li id="wel-rel-207-1-li2"><strong>Better fallback logic</strong> for Debian 12 (driver 580) and Debian 13 (driver 590) installation scripts.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.7 -->
+                        <section id="v207" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-207-title">2.0.7 — March 2026</span></h2>
+                            <p id="wel-rel-207-subtitle" class="lead">Legacy NVIDIA drivers (340/390/470) migrated to APT from Debian Sid, with automatic Soplos Repo Selector launch and two-step guided dialog.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-207-li1"><strong>Legacy NVIDIA drivers</strong> (340, 390, 470) now installed via APT from Debian Sid instead of <code>.run</code> files.</li>
+                                <li id="wel-rel-207-li2"><strong>Debian Sid workflow:</strong> Two-step dialog guides users to temporarily enable Debian Sid via Soplos Repo Selector before installing legacy drivers.</li>
+                                <li id="wel-rel-207-li3"><strong>Automatic Repo Selector launch:</strong> Clicking a legacy driver button opens Soplos Repo Selector automatically and waits for the user to finish.</li>
+                                <li id="wel-rel-207-li4"><strong>APT package names corrected:</strong> <code>nvidia-legacy-340xx-driver</code>, <code>nvidia-legacy-390xx-driver</code>, <code>nvidia-tesla-470-driver</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.6-3 -->
+                        <section id="v206-3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-206-3-title">2.0.6-3 — March 2026</span></h2>
+                            <p id="wel-rel-206-3-subtitle" class="lead">AppImage permission fix: all AppImages installed to ~/AppImage instead of /opt.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-206-3-fixed-li1"><strong><code>Errno 13 Permission denied</code></strong> when creating web apps: Affinity Suite, ES-DE and Stacer AppImages now install to <code>~/AppImage</code>, removing the <code>pkexec</code> requirement that caused root-owned user directories.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.6-2 -->
+                        <section id="v206-2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-206-2-title">2.0.6-2 — March 2026</span></h2>
+                            <p id="wel-rel-206-2-subtitle" class="lead">Gaming tab wallpaper duplication fix on GNOME.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-206-2-fixed-li1"><strong>Gaming wallpapers on GNOME (Boro)</strong>: Fixed duplication of existing Soplos wallpapers in background settings when installing gaming wallpapers.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.6 -->
+                        <section id="v206" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-206-title">2.0.6 — March 2026</span></h2>
+                            <p id="wel-rel-206-subtitle" class="lead">New Utilities section in Recommended tab, ProtonUp-Qt in Gaming and critical Kernels tab sort fix.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-206-added-li1"><strong>Recommended → Utilities section:</strong> Soplos WebApp Manager, Flatseal and Gear Lever.</li>
+                                <li id="wel-rel-206-added-li2"><strong>Gaming tab:</strong> ProtonUp-Qt added to launchers for managing GE-Proton and Wine versions.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-206-fixed-li1"><strong>Clean Old Kernels:</strong> Critical sort bug where older kernels were kept due to lexicographical sorting. Now uses <code>sort -V</code> for version-aware ordering, keeps running kernel plus latest of each branch (Main, Liquorix, XanMod) and uses <code>apt purge</code> with automatic header cleanup.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.5 -->
+                        <section id="v205" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-205-title">2.0.5 — March 2026</span></h2>
+                            <p id="wel-rel-205-subtitle" class="lead">Batch installation collision fix in Recommended tab.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-205-fixed-li1"><strong>Recommended Tab — Batch Mode:</strong> Fixed logic bug that caused custom script applications (ES-DE, Affinity Suite) to collide and fail during multi-selection batch install.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.4 -->
+                        <section id="v204" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-204-title">2.0.4 — February 2026</span></h2>
+                            <p id="wel-rel-204-subtitle" class="lead">Sober (Roblox), EmulationStation-DE, internationalized gaming launchers, Kernels tab rewrite and Stacer AppImage migration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-204-added-li1"><strong>Sober</strong> (Roblox launcher, successor to Vinegar) added to Gaming tab.</li>
+                                <li id="wel-rel-204-added-li2"><strong>EmulationStation-DE</strong> added as AppImage in both Gaming and Recommended tabs.</li>
+                                <li id="wel-rel-204-added-li3"><strong>Kernels tab — Clean Old Kernels:</strong> Complete Python-based rewrite with smart classification (keeps running kernel + latest base + Liquorix + XanMod), confirmation dialog and single <code>pkexec</code> execution.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-204-changed-li1"><strong>All 14 gaming launcher descriptions</strong> now use <code>_()</code> with translations in all 8 languages (were hardcoded Spanish strings).</li>
+                                <li id="wel-rel-204-changed-li2"><strong>Launcher alignment:</strong> Uniform height (60px), centered icons and consistent description wrapping.</li>
+                                <li id="wel-rel-204-changed-li3"><strong>Stacer:</strong> Converted from broken <code>.deb</code> to AppImage (<code>/opt/stacer/Stacer.AppImage</code>) with <code>.desktop</code> integration and clean uninstall.</li>
+                                <li id="wel-rel-204-changed-li4"><strong>"Kernels" tab name</strong> kept untranslated as a universal technical term across all 8 languages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.3 -->
+                        <section id="v203" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-203-title">2.0.3 — January 2026</span></h2>
+                            <p id="wel-rel-203-subtitle" class="lead">Documentation: man page and Debian copyright file.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-203-added-li1"><strong>Man page</strong> (<code>docs/soplos-welcome.1</code>) with NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT and SEE ALSO sections.</li>
+                                <li id="wel-rel-203-added-li2"><strong>Debian copyright file</strong> (<code>debian/copyright</code>) following Debian 1.0 format with full GPL-3.0+ license block.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2 -->
+                        <section id="v202" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-202-title">2.0.2 — January 2026</span></h2>
+                            <p id="wel-rel-202-subtitle" class="lead">Security tab: BTRFS-aware Grub BTRFS integration with one-click install.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-202-added-li1"><strong>Grub BTRFS integration:</strong> One-click install for <code>grub-btrfs</code> to add snapshots to GRUB boot menu. Only shown when a BTRFS filesystem is detected. Positioned next to Timeshift in System Backups section.</li>
+                                <li id="wel-rel-202-added-li2"><strong>Translations:</strong> Grub BTRFS strings added in all 8 languages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.1 -->
+                        <section id="v201" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-201-title">2.0.1 — December 2025</span></h2>
+                            <p id="wel-rel-201-subtitle" class="lead">Full hybrid graphics support, NVIDIA 590/580 drivers, two-phase systemd-based .run installation and PRIME Render Offload.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-201-added-li1"><strong>Hybrid GPU detection:</strong> Automatic Intel/AMD + NVIDIA detection on laptops with PRIME Render Offload and NVIDIA Primary Mode options.</li>
+                                <li id="wel-rel-201-added-li2"><strong>Multi-DE hybrid configuration:</strong> Automatic config for GNOME (GDM3), KDE Plasma (SDDM) and XFCE (LightDM) — both X11 and Wayland.</li>
+                                <li id="wel-rel-201-added-li3"><strong>Two-phase NVIDIA .run installation:</strong> Phase 1 (systemd service, blacklist nouveau, configure GRUB, reboot to multi-user) → Phase 2 (install without X, regenerate initramfs, restore graphical boot).</li>
+                                <li id="wel-rel-201-added-li4"><strong>NVIDIA 590</strong> (590.48.01, RTX 50/40 series) and <strong>NVIDIA 580 Production</strong> (580.119.02) drivers added.</li>
+                                <li id="wel-rel-201-added-li5"><strong>NVIDIA Extras section:</strong> DaVinci Resolve and Blender CUDA tools separated from main drivers list.</li>
+                                <li id="wel-rel-201-added-li6"><strong>New Recommended software:</strong> Spotify, HandBrake, Slack, Zoom, Postman, RawTherapee, Hugin.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-201-fixed-li1"><strong>GPU detection always recommending 580:</strong> Correct driver mapping for RTX 40/50, Pascal, Kepler, legacy and professional (Quadro/Tesla) GPUs. Default fallback changed to <code>nvidia-driver</code> (repo).</li>
+                                <li id="wel-rel-201-fixed-li2"><strong>Single pkexec authentication:</strong> All driver scripts now use a single <code>pkexec bash</code> call.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0 -->
+                        <section id="v200" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-200-title">2.0.0 — December 2025</span></h2>
+                            <p id="wel-rel-200-subtitle" class="lead">Complete architecture rewrite with universal XFCE/GNOME/KDE Plasma support, GNU Gettext i18n, Drivers/Kernels/Security/Customization tabs, Recommended batch mode and DaVinci Resolve integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-200-added-li1"><strong>Modular architecture:</strong> Core, UI, Services and Utils layers with smart DE detection (GNOME 48+, KDE Plasma 6, XFCE 4.20) and full X11/Wayland support.</li>
+                                <li id="wel-rel-200-added-li2"><strong>GNU Gettext i18n:</strong> Migrated from dictionary strings to <code>.mo</code> files. 8 languages: ES, EN, FR, DE, PT, IT, RO, RU.</li>
+                                <li id="wel-rel-200-added-li3"><strong>Drivers tab:</strong> Hardware detection (CPU, GPU, RAM, network, VM), NVIDIA latest + legacy 470/390/340 via <code>.run</code> files, AMD, Wi-Fi (Intel/Realtek/Broadcom), VM Tools and full dracut configuration.</li>
+                                <li id="wel-rel-200-added-li4"><strong>Kernels tab:</strong> Liquorix, XanMod variants (x64v3/v4/EDGE/LTS), CPU Microcode, clean old kernels and Update GRUB. NVIDIA compatibility warnings.</li>
+                                <li id="wel-rel-200-added-li5"><strong>Security tab:</strong> Timeshift, Deja Dup, Grub BTRFS, BTRFS Assistant, GUFW (with real-time UFW status), ClamTk, rkhunter.</li>
+                                <li id="wel-rel-200-added-li6"><strong>Customization tab:</strong> XFCE (Theme Manager, Docklike, GRUB Editor, Plymouth Manager + 7 native settings), GNOME (GRUB Editor, Plymouth Manager, Control Center, Tweaks, Extensions, dconf Editor) and Plasma (GRUB Editor, Plymouth Manager, Look and Feel, Login Screen, System Settings).</li>
+                                <li id="wel-rel-200-added-li7"><strong>Recommended tab — Batch mode:</strong> "Selección Múltiple" with checkboxes, "Select All" (respects search filter), selection counter and smart grouping (APT batch, Flatpak/deb sequential). Real-time search bar.</li>
+                                <li id="wel-rel-200-added-li8"><strong>DaVinci Resolve:</strong> Optimized custom install workflow (gzip level 1 → build time ~5–10 min). Script by Daniel Tufvesson with Soplos optimizations.</li>
+                                <li id="wel-rel-200-added-li9"><strong>Gaming tab:</strong> 13 game launchers (Steam, Lutris, Heroic, Bottles, Vinegar, R2ModMan, Prism Launcher, Itch.io, Minigalaxy, RetroArch, Moonlight, Chiaki, Discord), GPU optimizations, GameMode, MangoHud + GOverlay, gaming sysctl, disk I/O rules, gaming wallpapers, RGB gaming theme and Performance Mode.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-200-fixed-li1"><strong>GPU detection false positive:</strong> AMD detection caused by <code>'compatible'</code> string matching fixed with regex word boundaries.</li>
+                                <li id="wel-rel-200-fixed-li2"><strong>BTRFS detection:</strong> Now uses <code>findmnt</code> instead of incompatible <code>df</code> flags; correctly detects Calamares subvolumes (@, @home).</li>
+                                <li id="wel-rel-200-fixed-li3"><strong>UFW status detection:</strong> Reads <code>/etc/ufw/ufw.conf</code> directly with periodic check every 3 s to detect GUFW changes.</li>
+                                <li id="wel-rel-200-fixed-li4"><strong>Flatpak install:</strong> Corrected Flathub setup for Tyson — user-level install without password prompts.</li>
+                                <li id="wel-rel-200-fixed-li5"><strong>Welcome tab autostart:</strong> Dynamic path resolution for <code>.desktop</code> file creation.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.5 Tyson only -->
+                        <section id="ts-v115" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-115-title">1.1.5 — September 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-115-subtitle" class="lead">URL updates to soplos.org and handler cleanup — exclusive release for Soplos Tyson.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-115-li1"><strong>Welcome tab URLs</strong> updated to soplos.org: website (<code>https://soplos.org</code>), forum (<code>https://soplos.org/forums/</code>) and wiki (<code>https://soplos.org/wiki/</code>).</li>
+                                <li id="wel-rel-ts-115-li2"><strong>Deprecated handlers removed:</strong> <code>on_website_clicked</code> and <code>on_wiki_clicked</code> replaced with inline lambdas consistently.</li>
+                                <li id="wel-rel-ts-115-li3"><strong>Blender icon:</strong> Updated to new design.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.4 Tyson -->
+                        <section id="ts-v114" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-114-title">1.1.4 — September 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-114-subtitle" class="lead">Blender icon update and welcome tab link button fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-114-li1"><strong>Blender icon</strong> updated to the new design.</li>
+                                <li id="wel-rel-ts-114-li2"><strong>Welcome tab link buttons</strong> (website, forums, wiki) fixed.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.4 Tyron -->
+                        <section id="tr-v114" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-114-title">1.1.4 — September 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-114-subtitle" class="lead">Blender icon update and welcome tab link button fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-114-li1"><strong>Blender icon</strong> updated to the new design.</li>
+                                <li id="wel-rel-tr-114-li2"><strong>Welcome tab link buttons</strong> (website, forums, wiki) fixed.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.3 Tyson -->
+                        <section id="ts-v113" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-113-title">1.1.3 — August 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-113-subtitle" class="lead">Translation dictionaries updated, hardware detector fixes and program icon refresh.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-113-li1"><strong>Translation dictionaries</strong> updated across all languages.</li>
+                                <li id="wel-rel-ts-113-li2"><strong>Hardware detector</strong> several functions fixed.</li>
+                                <li id="wel-rel-ts-113-li3"><strong>All program icons</strong> updated to new designs.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.3 Tyron -->
+                        <section id="tr-v113" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-113-title">1.1.3 — August 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-113-subtitle" class="lead">Translation dictionaries updated, hardware detector fixes and program icon refresh.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-113-li1"><strong>Translation dictionaries</strong> updated across all languages.</li>
+                                <li id="wel-rel-tr-113-li2"><strong>Hardware detector</strong> several functions fixed.</li>
+                                <li id="wel-rel-tr-113-li3"><strong>All program icons</strong> updated to new designs.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.2 Tyson -->
+                        <section id="ts-v112" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-112-title">1.1.2 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-112-subtitle" class="lead">Program icon redesign.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-112-li1"><strong>Program icon</strong> changed to a new design.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.2 Tyron -->
+                        <section id="tr-v112" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-112-title">1.1.2 — July 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-112-subtitle" class="lead">Program icon redesign.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-112-li1"><strong>Program icon</strong> changed to a new design.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.1 Tyson -->
+                        <section id="ts-v111" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-111-title">1.1.1 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-111-subtitle" class="lead">Office button logic fix and hardware detector NVIDIA driver recommendation fix.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-111-li1"><strong>Office install/uninstall button logic</strong> in Recommended tab now works like other categories.</li>
+                                <li id="wel-rel-ts-111-li2"><strong>Hardware detector</strong> now always returns the correct recommended driver for NVIDIA and other hardware.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.1 Tyron -->
+                        <section id="tr-v111" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-111-title">1.1.1 — July 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-111-subtitle" class="lead">Office button logic fix and hardware detector NVIDIA driver recommendation fix.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-111-li1"><strong>Office install/uninstall button logic</strong> in Recommended tab now works like other categories.</li>
+                                <li id="wel-rel-tr-111-li2"><strong>Hardware detector</strong> now always returns the correct recommended driver for NVIDIA and other hardware.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.0 Tyson -->
+                        <section id="ts-v110" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-110-title">1.1.0 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-110-subtitle" class="lead">Flatpak/Flathub installation fix: Flatpak apps can now be installed without administrator privileges.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-110-li1"><strong>Flatpak/Flathub installation:</strong> The Software Center now correctly adds Flathub for the current user, allowing Flatpak apps to be installed without requiring administrator privileges.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.1.0 Tyron -->
+                        <section id="tr-v110" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-110-title">1.1.0 — July 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-110-subtitle" class="lead">Flatpak/Flathub installation fix: Flatpak apps can now be installed without administrator privileges.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-110-li1"><strong>Flatpak/Flathub installation:</strong> The Software Center now correctly adds Flathub for the current user, allowing Flatpak apps to be installed without requiring administrator privileges.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.9 Tyson -->
+                        <section id="ts-v109" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-109-title">1.0.9 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-109-subtitle" class="lead">Software Center install buttons fix.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-109-li1"><strong>Software Center install buttons</strong> now work correctly.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.9 Tyron -->
+                        <section id="tr-v109" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-109-title">1.0.9 — July 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-109-subtitle" class="lead">Software Center install buttons fix.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-109-li1"><strong>Software Center install buttons</strong> now work correctly.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.8 Tyson -->
+                        <section id="ts-v108" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-108-title">1.0.8 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-108-subtitle" class="lead">QEMU/KVM improvements, NVIDIA driver enhancements, full i18n with language-per-file dictionary and LibreWolf switched to Flatpak.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-108-li1"><strong>QEMU/KVM:</strong> Improved integration and operation for virtual machines.</li>
+                                <li id="wel-rel-ts-108-li2"><strong>NVIDIA drivers:</strong> Enhanced detection, recommendation and more robust installation process.</li>
+                                <li id="wel-rel-ts-108-li3"><strong>Translation dictionary fragmentation:</strong> Interface texts organized by language into separate files (ES, EN, FR, PT, DE, IT, RU, RO). Program fully internationalized.</li>
+                                <li id="wel-rel-ts-108-li4"><strong>Recommended tab:</strong> Install/uninstall buttons now update state and action dynamically after each operation.</li>
+                                <li id="wel-rel-ts-108-li5"><strong>LibreWolf:</strong> Installation switched from APT/external repositories to Flatpak (Flathub) to avoid conflicts.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.8 Tyron -->
+                        <section id="tr-v108" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-108-title">1.0.8 — July 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-108-subtitle" class="lead">QEMU/KVM improvements, NVIDIA driver enhancements, full i18n with language-per-file dictionary and LibreWolf switched to Flatpak.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-108-li1"><strong>QEMU/KVM:</strong> Improved integration and operation for virtual machines.</li>
+                                <li id="wel-rel-tr-108-li2"><strong>NVIDIA drivers:</strong> Enhanced detection, recommendation and more robust installation process.</li>
+                                <li id="wel-rel-tr-108-li3"><strong>Translation dictionary fragmentation:</strong> Interface texts organized by language into separate files (ES, EN, FR, PT, DE, IT, RU, RO). Program fully internationalized.</li>
+                                <li id="wel-rel-tr-108-li4"><strong>Recommended tab:</strong> Install/uninstall buttons now update state and action dynamically after each operation.</li>
+                                <li id="wel-rel-tr-108-li5"><strong>LibreWolf:</strong> Installation switched from APT/external repositories to Flatpak (Flathub) to avoid conflicts.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 Tyson -->
+                        <section id="ts-v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-107-title">1.0.7 — July 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-107-subtitle" class="lead">Metainfo updated for AppStream/DEP-11 compliance. No functional changes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-107-li1"><strong>Metainfo</strong> updated to comply with AppStream/DEP-11 specification.</li>
+                                <li id="wel-rel-ts-107-li2"><strong>Minor integration and documentation</strong> improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 Tyron -->
+                        <section id="tr-v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-107-title">1.0.7 — July 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-107-subtitle" class="lead">Metainfo updated for AppStream/DEP-11 compliance. No functional changes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-107-li1"><strong>Metainfo</strong> updated to comply with AppStream/DEP-11 specification.</li>
+                                <li id="wel-rel-tr-107-li2"><strong>Minor integration and documentation</strong> improvements.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 Tyson -->
+                        <section id="ts-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-106-title">1.0.6 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-106-subtitle" class="lead">Software Center improvements, install detection, Epiphany replaces Midori, Shotcut replaces DaVinci Resolve.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-106-li1"><strong>Software Center</strong> now detects whether programs are already installed.</li>
+                                <li id="wel-rel-ts-106-li2"><strong>Epiphany</strong> (GNOME Web) replaces Midori as the lightweight browser option.</li>
+                                <li id="wel-rel-ts-106-li3"><strong>Shotcut</strong> replaces DaVinci Resolve for video editing in the Software Center.</li>
+                                <li id="wel-rel-ts-106-li4"><strong>Driver Center</strong> improved with optimized hardware detection and enhanced scanning.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 Tyron -->
+                        <section id="tr-v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-106-title">1.0.6 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-106-subtitle" class="lead">Software Center improvements, install detection, Epiphany replaces Midori, Shotcut replaces DaVinci Resolve.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-106-li1"><strong>Software Center</strong> now detects whether programs are already installed.</li>
+                                <li id="wel-rel-tr-106-li2"><strong>Epiphany</strong> (GNOME Web) replaces Midori as the lightweight browser option.</li>
+                                <li id="wel-rel-tr-106-li3"><strong>Shotcut</strong> replaces DaVinci Resolve for video editing in the Software Center.</li>
+                                <li id="wel-rel-tr-106-li4"><strong>Driver Center</strong> improved with optimized hardware detection and enhanced scanning.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyson -->
+                        <section id="ts-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-105-title">1.0.5 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-105-subtitle" class="lead">App ID reverted to com.soplos.welcome (dot notation restored).</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-105-li1"><strong>App ID reverted</strong> to <code>com.soplos.welcome</code> (dot notation restored after 1.0.2 change).</li>
+                                <li id="wel-rel-ts-105-li2"><strong>Assets renamed back</strong> to <code>com.soplos.welcome</code> convention (desktop file, icons, metainfo, pixmaps).</li>
+                                <li id="wel-rel-ts-105-li3"><strong>Soplos Packager injection block</strong> removed from <code>main.py</code> (reverted to clean entry point).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 Tyron -->
+                        <section id="tr-v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-105-title">1.0.5 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-105-subtitle" class="lead">App ID reverted to com.soplos.welcome (dot notation restored).</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-105-li1"><strong>App ID reverted</strong> to <code>com.soplos.welcome</code> (dot notation restored after 1.0.2 change).</li>
+                                <li id="wel-rel-tr-105-li2"><strong>Assets renamed back</strong> to <code>com.soplos.welcome</code> convention (desktop file, icons, metainfo, pixmaps).</li>
+                                <li id="wel-rel-tr-105-li3"><strong>Soplos Packager injection block</strong> removed from <code>main.py</code> (reverted to clean entry point).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyson -->
+                        <section id="ts-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-104-title">1.0.4 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-104-subtitle" class="lead">Autostart copies from system desktop file; desktop file references updated to com.soploswelcome.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-104-li1"><strong>Autostart:</strong> Now copies <code>com.soploswelcome.desktop</code> from <code>/usr/share/applications/</code> instead of writing inline content — autostart entry always matches the installed desktop file.</li>
+                                <li id="wel-rel-ts-104-li2"><strong>Desktop file references</strong> updated (<code>X-GNOME-Application-ID</code>, <code>X-AppStream-Metadata</code>, <code>Icon</code>, <code>StartupWMClass</code>) to use <code>com.soploswelcome</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 Tyron -->
+                        <section id="tr-v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-104-title">1.0.4 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-104-subtitle" class="lead">Autostart copies from system desktop file; desktop file references updated to com.soploswelcome.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-104-li1"><strong>Autostart:</strong> Now copies <code>com.soploswelcome.desktop</code> from <code>/usr/share/applications/</code> instead of writing inline content — autostart entry always matches the installed desktop file.</li>
+                                <li id="wel-rel-tr-104-li2"><strong>Desktop file references</strong> updated (<code>X-GNOME-Application-ID</code>, <code>X-AppStream-Metadata</code>, <code>Icon</code>, <code>StartupWMClass</code>) to use <code>com.soploswelcome</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyson -->
+                        <section id="ts-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-103-title">1.0.3 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-103-subtitle" class="lead">Soplos Packager App ID block injected into main.py for correct window manager integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-103-li1"><strong>App ID block injected</strong> into <code>main.py</code>: sets <code>GLib.set_prgname</code>, <code>GLib.set_application_name</code> and <code>Gtk.Window.set_default_icon_name</code> to <code>com.soploswelcome</code> for correct window manager integration.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 Tyron -->
+                        <section id="tr-v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-103-title">1.0.3 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-103-subtitle" class="lead">Soplos Packager App ID block injected into main.py for correct window manager integration.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-103-li1"><strong>App ID block injected</strong> into <code>main.py</code>: sets <code>GLib.set_prgname</code>, <code>GLib.set_application_name</code> and <code>Gtk.Window.set_default_icon_name</code> to <code>com.soploswelcome</code> for correct window manager integration.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyson -->
+                        <section id="ts-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-102-title">1.0.2 — June 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-102-subtitle" class="lead">All assets renamed to com.soploswelcome (dot removed) for Soplos Packager compatibility.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-102-li1"><strong>All assets renamed</strong> from <code>com.soplos.welcome</code> to <code>com.soploswelcome</code> (dot removed) for Soplos Packager compatibility: desktop file, icons (all sizes), metainfo and pixmaps.</li>
+                                <li id="wel-rel-ts-102-li2"><strong>App ID changed</strong> from <code>com.soplos.welcome</code> to <code>com.soploswelcome</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 Tyron -->
+                        <section id="tr-v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-102-title">1.0.2 — May 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-102-subtitle" class="lead">All assets renamed to com.soploswelcome (dot removed) for Soplos Packager compatibility.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-102-li1"><strong>All assets renamed</strong> from <code>com.soplos.welcome</code> to <code>com.soploswelcome</code> (dot removed) for Soplos Packager compatibility: desktop file, icons (all sizes), metainfo and pixmaps.</li>
+                                <li id="wel-rel-tr-102-li2"><strong>App ID changed</strong> from <code>com.soplos.welcome</code> to <code>com.soploswelcome</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyson -->
+                        <section id="ts-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-101-title">1.0.1 — May 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-101-subtitle" class="lead">Website button URL corrected to soploslinux.com/tyson.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-101-li1"><strong>Website button URL</strong> corrected from <code>soploslinux.com/distro</code> to <code>soploslinux.com/tyson</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 Tyron -->
+                        <section id="tr-v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-101-title">1.0.1 — April 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-101-subtitle" class="lead">Website button URL corrected to soploslinux.com/tyron.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-101-li1"><strong>Website button URL</strong> corrected from <code>soploslinux.com/distro</code> to <code>soploslinux.com/tyron</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyson -->
+                        <section id="ts-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-ts-100-title">1.0.0 — May 2025 <em>(Tyson)</em></span></h2>
+                            <p id="wel-rel-ts-100-subtitle" class="lead">Port of Tyron 1.0.0 to Soplos Tyson. Initial release of Soplos Welcome for Tyson.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-ts-100-li1"><strong>Port of Tyron 1.0.0</strong> to Soplos Tyson.</li>
+                                <li id="wel-rel-ts-100-li2"><strong>Welcome screen</strong> for Soplos Linux with first-run setup.</li>
+                                <li id="wel-rel-ts-100-li3"><strong>Software Center</strong> with installation of recommended software.</li>
+                                <li id="wel-rel-ts-100-li4"><strong>Driver Center</strong> for hardware configuration.</li>
+                                <li id="wel-rel-ts-100-li5"><strong>Desktop customization</strong> tools and links.</li>
+                                <li id="wel-rel-ts-100-li6"><strong>Multilingual interface</strong> with support for 8 languages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 Tyron -->
+                        <section id="tr-v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-tr-100-title">1.0.0 — April 2025 <em>(Tyron)</em></span></h2>
+                            <p id="wel-rel-tr-100-subtitle" class="lead">Initial release of Soplos Welcome.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-tr-100-li1"><strong>Welcome screen</strong> for Soplos Linux with first-run setup.</li>
+                                <li id="wel-rel-tr-100-li2"><strong>Software Center</strong> with installation of recommended software.</li>
+                                <li id="wel-rel-tr-100-li3"><strong>Driver Center</strong> for hardware configuration.</li>
+                                <li id="wel-rel-tr-100-li4"><strong>Desktop customization</strong> tools and links.</li>
+                                <li id="wel-rel-tr-100-li5"><strong>Access to help and support</strong> resources.</li>
+                                <li id="wel-rel-tr-100-li6"><strong>Multilingual interface</strong> with support for 8 languages.</li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>

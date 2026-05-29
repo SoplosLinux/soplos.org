@@ -33,6 +33,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 160px;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
@@ -628,6 +632,14 @@ footer .container p {
   margin-bottom: 20px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   max-width: 1000px;
+}
+
+.wiki-hero .hero-content h1 .hero-app-icon {
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  margin-right: 10px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
 .wiki-hero .hero-content p {
@@ -1502,7 +1514,8 @@ footer .container p {
 .toc {
   position: sticky;
   top: 100px;
-  height: fit-content;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 25px;
@@ -1545,17 +1558,51 @@ footer .container p {
   text-decoration: none;
 }
 
+/* TOC divider for multi-branch pages */
+.toc-divider {
+  margin: 10px 0 6px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+.toc-divider span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 125, 46, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* TOC scrollbar */
+.toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.toc::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.toc::-webkit-scrollbar-thumb {
+  background: rgba(255, 125, 46, 0.5);
+  border-radius: 10px;
+}
+
+.toc::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 125, 46, 0.8);
+}
+
 /* Main Content */
 .main-content {
   background: var(--dark-color, #252527);
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  min-width: 0;
 }
 
 .content-section {
   margin-bottom: 4rem;
-  scroll-margin-top: 100px;
 }
 
 .content-section:last-child {
@@ -1647,6 +1694,41 @@ footer .container p {
 .content-section li {
   margin-bottom: 8px;
   line-height: 1.6;
+}
+
+/* Screenshots gallery */
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 28px;
+  align-items: center;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 860px;
+}
+
+.gallery-grid figure img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: block;
+}
+
+.gallery-grid figure figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+  font-style: italic;
 }
 
 /* Info Boxes */
@@ -2780,4 +2862,351 @@ code {
     height: auto;
     display: block;
   }
+}
+
+/* =========================
+   RELEASES INDEX PAGE
+   ========================= */
+.releases-section {
+  padding: 60px 0;
+}
+
+.releases-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--light-text);
+}
+
+.releases-section h2 i {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.releases-section-alt {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.releases-grid-distros {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.release-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.release-card:hover {
+  background: rgba(255, 125, 46, 0.08);
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  color: inherit;
+}
+
+.release-card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 125, 46, 0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.release-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.release-card-icon i {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.release-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.release-card-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--light-text);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.release-card-body p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.release-version-badge {
+  display: inline-block;
+  background: rgba(255, 125, 46, 0.12);
+  color: var(--primary-color);
+  border: 1px solid rgba(255, 125, 46, 0.3);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.release-card-arrow {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.release-card:hover .release-card-arrow {
+  color: var(--primary-color);
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .releases-grid,
+  .releases-grid-distros {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Distro release comparison tables
+   ============================================================ */
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0 2rem;
+  border-radius: var(--border-radius);
+  max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #ef5a33) rgba(255, 255, 255, 0.08);
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: var(--accent-color, #ef5a33);
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--accent-color, #ef5a33) 80%, white);
+}
+
+.table-responsive .wiki-table {
+  max-width: none;
+  min-width: 700px;
+}
+
+.wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: var(--bg-light, #252527);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.wiki-table thead tr {
+  background: rgba(239, 90, 51, 0.15);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.wiki-table thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.wiki-table thead th small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 2px;
+}
+
+.wiki-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.wiki-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.wiki-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.wiki-table tbody td {
+  padding: 0.65rem 1rem;
+  color: var(--text-color);
+  vertical-align: middle;
+}
+
+.wiki-table tbody td:first-child {
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 180px;
+}
+
+@media (max-width: 768px) {
+  .wiki-table thead th,
+  .wiki-table tbody td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  .wiki-table tbody td:first-child {
+    width: auto;
+  }
+}
+
+/* Table expand button */
+.table-expand-wrapper {
+  position: relative;
+}
+
+.table-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.35rem;
+}
+
+.table-expand-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.table-expand-btn:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Table fullscreen modal */
+.table-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.table-modal-overlay.visible {
+  opacity: 1;
+}
+
+.table-modal-box {
+  background: var(--bg-light, #252527);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.table-modal-close {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.table-modal-close:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.table-modal-body {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #ef5a33) rgba(255,255,255,0.08);
+}
+
+.table-modal-body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.table-modal-body::-webkit-scrollbar-thumb {
+  background: var(--accent-color, #ef5a33);
+  border-radius: 3px;
+}
+
+.table-modal-body .wiki-table {
+  min-width: unset;
+  font-size: 0.85rem;
 }

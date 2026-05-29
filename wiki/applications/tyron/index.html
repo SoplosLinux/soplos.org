@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications for Tyron - Soplos Linux Wiki</title>
     <meta name="description"
-        content="Exclusive tools for Soplos Tyron: docklike, GRUB editor, Plymouth manager, repo selector, theme manager, welcome and more.">
+        content="Exclusive tools for Soplos Tyron: GRUB editor, Plymouth manager, repo selector, theme manager, welcome and more.">
 
     <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
 
@@ -56,6 +56,8 @@
                                     class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
@@ -123,15 +125,16 @@
                     <aside class="toc">
                         <h3 id="tyron-apps-toc-title">Contents</h3>
                         <ul>
-                            <li><a href="#docklike" id="tyron-apps-toc-docklike">Soplos Docklike</a></li>
+                            <li><a href="#appimagemanager" id="tyron-apps-toc-appimage">Soplos AppImage Manager</a></li>
                             <li><a href="#grub" id="tyron-apps-toc-grub">Soplos GRUB Editor</a></li>
+                            <li><a href="#kernelinstaller" id="tyron-apps-toc-kernelinstaller">Soplos Kernel Installer</a></li>
                             <li><a href="#plymouth" id="tyron-apps-toc-plymouth">Soplos Plymouth Manager</a></li>
                             <li><a href="#repo" id="tyron-apps-toc-repo">Soplos Repo Selector</a></li>
+                            <li><a href="#syscleaner" id="tyron-apps-toc-syscleaner">Soplos Sys Cleaner</a></li>
                             <li><a href="#theme" id="tyron-apps-toc-theme">Soplos Theme Manager</a></li>
+                            <li><a href="#webappmanager" id="tyron-apps-toc-webappmanager">Soplos WebApp Manager</a></li>
                             <li><a href="#welcome" id="tyron-apps-toc-welcome">Soplos Welcome</a></li>
                             <li><a href="#welcomelive" id="tyron-apps-toc-welcomelive">Soplos Welcome Live</a></li>
-                            <li><a href="#webappmanager" id="tyron-apps-toc-webappmanager">Soplos WebApp Manager</a>
-                            </li>
                         </ul>
                     </aside>
 
@@ -146,22 +149,20 @@
                         </section>
 
                         <div class="tools-grid">
-                            <div class="tool-card" id="docklike">
+                            <div class="tool-card" id="appimagemanager">
                                 <div class="tool-icon">
-                                    <img src="../../../images/icons/com.soplos.docklike.png" alt="Soplos Docklike Icon">
+                                    <img src="../../../images/icons/org.soplos.appimagemanager.png"
+                                        alt="Soplos AppImage Manager Icon">
                                 </div>
-                                <h4 id="tyron-apps-docklike-title">Soplos Docklike</h4>
-                                <p id="tyron-apps-docklike-desc">A modern dock for XFCE inspired by macOS. Features
-                                    include auto-hide, icon
-                                    magnification, and
-                                    customizable themes.</p>
+                                <h4 id="tyron-apps-appimage-title">Soplos AppImage Manager</h4>
+                                <p id="tyron-apps-appimage-desc">Portable application manager for AppImage files. Integrate, launch and update AppImage packages with desktop and menu support.</p>
                                 <ul>
-                                    <li id="tyron-apps-docklike-feature-1">Auto-hide functionality</li>
-                                    <li id="tyron-apps-docklike-feature-2">Icon zoom on hover</li>
-                                    <li id="tyron-apps-docklike-feature-3">Customizable position and size</li>
+                                    <li id="tyron-apps-appimage-feature-1">Automatic desktop integration with icon extraction</li>
+                                    <li id="tyron-apps-appimage-feature-2">Built-in update checker for installed AppImages</li>
+                                    <li id="tyron-apps-appimage-feature-3">Property editor with custom icon and name support</li>
                                 </ul>
-                                <a href="../soplos-docklike/" class="tool-link" id="tyron-apps-docklike-link">Learn More
-                                    <i class="fas fa-arrow-right"></i></a>
+                                <a href="../soplos-appimage-manager/" class="tool-link"
+                                    id="tyron-apps-appimage-link">Learn more <i class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <div class="tool-card" id="grub">
@@ -180,6 +181,22 @@
                                 </ul>
                                 <a href="../soplos-grub-editor/" class="tool-link" id="tyron-apps-grub-link">Learn more
                                     <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="kernelinstaller">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.kernel-installer.png"
+                                        alt="Soplos Kernel Installer Icon">
+                                </div>
+                                <h4 id="tyron-apps-kernelinstaller-title">Soplos Kernel Installer</h4>
+                                <p id="tyron-apps-kernelinstaller-desc">Build and install custom Linux kernels with a graphical interface. Select kernel profiles and patches optimized for gaming, audio, or minimal setups.</p>
+                                <ul>
+                                    <li id="tyron-apps-kernelinstaller-feature-1">Multiple profiles: Gaming, Audio/Video, Minimal/Office, Soplos Stock</li>
+                                    <li id="tyron-apps-kernelinstaller-feature-2">Patch support: BORE, PREEMPT_RT, Zen, NTSYNC</li>
+                                    <li id="tyron-apps-kernelinstaller-feature-3">One-click Soplos Kernels repository integration</li>
+                                </ul>
+                                <a href="../soplos-kernel-installer/" class="tool-link"
+                                    id="tyron-apps-kernelinstaller-link">Learn more <i class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <div class="tool-card" id="plymouth">
@@ -219,6 +236,22 @@
                                     more <i class="fas fa-arrow-right"></i></a>
                             </div>
 
+                            <div class="tool-card" id="syscleaner">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.sys-cleaner.png"
+                                        alt="Soplos Sys Cleaner Icon">
+                                </div>
+                                <h4 id="tyron-apps-syscleaner-title">Soplos Sys Cleaner</h4>
+                                <p id="tyron-apps-syscleaner-desc">System cleaner for removing orphaned packages, cache, logs and temporary files. Keeps your system fast and lean.</p>
+                                <ul>
+                                    <li id="tyron-apps-syscleaner-feature-1">Package cache and orphaned dependency cleanup</li>
+                                    <li id="tyron-apps-syscleaner-feature-2">Log and temporary file management</li>
+                                    <li id="tyron-apps-syscleaner-feature-3">Disk usage analysis</li>
+                                </ul>
+                                <a href="../soplos-sys-cleaner/" class="tool-link"
+                                    id="tyron-apps-syscleaner-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
                             <div class="tool-card" id="theme">
                                 <div class="tool-icon">
                                     <img src="../../../images/icons/com.soplos.thememanager.png"
@@ -236,6 +269,23 @@
                                 </ul>
                                 <a href="../soplos-theme-manager/" class="tool-link" id="tyron-apps-theme-link">Learn
                                     more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <div class="tool-card" id="webappmanager">
+                                <div class="tool-icon">
+                                    <img src="../../../images/icons/org.soplos.webappmanager.png"
+                                        alt="Soplos WebApp Manager Icon">
+                                </div>
+                                <h4 id="tyron-apps-webappmanager-title">Soplos WebApp Manager</h4>
+                                <p id="tyron-apps-webappmanager-desc">Transform websites into independent desktop
+                                    applications with isolated profiles and menu integration.</p>
+                                <ul>
+                                    <li id="tyron-apps-webappmanager-feature-1">Creates standalone app windows</li>
+                                    <li id="tyron-apps-webappmanager-feature-2">Isolated browsing profiles</li>
+                                    <li id="tyron-apps-webappmanager-feature-3">Custom icon support</li>
+                                </ul>
+                                <a href="../soplos-webapp-manager/" class="tool-link"
+                                    id="tyron-apps-webappmanager-link">Learn more <i class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <div class="tool-card" id="welcome">
@@ -271,23 +321,6 @@
                                 </ul>
                                 <a href="../soplos-welcome-live/" class="tool-link"
                                     id="tyron-apps-welcomelive-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                            </div>
-
-                            <div class="tool-card" id="webappmanager">
-                                <div class="tool-icon">
-                                    <img src="../../../images/icons/org.soplos.webappmanager.png"
-                                        alt="Soplos WebApp Manager Icon">
-                                </div>
-                                <h4 id="tyron-apps-webappmanager-title">Soplos WebApp Manager</h4>
-                                <p id="tyron-apps-webappmanager-desc">Transform websites into independent desktop
-                                    applications with isolated profiles and menu integration.</p>
-                                <ul>
-                                    <li id="tyron-apps-webappmanager-feature-1">Creates standalone app windows</li>
-                                    <li id="tyron-apps-webappmanager-feature-2">Isolated browsing profiles</li>
-                                    <li id="tyron-apps-webappmanager-feature-3">Custom icon support</li>
-                                </ul>
-                                <a href="../soplos-webapp-manager/" class="tool-link"
-                                    id="tyron-apps-webappmanager-link">Learn more <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </article>

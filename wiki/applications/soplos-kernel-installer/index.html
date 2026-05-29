@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos Kernel Installer - Soplos Linux Wiki</title>
+    <meta name="description" content="Documentation for Soplos Kernel Installer, a graphical tool for downloading, patching, compiling and installing Linux kernels on Soplos Linux.">
+    <meta name="keywords" content="soplos, kernel, installer, compile, patch, linux kernel">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../"><i class="fas fa-home"></i> <span id="kernelinstaller-breadcrumb-home">Home</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../"><span id="kernelinstaller-breadcrumb-wiki">Wiki</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="kernelinstaller-breadcrumb">Soplos Kernel Installer</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>
+                            <img src="../../../images/icons/org.soplos.kernel-installer.png" alt="Icon"
+                                style="height: 48px; vertical-align: middle; margin-right: 10px;">
+                            <span id="kernelinstaller-hero-title">Soplos Kernel Installer</span>
+                        </h1>
+                        <p id="kernelinstaller-hero-desc">Download, patch, compile and install custom Linux kernels on Soplos Linux with a graphical interface.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <aside class="toc">
+                        <h3 id="kernelinstaller-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#overview" id="kernelinstaller-toc-1">Overview</a></li>
+                            <li><a href="#features" id="kernelinstaller-toc-2">Features</a></li>
+                            <li><a href="#soplos-kernels" id="kernelinstaller-toc-3">Soplos Kernels</a></li>
+                            <li><a href="#patches" id="kernelinstaller-toc-4">Available patches</a></li>
+                            <li><a href="#screenshots" id="kernelinstaller-toc-5">Screenshots</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <section class="content-section" id="overview">
+                            <h2><span id="kernelinstaller-overview-title">Overview</span></h2>
+                            <p id="kernelinstaller-overview-p1">Soplos Kernel Installer is a comprehensive graphical tool for downloading, patching, compiling and installing custom Linux kernels from kernel.org. It provides an intuitive tabbed interface for managing kernel versions, patches, profiles and configurations.</p>
+                            <p id="kernelinstaller-overview-p2">It also includes a dedicated tab for installing pre-built Soplos kernels directly from the official repository with a single click — no compilation required.</p>
+                        </section>
+
+                        <section class="content-section" id="features">
+                            <h2><span id="kernelinstaller-features-title">Key Features</span></h2>
+                            <ul>
+                                <li><strong id="kernelinstaller-feat-1-title">Multiple channels:</strong> <span id="kernelinstaller-feat-1-desc">Stable, LTS, RC and Soplos Featured — curated kernel versions recommended for Soplos Linux.</span></li>
+                                <li><strong id="kernelinstaller-feat-2-title">Kernel profiles:</strong> <span id="kernelinstaller-feat-2-desc">Gaming, Audio/Video, Minimal/Office and Hardware Optimized — pre-configured Kconfig sets for each use case.</span></li>
+                                <li><strong id="kernelinstaller-feat-3-title">Source reuse:</strong> <span id="kernelinstaller-feat-3-desc">Recycle existing kernel sources for faster recompilation, with automatic patch conflict detection.</span></li>
+                                <li><strong id="kernelinstaller-feat-4-title">Secure Boot:</strong> <span id="kernelinstaller-feat-4-desc">Full MOK key management — generate keys, enroll in BIOS, sign kernel and EFI. Includes NVIDIA DKMS module signing and auto-enroll prompt.</span></li>
+                                <li><strong id="kernelinstaller-feat-5-title">Installation history:</strong> <span id="kernelinstaller-feat-5-desc">Persistent build history with automatic kernel tagging (XanMod, Liquorix, Zen, System...) that survives build directory cleanup.</span></li>
+                                <li><strong id="kernelinstaller-feat-6-title">Save packages:</strong> <span id="kernelinstaller-feat-6-desc">Offers to save compiled .deb packages to a chosen folder before deleting the build directory.</span></li>
+                                <li><strong id="kernelinstaller-feat-7-title">Keyboard shortcuts:</strong> <span id="kernelinstaller-feat-7-desc">Ctrl+Q (quit), Ctrl+W (close), F5 (refresh), F1 (about), Ctrl+Tab / Ctrl+Shift+Tab (switch tabs).</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="soplos-kernels">
+                            <h2><span id="kernelinstaller-soplos-title">Soplos Kernels</span></h2>
+                            <p id="kernelinstaller-soplos-p1">The Soplos Kernels tab lets you install pre-built kernels from the official Soplos repository without any compilation. The list is loaded dynamically from apt-cache, so any new kernel added to the repository appears automatically.</p>
+                            <ul>
+                                <li><strong>linux-soplos-stock</strong> — <span id="kernelinstaller-soplos-stock">Vanilla upstream kernel, base for all Soplos distributions.</span></li>
+                                <li><strong>linux-soplos-bore</strong> — <span id="kernelinstaller-soplos-bore">BORE scheduler (Burst-Oriented Response Enhancer) for improved desktop responsiveness.</span></li>
+                                <li><strong>linux-soplos-bore-ntsync</strong> — <span id="kernelinstaller-soplos-borentsync">BORE + NTSYNC — optimized for Wine and Proton gaming.</span></li>
+                                <li><strong>linux-soplos-zen</strong> — <span id="kernelinstaller-soplos-zen">Zen kernel with desktop and gaming optimizations.</span></li>
+                                <li><strong>linux-soplos-ntsync</strong> — <span id="kernelinstaller-soplos-ntsync">NT synchronization primitives for Wine/Proton compatibility.</span></li>
+                                <li><strong>linux-soplos-rt</strong> — <span id="kernelinstaller-soplos-rt">Real-Time kernel (PREEMPT_RT) for audio/video production.</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="patches">
+                            <h2><span id="kernelinstaller-patches-title">Available patches</span></h2>
+                            <ul>
+                                <li><strong>BORE</strong> — <span id="kernelinstaller-patch-bore">Burst-Oriented Response Enhancer scheduler. Improves desktop responsiveness and application latency.</span></li>
+                                <li><strong>PREEMPT_RT</strong> — <span id="kernelinstaller-patch-rt">Full real-time preemption. For kernels 6.12+ it is integrated upstream — no external patch download needed.</span></li>
+                                <li><strong>Zen</strong> — <span id="kernelinstaller-patch-zen">Desktop and gaming optimizations from the Zen kernel project.</span></li>
+                                <li><strong>NTSYNC</strong> — <span id="kernelinstaller-patch-ntsync">NT synchronization primitives. Significantly improves Wine and Proton compatibility for gaming.</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="screenshots">
+                            <h2><span id="kernelinstaller-screenshots-title">Screenshots</span></h2>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot1.png" alt="Kernel Installer main window">
+                                    <figcaption id="kernelinstaller-screenshot-1">Main window — Build Kernel tab</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot2.png" alt="Kernel Installer progress">
+                                    <figcaption id="kernelinstaller-screenshot-2">Compilation progress</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot3.png" alt="Kernel Installer — Compilation Log">
+                                    <figcaption id="kernelinstaller-screenshot-3">Compilation Log</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot4.png" alt="Kernel Installer stock profile">
+                                    <figcaption id="kernelinstaller-screenshot-4">Stock kernel profile view</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot5.png" alt="Soplos Kernels tab">
+                                    <figcaption id="kernelinstaller-screenshot-5">Soplos Kernels tab — one-click install</figcaption>
+                                </figure>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2026 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

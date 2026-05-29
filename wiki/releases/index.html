@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="rel-page-title">Releases - Soplos Linux Wiki</title>
-    <meta name="description" content="History of Soplos Linux releases and major updates.">
+    <meta name="description" content="Release history and changelogs for all Soplos Linux applications and distributions.">
 
     <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
     <link rel="stylesheet" href="../styles/wiki.css">
@@ -53,6 +53,8 @@
                                     class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
@@ -100,100 +102,185 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><i class="fas fa-rocket"></i> <span id="rel-hero-title">Releases</span></h1>
-                        <p id="rel-hero-subtitle">History and release notes for all Soplos Linux versions.</p>
+                        <h1><i class="fas fa-tag"></i> <span id="rel-hero-title">Releases</span></h1>
+                        <p id="rel-hero-subtitle">Changelogs and release notes for all Soplos Linux applications and distributions.</p>
                     </div>
                 </div>
             </section>
         </div>
 
-        <section class="wiki-content">
+        <!-- Distributions Section -->
+        <section class="releases-section">
             <div class="container">
-                <div class="content-wrapper">
-                    <aside class="toc">
-                        <h3 id="rel-toc-title">Versions</h3>
-                        <ul>
-                            <li><a href="#vpm-2-0-0" class="toc-link" id="rel-pm2-link">Soplos Plymouth Manager 2.0.0</a></li>
-                            <li><a href="#v1-0-4" class="toc-link" id="rel-104-link">Soplos Linux 1.0.4 Beta</a></li>
-                        </ul>
-                    </aside>
+                <h2 id="rel-distros-title"><i class="fas fa-compact-disc"></i> Distributions</h2>
+                <div class="releases-grid releases-grid-distros">
 
-                    <article class="main-content">
-                        <!-- PLYMOUTH MANAGER 2.0.0 -->
-                        <section id="vpm-2-0-0" class="content-section">
-                            <h2><i class="fas fa-tag"></i> <span id="rel-pm2-title">Soplos Plymouth Manager 2.0.0</span></h2>
-                            <div class="release-info">
-                                <p id="rel-pm2-subtitle" class="lead">Comprehensive rewrite of the Plymouth theme visualization and management engine with advanced Wayland support.</p>
-                            </div>
+                    <a href="tyron/" class="release-card release-card-distro">
+                        <div class="release-card-icon">
+                            <img src="../../images/logo/soplos-logo.png" alt="Soplos Tyron">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Tyron</h3>
+                            <p id="rel-idx-tyron-desc">XFCE desktop distribution. Lightweight, modular and built for customization.</p>
+                            <span class="release-version-badge">RC1</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
 
-                            <ul>
-                                <li id="rel-pm2-li1"><strong>Modular Architecture:</strong> New decoupled core that improves stability and facilitates the implementation of future features.</li>
-                                <li id="rel-pm2-li2"><strong>Wayland Support:</strong> Native and stable screenshot capture in GNOME (Boro) environments under the Wayland protocol.</li>
-                                <li id="rel-pm2-li3"><strong>Intelligent Previews:</strong> Optimized rendering engine with automatic environment detection (Xfce, KDE, GNOME).</li>
-                                <li id="rel-pm2-li4"><strong>TTY Management:</strong> Improved preview for console themes and correction of the duplicated password prompt.</li>
-                            </ul>
-                        </section>
+                    <a href="tyson/" class="release-card release-card-distro">
+                        <div class="release-card-icon">
+                            <img src="../../images/logo/soplos-logo.png" alt="Soplos Tyson">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Tyson</h3>
+                            <p id="rel-idx-tyson-desc">KDE Plasma desktop distribution. Feature-rich, flexible and highly configurable.</p>
+                            <span class="release-version-badge">RC1</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
 
-                        <section id="v1-0-4" class="content-section">
-                            <h2><i class="fas fa-tag"></i> <span id="rel-104-title">Soplos Linux 1.0.4 Beta</span></h2>
-                            <div class="release-info">
-                                <p id="rel-104-subtitle" class="lead">This update focuses on securing hardware
-                                    compatibility during installation and polishing the desktop experience to the
-                                    millimeter.</p>
-                            </div>
+                    <a href="boro/" class="release-card release-card-distro">
+                        <div class="release-card-icon">
+                            <img src="../../images/logo/soplos-logo.png" alt="Soplos Boro">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Boro</h3>
+                            <p id="rel-idx-boro-desc">GNOME desktop distribution. Modern, clean and designed for productivity.</p>
+                            <span class="release-version-badge">RC1</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
 
-                            <!-- BASE ENGINE -->
-                            <div class="subsection-header">
-                                <h3 id="rel-104-base-title"><i class="fas fa-cog"></i> Base Engine</h3>
-                                <div class="accent-hr"></div>
-                            </div>
-                            <p id="rel-104-base-desc">Common improvements for Boro, Tyron and Tyson:</p>
+                </div>
+            </div>
+        </section>
 
-                            <ul>
-                                <li id="rel-104-base-li1"><strong>All-Terrain Initrd:</strong> [Note 1]</li>
-                                <li id="rel-104-base-li2"><strong>Auto-optimization:</strong> [Note 2]</li>
-                                <li id="rel-104-base-li3"><strong>Installer Stability:</strong> [Note 3]</li>
-                                <li id="rel-104-base-li4"><strong>Cleanup:</strong> [Note 4]</li>
-                                <li id="rel-104-base-li5"><strong>Hygiene:</strong> [Note 5]</li>
-                            </ul>
+        <!-- Applications Section -->
+        <section class="releases-section releases-section-alt">
+            <div class="container">
+                <h2 id="rel-apps-title"><i class="fas fa-box-open"></i> Soplos Applications</h2>
+                <div class="releases-grid">
 
-                            <!-- BORO -->
-                            <div class="subsection-header">
-                                <h3 id="rel-104-boro-title"><i class="fas fa-desktop"></i> Soplos Boro</h3>
-                                <div class="accent-hr"></div>
-                            </div>
-                            <ul>
-                                <li id="rel-104-boro-li1"><strong>GDM3:</strong> [Note 1]</li>
-                                <li id="rel-104-boro-li2"><strong>Pure GNOME:</strong> [Note 2]</li>
-                                <li id="rel-104-boro-li3"><strong>Interface:</strong> [Note 3]</li>
-                            </ul>
+                    <a href="soplos-appimage-manager/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.appimagemanager.png" alt="Soplos AppImage Manager">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos AppImage Manager</h3>
+                            <p id="rel-idx-aim-desc">Integrate AppImages into the desktop menu with metadata extraction and update checking.</p>
+                            <span class="release-version-badge">1.0.1</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
 
-                            <!-- TYSON -->
-                            <div class="subsection-header">
-                                <h3 id="rel-104-tyson-title"><i class="fas fa-desktop"></i> Soplos Tyson</h3>
-                                <div class="accent-hr"></div>
-                            </div>
-                            <ul>
-                                <li id="rel-104-tyson-li1"><strong>Shielded KWin:</strong> [Note 1]</li>
-                                <li id="rel-104-tyson-li2"><strong>GTK/Qt Integration:</strong> [Note 2]</li>
-                                <li id="rel-104-tyson-li3"><strong>Dynamic Trash Can:</strong> [Note 3]</li>
-                                <li id="rel-104-tyson-li4"><strong>Clean Start Menu:</strong> [Note 4]</li>
-                                <li id="rel-104-tyson-li5"><strong>Wayland:</strong> [Note 5]</li>
-                            </ul>
+                    <a href="soplos-grub-editor/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos GRUB Editor</h3>
+                            <p id="rel-idx-ge-desc">Graphical GRUB2 editor: themes, entries, submenu support and auto-sync on startup.</p>
+                            <span class="release-version-badge">2.0.2-4</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
 
-                            <!-- TYRON -->
-                            <div class="subsection-header">
-                                <h3 id="rel-104-tyron-title"><i class="fas fa-desktop"></i> Soplos Tyron</h3>
-                                <div class="accent-hr"></div>
-                            </div>
-                            <ul>
-                                <li id="rel-104-tyron-li1"><strong>XFCE 4.20:</strong> Configuration isolation for
-                                    improved stability.</li>
-                                <li id="rel-104-tyron-li2"><strong>Core:</strong> Inherits all critical base engine
-                                    improvements.</li>
-                            </ul>
-                        </section>
-                    </article>
+                    <a href="soplos-kernel-installer/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.kernel-installer.png" alt="Soplos Kernel Installer">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Kernel Installer</h3>
+                            <p id="rel-idx-ki-desc">Graphical kernel builder with patch support (BORE, Zen, NTSYNC, RT) and one-click Soplos kernels.</p>
+                            <span class="release-version-badge">1.0.0</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-plymouth-manager/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Plymouth Manager</h3>
+                            <p id="rel-idx-pm-desc">Boot splash theme manager with Wayland support, smart previews and modular architecture.</p>
+                            <span class="release-version-badge">2.0.0-5</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-repo-selector/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.reposelector.png" alt="Soplos Repo Selector">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Repo Selector</h3>
+                            <p id="rel-idx-rs-desc">APT repository manager with real-time search, DEB822 modernizer and mirror speed testing.</p>
+                            <span class="release-version-badge">2.0.2-8</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-sys-cleaner/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.sys-cleaner.png" alt="Soplos Sys Cleaner">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Sys Cleaner</h3>
+                            <p id="rel-idx-sc-desc">Dual-layer system maintenance: Flatpak, Snap, cache, drivers, kernels, APT and more.</p>
+                            <span class="release-version-badge">1.0.2-1</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-theme-manager/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.thememanager.png" alt="Soplos Theme Manager">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Theme Manager</h3>
+                            <p id="rel-idx-tm-desc">Tabbed XFCE theming: themes, wallpapers, user, panel and dock. Bundle export (.sth).</p>
+                            <span class="release-version-badge">2.0.0</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-webapp-manager/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.webappmanager.png" alt="Soplos WebApp Manager">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos WebApp Manager</h3>
+                            <p id="rel-idx-wm-desc">Create desktop apps from websites with isolated profiles and incognito mode support.</p>
+                            <span class="release-version-badge">1.0.0-4</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-welcome/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.welcome.png" alt="Soplos Welcome">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Welcome</h3>
+                            <p id="rel-idx-wel-desc">First-run experience with driver setup, app installer and system configuration.</p>
+                            <span class="release-version-badge">2.0.9</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
+                    <a href="soplos-welcome-live/" class="release-card">
+                        <div class="release-card-icon">
+                            <img src="../../images/icons/org.soplos.welcomelive.png" alt="Soplos Welcome Live">
+                        </div>
+                        <div class="release-card-body">
+                            <h3>Soplos Welcome Live</h3>
+                            <p id="rel-idx-wl-desc">Live session tool with CHROOT recovery, guided rescue operations and GParted integration.</p>
+                            <span class="release-version-badge">2.0.2</span>
+                        </div>
+                        <span class="release-card-arrow"><i class="fas fa-chevron-right"></i></span>
+                    </a>
+
                 </div>
             </div>
         </section>

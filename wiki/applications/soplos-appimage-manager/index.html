@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos AppImage Manager - Soplos Linux Wiki</title>
+    <meta name="description" content="Documentation for Soplos AppImage Manager, an AppImage integration tool for Soplos Linux.">
+    <meta name="keywords" content="soplos, appimage, manager, integration, desktop">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System
+                                        Requirements</a></li>
+                                <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../"><i class="fas fa-home"></i> <span id="appimagemanager-breadcrumb-home">Home</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../"><span id="appimagemanager-breadcrumb-wiki">Wiki</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="appimagemanager-breadcrumb">Soplos AppImage Manager</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>
+                            <img src="../../../images/icons/org.soplos.appimagemanager.png" alt="Icon"
+                                style="height: 48px; vertical-align: middle; margin-right: 10px;">
+                            <span id="appimagemanager-hero-title">Soplos AppImage Manager</span>
+                        </h1>
+                        <p id="appimagemanager-hero-desc">Integrate and manage AppImage applications on your Soplos Linux desktop with a single click.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Table of Contents -->
+                    <aside class="toc">
+                        <h3 id="appimagemanager-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#overview" id="appimagemanager-toc-1">Overview</a></li>
+                            <li><a href="#features" id="appimagemanager-toc-2">Features</a></li>
+                            <li><a href="#how-it-works" id="appimagemanager-toc-3">How it works</a></li>
+                            <li><a href="#screenshots" id="appimagemanager-toc-4">Screenshots</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <article class="main-content">
+
+                        <section class="content-section" id="overview">
+                            <h2><span id="appimagemanager-overview-title">Overview</span></h2>
+                            <p id="appimagemanager-overview-p1">Soplos AppImage Manager lets you easily integrate AppImage applications into your Soplos Linux desktop. Select any AppImage file and the manager moves it to ~/AppImages/, extracts its icon and metadata, and creates a .desktop entry so the app appears in your application menu — no manual steps needed.</p>
+                            <p id="appimagemanager-overview-p2">The manager also detects AppImages already present in ~/AppImages/ regardless of their origin, whether installed by Soplos Welcome, placed manually, or downloaded from any source, and offers a one-click integration button for each.</p>
+                        </section>
+
+                        <section class="content-section" id="features">
+                            <h2><span id="appimagemanager-features-title">Key Features</span></h2>
+                            <ul>
+                                <li><strong id="appimagemanager-feat-1-title">Add AppImages:</strong> <span id="appimagemanager-feat-1-desc">File chooser or drag &amp; drop — the file is moved to ~/AppImages/ automatically.</span></li>
+                                <li><strong id="appimagemanager-feat-2-title">Metadata extraction:</strong> <span id="appimagemanager-feat-2-desc">Icon, name, version and description are extracted directly from the AppImage itself.</span></li>
+                                <li><strong id="appimagemanager-feat-3-title">Desktop integration:</strong> <span id="appimagemanager-feat-3-desc">A .desktop file is created in ~/.local/share/applications/ so the app appears in the system menu immediately.</span></li>
+                                <li><strong id="appimagemanager-feat-4-title">Universal detection:</strong> <span id="appimagemanager-feat-4-desc">Recognises AppImages installed by any source and provides a one-click integration button for each unregistered file.</span></li>
+                                <li><strong id="appimagemanager-feat-5-title">Auto-refresh:</strong> <span id="appimagemanager-feat-5-desc">File monitor watches ~/AppImages/ and ~/.local/share/applications/ — no manual refresh needed.</span></li>
+                                <li><strong id="appimagemanager-feat-6-title">Properties:</strong> <span id="appimagemanager-feat-6-desc">Edit name, version, description, categories and update URL for each AppImage.</span></li>
+                                <li><strong id="appimagemanager-feat-7-title">Run as root:</strong> <span id="appimagemanager-feat-7-desc">Mark any AppImage to launch with pkexec — a PolicyKit authentication dialog appears on launch.</span></li>
+                                <li><strong id="appimagemanager-feat-8-title">Automatic updates:</strong> <span id="appimagemanager-feat-8-desc">Checks GitHub, GitLab and Codeberg release APIs, direct URL comparison, or embedded update info. The "Check All Updates" button inspects all AppImages at once.</span></li>
+                                <li><strong id="appimagemanager-feat-9-title">Run &amp; Delete:</strong> <span id="appimagemanager-feat-9-desc">Launch any managed AppImage directly from the manager, or remove the AppImage, icon and desktop entry in one click.</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="how-it-works">
+                            <h2><span id="appimagemanager-howto-title">How it works</span></h2>
+                            <ol>
+                                <li id="appimagemanager-step-1">Select an .AppImage file via the file chooser or drag &amp; drop it onto the window.</li>
+                                <li id="appimagemanager-step-2">The file is moved to ~/AppImages/.</li>
+                                <li id="appimagemanager-step-3">Metadata is extracted using 7zz or --appimage-extract.</li>
+                                <li id="appimagemanager-step-4">The icon is saved persistently to ~/AppImages/.icons/.</li>
+                                <li id="appimagemanager-step-5">A .desktop file is written to ~/.local/share/applications/.</li>
+                                <li id="appimagemanager-step-6">The app appears in the application menu immediately — no restart required.</li>
+                            </ol>
+                        </section>
+
+                        <section class="content-section" id="screenshots">
+                            <h2><span id="appimagemanager-screenshots-title">Screenshots</span></h2>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot1.png"
+                                        alt="AppImage Manager — Main Interface">
+                                    <figcaption id="appimagemanager-screenshot-1">Main Interface</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot2.png"
+                                        alt="AppImage detected">
+                                    <figcaption id="appimagemanager-screenshot-2">AppImage detected</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot3.png"
+                                        alt="Mixed list">
+                                    <figcaption id="appimagemanager-screenshot-3">Mixed list</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot4.png"
+                                        alt="Integrated AppImages">
+                                    <figcaption id="appimagemanager-screenshot-4">Integrated AppImages</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot5.png"
+                                        alt="Properties dialog">
+                                    <figcaption id="appimagemanager-screenshot-5">Properties dialog</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot6.png"
+                                        alt="AppImage Manager properties update URL">
+                                    <figcaption id="appimagemanager-screenshot-6">Properties — Update URL</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot7.png"
+                                        alt="AppImage Manager up to date">
+                                    <figcaption id="appimagemanager-screenshot-7">Up to date</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-appimage-manager/screenshot8.png"
+                                        alt="Update available">
+                                    <figcaption id="appimagemanager-screenshot-8">Update available</figcaption>
+                                </figure>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2026 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

@@ -61,6 +61,8 @@
                                     class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
@@ -124,11 +126,15 @@
                     <aside class="toc">
                         <h3 id="boro-apps-toc-title">Contents</h3>
                         <ul>
+                            <li><a href="#appimagemanager" id="boro-apps-toc-appimage">Soplos AppImage Manager</a></li>
+                            <li><a href="#grub" id="boro-apps-toc-grub">Soplos GRUB Editor</a></li>
+                            <li><a href="#kernelinstaller" id="boro-apps-toc-kernelinstaller">Soplos Kernel Installer</a></li>
+                            <li><a href="#plymouth" id="boro-apps-toc-plymouth">Soplos Plymouth Manager</a></li>
+                            <li><a href="#repo" id="boro-apps-toc-repo">Soplos Repo Selector</a></li>
+                            <li><a href="#syscleaner" id="boro-apps-toc-syscleaner">Soplos Sys Cleaner</a></li>
+                            <li><a href="#webappmanager" id="boro-apps-toc-webappmanager">Soplos WebApp Manager</a></li>
                             <li><a href="#welcome" id="boro-apps-toc-welcome">Soplos Welcome</a></li>
-                            <li><a href="#repo" id="boro-apps-toc-repo">Repo Selector</a></li>
-                            <li><a href="#grub" id="boro-apps-toc-grub">Grub Editor</a></li>
-                            <li><a href="#plymouth" id="boro-apps-toc-plymouth">Plymouth Manager</a></li>
-                            <li><a href="#webappmanager" id="boro-apps-toc-webappmanager">WebApp Manager</a></li>
+                            <li><a href="#welcomelive" id="boro-apps-toc-welcomelive">Soplos Welcome Live</a></li>
                         </ul>
                     </aside>
 
@@ -143,33 +149,19 @@
                         </section>
 
                         <div class="tools-grid">
-                            <!-- Soplos Welcome -->
-                            <div class="tool-card" id="welcome">
-                                <img src="../../../../images/icons/org.soplos.welcome.png" alt="Soplos Welcome">
-                                <h4 id="boro-apps-welcome-title">Soplos Welcome</h4>
-                                <p id="boro-apps-welcome-desc">Post-installation assistant with modular architecture adapted to GNOME. Manages drivers, kernels, software, security and desktop customization.</p>
-                                <ul>
-                                    <li id="boro-apps-welcome-feature-1">Complete hardware detection and driver installation</li>
-                                    <li id="boro-apps-welcome-feature-2">Advanced package management and security tools</li>
-                                    <li id="boro-apps-welcome-feature-3">Native GNOME customization integration</li>
+                            <!-- AppImage Manager -->
+                            <div class="tool-card" id="appimagemanager">
+                                <img src="../../../../images/icons/org.soplos.appimagemanager.png"
+                                    alt="Soplos AppImage Manager">
+                                <h4 id="boro-apps-appimage-title">Soplos AppImage Manager</h4>
+                                <p id="boro-apps-appimage-desc">Portable application manager for AppImage files. Integrate, launch and update AppImage packages with desktop and menu support.</p>
+                                <ul class="feature-list mt-3">
+                                    <li id="boro-apps-appimage-feature-1">Automatic desktop integration with icon extraction</li>
+                                    <li id="boro-apps-appimage-feature-2">Built-in update checker for installed AppImages</li>
+                                    <li id="boro-apps-appimage-feature-3">Property editor with custom icon and name support</li>
                                 </ul>
-                                <a href="../soplos-welcome/" class="tool-link" id="boro-apps-welcome-link">Learn More <i
-                                        class="fas fa-arrow-right"></i></a>
-                            </div>
-
-                            <!-- Repo Selector -->
-                            <div class="tool-card" id="repo">
-                                <img src="../../../../images/icons/org.soplos.reposelector.png"
-                                    alt="Soplos Repo Selector">
-                                <h4 id="boro-apps-repo-title">Soplos Repo Selector</h4>
-                                <p id="boro-apps-repo-desc">Manage APT repositories and DEB822 sources easily. Includes a built-in speed test to automatically select the fastest mirrors.</p>
-                                <ul>
-                                    <li id="boro-apps-repo-feature-1">Built-in mirror speed test</li>
-                                    <li id="boro-apps-repo-feature-2">Automatic conversion of legacy lists to DEB822</li>
-                                    <li id="boro-apps-repo-feature-3">Atomic PKEXEC operations and GPG management</li>
-                                </ul>
-                                <a href="../soplos-repo-selector/" class="tool-link" id="boro-apps-repo-link">Learn More
-                                    <i class="fas fa-arrow-right"></i></a>
+                                <a href="../soplos-appimage-manager/" class="tool-link"
+                                    id="boro-apps-appimage-link">Learn More <i class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <!-- Grub Editor -->
@@ -186,6 +178,21 @@
                                 </ul>
                                 <a href="../soplos-grub-editor/" class="tool-link" id="boro-apps-grub-link">Learn More
                                     <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Kernel Installer -->
+                            <div class="tool-card" id="kernelinstaller">
+                                <img src="../../../../images/icons/org.soplos.kernel-installer.png"
+                                    alt="Soplos Kernel Installer">
+                                <h4 id="boro-apps-kernelinstaller-title">Soplos Kernel Installer</h4>
+                                <p id="boro-apps-kernelinstaller-desc">Build and install custom Linux kernels with a graphical interface. Select kernel profiles and patches optimized for gaming, audio, or minimal setups.</p>
+                                <ul class="feature-list mt-3">
+                                    <li id="boro-apps-kernelinstaller-feature-1">Multiple profiles: Gaming, Audio/Video, Minimal/Office, Soplos Stock</li>
+                                    <li id="boro-apps-kernelinstaller-feature-2">Patch support: BORE, PREEMPT_RT, Zen, NTSYNC</li>
+                                    <li id="boro-apps-kernelinstaller-feature-3">One-click Soplos Kernels repository integration</li>
+                                </ul>
+                                <a href="../soplos-kernel-installer/" class="tool-link"
+                                    id="boro-apps-kernelinstaller-link">Learn More <i class="fas fa-arrow-right"></i></a>
                             </div>
 
                             <!-- Plymouth Manager -->
@@ -209,6 +216,65 @@
                                     id="boro-apps-plymouth-link">Learn More <i class="fas fa-arrow-right"></i></a>
                             </div>
 
+                            <!-- Repo Selector -->
+                            <div class="tool-card" id="repo">
+                                <img src="../../../../images/icons/org.soplos.reposelector.png"
+                                    alt="Soplos Repo Selector">
+                                <h4 id="boro-apps-repo-title">Soplos Repo Selector</h4>
+                                <p id="boro-apps-repo-desc">Manage APT repositories and DEB822 sources easily. Includes a built-in speed test to automatically select the fastest mirrors.</p>
+                                <ul>
+                                    <li id="boro-apps-repo-feature-1">Built-in mirror speed test</li>
+                                    <li id="boro-apps-repo-feature-2">Automatic conversion of legacy lists to DEB822</li>
+                                    <li id="boro-apps-repo-feature-3">Atomic PKEXEC operations and GPG management</li>
+                                </ul>
+                                <a href="../soplos-repo-selector/" class="tool-link" id="boro-apps-repo-link">Learn More
+                                    <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Sys Cleaner -->
+                            <div class="tool-card" id="syscleaner">
+                                <img src="../../../../images/icons/org.soplos.sys-cleaner.png"
+                                    alt="Soplos Sys Cleaner">
+                                <h4 id="boro-apps-syscleaner-title">Soplos Sys Cleaner</h4>
+                                <p id="boro-apps-syscleaner-desc">System cleaner for removing orphaned packages, cache, logs and temporary files. Keeps your system fast and lean.</p>
+                                <ul class="feature-list mt-3">
+                                    <li id="boro-apps-syscleaner-feature-1">Package cache and orphaned dependency cleanup</li>
+                                    <li id="boro-apps-syscleaner-feature-2">Log and temporary file management</li>
+                                    <li id="boro-apps-syscleaner-feature-3">Disk usage analysis</li>
+                                </ul>
+                                <a href="../soplos-sys-cleaner/" class="tool-link"
+                                    id="boro-apps-syscleaner-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- WebApp Manager -->
+                            <div class="tool-card" id="webappmanager">
+                                <img src="../../../../images/icons/org.soplos.webappmanager.png"
+                                    alt="Soplos WebApp Manager">
+                                <h4 id="boro-apps-webappmanager-title">Soplos WebApp Manager</h4>
+                                <p id="boro-apps-webappmanager-desc">Create and edit complete standalone desktop applications from URLs with independent profiles and multiple browser engines.</p>
+                                <ul class="feature-list mt-3">
+                                    <li id="boro-apps-webappmanager-feature-1">Interactive Multi-Engine support with full editing</li>
+                                    <li id="boro-apps-webappmanager-feature-2">Isolated browser profiles and Incognito Mode</li>
+                                    <li id="boro-apps-webappmanager-feature-3">Advanced boot parameters and smart HD Favicons</li>
+                                </ul>
+                                <a href="../soplos-webapp-manager/" class="tool-link"
+                                    id="boro-apps-webappmanager-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Soplos Welcome -->
+                            <div class="tool-card" id="welcome">
+                                <img src="../../../../images/icons/org.soplos.welcome.png" alt="Soplos Welcome">
+                                <h4 id="boro-apps-welcome-title">Soplos Welcome</h4>
+                                <p id="boro-apps-welcome-desc">Post-installation assistant with modular architecture adapted to GNOME. Manages drivers, kernels, software, security and desktop customization.</p>
+                                <ul>
+                                    <li id="boro-apps-welcome-feature-1">Complete hardware detection and driver installation</li>
+                                    <li id="boro-apps-welcome-feature-2">Advanced package management and security tools</li>
+                                    <li id="boro-apps-welcome-feature-3">Native GNOME customization integration</li>
+                                </ul>
+                                <a href="../soplos-welcome/" class="tool-link" id="boro-apps-welcome-link">Learn More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+
                             <!-- Welcome Live -->
                             <div class="tool-card" id="welcomelive">
                                 <img src="../../../../images/icons/org.soplos.welcomelive.png"
@@ -226,21 +292,6 @@
                                 </ul>
                                 <a href="../soplos-welcome-live/" class="tool-link"
                                     id="boro-apps-welcomelive-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-
-                            <!-- WebApp Manager -->
-                            <div class="tool-card" id="webappmanager">
-                                <img src="../../../../images/icons/org.soplos.webappmanager.png"
-                                    alt="Soplos WebApp Manager">
-                                <h4 id="boro-apps-webappmanager-title">Soplos WebApp Manager</h4>
-                                <p id="boro-apps-webappmanager-desc">Create and edit complete standalone desktop applications from URLs with independent profiles and multiple browser engines.</p>
-                                <ul class="feature-list mt-3">
-                                    <li id="boro-apps-webappmanager-feature-1">Interactive Multi-Engine support with full editing</li>
-                                    <li id="boro-apps-webappmanager-feature-2">Isolated browser profiles and Incognito Mode</li>
-                                    <li id="boro-apps-webappmanager-feature-3">Advanced boot parameters and smart HD Favicons</li>
-                                </ul>
-                                <a href="../soplos-webapp-manager/" class="tool-link"
-                                    id="boro-apps-webappmanager-link">Learn More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
 

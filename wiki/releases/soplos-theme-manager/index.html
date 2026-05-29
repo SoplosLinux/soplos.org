@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tm-rel-page-title">Soplos Theme Manager — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos Theme Manager.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="tm-rel-breadcrumb">Soplos Theme Manager</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.thememanager.png" alt="Soplos Theme Manager" class="hero-app-icon"> <span id="tm-rel-hero-title">Soplos Theme Manager</span></h1>
+                        <p id="tm-rel-hero-subtitle">Complete XFCE theming suite with tabbed interface, bundle export and screenshot previews. Exclusive to Soplos Tyron.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2026-04-24</span></a></li>
+                            <li><a href="#v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-07-27</span></a></li>
+                            <li><a href="#v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-05-08</span></a></li>
+                            <li><a href="#v105" class="toc-link">1.0.5 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#v104" class="toc-link">1.0.4 <span class="toc-date">— 2025-05-07</span></a></li>
+                            <li><a href="#v103" class="toc-link">1.0.3 <span class="toc-date">— 2025-05-06</span></a></li>
+                            <li><a href="#v102" class="toc-link">1.0.2 <span class="toc-date">— 2025-05-05</span></a></li>
+                            <li><a href="#v101" class="toc-link">1.0.1 <span class="toc-date">— 2025-05-13</span></a></li>
+                            <li><a href="#v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-05-08</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 2.0.0 -->
+                        <section id="v200" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-200-title">2.0.0 — April 2026</span></h2>
+                            <p id="tm-rel-200-subtitle" class="lead">Complete modular rewrite with tabbed interface, theme bundle export (.sth), screenshot previews and full XFCE panel and dock management.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-200-added-li1"><strong>Complete modular rewrite:</strong> New architecture with <code>core/</code>, <code>services/</code>, <code>ui/tabs/</code>, <code>config/</code> and <code>utils/</code> layers.</li>
+                                <li id="tm-rel-200-added-li2"><strong>Tabbed interface:</strong> Themes, Wallpapers, User, Panel and Dock — all in one window.</li>
+                                <li id="tm-rel-200-added-li3"><strong>Wallpaper browser:</strong> Scans system wallpaper directories, deduplicates symlinks, lazy-loads on tab activation.</li>
+                                <li id="tm-rel-200-added-li4"><strong>Avatar manager:</strong> Replaces Mugshot. Crop dialog for non-square images, writes to <code>~/.face</code> and AccountsService. Editable user data fields (Full Name, Email, Phone, Location).</li>
+                                <li id="tm-rel-200-added-li5"><strong>User tab — Groups column:</strong> Shows all groups the user belongs to with checkboxes. Applies changes via <code>pkexec usermod -G</code> (standard Polkit dialog).</li>
+                                <li id="tm-rel-200-added-li6"><strong>Panel tab:</strong> Full XFCE panel configuration — position, size, icon size, length, rows, auto-hide, dark mode, lock. Plugin management with move, remove and searchable add.</li>
+                                <li id="tm-rel-200-added-li7"><strong>Dock tab:</strong> Dedicated tab for Docklike pinned apps. Shows pinned apps with icons, move up/down/remove, add from available apps browser.</li>
+                                <li id="tm-rel-200-added-li8"><strong>Theme bundles (.sth):</strong> Export and import themes as <code>tar.gz</code> archives with <code>manifest.json</code>.</li>
+                                <li id="tm-rel-200-added-li9"><strong>Screenshot previews:</strong> <code>scrot</code> + <code>imagemagick</code> capture with <code>notify-send</code> notification, <code>wmctrl</code> desktop minimize/restore.</li>
+                                <li id="tm-rel-200-added-li10"><strong>Footer progress bar:</strong> Soplos-standard <code>Gtk.Revealer</code> + <code>Gtk.ProgressBar</code> for all operations.</li>
+                                <li id="tm-rel-200-added-li11"><strong>App ID:</strong> Migrated from <code>com.soplos.thememanager</code> to <code>org.soplos.thememanager</code>.</li>
+                                <li id="tm-rel-200-added-li12"><strong>i18n:</strong> gettext-based internationalization with 8 languages, replacing legacy dictionary strings.</li>
+                                <li id="tm-rel-200-added-li13"><strong>CSS:</strong> Updated to Soplos Welcome standard (entry, filechooser, treeview, notebook borders).</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-200-changed-li1"><strong>Theme directory:</strong> <code>~/.themes-backup</code> (backwards compatible with v1).</li>
+                                <li id="tm-rel-200-changed-li2"><strong>Default theme CSS:</strong> Always dark for Soplos Linux Tyron, configurable via <code>settings.json</code>.</li>
+                                <li id="tm-rel-200-changed-li3"><strong>Window decorations:</strong> SSD (no CSD), <code>GTK_CSD=0</code>.</li>
+                                <li id="tm-rel-200-changed-li4"><strong>Wallpaper browser:</strong> Pixbuf decoding moved to background thread — gallery renders instantly. Reload button removed (load is automatic on tab activation).</li>
+                                <li id="tm-rel-200-changed-li5"><strong>User tab:</strong> Renamed from "Avatar" to "User". Apply button moved inside the form column; groups column added.</li>
+                                <li id="tm-rel-200-changed-li6"><strong>Panel &amp; Dock:</strong> Split into two independent tabs — Panel (settings + plugins) and Dock (Docklike pinned apps).</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-200-fixed-li1"><strong>Startup freeze:</strong> Wallpapers now lazy-load via GTK <code>map</code> signal.</li>
+                                <li id="tm-rel-200-fixed-li2"><strong>Wrong startup tab:</strong> <code>set_current_page(0)</code> called after <code>show_all()</code> + <code>GLib.idle_add</code> safety net.</li>
+                                <li id="tm-rel-200-fixed-li3"><strong>Theme detection:</strong> Reads <code>~/.themes-backup</code> (same as v1) instead of a new separate directory.</li>
+                                <li id="tm-rel-200-fixed-li4"><strong>Avatar detection:</strong> Checks <code>~/.face</code> → AccountsService icons → <code>Icon=</code> field in user file.</li>
+                                <li id="tm-rel-200-fixed-li5"><strong>Panel apply error:</strong> <code>[Errno 21] Is a directory</code> on <code>launcher-N/</code> subdirectories resolved.</li>
+                                <li id="tm-rel-200-fixed-li6"><strong>pkexec password prompts on avatar:</strong> Removed all <code>pkexec</code> — <code>~/.face</code> is sufficient on XFCE.</li>
+                                <li id="tm-rel-200-fixed-li7"><strong>D-Bus AccountsService blocking main thread:</strong> Split into sync (LibreOffice + GECOS) and async (D-Bus via thread + <code>GLib.idle_add</code>).</li>
+                                <li id="tm-rel-200-fixed-li8"><strong>xfconf-query timeout on theme apply:</strong> xfconf-query now runs before <code>pkill xfconfd</code>, not after.</li>
+                                <li id="tm-rel-200-fixed-li9"><strong>Docklike pinned app icons not showing:</strong> Bare app IDs now resolved via <code>Gio.DesktopAppInfo</code> with multi-directory fallback.</li>
+                                <li id="tm-rel-200-fixed-li10"><strong>Groups not detected:</strong> Replaced <code>grp.getgrall()</code> with <code>id -Gn</code> (reads all NSS sources).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.7 -->
+                        <section id="v107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-107-title">1.0.7 — July 2025</span></h2>
+                            <p id="tm-rel-107-subtitle" class="lead">Branding update.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-107-li1"><strong>Program icon:</strong> Updated to new design.</li>
+                                <li id="tm-rel-107-li2"><strong>Developer:</strong> Updated to Sergi Perich.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.6 -->
+                        <section id="v106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-106-title">1.0.6 — May 2025</span></h2>
+                            <p id="tm-rel-106-subtitle" class="lead">Packaging fix: naming convention restored.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-106-li1"><strong>Icon and desktop file naming:</strong> Reverted to <code>com.soplos.thememanager</code> convention for consistency.</li>
+                                <li id="tm-rel-106-li2"><strong>Desktop file path:</strong> Restored to <code>/usr/share/applications/com.soplos.thememanager.desktop</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.5 -->
+                        <section id="v105" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-105-title">1.0.5 — May 2025</span></h2>
+                            <p id="tm-rel-105-subtitle" class="lead">Packaging fix: metainfo App ID corrected.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-105-li1"><strong>Metainfo App ID:</strong> Corrected from <code>com.soplosthememanager</code> back to <code>com.soplos.thememanager</code> (dot notation restored).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.4 -->
+                        <section id="v104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-104-title">1.0.4 — May 2025</span></h2>
+                            <p id="tm-rel-104-subtitle" class="lead">Packaging fix: unified App ID and improved desktop integration.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-104-li1"><strong>Unified App ID constant</strong> <code>APP_ID = "com.soplos.thememanager"</code> across <code>main.py</code>.</li>
+                                <li id="tm-rel-104-li2"><strong>WMCLASS env var support:</strong> <code>WMCLASS</code> environment variable for consistent window class assignment.</li>
+                                <li id="tm-rel-104-li3"><strong><code>window.realize()</code>:</strong> Called before show for proper window property propagation.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3 -->
+                        <section id="v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-103-title">1.0.3 — May 2025</span></h2>
+                            <p id="tm-rel-103-subtitle" class="lead">Packaging fix: App ID block and base directory restored.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-103-li1"><strong>Soplos Packager App ID block:</strong> Re-injected after it was removed in 1.0.2.</li>
+                                <li id="tm-rel-103-li2"><strong>Base directory:</strong> Corrected path back to <code>/usr/share/soplos-theme-manager</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2 -->
+                        <section id="v102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-102-title">1.0.2 — May 2025</span></h2>
+                            <p id="tm-rel-102-subtitle" class="lead">Packaging: renamed all assets to soplos-theme-manager naming convention.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-102-li1"><strong>Asset naming:</strong> Renamed from <code>com.soplos.thememanager</code> to <code>soplos-theme-manager</code> convention (desktop file, metainfo, icons).</li>
+                                <li id="tm-rel-102-li2"><strong>WM_CLASS:</strong> Fixed to static strings <code>"soplos-theme-manager", "Soplos Theme Manager"</code>.</li>
+                                <li id="tm-rel-102-li3"><strong>Removed <code>debug_wmclass.py</code>.</strong></li>
+                                <li id="tm-rel-102-li4"><strong>Cleaned up</strong> Soplos Packager App ID injection block from <code>main.py</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.1 -->
+                        <section id="v101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-101-title">1.0.1 — May 2025</span></h2>
+                            <p id="tm-rel-101-subtitle" class="lead">Desktop integration: XFCE-specific categories and visibility.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-101-li1"><strong>Desktop file:</strong> Added <code>OnlyShowIn=XFCE;</code> and <code>X-XfcePluggable=true</code>.</li>
+                                <li id="tm-rel-101-li2"><strong>Categories:</strong> Updated to XFCE-specific settings (<code>XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;</code>).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 -->
+                        <section id="v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-100-title">1.0.0 — May 2025</span></h2>
+                            <p id="tm-rel-100-subtitle" class="lead">Initial release of Soplos Theme Manager.</p>
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-100-li1"><strong>Graphical interface</strong> for managing XFCE desktop themes.</li>
+                                <li id="tm-rel-100-li2"><strong>Create, save and apply</strong> desktop themes.</li>
+                                <li id="tm-rel-100-li3"><strong>Compatible</strong> with Soplos Linux Tyron.</li>
+                                <li id="tm-rel-100-li4"><strong>Translations</strong> for 8 languages.</li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>
