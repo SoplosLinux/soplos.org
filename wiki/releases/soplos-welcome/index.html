@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2091" class="toc-link">2.0.9-1 <span class="toc-date">— 2026-05-29</span></a></li>
                             <li><a href="#v209" class="toc-link">2.0.9 <span class="toc-date">— 2026-05-28</span></a></li>
                             <li><a href="#v208-9" class="toc-link">2.0.8-9 <span class="toc-date">— 2026-05-27</span></a></li>
                             <li><a href="#v208-8" class="toc-link">2.0.8-8 <span class="toc-date">— 2026-05-26</span></a></li>
@@ -175,6 +176,21 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.9 -->
+                        <!-- 2.0.9-1 -->
+                        <section id="v2091" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2091-title">2.0.9-1 — May 2026</span></h2>
+                            <p id="wel-rel-2091-subtitle" class="lead">Packaging fix: removed <code>slide1.png</code> from <code>assets/icons/</code> which was being picked up as the application icon, causing GNOME Software to display the wrong image.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2091-fixed-li1"><strong>App icon in GNOME Software:</strong> <code>slide1.png</code> was being picked up by the repo manager and packaged as the application icon. Removed from <code>assets/icons/</code> so GNOME Software now correctly displays <code>org.soplos.welcome.png</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.9 -->
                         <section id="v209" class="content-section">

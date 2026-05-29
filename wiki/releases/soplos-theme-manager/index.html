@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2001" class="toc-link">2.0.0-1 <span class="toc-date">— 2026-05-29</span></a></li>
                             <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2026-04-24</span></a></li>
                             <li><a href="#v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-07-27</span></a></li>
                             <li><a href="#v106" class="toc-link">1.0.6 <span class="toc-date">— 2025-05-08</span></a></li>
@@ -129,6 +130,42 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.0-1 -->
+                        <section id="v2001" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-2001-title">2.0.0-1 — May 2026</span></h2>
+                            <p id="tm-rel-2001-subtitle" class="lead">Critical fixes for the Panel tab (width, locale, plugin IDs, position, struts, async reload, array writes), desktop file, keyboard shortcuts and wrapper script. Theme conf files renamed to English.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2001-fixed-li1"><strong>Panel tab — width not respected:</strong> <code>length-adjust</code> was not written back when length was unchanged, causing XFCE to default to 100%. Fixed by preserving the original value and recalculating when length changes.</li>
+                                <li id="tm-rel-2001-fixed-li2"><strong>Panel tab — locale decimal separator:</strong> <code>xfconf-query</code> returns <code>52,083333</code> on Spanish locale; <code>float()</code> raised <code>ValueError</code>. Fixed by replacing <code>,</code> with <code>.</code> before parsing.</li>
+                                <li id="tm-rel-2001-fixed-li3"><strong>Panel tab — plugin ID collision on new panel:</strong> New panel's plugin IDs started from 1, overwriting main panel plugins. Fixed by computing <code>next_id</code> across all panels.</li>
+                                <li id="tm-rel-2001-fixed-li4"><strong>Panel tab — wrong p values:</strong> Position string <code>p</code> values corrected from confirmed Soplos theme XMLs: <code>p=6</code> top, <code>p=8</code> bottom, <code>p=10</code> left, <code>p=1</code> right.</li>
+                                <li id="tm-rel-2001-fixed-li5"><strong>Panel tab — alignment ignored for snapped panels:</strong> Switched to <code>p=0</code> floating with center coordinates for partial-width panels. Full-width panels use snapped <code>p</code> values so the WM receives <code>_NET_WM_STRUT</code> hints.</li>
+                                <li id="tm-rel-2001-fixed-li6"><strong>Panel tab — windows maximizing under top panel:</strong> <code>enable-struts</code> property was not being set. Now written as <code>true</code> on every apply and new panel creation.</li>
+                                <li id="tm-rel-2001-fixed-li7"><strong>Panel tab — async reload cleared user-added plugins:</strong> <code>_reload_worker</code> called after new panel creation wiped plugins the user had just added. Fixed by reading settings synchronously in <code>_on_new_panel_done</code>.</li>
+                                <li id="tm-rel-2001-fixed-li8"><strong>Panel tab — delete panel removed all panels:</strong> <code>_set_array</code> wrote single-element arrays as xfconf scalars; xfce4-panel could not read <code>/panels</code> as a list. Fixed by adding <code>--force-array</code> flag to all <code>_set_array</code> calls.</li>
+                                <li id="tm-rel-2001-fixed-li9"><strong>Panel tab — length change did not trigger position recalculation:</strong> Switching between 100% and partial width did not update the position string. Fixed by including <code>length_changed</code> in the recalculation condition.</li>
+                                <li id="tm-rel-2001-fixed-li10"><strong>Desktop file empty:</strong> <code>debian/org.soplos.thememanager.desktop</code> was 0 bytes — app did not appear in the XFCE menu. Rewritten with full <code>[Desktop Entry]</code> content.</li>
+                                <li id="tm-rel-2001-fixed-li11"><strong>Keyboard shortcuts Ctrl+Tab / Ctrl+Shift+Tab not working:</strong> GTK intercepts these inside child widgets before <code>AccelGroup</code> fires. Fixed by connecting <code>key-press-event</code> on the main window.</li>
+                                <li id="tm-rel-2001-fixed-li12"><strong>Wrapper script oversized:</strong> Simplified to the standard Soplos wrapper pattern (<code>exec python3 main.py</code>). <code>Gdk.set_program_class</code> moved to <code>main.py</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2001-changed-li1"><strong>Theme conf filenames:</strong> Renamed from Spanish (<code>tema.conf</code>, <code>fondo.conf</code>, <code>atajos.conf</code>) to English (<code>theme.conf</code>, <code>wallpaper.conf</code>, <code>shortcuts.conf</code>). Automatic migration runs on startup.</li>
+                                <li id="tm-rel-2001-changed-li2"><strong>Metainfo screenshots:</strong> Corrected URLs and added screenshot4 (Panel) and screenshot5 (Dock).</li>
+                                <li id="tm-rel-2001-changed-li3"><strong>Panel tab — alignment combo:</strong> Added Left/Center/Right alignment control. Alignment derived from coordinates on load and applied when building the position string.</li>
+                                <li id="tm-rel-2001-changed-li4"><strong>Panel tab — new panel default position:</strong> Replaced hardcoded <code>p=2</code> with <code>_build_position_string('top', 1, 100, 30)</code> calculated from actual screen resolution.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.0 -->
                         <section id="v200" class="content-section">
