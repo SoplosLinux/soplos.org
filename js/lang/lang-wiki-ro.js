@@ -4268,6 +4268,9 @@ Object.assign(window.LANG_RO, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
 
+    "ki-rel-1001-title": "1.0.0-1 — Iunie 2026",
+    "ki-rel-1001-subtitle": "Buton &#8220;Eliminare depozit&#8221; adăugat în fila Kernels Soplos — elimină depozitul fără a afecta kernelurile deja instalate.",
+    "ki-rel-1001-added-li1": "<strong>Buton eliminare depozit:</strong> Buton nou în fila Kernels Soplos — elimină <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> și <code>/usr/share/keyrings/soplos-kernels.gpg</code>, apoi rulează <code>apt-get update</code>. Kernelurile deja instalate nu sunt afectate. Interfața se actualizează instantaneu.",
     "ki-rel-100-title": "1.0.0 — Aprilie 2026",
     "ki-rel-100-subtitle": "Prima versiune: compilator de kerneluri cu suport BORE, Zen, NTSYNC și PREEMPT_RT, fila Soplos Kernels, gestionare Secure Boot / MOK și i18n complet în 8 limbi.",
     "ki-rel-100-added-heading": "Funcționalități de compilare",

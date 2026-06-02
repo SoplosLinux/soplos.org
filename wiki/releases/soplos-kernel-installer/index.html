@@ -116,11 +116,26 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1001" class="toc-link">1.0.0-1 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v100" class="toc-link">1.0.0 <span class="toc-date">— 2026-04-05</span></a></li>
                         </ul>
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.0-1 -->
+                        <section id="v1001" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-1001-title">1.0.0-1 — June 2026</span></h2>
+                            <p id="ki-rel-1001-subtitle" class="lead">Added a "Remove repository" button to the Soplos Kernels tab for clean repository removal without affecting installed kernels.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-1001-added-li1"><strong>Remove repository button:</strong> New button in the Soplos Kernels tab — removes <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> and <code>/usr/share/keyrings/soplos-kernels.gpg</code>, then runs <code>apt-get update</code>. Already installed kernels are not affected. UI updates instantly.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.0 -->
                         <section id="v100" class="content-section">

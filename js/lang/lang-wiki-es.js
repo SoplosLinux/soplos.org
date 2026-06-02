@@ -4272,6 +4272,9 @@ Object.assign(window.LANG_ES, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
 
+    "ki-rel-1001-title": "1.0.0-1 — Junio 2026",
+    "ki-rel-1001-subtitle": "Añadido botón «Eliminar repositorio» en la pestaña Kernels Soplos para eliminar el repositorio de forma limpia sin afectar los kernels ya instalados.",
+    "ki-rel-1001-added-li1": "<strong>Botón eliminar repositorio:</strong> Nuevo botón en la pestaña Kernels Soplos — elimina <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> y <code>/usr/share/keyrings/soplos-kernels.gpg</code>, luego ejecuta <code>apt-get update</code>. Los kernels ya instalados no se ven afectados. La UI se actualiza al instante.",
     "ki-rel-100-title": "1.0.0 — Abril 2026",
     "ki-rel-100-subtitle": "Primera versión: compilador de kernels con soporte BORE, Zen, NTSYNC y PREEMPT_RT, pestaña Soplos Kernels, gestión Secure Boot / MOK e i18n completo en 8 idiomas.",
     "ki-rel-100-added-heading": "Funciones de compilación",

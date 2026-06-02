@@ -4272,6 +4272,9 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-1001-title": "1.0.0-1 — Juni 2026",
+    "ki-rel-1001-subtitle": "Schaltfläche &#8222;Repository entfernen&#8220; im Tab Soplos-Kernel hinzugefügt — entfernt das Repository sauber ohne bereits installierte Kernel zu beeinflussen.",
+    "ki-rel-1001-added-li1": "<strong>Schaltfläche Repository entfernen:</strong> Neue Schaltfläche im Tab Soplos-Kernel — entfernt <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> und <code>/usr/share/keyrings/soplos-kernels.gpg</code>, führt dann <code>apt-get update</code> aus. Bereits installierte Kernel sind nicht betroffen. Die Benutzeroberfläche aktualisiert sich sofort.",
     "ki-rel-100-title": "1.0.0 — April 2026",
     "ki-rel-100-subtitle": "Erstveröffentlichung: Kernel-Compiler mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Unterstützung, Soplos-Kernels-Tab, Secure Boot / MOK-Verwaltung und vollständige i18n in 8 Sprachen.",
     "ki-rel-100-added-heading": "Build-Funktionen",
@@ -4355,7 +4358,7 @@ Object.assign(window.LANG_DE, {
     "sc-rel-1022-fixed-li3": "<strong>Tab Treiber — Korrekturen nicht in Produktion angewendet:</strong> <code>root_helper.py</code> wurde nicht mit den Parametern <code>gpu_pci_vendors</code> und <code>vm_guest_type</code> aktualisiert — jetzt behoben.",
     "sc-rel-1022-fixed-li4": "<strong>Tab Firmwares — dracut-Schutzschicht client-seitig fehlend:</strong> <code>root_helper.py</code> exportierte <code>dracut_fw_dirs</code> nicht im Scan-JSON. Der Schutz umfasst nun korrekt die in <code>/etc/dracut.conf.d/</code> deklarierten Verzeichnisse.",
     "sc-rel-1022-fixed-li5": "<strong>Fortschrittsleiste — zeigt 100% während Operationen:</strong> <code>set_ui_state(..., pulse=True)</code> setzt nun <code>fraction</code> auf <code>0.0</code> zurück, bevor <code>pulse()</code> aufgerufen wird.",
-    "sc-rel-1022-fixed-li6": "<strong>Kontrollkästchen „Alle auswählen" wird nach Bereinigung nicht zurückgesetzt:</strong> Zurücksetzung im <code>on_done</code>-Callback aller relevanten Tabs hinzugefügt.",
+    "sc-rel-1022-fixed-li6": "<strong>Kontrollkästchen &#8222;Alle auswählen&#8220; wird nach Bereinigung nicht zurückgesetzt:</strong> Zurücksetzung im <code>on_done</code>-Callback aller relevanten Tabs hinzugefügt.",
     "sc-rel-1021-title": "1.0.2-1 — April 2026",
     "sc-rel-1021-subtitle": "Snap-Reiter neu gestaltet mit vollständiger Bereinigungsunterstützung, Erkennung virtueller Maschinenumgebungen mit Hypervisor-Identifikation und kritische Korrekturen für Kernel-Entfernung, Paketverwaltungsbefehle und Übersetzungsabdeckung.",
     "sc-rel-1021-added-li1": "<strong>Snap-Reiter neu gestaltet:</strong> Hat nun wie Flatpak zwei Abschnitte — installierte Snaps mit vollständiger Deinstallation (<code>snap remove --purge</code>, entfernt Snap und alle Daten) und alte/deaktivierte Revisionen.",

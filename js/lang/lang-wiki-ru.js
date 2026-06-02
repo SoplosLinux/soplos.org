@@ -4271,6 +4271,9 @@ Object.assign(window.LANG_RU, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
 
+    "ki-rel-1001-title": "1.0.0-1 — Июнь 2026",
+    "ki-rel-1001-subtitle": "Кнопка &#8220;Удалить репозиторий&#8221; добавлена во вкладку Ядра Soplos — удаляет репозиторий без влияния на уже установленные ядра.",
+    "ki-rel-1001-added-li1": "<strong>Кнопка удалить репозиторий:</strong> Новая кнопка во вкладке Ядра Soplos — удаляет <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> и <code>/usr/share/keyrings/soplos-kernels.gpg</code>, затем выполняет <code>apt-get update</code>. Уже установленные ядра не затрагиваются. Интерфейс обновляется мгновенно.",
     "ki-rel-100-title": "1.0.0 — Апрель 2026",
     "ki-rel-100-subtitle": "Первый выпуск: компилятор ядер с поддержкой BORE, Zen, NTSYNC и PREEMPT_RT, вкладка Soplos Kernels, управление Secure Boot / MOK и полная локализация на 8 языков.",
     "ki-rel-100-added-heading": "Функции сборки",
