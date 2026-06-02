@@ -5028,6 +5028,12 @@ Object.assign(window.LANG_EN, {
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
 
+  "ki-rel-1002-title": "1.0.0-2 — June 2026",
+  "ki-rel-1002-subtitle": "Fixed Soplos Kernels update detection, stale package lists after action, and locale-dependent apt-cache output.",
+  "ki-rel-1002-fixed-li1": "<strong>Update button detection:</strong> Stops parsing <code>apt-cache show</code> at the first blank line (end of the first stanza), ensuring the candidate version is always used for update checks instead of being overwritten by the installed version.",
+  "ki-rel-1002-fixed-li2": "<strong>Stale package list:</strong> Forces a full re-fetch of available packages from apt after installing, updating, or removing a kernel, instead of refreshing with cached data.",
+  "ki-rel-1002-fixed-li3": "<strong>Locale-dependent output:</strong> Forces <code>LC_ALL=C</code> on apt-cache calls to prevent field parsing failures on non-English locales.",
+
   "ki-rel-1001-title": "1.0.0-1 — June 2026",
   "ki-rel-1001-subtitle": "Added a \"Remove repository\" button to the Soplos Kernels tab for clean repository removal without affecting installed kernels.",
   "ki-rel-1001-added-li1": "<strong>Remove repository button:</strong> New button in the Soplos Kernels tab — removes <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> and <code>/usr/share/keyrings/soplos-kernels.gpg</code>, then runs <code>apt-get update</code>. Already installed kernels are not affected. UI updates instantly.",

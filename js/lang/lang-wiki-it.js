@@ -4269,6 +4269,12 @@ Object.assign(window.LANG_IT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilatore di kernel Linux personalizzati e installatore di kernel precompilati per Soplos Linux — compila il tuo kernel con patch BORE, Zen, NTSYNC e PREEMPT_RT, o installa kernel Soplos pronti all'uso dal repository ufficiale.",
 
+    "ki-rel-1002-title": "1.0.0-2 — Giugno 2026",
+    "ki-rel-1002-subtitle": "Corretti il rilevamento degli aggiornamenti dei kernel Soplos, l'elenco dei pacchetti obsoleto dopo un'azione e l'output di apt-cache dipendente dalla lingua.",
+    "ki-rel-1002-fixed-li1": "<strong>Rilevamento del pulsante di aggiornamento:</strong> Interrompe l'analisi di <code>apt-cache show</code> alla prima riga vuota (fine del primo stanza), garantendo che la versione candidata venga sempre utilizzata per i controlli degli aggiornamenti invece di essere sovrascritta dalla versione installata.",
+    "ki-rel-1002-fixed-li2": "<strong>Elenco dei pacchetti obsoleto:</strong> Forza un recupero completo dei pacchetti disponibili da apt dopo l'installazione, l'aggiornamento o la rimozione di un kernel, invece di aggiornare con dati nella cache.",
+    "ki-rel-1002-fixed-li3": "<strong>Output dipendente dalla lingua:</strong> Forza <code>LC_ALL=C</code> sulle chiamate apt-cache per prevenire errori di analisi dei campi su sistemi con impostazioni locali non inglesi.",
+
     "ki-rel-1001-title": "1.0.0-1 — Giugno 2026",
     "ki-rel-1001-subtitle": "Pulsante &#8220;Rimuovi repository&#8221; aggiunto alla scheda Kernel Soplos — rimuove il repository in modo pulito senza influire sui kernel già installati.",
     "ki-rel-1001-added-li1": "<strong>Pulsante rimuovi repository:</strong> Nuovo pulsante nella scheda Kernel Soplos — rimuove <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> e <code>/usr/share/keyrings/soplos-kernels.gpg</code>, poi esegue <code>apt-get update</code>. I kernel già installati non vengono influenzati. L&#39;interfaccia si aggiorna immediatamente.",

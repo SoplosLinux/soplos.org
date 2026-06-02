@@ -4272,6 +4272,12 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-1002-title": "1.0.0-2 — Juni 2026",
+    "ki-rel-1002-subtitle": "Behoben: Erkennung von Soplos-Kernel-Updates, veraltete Paketliste nach einer Aktion und sprachabhängige apt-cache-Ausgabe.",
+    "ki-rel-1002-fixed-li1": "<strong>Update-Schaltflächen-Erkennung:</strong> Stoppt das Parsen von <code>apt-cache show</code> bei der ersten Leerzeile (Ende des ersten Stanzas), sodass immer die Kandidatenversion für Update-Prüfungen verwendet wird statt von der installierten Version überschrieben zu werden.",
+    "ki-rel-1002-fixed-li2": "<strong>Veraltete Paketliste:</strong> Erzwingt nach dem Installieren, Aktualisieren oder Entfernen eines Kernels eine vollständige Neuabfrage der verfügbaren Pakete aus apt, anstatt zwischengespeicherte Daten zu verwenden.",
+    "ki-rel-1002-fixed-li3": "<strong>Sprachabhängige Ausgabe:</strong> Erzwingt <code>LC_ALL=C</code> bei apt-cache-Aufrufen, um Fehler beim Parsen von Feldern bei nicht-englischen Spracheinstellungen zu verhindern.",
+
     "ki-rel-1001-title": "1.0.0-1 — Juni 2026",
     "ki-rel-1001-subtitle": "Schaltfläche &#8222;Repository entfernen&#8220; im Tab Soplos-Kernel hinzugefügt — entfernt das Repository sauber ohne bereits installierte Kernel zu beeinflussen.",
     "ki-rel-1001-added-li1": "<strong>Schaltfläche Repository entfernen:</strong> Neue Schaltfläche im Tab Soplos-Kernel — entfernt <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> und <code>/usr/share/keyrings/soplos-kernels.gpg</code>, führt dann <code>apt-get update</code> aus. Bereits installierte Kernel sind nicht betroffen. Die Benutzeroberfläche aktualisiert sich sofort.",

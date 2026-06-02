@@ -4267,6 +4267,12 @@ Object.assign(window.LANG_FR, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
 
+    "ki-rel-1002-title": "1.0.0-2 — Juin 2026",
+    "ki-rel-1002-subtitle": "Correction de la détection des mises à jour des noyaux Soplos, de la liste de paquets périmée après une action et de la sortie apt-cache dépendante des paramètres régionaux.",
+    "ki-rel-1002-fixed-li1": "<strong>Détection du bouton de mise à jour :</strong> Arrête l'analyse de <code>apt-cache show</code> à la première ligne vide (fin du premier paragraphe), garantissant que la version candidate est toujours utilisée pour les vérifications de mise à jour au lieu d'être écrasée par la version installée.",
+    "ki-rel-1002-fixed-li2": "<strong>Liste de paquets périmée :</strong> Force une nouvelle récupération complète des paquets disponibles depuis apt après l'installation, la mise à jour ou la suppression d'un noyau, au lieu de rafraîchir avec des données en cache.",
+    "ki-rel-1002-fixed-li3": "<strong>Sortie dépendante des paramètres régionaux :</strong> Force <code>LC_ALL=C</code> sur les appels apt-cache pour éviter les échecs d'analyse des champs sur les paramètres régionaux non anglais.",
+
     "ki-rel-1001-title": "1.0.0-1 — Juin 2026",
     "ki-rel-1001-subtitle": "Ajout d'un bouton « Supprimer le dépôt » dans l'onglet Noyaux Soplos pour supprimer proprement le dépôt sans affecter les noyaux déjà installés.",
     "ki-rel-1001-added-li1": "<strong>Bouton supprimer le dépôt :</strong> Nouveau bouton dans l'onglet Noyaux Soplos — supprime <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> et <code>/usr/share/keyrings/soplos-kernels.gpg</code>, puis exécute <code>apt-get update</code>. Les noyaux déjà installés ne sont pas affectés. L'interface se met à jour instantanément.",

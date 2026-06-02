@@ -4267,6 +4267,12 @@ Object.assign(window.LANG_PT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels pré-compilados para Soplos Linux — compile o seu próprio kernel com patches BORE, Zen, NTSYNC e PREEMPT_RT, ou instale kernels Soplos prontos a usar a partir do repositório oficial.",
 
+    "ki-rel-1002-title": "1.0.0-2 — Junho 2026",
+    "ki-rel-1002-subtitle": "Corrigida a deteção de atualizações dos kernels Soplos, a lista de pacotes desatualizada após uma ação e a saída do apt-cache dependente das definições regionais.",
+    "ki-rel-1002-fixed-li1": "<strong>Deteção do botão de atualização:</strong> Para a análise do <code>apt-cache show</code> na primeira linha em branco (fim do primeiro bloco), garantindo que a versão candidata é sempre utilizada para verificar atualizações em vez de ser substituída pela versão instalada.",
+    "ki-rel-1002-fixed-li2": "<strong>Lista de pacotes desatualizada:</strong> Força uma nova obtenção completa dos pacotes disponíveis a partir do apt após instalar, atualizar ou remover um kernel, em vez de atualizar com dados em cache.",
+    "ki-rel-1002-fixed-li3": "<strong>Saída dependente das definições regionais:</strong> Força <code>LC_ALL=C</code> nas chamadas ao apt-cache para evitar falhas na análise de campos em sistemas configurados com idiomas diferentes do inglês.",
+
     "ki-rel-1001-title": "1.0.0-1 — Junho 2026",
     "ki-rel-1001-subtitle": "Botão &#8220;Remover repositório&#8221; adicionado ao separador Kernels Soplos — remove o repositório de forma limpa sem afetar os kernels já instalados.",
     "ki-rel-1001-added-li1": "<strong>Botão remover repositório:</strong> Novo botão no separador Kernels Soplos — remove <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> e <code>/usr/share/keyrings/soplos-kernels.gpg</code>, depois executa <code>apt-get update</code>. Os kernels já instalados não são afetados. A interface atualiza-se instantaneamente.",

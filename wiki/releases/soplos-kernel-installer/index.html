@@ -55,8 +55,10 @@
                                 <li><a href="../../../#community" id="menuCommunity">Join</a></li>
                                 <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
                                 <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
                             </ul>
                         </li>
@@ -102,8 +104,12 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><img src="../../../images/icons/org.soplos.kernel-installer.png" alt="Soplos Kernel Installer" class="hero-app-icon"> <span id="ki-rel-hero-title">Soplos Kernel Installer</span></h1>
-                        <p id="ki-rel-hero-subtitle">Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.</p>
+                        <h1><img src="../../../images/icons/org.soplos.kernel-installer.png"
+                                alt="Soplos Kernel Installer" class="hero-app-icon"> <span id="ki-rel-hero-title">Soplos
+                                Kernel Installer</span></h1>
+                        <p id="ki-rel-hero-subtitle">Custom Linux kernel builder and pre-built kernel installer for
+                            Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or
+                            install ready-to-use Soplos kernels from the official repository.</p>
                     </div>
                 </div>
             </section>
@@ -116,6 +122,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1002" class="toc-link">1.0.0-2 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1001" class="toc-link">1.0.0-1 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v100" class="toc-link">1.0.0 <span class="toc-date">— 2026-04-05</span></a></li>
                         </ul>
@@ -123,68 +130,154 @@
 
                     <article class="main-content">
 
-                        <!-- 1.0.0-1 -->
-                        <section id="v1001" class="content-section">
-                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-1001-title">1.0.0-1 — June 2026</span></h2>
-                            <p id="ki-rel-1001-subtitle" class="lead">Added a "Remove repository" button to the Soplos Kernels tab for clean repository removal without affecting installed kernels.</p>
+                        <!-- 1.0.0-2 -->
+                        <section id="v1002" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-1002-title">1.0.0-2 — June 2026</span></h2>
+                            <p id="ki-rel-1002-subtitle" class="lead">Fixed Soplos Kernels update detection, stale package lists after action, and locale-dependent apt-cache output.</p>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-1001-added-li1"><strong>Remove repository button:</strong> New button in the Soplos Kernels tab — removes <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> and <code>/usr/share/keyrings/soplos-kernels.gpg</code>, then runs <code>apt-get update</code>. Already installed kernels are not affected. UI updates instantly.</li>
+                                <li id="ki-rel-1002-fixed-li1"><strong>Update button detection:</strong> Stops parsing <code>apt-cache show</code> at the first blank line (end of the first stanza), ensuring the candidate version is always used for update checks instead of being overwritten by the installed version.</li>
+                                <li id="ki-rel-1002-fixed-li2"><strong>Stale package list:</strong> Forces a full re-fetch of available packages from apt after installing, updating, or removing a kernel, instead of refreshing with cached data.</li>
+                                <li id="ki-rel-1002-fixed-li3"><strong>Locale-dependent output:</strong> Forces <code>LC_ALL=C</code> on apt-cache calls to prevent field parsing failures on non-English locales.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0-1 -->
+                        <section id="v1001" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-1001-title">1.0.0-1 — June 2026</span></h2>
+                            <p id="ki-rel-1001-subtitle" class="lead">Added a "Remove repository" button to the Soplos
+                                Kernels tab for clean repository removal without affecting installed kernels.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span>
+                                </h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-1001-added-li1"><strong>Remove repository button:</strong> New button in
+                                    the Soplos Kernels tab — removes
+                                    <code>/etc/apt/sources.list.d/soplos-kernels.sources</code> and
+                                    <code>/usr/share/keyrings/soplos-kernels.gpg</code>, then runs
+                                    <code>apt-get update</code>. Already installed kernels are not affected. UI updates
+                                    instantly.
+                                </li>
                             </ul>
                         </section>
 
                         <!-- 1.0.0 -->
                         <section id="v100" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="ki-rel-100-title">1.0.0 — April 2026</span></h2>
-                            <p id="ki-rel-100-subtitle" class="lead">Initial release: custom kernel compiler with BORE, Zen, NTSYNC and PREEMPT_RT support, Soplos Kernels tab, Secure Boot / MOK management and full i18n in 8 languages.</p>
+                            <p id="ki-rel-100-subtitle" class="lead">Initial release: custom kernel compiler with BORE,
+                                Zen, NTSYNC and PREEMPT_RT support, Soplos Kernels tab, Secure Boot / MOK management and
+                                full i18n in 8 languages.</p>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> — <span id="ki-rel-100-added-heading">Build Features</span></h3>
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> —
+                                    <span id="ki-rel-100-added-heading">Build Features</span>
+                                </h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-added-li1"><strong>PREEMPT_RT integration:</strong> For kernels ≥ 6.12, PREEMPT_RT is built-in upstream — no external patch download; automatically enables <code>CONFIG_PREEMPT_RT=y</code>.</li>
-                                <li id="ki-rel-100-added-li2"><strong>Source reuse:</strong> Recycle existing kernel sources for faster subsequent compilations with automatic patch conflict detection.</li>
-                                <li id="ki-rel-100-added-li3"><strong>Expandable build history:</strong> Installation history with automatic kernel tags (XanMod, Liquorix, Zen, System…) and improved UI.</li>
-                                <li id="ki-rel-100-added-li4"><strong>Keyboard shortcuts:</strong> <kbd>Ctrl+Q</kbd> quit, <kbd>Ctrl+W</kbd> close, <kbd>F5</kbd> refresh, <kbd>F1</kbd> about, <kbd>Ctrl+Tab</kbd> / <kbd>Ctrl+Shift+Tab</kbd> switch tabs.</li>
-                                <li id="ki-rel-100-added-li5"><strong>About dialog:</strong> Application information with version, author, license and website.</li>
-                                <li id="ki-rel-100-added-li6"><strong>NTSYNC patch:</strong> NT synchronization primitives support for Wine/Proton gaming performance.</li>
-                                <li id="ki-rel-100-added-li7"><strong>NVIDIA kernel 7.x patch:</strong> Automatically applies VMA locking API compatibility patch to NVIDIA DKMS sources before build — fixes DKMS failure on kernel 7.0+ (from <a href="https://github.com/SoplosLinux/nvidia-patches" target="_blank">SoplosLinux/nvidia-patches</a>).</li>
-                                <li id="ki-rel-100-added-li8"><strong>DKMS MOK auto-enroll:</strong> After installation with Secure Boot active, automatically prompts to enroll the DKMS signing key when an NVIDIA GPU is detected — fixes NVENC and CUDA not working with Secure Boot.</li>
-                                <li id="ki-rel-100-added-li9"><strong>Save .deb before cleanup:</strong> When the build directory cleanup option is active, offers to save the compiled <code>.deb</code> packages to a chosen folder before deleting.</li>
-                                <li id="ki-rel-100-added-li10"><strong>MOK key path in UI:</strong> The key management dialog now shows the storage path of MOK keys so users know where to find them.</li>
+                                <li id="ki-rel-100-added-li1"><strong>PREEMPT_RT integration:</strong> For kernels ≥
+                                    6.12, PREEMPT_RT is built-in upstream — no external patch download; automatically
+                                    enables <code>CONFIG_PREEMPT_RT=y</code>.</li>
+                                <li id="ki-rel-100-added-li2"><strong>Source reuse:</strong> Recycle existing kernel
+                                    sources for faster subsequent compilations with automatic patch conflict detection.
+                                </li>
+                                <li id="ki-rel-100-added-li3"><strong>Expandable build history:</strong> Installation
+                                    history with automatic kernel tags (XanMod, Liquorix, Zen, System…) and improved UI.
+                                </li>
+                                <li id="ki-rel-100-added-li4"><strong>Keyboard shortcuts:</strong> <kbd>Ctrl+Q</kbd>
+                                    quit, <kbd>Ctrl+W</kbd> close, <kbd>F5</kbd> refresh, <kbd>F1</kbd> about,
+                                    <kbd>Ctrl+Tab</kbd> / <kbd>Ctrl+Shift+Tab</kbd> switch tabs.
+                                </li>
+                                <li id="ki-rel-100-added-li5"><strong>About dialog:</strong> Application information
+                                    with version, author, license and website.</li>
+                                <li id="ki-rel-100-added-li6"><strong>NTSYNC patch:</strong> NT synchronization
+                                    primitives support for Wine/Proton gaming performance.</li>
+                                <li id="ki-rel-100-added-li7"><strong>NVIDIA kernel 7.x patch:</strong> Automatically
+                                    applies VMA locking API compatibility patch to NVIDIA DKMS sources before build —
+                                    fixes DKMS failure on kernel 7.0+ (from <a
+                                        href="https://github.com/SoplosLinux/nvidia-patches"
+                                        target="_blank">SoplosLinux/nvidia-patches</a>).</li>
+                                <li id="ki-rel-100-added-li8"><strong>DKMS MOK auto-enroll:</strong> After installation
+                                    with Secure Boot active, automatically prompts to enroll the DKMS signing key when
+                                    an NVIDIA GPU is detected — fixes NVENC and CUDA not working with Secure Boot.</li>
+                                <li id="ki-rel-100-added-li9"><strong>Save .deb before cleanup:</strong> When the build
+                                    directory cleanup option is active, offers to save the compiled <code>.deb</code>
+                                    packages to a chosen folder before deleting.</li>
+                                <li id="ki-rel-100-added-li10"><strong>MOK key path in UI:</strong> The key management
+                                    dialog now shows the storage path of MOK keys so users know where to find them.</li>
                             </ul>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> — <span id="ki-rel-100-stock-heading">Stock Profile &amp; Extras</span></h3>
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> —
+                                    <span id="ki-rel-100-stock-heading">Stock Profile &amp; Extras</span>
+                                </h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-stock-li1"><strong>Stock profile (hidden):</strong> New «Soplos Stock» kernel profile accessible via <kbd>Ctrl+Shift+D</kbd> — compiles a vanilla kernel with no profile modifications, suffix <code>soplos</code>, compatible with all Soplos distributions. Toggling again hides the profile card.</li>
-                                <li id="ki-rel-100-stock-li2"><strong>Double-click protection:</strong> Install button is disabled immediately on click and re-enabled only if validation fails — prevents launching duplicate builds.</li>
-                                <li id="ki-rel-100-stock-li3"><strong>DKMS rebuild explanation:</strong> MOK key dialog explains that DKMS automatically rebuilds NVIDIA modules on each new kernel install and that those modules need the signing key enrolled to load with Secure Boot active.</li>
-                                <li id="ki-rel-100-stock-li4"><strong>Config resolution pass:</strong> A second <code>make olddefconfig</code> is run after all profile and patch options are applied — prevents interactive configuration prompts appearing mid-build when new Kconfig symbols are introduced by a profile.</li>
+                                <li id="ki-rel-100-stock-li1"><strong>Stock profile (hidden):</strong> New «Soplos
+                                    Stock» kernel profile accessible via <kbd>Ctrl+Shift+D</kbd> — compiles a vanilla
+                                    kernel with no profile modifications, suffix <code>soplos</code>, compatible with
+                                    all Soplos distributions. Toggling again hides the profile card.</li>
+                                <li id="ki-rel-100-stock-li2"><strong>Double-click protection:</strong> Install button
+                                    is disabled immediately on click and re-enabled only if validation fails — prevents
+                                    launching duplicate builds.</li>
+                                <li id="ki-rel-100-stock-li3"><strong>DKMS rebuild explanation:</strong> MOK key dialog
+                                    explains that DKMS automatically rebuilds NVIDIA modules on each new kernel install
+                                    and that those modules need the signing key enrolled to load with Secure Boot
+                                    active.</li>
+                                <li id="ki-rel-100-stock-li4"><strong>Config resolution pass:</strong> A second
+                                    <code>make olddefconfig</code> is run after all profile and patch options are
+                                    applied — prevents interactive configuration prompts appearing mid-build when new
+                                    Kconfig symbols are introduced by a profile.
+                                </li>
                             </ul>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> — <span id="ki-rel-100-kernels-heading">Soplos Kernels Tab</span></h3>
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> —
+                                    <span id="ki-rel-100-kernels-heading">Soplos Kernels Tab</span>
+                                </h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-kernels-li1"><strong>Soplos Kernels tab:</strong> New tab to install pre-built Soplos kernels (Stock, BORE, Zen, NTSYNC, BORE+NTSYNC, Real-Time) directly from the official Soplos repository — no compilation required.</li>
-                                <li id="ki-rel-100-kernels-li2"><strong>Tabbed interface:</strong> Main window now uses <code>Gtk.Notebook</code> with two tabs: «Build Kernel» and «Soplos Kernels».</li>
-                                <li id="ki-rel-100-kernels-li3"><strong>Repository management:</strong> One-click button to add the Soplos kernels apt repository with GPG key verification.</li>
-                                <li id="ki-rel-100-kernels-li4"><strong>Dynamic kernel list:</strong> The Soplos Kernels tab reads available packages from apt-cache at runtime — any package added to the repository appears automatically without code changes.</li>
-                                <li id="ki-rel-100-kernels-li5"><strong>Refresh button:</strong> Forces <code>apt-get update</code> and reloads the kernel list.</li>
-                                <li id="ki-rel-100-kernels-li6"><strong>Stock profile post-build:</strong> When building with the hidden Stock profile, automatically creates the corresponding metapackage <code>.deb</code> and prompts to save all packages to a chosen folder — does not install the kernel on the system.</li>
-                                <li id="ki-rel-100-kernels-li7"><strong>Kernel version display:</strong> Available version shown next to each kernel name in the Soplos Kernels tab.</li>
-                                <li id="ki-rel-100-kernels-li8"><strong>Update button:</strong> When a newer kernel version is available in the repository, an Update button appears — upgrades the metapackage and purges the old kernel image and headers automatically.</li>
-                                <li id="ki-rel-100-kernels-li9"><strong>Persistent build history:</strong> History file moved to <code>~/.local/share/soplos-kernel-installer/history.json</code> — survives build directory cleanup. Automatic migration from previous locations.</li>
-                                <li id="ki-rel-100-kernels-li10"><strong>Clean package naming:</strong> Added <code>KDEB_PKGVERSION=1</code> to <code>make bindeb-pkg</code> — packages now named <code>linux-image-7.0.3-soplos_1_amd64.deb</code> instead of repeating the version twice.</li>
+                                <li id="ki-rel-100-kernels-li1"><strong>Soplos Kernels tab:</strong> New tab to install
+                                    pre-built Soplos kernels (Stock, BORE, Zen, NTSYNC, BORE+NTSYNC, Real-Time) directly
+                                    from the official Soplos repository — no compilation required.</li>
+                                <li id="ki-rel-100-kernels-li2"><strong>Tabbed interface:</strong> Main window now uses
+                                    <code>Gtk.Notebook</code> with two tabs: «Build Kernel» and «Soplos Kernels».
+                                </li>
+                                <li id="ki-rel-100-kernels-li3"><strong>Repository management:</strong> One-click button
+                                    to add the Soplos kernels apt repository with GPG key verification.</li>
+                                <li id="ki-rel-100-kernels-li4"><strong>Dynamic kernel list:</strong> The Soplos Kernels
+                                    tab reads available packages from apt-cache at runtime — any package added to the
+                                    repository appears automatically without code changes.</li>
+                                <li id="ki-rel-100-kernels-li5"><strong>Refresh button:</strong> Forces
+                                    <code>apt-get update</code> and reloads the kernel list.
+                                </li>
+                                <li id="ki-rel-100-kernels-li6"><strong>Stock profile post-build:</strong> When building
+                                    with the hidden Stock profile, automatically creates the corresponding metapackage
+                                    <code>.deb</code> and prompts to save all packages to a chosen folder — does not
+                                    install the kernel on the system.
+                                </li>
+                                <li id="ki-rel-100-kernels-li7"><strong>Kernel version display:</strong> Available
+                                    version shown next to each kernel name in the Soplos Kernels tab.</li>
+                                <li id="ki-rel-100-kernels-li8"><strong>Update button:</strong> When a newer kernel
+                                    version is available in the repository, an Update button appears — upgrades the
+                                    metapackage and purges the old kernel image and headers automatically.</li>
+                                <li id="ki-rel-100-kernels-li9"><strong>Persistent build history:</strong> History file
+                                    moved to <code>~/.local/share/soplos-kernel-installer/history.json</code> — survives
+                                    build directory cleanup. Automatic migration from previous locations.</li>
+                                <li id="ki-rel-100-kernels-li10"><strong>Clean package naming:</strong> Added
+                                    <code>KDEB_PKGVERSION=1</code> to <code>make bindeb-pkg</code> — packages now named
+                                    <code>linux-image-7.0.3-soplos_1_amd64.deb</code> instead of repeating the version
+                                    twice.
+                                </li>
                             </ul>
 
                             <div class="subsection-header">
@@ -192,57 +285,124 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-fixed-li1"><strong>Debug package generation:</strong> Fixed incorrect generation of <code>-dbg</code> packages by correcting <code>apply_to_config</code> method.</li>
-                                <li id="ki-rel-100-fixed-li2"><strong>History duplicates:</strong> Fixed duplicate entries for versions like <code>7.0-rc6</code> vs <code>7.0.0-rc6</code>.</li>
-                                <li id="ki-rel-100-fixed-li3"><strong>Package isolation:</strong> Kernel packages isolated in subdirectories (<code>~/kernel_build/{version}/</code> with image + headers + libc-dev only).</li>
-                                <li id="ki-rel-100-fixed-li4"><strong>External kernel tags:</strong> Correct automatic tagging of external kernels (XanMod, Liquorix, Zen, System…) in history.</li>
-                                <li id="ki-rel-100-fixed-li5"><strong>Patch state tracking:</strong> Added <code>.applied_patches</code> metadata for proper patch conflict detection during source reuse.</li>
-                                <li id="ki-rel-100-fixed-li6"><strong>Kernel profile bugs:</strong> Fixed PREEMPT_DYNAMIC, HZ, THP and DEBUG_INFO Kconfig choice block handling — all profiles now compile correctly.</li>
-                                <li id="ki-rel-100-fixed-li7"><strong>GPU detection:</strong> NVIDIA and Intel GPU detection now checks only display/VGA/3D lines in lspci output — AMD CPU lines no longer cause false positives.</li>
-                                <li id="ki-rel-100-fixed-li8"><strong>Base config fallback:</strong> Fixed <code>_find_base_config()</code> Python literal bug — now correctly uses <code>run_command("uname -r")</code> at runtime.</li>
-                                <li id="ki-rel-100-fixed-li9"><strong>Path quoting:</strong> Fixed missing quotes around paths in <code>cp</code> and <code>make -C</code> commands — prevents failures if paths contain spaces.</li>
-                                <li id="ki-rel-100-fixed-li10"><strong>rt-i915 patch:</strong> CachyOS rt-i915 fix now only downloaded on systems with an Intel GPU.</li>
-                                <li id="ki-rel-100-fixed-li11"><strong>BORE fallback:</strong> BORE patch now falls back to CachyOS/kernel-patches when not available in the firelzrd repo.</li>
-                                <li id="ki-rel-100-fixed-li12"><strong>Cleanup checkbox:</strong> The «Clean build directory after installation» checkbox now actually triggers the cleanup.</li>
-                                <li id="ki-rel-100-fixed-li13"><strong>EOL kernel detection:</strong> End-of-Life kernels from kernel.org are now correctly parsed and shown as «(EOL)» with a red warning label.</li>
-                                <li id="ki-rel-100-fixed-li14"><strong>Mainline label:</strong> Mainline kernels (e.g. 7.0) are no longer incorrectly shown as «(latest)» — now correctly labelled «(mainline)».</li>
-                                <li id="ki-rel-100-fixed-li15"><strong>MOK signed kernel detection:</strong> <code>sb_has_mok_signed_kernels()</code> now also physically verifies <code>/boot/vmlinuz-*</code> files with <code>sbverify --cert MOK.pem</code>.</li>
-                                <li id="ki-rel-100-fixed-li16"><strong>Stock profile package naming:</strong> Removed trailing dash from package and kernel names when building with the Stock profile.</li>
-                                <li id="ki-rel-100-fixed-li17"><strong>Stock profile suffix matching:</strong> Fixed <code>_suffix_match</code> always returning True for Stock profile — now correctly uses the computed suffix variable.</li>
-                                <li id="ki-rel-100-fixed-li18"><strong>Soplos Kernels detection:</strong> Installed kernel detection now checks <code>/boot/vmlinuz-*</code> existence — correctly reflects actual status regardless of how the kernel was installed or removed.</li>
-                                <li id="ki-rel-100-fixed-li19"><strong>Soplos Kernels remove button:</strong> Remove button stays active for installed kernels even when the repository is not configured.</li>
-                                <li id="ki-rel-100-fixed-li20"><strong>Cross-tab refresh:</strong> Kernel history list refreshes automatically after install/remove from the Soplos Kernels tab.</li>
-                                <li id="ki-rel-100-fixed-li21"><strong>Kernel release name:</strong> Now read from <code>include/config/kernel.release</code> in the source tree — correctly handles patch-injected version suffixes (e.g. <code>zen1</code>).</li>
-                                <li id="ki-rel-100-fixed-li22"><strong>Stock post-build package discovery:</strong> Fixed saving only the metapackage when a patch injects a version suffix — <code>last_kernel_release</code> captured before the build-only return.</li>
-                                <li id="ki-rel-100-fixed-li23"><strong>Old kernel cleanup on update:</strong> After updating a Soplos kernel, old image and headers are purged — <code>apt autoremove</code> was insufficient as manually-installed packages are not auto-removed.</li>
+                                <li id="ki-rel-100-fixed-li1"><strong>Debug package generation:</strong> Fixed incorrect
+                                    generation of <code>-dbg</code> packages by correcting <code>apply_to_config</code>
+                                    method.</li>
+                                <li id="ki-rel-100-fixed-li2"><strong>History duplicates:</strong> Fixed duplicate
+                                    entries for versions like <code>7.0-rc6</code> vs <code>7.0.0-rc6</code>.</li>
+                                <li id="ki-rel-100-fixed-li3"><strong>Package isolation:</strong> Kernel packages
+                                    isolated in subdirectories (<code>~/kernel_build/{version}/</code> with image +
+                                    headers + libc-dev only).</li>
+                                <li id="ki-rel-100-fixed-li4"><strong>External kernel tags:</strong> Correct automatic
+                                    tagging of external kernels (XanMod, Liquorix, Zen, System…) in history.</li>
+                                <li id="ki-rel-100-fixed-li5"><strong>Patch state tracking:</strong> Added
+                                    <code>.applied_patches</code> metadata for proper patch conflict detection during
+                                    source reuse.
+                                </li>
+                                <li id="ki-rel-100-fixed-li6"><strong>Kernel profile bugs:</strong> Fixed
+                                    PREEMPT_DYNAMIC, HZ, THP and DEBUG_INFO Kconfig choice block handling — all profiles
+                                    now compile correctly.</li>
+                                <li id="ki-rel-100-fixed-li7"><strong>GPU detection:</strong> NVIDIA and Intel GPU
+                                    detection now checks only display/VGA/3D lines in lspci output — AMD CPU lines no
+                                    longer cause false positives.</li>
+                                <li id="ki-rel-100-fixed-li8"><strong>Base config fallback:</strong> Fixed
+                                    <code>_find_base_config()</code> Python literal bug — now correctly uses
+                                    <code>run_command("uname -r")</code> at runtime.
+                                </li>
+                                <li id="ki-rel-100-fixed-li9"><strong>Path quoting:</strong> Fixed missing quotes around
+                                    paths in <code>cp</code> and <code>make -C</code> commands — prevents failures if
+                                    paths contain spaces.</li>
+                                <li id="ki-rel-100-fixed-li10"><strong>rt-i915 patch:</strong> CachyOS rt-i915 fix now
+                                    only downloaded on systems with an Intel GPU.</li>
+                                <li id="ki-rel-100-fixed-li11"><strong>BORE fallback:</strong> BORE patch now falls back
+                                    to CachyOS/kernel-patches when not available in the firelzrd repo.</li>
+                                <li id="ki-rel-100-fixed-li12"><strong>Cleanup checkbox:</strong> The «Clean build
+                                    directory after installation» checkbox now actually triggers the cleanup.</li>
+                                <li id="ki-rel-100-fixed-li13"><strong>EOL kernel detection:</strong> End-of-Life
+                                    kernels from kernel.org are now correctly parsed and shown as «(EOL)» with a red
+                                    warning label.</li>
+                                <li id="ki-rel-100-fixed-li14"><strong>Mainline label:</strong> Mainline kernels (e.g.
+                                    7.0) are no longer incorrectly shown as «(latest)» — now correctly labelled
+                                    «(mainline)».</li>
+                                <li id="ki-rel-100-fixed-li15"><strong>MOK signed kernel detection:</strong>
+                                    <code>sb_has_mok_signed_kernels()</code> now also physically verifies
+                                    <code>/boot/vmlinuz-*</code> files with <code>sbverify --cert MOK.pem</code>.
+                                </li>
+                                <li id="ki-rel-100-fixed-li16"><strong>Stock profile package naming:</strong> Removed
+                                    trailing dash from package and kernel names when building with the Stock profile.
+                                </li>
+                                <li id="ki-rel-100-fixed-li17"><strong>Stock profile suffix matching:</strong> Fixed
+                                    <code>_suffix_match</code> always returning True for Stock profile — now correctly
+                                    uses the computed suffix variable.
+                                </li>
+                                <li id="ki-rel-100-fixed-li18"><strong>Soplos Kernels detection:</strong> Installed
+                                    kernel detection now checks <code>/boot/vmlinuz-*</code> existence — correctly
+                                    reflects actual status regardless of how the kernel was installed or removed.</li>
+                                <li id="ki-rel-100-fixed-li19"><strong>Soplos Kernels remove button:</strong> Remove
+                                    button stays active for installed kernels even when the repository is not
+                                    configured.</li>
+                                <li id="ki-rel-100-fixed-li20"><strong>Cross-tab refresh:</strong> Kernel history list
+                                    refreshes automatically after install/remove from the Soplos Kernels tab.</li>
+                                <li id="ki-rel-100-fixed-li21"><strong>Kernel release name:</strong> Now read from
+                                    <code>include/config/kernel.release</code> in the source tree — correctly handles
+                                    patch-injected version suffixes (e.g. <code>zen1</code>).
+                                </li>
+                                <li id="ki-rel-100-fixed-li22"><strong>Stock post-build package discovery:</strong>
+                                    Fixed saving only the metapackage when a patch injects a version suffix —
+                                    <code>last_kernel_release</code> captured before the build-only return.
+                                </li>
+                                <li id="ki-rel-100-fixed-li23"><strong>Old kernel cleanup on update:</strong> After
+                                    updating a Soplos kernel, old image and headers are purged —
+                                    <code>apt autoremove</code> was insufficient as manually-installed packages are not
+                                    auto-removed.
+                                </li>
                             </ul>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-shield-alt"></i> <span data-i18n="rel-label-security">Security</span></h3>
+                                <h3><i class="fas fa-shield-alt"></i> <span
+                                        data-i18n="rel-label-security">Security</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-security-li1"><strong>MOK password injection fixed:</strong> Shell injection vulnerability in MOK enroll/delete/reset operations — password is now safely quoted with <code>shlex.quote()</code> before being passed to <code>mokutil</code>.</li>
-                                <li id="ki-rel-100-security-li2"><strong>Kernel name validation:</strong> Install button validates the custom kernel name against <code>[a-zA-Z0-9._-]</code> before proceeding — prevents invalid names reaching <code>scripts/config</code>.</li>
-                                <li id="ki-rel-100-security-li3"><strong>Remove kernel validation:</strong> <code>remove_kernel()</code> validates the release string against a strict regex before constructing any shell commands.</li>
+                                <li id="ki-rel-100-security-li1"><strong>MOK password injection fixed:</strong> Shell
+                                    injection vulnerability in MOK enroll/delete/reset operations — password is now
+                                    safely quoted with <code>shlex.quote()</code> before being passed to
+                                    <code>mokutil</code>.
+                                </li>
+                                <li id="ki-rel-100-security-li2"><strong>Kernel name validation:</strong> Install button
+                                    validates the custom kernel name against <code>[a-zA-Z0-9._-]</code> before
+                                    proceeding — prevents invalid names reaching <code>scripts/config</code>.</li>
+                                <li id="ki-rel-100-security-li3"><strong>Remove kernel validation:</strong>
+                                    <code>remove_kernel()</code> validates the release string against a strict regex
+                                    before constructing any shell commands.
+                                </li>
                             </ul>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span>
+                                </h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-improved-li1"><strong>Installation simplified</strong> to <code>sudo apt install soplos-kernel-installer</code> only.</li>
-                                <li id="ki-rel-100-improved-li2"><strong>Documentation:</strong> Updated README with new features and corrected screenshot paths.</li>
-                                <li id="ki-rel-100-improved-li3"><strong>UI:</strong> Enhanced user experience with better feedback and navigation.</li>
+                                <li id="ki-rel-100-improved-li1"><strong>Installation simplified</strong> to
+                                    <code>sudo apt install soplos-kernel-installer</code> only.
+                                </li>
+                                <li id="ki-rel-100-improved-li2"><strong>Documentation:</strong> Updated README with new
+                                    features and corrected screenshot paths.</li>
+                                <li id="ki-rel-100-improved-li3"><strong>UI:</strong> Enhanced user experience with
+                                    better feedback and navigation.</li>
                             </ul>
 
                             <div class="subsection-header">
-                                <h3><i class="fas fa-globe"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <h3><i class="fas fa-globe"></i> <span
+                                        data-i18n="rel-label-translations">Translations</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ki-rel-100-i18n-li1"><strong>9 missing strings added</strong> across all 8 languages (en, es, de, fr, it, pt, ro, ru): mainline label, Soplos Stock profile name and description, EOL warning markup, invalid kernel name error, DKMS enrolled/not-enrolled texts, and post-install DKMS rebuild prompt.</li>
+                                <li id="ki-rel-100-i18n-li1"><strong>9 missing strings added</strong> across all 8
+                                    languages (en, es, de, fr, it, pt, ro, ru): mainline label, Soplos Stock profile
+                                    name and description, EOL warning markup, invalid kernel name error, DKMS
+                                    enrolled/not-enrolled texts, and post-install DKMS rebuild prompt.</li>
                             </ul>
 
                         </section>
@@ -276,11 +436,11 @@
     <script>
         // Patch applyLanguage to also translate data-i18n elements (repeated labels)
         const _origApplyLanguage = applyLanguage;
-        applyLanguage = function(lang) {
+        applyLanguage = function (lang) {
             _origApplyLanguage(lang);
             const dict = window['LANG_' + lang.toUpperCase()];
             if (!dict) return;
-            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) el.innerHTML = dict[key];
             });
