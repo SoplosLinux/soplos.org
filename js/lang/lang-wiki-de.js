@@ -4272,6 +4272,9 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-1003-title": "1.0.0-3 — Juni 2026",
+    "ki-rel-1003-subtitle": "Fehlerhafter Aktualisierungsknopf nach einem Soplos-Kernel-Update vor dem Neustart behoben.",
+    "ki-rel-1003-fixed-li1": "<strong>Fehlerhafter Aktualisierungsknopf nach Kernel-Update:</strong> Nach einem Soplos-Kernel-Update war der alte <code>vmlinuz</code> noch in <code>/boot</code> vorhanden. Der Fallback aktiviert sich jetzt nur, wenn das Metapaket nicht in apt registriert ist (<code>Installed: (none)</code>).",
     "ki-rel-1002-title": "1.0.0-2 — Juni 2026",
     "ki-rel-1002-subtitle": "Behoben: Erkennung von Soplos-Kernel-Updates, veraltete Paketliste nach einer Aktion und sprachabhängige apt-cache-Ausgabe.",
     "ki-rel-1002-fixed-li1": "<strong>Update-Schaltflächen-Erkennung:</strong> Stoppt das Parsen von <code>apt-cache show</code> bei der ersten Leerzeile (Ende des ersten Stanzas), sodass immer die Kandidatenversion für Update-Prüfungen verwendet wird statt von der installierten Version überschrieben zu werden.",

@@ -4272,6 +4272,9 @@ Object.assign(window.LANG_ES, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
 
+    "ki-rel-1003-title": "1.0.0-3 — Junio 2026",
+    "ki-rel-1003-subtitle": "Corregido el botón de actualización que aparecía incorrectamente tras actualizar un kernel Soplos antes de reiniciar.",
+    "ki-rel-1003-fixed-li1": "<strong>Botón de actualización incorrecto tras actualizar el kernel:</strong> Tras actualizar un kernel Soplos, el antiguo <code>vmlinuz</code> seguía presente en <code>/boot</code> antes de reiniciar, provocando que el botón de actualización apareciese de forma incorrecta. El fallback ahora solo se activa cuando el metapaquete no está registrado en apt (<code>Installed: (none)</code>).",
     "ki-rel-1002-title": "1.0.0-2 — Junio 2026",
     "ki-rel-1002-subtitle": "Corregida la detección de actualizaciones de kernels Soplos, la lista de paquetes obsoleta tras una acción y la salida de apt-cache dependiente del idioma.",
     "ki-rel-1002-fixed-li1": "<strong>Detección del botón de actualización:</strong> Detiene el análisis de <code>apt-cache show</code> en la primera línea en blanco (fin de la primera sección), asegurando que siempre se use la versión candidata para comprobar actualizaciones en lugar de ser sobrescrita por la instalada.",

@@ -5028,6 +5028,9 @@ Object.assign(window.LANG_EN, {
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
 
+  "ki-rel-1003-title": "1.0.0-3 — June 2026",
+  "ki-rel-1003-subtitle": "Fixed spurious Update button appearing after a Soplos kernel update before reboot.",
+  "ki-rel-1003-fixed-li1": "<strong>Spurious Update button after kernel update:</strong> After updating a Soplos kernel, the old <code>vmlinuz</code> was still present in <code>/boot</code> before reboot. The fallback now only activates when the metapackage is not registered in apt (<code>Installed: (none)</code>), so if apt knows the package is up to date, the vmlinuz is not checked.",
   "ki-rel-1002-title": "1.0.0-2 — June 2026",
   "ki-rel-1002-subtitle": "Fixed Soplos Kernels update detection, stale package lists after action, and locale-dependent apt-cache output.",
   "ki-rel-1002-fixed-li1": "<strong>Update button detection:</strong> Stops parsing <code>apt-cache show</code> at the first blank line (end of the first stanza), ensuring the candidate version is always used for update checks instead of being overwritten by the installed version.",

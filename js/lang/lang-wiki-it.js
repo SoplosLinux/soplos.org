@@ -4269,6 +4269,9 @@ Object.assign(window.LANG_IT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilatore di kernel Linux personalizzati e installatore di kernel precompilati per Soplos Linux — compila il tuo kernel con patch BORE, Zen, NTSYNC e PREEMPT_RT, o installa kernel Soplos pronti all'uso dal repository ufficiale.",
 
+    "ki-rel-1003-title": "1.0.0-3 — Giugno 2026",
+    "ki-rel-1003-subtitle": "Corretto il pulsante di aggiornamento spurio che compariva dopo un aggiornamento del kernel Soplos prima del riavvio.",
+    "ki-rel-1003-fixed-li1": "<strong>Pulsante di aggiornamento spurio dopo l&#39;aggiornamento del kernel:</strong> Dopo l&#39;aggiornamento di un kernel Soplos, il vecchio <code>vmlinuz</code> era ancora presente in <code>/boot</code> prima del riavvio. Il fallback ora si attiva solo quando il metapacchetto non è registrato in apt (<code>Installed: (none)</code>).",
     "ki-rel-1002-title": "1.0.0-2 — Giugno 2026",
     "ki-rel-1002-subtitle": "Corretti il rilevamento degli aggiornamenti dei kernel Soplos, l'elenco dei pacchetti obsoleto dopo un'azione e l'output di apt-cache dipendente dalla lingua.",
     "ki-rel-1002-fixed-li1": "<strong>Rilevamento del pulsante di aggiornamento:</strong> Interrompe l'analisi di <code>apt-cache show</code> alla prima riga vuota (fine del primo stanza), garantendo che la versione candidata venga sempre utilizzata per i controlli degli aggiornamenti invece di essere sovrascritta dalla versione installata.",

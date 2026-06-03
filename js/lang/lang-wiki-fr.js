@@ -4267,6 +4267,9 @@ Object.assign(window.LANG_FR, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
 
+    "ki-rel-1003-title": "1.0.0-3 — Juin 2026",
+    "ki-rel-1003-subtitle": "Correction du bouton de mise à jour intempestif apparaissant après une mise à jour de noyau Soplos avant le redémarrage.",
+    "ki-rel-1003-fixed-li1": "<strong>Bouton de mise à jour intempestif après la mise à jour du noyau :</strong> Après la mise à jour d&#39;un noyau Soplos, l&#39;ancien <code>vmlinuz</code> était encore présent dans <code>/boot</code> avant le redémarrage. Le fallback ne s&#39;active maintenant que lorsque le métapaquet n&#39;est pas enregistré dans apt (<code>Installed: (none)</code>).",
     "ki-rel-1002-title": "1.0.0-2 — Juin 2026",
     "ki-rel-1002-subtitle": "Correction de la détection des mises à jour des noyaux Soplos, de la liste de paquets périmée après une action et de la sortie apt-cache dépendante des paramètres régionaux.",
     "ki-rel-1002-fixed-li1": "<strong>Détection du bouton de mise à jour :</strong> Arrête l'analyse de <code>apt-cache show</code> à la première ligne vide (fin du premier paragraphe), garantissant que la version candidate est toujours utilisée pour les vérifications de mise à jour au lieu d'être écrasée par la version installée.",

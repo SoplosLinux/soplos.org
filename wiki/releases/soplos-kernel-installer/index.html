@@ -122,6 +122,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1003" class="toc-link">1.0.0-3 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1002" class="toc-link">1.0.0-2 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1001" class="toc-link">1.0.0-1 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v100" class="toc-link">1.0.0 <span class="toc-date">— 2026-04-05</span></a></li>
@@ -129,6 +130,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.0-3 -->
+                        <section id="v1003" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-1003-title">1.0.0-3 — June 2026</span></h2>
+                            <p id="ki-rel-1003-subtitle" class="lead">Fixed spurious Update button appearing after a Soplos kernel update before reboot.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-1003-fixed-li1"><strong>Spurious Update button after kernel update:</strong> After updating a Soplos kernel, the old <code>vmlinuz</code> was still present in <code>/boot</code> before reboot. The vmlinuz version fallback was comparing it against the repo candidate and showing the Update button incorrectly. The fallback now only activates when the metapackage is not registered in apt (<code>Installed: (none)</code>), so if apt knows the package is up to date, it is trusted and the vmlinuz is not checked.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.0-2 -->
                         <section id="v1002" class="content-section">

@@ -4268,6 +4268,9 @@ Object.assign(window.LANG_RO, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
 
+    "ki-rel-1003-title": "1.0.0-3 — Iunie 2026",
+    "ki-rel-1003-subtitle": "Corectat butonul de actualizare fals care apărea după actualizarea unui kernel Soplos înainte de repornire.",
+    "ki-rel-1003-fixed-li1": "<strong>Buton de actualizare fals după actualizarea kernelului:</strong> După actualizarea unui kernel Soplos, vechiul <code>vmlinuz</code> era încă prezent în <code>/boot</code> înainte de repornire. Fallback-ul se activează acum doar când metapachetul nu este înregistrat în apt (<code>Installed: (none)</code>).",
     "ki-rel-1002-title": "1.0.0-2 — Iunie 2026",
     "ki-rel-1002-subtitle": "Rezolvată detectarea actualizărilor pentru kernelurile Soplos, lista de pachete învechită după o acțiune și ieșirea apt-cache dependentă de limbă.",
     "ki-rel-1002-fixed-li1": "<strong>Detectarea butonului de actualizare:</strong> Oprește analiza <code>apt-cache show</code> la prima linie goală (sfârșitul primului paragraf), asigurând că versiunea candidat este întotdeauna folosită pentru verificările de actualizare în loc să fie suprascrisă de versiunea instalată.",
