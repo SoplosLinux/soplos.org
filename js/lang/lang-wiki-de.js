@@ -4296,6 +4296,10 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-1004-title": "1.0.0-4 — Juni 2026",
+    "ki-rel-1004-subtitle": "Der NVIDIA-VMA-Patch wird jetzt auch bei der Installation oder Aktualisierung vorkompilierter Kernel im Tab Soplos-Kernel angewendet, um DKMS-Fehler auf NVIDIA-Systemen zu verhindern.",
+    "ki-rel-1004-fixed-li1": "<strong>NVIDIA-Patch im Tab Soplos-Kernel:</strong> Der NVIDIA-VMA-Kompatibilitätspatch wurde nur beim Kompilieren aus dem Quellcode angewendet. Wird jetzt auch vor <code>apt install</code> und <code>apt install --only-upgrade</code> im Tab Soplos-Kernel angewendet, um DKMS-Build-Fehler auf NVIDIA-Systemen zu verhindern.",
+    "ki-rel-1004-fixed-li2": "<strong>NVIDIA-VMA-Patch-Fuzz:</strong> <code>--fuzz=5</code> zum Patch-Befehl hinzugefügt, damit der Patch korrekt auf Treiberversionen mit geringen Zeilenversatz-Unterschieden angewendet wird (z. B. 580 vs 590).",
     "ki-rel-1003-title": "1.0.0-3 — Juni 2026",
     "ki-rel-1003-subtitle": "Fehlerhafter Aktualisierungsknopf nach einem Soplos-Kernel-Update vor dem Neustart behoben.",
     "ki-rel-1003-fixed-li1": "<strong>Fehlerhafter Aktualisierungsknopf nach Kernel-Update:</strong> Nach einem Soplos-Kernel-Update war der alte <code>vmlinuz</code> noch in <code>/boot</code> vorhanden. Der Fallback aktiviert sich jetzt nur, wenn das Metapaket nicht in apt registriert ist (<code>Installed: (none)</code>).",

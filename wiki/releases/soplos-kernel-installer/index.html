@@ -122,6 +122,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1004" class="toc-link">1.0.0-4 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1003" class="toc-link">1.0.0-3 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1002" class="toc-link">1.0.0-2 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1001" class="toc-link">1.0.0-1 <span class="toc-date">— 2026-06-02</span></a></li>
@@ -130,6 +131,21 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.0-4 -->
+                        <section id="v1004" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-1004-title">1.0.0-4 — June 2026</span></h2>
+                            <p id="ki-rel-1004-subtitle" class="lead">NVIDIA VMA patch now applied when installing or updating pre-built kernels from the Soplos repository tab, preventing DKMS failures on NVIDIA systems.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-1004-fixed-li1"><strong>NVIDIA patch in Soplos Kernels tab:</strong> The NVIDIA VMA compatibility patch was only applied when compiling kernels from source. Now also applied before <code>apt install</code> and <code>apt install --only-upgrade</code> in the Soplos Kernels tab, preventing DKMS build failures on NVIDIA systems when installing or updating pre-built kernels.</li>
+                                <li id="ki-rel-1004-fixed-li2"><strong>NVIDIA VMA patch fuzz:</strong> Added <code>--fuzz=5</code> to the patch command so the same patch applies correctly to driver versions with minor line offset differences (e.g. 580 vs 590).</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.0-3 -->
                         <section id="v1003" class="content-section">

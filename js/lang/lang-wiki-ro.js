@@ -4292,6 +4292,10 @@ Object.assign(window.LANG_RO, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
 
+    "ki-rel-1004-title": "1.0.0-4 — Iunie 2026",
+    "ki-rel-1004-subtitle": "Patch-ul VMA NVIDIA este acum aplicat și la instalarea sau actualizarea kernel-urilor pre-compilate din fila Kernels Soplos, prevenind eșecurile DKMS pe sistemele NVIDIA.",
+    "ki-rel-1004-fixed-li1": "<strong>Patch NVIDIA în fila Kernels Soplos:</strong> Patch-ul de compatibilitate VMA NVIDIA era aplicat doar la compilarea din sursă. Acum aplicat și înainte de <code>apt install</code> și <code>apt install --only-upgrade</code> în fila Kernels Soplos, prevenind eșecurile de build DKMS pe sistemele NVIDIA.",
+    "ki-rel-1004-fixed-li2": "<strong>Fuzz patch VMA NVIDIA:</strong> Adăugat <code>--fuzz=5</code> la comanda patch pentru ca acesta să se aplice corect versiunilor de driver cu diferențe mici de offset de linie (ex. 580 vs 590).",
     "ki-rel-1003-title": "1.0.0-3 — Iunie 2026",
     "ki-rel-1003-subtitle": "Corectat butonul de actualizare fals care apărea după actualizarea unui kernel Soplos înainte de repornire.",
     "ki-rel-1003-fixed-li1": "<strong>Buton de actualizare fals după actualizarea kernelului:</strong> După actualizarea unui kernel Soplos, vechiul <code>vmlinuz</code> era încă prezent în <code>/boot</code> înainte de repornire. Fallback-ul se activează acum doar când metapachetul nu este înregistrat în apt (<code>Installed: (none)</code>).",

@@ -4291,6 +4291,10 @@ Object.assign(window.LANG_PT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels pré-compilados para Soplos Linux — compile o seu próprio kernel com patches BORE, Zen, NTSYNC e PREEMPT_RT, ou instale kernels Soplos prontos a usar a partir do repositório oficial.",
 
+    "ki-rel-1004-title": "1.0.0-4 — Junho 2026",
+    "ki-rel-1004-subtitle": "O patch VMA NVIDIA é agora aplicado ao instalar ou atualizar kernels pré-compilados a partir do separador Kernels Soplos, prevenindo falhas DKMS em sistemas NVIDIA.",
+    "ki-rel-1004-fixed-li1": "<strong>Patch NVIDIA no separador Kernels Soplos:</strong> O patch de compatibilidade VMA NVIDIA só era aplicado ao compilar a partir do código-fonte. Agora também aplicado antes de <code>apt install</code> e <code>apt install --only-upgrade</code> no separador Kernels Soplos, prevenindo falhas de build DKMS em sistemas NVIDIA.",
+    "ki-rel-1004-fixed-li2": "<strong>Fuzz do patch VMA NVIDIA:</strong> Adicionado <code>--fuzz=5</code> ao comando de patch para que se aplique corretamente a versões de driver com pequenas diferenças de deslocamento de linha (ex. 580 vs 590).",
     "ki-rel-1003-title": "1.0.0-3 — Junho 2026",
     "ki-rel-1003-subtitle": "Corrigido botão de atualização falso que aparecia após atualizar um kernel Soplos antes de reiniciar.",
     "ki-rel-1003-fixed-li1": "<strong>Botão de atualização falso após atualização do kernel:</strong> Após atualizar um kernel Soplos, o antigo <code>vmlinuz</code> ainda estava presente em <code>/boot</code> antes de reiniciar. O fallback agora só se ativa quando o metapacote não está registado no apt (<code>Installed: (none)</code>).",

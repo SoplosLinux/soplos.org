@@ -4295,6 +4295,10 @@ Object.assign(window.LANG_RU, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
 
+    "ki-rel-1004-title": "1.0.0-4 — Июнь 2026",
+    "ki-rel-1004-subtitle": "Патч VMA NVIDIA теперь применяется также при установке или обновлении готовых ядер из вкладки «Ядра Soplos», предотвращая сбои DKMS на системах с NVIDIA.",
+    "ki-rel-1004-fixed-li1": "<strong>Патч NVIDIA во вкладке «Ядра Soplos»:</strong> Патч совместимости VMA NVIDIA применялся только при компиляции из исходников. Теперь также применяется перед <code>apt install</code> и <code>apt install --only-upgrade</code> во вкладке «Ядра Soplos», предотвращая сбои сборки DKMS на системах с NVIDIA.",
+    "ki-rel-1004-fixed-li2": "<strong>Fuzz патча VMA NVIDIA:</strong> Добавлен <code>--fuzz=5</code> к команде patch, чтобы патч корректно применялся к версиям драйвера с небольшими различиями смещения строк (например, 580 vs 590).",
     "ki-rel-1003-title": "1.0.0-3 — Июнь 2026",
     "ki-rel-1003-subtitle": "Исправлена ложная кнопка обновления, появлявшаяся после обновления ядра Soplos до перезагрузки.",
     "ki-rel-1003-fixed-li1": "<strong>Ложная кнопка обновления после обновления ядра:</strong> После обновления ядра Soplos старый <code>vmlinuz</code> ещё оставался в <code>/boot</code> до перезагрузки. Теперь fallback активируется только когда метапакет не зарегистрирован в apt (<code>Installed: (none)</code>).",

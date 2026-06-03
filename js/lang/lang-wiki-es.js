@@ -4296,6 +4296,10 @@ Object.assign(window.LANG_ES, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
 
+    "ki-rel-1004-title": "1.0.0-4 — Junio 2026",
+    "ki-rel-1004-subtitle": "El parche VMA de NVIDIA ahora se aplica también al instalar o actualizar kernels precompilados desde la pestaña de repositorios Soplos, evitando fallos de DKMS en sistemas NVIDIA.",
+    "ki-rel-1004-fixed-li1": "<strong>Parche NVIDIA en la pestaña Kernels Soplos:</strong> El parche de compatibilidad VMA de NVIDIA solo se aplicaba al compilar desde fuente. Ahora también se aplica antes de <code>apt install</code> y <code>apt install --only-upgrade</code> en la pestaña Kernels Soplos, evitando fallos de DKMS en sistemas NVIDIA.",
+    "ki-rel-1004-fixed-li2": "<strong>Fuzz del parche VMA NVIDIA:</strong> Añadido <code>--fuzz=5</code> al comando de parche para que se aplique correctamente en versiones de driver con pequeñas diferencias de desplazamiento de línea (p. ej. 580 vs 590).",
     "ki-rel-1003-title": "1.0.0-3 — Junio 2026",
     "ki-rel-1003-subtitle": "Corregido el botón de actualización que aparecía incorrectamente tras actualizar un kernel Soplos antes de reiniciar.",
     "ki-rel-1003-fixed-li1": "<strong>Botón de actualización incorrecto tras actualizar el kernel:</strong> Tras actualizar un kernel Soplos, el antiguo <code>vmlinuz</code> seguía presente en <code>/boot</code> antes de reiniciar, provocando que el botón de actualización apareciese de forma incorrecta. El fallback ahora solo se activa cuando el metapaquete no está registrado en apt (<code>Installed: (none)</code>).",

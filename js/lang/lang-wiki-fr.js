@@ -4291,6 +4291,10 @@ Object.assign(window.LANG_FR, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
 
+    "ki-rel-1004-title": "1.0.0-4 — Juin 2026",
+    "ki-rel-1004-subtitle": "Le patch VMA NVIDIA est maintenant appliqué lors de l'installation ou la mise à jour de noyaux pré-compilés depuis l'onglet Noyaux Soplos, évitant les échecs DKMS sur les systèmes NVIDIA.",
+    "ki-rel-1004-fixed-li1": "<strong>Patch NVIDIA dans l'onglet Noyaux Soplos :</strong> Le patch de compatibilité VMA NVIDIA n'était appliqué que lors de la compilation depuis les sources. Maintenant aussi appliqué avant <code>apt install</code> et <code>apt install --only-upgrade</code> dans l'onglet Noyaux Soplos, évitant les échecs DKMS sur les systèmes NVIDIA.",
+    "ki-rel-1004-fixed-li2": "<strong>Fuzz du patch VMA NVIDIA :</strong> Ajout de <code>--fuzz=5</code> à la commande de patch pour qu'il s'applique correctement aux versions de pilote avec de légères différences de décalage de ligne (ex. 580 vs 590).",
     "ki-rel-1003-title": "1.0.0-3 — Juin 2026",
     "ki-rel-1003-subtitle": "Correction du bouton de mise à jour intempestif apparaissant après une mise à jour de noyau Soplos avant le redémarrage.",
     "ki-rel-1003-fixed-li1": "<strong>Bouton de mise à jour intempestif après la mise à jour du noyau :</strong> Après la mise à jour d&#39;un noyau Soplos, l&#39;ancien <code>vmlinuz</code> était encore présent dans <code>/boot</code> avant le redémarrage. Le fallback ne s&#39;active maintenant que lorsque le métapaquet n&#39;est pas enregistré dans apt (<code>Installed: (none)</code>).",
