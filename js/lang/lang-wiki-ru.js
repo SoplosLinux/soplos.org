@@ -4383,6 +4383,13 @@ Object.assign(window.LANG_RU, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Очиститель системы для Soplos Linux — удаляет кэш APT, устаревшие пакеты, старые ядра, неиспользуемые прошивки, среды выполнения Flatpak, ревизии Snap, кэш пользователя и корзину с двухуровневым сканированием пользователь/администратор.",
 
+    "sc-rel-1023-title": "1.0.2-3 — Июнь 2026",
+    "sc-rel-1023-subtitle": "Обнаружение осиротевших модулей DKMS во вкладке Драйверы, сканер осиротевших ссылок на модули в Кэше APT и автоматическая очистка ссылок после удаления драйверов.",
+    "sc-rel-1023-added-li1": "<strong>Вкладка Драйверы — осиротевшие модули DKMS:</strong> Новый сканер проверяет <code>/var/lib/dkms/</code> на наличие скомпилированных файлов <code>.ko</code>, исходный пакет которых (<code>*-dkms</code>) больше не установлен. Отображаются как записи <code>[DKMS]</code> и удаляются через <code>dkms remove</code> или прямое удаление директории + <code>depmod -a</code> + <code>dracut -f</code>.",
+    "sc-rel-1023-added-li2": "<strong>Кэш APT — осиротевшие ссылки на модули:</strong> Новый сканер обнаруживает устаревшие ссылки в <code>/etc/modules</code>, <code>/etc/modules-load.d/</code>, <code>/etc/modprobe.d/</code>, файлах юнитов systemd и файлах автозапуска X11/XDG. Охватывает осиротевшие записи от VirtualBox, VMware, Hyper-V и пакетов гостевых инструментов.",
+    "sc-rel-1023-added-li3": "<strong>Автоматическая очистка ссылок при удалении драйверов:</strong> После удаления пакетов драйверов устаревшие записи в <code>/etc/modules</code> и <code>/etc/modules-load.d/</code> автоматически удаляются перед <code>dracut -f</code>. Охватывает ссылки VirtualBox, VMware, NVIDIA, Broadcom и Hyper-V.",
+    "sc-rel-1023-added-li4": "<strong>Полная очистка осиротевших ссылок:</strong> Удаляет записи загрузки модулей, осиротевшие файлы <code>modprobe.d</code>, отключает и удаляет осиротевшие службы systemd, удаляет осиротевшие файлы автозапуска X11/XDG, затем пересобирает initramfs с <code>dracut -f</code>.",
+
     "sc-rel-1022-title": "1.0.2-2 — Май 2026",
     "sc-rel-1022-subtitle": "Расширенное обнаружение оборудования во вкладке Драйверы (гостевые инструменты VM, принтеры, планшеты Wacom, WiFi Broadcom) и критические исправления для ложных срабатываний GPU Intel в VM, защита dracut и индикатор прогресса.",
     "sc-rel-1022-added-li1": "<strong>Вкладка Драйверы — гостевые инструменты VM:</strong> Новый словарь <code>VM_GUEST_PACKAGES</code>, сопоставляющий вывод <code>systemd-detect-virt</code> с пакетами гостевых инструментов. Охватывает VirtualBox, VMware, KVM/QEMU, Hyper-V и Xen.",

@@ -4381,6 +4381,13 @@ Object.assign(window.LANG_IT, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Pulitore di sistema per Soplos Linux — rimuove cache APT, pacchetti orfani, kernel obsoleti, firmware non utilizzati, runtime Flatpak, revisioni Snap, cache utente e cestino con scansione dual-layer utente/amministratore.",
 
+    "sc-rel-1023-title": "1.0.2-3 — Giugno 2026",
+    "sc-rel-1023-subtitle": "Rilevamento di moduli DKMS orfani nella scheda Driver, scanner di riferimenti di moduli orfani nella Cache APT e pulizia automatica dei riferimenti dopo la rimozione dei driver.",
+    "sc-rel-1023-added-li1": "<strong>Scheda Driver — moduli DKMS orfani:</strong> Nuovo scanner che controlla <code>/var/lib/dkms/</code> alla ricerca di file <code>.ko</code> compilati il cui pacchetto sorgente (<code>*-dkms</code>) non è più installato. Mostrati come voci <code>[DKMS]</code> e rimossi tramite <code>dkms remove</code> o eliminazione diretta + <code>depmod -a</code> + <code>dracut -f</code>.",
+    "sc-rel-1023-added-li2": "<strong>Cache APT — riferimenti di moduli orfani:</strong> Nuovo scanner che rileva riferimenti obsoleti in <code>/etc/modules</code>, <code>/etc/modules-load.d/</code>, <code>/etc/modprobe.d/</code>, file di unità systemd e file di avvio X11/XDG. Copre le voci orfane di VirtualBox, VMware, Hyper-V e pacchetti di strumenti guest.",
+    "sc-rel-1023-added-li3": "<strong>Pulizia automatica dei riferimenti alla rimozione dei driver:</strong> Dopo aver eliminato i pacchetti driver, le voci obsolete in <code>/etc/modules</code> e <code>/etc/modules-load.d/</code> vengono rimosse automaticamente prima di <code>dracut -f</code>. Copre i riferimenti di VirtualBox, VMware, NVIDIA, Broadcom e Hyper-V.",
+    "sc-rel-1023-added-li4": "<strong>Azione di pulizia completa dei riferimenti orfani:</strong> Rimuove le voci di caricamento moduli, i file <code>modprobe.d</code> orfani, disabilita e rimuove i servizi systemd orfani, rimuove i file di avvio X11/XDG orfani, poi ricostruisce l'initramfs con <code>dracut -f</code>.",
+
     "sc-rel-1022-title": "1.0.2-2 — Maggio 2026",
     "sc-rel-1022-subtitle": "Rilevamento hardware esteso nella scheda Driver (strumenti guest VM, stampanti, tablet Wacom, WiFi Broadcom) e correzioni critiche per i falsi positivi GPU Intel nelle VM, protezione dracut e barra di avanzamento.",
     "sc-rel-1022-added-li1": "<strong>Scheda Driver — strumenti guest VM:</strong> Nuovo dict <code>VM_GUEST_PACKAGES</code> che mappa l'output di <code>systemd-detect-virt</code> ai pacchetti degli strumenti guest. Copre VirtualBox, VMware, KVM/QEMU, Hyper-V e Xen.",

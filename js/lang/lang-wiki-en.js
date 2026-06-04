@@ -5140,6 +5140,12 @@ Object.assign(window.LANG_EN, {
   "sc-rel-hero-title": "Soplos Sys Cleaner",
   "sc-rel-hero-subtitle": "System cleaner for Soplos Linux — remove APT cache, orphaned packages, old kernels, unused firmwares, Flatpak runtimes, Snap revisions, user cache and trash with dual-layer user/administrator scanning.",
 
+  "sc-rel-1023-title": "1.0.2-3 — June 2026",
+  "sc-rel-1023-subtitle": "Orphaned DKMS module detection in the Drivers tab, orphaned module reference scanner in APT Cache, and automatic reference cleanup after driver removal.",
+  "sc-rel-1023-added-li1": "<strong>Drivers tab — orphaned DKMS modules:</strong> New scanner checks <code>/var/lib/dkms/</code> for compiled <code>.ko</code> files whose source package (<code>*-dkms</code>) is no longer installed. Shown as <code>[DKMS]</code> entries and removed via <code>dkms remove</code> or direct directory deletion + <code>depmod -a</code> + <code>dracut -f</code>.",
+  "sc-rel-1023-added-li2": "<strong>APT Cache — orphaned module references:</strong> New scanner detects leftover references across <code>/etc/modules</code>, <code>/etc/modules-load.d/</code>, <code>/etc/modprobe.d/</code>, systemd unit files and X11/XDG autostart files. Covers orphaned entries from VirtualBox, VMware, Hyper-V and guest tool packages.",
+  "sc-rel-1023-added-li3": "<strong>Automatic reference cleanup on driver removal:</strong> After purging driver packages, leftover entries in <code>/etc/modules</code> and <code>/etc/modules-load.d/</code> are automatically removed before <code>dracut -f</code>. Covers VirtualBox, VMware, NVIDIA, Broadcom and Hyper-V module references.",
+  "sc-rel-1023-added-li4": "<strong>Full orphan reference cleanup action:</strong> Removes module load entries, orphaned <code>modprobe.d</code> files, disables and removes orphaned systemd services, removes orphaned X11/XDG autostart files, then rebuilds initramfs with <code>dracut -f</code>.",
   "sc-rel-1022-title": "1.0.2-2 — May 2026",
   "sc-rel-1022-subtitle": "Extended hardware detection in the Drivers tab (VM guest tools, printer drivers, Wacom tablets, Broadcom WiFi) and critical fixes for Intel GPU false positives in VMs, dracut firmware protection and progress bar display.",
   "sc-rel-1022-added-li1": "<strong>Drivers tab — VM guest tools:</strong> New <code>VM_GUEST_PACKAGES</code> dict maps <code>systemd-detect-virt</code> output to guest tool packages. Tools for the current hypervisor are protected; all others are shown as removable. Covers VirtualBox, VMware, KVM/QEMU, Hyper-V and Xen.",
