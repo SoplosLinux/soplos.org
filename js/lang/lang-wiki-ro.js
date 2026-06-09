@@ -3738,6 +3738,11 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-2093-title": "2.0.9-3 — Iunie 2026",
+    "wel-rel-2093-subtitle": "Corecții în fila Recomandate: calea pictogramei Brave Origin corectată, Affinity Suite revenit la AppImage 3.0.2 (Wine 10) după ce 3.2.0 a eșuat pe majoritatea sistemelor.",
+    "wel-rel-2093-fixed-li1": "<strong>Fila Recomandate — pictograma Brave Origin:</strong> Mutată din <code>brave-origin-icons/48x48/apps/brave-origin.png</code> în <code>brave-origin.png</code> la rădăcina pictogramelor de browsere — aceeași structură plată ca toate celelalte pictograme, evită problemele de packaging cu subdirectoare imbricate.",
+    "wel-rel-2093-fixed-li2": "<strong>Fila Recomandate — Affinity Suite revenit la 3.0.2:</strong> AppImage-ul 3.2.0 a trecut la Wine 11 și eșuează pe majoritatea sistemelor. Revenit la AppImage 3.0.2 (Wine 10), disponibil la același tag de release (<code>3.2.0</code>) din repo-ul upstream. Actualizate <code>check_path</code>, URL wget, ținta chmod și intrarea <code>Exec</code> din <code>.desktop</code>.",
+
     "wel-rel-2092-title": "2.0.9-2 — Iunie 2026",
     "wel-rel-2092-subtitle": "Fila Recomandate: trei browsere noi (Brave Origin, Opera, Zen Browser). Fila Drivere: corectate falsele pozitive NVIDIA — driverul activ afișat ca instalat pe versiuni incorecte și fallback-ul dpkg declanșat pe sistemele AMD.",
     "wel-rel-2092-added-li1": "<strong>Fila Recomandate — Brave Origin:</strong> Browser axat pe confidențialitate de la Brave cu asistent IA integrat. Instalat prin scriptul oficial al Brave (<code>FLAVOR=origin</code>). Patch-ul de pictogramă înlocuiește pictograma portocalie inclusă cu o versiune neagră în toate dimensiunile, aplicând patch-ul în <code>/usr/share/icons/hicolor/</code> și <code>/opt/brave.com/brave-origin/</code> pentru a rezista actualizărilor.",

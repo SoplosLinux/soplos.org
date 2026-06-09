@@ -3737,6 +3737,11 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-2093-title": "2.0.9-3 — Junho 2026",
+    "wel-rel-2093-subtitle": "Correções no separador Recomendados: caminho do ícone do Brave Origin corrigido, Affinity Suite revertido para o AppImage 3.0.2 (Wine 10) após o 3.2.0 falhar na maioria dos sistemas.",
+    "wel-rel-2093-fixed-li1": "<strong>Separador Recomendados — ícone do Brave Origin:</strong> Movido de <code>brave-origin-icons/48x48/apps/brave-origin.png</code> para <code>brave-origin.png</code> na raiz dos ícones de navegadores — mesma estrutura plana dos outros ícones, evita problemas de empacotamento com subdiretórios aninhados.",
+    "wel-rel-2093-fixed-li2": "<strong>Separador Recomendados — Affinity Suite revertido para 3.0.2:</strong> O AppImage 3.2.0 mudou para Wine 11 e falha na maioria dos sistemas. Revertido para o AppImage 3.0.2 (Wine 10), disponível na mesma tag de release (<code>3.2.0</code>) do repositório original. Atualizados <code>check_path</code>, URL wget, alvo chmod e a entrada <code>Exec</code> do <code>.desktop</code>.",
+
     "wel-rel-2092-title": "2.0.9-2 — Junho 2026",
     "wel-rel-2092-subtitle": "Separador Recomendados: três novos navegadores (Brave Origin, Opera, Zen Browser). Separador Controladores: corrigidos falsos positivos NVIDIA — driver ativo marcado como instalado em versões incorretas e fallback dpkg acionado em sistemas AMD.",
     "wel-rel-2092-added-li1": "<strong>Separador Recomendados — Brave Origin:</strong> Navegador focado em privacidade com assistente IA integrado. Instalado via script oficial da Brave (<code>FLAVOR=origin</code>). O patch de ícone substitui o ícone laranja incluído por uma versão preta em todos os tamanhos, aplicando o patch em <code>/usr/share/icons/hicolor/</code> e <code>/opt/brave.com/brave-origin/</code> para sobreviver a atualizações.",

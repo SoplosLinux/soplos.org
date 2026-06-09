@@ -3742,6 +3742,11 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-2093-title": "2.0.9-3 — Juni 2026",
+    "wel-rel-2093-subtitle": "Korrekturen im Reiter Empfehlungen: Brave-Origin-Icon-Pfad korrigiert, Affinity Suite auf AppImage 3.0.2 (Wine 10) zurückgesetzt, da 3.2.0 auf den meisten Systemen fehlschlug.",
+    "wel-rel-2093-fixed-li1": "<strong>Reiter Empfehlungen — Brave-Origin-Icon:</strong> Verschoben von <code>brave-origin-icons/48x48/apps/brave-origin.png</code> nach <code>brave-origin.png</code> im Stammverzeichnis der Browser-Icons — gleiche flache Struktur wie alle anderen Browser-Icons, vermeidet Packaging-Probleme mit verschachtelten Unterverzeichnissen.",
+    "wel-rel-2093-fixed-li2": "<strong>Reiter Empfehlungen — Affinity Suite auf 3.0.2 zurückgesetzt:</strong> Das AppImage 3.2.0 wechselte auf Wine 11 und schlägt auf den meisten Systemen fehl. Auf AppImage 3.0.2 (Wine 10) zurückgesetzt, verfügbar am gleichen Release-Tag (<code>3.2.0</code>) des Upstream-Repos. <code>check_path</code>, wget-URL, chmod-Ziel und den <code>Exec</code>-Eintrag der <code>.desktop</code>-Datei aktualisiert.",
+
     "wel-rel-2092-title": "2.0.9-2 — Juni 2026",
     "wel-rel-2092-subtitle": "Reiter Empfehlungen: drei neue Browser (Brave Origin, Opera, Zen Browser). Reiter Treiber: NVIDIA-Falschpositive behoben — aktiver Treiber für falsche Versionen als installiert angezeigt und dpkg-Fallback auf AMD-Systemen ausgelöst.",
     "wel-rel-2092-added-li1": "<strong>Reiter Empfehlungen — Brave Origin:</strong> Datenschutzorientierter Browser von Brave mit integriertem KI-Assistenten. Installiert über das offizielle Brave-Skript (<code>FLAVOR=origin</code>). Das Icon-Patch ersetzt das mitgelieferte orangefarbene Icon durch eine schwarze Version in allen Größen, mit Patches in <code>/usr/share/icons/hicolor/</code> und <code>/opt/brave.com/brave-origin/</code>, um Updates zu überstehen.",

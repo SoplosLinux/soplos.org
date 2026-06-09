@@ -4499,6 +4499,11 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-2093-title": "2.0.9-3 — June 2026",
+  "wel-rel-2093-subtitle": "Recommended tab fixes: Brave Origin icon path corrected, Affinity Suite reverted to 3.0.2 AppImage (Wine 10) after 3.2.0 failed on most systems.",
+  "wel-rel-2093-fixed-li1": "<strong>Recommended tab — Brave Origin icon:</strong> Moved from <code>brave-origin-icons/48x48/apps/brave-origin.png</code> to <code>brave-origin.png</code> at the browsers icons root — same flat structure as all other browser icons, avoids packaging issues with nested subdirectories.",
+  "wel-rel-2093-fixed-li2": "<strong>Recommended tab — Affinity Suite reverted to 3.0.2:</strong> The 3.2.0 AppImage switched to Wine 11 and fails on most systems. Reverted to the 3.0.2 AppImage (Wine 10), available at the same release tag (<code>3.2.0</code>) of the upstream repo. Updated <code>check_path</code>, wget URL, chmod target and <code>.desktop</code> <code>Exec</code> entry accordingly.",
+
   "wel-rel-2092-title": "2.0.9-2 — June 2026",
   "wel-rel-2092-subtitle": "Recommended tab: three new browsers (Brave Origin, Opera, Zen Browser). Drivers tab: fixed NVIDIA false positives — active driver shown as installed on non-matching versions, and dpkg fallback triggering on AMD systems.",
   "wel-rel-2092-added-li1": "<strong>Recommended tab — Brave Origin:</strong> Privacy-focused browser by Brave with integrated AI assistant. Installed via Brave's official script (<code>FLAVOR=origin</code>). Icon patch replaces the bundled orange icon with a black version in all sizes, patching both <code>/usr/share/icons/hicolor/</code> and <code>/opt/brave.com/brave-origin/</code> to survive updates.",

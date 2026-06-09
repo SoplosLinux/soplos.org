@@ -3741,6 +3741,11 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-2093-title": "2.0.9-3 — Июнь 2026",
+    "wel-rel-2093-subtitle": "Исправления во вкладке Рекомендуемые: скорректирован путь иконки Brave Origin, Affinity Suite возвращён к AppImage 3.0.2 (Wine 10) после того, как 3.2.0 не работал на большинстве систем.",
+    "wel-rel-2093-fixed-li1": "<strong>Вкладка Рекомендуемые — иконка Brave Origin:</strong> Перемещена из <code>brave-origin-icons/48x48/apps/brave-origin.png</code> в <code>brave-origin.png</code> в корневой каталог иконок браузеров — такая же плоская структура, как у всех остальных иконок, избегает проблем с упаковкой при вложенных подкаталогах.",
+    "wel-rel-2093-fixed-li2": "<strong>Вкладка Рекомендуемые — Affinity Suite возвращён к 3.0.2:</strong> AppImage 3.2.0 перешёл на Wine 11 и не работает на большинстве систем. Возвращён к AppImage 3.0.2 (Wine 10), доступному по тому же тегу релиза (<code>3.2.0</code>) в upstream-репозитории. Обновлены <code>check_path</code>, URL wget, цель chmod и запись <code>Exec</code> в файле <code>.desktop</code>.",
+
     "wel-rel-2092-title": "2.0.9-2 — Июнь 2026",
     "wel-rel-2092-subtitle": "Вкладка Рекомендуемые: три новых браузера (Brave Origin, Opera, Zen Browser). Вкладка Драйверы: исправлены ложные срабатывания NVIDIA — активный драйвер отображался как установленный для неверных версий, а fallback dpkg срабатывал на AMD-системах.",
     "wel-rel-2092-added-li1": "<strong>Вкладка Рекомендуемые — Brave Origin:</strong> Браузер Brave с фокусом на конфиденциальности и встроенным ИИ-ассистентом. Устанавливается через официальный скрипт Brave (<code>FLAVOR=origin</code>). Патч иконки заменяет встроенную оранжевую иконку на чёрную версию во всех размерах, применяя патч как в <code>/usr/share/icons/hicolor/</code>, так и в <code>/opt/brave.com/brave-origin/</code> для сохранения после обновлений.",

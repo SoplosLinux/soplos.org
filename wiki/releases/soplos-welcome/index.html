@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2093" class="toc-link">2.0.9-3 <span class="toc-date">— 2026-06-09</span></a></li>
                             <li><a href="#v2092" class="toc-link">2.0.9-2 <span class="toc-date">— 2026-06-09</span></a></li>
                             <li><a href="#v2091" class="toc-link">2.0.9-1 <span class="toc-date">— 2026-05-29</span></a></li>
                             <li><a href="#v209" class="toc-link">2.0.9 <span class="toc-date">— 2026-05-28</span></a></li>
@@ -177,6 +178,21 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.9-3 -->
+                        <section id="v2093" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2093-title">2.0.9-3 — June 2026</span></h2>
+                            <p id="wel-rel-2093-subtitle" class="lead">Recommended tab fixes: Brave Origin icon path corrected, Affinity Suite reverted to 3.0.2 AppImage (Wine 10) after 3.2.0 failed on most systems.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2093-fixed-li1"><strong>Recommended tab — Brave Origin icon:</strong> Moved from <code>brave-origin-icons/48x48/apps/brave-origin.png</code> to <code>brave-origin.png</code> at the browsers icons root — same flat structure as all other browser icons, avoids packaging issues with nested subdirectories.</li>
+                                <li id="wel-rel-2093-fixed-li2"><strong>Recommended tab — Affinity Suite reverted to 3.0.2:</strong> The 3.2.0 AppImage switched to Wine 11 and fails on most systems. Reverted to the 3.0.2 AppImage (Wine 10), available at the same release tag (<code>3.2.0</code>) of the upstream repo. Updated <code>check_path</code>, wget URL, chmod target and <code>.desktop</code> <code>Exec</code> entry accordingly.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.9-2 -->
                         <section id="v2092" class="content-section">
