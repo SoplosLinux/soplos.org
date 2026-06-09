@@ -4499,6 +4499,14 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-2092-title": "2.0.9-2 — June 2026",
+  "wel-rel-2092-subtitle": "Recommended tab: three new browsers (Brave Origin, Opera, Zen Browser). Drivers tab: fixed NVIDIA false positives — active driver shown as installed on non-matching versions, and dpkg fallback triggering on AMD systems.",
+  "wel-rel-2092-added-li1": "<strong>Recommended tab — Brave Origin:</strong> Privacy-focused browser by Brave with integrated AI assistant. Installed via Brave's official script (<code>FLAVOR=origin</code>). Icon patch replaces the bundled orange icon with a black version in all sizes, patching both <code>/usr/share/icons/hicolor/</code> and <code>/opt/brave.com/brave-origin/</code> to survive updates.",
+  "wel-rel-2092-added-li2": "<strong>Recommended tab — Opera:</strong> Feature-rich browser with built-in VPN and ad blocker. Installed as Flatpak (<code>com.opera.Opera</code>).",
+  "wel-rel-2092-added-li3": "<strong>Recommended tab — Zen Browser:</strong> Privacy-focused Firefox-based browser with beautiful design. Installed from the latest GitHub release <code>.deb</code> via dynamic URL.",
+  "wel-rel-2092-fixed-li1": "<strong>Drivers tab — NVIDIA 550 detection:</strong> <code>check_fn</code> now uses <code>_get_nvidia_active_version() == '550'</code> instead of <code>_is_package_installed('nvidia-driver')</code>. Previously, having any NVIDIA driver installed (e.g. 580) also marked 550 as installed because both share the <code>nvidia-driver</code> meta-package.",
+  "wel-rel-2092-fixed-li2": "<strong>Drivers tab — NVIDIA false positives on AMD systems:</strong> The dpkg fallback in <code>_get_nvidia_active_version()</code> now only runs when <code>lspci</code> detects NVIDIA hardware. On AMD-only systems, leftover NVIDIA packages in dpkg no longer trigger false-positive driver checkmarks.",
+
   "wel-rel-2091-title": "2.0.9-1 — May 2026",
   "wel-rel-2091-subtitle": "Packaging fix: removed <code>slide1.png</code> from <code>assets/icons/</code> which was being picked up as the application icon, causing GNOME Software to display the wrong image.",
   "wel-rel-2091-fixed-li1": "<strong>App icon in GNOME Software:</strong> <code>slide1.png</code> was being picked up by the repo manager and packaged as the application icon. Removed so GNOME Software now correctly displays <code>org.soplos.welcome.png</code>.",
