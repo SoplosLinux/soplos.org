@@ -4380,6 +4380,11 @@ Object.assign(window.LANG_RO, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Curățitor de sistem pentru Soplos Linux — elimină memoria cache APT, pachetele orfane, nucleele vechi, firmware-ul nefolosit, runtime-urile Flatpak, reviziile Snap, memoria cache a utilizatorului și coșul de gunoi cu scanare dublă utilizator/administrator.",
 
+    "sc-rel-1024-title": "1.0.2-4 — Iunie 2026",
+    "sc-rel-1024-subtitle": "Corecții pentru detectorul de module DKMS orfane — fals pozitiv pe driverul NVIDIA activ și versiuni compilate vechi nedetectate după actualizări.",
+    "sc-rel-1024-fixed-li1": "<strong>Detector DKMS — driver activ marcat ca orfan (fals pozitiv NVIDIA):</strong> Adăugată maparea <code>DKMS_MODULE_PACKAGES</code> care acoperă NVIDIA (<code>nvidia</code> → <code>nvidia-kernel-dkms</code>), VirtualBox guest (<code>vboxguest</code> → <code>virtualbox-guest-dkms</code>), Broadcom (<code>broadcom-sta</code>, <code>wl</code> → <code>broadcom-sta-dkms</code> / <code>bcmwl-kernel-source</code>), ZFS, v4l2loopback, bbswitch și alte nepotriviri cunoscute între numele directorului DKMS și numele pachetului.",
+    "sc-rel-1024-fixed-li2": "<strong>Detector DKMS — versiuni compilate vechi nedetectate după actualizare:</strong> La actualizarea unui driver, modulele compilate vechi din <code>/var/lib/dkms/&lt;modul&gt;/&lt;versiune-veche&gt;/</code> nu erau marcate ca orfane deoarece noul pachet era instalat. Detectorul verifică acum directorul sursă DKMS <code>/usr/src/&lt;modul&gt;-&lt;versiune&gt;/</code> — absența sa confirmă că nu există pachet proprietar pentru acea versiune specifică. O comparație de șir de versiune este utilizată ca alternativă.",
+
     "sc-rel-1023-title": "1.0.2-3 — Iunie 2026",
     "sc-rel-1023-subtitle": "Detectarea modulelor DKMS orfane în fila Drivere, scanner de referințe de module orfane în Cache APT și curățare automată a referințelor după eliminarea driverelor.",
     "sc-rel-1023-added-li1": "<strong>Fila Drivere — module DKMS orfane:</strong> Nou scanner care verifică <code>/var/lib/dkms/</code> pentru fișiere <code>.ko</code> compilate al căror pachet sursă (<code>*-dkms</code>) nu mai este instalat. Afișate ca intrări <code>[DKMS]</code> și eliminate prin <code>dkms remove</code> sau ștergere directă + <code>depmod -a</code> + <code>dracut -f</code>.",

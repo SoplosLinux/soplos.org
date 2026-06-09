@@ -4384,6 +4384,11 @@ Object.assign(window.LANG_DE, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Systemreiniger für Soplos Linux — entfernt APT-Cache, verwaiste Pakete, alte Kernel, ungenutzte Firmware, Flatpak-Laufzeiten, Snap-Revisionen, Benutzer-Cache und Papierkorb mit zweischichtigem Benutzer-/Administrator-Scan.",
 
+    "sc-rel-1024-title": "1.0.2-4 — Juni 2026",
+    "sc-rel-1024-subtitle": "Fehlerbehebungen im DKMS-Waisen-Detektor — falsches Positiv beim aktiven NVIDIA-Treiber und alte kompilierte Versionen nach Upgrades nicht erkannt.",
+    "sc-rel-1024-fixed-li1": "<strong>DKMS-Detektor — aktiver Treiber als Waise markiert (NVIDIA-Falschpositiv):</strong> Das Mapping <code>DKMS_MODULE_PACKAGES</code> wurde hinzugefügt und deckt NVIDIA (<code>nvidia</code> → <code>nvidia-kernel-dkms</code>), VirtualBox-Gast (<code>vboxguest</code> → <code>virtualbox-guest-dkms</code>), Broadcom (<code>broadcom-sta</code>, <code>wl</code> → <code>broadcom-sta-dkms</code> / <code>bcmwl-kernel-source</code>), ZFS, v4l2loopback, bbswitch und andere bekannte Abweichungen zwischen DKMS-Verzeichnisname und Paketname ab.",
+    "sc-rel-1024-fixed-li2": "<strong>DKMS-Detektor — alte kompilierte Versionen nach Upgrade nicht erkannt:</strong> Beim Upgrade eines Treibers wurden alte kompilierte Module in <code>/var/lib/dkms/&lt;Modul&gt;/&lt;alte-Version&gt;/</code> nicht als Waisen markiert, da das neue Paket installiert war. Der Detektor prüft jetzt das DKMS-Quellverzeichnis <code>/usr/src/&lt;Modul&gt;-&lt;Version&gt;/</code> — sein Fehlen bestätigt, dass kein besitzendes Paket für diese Version existiert. Ein Versionsstring-Vergleich mit der installierten Paketversion wird als Fallback verwendet.",
+
     "sc-rel-1023-title": "1.0.2-3 — Juni 2026",
     "sc-rel-1023-subtitle": "Erkennung verwaister DKMS-Module im Tab Treiber, Scanner für verwaiste Modulreferenzen im APT-Cache und automatische Referenzbereinigung nach der Treiberentfernung.",
     "sc-rel-1023-added-li1": "<strong>Tab Treiber — verwaiste DKMS-Module:</strong> Neuer Scanner prüft <code>/var/lib/dkms/</code> auf kompilierte <code>.ko</code>-Dateien, deren Quellpaket (<code>*-dkms</code>) nicht mehr installiert ist. Als <code>[DKMS]</code>-Einträge angezeigt und via <code>dkms remove</code> oder direkte Löschung + <code>depmod -a</code> + <code>dracut -f</code> entfernt.",

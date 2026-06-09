@@ -5140,6 +5140,11 @@ Object.assign(window.LANG_EN, {
   "sc-rel-hero-title": "Soplos Sys Cleaner",
   "sc-rel-hero-subtitle": "System cleaner for Soplos Linux — remove APT cache, orphaned packages, old kernels, unused firmwares, Flatpak runtimes, Snap revisions, user cache and trash with dual-layer user/administrator scanning.",
 
+  "sc-rel-1024-title": "1.0.2-4 — June 2026",
+  "sc-rel-1024-subtitle": "Bug fixes for the DKMS orphan detector — false positive on active NVIDIA driver and missed old compiled versions after upgrades.",
+  "sc-rel-1024-fixed-li1": "<strong>DKMS orphan detector — active driver shown as orphan (NVIDIA false positive):</strong> Added <code>DKMS_MODULE_PACKAGES</code> mapping covering NVIDIA (<code>nvidia</code> → <code>nvidia-kernel-dkms</code>), VirtualBox guest (<code>vboxguest</code> → <code>virtualbox-guest-dkms</code>), Broadcom (<code>broadcom-sta</code>, <code>wl</code> → <code>broadcom-sta-dkms</code> / <code>bcmwl-kernel-source</code>), ZFS, v4l2loopback, bbswitch and other known mismatches between DKMS directory name and package name.",
+  "sc-rel-1024-fixed-li2": "<strong>DKMS orphan detector — old compiled versions not detected after upgrade:</strong> When a driver is upgraded, old compiled modules in <code>/var/lib/dkms/&lt;module&gt;/&lt;old-version&gt;/</code> were not flagged as orphans because the new package was found installed. The detector now checks for the DKMS source directory <code>/usr/src/&lt;module&gt;-&lt;version&gt;/</code> — its absence confirms no owning package for that specific version. A version-string comparison against the installed package version is used as fallback.",
+
   "sc-rel-1023-title": "1.0.2-3 — June 2026",
   "sc-rel-1023-subtitle": "Orphaned DKMS module detection in the Drivers tab, orphaned module reference scanner in APT Cache, and automatic reference cleanup after driver removal.",
   "sc-rel-1023-added-li1": "<strong>Drivers tab — orphaned DKMS modules:</strong> New scanner checks <code>/var/lib/dkms/</code> for compiled <code>.ko</code> files whose source package (<code>*-dkms</code>) is no longer installed. Shown as <code>[DKMS]</code> entries and removed via <code>dkms remove</code> or direct directory deletion + <code>depmod -a</code> + <code>dracut -f</code>.",
