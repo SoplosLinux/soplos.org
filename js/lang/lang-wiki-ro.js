@@ -4932,6 +4932,10 @@ Object.assign(window.LANG_RO, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Manager grafic GTK3 pentru teme de pornire Plymouth — previzualizați, instalați și aplicați teme cu suport Wayland/X11, previzualizări avansate Xephyr și internaționalizare completă în 8 limbi.",
 
+    "pm-rel-200-6-title": "2.0.0-6 — Iunie 2026",
+    "pm-rel-200-6-subtitle": "Stil de selecție al cardurilor de temă rafinat: bordură de 1px, fără efect de strălucire, fundalul portocaliu al FlowBoxChild la selecție corectat.",
+    "pm-rel-200-6-changed-li1": "<strong>Stilul de selecție al cardurilor de temă:</strong> Indicatorul de selecție actualizat la o bordură de 1px fără efect de strălucire. Corectat fundalul portocaliu al <code>FlowBoxChild</code> la selectarea unui card de temă.",
+
     "pm-rel-200-5-title": "2.0.0-5 — Mai 2026",
     "pm-rel-200-5-subtitle": "Lansare exclusiv documentară — documentație istorică completă pentru ramurile Legacy 1.x și curățare metainfo.",
     "pm-rel-200-5-docs-li1": "<strong>Documentație istorică:</strong> Adăugată documentație istorică completă pentru ramurile Legacy 1.x (Tyron și Tyson) în CHANGELOG și README.",

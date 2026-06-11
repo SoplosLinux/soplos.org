@@ -4935,6 +4935,10 @@ Object.assign(window.LANG_DE, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Grafischer GTK3-Manager für Plymouth-Boot-Splash-Themen — Vorschau, Installation und Anwendung von Themen mit Wayland/X11-Unterstützung, erweiterten Xephyr-Vorschauen und vollständiger Internationalisierung in 8 Sprachen.",
 
+    "pm-rel-200-6-title": "2.0.0-6 — Juni 2026",
+    "pm-rel-200-6-subtitle": "Auswahlstil der Themenkarten verfeinert: 1px-Rahmen, kein Leuchteffekt, orangefarbener FlowBoxChild-Hintergrund bei Auswahl behoben.",
+    "pm-rel-200-6-changed-li1": "<strong>Auswahlstil der Themenkarten:</strong> Auswahlindikator auf einen 1px-Rahmen ohne Leuchteffekt aktualisiert. Orangefarbener <code>FlowBoxChild</code>-Hintergrund bei der Auswahl einer Themenkarte behoben.",
+
     "pm-rel-200-5-title": "2.0.0-5 — Mai 2026",
     "pm-rel-200-5-subtitle": "Rein dokumentarische Version — umfassende historische Dokumentation für die Legacy-1.x-Zweige und Metainfo-Bereinigung.",
     "pm-rel-200-5-docs-li1": "<strong>Historische Dokumentation:</strong> Umfassende historische Dokumentation für die Legacy-1.x-Zweige (Tyron und Tyson) in CHANGELOG und README hinzugefügt.",

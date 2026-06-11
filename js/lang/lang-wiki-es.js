@@ -4936,6 +4936,10 @@ Object.assign(window.LANG_ES, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Gestor gráfico GTK3 de temas de arranque Plymouth — previsualiza, instala y aplica temas con soporte Wayland/X11, previsualizaciones avanzadas con Xephyr e internacionalización completa en 8 idiomas.",
 
+    "pm-rel-200-6-title": "2.0.0-6 — Junio 2026",
+    "pm-rel-200-6-subtitle": "Estilo de selección de tarjetas de tema refinado: borde de 1px, sin efecto de brillo, fondo naranja del FlowBoxChild en selección corregido.",
+    "pm-rel-200-6-changed-li1": "<strong>Estilo de selección de tarjetas de tema:</strong> Indicador de selección actualizado a un borde de 1px sin efecto de brillo. Corregido el fondo naranja del <code>FlowBoxChild</code> al seleccionar una tarjeta de tema.",
+
     "pm-rel-200-5-title": "2.0.0-5 — Mayo 2026",
     "pm-rel-200-5-subtitle": "Versión solo de documentación — documentación histórica completa para las ramas Legacy 1.x y limpieza de metainfo.",
     "pm-rel-200-5-docs-li1": "<strong>Documentación histórica:</strong> Añadida documentación histórica completa para las ramas Legacy 1.x (Tyron y Tyson) en CHANGELOG y README.",
