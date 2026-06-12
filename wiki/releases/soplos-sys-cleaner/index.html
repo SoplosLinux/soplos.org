@@ -116,7 +116,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
-                                <li><a href="#v1024" class="toc-link">1.0.2-4 <span class="toc-date">— 2026-06-09</span></a></li>
+                                <li><a href="#v1025" class="toc-link">1.0.2-5 <span class="toc-date">— 2026-06-12</span></a></li>
+                            <li><a href="#v1024" class="toc-link">1.0.2-4 <span class="toc-date">— 2026-06-09</span></a></li>
                             <li><a href="#v1023" class="toc-link">1.0.2-3 <span class="toc-date">— 2026-06-04</span></a></li>
                             <li><a href="#v1022" class="toc-link">1.0.2-2 <span class="toc-date">— 2026-05-29</span></a></li>
                             <li><a href="#v1021" class="toc-link">1.0.2-1 <span class="toc-date">— 2026-04-17</span></a></li>
@@ -128,6 +129,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-5 -->
+                        <section id="v1025" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-1025-title">1.0.2-5 — June 2026</span></h2>
+                            <p id="sc-rel-1025-subtitle" class="lead">Firmware removal made permanent: the action now purges the owning APT package when all its firmware directories are removed, preventing files from being restored on the next upgrade.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-1025-fixed-li1"><strong>Firmware removal not permanent — files restored on every <code>apt upgrade</code>:</strong> <code>do_remove_firmware</code> was deleting files from <code>/lib/firmware/</code> directly without purging the owning APT packages. Any subsequent <code>apt full-upgrade</code> restored the deleted files. The action now runs <code>apt purge</code> for the owning package when all its firmware directories are removed, covering: <code>firmware-amd-graphics</code>, <code>firmware-intel-graphics</code>, <code>firmware-intel-sound</code>, <code>firmware-iwlwifi</code>, <code>firmware-realtek</code>, <code>firmware-brcm80211</code>, <code>firmware-atheros</code>, <code>firmware-mediatek</code>, <code>firmware-libertas</code> and <code>firmware-nvidia-graphics</code>. Generic bundles (<code>firmware-linux-nonfree</code>, <code>firmware-misc-nonfree</code>) are not purged as they contain firmware for many unrelated hardware families.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-4 -->
                         <section id="v1024" class="content-section">
