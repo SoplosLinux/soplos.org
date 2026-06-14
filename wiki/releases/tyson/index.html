@@ -120,7 +120,7 @@
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
                             <li><a href="#rc1" class="toc-link" style="white-space:nowrap">RC1 <span
-                                        class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-06-04</span></a>
+                                        class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-06-14</span></a>
                             </li>
                             <li><a href="#beta-104" class="toc-link" style="white-space:nowrap">Beta 1.0.4 <span
                                         class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-03-06</span></a>
@@ -159,14 +159,14 @@
                         <!-- RC1 -->
                         <section id="rc1" class="content-section">
                             <h2><i class="fas fa-compact-disc"></i> <span id="tyson-rel-rc1-title">RC1 — June 2026</span></h2>
-                            <p id="tyson-rel-rc1-subtitle" class="lead">Custom Soplos kernel 7.0.11, NVIDIA 580.159.04, KDE Plasma 6.6.5, SDDM updated, Calamares 3.4.2 and Debian repositories switched to testing+forky.</p>
+                            <p id="tyson-rel-rc1-subtitle" class="lead">Custom Soplos kernel 7.0.12, NVIDIA 580.159.04, KDE Plasma 6.6.5, SDDM updated, zRAM enabled by default, fish as default shell, Ghostty as default terminal and Debian repositories switched to testing+forky.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-microchip"></i> <span id="tyson-rel-rc1-label-kernel">Kernel</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li><code>6.18.15+deb14-amd64</code> → <code>7.0.11-soplos</code> <span data-i18n="inline-custom-kernel">(custom Soplos kernel)</span></li>
+                                <li><code>6.18.15+deb14-amd64</code> → <code>7.0.12-soplos</code> <span data-i18n="inline-custom-kernel">(custom Soplos kernel)</span></li>
                             </ul>
 
                             <div class="subsection-header">
@@ -174,7 +174,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li><strong>soplos-release</strong> <code>0.1.7</code> → <code>0.1.7-9</code></li>
+                                <li><strong>soplos-release</strong> <code>0.1.7</code> → <code>0.1.8-1</code></li>
                             </ul>
 
                             <div class="subsection-header">
@@ -201,10 +201,13 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
+                                <li><strong>soplos-system-service</strong> <code>1.0.0-1</code> <em data-i18n="inline-new">(new)</em></li>
+                                <li><strong>fish-soplos</strong> <code>0.0.1-1</code> <em data-i18n="inline-new">(new)</em> — <span id="tyson-rel-rc1-fish-note">fish set as default shell</span></li>
+                                <li><strong>ghostty-soplos</strong> <code>0.0.1-1</code> <em data-i18n="inline-new">(new)</em> — <span id="tyson-rel-rc1-ghostty-note">Ghostty set as default terminal</span></li>
+                                <li><strong>zram-soplos</strong> <code>0.0.1-2</code> <em data-i18n="inline-new">(new)</em> — <span id="tyson-rel-rc1-zram-note">zRAM memory compression enabled by default</span></li>
                                 <li><strong>soplos-grub-editor</strong> <code>2.0.0</code> → <code>2.0.2-4</code> <em data-i18n="inline-out-of-iso">(out of ISO — installable from Soplos repositories)</em></li>
-                                <li><strong>soplos-plymouth-manager</strong> <code>2.0.0-5</code> <em data-i18n="inline-out-of-iso">(out of ISO — installable from Soplos repositories)</em></li>
                                 <li><strong>soplos-repo-selector</strong> <code>2.0.2</code> → <code>2.0.2-8</code></li>
-                                <li><strong>soplos-welcome</strong> <code>2.0.6</code> → <code>2.0.9-1</code></li>
+                                <li><strong>soplos-welcome</strong> <code>2.0.6</code> → <code>2.0.9-3</code></li>
                                 <li><strong>soplos-welcome-live</strong> <code>2.0.1</code> → <code>2.0.2</code></li>
                             </ul>
 
@@ -214,10 +217,10 @@
                             </div>
                             <ul>
                                 <li><strong>soplos-grub-theme</strong> <code>0.0.4</code> → <code>0.0.6-2</code></li>
-                                <li><strong>soplos-plasma-classic-black-theme</strong> <code>0.0.2</code> → <code>0.0.3-2</code></li>
-                                <li><strong>soplos-plasma-classic-white-theme</strong> <code>0.0.2</code> → <code>0.0.3-2</code></li>
-                                <li><strong>soplos-plasma-modern-black-themes</strong> <code>0.0.2</code> → <code>0.0.3-1</code></li>
-                                <li><strong>soplos-plasma-modern-white-themes</strong> <code>0.0.2</code> → <code>0.0.3-1</code></li>
+                                <li><strong>soplos-plasma-classic-black-theme</strong> <code>0.0.2</code> → <code>0.0.3-3</code></li>
+                                <li><strong>soplos-plasma-classic-white-theme</strong> <code>0.0.2</code> → <code>0.0.3-3</code></li>
+                                <li><strong>soplos-plasma-modern-black-themes</strong> <code>0.0.2</code> → <code>0.0.3-2</code></li>
+                                <li><strong>soplos-plasma-modern-white-themes</strong> <code>0.0.2</code> → <code>0.0.3-2</code></li>
                                 <li id="tyson-rel-rc1-color-scheme-note"><strong>soplos-color-scheme</strong> — <span id="tyson-rel-rc1-color-scheme-merged">color schemes and Plasma desktop themes merged into the individual theme packages above; soplos-color-scheme discontinued.</span></li>
                                 <li><strong>soplos-plymouth-theme</strong> <code>0.0.2</code> <span data-i18n="inline-no-changes">(no changes)</span></li>
                                 <li><strong>soplos-wallpapers01</strong> <code>1.0.0</code> → <code>1.0.1</code></li>
@@ -233,11 +236,14 @@
                                 <li><code>cuda-drivers-580</code> 580.159.04-1</li>
                                 <li><code>dwarves</code> 1.31-2</li>
                                 <li><code>enchant</code> 2.8.16+dfsg-3</li>
+                                <li><code>fish</code> 4.7.1-2</li>
+                                <li><code>fish-common</code> 4.7.1-2</li>
                                 <li><code>flex</code> 2.6.4-8.2+b5</li>
                                 <li><code>gcc-16-base</code> 16.1.0-1</li>
-                                <li><code>linux-headers-7.0.11-soplos</code> 1</li>
-                                <li><code>linux-image-7.0.11-soplos</code> 1</li>
-                                <li><code>linux-soplos</code> 7.0.11</li>
+                                <li><code>ghostty-tip</code> 1.3.2~dev.20260605-1+forky</li>
+                                <li><code>linux-headers-7.0.12-soplos</code> 1</li>
+                                <li><code>linux-image-7.0.12-soplos</code> 1</li>
+                                <li><code>linux-soplos</code> 7.0.12</li>
                                 <li><code>network-manager-tui</code> 1.56.1-1</li>
                                 <li><code>nvidia-driver-cuda</code> 580.159.04-1</li>
                                 <li><code>nvidia-driver-pinning-580</code> 580-5</li>
@@ -256,6 +262,8 @@
                                 <li><code>qml6-module-qtnetwork</code> 6.10.2+dfsg-4</li>
                                 <li><code>qtpaths6</code> 6.10.2+dfsg-12</li>
                                 <li><code>xserver-xephyr</code> 2:21.1.22-1</li>
+                                <li><code>zram-soplos</code> 0.0.1-2</li>
+                                <li><code>zram-tools</code> 0.3.7-1</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -301,7 +309,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tyson-rel-rc1-aesthetics-themes">Classic themes (black/white) updated to 0.0.3-2; Modern themes (black/white) to 0.0.3-1, all for compatibility with KDE Plasma 6.6.</li>
+                                <li id="tyson-rel-rc1-aesthetics-themes">Classic themes (black/white) updated to 0.0.3-3; Modern themes (black/white) to 0.0.3-2, all for compatibility with KDE Plasma 6.6.</li>
                                 <li id="tyson-rel-rc1-aesthetics-grub">GRUB theme updated to 0.0.6-2. Plymouth theme unchanged.</li>
                             </ul>
 
@@ -310,7 +318,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tyson-rel-rc1-stats">Total packages: 2600 → 2545 (+96 added / -151 removed / ~1757 updated)</li>
+                                <li id="tyson-rel-rc1-stats">Total packages: 2600 → 2556 (+110 added / -154 removed / ~1776 updated)</li>
                             </ul>
                         </section>
 
@@ -1000,7 +1008,7 @@
                                             <th>Beta 1.0.2<br><small>2026-01-05</small></th>
                                             <th>Beta 1.0.3<br><small>2026-01-05</small></th>
                                             <th>Beta 1.0.4<br><small>2026-03-06</small></th>
-                                            <th>RC1<br><small>2026-06-04</small></th>
+                                            <th>RC1<br><small>2026-06-14</small></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1725,7 +1733,7 @@
                                             <td>2.0.0</td>
                                             <td>2.0.2</td>
                                             <td>2.0.6</td>
-                                            <td>2.0.9-1</td>
+                                            <td>2.0.9-3</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-welcome-live</strong></td>
@@ -1751,7 +1759,7 @@
                                             <td>1.0.5</td>
                                             <td>1.0.5</td>
                                             <td>2.0.0</td>
-                                            <td><em>repos only</em></td>
+                                            <td><em data-i18n="out-of-iso-value">out of ISO</em></td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-sys-cleaner</strong></td>
@@ -1768,6 +1776,26 @@
                                         <tr>
                                             <td><strong>soplos-webapp-manager</strong></td>
                                             <td colspan="10" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>soplos-system-service</strong></td>
+                                            <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+                                            <td>1.0.0-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>fish-soplos</strong></td>
+                                            <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+                                            <td>0.0.1-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ghostty-soplos</strong></td>
+                                            <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+                                            <td>0.0.1-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>zram-soplos</strong></td>
+                                            <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+                                            <td>0.0.1-2</td>
                                         </tr>
                                         <tr>
                                             <td colspan="11"
