@@ -4444,6 +4444,10 @@ Object.assign(window.LANG_PT, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Limpador de sistema para Soplos Linux — remove cache APT, pacotes órfãos, kernels antigos, firmwares não utilizados, runtimes Flatpak, revisões Snap, cache do utilizador e lixo com análise dual em modo utilizador/administrador.",
 
+    "sc-rel-1026-title": "1.0.2-6 — Junho 2026",
+    "sc-rel-1026-subtitle": "Correção das ferramentas de convidado KVM/QEMU: os pacotes SPICE estão agora corretamente protegidos ao executar numa máquina virtual KVM ou QEMU.",
+    "sc-rel-1026-fixed-li1": "<strong>Ferramentas de convidado SPICE mostradas como removíveis em VMs KVM/QEMU (virt-manager):</strong> <code>VM_GUEST_PACKAGES</code> tem entradas separadas para <code>kvm</code> e <code>qemu</code>, ambas com <code>spice-vdagent</code> e <code>spice-webdavd</code>. Quando <code>systemd-detect-virt</code> devolve <code>kvm</code>, apenas a entrada <code>kvm</code> era protegida — a entrada <code>qemu</code> fazia os mesmos pacotes aparecer como removíveis. Adicionada lógica de alias para que a deteção de <code>kvm</code> proteja também os pacotes <code>qemu</code> e vice-versa.",
+
     "sc-rel-1025-title": "1.0.2-5 — Junho 2026",
     "sc-rel-1025-subtitle": "Remoção de firmware tornada permanente: a ação agora purga o pacote APT proprietário quando todos os seus diretórios de firmware são removidos, impedindo que os ficheiros sejam restaurados na próxima atualização.",
     "sc-rel-1025-fixed-li1": "<strong>Remoção de firmware não permanente — ficheiros restaurados em cada <code>apt upgrade</code>:</strong> <code>do_remove_firmware</code> apagava ficheiros de <code>/lib/firmware/</code> diretamente sem purgar os pacotes APT proprietários. Qualquer <code>apt full-upgrade</code> subsequente restaurava os ficheiros apagados. A ação executa agora <code>apt purge</code> para o pacote proprietário quando todos os seus diretórios de firmware são removidos, cobrindo: <code>firmware-amd-graphics</code>, <code>firmware-intel-graphics</code>, <code>firmware-intel-sound</code>, <code>firmware-iwlwifi</code>, <code>firmware-realtek</code>, <code>firmware-brcm80211</code>, <code>firmware-atheros</code>, <code>firmware-mediatek</code>, <code>firmware-libertas</code> e <code>firmware-nvidia-graphics</code>. Os pacotes genéricos (<code>firmware-linux-nonfree</code>, <code>firmware-misc-nonfree</code>) não são purgados pois contêm firmware para muitas famílias de hardware não relacionadas.",
@@ -4559,6 +4563,19 @@ Object.assign(window.LANG_PT, {
     "ss-rel-hero-title": "Soplos System Service",
     "ss-rel-hero-subtitle": "Gestor de serviços systemd para Soplos Linux. Visualize, controle e monitorize serviços com estado codificado por cores, controlos Iniciar/Parar/Reiniciar, visualizador de registos journalctl e suporte completo para tema claro/escuro.",
     "ss-rel-breadcrumb": "Soplos System Service",
+
+    "ss-rel-1002-title": "1.0.0-2 — Junho 2026",
+    "ss-rel-1002-subtitle": "Correções de empacotamento e UX: gestão pkexec movida para o script bash, instalação automática da política polkit no primeiro início como root, correção da posição e tempo mínimo da barra de progresso, painel de detalhes com deslocamento e correções do estado dos botões de ação.",
+    "ss-rel-1002-fixed-li1": "<strong>Gestão pkexec movida para o script bash:</strong> De acordo com o padrão de aplicações Soplos, a elevação de privilégios está agora inteiramente no script lançador; <code>main.py</code> já não chama pkexec e apenas executa a aplicação GTK.",
+    "ss-rel-1002-fixed-li2": "<strong>Política polkit instalada automaticamente no primeiro início como root:</strong> O wrapper copia a política de <code>/usr/share/soplos-system-services/debian/</code> para <code>/usr/share/polkit-1/actions/</code> no primeiro início como root.",
+    "ss-rel-1002-fixed-li3": "<strong><code>GTK_IM_MODULE</code> definido no wrapper:</strong> Definido como <code>gtk-im-context-simple</code> para suprimir os avisos de ligação ibus ao executar como root.",
+    "ss-rel-1002-fixed-li4": "<strong>Deteção do tema claro/escuro movida para o wrapper bash:</strong> A deteção usa agora <code>xfconf-query</code> (XFCE) e <code>gsettings</code> (GNOME) no wrapper antes da elevação pkexec, transmitindo o resultado via <code>SOPLOS_COLOR_SCHEME</code>.",
+    "ss-rel-1002-fixed-li5": "<strong>Posição da barra de progresso corrigida:</strong> Aparecia abaixo do rodapé em -1 devido à ordem invertida de <code>pack_end</code>; o rodapé é agora empacotado primeiro para que a barra fique corretamente entre o conteúdo e o rodapé.",
+    "ss-rel-1002-fixed-li6": "<strong>Tempo mínimo de exibição da barra de progresso de 700ms:</strong> A barra é agora visível mesmo em operações rápidas onde a listagem de serviços termina quase instantaneamente.",
+    "ss-rel-1002-fixed-li7": "<strong>Painel de detalhes: <code>Gtk.Label</code> substituído por <code>Gtk.TextView</code> em <code>Gtk.ScrolledWindow</code>:</strong> Evita a deformação da janela com saídas longas de <code>systemctl</code> e adiciona suporte de deslocamento.",
+    "ss-rel-1002-fixed-li8": "<strong>Estado dos botões de ação melhorado:</strong> Iniciar é desativado quando o serviço selecionado está ativo; Parar e Reiniciar são desativados quando está inativo.",
+    "ss-rel-1002-fixed-li9": "<strong>Coluna Loaded codificada por cores — entradas not-found a vermelho:</strong> Os serviços cujo ficheiro de unidade não foi encontrado aparecem agora a vermelho na coluna Loaded.",
+    "ss-rel-1002-fixed-li10": "<strong>Artefacto de borda preta removido do painel de detalhes:</strong> Mover a classe CSS <code>soplos-card</code> de um widget interior para o <code>Gtk.ScrolledWindow</code> e definir <code>ShadowType.NONE</code> elimina o artefacto de dupla borda.",
 
     "ss-rel-1001-title": "1.0.0-1 — Junho 2026",
     "ss-rel-1001-subtitle": "Reescrita completa: interface GTK de dois separadores (Serviços e Registos), TreeView com código de cores, botões de ação inteligentes, CSD HeaderBar, tema claro/escuro via pkexec, i18n completa e arquitetura modular.",

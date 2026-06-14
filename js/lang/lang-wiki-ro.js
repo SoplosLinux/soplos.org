@@ -4445,6 +4445,10 @@ Object.assign(window.LANG_RO, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Curățitor de sistem pentru Soplos Linux — elimină memoria cache APT, pachetele orfane, nucleele vechi, firmware-ul nefolosit, runtime-urile Flatpak, reviziile Snap, memoria cache a utilizatorului și coșul de gunoi cu scanare dublă utilizator/administrator.",
 
+    "sc-rel-1026-title": "1.0.2-6 — Iunie 2026",
+    "sc-rel-1026-subtitle": "Remediere instrumente oaspete KVM/QEMU: pachetele SPICE sunt acum protejate corect la rularea într-o mașină virtuală KVM sau QEMU.",
+    "sc-rel-1026-fixed-li1": "<strong>Instrumente oaspete SPICE afișate ca eliminabile în VM-urile KVM/QEMU (virt-manager):</strong> <code>VM_GUEST_PACKAGES</code> are intrări separate pentru <code>kvm</code> și <code>qemu</code>, ambele conținând <code>spice-vdagent</code> și <code>spice-webdavd</code>. Când <code>systemd-detect-virt</code> returnează <code>kvm</code>, doar intrarea <code>kvm</code> era protejată — intrarea <code>qemu</code> făcea aceleași pachete să apară ca eliminabile. Adăugată logică de alias astfel încât detectarea <code>kvm</code> să protejeze și pachetele <code>qemu</code> și invers.",
+
     "sc-rel-1025-title": "1.0.2-5 — Iunie 2026",
     "sc-rel-1025-subtitle": "Eliminarea firmware-ului făcută permanentă: acțiunea purgează acum pachetul APT proprietar când toate directoarele sale de firmware sunt eliminate, împiedicând restaurarea fișierelor la următoarea actualizare.",
     "sc-rel-1025-fixed-li1": "<strong>Eliminarea firmware-ului nu era permanentă — fișierele restaurate la fiecare <code>apt upgrade</code>:</strong> <code>do_remove_firmware</code> ștergea fișierele direct din <code>/lib/firmware/</code> fără a purga pachetele APT proprietare. Orice <code>apt full-upgrade</code> ulterior restaura fișierele șterse. Acțiunea execută acum <code>apt purge</code> pentru pachetul proprietar când toate directoarele sale de firmware sunt eliminate, acoperind: <code>firmware-amd-graphics</code>, <code>firmware-intel-graphics</code>, <code>firmware-intel-sound</code>, <code>firmware-iwlwifi</code>, <code>firmware-realtek</code>, <code>firmware-brcm80211</code>, <code>firmware-atheros</code>, <code>firmware-mediatek</code>, <code>firmware-libertas</code> și <code>firmware-nvidia-graphics</code>. Pachetele generice (<code>firmware-linux-nonfree</code>, <code>firmware-misc-nonfree</code>) nu sunt purgate deoarece conțin firmware pentru multe familii de hardware necorelate.",
@@ -4561,6 +4565,19 @@ Object.assign(window.LANG_RO, {
     "ss-rel-hero-title": "Soplos System Service",
     "ss-rel-hero-subtitle": "Manager de servicii systemd pentru Soplos Linux. Vizualizați, controlați și monitorizați serviciile cu stare codificată prin culori, controale Pornire/Oprire/Repornire, vizualizator de jurnale journalctl și suport complet pentru temă clară/întunecată.",
     "ss-rel-breadcrumb": "Soplos System Service",
+
+    "ss-rel-1002-title": "1.0.0-2 — Iunie 2026",
+    "ss-rel-1002-subtitle": "Remedieri de ambalare și UX: gestionarea pkexec mutată în scriptul bash, instalare automată a politicii polkit la prima pornire ca root, corectarea poziției și timpului minim de afișare a barei de progres, panou de detalii cu derulare și remedieri ale stării butoanelor de acțiune.",
+    "ss-rel-1002-fixed-li1": "<strong>Gestionarea pkexec mutată în scriptul bash wrapper:</strong> Conform modelului aplicațiilor Soplos, elevarea privilegiilor este acum complet în scriptul lansator; <code>main.py</code> nu mai apelează pkexec și rulează doar aplicația GTK.",
+    "ss-rel-1002-fixed-li2": "<strong>Politica polkit instalată automat la prima pornire ca root:</strong> Wrapper-ul copiază politica din <code>/usr/share/soplos-system-services/debian/</code> în <code>/usr/share/polkit-1/actions/</code> la prima pornire ca root.",
+    "ss-rel-1002-fixed-li3": "<strong><code>GTK_IM_MODULE</code> setat în wrapper:</strong> Setat la <code>gtk-im-context-simple</code> pentru a suprima avertismentele de conexiune ibus la rularea ca root.",
+    "ss-rel-1002-fixed-li4": "<strong>Detectarea temei clare/întunecate mutată în wrapper-ul bash:</strong> Detectarea folosește acum <code>xfconf-query</code> (XFCE) și <code>gsettings</code> (GNOME) în wrapper înainte de elevarea pkexec, transmițând rezultatul prin <code>SOPLOS_COLOR_SCHEME</code>.",
+    "ss-rel-1002-fixed-li5": "<strong>Poziția barei de progres corectată:</strong> Apărea sub subsol în -1 din cauza ordinii inversate a <code>pack_end</code>; subsolul este acum ambalat primul astfel încât bara să se poziționeze corect între conținut și subsol.",
+    "ss-rel-1002-fixed-li6": "<strong>Timp minim de afișare a barei de progres de 700ms:</strong> Bara este acum vizibilă chiar și în operațiuni rapide în care listarea serviciilor se finalizează aproape instantaneu.",
+    "ss-rel-1002-fixed-li7": "<strong>Panoul de detalii: <code>Gtk.Label</code> înlocuit cu <code>Gtk.TextView</code> în <code>Gtk.ScrolledWindow</code>:</strong> Previne deformarea ferestrei la ieșiri lungi <code>systemctl</code> și adaugă suport de derulare.",
+    "ss-rel-1002-fixed-li8": "<strong>Starea butoanelor de acțiune îmbunătățită:</strong> Pornire este dezactivat când serviciul selectat este activ; Oprire și Repornire sunt dezactivate când este inactiv.",
+    "ss-rel-1002-fixed-li9": "<strong>Coloana Loaded codificată prin culori — intrări not-found în roșu:</strong> Serviciile al căror fișier de unitate nu a fost găsit sunt acum evidențiate cu roșu în coloana Loaded.",
+    "ss-rel-1002-fixed-li10": "<strong>Artefact chenar negru eliminat din panoul de detalii:</strong> Mutarea clasei CSS <code>soplos-card</code> de la un widget interior la <code>Gtk.ScrolledWindow</code> și setarea <code>ShadowType.NONE</code> elimină artefactul de chenar dublu.",
 
     "ss-rel-1001-title": "1.0.0-1 — Iunie 2026",
     "ss-rel-1001-subtitle": "Rescriere completă: interfață GTK cu două file (Servicii și Jurnale), TreeView codificat prin culori, butoane de acțiune inteligente, CSD HeaderBar, temă clară/întunecată via pkexec, i18n complet și arhitectură modulară.",

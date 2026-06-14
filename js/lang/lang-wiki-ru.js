@@ -4448,6 +4448,10 @@ Object.assign(window.LANG_RU, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Очиститель системы для Soplos Linux — удаляет кэш APT, устаревшие пакеты, старые ядра, неиспользуемые прошивки, среды выполнения Flatpak, ревизии Snap, кэш пользователя и корзину с двухуровневым сканированием пользователь/администратор.",
 
+    "sc-rel-1026-title": "1.0.2-6 — Июнь 2026",
+    "sc-rel-1026-subtitle": "Исправление гостевых инструментов KVM/QEMU: пакеты SPICE теперь корректно защищены при запуске в виртуальной машине KVM или QEMU.",
+    "sc-rel-1026-fixed-li1": "<strong>Гостевые инструменты SPICE отображались как удаляемые в ВМ KVM/QEMU (virt-manager):</strong> <code>VM_GUEST_PACKAGES</code> имеет отдельные записи для <code>kvm</code> и <code>qemu</code>, обе содержат <code>spice-vdagent</code> и <code>spice-webdavd</code>. Когда <code>systemd-detect-virt</code> возвращает <code>kvm</code>, защищалась только запись <code>kvm</code> — запись <code>qemu</code> приводила к тому, что те же пакеты отображались как удаляемые. Добавлена логика псевдонимов, чтобы обнаружение <code>kvm</code> также защищало пакеты <code>qemu</code> и наоборот.",
+
     "sc-rel-1025-title": "1.0.2-5 — Июнь 2026",
     "sc-rel-1025-subtitle": "Удаление прошивок сделано постоянным: действие теперь выполняет purge пакета-владельца APT, когда удаляются все его каталоги с прошивками, предотвращая восстановление файлов при следующем обновлении.",
     "sc-rel-1025-fixed-li1": "<strong>Удаление прошивок не было постоянным — файлы восстанавливались при каждом <code>apt upgrade</code>:</strong> <code>do_remove_firmware</code> удалял файлы непосредственно из <code>/lib/firmware/</code> без удаления пакетов-владельцев APT. Любой последующий <code>apt full-upgrade</code> восстанавливал удалённые файлы. Действие теперь выполняет <code>apt purge</code> для пакета-владельца при удалении всех его каталогов с прошивками, охватывая: <code>firmware-amd-graphics</code>, <code>firmware-intel-graphics</code>, <code>firmware-intel-sound</code>, <code>firmware-iwlwifi</code>, <code>firmware-realtek</code>, <code>firmware-brcm80211</code>, <code>firmware-atheros</code>, <code>firmware-mediatek</code>, <code>firmware-libertas</code> и <code>firmware-nvidia-graphics</code>. Общие пакеты (<code>firmware-linux-nonfree</code>, <code>firmware-misc-nonfree</code>) не удаляются, поскольку содержат прошивки для многих несвязанных семейств оборудования.",
@@ -4564,6 +4568,19 @@ Object.assign(window.LANG_RU, {
     "ss-rel-hero-title": "Soplos System Service",
     "ss-rel-hero-subtitle": "Менеджер служб systemd для Soplos Linux. Просматривайте, управляйте и контролируйте службы с цветовой индикацией состояния, кнопками Запуск/Стоп/Перезапуск, просмотром журналов journalctl и полной поддержкой светлой/тёмной темы.",
     "ss-rel-breadcrumb": "Soplos System Service",
+
+    "ss-rel-1002-title": "1.0.0-2 — Июнь 2026",
+    "ss-rel-1002-subtitle": "Исправления упаковки и UX: обработка pkexec перенесена в bash-скрипт, автоматическая установка политики polkit при первом запуске от root, исправление позиции и минимального времени отображения прогресс-бара, прокручиваемая панель деталей и исправления состояния кнопок действий.",
+    "ss-rel-1002-fixed-li1": "<strong>Обработка pkexec перенесена в bash-wrapper:</strong> В соответствии с шаблоном приложений Soplos повышение привилегий теперь полностью выполняется в скрипте-запускателе; <code>main.py</code> больше не вызывает pkexec и только запускает GTK-приложение.",
+    "ss-rel-1002-fixed-li2": "<strong>Политика polkit устанавливается автоматически при первом запуске от root:</strong> Wrapper копирует политику из <code>/usr/share/soplos-system-services/debian/</code> в <code>/usr/share/polkit-1/actions/</code> при первом запуске от root.",
+    "ss-rel-1002-fixed-li3": "<strong><code>GTK_IM_MODULE</code> задан в wrapper-е:</strong> Установлен в <code>gtk-im-context-simple</code> для подавления предупреждений о подключении ibus при запуске от root.",
+    "ss-rel-1002-fixed-li4": "<strong>Определение светлой/тёмной темы перенесено в bash-wrapper:</strong> Определение теперь использует <code>xfconf-query</code> (XFCE) и <code>gsettings</code> (GNOME) в wrapper-е до повышения прав pkexec, передавая результат через <code>SOPLOS_COLOR_SCHEME</code>.",
+    "ss-rel-1002-fixed-li5": "<strong>Позиция прогресс-бара исправлена:</strong> В -1 отображался ниже подвала из-за обратного порядка <code>pack_end</code>; теперь подвал упаковывается первым, чтобы полоса располагалась правильно между содержимым и подвалом.",
+    "ss-rel-1002-fixed-li6": "<strong>Минимальное время отображения прогресс-бара 700мс:</strong> Полоса теперь видна даже при быстрых операциях, когда листинг служб завершается почти мгновенно.",
+    "ss-rel-1002-fixed-li7": "<strong>Панель деталей: <code>Gtk.Label</code> заменён на <code>Gtk.TextView</code> в <code>Gtk.ScrolledWindow</code>:</strong> Предотвращает деформацию окна при длинном выводе <code>systemctl</code> и добавляет поддержку прокрутки.",
+    "ss-rel-1002-fixed-li8": "<strong>Состояние кнопок действий улучшено:</strong> Запуск отключён, когда выбранная служба активна; Стоп и Перезапуск отключены, когда она неактивна.",
+    "ss-rel-1002-fixed-li9": "<strong>Столбец Loaded с цветовой кодировкой — записи not-found красным:</strong> Службы, файл юнита которых не найден, теперь выделены красным в столбце Loaded.",
+    "ss-rel-1002-fixed-li10": "<strong>Артефакт чёрной рамки удалён из панели деталей:</strong> Перемещение CSS-класса <code>soplos-card</code> с внутреннего виджета на <code>Gtk.ScrolledWindow</code> и установка <code>ShadowType.NONE</code> устраняет артефакт двойной рамки.",
 
     "ss-rel-1001-title": "1.0.0-1 — Июнь 2026",
     "ss-rel-1001-subtitle": "Полная переработка: GTK-интерфейс с двумя вкладками (Службы и Журналы), TreeView с цветовой кодировкой, умные кнопки действий, CSD HeaderBar, светлая/тёмная тема через pkexec, полная i18n и модульная архитектура.",

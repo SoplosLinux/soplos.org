@@ -5205,6 +5205,10 @@ Object.assign(window.LANG_EN, {
   "sc-rel-hero-title": "Soplos Sys Cleaner",
   "sc-rel-hero-subtitle": "System cleaner for Soplos Linux — remove APT cache, orphaned packages, old kernels, unused firmwares, Flatpak runtimes, Snap revisions, user cache and trash with dual-layer user/administrator scanning.",
 
+  "sc-rel-1026-title": "1.0.2-6 — June 2026",
+  "sc-rel-1026-subtitle": "KVM/QEMU guest tools fix: SPICE packages are now correctly protected when running in a KVM or QEMU virtual machine.",
+  "sc-rel-1026-fixed-li1": "<strong>SPICE guest tools shown as removable in KVM/QEMU VMs (virt-manager):</strong> <code>VM_GUEST_PACKAGES</code> has separate entries for <code>kvm</code> and <code>qemu</code>, both containing <code>spice-vdagent</code> and <code>spice-webdavd</code>. When <code>systemd-detect-virt</code> returns <code>kvm</code>, only the <code>kvm</code> entry was protected — the <code>qemu</code> entry caused the same packages to appear as removable. Added alias logic so that detecting <code>kvm</code> also protects <code>qemu</code> packages and vice versa.",
+
   "sc-rel-1025-title": "1.0.2-5 — June 2026",
   "sc-rel-1025-subtitle": "Firmware removal made permanent: the action now purges the owning APT package when all its firmware directories are removed, preventing files from being restored on the next upgrade.",
   "sc-rel-1025-fixed-li1": "<strong>Firmware removal not permanent — files restored on every <code>apt upgrade</code>:</strong> <code>do_remove_firmware</code> was deleting files from <code>/lib/firmware/</code> directly without purging the owning APT packages. Any subsequent <code>apt full-upgrade</code> restored the deleted files. The action now runs <code>apt purge</code> for the owning package when all its firmware directories are removed, covering: <code>firmware-amd-graphics</code>, <code>firmware-intel-graphics</code>, <code>firmware-intel-sound</code>, <code>firmware-iwlwifi</code>, <code>firmware-realtek</code>, <code>firmware-brcm80211</code>, <code>firmware-atheros</code>, <code>firmware-mediatek</code>, <code>firmware-libertas</code> and <code>firmware-nvidia-graphics</code>. Generic bundles (<code>firmware-linux-nonfree</code>, <code>firmware-misc-nonfree</code>) are not purged as they contain firmware for many unrelated hardware families.",
@@ -5320,6 +5324,19 @@ Object.assign(window.LANG_EN, {
   "ss-rel-hero-title": "Soplos System Service",
   "ss-rel-hero-subtitle": "Systemd service manager for Soplos Linux. View, control and monitor services with color-coded status, Start/Stop/Restart controls, journalctl log viewer and full dark/light theme support.",
   "ss-rel-breadcrumb": "Soplos System Service",
+
+  "ss-rel-1002-title": "1.0.0-2 — June 2026",
+  "ss-rel-1002-subtitle": "Packaging and UX fixes: pkexec handling moved to the bash wrapper, polkit policy auto-install on first root run, corrected progress bar position and minimum display time, scrollable details panel and smart action button state fixes.",
+  "ss-rel-1002-fixed-li1": "<strong>pkexec handling moved to the bash wrapper:</strong> As per the Soplos app pattern, privilege elevation is now entirely in the launcher script; <code>main.py</code> no longer calls pkexec and only runs the GTK application.",
+  "ss-rel-1002-fixed-li2": "<strong>Polkit policy auto-installed on first root run:</strong> The wrapper copies the policy from <code>/usr/share/soplos-system-services/debian/</code> to <code>/usr/share/polkit-1/actions/</code> when running as root for the first time, so the policy is present without a separate post-install step.",
+  "ss-rel-1002-fixed-li3": "<strong><code>GTK_IM_MODULE</code> set in the wrapper:</strong> Set to <code>gtk-im-context-simple</code> to suppress ibus connection warnings when running as root.",
+  "ss-rel-1002-fixed-li4": "<strong>Dark/light theme detection moved to the bash wrapper:</strong> Detection now uses <code>xfconf-query</code> (XFCE) and <code>gsettings</code> (GNOME) in the wrapper before pkexec elevation, then passes the result via <code>SOPLOS_COLOR_SCHEME</code>.",
+  "ss-rel-1002-fixed-li5": "<strong>Progress bar position corrected:</strong> Was appearing below the footer in -1 due to reversed <code>pack_end</code> ordering; footer is now packed first so the progress bar sits correctly between content and footer.",
+  "ss-rel-1002-fixed-li6": "<strong>Progress bar minimum display time of 700ms:</strong> The bar is now visible even on fast operations where service listing completes almost instantly.",
+  "ss-rel-1002-fixed-li7": "<strong>Details panel replaced <code>Gtk.Label</code> with <code>Gtk.TextView</code> inside <code>Gtk.ScrolledWindow</code>:</strong> Prevents window deformation on long <code>systemctl</code> output and adds scroll support for lengthy service details.",
+  "ss-rel-1002-fixed-li8": "<strong>Smart action button state improved:</strong> Start is now disabled when the selected service is active; Stop and Restart are disabled when it is inactive, preventing nonsensical operations.",
+  "ss-rel-1002-fixed-li9": "<strong>Color-coded Loaded column — not-found entries shown in red:</strong> Services where the unit file was not found are now highlighted in red in the Loaded column, matching the Active column color logic.",
+  "ss-rel-1002-fixed-li10": "<strong>Black border artifact removed from details panel:</strong> Moving the <code>soplos-card</code> CSS class from an inner widget to the <code>Gtk.ScrolledWindow</code> and setting <code>ShadowType.NONE</code> eliminates the double-border visual artifact.",
 
   "ss-rel-1001-title": "1.0.0-1 — June 2026",
   "ss-rel-1001-subtitle": "Complete rewrite: two-tab GTK interface (Services and Logs), color-coded TreeView, smart action buttons, CSD HeaderBar, dark/light theme via pkexec, full i18n and modular architecture.",
