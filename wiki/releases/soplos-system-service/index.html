@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1004" class="toc-link">1.0.0-4 <span class="toc-date">— 2026-06-14</span></a></li>
                             <li><a href="#v1003" class="toc-link">1.0.0-3 <span class="toc-date">— 2026-06-14</span></a></li>
                             <li><a href="#v1002" class="toc-link">1.0.0-2 <span class="toc-date">— 2026-06-14</span></a></li>
                             <li><a href="#v1001" class="toc-link">1.0.0-1 <span class="toc-date">— 2026-06-14</span></a></li>
@@ -124,6 +125,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.0-4 -->
+                        <section id="v1004" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ss-rel-1004-title">1.0.0-4 — June 2026</span></h2>
+                            <p id="ss-rel-1004-subtitle" class="lead">GNOME crash fix: the wrapper now specifies the Gdk version before importing it, preventing a conflict with GTK4 already loaded in GNOME sessions.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1004-fixed-li1"><strong>GNOME crash on launch — missing <code>gi.require_version('Gdk', '3.0')</code>:</strong> The wrapper's inline Python block imported <code>Gdk</code> without specifying a version. In GNOME sessions GTK4 is already loaded, so <code>gi</code> tried to load <code>Gdk 3.0</code> on top of <code>4.0</code> and raised <code>ImportError</code>. <code>gi.require_version('Gdk', '3.0')</code> is now set before the import in both the non-root and root branches of the wrapper.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.0-3 -->
                         <section id="v1003" class="content-section">

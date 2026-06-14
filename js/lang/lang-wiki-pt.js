@@ -4574,6 +4574,9 @@ Object.assign(window.LANG_PT, {
     "ss-rel-hero-subtitle": "Gestor de serviços systemd para Soplos Linux. Visualize, controle e monitorize serviços com estado codificado por cores, controlos Iniciar/Parar/Reiniciar, visualizador de registos journalctl e suporte completo para tema claro/escuro.",
     "ss-rel-breadcrumb": "Soplos System Service",
 
+    "ss-rel-1004-title": "1.0.0-4 — Junho 2026",
+    "ss-rel-1004-subtitle": "Correção de crash no GNOME: o wrapper agora especifica a versão do Gdk antes de importá-lo, evitando conflito com o GTK4 já carregado em sessões GNOME.",
+    "ss-rel-1004-fixed-li1": "<strong>Crash ao iniciar no GNOME — faltava <code>gi.require_version('Gdk', '3.0')</code>:</strong> O bloco Python inline do wrapper importava o <code>Gdk</code> sem especificar versão. Em sessões GNOME, o GTK4 já está carregado, então <code>gi</code> tentava carregar <code>Gdk 3.0</code> sobre <code>4.0</code> e lançava <code>ImportError</code>. <code>gi.require_version('Gdk', '3.0')</code> é agora definido antes da importação nos dois ramos do wrapper (normal e root).",
     "ss-rel-1003-title": "1.0.0-3 — Junho 2026",
     "ss-rel-1003-subtitle": "Barra de título nativa no XFCE e KDE: a CSD HeaderBar é agora usada apenas no GNOME e outros ambientes; o XFCE e o KDE usam decorações de janela nativas, igualando o comportamento das restantes aplicações Soplos.",
     "ss-rel-1003-fixed-li1": "<strong>A barra de título usa decorações de janela nativas no XFCE e KDE/Plasma:</strong> A <code>Gtk.HeaderBar</code> CSD está agora ativa apenas no GNOME e outros ambientes de trabalho. No XFCE e KDE a aplicação usa decorações nativas, correspondendo ao comportamento das restantes aplicações Soplos.",

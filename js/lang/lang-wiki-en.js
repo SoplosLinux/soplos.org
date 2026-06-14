@@ -5335,6 +5335,9 @@ Object.assign(window.LANG_EN, {
   "ss-rel-hero-subtitle": "Systemd service manager for Soplos Linux. View, control and monitor services with color-coded status, Start/Stop/Restart controls, journalctl log viewer and full dark/light theme support.",
   "ss-rel-breadcrumb": "Soplos System Service",
 
+  "ss-rel-1004-title": "1.0.0-4 — June 2026",
+  "ss-rel-1004-subtitle": "GNOME crash fix: the wrapper now specifies the Gdk version before importing it, preventing a conflict with GTK4 already loaded in GNOME sessions.",
+  "ss-rel-1004-fixed-li1": "<strong>GNOME crash on launch — missing <code>gi.require_version('Gdk', '3.0')</code>:</strong> The wrapper's inline Python block imported <code>Gdk</code> without specifying a version. In GNOME sessions GTK4 is already loaded, so <code>gi</code> tried to load <code>Gdk 3.0</code> on top of <code>4.0</code> and raised <code>ImportError</code>. <code>gi.require_version('Gdk', '3.0')</code> is now set before the import in both the non-root and root branches of the wrapper.",
   "ss-rel-1003-title": "1.0.0-3 — June 2026",
   "ss-rel-1003-subtitle": "Native titlebar in XFCE and KDE: the CSD HeaderBar is now only used in GNOME and other environments; XFCE and KDE use native window decorations matching the rest of the Soplos apps.",
   "ss-rel-1003-fixed-li1": "<strong>Titlebar uses native window decorations in XFCE and KDE/Plasma:</strong> The CSD <code>Gtk.HeaderBar</code> is now only active in GNOME and other desktop environments. In XFCE and KDE the application uses native decorations, matching the behavior of the rest of the Soplos applications.",
