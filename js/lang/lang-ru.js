@@ -163,6 +163,8 @@ window.LANG_RU = {
     "appRepoSelectorDesc": "Управляйте репозиториями APT со встроенным тестом скорости зеркал, поддержкой формата DEB822 и управлением ключами GPG.",
     "appSysCleanerTitle": "Soplos Sys Cleaner",
     "appSysCleanerDesc": "Инструмент обслуживания системы для очистки кэша APT, удаления старых ядер, управления пакетами Flatpak и Snap и удаления неиспользуемых драйверов.",
+    "appSystemServiceTitle": "Soplos System Service",
+    "appSystemServiceDesc": "GTK3-менеджер служб systemd с цветовой индикацией состояния, кнопками Запуск/Стоп/Перезапуск и просмотром журналов journalctl.",
     "appThemeManagerTitle": "Soplos Theme Manager",
     "appThemeManagerDesc": "Полный набор инструментов настройки XFCE. Управляйте темами, обоями, профилем пользователя, плагинами панели и закреплёнными приложениями Dock. Экспортируйте и импортируйте пакеты тем.",
     "appWelcomeTitle": "Soplos Welcome",

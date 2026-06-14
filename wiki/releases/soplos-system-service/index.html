@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="ss-rel-page-title">Soplos System Service — Releases</title>
+    <meta name="description" content="Release history and changelog for Soplos System Service.">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../" id="menuWiki">Wiki</a></li>
+                                <li><a href="../" id="menuReleases">Releases</a></li>
+                                <li><a href="../../../#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="../../../forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../" id="breadcrumb-home"><i class="fas fa-home"></i> Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../" id="breadcrumbWiki">Wiki</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../" id="breadcrumbReleases">Releases</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="ss-rel-breadcrumb">Soplos System Service</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><img src="../../../images/icons/org.soplos.systemservice.png" alt="Soplos System Service" class="hero-app-icon"> <span id="ss-rel-hero-title">Soplos System Service</span></h1>
+                        <p id="ss-rel-hero-subtitle">Systemd service manager for Soplos Linux. View, control and monitor services with color-coded status, Start/Stop/Restart controls, journalctl log viewer and full dark/light theme support.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+
+                    <aside class="toc">
+                        <h3 id="rel-toc-title">Versions</h3>
+                        <ul>
+                            <li><a href="#v1001" class="toc-link">1.0.0-1 <span class="toc-date">— 2026-06-14</span></a></li>
+                            <li><a href="#v100" class="toc-link">1.0.0 <span class="toc-date">— 2025-07-31</span></a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <!-- 1.0.0-1 -->
+                        <section id="v1001" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ss-rel-1001-title">1.0.0-1 — June 2026</span></h2>
+                            <p id="ss-rel-1001-subtitle" class="lead">Complete rewrite: two-tab GTK interface (Services and Logs), color-coded TreeView, smart action buttons, CSD HeaderBar, dark/light theme via pkexec, full i18n and modular architecture.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-redo"></i> <span data-i18n="rel-label-rewritten">Rewritten</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1001-rewritten-li1"><strong>GTK.Notebook two-tab interface:</strong> Services tab with sortable TreeView (green active / red failed / red not-found) and Logs tab with monospace journalctl viewer, replacing the original skeleton layout.</li>
+                                <li id="ss-rel-1001-rewritten-li2"><strong>Smart action buttons:</strong> Start, Stop and Restart buttons enabled or disabled based on the current service state; all controls disabled until a service is selected.</li>
+                                <li id="ss-rel-1001-rewritten-li3"><strong>CSD HeaderBar and Soplos footer:</strong> HeaderBar with operation subtitle (loading count, errors). Footer shows DE and display protocol on the left, version on the right. Progress bar in pulse mode shown during listing and operations.</li>
+                                <li id="ss-rel-1001-rewritten-li4"><strong>Dark/light theme forwarded through pkexec:</strong> Detected as the regular user before elevation and passed via <code>SOPLOS_COLOR_SCHEME</code>, ensuring correct colors when running as root under XFCE, KDE or GNOME.</li>
+                                <li id="ss-rel-1001-rewritten-li5"><strong>Full i18n and modular architecture:</strong> All UI strings through the dict-based <code>_()</code> system across all 8 languages. Modular layout: <code>core/</code>, <code>ui/</code>, <code>services/systemd.py</code> and <code>utils/</code>. All relevant env variables forwarded through pkexec.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1001-added-li1"><strong>Polkit policy, desktop launcher and bash wrapper:</strong> <code>org.soplos.systemservice.policy</code>, <code>org.soplos.systemservice.desktop</code> (with Name and Comment in all 8 languages) and <code>soplos-system-services</code> launcher script.</li>
+                                <li id="ss-rel-1001-added-li2"><strong>Debian packaging and icons:</strong> <code>debian/control</code> and <code>debian/copyright</code>. Icons at 48×48, 64×64 and 128×128 pixels under <code>assets/icons/</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1001-fixed-li1"><strong>Duplicate service rows:</strong> <code>_populate_service_store()</code> was appending each service twice.</li>
+                                <li id="ss-rel-1001-fixed-li2"><strong>Bullet character parsed as service name:</strong> <code>systemctl</code> prefixes failed units with a <code>U+25CF</code> bullet symbol which was being picked up as a service name.</li>
+                                <li id="ss-rel-1001-fixed-li3"><strong>Progress bar position and visibility:</strong> Was appearing below the footer due to <code>pack_end</code> ordering — footer is now packed first. Added 700ms minimum display time so the bar is noticeable even when service listing completes instantly.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1001-improved-li1"><strong>systemd.py:</strong> All control functions use <code>subprocess.run</code> with <code>capture_output</code> and timeout. Added <code>get_service_logs()</code> via <code>journalctl</code>.</li>
+                                <li id="ss-rel-1001-improved-li2"><strong>utils/strings.py:</strong> Added global <code>_()</code>, <code>set_language()</code> and <code>get_current_language()</code> so all modules share a single language state.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.0 -->
+                        <section id="v100" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ss-rel-100-title">1.0.0 — July 2025</span></h2>
+                            <p id="ss-rel-100-subtitle" class="lead">Initial project creation with GTK3 skeleton, systemd service listing, basic service control and 8-language string system.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-100-added-li1"><strong>GTK3 application skeleton</strong> with systemd service listing via <code>systemctl list-units</code>.</li>
+                                <li id="ss-rel-100-added-li2"><strong>Basic service control:</strong> Start, stop, restart, enable and disable functions.</li>
+                                <li id="ss-rel-100-added-li3"><strong>8-language string system</strong> with dict-based translations (ES, EN, FR, PT, DE, IT, RO, RU) and pkexec privilege elevation.</li>
+                            </ul>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sergi Perich</p>
+            <p class="legal-links">
+                <a href="../../../legal/privacy.html"><span id="footer-privacy">Privacy Policy</span></a> |
+                <a href="../../../legal/terms.html"><span id="footer-terms">Terms of Use</span></a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.SoplosUI) new SoplosUI.ScrollController();
+        });
+    </script>
+    <script>
+        // Patch applyLanguage to also translate data-i18n elements (repeated labels)
+        const _origApplyLanguage = applyLanguage;
+        applyLanguage = function(lang) {
+            _origApplyLanguage(lang);
+            const dict = window['LANG_' + lang.toUpperCase()];
+            if (!dict) return;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+        };
+    </script>
+</body>
+
+</html>

@@ -163,6 +163,8 @@ window.LANG_PT = {
     "appRepoSelectorDesc": "Gerencie repositórios APT com teste de velocidade de espelhos, suporte ao formato DEB822 e gestão de chaves GPG.",
     "appSysCleanerTitle": "Soplos Sys Cleaner",
     "appSysCleanerDesc": "Ferramenta de manutenção do sistema para limpar cache APT, remover kernels antigos, gerenciar pacotes Flatpak e Snap e desinstalar drivers não utilizados.",
+    "appSystemServiceTitle": "Soplos System Service",
+    "appSystemServiceDesc": "Gestor de serviços systemd GTK3 com estado codificado por cores, controlos Iniciar/Parar/Reiniciar e visualizador de registos journalctl.",
     "appThemeManagerTitle": "Soplos Theme Manager",
     "appThemeManagerDesc": "Suite completa de personalização XFCE. Gerencie temas, papéis de parede, perfil do usuário, plugins do painel e apps fixadas no Dock. Exporte e importe bundles de temas.",
     "appWelcomeTitle": "Soplos Welcome",

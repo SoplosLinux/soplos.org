@@ -221,6 +221,15 @@ document.addEventListener("DOMContentLoaded", function () {
         "images/apps/soplos-kernel-installer/screenshot5.png",
       ],
     },
+    "system-service": {
+      titleKey: "appSystemServiceTitle",
+      descKey: "appSystemServiceDesc",
+      images: [
+        "images/apps/soplos-system-service/screenshot01.png",
+        "images/apps/soplos-system-service/screenshot02.png",
+        "images/apps/soplos-system-service/screenshot03.png",
+      ],
+    },
     "sys-cleaner": {
       titleKey: "appSysCleanerTitle",
       descKey: "appSysCleanerDesc",
@@ -297,6 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyron/repo-selector/004-gpg-keys.png",
         ],
       },
+      "system-service": sharedApps["system-service"],
       "sys-cleaner": sharedApps["sys-cleaner"],
       "theme-manager": {
         titleKey: "appThemeManagerTitle",
@@ -363,6 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/Tyson/repo-selector/004-gpg-keys.png",
         ],
       },
+      "system-service": sharedApps["system-service"],
       "sys-cleaner": sharedApps["sys-cleaner"],
       welcome: {
         titleKey: "appWelcomeTitle",
@@ -418,6 +429,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "images/boro/repo-selector/004-gpg-keys.png",
         ],
       },
+      "system-service": sharedApps["system-service"],
       "sys-cleaner": sharedApps["sys-cleaner"],
       welcome: {
         titleKey: "appWelcomeTitle",

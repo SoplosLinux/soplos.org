@@ -163,6 +163,8 @@ window.LANG_RO = {
     "appRepoSelectorDesc": "Gestionează repository-urile APT cu test de viteză pentru mirror-uri integrat, suport pentru formatul DEB822 și gestionarea cheilor GPG.",
     "appSysCleanerTitle": "Soplos Sys Cleaner",
     "appSysCleanerDesc": "Instrument de întreținere a sistemului pentru curățarea cache-ului APT, eliminarea kernel-urilor vechi, gestionarea pachetelor Flatpak și Snap și dezinstalarea driverelor neutilizate.",
+    "appSystemServiceTitle": "Soplos System Service",
+    "appSystemServiceDesc": "Manager de servicii systemd GTK3 cu stare codificată prin culori, controale Pornire/Oprire/Repornire și vizualizator de jurnale journalctl.",
     "appThemeManagerTitle": "Soplos Theme Manager",
     "appThemeManagerDesc": "Suită completă de personalizare XFCE. Gestionează teme, fundaluri, profilul utilizatorului, plugin-urile panoului și aplicațiile fixate în Dock. Exportă și importă bundle-uri de teme.",
     "appWelcomeTitle": "Soplos Welcome",
