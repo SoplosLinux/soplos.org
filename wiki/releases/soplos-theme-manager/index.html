@@ -116,6 +116,9 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2012" class="toc-link">2.0.1-2 <span class="toc-date">— 2026-06-19</span></a></li>
+                            <li><a href="#v201" class="toc-link">2.0.1 <span class="toc-date">— 2026-06-10</span></a></li>
+                            <li><a href="#v2002" class="toc-link">2.0.0-2 <span class="toc-date">— 2026-06-04</span></a></li>
                             <li><a href="#v2001" class="toc-link">2.0.0-1 <span class="toc-date">— 2026-05-29</span></a></li>
                             <li><a href="#v200" class="toc-link">2.0.0 <span class="toc-date">— 2026-04-24</span></a></li>
                             <li><a href="#v107" class="toc-link">1.0.7 <span class="toc-date">— 2025-07-27</span></a></li>
@@ -130,6 +133,109 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.1-2 -->
+                        <section id="v2012" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-2012-title">2.0.1-2 — June 2026</span></h2>
+                            <p id="tm-rel-2012-subtitle" class="lead">Base themes auto-seeded on first launch with a Restore button, one-time v1.x legacy cleanup, reduced packaging dependencies and asset path fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2012-added-li1"><strong>Themes tab — base themes auto-seeded on first launch:</strong> Bundled <code>.sth</code> files in <code>assets/base-themes/</code> are imported automatically into <code>~/.config/soplos-theme-manager/themes/</code> on startup if not already present. No pkexec, no prompts. If the user deletes a base theme it is not reimposed — a manual restore is required.</li>
+                                <li id="tm-rel-2012-added-li2"><strong>Themes tab — Restore button:</strong> New button in the gallery toolbar reimports any missing base themes on demand. Already-present themes are skipped. Shows an info dialog if all base themes are present.</li>
+                                <li id="tm-rel-2012-added-li3"><strong>Startup — v1.x legacy cleanup:</strong> On first launch after upgrade from v1.x, removes legacy artifacts: <code>~/xfce-panel-backup/</code>, <code>~/.themes-backup/</code> and legacy logs under <code>~/.config/soplos-theme-manager/logs/</code>. Runs once and writes a marker file to avoid repeating.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2012-fixed-li1"><strong>Packaging — reduced dependencies:</strong> <code>debian/control</code> was pulling in multiple polkit-related packages unnecessarily. Reduced to just <code>polkit</code>.</li>
+                                <li id="tm-rel-2012-fixed-li2"><strong>Base themes seed — wrong asset path:</strong> Seed and Restore button were looking for <code>.sth</code> files in <code>assets/soplos-base-themes/</code> instead of <code>assets/base-themes/</code>.</li>
+                                <li id="tm-rel-2012-fixed-li3"><strong>User-scope install — system assets duplicated to home:</strong> <code>_install_tar_user</code> was copying icon themes and GTK themes to <code>~/.icons/</code> and <code>~/.themes/</code> even when the same asset already existed in <code>/usr/share/</code>. Assets present at system level are now skipped.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.1 -->
+                        <section id="v201" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-201-title">2.0.1 — June 2026</span></h2>
+                            <p id="tm-rel-201-subtitle" class="lead">Theme bundle format v2/v3 (portable .sth with real GTK/icon/cursor assets), apply scope dialog, export file chooser, and a comprehensive audit of apply/save/export/install fixing silent data loss, orphan plugin files, dark mode persistence and icon symlink breakage.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-201-added-li1"><strong>Theme scope selection:</strong> When applying a theme a dialog asks whether to install assets for the current user (<code>~/.themes</code>, <code>~/.icons</code>) or globally for all users (<code>/usr/share/themes</code>, <code>/usr/share/icons</code>). Global install uses <code>pkexec</code> for privilege elevation.</li>
+                                <li id="tm-rel-201-added-li2"><strong>Export — file chooser dialog:</strong> Exporting a theme now opens a <code>FileChooserDialog</code> so the user can pick the destination path.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-201-changed-li1"><strong>Theme bundle format v2 (breaking — old <code>.sth</code> files not compatible):</strong> Bundles now contain the actual asset directories (GTK theme, icon theme, cursor, wallpaper) as a <code>.zip</code> archive instead of xfconf dumps. Themes stored unpacked under <code>~/.config/soplos-theme-manager/themes/</code> with <code>metadata.json</code> + <code>theme.conf</code> + <code>assets/</code> + <code>preview/</code>.</li>
+                                <li id="tm-rel-201-changed-li2"><strong>Apply theme — visual-only xfconf changes:</strong> <code>apply_theme</code> now sets only visual xfconf properties (GTK theme, icon theme, cursor, WM theme, wallpaper). No longer touches keyboard shortcuts, desktop icon visibility, desktop menu or any behavioral property.</li>
+                                <li id="tm-rel-201-changed-li3"><strong>Apply theme — no XML file copying and no panel directory overwrite:</strong> <code>xfce4-desktop.xml</code>, <code>xfce4-panel.xml</code> and <code>~/.config/xfce4/panel/</code> are no longer touched on apply. Panel layout and desktop behavior remain fully under user control.</li>
+                                <li id="tm-rel-201-changed-li4"><strong>Theme store location:</strong> User themes moved from <code>~/.themes-backup/</code> to <code>~/.config/soplos-theme-manager/themes/</code>. Preview directory renamed from <code>view/</code> to <code>preview/</code>.</li>
+                                <li id="tm-rel-201-changed-li5"><strong>Bundle format v3:</strong> Assets stored as tars (<code>gtk.tar</code>, <code>icons.tar</code>, <code>cursor.tar</code>) inside the bundle instead of raw directory trees. Old v2 bundles rejected on import.</li>
+                                <li id="tm-rel-201-changed-li6"><strong>UI — Themes gallery:</strong> Card grid wrapped in a dark rounded box (<code>soplos-content</code> class), matching Plymouth Manager style. Selected theme card shows a thin 1px orange border; fixed <code>FlowBoxChild</code> container painting solid orange on selection.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-201-fixed-li1"><strong>Apply theme — keyboard shortcuts, desktop icons and docklike apps overwritten:</strong> <code>shortcuts.conf</code>, desktop icon/menu properties and <code>panel/</code> directory were applied unconditionally, replacing the user's settings. All three now left untouched.</li>
+                                <li id="tm-rel-201-fixed-li2"><strong>Apply theme — wallpaper paths hardcoded from source machine:</strong> The old format stored absolute paths (e.g. <code>/home/soplos/.themes-backup/…</code>), causing broken wallpapers on any other machine. Fixed by bundling the actual wallpaper file.</li>
+                                <li id="tm-rel-201-fixed-li3"><strong>Apply theme — xfconfd served cached panel config:</strong> After writing <code>xfce4-panel.xml</code>, xfconfd restarted from its in-memory copy. Fixed by killing xfconfd after <code>xfce4-panel --quit</code> so it re-reads from disk.</li>
+                                <li id="tm-rel-201-fixed-li4"><strong>Apply/save theme — orphan panel plugin files:</strong> Files from previous panel sessions accumulated in <code>~/.config/xfce4/panel/</code> and bled into saved themes. Apply and save now filter by IDs present in <code>xfce4-panel.xml</code>; orphan files removed after apply.</li>
+                                <li id="tm-rel-201-fixed-li5"><strong>Apply/save theme — dark mode not persisted:</strong> <code>gtk-application-prefer-dark-theme</code> was not saved or restored. Now stored as <code>prefer_dark</code> in <code>theme.conf</code> and written to both <code>~/.config/gtk-3.0/settings.ini</code> and <code>~/.config/gtk-4.0/settings.ini</code> on apply. Inferred from GTK theme name when <code>settings.ini</code> is absent.</li>
+                                <li id="tm-rel-201-fixed-li6"><strong>Apply theme — panel structure never changed:</strong> <code>_read_docklike_apps</code> was called with two arguments but only accepted one, causing a silent <code>TypeError</code> that aborted <code>_apply_panel_config</code> on every run. Fixed: method now accepts <code>xml_path</code> as optional parameter.</li>
+                                <li id="tm-rel-201-fixed-li7"><strong>Docklike service — wrong plugin ID and removed restart flag:</strong> <code>find_config_file()</code> used a glob that could return orphan <code>.rc</code> files. Now parses <code>xfce4-panel.xml</code> directly. <code>restart_panel()</code> replaced <code>--restart</code> (removed in XFCE 4.20) with <code>--quit</code> + <code>Popen</code>.</li>
+                                <li id="tm-rel-201-fixed-li8"><strong>Export — icon theme symlinks and incomplete family:</strong> Symlinked icon variants (e.g. <code>Tela-ubuntu-dark → ../Tela-ubuntu/</code>) were broken in the bundle. Export now uses <code>tar -czf -C base_dir</code> preserving symlinks. <code>_find_icon_dependencies()</code> reads <code>Inherits=</code> recursively and bundles the full icon family.</li>
+                                <li id="tm-rel-201-fixed-li9"><strong>Install global — existing assets destroyed and wrong ownership:</strong> <code>_global_install()</code> ran <code>rm -rf</code> on the destination before copying. Now extracts to temp and moves only dirs not already at destination. Tar extraction without preserve flags gives correct root ownership; <code>chmod -R a+rX</code> applied after install.</li>
+                                <li id="tm-rel-201-fixed-li10"><strong>Install global — pkexec script leaked temp dir on tar failure:</strong> <code>trap 'rm -rf "$TMPEXTR"' EXIT</code> added for guaranteed cleanup.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.0-2 -->
+                        <section id="v2002" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-2002-title">2.0.0-2 — June 2026</span></h2>
+                            <p id="tm-rel-2002-subtitle" class="lead">Panel tab hot-apply for all plugin operations (move, remove, add), Settings button for plugin configuration dialogs, threading lock, and a wide range of Panel, Dock and core fixes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2002-added-li1"><strong>Panel tab — hot apply for plugin operations:</strong> Moving, removing and adding plugins now takes effect immediately via xfconf + panel restart, without needing "Save &amp; Apply". New plugins get a real ID assigned at add time.</li>
+                                <li id="tm-rel-2002-added-li2"><strong>Panel tab — Settings button:</strong> Gear button added to the active plugins list to open a plugin's own configuration dialog.</li>
+                                <li id="tm-rel-2002-added-li3"><strong>Panel tab — error dialog on apply failure, threading lock and <code>_build_module_map()</code> helper:</strong> Apply failures now show a warning dialog. <code>self._panel_lock</code> serializes all xfconf write + restart operations. <code>_build_module_map()</code> avoids repeated .desktop file scans.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2002-fixed-li1"><strong>Panel tab — move/remove/add not applied live:</strong> Plugin list changes now immediately write to xfconf and restart the panel.</li>
+                                <li id="tm-rel-2002-fixed-li2"><strong>Panel tab — apply killed panel before writing xfconf:</strong> xfce4-panel saved its in-memory state on top of our changes. Now writes to xfconf first, then restarts only if plugin IDs changed.</li>
+                                <li id="tm-rel-2002-fixed-li3"><strong>Panel tab — new and delete panel teardown order:</strong> New panel now writes all properties before updating <code>/panels</code>. Delete panel removes plugin xfconf entries before updating <code>/panels</code> and restarting.</li>
+                                <li id="tm-rel-2002-fixed-li4"><strong>Panel tab — plugin modules used wrong key:</strong> <code>_scan_available_plugins</code> used <code>X-XFCE-Module</code> value; xfconf stores the <code>.desktop</code> filename stem. Fixed to use <code>f.stem</code>.</li>
+                                <li id="tm-rel-2002-fixed-li5"><strong>Panel tab — reload after successful apply:</strong> Plugin list reloaded after "Save &amp; Apply" so ID=0 placeholders are replaced with real IDs.</li>
+                                <li id="tm-rel-2002-fixed-li6"><strong>Dock tab — icon size and missing <code>icon_path</code> column:</strong> Pixbuf reused from the 32px list was shown at 48px causing blur. <code>icon_path</code> added as column 3 to <code>apps_store</code> so icons reload at the correct size.</li>
+                                <li id="tm-rel-2002-fixed-li7"><strong>Docklike service — hidden apps, icon fallback and broken entries:</strong> Apps with <code>NoDisplay=true</code> or <code>Hidden=true</code> now filtered via <code>app_info.should_show()</code>. Icon resolution now falls back to name-string lookup. Exceptions return <code>None</code> instead of a partial dict.</li>
+                                <li id="tm-rel-2002-fixed-li8"><strong>Theme service — xfce4-panel launched from wrong directory:</strong> <code>Popen(['xfce4-panel'])</code> now passes <code>cwd=Path.home()</code>.</li>
+                                <li id="tm-rel-2002-fixed-li9"><strong>core/application — theme conf migration failed on root-owned files:</strong> <code>Path.rename()</code> replaced with <code>shutil.copy2</code> + <code>unlink</code>, wrapped in <code>try/except OSError</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.0-1 -->
                         <section id="v2001" class="content-section">
