@@ -3846,6 +3846,12 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-210-title": "2.1.0 — Giugno 2026",
+    "wel-rel-210-subtitle": "Supporto al driver NVIDIA 610 (Blackwell) aggiunto nella scheda Driver, 590 rinominato in Stable, e nuovo collegamento alla Modalita Gaming nella schermata principale.",
+    "wel-rel-210-added-li1": "<strong>Scheda Driver — NVIDIA 610 (Latest):</strong> Nuovo pulsante driver per hardware Blackwell e successivo (serie RTX 50/60). Installato dal repository ufficiale NVIDIA CUDA per Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+    "wel-rel-210-added-li2": "<strong>Scheda Driver — NVIDIA 590 rinominato in Stable:</strong> L'etichetta del pulsante 590 e stata aggiornata da \"Latest\" a \"Stable\" ora che 610 e il ramo piu recente. Layout della griglia aggiornato: 610 in riga 0 col 0, 590 in riga 0 col 1; tutti gli altri driver scalati di una riga verso il basso.",
+    "wel-rel-210-added-li3": "<strong>Schermata principale — collegamento Modalita Gaming:</strong> Una nuova voce sotto \"Personalizza il tuo desktop\" mostra l'icona del controller e un collegamento cliccabile che attiva la scheda Gaming — identico a Ctrl+G. La riga viene mostrata solo se la scheda Gaming e stata caricata correttamente.",
+
     "wel-rel-2093-title": "2.0.9-3 — Giugno 2026",
     "wel-rel-2093-subtitle": "Correzioni nella scheda Consigliati: percorso dell'icona di Brave Origin corretto, Affinity Suite ripristinato all'AppImage 3.0.2 (Wine 10) dopo che il 3.2.0 falliva sulla maggior parte dei sistemi.",
     "wel-rel-2093-fixed-li1": "<strong>Scheda Consigliati — icona Brave Origin:</strong> Spostata da <code>brave-origin-icons/48x48/apps/brave-origin.png</code> a <code>brave-origin.png</code> nella radice delle icone dei browser — stessa struttura piatta degli altri browser, evita problemi di packaging con sottodirectory annidate.",

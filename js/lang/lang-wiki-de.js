@@ -3849,6 +3849,12 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-210-title": "2.1.0 — Juni 2026",
+    "wel-rel-210-subtitle": "NVIDIA 610 (Blackwell) Treiberunterstützung im Reiter Treiber hinzugefuegt, 590 in Stable umbenannt, und neuer Gaming-Modus-Link auf dem Startbildschirm.",
+    "wel-rel-210-added-li1": "<strong>Reiter Treiber — NVIDIA 610 (Latest):</strong> Neue Treiberschaltfläche fuer Blackwell-Hardware und neuere (RTX 50/60-Serie). Installation aus dem offiziellen NVIDIA CUDA-Repository fuer Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+    "wel-rel-210-added-li2": "<strong>Reiter Treiber — NVIDIA 590 in Stable umbenannt:</strong> Die Beschriftung der 590-Schaltfläche wurde von \"Latest\" auf \"Stable\" geaendert, da 610 nun der aktuellste Zweig ist. Rasterlayout aktualisiert: 610 in Zeile 0 Sp. 0, 590 in Zeile 0 Sp. 1; alle anderen Treiber eine Zeile nach unten verschoben.",
+    "wel-rel-210-added-li3": "<strong>Startbildschirm — Gaming-Modus-Link:</strong> Ein neuer Eintrag unterhalb von \"Passe deinen Desktop an\" zeigt das Gamepad-Symbol und einen klickbaren Link, der den Gaming-Reiter aktiviert — identisch mit Strg+G. Die Zeile wird nur angezeigt, wenn der Gaming-Reiter korrekt geladen wurde.",
+
     "wel-rel-2093-title": "2.0.9-3 — Juni 2026",
     "wel-rel-2093-subtitle": "Korrekturen im Reiter Empfehlungen: Brave-Origin-Icon-Pfad korrigiert, Affinity Suite auf AppImage 3.0.2 (Wine 10) zurückgesetzt, da 3.2.0 auf den meisten Systemen fehlschlug.",
     "wel-rel-2093-fixed-li1": "<strong>Reiter Empfehlungen — Brave-Origin-Icon:</strong> Verschoben von <code>brave-origin-icons/48x48/apps/brave-origin.png</code> nach <code>brave-origin.png</code> im Stammverzeichnis der Browser-Icons — gleiche flache Struktur wie alle anderen Browser-Icons, vermeidet Packaging-Probleme mit verschachtelten Unterverzeichnissen.",

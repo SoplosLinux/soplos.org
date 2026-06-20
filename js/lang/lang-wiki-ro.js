@@ -3848,6 +3848,12 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-210-title": "2.1.0 — Iunie 2026",
+    "wel-rel-210-subtitle": "Suport pentru driverul NVIDIA 610 (Blackwell) adaugat in fila Drivere, 590 redenumit in Stable, si un nou link catre Modul Gaming pe ecranul principal.",
+    "wel-rel-210-added-li1": "<strong>Fila Drivere — NVIDIA 610 (Latest):</strong> Buton nou de driver pentru hardware Blackwell si mai nou (seriile RTX 50/60). Instalat din depozitul oficial NVIDIA CUDA pentru Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+    "wel-rel-210-added-li2": "<strong>Fila Drivere — NVIDIA 590 redenumit in Stable:</strong> Eticheta butonului 590 a fost actualizata din \"Latest\" in \"Stable\" acum ca 610 este ramura cea mai recenta. Aspect grila actualizat: 610 in randul 0 col 0, 590 in randul 0 col 1; toate celelalte drivere coboate un rand.",
+    "wel-rel-210-added-li3": "<strong>Ecran principal — link Modul Gaming:</strong> O noua intrare sub \"Personalizeaza-ti desktopul\" afiseaza pictograma controller si un link care activeaza fila Gaming — identic cu Ctrl+G. Randul apare doar daca fila Gaming s-a incarcat corect.",
+
     "wel-rel-2093-title": "2.0.9-3 — Iunie 2026",
     "wel-rel-2093-subtitle": "Corecții în fila Recomandate: calea pictogramei Brave Origin corectată, Affinity Suite revenit la AppImage 3.0.2 (Wine 10) după ce 3.2.0 a eșuat pe majoritatea sistemelor.",
     "wel-rel-2093-fixed-li1": "<strong>Fila Recomandate — pictograma Brave Origin:</strong> Mutată din <code>brave-origin-icons/48x48/apps/brave-origin.png</code> în <code>brave-origin.png</code> la rădăcina pictogramelor de browsere — aceeași structură plată ca toate celelalte pictograme, evită problemele de packaging cu subdirectoare imbricate.",

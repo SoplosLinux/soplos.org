@@ -3841,6 +3841,12 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-210-title": "2.1.0 — Junho 2026",
+    "wel-rel-210-subtitle": "Suporte ao driver NVIDIA 610 (Blackwell) adicionado no separador Controladores, 590 renomeado para Stable, e novo link para o Modo Gaming no ecrã inicial.",
+    "wel-rel-210-added-li1": "<strong>Separador Controladores — NVIDIA 610 (Latest):</strong> Novo botão de driver para hardware Blackwell e posterior (séries RTX 50/60). Instalado a partir do repositório oficial NVIDIA CUDA para Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+    "wel-rel-210-added-li2": "<strong>Separador Controladores — NVIDIA 590 renomeado para Stable:</strong> A etiqueta do botão 590 foi atualizada de \"Latest\" para \"Stable\" agora que 610 é o ramo mais recente. Grelha atualizada: 610 na linha 0 col 0, 590 na linha 0 col 1; os restantes drivers deslocam-se uma linha abaixo.",
+    "wel-rel-210-added-li3": "<strong>Ecrã inicial — link Modo Gaming:</strong> Nova entrada abaixo de \"Personalize o seu ambiente de trabalho\" com o ícone de comando e um link que ativa o separador Gaming — idêntico a Ctrl+G. A linha só aparece se o separador Gaming tiver carregado corretamente.",
+
     "wel-rel-2093-title": "2.0.9-3 — Junho 2026",
     "wel-rel-2093-subtitle": "Correções no separador Recomendados: caminho do ícone do Brave Origin corrigido, Affinity Suite revertido para o AppImage 3.0.2 (Wine 10) após o 3.2.0 falhar na maioria dos sistemas.",
     "wel-rel-2093-fixed-li1": "<strong>Separador Recomendados — ícone do Brave Origin:</strong> Movido de <code>brave-origin-icons/48x48/apps/brave-origin.png</code> para <code>brave-origin.png</code> na raiz dos ícones de navegadores — mesma estrutura plana dos outros ícones, evita problemas de empacotamento com subdiretórios aninhados.",

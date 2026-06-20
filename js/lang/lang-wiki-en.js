@@ -4603,6 +4603,12 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-210-title": "2.1.0 — June 2026",
+  "wel-rel-210-subtitle": "NVIDIA 610 (Blackwell) driver support added to the Drivers tab, 590 relabelled as Stable, and a new Gaming Mode link on the home screen.",
+  "wel-rel-210-added-li1": "<strong>Drivers tab — NVIDIA 610 (Latest):</strong> New driver button for Blackwell and newer hardware (RTX 50/60 series). Installed from the official NVIDIA CUDA repository for Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+  "wel-rel-210-added-li2": "<strong>Drivers tab — NVIDIA 590 relabelled to Stable:</strong> The 590 button label has been updated from \"Latest\" to \"Stable\" now that 610 is the most recent branch. Grid layout updated: 610 in row 0 col 0, 590 in row 0 col 1; all other drivers shift one row down.",
+  "wel-rel-210-added-li3": "<strong>Home screen — Gaming Mode link:</strong> A new entry below \"Customize your desktop\" shows the gaming controller icon and a clickable link that activates the Gaming tab — identical to Ctrl+G. The row only renders if the Gaming tab loaded correctly.",
+
   "wel-rel-2093-title": "2.0.9-3 — June 2026",
   "wel-rel-2093-subtitle": "Recommended tab fixes: Brave Origin icon path corrected, Affinity Suite reverted to 3.0.2 AppImage (Wine 10) after 3.2.0 failed on most systems.",
   "wel-rel-2093-fixed-li1": "<strong>Recommended tab — Brave Origin icon:</strong> Moved from <code>brave-origin-icons/48x48/apps/brave-origin.png</code> to <code>brave-origin.png</code> at the browsers icons root — same flat structure as all other browser icons, avoids packaging issues with nested subdirectories.",

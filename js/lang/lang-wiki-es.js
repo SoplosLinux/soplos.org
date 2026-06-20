@@ -3847,6 +3847,12 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-210-title": "2.1.0 — Junio 2026",
+    "wel-rel-210-subtitle": "Soporte para drivers NVIDIA 610 (Blackwell) en la pestaña Controladores, 590 renombrado a Stable, y nuevo enlace al Modo Gaming en la pantalla principal.",
+    "wel-rel-210-added-li1": "<strong>Pestaña Controladores — NVIDIA 610 (Latest):</strong> Nuevo botón de driver para hardware Blackwell y posterior (series RTX 50/60). Instalado desde el repositorio oficial NVIDIA CUDA para Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+    "wel-rel-210-added-li2": "<strong>Pestaña Controladores — NVIDIA 590 renombrado a Stable:</strong> La etiqueta del botón 590 se ha actualizado de \"Latest\" a \"Stable\" ahora que 610 es la rama más reciente. Diseño de cuadrícula actualizado: 610 en fila 0 col 0, 590 en fila 0 col 1; el resto de drivers bajan una fila.",
+    "wel-rel-210-added-li3": "<strong>Pantalla principal — enlace al Modo Gaming:</strong> Nueva entrada debajo de \"Personaliza tu escritorio\" con el icono de mando y un enlace que activa la pestaña Gaming — idéntico a Ctrl+G. La fila solo se muestra si la pestaña Gaming se cargó correctamente.",
+
     "wel-rel-2093-title": "2.0.9-3 — Junio 2026",
     "wel-rel-2093-subtitle": "Correcciones en la pestaña Recomendados: ruta del icono de Brave Origin corregida, Affinity Suite revertido al AppImage 3.0.2 (Wine 10) tras fallar el 3.2.0 en la mayoría de sistemas.",
     "wel-rel-2093-fixed-li1": "<strong>Pestaña Recomendados — icono de Brave Origin:</strong> Movido de <code>brave-origin-icons/48x48/apps/brave-origin.png</code> a <code>brave-origin.png</code> en la raíz de los iconos de navegadores — misma estructura plana que todos los demás iconos, evita problemas de empaquetado con subdirectorios anidados.",

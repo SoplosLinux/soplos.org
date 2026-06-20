@@ -3842,6 +3842,12 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-210-title": "2.1.0 — Juin 2026",
+    "wel-rel-210-subtitle": "Support du pilote NVIDIA 610 (Blackwell) ajouté dans l'onglet Pilotes, 590 renommé en Stable, et nouveau lien vers le Mode Gaming sur l'écran d'accueil.",
+    "wel-rel-210-added-li1": "<strong>Onglet Pilotes — NVIDIA 610 (Latest) :</strong> Nouveau bouton de pilote pour le matériel Blackwell et ultérieur (séries RTX 50/60). Installé depuis le dépôt officiel NVIDIA CUDA pour Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
+    "wel-rel-210-added-li2": "<strong>Onglet Pilotes — NVIDIA 590 renommé en Stable :</strong> L'étiquette du bouton 590 est passée de \"Latest\" à \"Stable\" maintenant que 610 est la branche la plus récente. Mise en page de la grille mise à jour : 610 en ligne 0 col 0, 590 en ligne 0 col 1 ; tous les autres pilotes décalés d'une ligne vers le bas.",
+    "wel-rel-210-added-li3": "<strong>Écran d'accueil — lien Mode Gaming :</strong> Une nouvelle entrée sous \"Personnalisez votre bureau\" affiche l'icône de manette et un lien cliquable qui active l'onglet Gaming — identique à Ctrl+G. La ligne ne s'affiche que si l'onglet Gaming s'est chargé correctement.",
+
     "wel-rel-2093-title": "2.0.9-3 — Juin 2026",
     "wel-rel-2093-subtitle": "Corrections de l'onglet Recommandés : chemin de l'icône Brave Origin corrigé, Affinity Suite réinitialisé à l'AppImage 3.0.2 (Wine 10) après l'échec du 3.2.0 sur la plupart des systèmes.",
     "wel-rel-2093-fixed-li1": "<strong>Onglet Recommandés — icône Brave Origin :</strong> Déplacée de <code>brave-origin-icons/48x48/apps/brave-origin.png</code> vers <code>brave-origin.png</code> à la racine des icônes de navigateurs — même structure plate que tous les autres icônes, évite les problèmes de packaging avec des sous-répertoires imbriqués.",
