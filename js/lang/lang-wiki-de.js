@@ -4634,6 +4634,10 @@ Object.assign(window.LANG_DE, {
     "ss-rel-hero-subtitle": "Systemd-Dienstverwaltung für Soplos Linux. Dienste anzeigen, steuern und überwachen mit farbkodiertem Status, Start/Stopp/Neustart-Steuerelementen, journalctl-Protokollansicht und vollständiger Hell/Dunkel-Theme-Unterstützung.",
     "ss-rel-breadcrumb": "Soplos System Service",
 
+    "ss-rel-1005-title": "1.0.0-5 — Juni 2026",
+    "ss-rel-1005-subtitle": "GNOME-Absturzfix: Der Wrapper uebergibt nun <code>HOME=/root</code> an den Root-pkexec-Prozess und verhindert so einen bubblewrap-Sandbox-Fehler, wenn gdk-pixbuf SVG-Icons rasterisiert.",
+    "ss-rel-1005-fixed-li1": "<strong>GNOME-Absturz beim Start (gtkiconhelper / gdk-pixbuf SVG-Loader):</strong> Der Wrapper uebergab <code>HOME=/home/soplos</code> an den Root-pkexec-Prozess. Der SVG-Rasterizer von gdk-pixbuf verwendet bubblewrap als Sandbox; wenn der Elternprozess root ist, <code>HOME</code> aber auf ein Benutzerverzeichnis zeigt, schlaegt die bwrap-Sandbox-Initialisierung fehl und GTK bricht ab. Behoben durch Uebergabe von <code>HOME=/root</code>, wie es soplos-grub-editor handhabt.",
+
     "ss-rel-1004-title": "1.0.0-4 — Juni 2026",
     "ss-rel-1004-subtitle": "GNOME-Absturzkorrektur: Der Wrapper gibt jetzt die Gdk-Version an, bevor er sie importiert, und verhindert so einen Konflikt mit dem in GNOME-Sitzungen bereits geladenen GTK4.",
     "ss-rel-1004-fixed-li1": "<strong>Absturz beim Start unter GNOME — fehlendes <code>gi.require_version('Gdk', '3.0')</code>:</strong> Der Inline-Python-Block des Wrappers importierte <code>Gdk</code> ohne Versionsangabe. In GNOME-Sitzungen ist GTK4 bereits geladen, sodass <code>gi</code> versuchte, <code>Gdk 3.0</code> über <code>4.0</code> zu laden, was einen <code>ImportError</code> auslöste. <code>gi.require_version('Gdk', '3.0')</code> wird nun vor dem Import in beiden Zweigen des Wrappers (normal und root) gesetzt.",

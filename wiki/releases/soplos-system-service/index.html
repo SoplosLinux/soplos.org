@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1005" class="toc-link">1.0.0-5 <span class="toc-date">— 2026-06-21</span></a></li>
                             <li><a href="#v1004" class="toc-link">1.0.0-4 <span class="toc-date">— 2026-06-14</span></a></li>
                             <li><a href="#v1003" class="toc-link">1.0.0-3 <span class="toc-date">— 2026-06-14</span></a></li>
                             <li><a href="#v1002" class="toc-link">1.0.0-2 <span class="toc-date">— 2026-06-14</span></a></li>
@@ -125,6 +126,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.0-5 -->
+                        <section id="v1005" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ss-rel-1005-title">1.0.0-5 — June 2026</span></h2>
+                            <p id="ss-rel-1005-subtitle" class="lead">GNOME crash fix: the wrapper now passes <code>HOME=/root</code> to the root pkexec process, preventing a bubblewrap sandbox failure when gdk-pixbuf tries to rasterize SVG icons.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1005-fixed-li1"><strong>GNOME crash on launch (gtkiconhelper / gdk-pixbuf SVG loader):</strong> The wrapper was passing <code>HOME=/home/soplos</code> to the root pkexec process. The gdk-pixbuf SVG rasterizer uses bubblewrap as a sandbox; when the parent is root but <code>HOME</code> points to a user directory, the bwrap sandbox fails to initialize and GTK aborts. Fixed by passing <code>HOME=/root</code>, matching how soplos-grub-editor handles it.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.0-4 -->
                         <section id="v1004" class="content-section">

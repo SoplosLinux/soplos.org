@@ -4637,6 +4637,10 @@ Object.assign(window.LANG_RU, {
     "ss-rel-hero-subtitle": "Менеджер служб systemd для Soplos Linux. Просматривайте, управляйте и контролируйте службы с цветовой индикацией состояния, кнопками Запуск/Стоп/Перезапуск, просмотром журналов journalctl и полной поддержкой светлой/тёмной темы.",
     "ss-rel-breadcrumb": "Soplos System Service",
 
+    "ss-rel-1005-title": "1.0.0-5 — Июнь 2026",
+    "ss-rel-1005-subtitle": "Исправление краша в GNOME: обёртка теперь передаёт <code>HOME=/root</code> корневому процессу pkexec, предотвращая сбой sandbox bubblewrap при растеризации SVG-иконок через gdk-pixbuf.",
+    "ss-rel-1005-fixed-li1": "<strong>Краш в GNOME при запуске (gtkiconhelper / gdk-pixbuf SVG loader):</strong> Обёртка передавала <code>HOME=/home/soplos</code> корневому процессу pkexec. Растеризатор SVG в gdk-pixbuf использует bubblewrap как sandbox; когда родительский процесс — root, но <code>HOME</code> указывает на пользовательский каталог, sandbox bwrap не может инициализироваться и GTK аварийно завершается. Исправлено передачей <code>HOME=/root</code>, как это делает soplos-grub-editor.",
+
     "ss-rel-1004-title": "1.0.0-4 — Июнь 2026",
     "ss-rel-1004-subtitle": "Исправление краша в GNOME: обёртка теперь указывает версию Gdk перед импортом, предотвращая конфликт с GTK4, уже загруженным в сессиях GNOME.",
     "ss-rel-1004-fixed-li1": "<strong>Краш при запуске в GNOME — отсутствовал <code>gi.require_version('Gdk', '3.0')</code>:</strong> Встроенный Python-блок обёртки импортировал <code>Gdk</code> без указания версии. В сессиях GNOME GTK4 уже загружен, поэтому <code>gi</code> пытался загрузить <code>Gdk 3.0</code> поверх <code>4.0</code> и бросал <code>ImportError</code>. Теперь <code>gi.require_version('Gdk', '3.0')</code> устанавливается перед импортом в обеих ветках обёртки (обычной и root).",
