@@ -3684,6 +3684,10 @@ Object.assign(window.LANG_RO, {
     "tyron-rel-table-update-policy-value": "Rolling (Debian Testing)",
 
     // Theme Manager 2.0.1-2
+    "tm-rel-2013-title": "2.0.1-3 — Iunie 2026",
+    "tm-rel-2013-subtitle": "Dependenta Polkit actualizata la <code>polkitd</code>, numele corect al pachetului in Debian-ul actual. Eliminate alternativele obsolete <code>policykit-1-gnome</code> si <code>policykit-1</code>.",
+    "tm-rel-2013-fixed-li1": "<strong>Dependenta Polkit:</strong> Actualizata la <code>polkitd</code>, numele corect al pachetului in Debian-ul actual. Eliminate alternativele obsolete <code>policykit-1-gnome</code> si <code>policykit-1</code> care nu mai exista, prevenind avertismente la instalarea pachetului.",
+
     "tm-rel-2012-title": "2.0.1-2 — Iunie 2026",
     "tm-rel-2012-subtitle": "Teme de bază adăugate automat la primul pornire cu buton Restaurare, curățare unică a artefactelor v1.x deprecate, reducerea dependențelor pachetului și corectarea căilor de resurse.",
     "tm-rel-2012-added-li1": "<strong>Fila Teme — teme de bază adăugate la pornire:</strong> Fișierele <code>.sth</code> incluse în <code>assets/base-themes/</code> sunt importate automat în <code>~/.config/soplos-theme-manager/themes/</code> la pornire dacă lipsesc. Fără pkexec, fără prompt-uri. Temele de bază șterse nu sunt restaurate automat — restaurare manuală necesară.",

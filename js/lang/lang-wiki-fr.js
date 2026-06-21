@@ -3684,6 +3684,10 @@ Object.assign(window.LANG_FR, {
     "tyron-rel-table-update-policy-value": "Rolling (Debian Testing)",
 
     // Theme Manager 2.0.0
+    "tm-rel-2013-title": "2.0.1-3 — Juin 2026",
+    "tm-rel-2013-subtitle": "Dependance Polkit mise a jour vers <code>polkitd</code>, le nom correct du paquet dans Debian actuel. Suppression des alternatives obsoletes <code>policykit-1-gnome</code> et <code>policykit-1</code>.",
+    "tm-rel-2013-fixed-li1": "<strong>Dependance Polkit :</strong> Mise a jour vers <code>polkitd</code>, le nom correct du paquet dans Debian actuel. Suppression des alternatives obsoletes <code>policykit-1-gnome</code> et <code>policykit-1</code> qui n'existent plus, evitant les avertissements lors de l'installation du paquet.",
+
     "tm-rel-2012-title": "2.0.1-2 — Juin 2026",
     "tm-rel-2012-subtitle": "Thèmes de base importés automatiquement au premier lancement avec bouton Restaurer, nettoyage ponctuel des artefacts v1.x, réduction des dépendances d'empaquetage et corrections de chemins d'assets.",
     "tm-rel-2012-added-li1": "<strong>Onglet Thèmes — thèmes de base importés au démarrage :</strong> Les fichiers <code>.sth</code> inclus dans <code>assets/base-themes/</code> sont importés automatiquement dans <code>~/.config/soplos-theme-manager/themes/</code> si absents. Sans pkexec ni invite. Les thèmes de base supprimés ne sont pas réimposés — une restauration manuelle est requise.",
