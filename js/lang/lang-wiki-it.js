@@ -5106,6 +5106,10 @@ Object.assign(window.LANG_IT, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Gestore grafico GTK3 dei temi di avvio Plymouth — anteprima, installazione e applicazione di temi con supporto Wayland/X11, anteprime avanzate Xephyr e internazionalizzazione completa in 8 lingue.",
 
+    "pm-rel-200-7-title": "2.0.0-7 — Giugno 2026",
+    "pm-rel-200-7-subtitle": "Dipendenza Polkit ridotta al solo <code>polkit</code>. Rimosse le alternative obsolete <code>policykit-1-gnome</code> e <code>policykit-1</code> che non esistono piu nel Debian attuale.",
+    "pm-rel-200-7-fixed-li1": "<strong>Dipendenza Polkit:</strong> Ridotta al solo <code>polkit</code>. Rimosse le alternative obsolete <code>policykit-1-gnome</code> e <code>policykit-1</code> che non esistono piu nel Debian attuale, evitando avvisi durante l'installazione del pacchetto.",
+
     "pm-rel-200-6-title": "2.0.0-6 — Giugno 2026",
     "pm-rel-200-6-subtitle": "Stile di selezione delle schede tema affinato: bordo di 1px, nessun effetto bagliore, sfondo arancione del FlowBoxChild alla selezione corretto.",
     "pm-rel-200-6-changed-li1": "<strong>Stile di selezione delle schede tema:</strong> Indicatore di selezione aggiornato a un bordo di 1px senza effetto bagliore. Corretto lo sfondo arancione del <code>FlowBoxChild</code> quando si seleziona una scheda tema.",

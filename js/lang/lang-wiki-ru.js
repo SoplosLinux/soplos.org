@@ -5111,6 +5111,10 @@ Object.assign(window.LANG_RU, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Графический менеджер GTK3 тем заставки загрузки Plymouth — предпросмотр, установка и применение тем с поддержкой Wayland/X11, расширенными предпросмотрами Xephyr и полной интернационализацией на 8 языках.",
 
+    "pm-rel-200-7-title": "2.0.0-7 — Июнь 2026",
+    "pm-rel-200-7-subtitle": "Зависимость Polkit сокращена до единственного пакета <code>polkit</code>. Удалены устаревшие альтернативы <code>policykit-1-gnome</code> и <code>policykit-1</code>, которых больше нет в актуальном Debian.",
+    "pm-rel-200-7-fixed-li1": "<strong>Зависимость Polkit:</strong> Сокращена до единственного <code>polkit</code>. Удалены устаревшие альтернативы <code>policykit-1-gnome</code> и <code>policykit-1</code>, отсутствующие в актуальном Debian и вызывавшие предупреждения при установке пакета.",
+
     "pm-rel-200-6-title": "2.0.0-6 — Июнь 2026",
     "pm-rel-200-6-subtitle": "Уточнён стиль выделения карточек тем: рамка 1px, без эффекта свечения, исправлен оранжевый фон FlowBoxChild при выборе.",
     "pm-rel-200-6-changed-li1": "<strong>Стиль выделения карточек тем:</strong> Индикатор выбора обновлён до рамки 1px без эффекта свечения. Исправлен оранжевый фон <code>FlowBoxChild</code> при выборе карточки темы.",

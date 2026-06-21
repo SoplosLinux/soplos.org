@@ -5861,6 +5861,10 @@ Object.assign(window.LANG_EN, {
   "pm-rel-hero-title": "Soplos Plymouth Manager",
   "pm-rel-hero-subtitle": "Graphical GTK3 boot splash theme manager — preview, install and apply Plymouth themes with Wayland/X11 support, advanced Xephyr previews and full 8-language internationalisation.",
 
+  "pm-rel-200-7-title": "2.0.0-7 — June 2026",
+  "pm-rel-200-7-subtitle": "Polkit dependency reduced to just <code>polkit</code>. Removed obsolete <code>policykit-1-gnome</code> and <code>policykit-1</code> alternatives that no longer exist in current Debian.",
+  "pm-rel-200-7-fixed-li1": "<strong>Polkit dependency:</strong> Reduced to just <code>polkit</code>. Removed obsolete <code>policykit-1-gnome</code> and <code>policykit-1</code> alternatives that no longer exist in current Debian, preventing packaging warnings on installation.",
+
   "pm-rel-200-6-title": "2.0.0-6 — June 2026",
   "pm-rel-200-6-subtitle": "Refined theme card selection style: 1px border, no glow effect, fixed FlowBoxChild orange background on selection.",
   "pm-rel-200-6-changed-li1": "<strong>Theme card selection style:</strong> Selection indicator updated to a 1px border with no glow effect. Fixed the orange background on <code>FlowBoxChild</code> when a theme card is selected.",

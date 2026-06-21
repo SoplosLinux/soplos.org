@@ -5108,6 +5108,10 @@ Object.assign(window.LANG_RO, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Manager grafic GTK3 pentru teme de pornire Plymouth — previzualizați, instalați și aplicați teme cu suport Wayland/X11, previzualizări avansate Xephyr și internaționalizare completă în 8 limbi.",
 
+    "pm-rel-200-7-title": "2.0.0-7 — Iunie 2026",
+    "pm-rel-200-7-subtitle": "Dependenta Polkit redusa la doar <code>polkit</code>. Eliminate alternativele obsolete <code>policykit-1-gnome</code> si <code>policykit-1</code> care nu mai exista in Debian-ul actual.",
+    "pm-rel-200-7-fixed-li1": "<strong>Dependenta Polkit:</strong> Redusa la doar <code>polkit</code>. Eliminate alternativele obsolete <code>policykit-1-gnome</code> si <code>policykit-1</code> care nu mai exista in Debian-ul actual, prevenind avertismente la instalarea pachetului.",
+
     "pm-rel-200-6-title": "2.0.0-6 — Iunie 2026",
     "pm-rel-200-6-subtitle": "Stil de selecție al cardurilor de temă rafinat: bordură de 1px, fără efect de strălucire, fundalul portocaliu al FlowBoxChild la selecție corectat.",
     "pm-rel-200-6-changed-li1": "<strong>Stilul de selecție al cardurilor de temă:</strong> Indicatorul de selecție actualizat la o bordură de 1px fără efect de strălucire. Corectat fundalul portocaliu al <code>FlowBoxChild</code> la selectarea unui card de temă.",
