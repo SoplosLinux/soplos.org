@@ -4223,6 +4223,10 @@ Object.assign(window.LANG_DE, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Willkommensanwendung für Soplos Linux Live — Integration mit dem Calamares-Installer und erweitertes CHROOT-Systemwiederherstellung mit vollständiger BTRFS-Unterstützung für XFCE, KDE Plasma und GNOME.",
 
+    "wl-rel-2022-title": "2.0.2-2 — Juni 2026",
+    "wl-rel-2022-subtitle": "Der Fallback-Neustart des Anzeigemanagers im Sprachumschalter versucht unter KDE nun zuerst <code>plasmalogin</code> vor <code>sddm</code>, was die Kompatibilitaet mit Tyson RC1 und Beta-Nutzern mit SDDM sicherstellt.",
+    "wl-rel-2022-fixed-li1": "<strong>Sprachumschalter — Anzeigemanager-Neustart unter KDE:</strong> Die Fallback-Neustartlogik versucht nun zuerst <code>plasmalogin</code> vor <code>sddm</code>, was die Kompatibilitaet mit Tyson RC1 (das PLM als Anzeigemanager verwendet) und Beta-Nutzern, die noch SDDM betreiben, sicherstellt.",
+
     "wl-rel-202-title": "2.0.2 — März 2026",
     "wl-rel-202-subtitle": "Fenster für geführte Rettungsoperationen, Internet-Verbindungsanzeige, Hardware-Info-Schaltfläche, GParted-Verknüpfung, Einblendanimation und Tooltips.",
     "wl-rel-202-added-li1": "<strong>Einblendanimation:</strong> Sanfter Übergang der Fensteropazität beim Start.",

@@ -4216,6 +4216,10 @@ Object.assign(window.LANG_FR, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Application de bienvenue pour Soplos Linux Live — intégration avec l'installateur Calamares et récupération système avancée en CHROOT avec prise en charge complète de BTRFS pour XFCE, KDE Plasma et GNOME.",
 
+    "wl-rel-2022-title": "2.0.2-2 — Juin 2026",
+    "wl-rel-2022-subtitle": "Le fallback de redemarrage du gestionnaire d'affichage dans le changeur de langue essaie desormais <code>plasmalogin</code> avant <code>sddm</code> sous KDE, assurant la compatibilite avec Tyson RC1 et les utilisateurs beta encore sous SDDM.",
+    "wl-rel-2022-fixed-li1": "<strong>Changeur de langue — redemarrage du gestionnaire d'affichage sous KDE :</strong> La logique de redemarrage en fallback essaie desormais <code>plasmalogin</code> avant <code>sddm</code>, assurant la compatibilite avec Tyson RC1 (qui utilise PLM comme gestionnaire d'affichage) et les utilisateurs beta encore sous SDDM.",
+
     "wl-rel-202-title": "2.0.2 — Mars 2026",
     "wl-rel-202-subtitle": "Fenêtre d'opérations de secours guidées, indicateur de connectivité internet, bouton d'informations matérielles, raccourci GParted, animation d'entrée et infobulles.",
     "wl-rel-202-added-li1": "<strong>Animation d'entrée :</strong> Transition douce de l'opacité de la fenêtre au démarrage.",

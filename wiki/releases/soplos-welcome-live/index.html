@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2022" class="toc-link">2.0.2-2 <span class="toc-date">— 2026-06-22</span></a></li>
                             <li><a href="#v202" class="toc-link">2.0.2 <span class="toc-date">— 2026-03-31</span></a></li>
                             <li><a href="#v201-1" class="toc-link">2.0.1-1 <span class="toc-date">— 2026-03-21</span></a></li>
                             <li><a href="#v201" class="toc-link">2.0.1 <span class="toc-date">— 2026-01-09</span></a></li>
@@ -154,6 +155,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.2-2 -->
+                        <section id="v2022" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-2022-title">2.0.2-2 — June 2026</span></h2>
+                            <p id="wl-rel-2022-subtitle" class="lead">Language changer display manager restart fallback now tries <code>plasmalogin</code> before <code>sddm</code> on KDE, ensuring compatibility with both Tyson RC1 and beta users still on SDDM.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-2022-fixed-li1"><strong>Language changer — display manager restart on KDE:</strong> The fallback restart logic now tries <code>plasmalogin</code> before <code>sddm</code>, ensuring compatibility with Tyson RC1 (which uses PLM as display manager) and beta users still running SDDM.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.2 -->
                         <section id="v202" class="content-section">
