@@ -122,7 +122,7 @@
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
                             <li><a href="#rc1" class="toc-link" style="white-space:nowrap">RC1 <span
-                                        class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-06-14</span></a>
+                                        class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-06-22</span></a>
                             </li>
                             <li><a href="#beta-104" class="toc-link" style="white-space:nowrap">Beta 1.0.4 <span
                                         class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-03-06</span></a>
@@ -143,14 +143,14 @@
                         <!-- RC1 -->
                         <section id="rc1" class="content-section">
                             <h2><i class="fas fa-compact-disc"></i> <span id="boro-rel-rc1-title">RC1 — June 2026</span></h2>
-                            <p id="boro-rel-rc1-subtitle" class="lead">Custom Soplos kernel 7.0.12, NVIDIA 580.159.04, GNOME 50, Libadwaita 1.9 stable, Nautilus 50.1, zRAM enabled by default, fish as default shell, Ghostty as default terminal and Debian repositories switched to testing+forky. soplos-grub-editor and soplos-plymouth-manager removed from ISO and available from Soplos repositories.</p>
+                            <p id="boro-rel-rc1-subtitle" class="lead">Custom Soplos kernel 7.1.0, NVIDIA 580.159.04, GNOME 50, Libadwaita 1.9 stable, Nautilus 50.1, zRAM enabled by default, zsh as default shell, Ghostty as default terminal and Debian repositories switched to testing+forky. soplos-grub-editor and soplos-plymouth-manager removed from ISO and available from Soplos repositories.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-microchip"></i> <span id="boro-rel-rc1-label-kernel">Kernel</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li><code>6.18.15+deb14-amd64</code> → <code>7.0.12-soplos</code> <span data-i18n="inline-custom-kernel">(custom Soplos kernel)</span></li>
+                                <li><code>6.18.15+deb14-amd64</code> → <code>7.1.0-soplos</code> <span data-i18n="inline-custom-kernel">(custom Soplos kernel)</span></li>
                             </ul>
 
                             <div class="subsection-header">
@@ -189,15 +189,15 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li><strong>soplos-system-service</strong> <code>1.0.0-1</code> <em data-i18n="inline-new">(new)</em></li>
-                                <li><strong>fish-soplos</strong> <code>0.0.1-1</code> <em data-i18n="inline-new">(new)</em> — <span id="boro-rel-rc1-fish-note">fish set as default shell</span></li>
-                                <li><strong>ghostty-soplos</strong> <code>0.0.1-2</code> <em data-i18n="inline-new">(new)</em> — <span id="boro-rel-rc1-ghostty-note">Ghostty set as default terminal</span></li>
+                                <li><strong>soplos-system-service</strong> <code>1.0.0-5</code> <em data-i18n="inline-new">(new)</em></li>
+                                <li><strong>zsh-soplos</strong> <code>0.0.1-1</code> <em data-i18n="inline-new">(new)</em> — <span id="boro-rel-rc1-zsh-note">zsh set as default shell</span></li>
+                                <li><strong>ghostty-soplos</strong> <code>0.0.1-4</code> <em data-i18n="inline-new">(new)</em> — <span id="boro-rel-rc1-ghostty-note">Ghostty set as default terminal</span></li>
                                 <li><strong>zram-soplos</strong> <code>0.0.1-2</code> <em data-i18n="inline-new">(new)</em> — <span id="boro-rel-rc1-zram-note">zRAM memory compression enabled by default</span></li>
                                 <li><strong>soplos-grub-editor</strong> <code>2.0.0</code> → <code>2.0.2-4</code> <em data-i18n="inline-out-of-iso">(out of ISO — installable from Soplos repositories)</em></li>
                                 <li><strong>soplos-plymouth-manager</strong> <code>1.0.6</code> → <code>2.0.0-5</code> <em data-i18n="inline-out-of-iso">(out of ISO — installable from Soplos repositories)</em></li>
                                 <li><strong>soplos-repo-selector</strong> <code>2.0.2</code> → <code>2.0.2-8</code></li>
-                                <li><strong>soplos-welcome</strong> <code>2.0.6</code> → <code>2.0.9-3</code></li>
-                                <li><strong>soplos-welcome-live</strong> <code>2.0.1</code> → <code>2.0.2</code></li>
+                                <li><strong>soplos-welcome</strong> <code>2.0.6</code> → <code>2.1.0</code></li>
+                                <li><strong>soplos-welcome-live</strong> <code>2.0.1</code> → <code>2.0.2-2</code></li>
                             </ul>
 
                             <div class="subsection-header">
@@ -219,16 +219,14 @@
                                 <li><code>cuda-drivers-580</code> 580.159.04-1</li>
                                 <li><code>dwarves</code> 1.31-2</li>
                                 <li><code>enchant</code> 2.8.16+dfsg-3</li>
-                                <li><code>fish</code> 4.7.1-2</li>
-                                <li><code>fish-common</code> 4.7.1-2</li>
                                 <li><code>flex</code> 2.6.4-8.2+b5</li>
                                 <li><code>gcc-16-base</code> 16.1.0-1</li>
-                                <li><code>ghostty-tip</code> 1.3.2~dev.20260605-1+forky</li>
+                                <li><code>ghostty-tip</code> 1.3.2~dev.20260619-1+forky</li>
                                 <li><code>git</code> 1:2.53.0-1</li>
                                 <li><code>git-man</code> 1:2.53.0-1</li>
-                                <li><code>linux-headers-7.0.12-soplos</code> 1</li>
-                                <li><code>linux-image-7.0.12-soplos</code> 1</li>
-                                <li><code>linux-soplos</code> 7.0.12</li>
+                                <li><code>linux-headers-7.1.0-soplos</code> 1</li>
+                                <li><code>linux-image-7.1.0-soplos</code> 1</li>
+                                <li><code>linux-soplos</code> 7.1</li>
                                 <li><code>localsearch-extractor-ffmpeg</code> 3.11.1-3</li>
                                 <li><code>localsearch-extractor-iso</code> 3.11.1-3</li>
                                 <li><code>localsearch-extractor-office</code> 3.11.1-3</li>
@@ -1080,14 +1078,14 @@
                                             <td>2.0.0</td>
                                             <td>2.0.2</td>
                                             <td>2.0.6</td>
-                                            <td>2.0.9-3</td>
+                                            <td>2.1.0</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-welcome-live</strong></td>
                                             <td>2.0.0</td>
                                             <td>2.0.0</td>
                                             <td>2.0.1</td>
-                                            <td>2.0.2</td>
+                                            <td>2.0.2-2</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-sys-cleaner</strong></td>
@@ -1108,17 +1106,17 @@
                                         <tr>
                                             <td><strong>soplos-system-service</strong></td>
                                             <td>—</td><td>—</td><td>—</td>
-                                            <td>1.0.0-1</td>
+                                            <td>1.0.0-5</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>fish-soplos</strong></td>
+                                            <td><strong>zsh-soplos</strong></td>
                                             <td>—</td><td>—</td><td>—</td>
                                             <td>0.0.1-1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>ghostty-soplos</strong></td>
                                             <td>—</td><td>—</td><td>—</td>
-                                            <td>0.0.1-2</td>
+                                            <td>0.0.1-4</td>
                                         </tr>
                                         <tr>
                                             <td><strong>zram-soplos</strong></td>
