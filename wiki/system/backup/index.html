@@ -128,6 +128,8 @@
                             <li><a href="#intro" id="bk-toc-1">Introduction</a></li>
                             <li><a href="#fundamentals" id="bk-toc-2">Backup Fundamentals</a></li>
                             <li><a href="#timeshift" id="bk-toc-3">System: Timeshift</a></li>
+                            <li><a href="#grub-btrfs" id="bk-toc-grub">Grub BTRFS</a></li>
+                            <li><a href="#btrfs-assistant" id="bk-toc-btrfs-a">BTRFS Assistant</a></li>
                             <li><a href="#deja-dup" id="bk-toc-4">Data: Deja Dup</a></li>
                             <li><a href="#imaging" id="bk-toc-5">Disk Imaging</a></li>
                             <li><a href="#cloud" id="bk-toc-6">Cloud Backups</a></li>
@@ -144,6 +146,12 @@
                                 deletion, or malicious
                                 attacks. Soplos Linux provides powerful tools to ensure your system and personal files
                                 are safe.</p>
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="bk-intro-welcome"><strong>Soplos Welcome:</strong> Timeshift, Grub BTRFS, BTRFS Assistant and Deja Dup can all be installed directly from <strong>Soplos Welcome → Security → System Backups</strong>. No terminal required.</span>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="fundamentals" class="content-section">
@@ -189,9 +197,10 @@
                                 updates or configuration mistakes.</p>
 
                             <h3 id="bk-ts-inst-h">Installation</h3>
+                            <p id="bk-ts-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
                             <div class="code-example">
                                 <h4 id="bk-ts-inst-term">Terminal</h4>
-                                <pre><code>sudo apt update
+                                <pre><code id="bk-ts-inst-code"># Install Timeshift
 sudo apt install timeshift</code></pre>
                             </div>
 
@@ -230,6 +239,63 @@ sudo apt install timeshift</code></pre>
                             </ol>
                         </section>
 
+                        <section id="grub-btrfs" class="content-section">
+                            <h2><i class="fas fa-list-alt"></i> <span id="bk-gb-title">Grub BTRFS</span></h2>
+                            <p id="bk-gb-intro">Grub BTRFS integrates your BTRFS snapshots directly into the GRUB boot menu. This lets you boot into a previous snapshot without even entering the desktop — the safest way to recover from a broken system update or bad configuration.</p>
+
+                            <h3 id="bk-gb-req-h">Requirements</h3>
+                            <p id="bk-gb-req-p">Grub BTRFS only works if your root partition (<code>/</code>) uses the <strong>BTRFS</strong> filesystem. If you installed Soplos with EXT4, this tool is not compatible.</p>
+
+                            <h3 id="bk-gb-inst-h">Installation</h3>
+                            <p id="bk-gb-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
+                            <div class="code-example">
+                                <h4 id="bk-gb-inst-term">Terminal</h4>
+                                <pre><code id="bk-gb-inst-code"># Install Grub BTRFS
+sudo apt install grub-btrfs
+
+# Regenerate GRUB configuration to detect existing snapshots
+sudo update-grub</code></pre>
+                            </div>
+
+                            <h3 id="bk-gb-how-h">How it works</h3>
+                            <ul>
+                                <li id="bk-gb-how-1">Every time Timeshift creates a BTRFS snapshot, Grub BTRFS automatically updates the GRUB menu with a new boot entry for that snapshot.</li>
+                                <li id="bk-gb-how-2">At boot, select <strong>BTRFS Snapshots</strong> in the GRUB menu to see the list of available snapshots.</li>
+                                <li id="bk-gb-how-3">Booting into a snapshot is read-only — the system runs from that state without modifying it. To permanently restore, use Timeshift from within the snapshot session.</li>
+                            </ul>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="bk-gb-tip"><strong>Recommended combo:</strong> Timeshift + Grub BTRFS together give you the best protection on BTRFS. Timeshift creates the snapshots, Grub BTRFS makes them bootable from GRUB without needing a live USB.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="btrfs-assistant" class="content-section">
+                            <h2><i class="fas fa-tools"></i> <span id="bk-ba-title">BTRFS Assistant</span></h2>
+                            <p id="bk-ba-intro">BTRFS Assistant is a graphical tool for managing BTRFS subvolumes, snapshots, and scrubs. It gives you a visual overview of your BTRFS filesystem and complements Timeshift for advanced snapshot management.</p>
+
+                            <h3 id="bk-ba-req-h">Requirements</h3>
+                            <p id="bk-ba-req-p">Requires a <strong>BTRFS</strong> root partition. Not compatible with EXT4 or other filesystems.</p>
+
+                            <h3 id="bk-ba-inst-h">Installation</h3>
+                            <p id="bk-ba-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
+                            <div class="code-example">
+                                <h4 id="bk-ba-inst-term">Terminal</h4>
+                                <pre><code id="bk-ba-inst-code"># Install BTRFS Assistant
+sudo apt install btrfs-assistant</code></pre>
+                            </div>
+
+                            <h3 id="bk-ba-feat-h">Features</h3>
+                            <ul>
+                                <li id="bk-ba-feat-1"><strong>Snapshot browser:</strong> View all BTRFS snapshots created by Timeshift or manually, with date, type and size.</li>
+                                <li id="bk-ba-feat-2"><strong>Subvolume manager:</strong> List, create and delete BTRFS subvolumes.</li>
+                                <li id="bk-ba-feat-3"><strong>Scrub:</strong> Run a filesystem integrity check to detect and fix silent data corruption.</li>
+                                <li id="bk-ba-feat-4"><strong>Balance:</strong> Rebalance BTRFS data across devices — useful after adding or removing drives in a multi-device setup.</li>
+                            </ul>
+                        </section>
+
                         <section id="deja-dup" class="content-section">
                             <h2><i class="fas fa-folder-open"></i> <span id="bk-dd-title">Data Backups: Deja Dup</span>
                             </h2>
@@ -238,9 +304,11 @@ sudo apt install timeshift</code></pre>
                                 simple, integrated, and supports encryption.</p>
 
                             <h3 id="bk-dd-inst-h">Installation</h3>
+                            <p id="bk-dd-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
                             <div class="code-example">
                                 <h4 id="bk-dd-inst-term">Terminal</h4>
-                                <pre><code>sudo apt install deja-dup</code></pre>
+                                <pre><code id="bk-dd-inst-code"># Install Deja Dup
+sudo apt install deja-dup</code></pre>
                             </div>
 
                             <h3 id="bk-dd-conf-h">Configuration</h3>
@@ -317,7 +385,7 @@ sudo apt install timeshift</code></pre>
                             <h3 id="bk-cld-use-h">Basic Usage</h3>
                             <div class="code-example">
                                 <h4 id="bk-cld-use-term">Terminal</h4>
-                                <pre><code># Sync local folder to remote
+                                <pre><code id="bk-cld-use-code"># Sync local folder to remote
 rclone sync /home/user/Documents remote:Documents
 
 # Copy file to remote

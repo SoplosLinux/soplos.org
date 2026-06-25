@@ -134,7 +134,10 @@
                             <li><a href="#customization" id="start-toc-8">Desktop Customization</a></li>
                             <li><a href="#multimedia" id="start-toc-9">Multimedia Support</a></li>
                             <li><a href="#security" id="start-toc-10">Security & Privacy</a></li>
-                            <li><a href="#next-steps" id="start-toc-11">Next Steps</a></li>
+                            <li><a href="#gaming" id="start-toc-11">Gaming</a></li>
+                            <li><a href="#shell-terminal" id="start-toc-12">Shell & Terminal</a></li>
+                            <li><a href="#zram" id="start-toc-13">zRAM</a></li>
+                            <li><a href="#next-steps" id="start-toc-14">Next Steps</a></li>
                         </ul>
                     </aside>
 
@@ -161,28 +164,32 @@
                             <div class="welcome-features">
                                 <div class="feature-grid">
                                     <div class="feature-item">
-                                        <h4><i class="fas fa-sync"></i> <span id="start-welcome-feat1-title">System
-                                                Updates</span></h4>
-                                        <p id="start-welcome-feat1-desc">Automatic check for the latest system updates
-                                            and security patches.</p>
+                                        <h4><i class="fas fa-box-open"></i> <span id="start-welcome-feat1-title">Software</span></h4>
+                                        <p id="start-welcome-feat1-desc">Manage all your app stores from one place: Synaptic, Flatpak, Snap, Bazaar, Soplos AppImage Manager and WebApp Manager.</p>
                                     </div>
                                     <div class="feature-item">
-                                        <h4><i class="fas fa-palette"></i> <span id="start-welcome-feat2-title">Theme
-                                                Selection</span></h4>
-                                        <p id="start-welcome-feat2-desc">Choose from pre-installed themes to personalize
-                                            your desktop appearance.</p>
+                                        <h4><i class="fas fa-microchip"></i> <span id="start-welcome-feat2-title">Drivers</span></h4>
+                                        <p id="start-welcome-feat2-desc">Scan your hardware and install the right driver: NVIDIA (610 to Nouveau), AMD with LACT, Wi-Fi repair and VM tools.</p>
                                     </div>
                                     <div class="feature-item">
-                                        <h4><i class="fas fa-download"></i> <span
-                                                id="start-welcome-feat3-title">Essential Software</span></h4>
-                                        <p id="start-welcome-feat3-desc">One-click installation of popular applications
-                                            and multimedia codecs.</p>
+                                        <h4><i class="fas fa-cogs"></i> <span id="start-welcome-feat3-title">Kernels</span></h4>
+                                        <p id="start-welcome-feat3-desc">Build a custom Soplos kernel from source with profiles for Gaming, Audio/Video, Minimal and more. Also install Liquorix or XanMod, manage CPU microcode and clean old kernels.</p>
                                     </div>
                                     <div class="feature-item">
-                                        <h4><i class="fas fa-cog"></i> <span id="start-welcome-feat4-title">System
-                                                Configuration</span></h4>
-                                        <p id="start-welcome-feat4-desc">Quick access to important system settings and
-                                            preferences.</p>
+                                        <h4><i class="fas fa-shield-alt"></i> <span id="start-welcome-feat4-title">Security</span></h4>
+                                        <p id="start-welcome-feat4-desc">Configure the firewall, set up Timeshift backups, install Keepass and enable other privacy tools.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-star"></i> <span id="start-welcome-feat5-title">Recommended</span></h4>
+                                        <p id="start-welcome-feat5-desc">Browse curated apps organized by category: browsers, communications, office, multimedia, development, graphics and gaming.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-palette"></i> <span id="start-welcome-feat6-title">Customization</span></h4>
+                                        <p id="start-welcome-feat6-desc">Switch desktop themes, configure cursors and icon packs, and manage GRUB and Plymouth appearance.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h4><i class="fas fa-gamepad"></i> <span id="start-welcome-feat7-title">Gaming</span></h4>
+                                        <p id="start-welcome-feat7-desc">Hidden tab — unlock it from the Welcome screen. Enables GameMode, MangoHud, GPU performance mode, disk I/O schedulers and more.</p>
                                     </div>
                                 </div>
                             </div>
@@ -249,21 +256,16 @@ sudo apt full-upgrade</code></pre>
                                 <h4><i class="fas fa-download"></i> <span id="start-soft-avail-title">Available Software
                                         Centers</span></h4>
                                 <ul>
-                                    <li id="start-soft-avail-1"><strong>Synaptic Package Manager:</strong> Advanced APT
-                                        package manager with GUI
-                                    </li>
-                                    <li id="start-soft-avail-2"><strong>Gdebi:</strong> Simple tool to install local
-                                        .deb packages</li>
-                                    <li id="start-soft-avail-3"><strong>GNOME Software:</strong> User-friendly software
-                                        store (Default in Boro)
-                                        with Flatpak and
-                                        Snap support</li>
-                                    <li id="start-soft-avail-4"><strong>Flatpak Support:</strong> Universal package
-                                        system with Plasma Discover
-                                        integration</li>
-                                    <li id="start-soft-avail-5"><strong>Snap Support:</strong> Ubuntu's universal
-                                        packages with Plasma Discover
-                                        support</li>
+                                    <li id="start-soft-avail-1"><strong>Synaptic:</strong> Advanced APT package manager with GUI — search, install, remove and manage repositories</li>
+                                    <li id="start-soft-avail-2"><strong>Gdebi:</strong> Install local .deb packages with automatic dependency resolution</li>
+                                    <li id="start-soft-avail-3"><strong>GNOME Software:</strong> User-friendly software store with Flatpak and Snap support (default in Boro)</li>
+                                    <li id="start-soft-avail-4"><strong>Snap Store:</strong> Official Snap application store</li>
+                                    <li id="start-soft-avail-5"><strong>Flatpak:</strong> Universal package system with Plasma Discover or GNOME Software integration</li>
+                                    <li id="start-soft-avail-6"><strong>Snap:</strong> Ubuntu universal packages with Plasma Discover or GNOME Software integration</li>
+                                    <li id="start-soft-avail-7"><strong>Bazaar:</strong> Modern Flatpak-based app store with a curated selection</li>
+                                    <li id="start-soft-avail-8"><strong>Soplos Repo Selector:</strong> Graphical tool to manage and switch APT repositories</li>
+                                    <li id="start-soft-avail-9"><strong>Soplos AppImage Manager:</strong> Manage AppImage applications — install, remove and update portable apps without system-wide installation</li>
+                                    <li id="start-soft-avail-10"><strong>Soplos WebApp Manager:</strong> Convert websites into desktop applications with their own window, icon and launcher entry</li>
                                 </ul>
 
                                 <h4><i class="fas fa-tools"></i> <span id="start-soft-maint-title">System
@@ -383,59 +385,52 @@ sudo apt full-upgrade</code></pre>
                                     into categories:</p>
 
                                 <div class="welcome-features">
+                                    <div class="feature-grid">
                                     <div class="feature-item">
                                         <h4><i class="fas fa-globe"></i> <span id="start-apps-cat1-title">Web
                                                 Browsers</span></h4>
-                                        <p id="start-apps-cat1-desc">Chrome, Chromium, Brave, LibreWolf, Falkon, Epiphany
-                                        </p>
+                                        <p id="start-apps-cat1-desc">Firefox, Chrome, Chromium, Brave, LibreWolf, Vivaldi, Opera, Zen Browser</p>
                                     </div>
 
                                     <div class="feature-item">
                                         <h4><i class="fas fa-comments"></i> <span
                                                 id="start-apps-cat2-title">Communications</span></h4>
-                                        <p id="start-apps-cat2-desc">Thunderbird, WhatsApp, Telegram, Discord, Signal,
-                                            Element</p>
+                                        <p id="start-apps-cat2-desc">Thunderbird, Discord, Telegram, Signal, Element, WhatsApp, Slack, Zoom</p>
                                     </div>
 
                                     <div class="feature-item">
                                         <h4><i class="fas fa-file-alt"></i> <span id="start-apps-cat3-title">Office
                                                 Suite</span></h4>
-                                        <p id="start-apps-cat3-desc">LibreOffice, OnlyOffice, WPS Office</p>
+                                        <p id="start-apps-cat3-desc">LibreOffice, OnlyOffice, WPS Office, Collabora Office, Calligra</p>
                                     </div>
 
                                     <div class="feature-item">
                                         <h4><i class="fas fa-film"></i> <span
                                                 id="start-apps-cat4-title">Multimedia</span>
                                         </h4>
-                                        <p id="start-apps-cat4-desc">VLC, MPV, Kodi, Audacity, LMMS, OBS Studio,
-                                            OpenShot,
-                                            Kdenlive, Shotcut</p>
+                                        <p id="start-apps-cat4-desc">VLC, MPV, Kodi, Audacity, LMMS, Mixxx, OBS Studio, OpenShot, Kdenlive, Spotify, DaVinci Resolve</p>
                                     </div>
 
                                     <div class="feature-item">
                                         <h4><i class="fas fa-code"></i> <span
                                                 id="start-apps-cat5-title">Development</span>
                                         </h4>
-                                        <p id="start-apps-cat5-desc">VS Code, Sublime Text, Bluefish, Geany, VSCodium,
-                                            Zed
-                                        </p>
+                                        <p id="start-apps-cat5-desc">VS Code, VSCodium, Sublime Text, Cursor, Pulsar, Geany, Bluefish, FileZilla, Postman</p>
                                     </div>
 
                                     <div class="feature-item">
                                         <h4><i class="fas fa-paint-brush"></i> <span
                                                 id="start-apps-cat6-title">Graphics &
                                                 Design</span></h4>
-                                        <p id="start-apps-cat6-desc">GIMP, Inkscape, Krita, Blender, darktable,
-                                            RawTherapee
-                                        </p>
+                                        <p id="start-apps-cat6-desc">GIMP, Inkscape, Krita, Blender, darktable, RapidRAW, RawTherapee, Hugin, Affinity Suite</p>
                                     </div>
 
                                     <div class="feature-item">
                                         <h4><i class="fas fa-gamepad"></i> <span
                                                 id="start-apps-cat7-title">Gaming</span>
                                         </h4>
-                                        <p id="start-apps-cat7-desc">Steam, Lutris, Heroic, Bottles, Wine, PlayOnLinux
-                                        </p>
+                                        <p id="start-apps-cat7-desc">Steam, Lutris, Bottles, Heroic Games Launcher, RetroArch, ES-DE, PPSSPP</p>
+                                    </div>
                                     </div>
                                 </div>
 
@@ -443,208 +438,117 @@ sudo apt full-upgrade</code></pre>
                                     <i class="fas fa-info-circle"></i>
                                     <div>
                                         <strong id="start-apps-flat-label">Flatpak Support:</strong> <span
-                                            id="start-apps-flat-text">Many applications in Soplos Welcome are
-                                            available
-                                            as Flatpak packages. The welcome app can automatically install Flatpak
-                                            support
-                                            if
-                                            needed.</span>
+                                            id="start-apps-flat-text">Many applications in Soplos Welcome are available as Flatpak packages. If Flatpak is not installed on your system, you must install it manually before those apps become available.</span>
                                     </div>
                                 </div>
 
                                 <h3><i class="fas fa-mouse-pointer"></i> <span id="start-apps-how-title">How to Install
                                         Applications</span></h3>
                                 <ol class="step-list">
-                                    <li id="start-apps-how-1">Open <strong>Soplos Welcome</strong> from the applications
-                                        menu</li>
-                                    <li id="start-apps-how-2">Navigate to the <strong>"Recommended"</strong> tab</li>
-                                    <li id="start-apps-how-3">Browse the application categories</li>
-                                    <li id="start-apps-how-4">Click <strong>"Install"</strong> on any application you
-                                        want
-                                    </li>
-                                    <li id="start-apps-how-5">The app will handle dependencies and package management
-                                        automatically</li>
+                                    <li id="start-apps-how-1">Open <strong>Soplos Welcome</strong> from the applications menu or run <code>soplos-welcome</code> in a terminal</li>
+                                    <li id="start-apps-how-2">Go to the <strong>"Recommended"</strong> tab — apps are grouped by category (Browsers, Communications, Office, Multimedia, Graphics, Developer, Gaming, Utilities)</li>
+                                    <li id="start-apps-how-3">Each app shows its name, description and current install status. A search bar at the top filters across all categories in real time</li>
+                                    <li id="start-apps-how-4">Click <strong>"Install"</strong> on any app. The tab handles APT packages, Flatpak and AppImage installations automatically — no terminal needed</li>
+                                    <li id="start-apps-how-5">Use <strong>"Install All"</strong> to batch-install everything in the current category with one click</li>
+                                    <li id="start-apps-how-6">Already installed apps show an <strong>"Uninstall"</strong> button instead. DaVinci Resolve shows a file picker to select the installer you downloaded from Blackmagic Design's site</li>
                                 </ol>
                         </section>
 
                         <!-- Driver Management -->
                         <section id="drivers" class="content-section">
-                            <h2><i class="fas fa-microchip"></i> <span id="start-drivers-title">Hardware
-                                    Drivers</span></h2>
+                            <h2><i class="fas fa-microchip"></i> <span id="start-drivers-title">Hardware Drivers</span></h2>
 
                             <div class="info-box info">
                                 <i class="fas fa-info-circle"></i>
                                 <div>
-                                    <strong id="start-drivers-info-label">Drivers Tab:</strong> <span
-                                        id="start-drivers-info-text">Soplos Welcome automatically detects your hardware
-                                        and installs the necessary proprietary drivers for optimal performance.</span>
+                                    <strong id="start-drivers-info-label">Scan Hardware:</strong> <span
+                                        id="start-drivers-info-text">Use the "Scan Hardware" button in the Drivers tab of Soplos Welcome to automatically detect your GPU, Wi-Fi, audio and other hardware and get a direct recommendation for which driver to install.</span>
                                 </div>
                             </div>
 
-                            <div class="driver-categories">
+                            <div class="settings-grid">
+                                <!-- NVIDIA -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-video"></i> <span id="start-drivers-nvidia-title">NVIDIA
-                                            Drivers</span></h4>
+                                    <h4><i class="fas fa-video"></i> <span id="start-drivers-nvidia-title">NVIDIA Drivers</span></h4>
                                     <ul>
-                                        <li id="start-drivers-nvidia-1"><strong>Latest Driver (Series 500+):</strong>
-                                            For
-                                            GeForce GTX 1600+, RTX 2000+,
-                                            RTX 3000+, RTX 4000+</li>
-                                        <li id="start-drivers-nvidia-2"><strong>Legacy 470:</strong> For GeForce GTX
-                                            900,
-                                            GTX 1000</li>
-                                        <li id="start-drivers-nvidia-3"><strong>Legacy 390:</strong> For GeForce GTX
-                                            600,
-                                            GTX 700, GTX 800</li>
-                                        <li id="start-drivers-nvidia-4"><strong>Legacy 340:</strong> For GeForce GTX
-                                            400,
-                                            GTX 500</li>
-                                        <li id="start-drivers-nvidia-5"><strong>Nouveau (Open Source):</strong> Free and
-                                            open source NVIDIA driver
-                                        </li>
-                                        <li id="start-drivers-nvidia-6"><strong>DaVinci Resolve Support:</strong> OpenCL
-                                            and video encoding support</li>
-                                        <li id="start-drivers-nvidia-7"><strong>Blender/CUDA Support:</strong> CUDA
-                                            toolkit
-                                            for rendering</li>
+                                        <li id="start-drivers-nvidia-1"><strong>610 (Latest):</strong> Blackwell and later — RTX 50/60 series</li>
+                                        <li id="start-drivers-nvidia-2"><strong>590 (Stable):</strong> Turing and later — GTX 1650/1660, RTX 20/30/40/50 series</li>
+                                        <li id="start-drivers-nvidia-3"><strong>580 (Production — RC1 default: 580.159.04):</strong> Universal Maxwell to Blackwell — GTX 900 through RTX 5000</li>
+                                        <li id="start-drivers-nvidia-4"><strong>550 (Repo):</strong> Maxwell to Ada Lovelace — GTX 900/10xx/16xx, RTX 20/30/40</li>
+                                        <li id="start-drivers-nvidia-5"><strong>470 (Legacy):</strong> Kepler to Ampere — GTX 600/700/900/10xx, RTX 20/30 (requires Sid)</li>
+                                        <li id="start-drivers-nvidia-6"><strong>390 (Legacy):</strong> Fermi and Kepler — GTX 400/500/600/700 (requires Sid)</li>
+                                        <li id="start-drivers-nvidia-7"><strong>340 (Legacy):</strong> Tesla — GeForce 8/9/100/200/300 series (requires Sid)</li>
+                                        <li id="start-drivers-nvidia-8"><strong>Nouveau (Open Source):</strong> Free open source NVIDIA driver</li>
+                                        <li id="start-drivers-nvidia-9"><strong>Uninstall NVIDIA Drivers:</strong> Removes all NVIDIA packages cleanly before switching to a different driver version</li>
                                     </ul>
                                 </div>
 
+                                <!-- NVIDIA Hybrid -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-microchip"></i> <span id="start-drivers-amd-title">AMD
-                                            Drivers</span></h4>
+                                    <h4><i class="fas fa-laptop"></i> <span id="start-drivers-hybrid-title">Hybrid Graphics (Laptops)</span></h4>
                                     <ul>
-                                        <li id="start-drivers-amd-1"><strong>AMD Radeon (AMDGPU):</strong> Modern open
-                                            source driver for RX 400+
-                                            series and APUs</li>
-                                        <li id="start-drivers-amd-2"><strong>Radeon (Legacy):</strong> Legacy open
-                                            source
-                                            driver for older cards
-                                        </li>
-                                        <li id="start-drivers-amd-3"><strong>Mesa & Vulkan:</strong> Complete graphics
-                                            stack
-                                            with firmware support
-                                        </li>
+                                        <li id="start-drivers-hybrid-1"><strong>PRIME Render Offload:</strong> Uses NVIDIA on demand while the integrated GPU handles the display. Recommended — saves battery. Creates <code>prime-run</code> to launch specific apps with the dedicated GPU</li>
+                                        <li id="start-drivers-hybrid-2"><strong>NVIDIA Primary:</strong> Forces NVIDIA as the primary GPU at all times. Maximum performance, requires restart</li>
+                                        <li id="start-drivers-hybrid-3"><strong>Detect Hybrid Setup:</strong> Detects whether the system has hybrid graphics</li>
                                     </ul>
                                 </div>
 
+                                <!-- NVIDIA Extras -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-desktop"></i> <span id="start-drivers-intel-title">Intel
-                                            Graphics</span></h4>
+                                    <h4><i class="fas fa-plus-circle"></i> <span id="start-drivers-nvidia-extras-title">NVIDIA Extras</span></h4>
                                     <ul>
-                                        <li id="start-drivers-intel-1"><strong>Intel i915:</strong> For Intel HD, UHD,
-                                            Iris,
-                                            and Iris Xe graphics
-                                        </li>
-                                        <li id="start-drivers-intel-2"><strong>Intel Xe:</strong> For Intel Arc discrete
-                                            graphics cards</li>
+                                        <li id="start-drivers-nvidia-extras-1"><strong>DaVinci Resolve Extras:</strong> OpenCL and CUDA support — libcuda1, nvidia-opencl-icd, libnvidia-encode1</li>
+                                        <li id="start-drivers-nvidia-extras-2"><strong>Blender CUDA Toolkit:</strong> nvidia-cuda-toolkit for GPU rendering</li>
                                     </ul>
                                 </div>
 
+                                <!-- AMD -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-wifi"></i> <span id="start-drivers-wifi-title">Wi-Fi
-                                            Drivers</span></h4>
+                                    <h4><i class="fas fa-microchip"></i> <span id="start-drivers-amd-title">AMD Graphics</span></h4>
                                     <ul>
-                                        <li id="start-drivers-wifi-1"><strong>MediaTek:</strong> MT76xx series (mt7601u,
-                                            mt76, mt7915e, mt7921u,
-                                            mt7925e, etc.)</li>
-                                        <li id="start-drivers-wifi-2"><strong>Intel WiFi:</strong> iwlwifi, iwldvm,
-                                            iwlmvm
-                                            for AC/AX series and legacy
-                                            chips</li>
-                                        <li id="start-drivers-wifi-3"><strong>Realtek:</strong> rtl8xxxu, rtl8192xx,
-                                            rtl8188ee, rtl8723xx, rtl8821ae
-                                            series</li>
-                                        <li id="start-drivers-wifi-4"><strong>Broadcom:</strong> brcmfmac, brcmsmac,
-                                            b43,
-                                            b43legacy for BCM43xx chips
-                                        </li>
-                                        <li id="start-drivers-wifi-5"><strong>Atheros:</strong> ath9k, ath10k, ath11k,
-                                            ath12k, carl9170 for all
-                                            Atheros series</li>
+                                        <li id="start-drivers-amd-1"><strong>AMD Radeon (Open Source):</strong> firmware-amd-graphics + Mesa + Vulkan drivers for RX 400+ series and APUs</li>
+                                        <li id="start-drivers-amd-2"><strong>LACT — GPU Control Center:</strong> Flatpak tool for overclocking, fan control and GPU monitoring for AMD and NVIDIA</li>
+                                        <li id="start-drivers-amd-3"><strong>nvtop:</strong> Terminal GPU monitor pre-installed in all three Soplos distributions — shows real-time usage, VRAM, temperatures and processes for NVIDIA, AMD and Intel GPUs</li>
                                     </ul>
                                 </div>
 
+                                <!-- Wi-Fi -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-ethernet"></i> <span id="start-drivers-eth-title">Ethernet
-                                            Drivers</span></h4>
+                                    <h4><i class="fas fa-wifi"></i> <span id="start-drivers-wifi-title">Wi-Fi Drivers</span></h4>
                                     <ul>
-                                        <li id="start-drivers-eth-1"><strong>Complete Support:</strong> All available
-                                            Ethernet drivers from kernel
-                                            modules</li>
-                                        <li id="start-drivers-eth-2"><strong>Realtek, Intel, Broadcom:</strong> Full
-                                            coverage for desktop and laptop
-                                            NICs</li>
+                                        <li id="start-drivers-wifi-1"><strong>Intel Wi-Fi:</strong> firmware-iwlwifi for Intel AC/AX series and legacy chips</li>
+                                        <li id="start-drivers-wifi-2"><strong>Realtek Wi-Fi:</strong> firmware-realtek for Realtek USB and PCIe adapters</li>
+                                        <li id="start-drivers-wifi-3"><strong>Broadcom Wi-Fi:</strong> firmware-b43-installer for BCM43xx chips</li>
+                                        <li id="start-drivers-wifi-4"><strong>Repair Wi-Fi:</strong> Reloads the kernel module and restarts NetworkManager — use this if Wi-Fi stopped working after a reboot</li>
                                     </ul>
                                 </div>
 
+                                <!-- Other -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-bluetooth"></i> <span id="start-drivers-bt-title">Bluetooth
-                                            Support</span></h4>
+                                    <h4><i class="fas fa-plug"></i> <span id="start-drivers-other-title">Other Drivers</span></h4>
                                     <ul>
-                                        <li id="start-drivers-bt-1"><strong>Universal Support:</strong> btusb, btmtk,
-                                            btbcm
-                                            for MediaTek and
-                                            Broadcom chips</li>
-                                        <li id="start-drivers-bt-2"><strong>Atheros Support:</strong> ath3k for Atheros
-                                            Bluetooth devices</li>
-                                        <li id="start-drivers-bt-3"><strong>UART Support:</strong> hci_uart for embedded
-                                            Bluetooth modules</li>
+                                        <li id="start-drivers-other-1"><strong>Printers:</strong> printer-driver-all for HP, Canon, Epson, Brother and major brands</li>
+                                        <li id="start-drivers-other-2"><strong>Bluetooth:</strong> bluetooth + bluez + bluez-tools + blueman for universal Bluetooth support</li>
                                     </ul>
                                 </div>
 
+                                <!-- VM Tools -->
                                 <div class="setting-card">
-                                    <h4><i class="fas fa-print"></i> <span id="start-drivers-print-title">Printer
-                                            Support</span></h4>
+                                    <h4><i class="fas fa-desktop"></i> <span id="start-drivers-vm-title">Virtual Machine Tools</span></h4>
                                     <ul>
-                                        <li id="start-drivers-print-1"><strong>Universal Drivers:</strong> Support for
-                                            HP,
-                                            Canon, Epson, Brother and
-                                            major brands</li>
+                                        <li id="start-drivers-vm-1"><strong>VMware Tools:</strong> open-vm-tools-desktop for VMware Workstation/Player integration</li>
+                                        <li id="start-drivers-vm-2"><strong>QEMU/KVM Tools:</strong> qemu-guest-agent + spice-vdagent + spice-webdavd for QEMU/KVM virtual machines</li>
+                                        <li id="start-drivers-vm-3"><strong>VirtualBox Guest Additions:</strong> VBoxLinuxAdditions for shared folders, clipboard and display resize</li>
                                     </ul>
                                 </div>
 
-                                <div class="setting-card">
-                                    <h4><i class="fas fa-hdd"></i> <span id="start-drivers-stor-title">Storage
-                                            Support</span></h4>
-                                    <ul>
-                                        <li id="start-drivers-stor-1"><strong>NVMe:</strong> Complete NVMe SSD support
-                                            with
-                                            nvme-core drivers</li>
-                                        <li id="start-drivers-stor-2"><strong>SATA/AHCI:</strong> Full SATA and AHCI
-                                            controller support</li>
-                                        <li id="start-drivers-stor-3"><strong>USB Storage:</strong> Universal USB mass
-                                            storage and UAS support</li>
-                                    </ul>
-                                </div>
+                            </div>
 
-                                <div class="setting-card">
-                                    <h4><i class="fas fa-desktop"></i> <span id="start-drivers-vm-title">Virtual Machine
-                                            Tools</span></h4>
-                                    <ul>
-                                        <li id="start-drivers-vm-1"><strong>VMware Tools:</strong> Open VM Tools Desktop
-                                            for
-                                            VMware
-                                            Workstation/Player integration</li>
-                                        <li id="start-drivers-vm-2"><strong>QEMU/KVM Agent:</strong> Guest agent and
-                                            tools
-                                            for QEMU/KVM virtual
-                                            machines</li>
-                                        <li id="start-drivers-vm-3"><strong>VirtualBox Guest Additions:</strong>
-                                            Complete
-                                            VirtualBox integration
-                                            with shared folders and clipboard</li>
-                                    </ul>
-                                </div>
-                                <div class="info-box success">
-                                    <i class="fas fa-search"></i>
-                                    <div>
-                                        <strong id="start-drivers-success-label">Maximum Hardware
-                                            Compatibility:</strong>
-                                        <span id="start-drivers-success-text">Soplos Linux includes an extensive driver
-                                            collection for maximum hardware compatibility across desktops, laptops, and
-                                            virtual machines.</span>
-                                    </div>
+                            <div class="info-box success">
+                                <i class="fas fa-search"></i>
+                                <div>
+                                    <strong id="start-drivers-success-label">Scan Hardware:</strong>
+                                    <span id="start-drivers-success-text">Use the "Scan Hardware" button first. It detects your GPU, Wi-Fi and other hardware and takes you directly to the recommended driver.</span>
                                 </div>
                             </div>
                         </section>
@@ -658,46 +562,65 @@ sudo apt full-upgrade</code></pre>
                                 <i class="fas fa-info-circle"></i>
                                 <div>
                                     <strong id="start-kernels-info-label">Kernels Tab:</strong> <span
-                                        id="start-kernels-info-text">Install, remove or clean alternative kernels
-                                        like
-                                        Liquorix and XanMod to improve system performance.</span>
+                                        id="start-kernels-info-text">Install and manage kernels directly from the Kernels tab in Soplos Welcome. Launch Soplos Kernel Installer to build a custom Soplos kernel compiled from source, or quickly install pre-built Soplos, Liquorix or XanMod kernels. Also manage CPU microcode and clean old kernels.</span>
                                 </div>
                             </div>
 
                             <div class="kernel-options">
-                                <h4><i class="fas fa-layer-group"></i> <span id="start-kernels-avail-title">Available
-                                        Kernels</span></h4>
+                                <h4><i class="fas fa-layer-group"></i> <span id="start-kernels-avail-title">Available Kernels</span></h4>
 
-                                <div class="kernel-types">
-                                    <div class="kernel-type">
-                                        <h5><i class="fas fa-rocket"></i> <span id="start-kernels-liq-title">Liquorix
-                                                Kernel</span></h5>
-                                        <p id="start-kernels-liq-desc">Kernel optimized for desktop and gaming, with low
-                                            latency and performance
-                                            improvements.</p>
+                                <!-- SKI — full width, protagonist -->
+                                <div class="setting-card" style="margin-bottom: 20px;">
+                                    <h4><i class="fas fa-star"></i> <span id="start-kernels-ski-title">Soplos Kernel Installer</span></h4>
+                                    <p id="start-kernels-ski-desc">The flagship kernel tool. Compiles a custom Soplos kernel from source with a profile chosen for your use case. Each profile sets the right config flags and suggested patches so you get a kernel tuned specifically for your machine — no guesswork. Launched from the Kernels tab in Soplos Welcome.</p>
+                                    <ul>
+                                        <li id="start-kernels-ski-p1"><strong>Gaming:</strong> HZ=1000, performance CPU governor, Huge Pages — suggested patches: BORE scheduler, NTSync</li>
+                                        <li id="start-kernels-ski-p2"><strong>Audio / Video:</strong> HZ=1000, low-latency settings for DAWs and video editing — suggested patch: RT (Real-Time)</li>
+                                        <li id="start-kernels-ski-p3"><strong>Minimal / Office:</strong> HZ=250, powersave governor, stripped of unused modules — ideal for older or low-power hardware</li>
+                                        <li id="start-kernels-ski-p4"><strong>Automatic:</strong> Detects your GPU, storage and VM hardware and enables only the needed drivers and optimizations</li>
+                                        <li id="start-kernels-ski-p5"><strong>Soplos Stock:</strong> Generic Soplos kernel with no profile modifications — compatible with all three distributions</li>
+                                        <li id="start-kernels-ski-p6"><strong>Custom:</strong> Full control — choose any combination of config options and patches yourself</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Soplos pre-built kernels from the Soplos repository -->
+                                <div class="setting-card" style="margin-bottom: 20px;">
+                                    <h4><i class="fas fa-download"></i> <span id="start-kernels-prebuilt-title">Soplos Pre-built Kernels</span></h4>
+                                    <p id="start-kernels-prebuilt-desc">The Soplos Kernel Installer also provides a second tab with pre-compiled kernels directly from the Soplos repository. No compilation required — install with one click and reboot.</p>
+                                    <ul>
+                                        <li id="start-kernels-prebuilt-1"><strong>Stock:</strong> Vanilla Soplos kernel with no patches — the safe default</li>
+                                        <li id="start-kernels-prebuilt-2"><strong>BORE:</strong> BORE scheduler patch — improves desktop responsiveness and reduces stutter</li>
+                                        <li id="start-kernels-prebuilt-3"><strong>Bore + NTSync:</strong> BORE scheduler combined with NTSync — recommended for gaming with Windows games via Proton</li>
+                                        <li id="start-kernels-prebuilt-4"><strong>NTSync:</strong> NTSync patch only — synchronization primitives for Proton/Wine compatibility</li>
+                                        <li id="start-kernels-prebuilt-5"><strong>RT (Real-Time):</strong> Real-time preemption patch — low-latency kernel for professional audio (DAWs, JACK)</li>
+                                        <li id="start-kernels-prebuilt-6"><strong>ZEN:</strong> ZEN kernel patches — general-purpose optimizations for interactive use</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Liquorix and XanMod — quick install alternatives, 2-column grid -->
+                                <div class="settings-grid">
+                                    <div class="setting-card">
+                                        <h4><i class="fas fa-rocket"></i> <span id="start-kernels-liq-title">Liquorix Kernel</span></h4>
+                                        <p id="start-kernels-liq-desc">A drop-in replacement for the default Debian kernel, built for interactive desktops and gaming. It uses a low-latency preemption model and scheduler tweaks that reduce input lag and stutter under load. If the system feels sluggish during heavy tasks or gaming, Liquorix is the first quick-install kernel to try. Compatible with all CPU architectures and NVIDIA drivers.</p>
                                     </div>
 
-                                    <div class="kernel-type">
-                                        <h5><i class="fas fa-tachometer-alt"></i> <span
-                                                id="start-kernels-xan-title">XanMod Kernel</span></h5>
-                                        <p id="start-kernels-xan-desc">Kernel optimized for low latency and high
-                                            performance, ideal for demanding
-                                            tasks.</p>
+                                    <div class="setting-card">
+                                        <h4><i class="fas fa-tachometer-alt"></i> <span id="start-kernels-xan-title">XanMod Kernel</span></h4>
+                                        <p id="start-kernels-xan-desc">A high-performance kernel focused on throughput and raw speed. Available in two variants: <strong>x64v3</strong> (recommended — for Intel Haswell 2013+ and AMD Zen+, uses AVX2 optimizations) and <strong>x64v4</strong> (for Intel 12th gen+ and AMD Zen 4+, adds AVX-512 support). Ideal for workstations, compiling, rendering and demanding tasks where maximum throughput matters more than latency.</p>
                                     </div>
                                 </div>
 
-                                <h4><i class="fas fa-broom"></i> <span id="start-kernels-maint-title">System
-                                        Maintenance</span></h4>
+                                <h4><i class="fas fa-microchip"></i> <span id="start-kernels-micro-title">CPU Microcode</span></h4>
                                 <ul>
-                                    <li id="start-kernels-maint-1"><strong>Clean Old Kernels:</strong> Remove old
-                                        kernels and free up disk space
-                                    </li>
-                                    <li id="start-kernels-maint-2"><strong>Update GRUB:</strong> Update GRUB
-                                        configuration after kernel changes
-                                    </li>
-                                    <li id="start-kernels-maint-3"><strong>Current Kernel Info:</strong> Display details
-                                        about the kernel in use
-                                    </li>
+                                    <li id="start-kernels-micro-1"><strong>Intel Microcode:</strong> intel-microcode — apply the latest Intel CPU firmware updates for security and stability fixes</li>
+                                    <li id="start-kernels-micro-2"><strong>AMD Microcode:</strong> amd64-microcode — apply the latest AMD CPU firmware updates for security and stability fixes</li>
+                                </ul>
+
+                                <h4><i class="fas fa-broom"></i> <span id="start-kernels-maint-title">System Maintenance</span></h4>
+                                <ul>
+                                    <li id="start-kernels-maint-1"><strong>Clean Old Kernels:</strong> Remove old kernels and free up disk space</li>
+                                    <li id="start-kernels-maint-2"><strong>Update GRUB:</strong> Update GRUB configuration after kernel changes</li>
+                                    <li id="start-kernels-maint-3"><strong>Current Kernel Info:</strong> Display details about the kernel in use</li>
                                 </ul>
 
                                 <div class="info-box warning">
@@ -721,13 +644,10 @@ sudo apt full-upgrade</code></pre>
                                     <h3><i class="fas fa-desktop"></i> <span id="start-custom-tyron-title">Tyron
                                             (XFCE)</span></h3>
                                     <ul>
-                                        <li id="start-custom-tyron-1">Right-click on desktop → Settings → Appearance
-                                        </li>
-                                        <li id="start-custom-tyron-2">Use <strong>Soplos Theme Manager</strong> for easy
-                                            theme switching</li>
-                                        <li id="start-custom-tyron-3">Use <strong>Soplos Docklike</strong> for a
-                                            macOS-style dock</li>
-                                        <li id="start-custom-tyron-4">Customize window decorations and icons</li>
+                                            <li id="start-custom-tyron-1">Right-click on desktop → Settings → Appearance</li>
+                                        <li id="start-custom-tyron-2">Use <strong>Soplos Theme Manager</strong> for easy theme switching, dock customization and icon management</li>
+                                        <li id="start-custom-tyron-3">Use <strong>Soplos GRUB Editor</strong> to change the GRUB theme, timeout, and default boot entry</li>
+                                        <li id="start-custom-tyron-4">Use <strong>Soplos Plymouth Manager</strong> to change the boot splash screen</li>
                                     </ul>
                                 </div>
 
@@ -737,8 +657,8 @@ sudo apt full-upgrade</code></pre>
                                     <ul>
                                         <li id="start-custom-tyson-1">Right-click on desktop → Configure Desktop</li>
                                         <li id="start-custom-tyson-2">System Settings → Appearance → Global Theme</li>
-                                        <li id="start-custom-tyson-3">Customize plasma themes, icons, and cursors</li>
-                                        <li id="start-custom-tyson-4">Configure desktop effects and animations</li>
+                                        <li id="start-custom-tyson-3">Use <strong>Soplos GRUB Editor</strong> to change the GRUB theme, timeout and default boot entry</li>
+                                        <li id="start-custom-tyson-4">Use <strong>Soplos Plymouth Manager</strong> to change the boot splash screen</li>
                                     </ul>
                                 </div>
 
@@ -747,14 +667,10 @@ sudo apt full-upgrade</code></pre>
                                             (GNOME)</span></h3>
                                     <ul>
                                         <li id="start-custom-boro-1">Settings → Appearance</li>
-                                        <li id="start-custom-boro-2">Use <strong>GNOME Tweaks</strong> (pre-installed)
-                                            for advanced customization
-                                        </li>
-                                        <li id="start-custom-boro-3">Use <strong>Extension Manager</strong>
-                                            (pre-installed) to manage extensions
-                                        </li>
-                                        <li id="start-custom-boro-4">Configure <strong>Dash to Panel</strong> settings
-                                        </li>
+                                        <li id="start-custom-boro-2">Use <strong>GNOME Tweaks</strong> (pre-installed) for advanced customization</li>
+                                        <li id="start-custom-boro-3">Use <strong>Extension Manager</strong> (pre-installed) to manage extensions</li>
+                                        <li id="start-custom-boro-4">Use <strong>Soplos GRUB Editor</strong> to change the GRUB theme, timeout and default boot entry</li>
+                                        <li id="start-custom-boro-5">Use <strong>Soplos Plymouth Manager</strong> to change the boot splash screen</li>
                                     </ul>
                                 </div>
                             </div>
@@ -779,26 +695,41 @@ sudo apt full-upgrade</code></pre>
                                 <h4><i class="fas fa-play-circle"></i> <span id="start-multi-incl-title">What's Already
                                         Included</span></h4>
                                 <ul>
-                                    <li id="start-multi-incl-1"><strong>Audio Codecs:</strong> MP3, AAC, FLAC, OGG,
-                                        Opus, and more</li>
-                                    <li id="start-multi-incl-2"><strong>Video Codecs:</strong> H.264, H.265, VP9, AV1,
-                                        and proprietary formats
-                                    </li>
-                                    <li id="start-multi-incl-3"><strong>Container Formats:</strong> MP4, MKV, AVI, WebM,
-                                        MOV, and others</li>
-                                    <li id="start-multi-incl-4"><strong>Streaming Support:</strong> Ready for Netflix,
-                                        YouTube, Spotify, and
-                                        other services</li>
+                                    <li id="start-multi-incl-1"><strong>Audio Codecs:</strong> MP3, AAC, FLAC, OGG, Opus, and more</li>
+                                    <li id="start-multi-incl-2"><strong>Video Codecs:</strong> H.264, H.265, VP9, AV1, and proprietary formats</li>
+                                    <li id="start-multi-incl-3"><strong>Container Formats:</strong> MP4, MKV, AVI, WebM, MOV, and others</li>
+                                    <li id="start-multi-incl-4"><strong>Streaming Support:</strong> Ready for Netflix, YouTube, Spotify, and other services</li>
+                                    <li id="start-multi-incl-5"><strong>Hardware Video Acceleration:</strong> VA-API and VDPAU support pre-configured for NVIDIA, AMD and Intel GPUs — video decoding and encoding offloaded to the GPU</li>
+                                    <li id="start-multi-incl-6"><strong>DRM Widevine:</strong> Pre-installed in Chromium-based browsers for protected streaming (Netflix, Disney+, Prime Video)</li>
                                 </ul>
+
+                                <h4><i class="fas fa-film"></i> <span id="start-multi-apps-title">Media Players &amp; Tools</span></h4>
+                                <div class="welcome-features">
+                                    <div class="feature-grid">
+                                        <div class="feature-item">
+                                            <h4><i class="fas fa-play"></i> <span id="start-multi-app1-title">VLC &amp; MPV</span></h4>
+                                            <p id="start-multi-app1-desc">Universal video players. VLC for convenience and format support; MPV for power users — minimal, GPU-accelerated, scriptable.</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <h4><i class="fas fa-music"></i> <span id="start-multi-app2-title">Audacity &amp; LMMS</span></h4>
+                                            <p id="start-multi-app2-desc">Audacity for audio recording and editing. LMMS for music production with MIDI support, synthesizers and effects.</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <h4><i class="fas fa-video"></i> <span id="start-multi-app3-title">OBS Studio</span></h4>
+                                            <p id="start-multi-app3-desc">Professional screen recording and live streaming with full Wayland support via the PipeWire screen capture backend.</p>
+                                        </div>
+                                        <div class="feature-item">
+                                            <h4><i class="fas fa-cut"></i> <span id="start-multi-app4-title">Kdenlive, OpenShot &amp; DaVinci Resolve</span></h4>
+                                            <p id="start-multi-app4-desc">Non-linear video editors. Kdenlive for professional multi-track editing with effects; OpenShot for quick and simple workflows; DaVinci Resolve for Hollywood-grade color grading and audio post-production.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="info-box info">
                                     <i class="fas fa-volume-up"></i>
                                     <div>
                                         <strong id="start-multi-pipe-label">PipeWire Audio:</strong> <span
-                                            id="start-multi-pipe-text">Soplos Linux uses PipeWire for optimal
-                                            audio
-                                            performance, low latency, and advanced routing capabilities out of the
-                                            box.</span>
+                                            id="start-multi-pipe-text">Soplos Linux uses PipeWire for optimal audio performance, low latency, and advanced routing capabilities out of the box. Compatible with PulseAudio and JACK applications simultaneously.</span>
                                     </div>
                                 </div>
                             </div>
@@ -810,38 +741,251 @@ sudo apt full-upgrade</code></pre>
                             </h2>
 
                             <div class="security-items">
+                                <!-- System Backups -->
                                 <div class="security-item">
-                                    <h4><i class="fas fa-lock"></i> <span id="start-sec-fw-title">Firewall</span></h4>
-                                    <p id="start-sec-fw-intro">Soplos Linux includes a pre-configured firewall with both
-                                        command-line and
-                                        graphical management:</p>
+                                    <h3><i class="fas fa-database"></i> <span id="start-sec-backup-title">System Backups</span></h3>
+                                    <div class="settings-grid">
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-history"></i> <span id="start-sec-timeshift-title">Timeshift</span></h4>
+                                            <ul>
+                                                <li id="start-sec-timeshift-1">Creates automatic snapshots of the system — not personal files</li>
+                                                <li id="start-sec-timeshift-2">Install from the Security tab in Soplos Welcome before making major changes</li>
+                                                <li id="start-sec-timeshift-3">Restore from GRUB if the system fails to boot (requires grub-btrfs on BTRFS)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-bolt"></i> <span id="start-sec-grub-btrfs-title">grub-btrfs</span></h4>
+                                            <p id="start-sec-grub-btrfs-desc">Available if your root partition uses BTRFS. Automatically adds Timeshift snapshots to the GRUB boot menu, so you can boot directly into a previous snapshot without booting the main system first.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-folder-open"></i> <span id="start-sec-dejadup-title">Deja Dup</span></h4>
+                                            <p id="start-sec-dejadup-desc">Simple backup tool for personal files with encryption support. Backs up your home directory to local storage, external drives or cloud services.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-layer-group"></i> <span id="start-sec-btrfs-assistant-title">BTRFS Assistant</span></h4>
+                                            <p id="start-sec-btrfs-assistant-desc">Graphical tool for advanced BTRFS subvolume and snapshot management. Only available on systems using BTRFS as the root filesystem.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <h5><i class="fas fa-desktop"></i> <span id="start-sec-gufw-title">Graphical
-                                            Interface (GUFW)</span></h5>
-                                    <p id="start-sec-gufw-desc">For users who prefer a GUI, Soplos Linux includes GUFW
-                                        (Graphical Uncomplicated
-                                        Firewall) - a user-friendly interface for managing firewall rules without
-                                        terminal commands.</p>
-
-                                    <h5><i class="fas fa-terminal"></i> <span id="start-sec-cli-title">Command
-                                            Line</span></h5>
-                                    <div class="code-example">
-                                        <pre><code># Check firewall status
+                                <!-- Firewall -->
+                                <div class="security-item">
+                                    <h3><i class="fas fa-shield-alt"></i> <span id="start-sec-fw-title">Firewall</span></h3>
+                                    <div class="settings-grid">
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-lock"></i> <span id="start-sec-gufw-title">GUFW</span></h4>
+                                            <p id="start-sec-gufw-desc">Graphical interface for the UFW firewall. Control which network connections are allowed or blocked. Install from the Security tab in Soplos Welcome.</p>
+                                            <h5><i class="fas fa-terminal"></i> <span id="start-sec-cli-title">Terminal</span></h5>
+                                            <div class="code-example">
+                                                <pre><code># Check firewall status
 sudo ufw status
 
 # Enable firewall
 sudo ufw enable</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-network-wired"></i> <span id="start-sec-portmaster-title">Portmaster</span></h4>
+                                            <p id="start-sec-portmaster-desc">Application-level firewall that monitors and controls network connections per application. More granular control than UFW. Note: running both UFW and Portmaster at the same time can cause conflicts — choose one.</p>
+                                        </div>
                                     </div>
                                 </div>
 
+                                <!-- VPN -->
                                 <div class="security-item">
-                                    <h4><i class="fas fa-key"></i> <span id="start-sec-pass-title">Password
-                                            Security</span></h4>
+                                    <h3><i class="fas fa-user-shield"></i> <span id="start-sec-vpn-title">VPN</span></h3>
+                                    <div class="settings-grid">
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-lock"></i> <span id="start-sec-protonvpn-title">Proton VPN</span></h4>
+                                            <p id="start-sec-protonvpn-desc">Secure VPN service from Proton. Free tier available with unlimited bandwidth. Install via Flatpak from the Security tab in Soplos Welcome.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-lock"></i> <span id="start-sec-surfshark-title">Surfshark</span></h4>
+                                            <p id="start-sec-surfshark-desc">Fast VPN with unlimited simultaneous devices. Install via Flatpak from the Security tab in Soplos Welcome.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-lock"></i> <span id="start-sec-mozilla-vpn-title">Mozilla VPN</span></h4>
+                                            <p id="start-sec-mozilla-vpn-desc">VPN from Mozilla focused on privacy and simplicity. Install via Flatpak from the Security tab in Soplos Welcome.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- System Cleaning -->
+                                <div class="security-item">
+                                    <h3><i class="fas fa-broom"></i> <span id="start-sec-clean-title">System Cleaning</span></h3>
+                                    <div class="settings-grid">
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-eraser"></i> <span id="start-sec-bleachbit-title">BleachBit</span></h4>
+                                            <p id="start-sec-bleachbit-desc">Free disk space and maintain privacy. Cleans cache, cookies, temporary files and browser data across many applications.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-tachometer-alt"></i> <span id="start-sec-syscleaner-title">Soplos Sys Cleaner</span></h4>
+                                            <p id="start-sec-syscleaner-desc">Soplos system optimizer. Scans APT cache, old kernels, Flatpak and Snap revisions, logs, temp files and unused locales — shows exactly how much space is recoverable per category before touching anything. Includes hardware detection and firmware management.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-chart-bar"></i> <span id="start-sec-stacer-title">Stacer</span></h4>
+                                            <p id="start-sec-stacer-desc">System optimizer with resource monitoring, startup application manager and cache cleaner in a modern interface. Installed as AppImage.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-wind"></i> <span id="start-sec-sweeper-title">Sweeper</span></h4>
+                                            <p id="start-sec-sweeper-desc">Simple KDE tool to clean temporary files and browsing history.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Antivirus -->
+                                <div class="security-item">
+                                    <h3><i class="fas fa-bug"></i> <span id="start-sec-av-title">Antivirus &amp; Malware</span></h3>
+                                    <div class="settings-grid">
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-shield-virus"></i> <span id="start-sec-clamtk-title">ClamTk</span></h4>
+                                            <p id="start-sec-clamtk-desc">Graphical interface for ClamAV. Scan files and directories for viruses and malware. Includes a virus definition updater.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-shield-virus"></i> <span id="start-sec-clamui-title">ClamUI</span></h4>
+                                            <p id="start-sec-clamui-desc">Modern Flatpak-based graphical interface for ClamAV antivirus.</p>
+                                        </div>
+                                        <div class="setting-card">
+                                            <h4><i class="fas fa-terminal"></i> <span id="start-sec-rkhunter-title">rkhunter</span></h4>
+                                            <p id="start-sec-rkhunter-desc">Command-line tool to detect rootkits, backdoors and system anomalies. Advanced tool for security auditing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Password Security -->
+                                <div class="security-item">
+                                    <h4><i class="fas fa-key"></i> <span id="start-sec-pass-title">Password Security</span></h4>
                                     <ul>
                                         <li id="start-sec-pass-1">Use strong, unique passwords</li>
                                         <li id="start-sec-pass-2">Enable automatic screen lock</li>
                                         <li id="start-sec-pass-3">Consider using a password manager</li>
                                     </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Gaming -->
+                        <section id="gaming" class="content-section">
+                            <h2><i class="fas fa-gamepad"></i> <span id="start-gaming-title">Gaming</span></h2>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="start-gaming-info-label">Gaming Tab:</strong> <span
+                                        id="start-gaming-info-text">Soplos Welcome has a dedicated Gaming tab with one-click tools to optimize your system for maximum gaming performance. Optimizations are applied persistently and survive reboots.</span>
+                                </div>
+                            </div>
+
+                            <div class="security-items">
+                                <div class="cards-list">
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-bolt"></i> <span id="start-gaming-gamemode-title">GameMode</span></h4>
+                                    <p id="start-gaming-gamemode-desc">Feral GameMode dynamically adjusts CPU governor, I/O priority and process priority when a game is running. Compatible with Steam, Lutris and native games.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-rocket"></i> <span id="start-gaming-perfmode-title">Performance Mode</span></h4>
+                                    <p id="start-gaming-perfmode-desc">Installs soplos-game-performance, which applies system-wide performance tweaks at boot. Disables power-saving features and maximizes CPU and GPU throughput.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-cog"></i> <span id="start-gaming-sysctl-title">Gaming Sysctl</span></h4>
+                                    <p id="start-gaming-sysctl-desc">Applies kernel parameters optimized for gaming: <code>vm.max_map_count=2147483642</code> (required for some Windows games via Proton), <code>vm.swappiness=10</code> and reduced system latency.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-video"></i> <span id="start-gaming-gpu-title">Optimize GPU</span></h4>
+                                    <p id="start-gaming-gpu-desc">Applies GPU-specific performance tweaks. For NVIDIA: forces performance power mode. For AMD: sets performance profile via AMDGPU. For Intel: enables GuC/HuC firmware loading. On hybrid laptops, configures PRIME Render Offload automatically.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-hdd"></i> <span id="start-gaming-diskio-title">Disk I/O</span></h4>
+                                    <p id="start-gaming-diskio-desc">Sets the optimal I/O scheduler for each disk type: BFQ for HDDs (better response time), mq-deadline for SSDs (low latency writes) and none for NVMe (hardware manages queuing internally).</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-chart-bar"></i> <span id="start-gaming-mangohud-title">MangoHud</span></h4>
+                                    <p id="start-gaming-mangohud-desc">In-game performance overlay showing FPS, frame time, GPU/CPU usage, temperatures and VRAM. Also installs GOverlay (GUI configurator), VulkanInfo, gamescope (Wayland compositor for games), DXVK and vkBasalt via Flatpak.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-microchip"></i> <span id="start-gaming-cpupower-title">CPU Power</span></h4>
+                                    <p id="start-gaming-cpupower-desc">Installs linux-cpupower and cpupower-gui to manage CPU frequency scaling governors. Set the performance governor for maximum throughput during gaming sessions.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-wrench"></i> <span id="start-gaming-lutris-title">Lutris Vulkan Fix</span></h4>
+                                    <p id="start-gaming-lutris-desc">Fixes Vulkan layer conflicts when using Lutris with MangoHud or other Vulkan layers. Ensures smooth compatibility between Lutris, DXVK and Vulkan overlays.</p>
+                                </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Shell & Terminal -->
+                        <section id="shell-terminal" class="content-section">
+                            <h2><i class="fas fa-terminal"></i> <span id="start-shell-title">Shell &amp; Terminal</span></h2>
+
+                            <div class="info-box success">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong id="start-shell-info-label">RC1 Defaults:</strong> <span
+                                        id="start-shell-info-text">Soplos Linux RC1 ships with zsh as the default shell and Ghostty as the default terminal across all three distributions.</span>
+                                </div>
+                            </div>
+
+                            <div class="security-items">
+                                <div class="cards-list">
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-terminal"></i> <span id="start-shell-zsh-title">zsh — Default Shell</span></h4>
+                                    <p id="start-shell-zsh-desc">Soplos Linux uses zsh as the default login shell. It ships with a curated <code>.zshrc</code> that includes useful aliases, autocompletion, command history improvements and syntax highlighting. You can open a terminal and start using it immediately — no configuration needed.</p>
+                                    <ul>
+                                        <li id="start-shell-zsh-1"><strong>Autocompletion:</strong> Press Tab to complete commands, file paths and arguments</li>
+                                        <li id="start-shell-zsh-2"><strong>Command history:</strong> Shared across terminal sessions with search via Ctrl+R</li>
+                                        <li id="start-shell-zsh-3"><strong>Aliases:</strong> Common shortcuts pre-configured in <code>~/.zshrc</code></li>
+                                    </ul>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-desktop"></i> <span id="start-shell-ghostty-title">Ghostty — Default Terminal</span></h4>
+                                    <p id="start-shell-ghostty-desc">Ghostty is a modern, GPU-accelerated terminal emulator built for performance and low latency. It uses native rendering on each platform, supports true color, ligatures and is highly configurable via a plain text config file at <code>~/.config/ghostty/config</code>.</p>
+                                    <ul>
+                                        <li id="start-shell-ghostty-1"><strong>GPU rendering:</strong> Hardware-accelerated text rendering with minimal CPU usage</li>
+                                        <li id="start-shell-ghostty-2"><strong>True color:</strong> Full 24-bit color support for modern terminal applications</li>
+                                        <li id="start-shell-ghostty-3"><strong>Fast startup:</strong> Opens instantly with no noticeable delay</li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- zRAM -->
+                        <section id="zram" class="content-section">
+                            <h2><i class="fas fa-memory"></i> <span id="start-zram-title">zRAM</span></h2>
+
+                            <div class="info-box success">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong id="start-zram-info-label">Active by Default:</strong> <span
+                                        id="start-zram-info-text">zRAM is enabled by default in Soplos Linux RC1 on all three distributions. No configuration is needed.</span>
+                                </div>
+                            </div>
+
+                            <div class="security-items">
+                                <div class="cards-list">
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-question-circle"></i> <span id="start-zram-what-title">What is zRAM</span></h4>
+                                    <p id="start-zram-what-desc">zRAM creates a compressed block device in RAM that the kernel uses as swap space. When physical memory runs low, instead of writing data to a slow disk, the kernel compresses and stores it in a dedicated region of RAM. Decompression is much faster than a disk read, so the system remains responsive under memory pressure.</p>
+                                </div>
+
+                                <div class="setting-card">
+                                    <h4><i class="fas fa-tachometer-alt"></i> <span id="start-zram-benefits-title">Performance Benefits</span></h4>
+                                    <ul>
+                                        <li id="start-zram-benefits-1"><strong>Faster swap:</strong> Compressed in-memory swap is orders of magnitude faster than swapping to an SSD or HDD</li>
+                                        <li id="start-zram-benefits-2"><strong>More effective RAM:</strong> Compression ratios of 2:1 to 3:1 are common, effectively increasing usable memory</li>
+                                        <li id="start-zram-benefits-3"><strong>Reduced disk wear:</strong> Swap activity goes to RAM instead of your SSD, extending its lifespan</li>
+                                        <li id="start-zram-benefits-4"><strong>Better responsiveness:</strong> Systems with 4 GB or 8 GB RAM benefit most — fewer application freezes under load</li>
+                                    </ul>
+                                </div>
                                 </div>
                             </div>
                         </section>

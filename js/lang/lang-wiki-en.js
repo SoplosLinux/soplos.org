@@ -116,18 +116,9 @@ Object.assign(window.LANG_EN, {
   "sec-auto-conf-file": "50unattended-upgrades",
   "sec-auto-conf-h": "Configuration",
   "sec-auto-conf-p": "Edit the configuration file for more control:",
-  "sec-auto-conf-rec": "Recommended settings:",
-  "sec-auto-conf-term": "Terminal",
-  "sec-auto-intro":
-    "Keeping the system up to date is one of the most important security measures:",
-  "sec-auto-mon-h": "Monitoring",
-  "sec-auto-mon-term": "Terminal",
-  "sec-auto-title": "Automatic Security Updates",
-  "sec-auto-un-h": "Unattended Upgrades",
-  "sec-auto-un-p": "Install and configure automatic security updates:",
-  "sec-auto-un-term": "Terminal",
-  "sec-auto-warn":
-    "<strong>Debian Testing Note:</strong> Since Soplos is based on Debian Testing, be careful with automatic updates. Security updates are important, but you may want to manually check larger updates.",
+  "sec-auto-title": "Automatic Updates",
+  "sec-auto-warn": "<strong>Not recommended on Soplos:</strong> Unattended automatic updates are not recommended on Soplos Linux. Since Soplos is based on Debian Testing, unattended upgrades can introduce unexpected changes, break packages, or cause conflicts without notice. Always review updates before applying them.",
+  "sec-auto-rec": "Keep your system secure by updating manually on a regular basis. See the <a href=\"/wiki/system/updates/\">System Updates guide</a> for the recommended workflow.",
   "sec-best-audit-1": "Is UFW enabled? <code>sudo ufw status</code>",
   "sec-best-audit-2": "Are the system updates current?",
   "sec-best-audit-3": "Are automatic updates configured?",
@@ -315,10 +306,10 @@ Object.assign(window.LANG_EN, {
   "sec-priv-dns-h": "DNS over HTTPS",
   "sec-priv-dns-p": "Encrypt DNS queries to prevent surveillance:",
   "sec-priv-dns-term": "Firefox",
-  "sec-priv-priv-1":
-    "<strong>Firefox:</strong> Preinstalled, good privacy settings",
-  "sec-priv-priv-2": "<strong>Brave:</strong> Built-in ad blocker",
-  "sec-priv-priv-3": "<strong>Tor Browser:</strong> Maximum anonymity",
+  "sec-priv-priv-1": "<strong>LibreWolf:</strong> Firefox fork hardened for privacy and security. No telemetry, stricter defaults than Firefox. Available as Flatpak (<code>io.gitlab.librewolf-community</code>).",
+  "sec-priv-priv-2": "<strong>Helium:</strong> Chromium-based browser focused on privacy, with YouTube integration. Installed via .deb from the official GitHub releases.",
+  "sec-priv-priv-3": "<strong>Brave Origin:</strong> privacy-focused browser by Brave with integrated AI assistant. Installed via the official Brave script.",
+  "sec-priv-priv-p": "All browsers below are available in Soplos Welcome → Software:",
   "sec-priv-priv-h": "Privacy-oriented Browsers",
   "sec-priv-priv-term": "Terminal",
   "sec-priv-title": "Privacy & Browser Security",
@@ -373,13 +364,67 @@ Object.assign(window.LANG_EN, {
   "sec-toc-14": "Best Practices",
   "sec-toc-2": "Security Fundamentals",
   "sec-toc-3": "Firewall (UFW)",
-  "sec-toc-4": "Graphical Firewall",
+  "sec-toc-4": "Graphical Firewall & Portmaster",
   "sec-toc-5": "User Security",
   "sec-toc-6": "SSH Security",
   "sec-toc-7": "Automatic Updates",
   "sec-toc-8": "System Hardening",
   "sec-toc-9": "Encryption",
+  "sec-toc-av": "Antivirus",
+  "sec-toc-backups": "System Backups",
+  "sec-toc-cleaning": "System Cleaning",
   "sec-toc-title": "Table of Contents",
+  "sec-toc-vpn": "VPN",
+  "sec-toc-welcome": "Soplos Welcome",
+  "sec-welcome-g1-desc": "Timeshift, Grub BTRFS, Deja Dup, BTRFS Assistant",
+  "sec-welcome-g1-label": "System Backups:",
+  "sec-welcome-g2-desc": "UFW (command-line) and GUFW (graphical interface)",
+  "sec-welcome-g2-label": "Firewall:",
+  "sec-welcome-g3-desc": "ProtonVPN, Surfshark, Mozilla VPN",
+  "sec-welcome-g3-label": "VPN:",
+  "sec-welcome-g4-desc": "BleachBit, Stacer, Soplos Sys Cleaner",
+  "sec-welcome-g4-label": "System Cleaning:",
+  "sec-welcome-g5-desc": "ClamTK, ClamUI, rkhunter",
+  "sec-welcome-g5-label": "Antivirus:",
+  "sec-welcome-open": "Open Soplos Welcome from the application menu and navigate to the <strong>Security</strong> tab. The following tool groups are available:",
+  "sec-welcome-p": "Soplos Welcome includes a dedicated <strong>Security</strong> tab that lets you install and manage the most important security tools with a single click. No terminal required.",
+  "sec-welcome-tip": "<strong>Recommended first step:</strong> after installing Soplos, open Welcome and install Timeshift from the Security tab before making any other changes to the system.",
+  "sec-welcome-title": "Soplos Welcome — Security Tab",
+  "sec-vpn-intro": "A VPN (Virtual Private Network) encrypts your internet traffic and hides your IP address. It is especially recommended when using public Wi-Fi or when you want to protect your privacy online.",
+  "sec-vpn-mozilla-p": "VPN service from Mozilla built on the WireGuard protocol. Subscription-based, no-logs policy, and backed by Mozilla's privacy standards. Installed as a Flatpak from Flathub.",
+  "sec-vpn-proton-p": "Privacy-focused VPN from the team behind ProtonMail. Offers a free tier with unlimited bandwidth, a strict no-logs policy, and open-source clients. Installed via the official ProtonVPN repository.",
+  "sec-vpn-surfshark-p": "Fast and affordable VPN with unlimited simultaneous connections, no-logs policy, and a built-in ad and malware blocker (CleanWeb). Installed via the official Surfshark repository.",
+  "sec-vpn-tip": "<strong>Free option:</strong> ProtonVPN offers a genuinely unlimited free tier — no data cap, no speed throttle after a threshold. It is the recommended starting point if you do not have a VPN subscription.",
+  "sec-vpn-title": "VPN",
+  "sec-vpn-welcome": "All three VPN clients below can be installed directly from <strong>Soplos Welcome → Security → VPN</strong>:",
+  "sec-av-clam-p": "ClamAV is the standard open-source antivirus engine for Linux. Soplos Welcome installs one of two graphical frontends:",
+  "sec-av-clamtk-li": "<strong>ClamTK:</strong> graphical interface for ClamAV (GTK). Installs <code>clamav</code> + <code>clamtk</code>, includes a virus definition updater. Available in all three distros.",
+  "sec-av-clamui-li": "<strong>ClamUI:</strong> modern Flatpak graphical interface for ClamAV (<code>io.github.linx_systems.ClamUI</code>). Alternative to ClamTK with a cleaner layout.",
+  "sec-av-intro": "Linux systems are significantly less susceptible to viruses than Windows, but antivirus software remains useful for scanning files shared with Windows users, checking email attachments, and auditing servers.",
+  "sec-av-tip": "Run <code>sudo freshclam</code> before each scan to ensure the virus database is up to date.",
+  "sec-av-title": "Antivirus",
+  "sec-backups-btrfs-assistant": "<strong>BTRFS Assistant</strong> — graphical tool for managing BTRFS subvolumes and snapshots. Requires BTRFS filesystem.",
+  "sec-backups-dejadup": "<strong>Deja Dup</strong> — simple personal file backups with encryption support, suitable for backing up home folder to an external drive or cloud storage.",
+  "sec-backups-grub-btrfs": "<strong>Grub BTRFS</strong> — integrates BTRFS snapshots into the GRUB boot menu, allowing you to boot directly into a snapshot without entering the desktop. Requires BTRFS filesystem.",
+  "sec-backups-intro": "Creating regular system snapshots is one of the most effective protection measures — it lets you restore a working state after a bad update, configuration mistake, or ransomware attack.",
+  "sec-backups-timeshift": "<strong>Timeshift</strong> — creates automatic BTRFS or rsync snapshots of the system. Strongly recommended as the first thing to install after a fresh install.",
+  "sec-backups-title": "System Backups",
+  "sec-backups-welcome": "All backup tools can be installed from <strong>Soplos Welcome → Security → System Backups</strong>. For detailed configuration see the <a href=\"../backup/\">Backup wiki page</a>.",
+  "sec-av-term": "Terminal",
+  "sec-portmaster-h": "Portmaster",
+  "sec-portmaster-term": "Terminal",
+  "sec-vpn-mozilla-term": "Terminal",
+  "sec-vpn-proton-term": "Terminal",
+  "sec-vpn-surfshark-term": "Terminal",
+  "sec-portmaster-install": "Install from <strong>Soplos Welcome → Security → Firewall → Portmaster</strong>, or manually:",
+  "sec-portmaster-p": "Portmaster is an application-level firewall that monitors and controls network connections per application. Unlike UFW which filters ports, Portmaster lets you allow or block internet access for each individual application.",
+  "sec-portmaster-warn": "Do not run Portmaster and UFW at the same time. Both control the netfilter firewall rules and will conflict. Choose one or the other.",
+  "sec-clean-bleachbit": "<strong>BleachBit</strong> — frees disk space and protects privacy. Cleans cache, cookies, temporary files, and browser data across many applications. <code>sudo apt install bleachbit</code>",
+  "sec-clean-intro": "Removing unnecessary files, logs, and package cache reduces disk usage and can eliminate traces of sensitive data. All tools below can be installed from <strong>Soplos Welcome → Security → System Cleaning</strong>.",
+  "sec-clean-soplos": "<strong>Soplos Sys Cleaner</strong> — Soplos-native system optimizer. Scans APT cache, old kernels, Flatpak revisions, logs, and unused locales, showing exactly how much space is recoverable per category before touching anything. Also includes hardware detection and firmware management.",
+  "sec-clean-stacer": "<strong>Stacer</strong> — modern system optimizer with resource monitoring, startup app manager, and cache cleaner. Installed as AppImage at <code>~/AppImages/Stacer.AppImage</code>.",
+  "sec-clean-sweeper": "<strong>Sweeper</strong> — simple KDE tool to clean temporary files and browsing history. <code>sudo apt install sweeper</code>",
+  "sec-clean-title": "System Cleaning",
   "sec-users-lock-h": "Account Locking",
   "sec-users-lock-p": "Protection against Brute-Force attacks:",
   "sec-users-lock-term": "Terminal",
@@ -519,6 +564,40 @@ Object.assign(window.LANG_EN, {
     "You can create snapshots manually or schedule them (hourly, daily, weekly, at boot).",
   "bk-ts-snap-tip":
     "<strong>Recommendation:</strong> Keep 5 daily and 1 weekly snapshot. This covers most issues without consuming too much space.",
+  "bk-toc-grub": "Grub BTRFS",
+  "bk-toc-btrfs-a": "BTRFS Assistant",
+  "bk-intro-welcome": "<strong>Soplos Welcome:</strong> Timeshift, Grub BTRFS, BTRFS Assistant and Deja Dup can all be installed directly from <strong>Soplos Welcome → Security → System Backups</strong>. No terminal required.",
+  "bk-ts-inst-p": "Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:",
+  "bk-ts-inst-code": "# Install Timeshift\nsudo apt install timeshift",
+  "bk-gb-title": "Grub BTRFS",
+  "bk-gb-intro": "Grub BTRFS integrates your BTRFS snapshots directly into the GRUB boot menu. This lets you boot into a previous snapshot without even entering the desktop — the safest way to recover from a broken system update or bad configuration.",
+  "bk-gb-req-h": "Requirements",
+  "bk-gb-req-p": "Grub BTRFS only works if your root partition (<code>/</code>) uses the <strong>BTRFS</strong> filesystem. If you installed Soplos with EXT4, this tool is not compatible.",
+  "bk-gb-inst-h": "Installation",
+  "bk-gb-inst-p": "Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:",
+  "bk-gb-inst-term": "Terminal",
+  "bk-gb-inst-code": "# Install Grub BTRFS\nsudo apt install grub-btrfs\n\n# Regenerate GRUB configuration to detect existing snapshots\nsudo update-grub",
+  "bk-gb-how-h": "How it works",
+  "bk-gb-how-1": "Every time Timeshift creates a BTRFS snapshot, Grub BTRFS automatically updates the GRUB menu with a new boot entry for that snapshot.",
+  "bk-gb-how-2": "At boot, select <strong>BTRFS Snapshots</strong> in the GRUB menu to see the list of available snapshots.",
+  "bk-gb-how-3": "Booting into a snapshot is read-only — the system runs from that state without modifying it. To permanently restore, use Timeshift from within the snapshot session.",
+  "bk-gb-tip": "<strong>Recommended combo:</strong> Timeshift + Grub BTRFS together give you the best protection on BTRFS. Timeshift creates the snapshots, Grub BTRFS makes them bootable from GRUB without needing a live USB.",
+  "bk-ba-title": "BTRFS Assistant",
+  "bk-ba-intro": "BTRFS Assistant is a graphical tool for managing BTRFS subvolumes, snapshots, and scrubs. It gives you a visual overview of your BTRFS filesystem and complements Timeshift for advanced snapshot management.",
+  "bk-ba-req-h": "Requirements",
+  "bk-ba-req-p": "Requires a <strong>BTRFS</strong> root partition. Not compatible with EXT4 or other filesystems.",
+  "bk-ba-inst-h": "Installation",
+  "bk-ba-inst-p": "Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:",
+  "bk-ba-inst-term": "Terminal",
+  "bk-ba-inst-code": "# Install BTRFS Assistant\nsudo apt install btrfs-assistant",
+  "bk-ba-feat-h": "Features",
+  "bk-ba-feat-1": "<strong>Snapshot browser:</strong> View all BTRFS snapshots created by Timeshift or manually, with date, type and size.",
+  "bk-ba-feat-2": "<strong>Subvolume manager:</strong> List, create and delete BTRFS subvolumes.",
+  "bk-ba-feat-3": "<strong>Scrub:</strong> Run a filesystem integrity check to detect and fix silent data corruption.",
+  "bk-ba-feat-4": "<strong>Balance:</strong> Rebalance BTRFS data across devices — useful after adding or removing drives in a multi-device setup.",
+  "bk-dd-inst-p": "Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:",
+  "bk-dd-inst-code": "# Install Deja Dup\nsudo apt install deja-dup",
+  "bk-cld-use-code": "# Sync local folder to remote\nrclone sync /home/user/Documents remote:Documents\n\n# Copy file to remote\nrclone copy file.txt remote:Backup/",
   "bk-ts-title": "System Backups: Timeshift",
 
   // Packages Wiki
@@ -530,6 +609,21 @@ Object.assign(window.LANG_EN, {
   "pkg-apt-list-term": "Terminal",
   "pkg-apt-rem-h": "Remove Packages",
   "pkg-apt-rem-term": "Terminal",
+  "pkg-ai-mgr-1": "<strong>Soplos AppImage Manager:</strong> Manage and integrate AppImages on your system. Automatically extracts metadata and icons, creates desktop entries, and checks for updates via GitHub, GitLab and Codeberg.",
+  "pkg-ai-mgr-2": "<strong>Gear Lever:</strong> Organize AppImages, generate desktop entries and app metadata, update apps in place and keep multiple versions side by side.",
+  "pkg-ai-mgr-h": "Graphical AppImage Managers",
+  "pkg-ai-mgr-p": "Two graphical tools are available from <strong>Soplos Welcome</strong> → Recommended tab to manage your AppImages:",
+  "pkg-ai-note": "<strong>When to use AppImage:</strong> Useful for applications not available in Debian repositories or Flathub, or when you need a specific version without affecting your system packages.",
+  "pkg-ai-run-h": "Running an AppImage",
+  "pkg-ai-run-p": 'Alternatively, right-click the file in your file manager, go to <strong>Properties</strong>, enable "Allow executing as program" and double-click to launch.',
+  "pkg-ai-run-term": "Terminal",
+  "pkg-ai-title": "AppImage",
+  "pkg-ai-what-1": "Single file — download and run directly",
+  "pkg-ai-what-2": "No installation or superuser privileges needed",
+  "pkg-ai-what-3": "Works across different Linux distributions",
+  "pkg-ai-what-4": "Easy to remove — just delete the file",
+  "pkg-ai-what-h": "What is AppImage?",
+  "pkg-ai-what-p": "<strong>AppImage</strong> is a portable application format. Each AppImage is a single self-contained file that runs without installation — no root access required and no system files modified.",
   "pkg-apt-srch-h": "Search & Information",
   "pkg-apt-srch-term": "Terminal",
   "pkg-apt-title": "APT Command-Line Basics",
@@ -576,6 +670,8 @@ Object.assign(window.LANG_EN, {
     "<strong>Default:</strong> Includes <strong>GNOME Software</strong> pre-installed.",
   "pkg-bor-2":
     "<strong>Configuration:</strong> Comes ready to use with support for <strong>Flatpak</strong> and the <strong>Flathub</strong> repository already configured, providing immediate access to thousands of applications.",
+  "pkg-bor-3": "<strong>Additional tools:</strong> Synaptic, Gdebi and Bazaar are also available from <em>Soplos Welcome</em>.",
+  "pkg-bor-4": "<strong>Repo Selector:</strong> <strong>Soplos Repo Selector</strong> is also available from <em>Soplos Welcome</em> to switch between Debian repository branches without editing configuration files.",
   "pkg-bor-p": "The Boro edition offers the full GNOME experience:",
   "pkg-bor-title": "Boro (GNOME Edition)",
   "pkg-deb-inst-h": "Install .deb Files",
@@ -631,8 +727,12 @@ Object.assign(window.LANG_EN, {
   "pkg-flat-inst-p":
     "You can easily install Flatpak via <strong>Soplos Welcome</strong> → Software tab or via the terminal:",
   "pkg-flat-inst-term": "Terminal",
+  "pkg-flat-mgr-1": "<strong>Bazaar:</strong> Lightweight Flatpak store. Browse, install and remove Flatpak apps from Flathub.",
+  "pkg-flat-mgr-2": "<strong>Warehouse:</strong> Advanced Flatpak manager. Manage installed apps, view and clean up unused runtimes, manage permissions and data.",
+  "pkg-flat-mgr-h": "Graphical Flatpak Managers",
+  "pkg-flat-mgr-p": "If you prefer a graphical interface to manage your Flatpak applications, two tools are available from <strong>Soplos Welcome</strong> → Recommended tab:",
   "pkg-flat-tip":
-    "<strong>Integration:</strong> Flatpak applications appear in your application menu alongside regular packages and can be managed via GNOME Software or KDE Discover.",
+    "<strong>Integration:</strong> Flatpak applications appear in your application menu alongside regular packages and can be managed graphically with <strong>GNOME Software</strong> (Boro), <strong>Discover</strong> (Tyson), <strong>Bazaar</strong> (all editions) or <strong>Warehouse</strong> (all editions, available from Soplos Welcome Recommended tab).",
   "pkg-flat-title": "Flatpak in Detail",
   "pkg-flat-what-1":
     "Latest versions of applications (Discord, Spotify, OBS, VS Code)",
@@ -686,7 +786,7 @@ Object.assign(window.LANG_EN, {
   "pkg-snap-vs-td1": "<strong>Repository</strong>",
   "pkg-snap-vs-td10": "<strong>Recommended for Soplos</strong>",
   "pkg-snap-vs-td11": "Yes",
-  "pkg-snap-vs-td12": "If necessary",
+  "pkg-snap-vs-td12": "Only if the app is not available on Flatpak",
   "pkg-snap-vs-td2": "Flathub (Community)",
   "pkg-snap-vs-td3": "Snap Store (Canonical)",
   "pkg-snap-vs-td4": "<strong>Desktop Integration</strong>",
@@ -704,6 +804,7 @@ Object.assign(window.LANG_EN, {
   "pkg-toc-1": "Introduction",
   "pkg-toc-10": "Flatpak",
   "pkg-toc-11": "Snap",
+  "pkg-toc-appimage": "AppImage",
   "pkg-toc-12": "Troubleshooting",
   "pkg-toc-13": "Best Practices",
   "pkg-toc-2": "Understanding Packages",
@@ -715,18 +816,23 @@ Object.assign(window.LANG_EN, {
   "pkg-toc-8": "Boro (GNOME)",
   "pkg-toc-9": "Repositories",
   "pkg-toc-title": "Table of Contents",
+  "pkg-trb-con-code": "# Remove the conflicting package first\nsudo apt remove conflicting-package\n\n# Then install the desired package\nsudo apt install desired-package",
   "pkg-trb-con-h": "Conflicting Processes",
   "pkg-trb-con-p":
     'If you get the "Could not get lock" error, another process is using APT:',
   "pkg-trb-con-term": "Terminal",
+  "pkg-trb-dep-code": "# Fix broken dependencies\nsudo apt --fix-broken install\n\n# If that fails, try:\nsudo dpkg --configure -a\nsudo apt update\nsudo apt install -f",
   "pkg-trb-dep-h": "Broken Dependencies",
   "pkg-trb-dep-term": "Terminal",
+  "pkg-trb-dsk-code": "# Check disk space\ndf -h\n\n# Clean package cache\nsudo apt clean\n\n# Remove old packages\nsudo apt autoremove\n\n# Remove old kernels (keep 2-3 latest)\nsudo apt autoremove --purge",
   "pkg-trb-dsk-h": "Disk Space Issues",
   "pkg-trb-dsk-term": "Terminal",
+  "pkg-trb-not-code": "# Update package lists first\nsudo apt update\n\n# Try searching for similar names\napt search package-keyword\n\n# Check if it's in Debian Testing\n# Visit: https://packages.debian.org/",
   "pkg-trb-not-h": "Package Not Found",
   "pkg-trb-not-p":
     "If APT cannot find a package, first try updating the lists:",
   "pkg-trb-not-term": "Terminal",
+  "pkg-trb-rep-code": "# If you get GPG errors, update keyrings:\nsudo apt update --allow-insecure-repositories\nsudo apt install debian-archive-keyring\n\n# Then update normally\nsudo apt update",
   "pkg-trb-rep-h": "Repository Errors",
   "pkg-trb-rep-term": "Terminal",
   "pkg-trb-title": "Troubleshooting Common Problems",
@@ -740,6 +846,8 @@ Object.assign(window.LANG_EN, {
     "<strong>Gdebi:</strong> For installing standalone `.deb` files.",
   "pkg-tyr-2-3":
     "<strong>GNOME Software:</strong> Full graphical store. When installed via Welcome, it is automatically configured with Flatpak and Snap plugins.",
+  "pkg-tyr-2-4": "<strong>Bazaar:</strong> Lightweight graphical Flatpak manager.",
+  "pkg-tyr-3": "<strong>Repo Selector:</strong> <strong>Soplos Repo Selector</strong> is also available from <em>Soplos Welcome</em> to switch between Debian repository branches without editing configuration files.",
   "pkg-tyr-p":
     "The Tyron edition follows a minimalist and lightweight philosophy:",
   "pkg-tyr-title": "Tyron (XFCE Edition)",
@@ -747,8 +855,8 @@ Object.assign(window.LANG_EN, {
     "<strong>Default:</strong> Comes with <strong>Discover</strong>, the KDE Software Center.",
   "pkg-tys-2":
     "<strong>Integration:</strong> If you choose to install Flatpak or Snap via <em>Soplos Welcome</em>, the system automatically installs the necessary plugins for Discover to manage these formats.",
-  "pkg-tys-3":
-    "<strong>Alternatives:</strong> As in Tyron, you can install Synaptic or Gdebi if you prefer more traditional tools.",
+  "pkg-tys-3": "<strong>Alternatives:</strong> As in Tyron, you can install Synaptic, Gdebi or Bazaar from <em>Soplos Welcome</em>.",
+  "pkg-tys-4": "<strong>Repo Selector:</strong> <strong>Soplos Repo Selector</strong> is also available from <em>Soplos Welcome</em> to switch between Debian repository branches without editing configuration files.",
   "pkg-tys-p":
     "The Tyson edition offers a modern experience, integrated with KDE:",
   "pkg-tys-title": "Tyson (Plasma Edition)",
@@ -779,17 +887,21 @@ Object.assign(window.LANG_EN, {
     "Under Linux, software is distributed as <strong>packages</strong> - compressed archives that contain:",
 
   // Updates Wiki
-  "upd-auto-desc":
-    "You can configure automatic security updates with unattended-upgrades:",
-  "upd-auto-recommend":
-    "For most users, manual updates are recommended to maintain better control over system changes.",
   "upd-auto-title": "Automatic Updates",
-  "upd-auto-warn":
-    "Debian Testing Note: Since Soplos is based on Debian Testing, automatic updates should be configured carefully. It is generally recommended to check updates manually to avoid potential issues with major changes.",
+  "upd-auto-warn-label": "Debian Testing — Manual Updates Recommended:",
+  "upd-auto-warn-text": "Soplos is based on Debian Testing, which receives frequent and sometimes large updates. Automatic updates are not recommended — a batch update arriving at the wrong moment can break packages or require intervention. Update manually so you stay in control of when and what changes.",
+  "upd-auto-recommend": "Check for updates at least once a week using Soplos Welcome or the terminal. That is enough to keep the system secure and current without risking unattended breakage.",
+  "upd-flat-title": "Flatpak Updates",
+  "upd-flat-desc": "Many applications in Soplos are installed as Flatpak packages. These are updated separately from APT and are not included in apt upgrade.",
+  "upd-flat-cmd-title": "Update Flatpak apps",
+  "upd-flat-cmd-label": "Terminal",
+  "upd-flat-note-text": "Run flatpak update after apt upgrade to keep all your applications up to date. Soplos Welcome (Software tab) also triggers Flatpak updates when you click Upgrade All. Alternatively, Bazaar and Warehouse can update Flatpak apps graphically from their interface.",
+  "upd-toc-flatpak": "Flatpak Updates",
   "upd-breadcrumb": "System Updates",
   "upd-freq-after-1": "Kernel updates: Restart if the kernel was updated",
   "upd-freq-after-2": "Service updates: Some services may need to be restarted",
-  "upd-freq-after-3": "Clean cache: Run sudo apt autoremove regularly",
+  "upd-freq-after-3": "Clean cache: Run sudo apt autoremove or use Soplos Sys Cleaner for a complete cleanup",
+  "upd-term-clean-tip-text": "Soplos Sys Cleaner handles this and more from a graphical interface — APT cache, old kernels, Flatpak revisions, logs and temp files. Install it from the Security tab in Soplos Welcome.",
   "upd-freq-after-title": "After Updating",
   "upd-freq-before-1": "Save work: Close important applications",
   "upd-freq-before-2": "Check disk space: Ensure at least 1-2 GB free",
@@ -939,9 +1051,10 @@ Object.assign(window.LANG_EN, {
   "inst-toc-3": "Download Soplos Linux",
   "inst-toc-4": "Create Installation Media",
   "inst-toc-5": "Boot & Installation Process",
-  "inst-toc-6": "Dual Boot Guide",
-  "inst-toc-7": "First Boot",
-  "inst-toc-8": "Troubleshooting",
+  "inst-toc-6": "Virtual Machines",
+  "inst-toc-7": "Dual Boot Guide",
+  "inst-toc-8": "First Boot",
+  "inst-toc-9": "Troubleshooting",
 
   // Before You Start
   "inst-before-title": "Before You Start",
@@ -979,13 +1092,15 @@ Object.assign(window.LANG_EN, {
 
   // Create Installation Media
   "inst-media-title": "Create Installation Media",
+  "inst-media-ventoy-label": "Ventoy (Recommended for multiboot):",
+  "inst-media-ventoy-text": "Ventoy lets you copy multiple ISO files to a single USB drive without reflashing. Just drop the ISO into the Ventoy USB and boot. Available for Windows and Linux.",
   "inst-media-tools-title": "Recommended Tools",
-  "inst-media-win-1": "<strong>Rufus</strong> (Recommended)",
-  "inst-media-win-2": "Balena Etcher",
-  "inst-media-win-3": "Windows Media Creation Tool",
-  "inst-media-lin-1": "<strong>dd command</strong> (Advanced Users)",
+  "inst-media-win-1": "<strong>Ventoy</strong> (Recommended, multiboot)",
+  "inst-media-win-2": "<strong>Rufus</strong>",
+  "inst-media-win-3": "Balena Etcher",
+  "inst-media-lin-1": "<strong>Ventoy</strong> (Recommended, multiboot)",
   "inst-media-lin-2": "Balena Etcher",
-  "inst-media-lin-3": "GNOME Disks",
+  "inst-media-lin-3": "<strong>dd command</strong> (Advanced Users)",
   "inst-media-mac-1": "<strong>Balena Etcher</strong> (Recommended)",
   "inst-media-mac-2": "dd command (Terminal)",
   "inst-media-mac-3": "UNetbootin",
@@ -1052,19 +1167,53 @@ Object.assign(window.LANG_EN, {
     "<strong>Manual partitioning:</strong> Advanced users can create custom partition layouts",
   "inst-boot-step7-3":
     "<strong>Alongside existing OS:</strong> Dual-boot configuration (if applicable)",
+  "inst-boot-step7-4":
+    "<strong>Encrypt disk:</strong> Full-disk encryption with LUKS — you will be prompted for a passphrase on every boot",
   "inst-boot-step8-title": "Installation progress",
   "inst-boot-step8-intro": "Soplos Linux installation is remarkably fast:",
   "inst-boot-step8-1":
     "<strong>Soplos Tyron (XFCE):</strong> Approximately 4 minutes",
   "inst-boot-step8-2":
     "<strong>Soplos Tyson (Plasma):</strong> Approximately 6-8 minutes",
+  "inst-boot-step8-3":
+    "<strong>Soplos Boro (GNOME):</strong> Approximately 5-6 minutes",
   "inst-boot-step8-note":
     "<em>These times are based on testing with 14-year-old hardware, so installation on modern systems will likely be even faster.</em>",
   "inst-boot-step8-info":
     "Installation speed may vary depending on hardware specifications, storage type (SSD vs HDD), and system load.",
+  "inst-boot-btrfs-label": "BTRFS recommended:",
+  "inst-boot-btrfs-text":
+    "When using manual partitioning, selecting BTRFS as the filesystem for the root partition enables Timeshift snapshots and grub-btrfs integration — allowing the system to boot directly from a snapshot via GRUB if something goes wrong.",
   "inst-boot-tools-label": "Additional Tools:",
   "inst-boot-tools-text":
     "Soplos Welcome Live also provides system recovery tools (ChRoot environment) and GParted integration for advanced users.",
+
+  // Virtual Machines
+  "inst-vm-title": "Virtual Machines",
+  "inst-vm-intro":
+    "Soplos Linux runs well in virtual machines for testing or development. Note that 3D acceleration and GPU-intensive applications will have limited performance inside a VM.",
+  "inst-vm-vbox-title": '<i class="fas fa-box"></i> VirtualBox',
+  "inst-vm-vbox-1": "RAM: 4 GB minimum, 8 GB recommended",
+  "inst-vm-vbox-2": "Video memory: 128 MB, enable 3D acceleration",
+  "inst-vm-vbox-3": "Storage: VDI dynamically allocated, 40 GB+",
+  "inst-vm-vbox-4":
+    "Install VirtualBox Guest Additions from Soplos Welcome (Drivers tab) for clipboard sharing and auto-resize",
+  "inst-vm-vmware-title": '<i class="fas fa-cloud"></i> VMware',
+  "inst-vm-vmware-1": "RAM: 4 GB minimum, 8 GB recommended",
+  "inst-vm-vmware-2": "Enable 3D graphics acceleration in VM settings",
+  "inst-vm-vmware-3":
+    "Install VMware Tools from Soplos Welcome (Drivers tab) for best integration",
+  "inst-vm-vmware-4": "Use UEFI firmware for best compatibility",
+  "inst-vm-qemu-title": '<i class="fas fa-terminal"></i> QEMU/KVM',
+  "inst-vm-qemu-1": "Recommended for advanced users on Linux hosts",
+  "inst-vm-qemu-2": "Use virtio drivers for best disk and network performance",
+  "inst-vm-qemu-3":
+    "Install QEMU Guest Agent from Soplos Welcome (Drivers tab)",
+  "inst-vm-qemu-4":
+    "Virt-Manager provides a graphical interface for VM management",
+  "inst-vm-warn-label": "3D Performance:",
+  "inst-vm-warn-text":
+    "GPU-accelerated applications, compositing effects, and gaming will have limited performance inside a virtual machine. For full performance install on real hardware.",
 
   // Dual Boot Guide
   "inst-dual-title": "Dual Boot Guide",
@@ -1093,23 +1242,50 @@ Object.assign(window.LANG_EN, {
   // First Boot
   "inst-first-title": "First Boot",
   "inst-first-intro":
-    "Congratulations! You have successfully installed Soplos Linux. Here's what happens next:",
+    "Congratulations. You have successfully installed Soplos Linux. Here is what to do next:",
   "inst-first-step1-title":
-    '<i class="fas fa-power-off"></i> Reboot your computer',
+    '<i class="fas fa-power-off"></i> Restart Your Computer',
   "inst-first-step1-desc":
-    "Remove the USB stick and reboot your computer. Soplos Linux should boot automatically.",
+    "Remove the USB drive and restart your computer. Soplos Linux should boot automatically.",
   "inst-first-step2-title": '<i class="fas fa-user"></i> Log in',
   "inst-first-step2-desc":
     "Use the username and password you created during installation to log in.",
-  "inst-first-step3-title": '<i class="fas fa-magic"></i> Welcome screen',
+  "inst-first-step3-title": '<i class="fas fa-magic"></i> Welcome Screen',
   "inst-first-step3-desc":
-    "The Soplos Welcome application will guide you through initial setup and customization.",
-  "inst-first-step4-title": '<i class="fas fa-sync"></i> System updates',
+    "The Soplos Welcome application opens automatically on first boot and guides you through initial setup.",
+  "inst-first-step4-title": '<i class="fas fa-sync"></i> System Updates',
   "inst-first-step4-desc":
-    "Check for and install system updates to ensure you have the latest features and security patches.",
-  "inst-first-success-label": "Success!",
+    'Run system updates before anything else. Open a terminal and run <code>sudo apt update && sudo apt upgrade</code>, or use the Update button in Soplos Welcome.',
+  "inst-first-step5-title": '<i class="fas fa-shield-alt"></i> Install Timeshift First',
+  "inst-first-step5-desc":
+    "Before making any major changes, go to the <strong>Security</strong> tab in Soplos Welcome and install Timeshift. This creates system snapshots so you can roll back if something goes wrong.",
+  "inst-first-welcome-title": "Soplos Welcome Tabs",
+  "inst-first-welcome-intro":
+    "Soplos Welcome organizes everything you need into dedicated tabs:",
+  "inst-first-welcome-1":
+    "<strong>Software</strong> — Browse and install applications by category: Browsers, Communication, Development, Graphics, Multimedia, Office, Gaming, Utilities",
+  "inst-first-welcome-2":
+    "<strong>Recommended</strong> — Curated app selections tailored for your desktop environment",
+  "inst-first-welcome-3":
+    "<strong>Drivers</strong> — Hardware detection and driver installation for NVIDIA, AMD, Wi-Fi, Bluetooth, printers and VM tools",
+  "inst-first-welcome-4":
+    "<strong>Kernels</strong> — Install and manage alternative kernels via soplos-kernel-installer",
+  "inst-first-welcome-5":
+    "<strong>Security</strong> — Timeshift snapshots, grub-btrfs and BTRFS Assistant for system backup and recovery",
+  "inst-first-welcome-6":
+    "<strong>Customization</strong> — soplos-theme-manager, soplos-grub-editor and soplos-plymouth-manager",
+  "inst-first-welcome-7":
+    "<strong>Gaming</strong> — GameMode, Performance Mode, MangoHud, GPU optimization and CPU power profiles",
+  "inst-first-rc1-title": "New in RC1",
+  "inst-first-rc1-1":
+    '<strong>zsh as default shell</strong> — Soplos ships a custom <code>.zshrc</code> with useful aliases, autocompletion and a clean prompt. Your existing bash knowledge applies; syntax is nearly identical for everyday use.',
+  "inst-first-rc1-2":
+    "<strong>Ghostty as default terminal</strong> — A GPU-accelerated terminal with excellent performance and a minimal interface. Launch it from the taskbar or with your keyboard shortcut.",
+  "inst-first-rc1-3":
+    "<strong>zRAM enabled by default</strong> — Compressed swap in RAM. This improves responsiveness on systems with limited memory by reducing pressure before the system has to use disk swap.",
+  "inst-first-success-label": "All set.",
   "inst-first-success-text":
-    'You are now running Soplos Linux. Check out our <a href="../start/">First Steps Guide</a> to get started tips.',
+    'Check out the <a href="../start/">First Steps guide</a> for more tips on getting the most out of Soplos Linux.',
 
   // Troubleshooting
   "inst-trouble-title": "Troubleshooting",
@@ -1134,6 +1310,27 @@ Object.assign(window.LANG_EN, {
   "inst-trouble-stor-2": "Check if hard drive is healthy",
   "inst-trouble-stor-3": "Try manual partitioning",
   "inst-trouble-stor-4": "Disable fast startup in Windows (dual boot)",
+  "inst-trouble-nvidia-title": '<i class="fas fa-tv"></i> Black Screen (NVIDIA)',
+  "inst-trouble-nvidia-1": "Boot in recovery mode or safe graphics mode from GRUB",
+  "inst-trouble-nvidia-2": "Open Soplos Welcome and go to the Drivers tab",
+  "inst-trouble-nvidia-3":
+    'Use "Scan Hardware" to detect your GPU and install the recommended NVIDIA driver',
+  "inst-trouble-nvidia-4": "Reboot after driver installation",
+  "inst-trouble-wifi-title": '<i class="fas fa-wifi"></i> Wi-Fi Not Detected',
+  "inst-trouble-wifi-1": "Connect via Ethernet temporarily",
+  "inst-trouble-wifi-2": "Open Soplos Welcome, go to the Drivers tab",
+  "inst-trouble-wifi-3":
+    'Use "Scan Hardware" or manually install your Wi-Fi firmware (Intel, Realtek or Broadcom)',
+  "inst-trouble-wifi-4":
+    'Use "Repair Wi-Fi" if the adapter was working before but stopped after a reboot',
+  "inst-trouble-grub-title": '<i class="fas fa-cogs"></i> GRUB Not Showing (Dual Boot)',
+  "inst-trouble-grub-1": "Boot from the Soplos Linux USB",
+  "inst-trouble-grub-2":
+    "Open Soplos Welcome Live and use the ChRoot recovery tool",
+  "inst-trouble-grub-3":
+    "From the chroot environment, run <code>grub-install</code> and <code>update-grub</code>",
+  "inst-trouble-grub-4":
+    "On UEFI systems, check that the Soplos entry exists in your firmware boot order",
   "inst-trouble-help-title": '<i class="fas fa-life-ring"></i> Need More Help?',
   "inst-trouble-help-intro": "If you have problems not covered here:",
   "inst-trouble-help-1":
@@ -1168,7 +1365,10 @@ Object.assign(window.LANG_EN, {
   "start-toc-8": "Desktop Customization",
   "start-toc-9": "Multimedia Support",
   "start-toc-10": "Security & Privacy",
-  "start-toc-11": "Next Steps",
+  "start-toc-11": "Gaming",
+  "start-toc-12": "Shell & Terminal",
+  "start-toc-13": "zRAM",
+  "start-toc-14": "Next Steps",
 
   // Welcome App
   "start-welcome-title": "Soplos Welcome Application",
@@ -1177,18 +1377,27 @@ Object.assign(window.LANG_EN, {
     "The Soplos Welcome application should start automatically on your first login. This is your starting point!",
   "start-welcome-intro":
     "The Soplos Welcome application was designed to guide you through the essential first steps after installation.",
-  "start-welcome-feat1-title": "System Updates",
+  "start-welcome-feat1-title": "Software",
   "start-welcome-feat1-desc":
-    "Automatic check for the latest system updates and security patches.",
-  "start-welcome-feat2-title": "Theme Selection",
+    "Manage all your app stores from one place: Synaptic, Flatpak, Snap, Bazaar, Soplos AppImage Manager and WebApp Manager.",
+  "start-welcome-feat2-title": "Drivers",
   "start-welcome-feat2-desc":
-    "Choose from pre-installed themes to customize your desktop appearance.",
-  "start-welcome-feat3-title": "Essential Software",
+    "Scan your hardware and install the right driver: NVIDIA (610 to Nouveau), AMD with LACT, Wi-Fi repair and VM tools.",
+  "start-welcome-feat3-title": "Kernels",
   "start-welcome-feat3-desc":
-    "One-click installation of popular applications and multimedia codecs.",
-  "start-welcome-feat4-title": "System Configuration",
+    "Build a custom Soplos kernel from source with profiles for Gaming, Audio/Video, Minimal and more. Also install Liquorix or XanMod, manage CPU microcode and clean old kernels.",
+  "start-welcome-feat4-title": "Security",
   "start-welcome-feat4-desc":
-    "Quick access to important system settings and preferences.",
+    "Configure the firewall, set up Timeshift backups, install Keepass and enable other privacy tools.",
+  "start-welcome-feat5-title": "Recommended",
+  "start-welcome-feat5-desc":
+    "Browse curated apps organized by category: browsers, communications, office, multimedia, development, graphics and gaming.",
+  "start-welcome-feat6-title": "Customization",
+  "start-welcome-feat6-desc":
+    "Switch desktop themes, configure cursors and icon packs, and manage GRUB and Plymouth appearance.",
+  "start-welcome-feat7-title": "Gaming",
+  "start-welcome-feat7-desc":
+    "Hidden tab — unlock it from the Welcome screen. Enables GameMode, MangoHud, GPU performance mode, disk I/O schedulers and more.",
 
   // System Updates
   "start-updates-title": "System Updates",
@@ -1215,15 +1424,25 @@ Object.assign(window.LANG_EN, {
     "The Software tab in Soplos Welcome allows installation and management of various software centers and package managers:",
   "start-soft-avail-title": "Available Software Centers",
   "start-soft-avail-1":
-    "<strong>Synaptic Package Manager:</strong> Advanced APT package management with GUI",
+    "<strong>Synaptic:</strong> Advanced APT package manager with GUI — search, install, remove and manage repositories",
   "start-soft-avail-2":
-    "<strong>Gdebi:</strong> Simple tool for installing local .deb packages",
+    "<strong>Gdebi:</strong> Install local .deb packages with automatic dependency resolution",
   "start-soft-avail-3":
-    "<strong>GNOME Software:</strong> User-friendly software store (default in Boro) with Flatpak and Snap support",
+    "<strong>GNOME Software:</strong> User-friendly software store with Flatpak and Snap support (default in Boro)",
   "start-soft-avail-4":
-    "<strong>Flatpak Support:</strong> Universal package system with Plasma Discover integration",
+    "<strong>Snap Store:</strong> Official Snap application store",
   "start-soft-avail-5":
-    "<strong>Snap Support:</strong> Ubuntu's universal packages with Plasma Discover support",
+    "<strong>Flatpak:</strong> Universal package system with Plasma Discover or GNOME Software integration",
+  "start-soft-avail-6":
+    "<strong>Snap:</strong> Ubuntu universal packages with Plasma Discover or GNOME Software integration",
+  "start-soft-avail-7":
+    "<strong>Bazaar:</strong> Modern Flatpak-based app store with a curated selection",
+  "start-soft-avail-8":
+    "<strong>Soplos Repo Selector:</strong> Graphical tool to manage and switch APT repositories",
+  "start-soft-avail-9":
+    "<strong>Soplos AppImage Manager:</strong> Manage AppImage applications — install, remove and update portable apps without system-wide installation",
+  "start-soft-avail-10":
+    "<strong>Soplos WebApp Manager:</strong> Convert websites into desktop applications with their own window, icon and launcher entry",
   "start-soft-maint-title": "System Maintenance",
   "start-soft-maint-1":
     "<strong>Update Repositories:</strong> Refresh package lists from all configured sources",
@@ -1280,124 +1499,142 @@ Object.assign(window.LANG_EN, {
     'Soplos Welcome includes a comprehensive "Recommended" tab with curated software, organized into categories:',
   "start-apps-cat1-title": "Web Browsers",
   "start-apps-cat1-desc":
-    "Chrome, Chromium, Brave, LibreWolf, Falkon, Epiphany",
+    "Firefox, Chrome, Chromium, Brave, LibreWolf, Vivaldi, Opera, Zen Browser",
   "start-apps-cat2-title": "Communication",
   "start-apps-cat2-desc":
-    "Thunderbird, WhatsApp, Telegram, Discord, Signal, Element",
+    "Thunderbird, Discord, Telegram, Signal, Element, WhatsApp, Slack, Zoom",
   "start-apps-cat3-title": "Office Suite",
-  "start-apps-cat3-desc": "LibreOffice, OnlyOffice, WPS Office",
+  "start-apps-cat3-desc": "LibreOffice, OnlyOffice, WPS Office, Collabora Office, Calligra",
   "start-apps-cat4-title": "Multimedia",
   "start-apps-cat4-desc":
-    "VLC, MPV, Kodi, Audacity, LMMS, OBS Studio, OpenShot, Kdenlive, Shotcut",
+    "VLC, MPV, Kodi, Audacity, LMMS, Mixxx, OBS Studio, OpenShot, Kdenlive, Spotify, DaVinci Resolve",
   "start-apps-cat5-title": "Development",
   "start-apps-cat5-desc":
-    "VS Code, Sublime Text, Bluefish, Geany, VSCodium, Zed",
+    "VS Code, VSCodium, Sublime Text, Cursor, Pulsar, Geany, Bluefish, FileZilla, Postman",
   "start-apps-cat6-title": "Graphics & Design",
   "start-apps-cat6-desc":
-    "GIMP, Inkscape, Krita, Blender, darktable, RawTherapee",
+    "GIMP, Inkscape, Krita, Blender, darktable, RapidRAW, RawTherapee, Hugin, Affinity Suite",
   "start-apps-cat7-title": "Gaming",
-  "start-apps-cat7-desc": "Steam, Lutris, Heroic, Bottles, Wine, PlayOnLinux",
+  "start-apps-cat7-desc": "Steam, Lutris, Bottles, Heroic Games Launcher, RetroArch, ES-DE, PPSSPP",
   "start-apps-flat-label": "Flatpak Support:",
   "start-apps-flat-text":
-    "Many applications in Soplos Welcome are available as Flatpak packages. The Welcome app can automatically install Flatpak support when needed.",
+    "Many applications in Soplos Welcome are available as Flatpak packages. If Flatpak is not installed on your system, you must install it manually before those apps become available.",
   "start-apps-how-title": "How to Install Applications",
   "start-apps-how-1":
-    "Open <strong>Soplos Welcome</strong> from the application menu",
-  "start-apps-how-2": 'Navigate to the <strong>"Recommended"</strong> tab',
-  "start-apps-how-3": "Browse application categories",
+    "Open <strong>Soplos Welcome</strong> from the applications menu or run <code>soplos-welcome</code> in a terminal",
+  "start-apps-how-2":
+    'Go to the <strong>"Recommended"</strong> tab — apps are grouped by category (Browsers, Communications, Office, Multimedia, Graphics, Developer, Gaming, Utilities)',
+  "start-apps-how-3":
+    "Each app shows its name, description and current install status. A search bar at the top filters across all categories in real time",
   "start-apps-how-4":
-    'Click <strong>"Install"</strong> on any desired application',
+    'Click <strong>"Install"</strong> on any app. The tab handles APT packages, Flatpak and AppImage installations automatically — no terminal needed',
   "start-apps-how-5":
-    "The app automatically handles dependencies and package management",
+    'Use <strong>"Install All"</strong> to batch-install everything in the current category with one click',
+  "start-apps-how-6":
+    'Already installed apps show an <strong>"Uninstall"</strong> button instead. DaVinci Resolve shows a file picker to select the installer you downloaded from Blackmagic Design\'s site',
 
   // Drivers
   "start-drivers-title": "Hardware Drivers",
-  "start-drivers-info-label": "Drivers Tab:",
+  "start-drivers-info-label": "Scan Hardware:",
   "start-drivers-info-text":
-    "Soplos Welcome automatically detects your hardware and installs the necessary proprietary drivers for optimal performance.",
+    "Use the \"Scan Hardware\" button in the Drivers tab of Soplos Welcome to automatically detect your GPU, Wi-Fi, audio and other hardware and get a direct recommendation for which driver to install.",
   "start-drivers-nvidia-title": "NVIDIA Drivers",
   "start-drivers-nvidia-1":
-    "<strong>Latest Driver (500+ series):</strong> For GeForce GTX 1600+, RTX 2000+, RTX 3000+, RTX 4000+",
+    "<strong>610 (Latest):</strong> Blackwell and later — RTX 50/60 series",
   "start-drivers-nvidia-2":
-    "<strong>Legacy 470:</strong> For GeForce GTX 900, GTX 1000",
+    "<strong>590 (Stable):</strong> Turing and later — GTX 1650/1660, RTX 20/30/40/50 series",
   "start-drivers-nvidia-3":
-    "<strong>Legacy 390:</strong> For GeForce GTX 600, GTX 700, GTX 800",
+    "<strong>580 (Production — RC1 default: 580.159.04):</strong> Universal Maxwell to Blackwell — GTX 900 through RTX 5000",
   "start-drivers-nvidia-4":
-    "<strong>Legacy 340:</strong> For GeForce GTX 400, GTX 500",
+    "<strong>550 (Repo):</strong> Maxwell to Ada Lovelace — GTX 900/10xx/16xx, RTX 20/30/40",
   "start-drivers-nvidia-5":
-    "<strong>Nouveau (Open Source):</strong> Free and open-source NVIDIA driver",
+    "<strong>470 (Legacy):</strong> Kepler to Ampere — GTX 600/700/900/10xx, RTX 20/30 (requires Sid)",
   "start-drivers-nvidia-6":
-    "<strong>DaVinci Resolve Support:</strong> OpenCL and video encoding support",
+    "<strong>390 (Legacy):</strong> Fermi and Kepler — GTX 400/500/600/700 (requires Sid)",
   "start-drivers-nvidia-7":
-    "<strong>Blender/CUDA Support:</strong> CUDA toolkit for rendering",
-  "start-drivers-amd-title": "AMD Drivers",
+    "<strong>340 (Legacy):</strong> Tesla — GeForce 8/9/100/200/300 series (requires Sid)",
+  "start-drivers-nvidia-8":
+    "<strong>Nouveau (Open Source):</strong> Free open source NVIDIA driver",
+  "start-drivers-nvidia-9":
+    "<strong>Uninstall NVIDIA Drivers:</strong> Removes all NVIDIA packages cleanly before switching to a different driver version",
+  "start-drivers-hybrid-title": "Hybrid Graphics (Laptops)",
+  "start-drivers-hybrid-1":
+    "<strong>PRIME Render Offload:</strong> Uses NVIDIA on demand while the integrated GPU handles the display. Recommended — saves battery. Creates <code>prime-run</code> to launch specific apps with the dedicated GPU",
+  "start-drivers-hybrid-2":
+    "<strong>NVIDIA Primary:</strong> Forces NVIDIA as the primary GPU at all times. Maximum performance, requires restart",
+  "start-drivers-hybrid-3":
+    "<strong>Detect Hybrid Setup:</strong> Detects whether the system has hybrid graphics",
+  "start-drivers-nvidia-extras-title": "NVIDIA Extras",
+  "start-drivers-nvidia-extras-1":
+    "<strong>DaVinci Resolve Extras:</strong> OpenCL and CUDA support — libcuda1, nvidia-opencl-icd, libnvidia-encode1",
+  "start-drivers-nvidia-extras-2":
+    "<strong>Blender CUDA Toolkit:</strong> nvidia-cuda-toolkit for GPU rendering",
+  "start-drivers-amd-title": "AMD Graphics",
   "start-drivers-amd-1":
-    "<strong>AMD Radeon (AMDGPU):</strong> Modern open-source driver for RX 400+ series and APUs",
+    "<strong>AMD Radeon (Open Source):</strong> firmware-amd-graphics + Mesa + Vulkan drivers for RX 400+ series and APUs",
   "start-drivers-amd-2":
-    "<strong>Radeon (Legacy):</strong> Legacy open-source driver for older cards",
+    "<strong>LACT — GPU Control Center:</strong> Flatpak tool for overclocking, fan control and GPU monitoring for AMD and NVIDIA",
   "start-drivers-amd-3":
-    "<strong>Mesa & Vulkan:</strong> Complete graphics stack with firmware support",
-  "start-drivers-intel-title": "Intel Graphics",
-  "start-drivers-intel-1":
-    "<strong>Intel i915:</strong> For Intel HD, UHD, Iris, and Iris Xe graphics",
-  "start-drivers-intel-2":
-    "<strong>Intel Xe:</strong> For discrete Intel Arc graphics cards",
+    "<strong>nvtop:</strong> Terminal GPU monitor pre-installed in all three Soplos distributions — shows real-time usage, VRAM, temperatures and processes for NVIDIA, AMD and Intel GPUs",
   "start-drivers-wifi-title": "Wi-Fi Drivers",
   "start-drivers-wifi-1":
-    "<strong>MediaTek:</strong> MT76xx series (mt7601u, mt76, mt7915e, mt7921u, mt7925e, etc.)",
+    "<strong>Intel Wi-Fi:</strong> firmware-iwlwifi for Intel AC/AX series and legacy chips",
   "start-drivers-wifi-2":
-    "<strong>Intel WiFi:</strong> iwlwifi, iwldvm, iwlmvm for AC/AX series and legacy chips",
+    "<strong>Realtek Wi-Fi:</strong> firmware-realtek for Realtek USB and PCIe adapters",
   "start-drivers-wifi-3":
-    "<strong>Realtek:</strong> rtl8xxxu, rtl8192xx, rtl8188ee, rtl8723xx, rtl8821ae series",
+    "<strong>Broadcom Wi-Fi:</strong> firmware-b43-installer for BCM43xx chips",
   "start-drivers-wifi-4":
-    "<strong>Broadcom:</strong> brcmfmac, brcmsmac, b43, b43legacy for BCM43xx chips",
-  "start-drivers-wifi-5":
-    "<strong>Atheros:</strong> ath9k, ath10k, ath11k, ath12k, carl9170 for all Atheros series",
-  "start-drivers-eth-title": "Ethernet Drivers",
-  "start-drivers-eth-1":
-    "<strong>Full Support:</strong> All available Ethernet drivers from kernel modules",
-  "start-drivers-eth-2":
-    "<strong>Realtek, Intel, Broadcom:</strong> Complete coverage for desktop and laptop NICs",
-  "start-drivers-bt-title": "Bluetooth Support",
-  "start-drivers-bt-1":
-    "<strong>Universal Support:</strong> btusb, btmtk, btbcm for MediaTek and Broadcom chips",
-  "start-drivers-bt-2":
-    "<strong>Atheros Support:</strong> ath3k for Atheros Bluetooth devices",
-  "start-drivers-bt-3":
-    "<strong>UART Support:</strong> hci_uart for embedded Bluetooth modules",
-  "start-drivers-print-title": "Printer Support",
-  "start-drivers-print-1":
-    "<strong>Universal Drivers:</strong> Support for HP, Canon, Epson, Brother, and major brands",
-  "start-drivers-stor-title": "Storage Support",
-  "start-drivers-stor-1":
-    "<strong>NVMe:</strong> Full NVMe SSD support with nvme-core drivers",
-  "start-drivers-stor-2":
-    "<strong>SATA/AHCI:</strong> Full SATA and AHCI controller support",
-  "start-drivers-stor-3":
-    "<strong>USB Storage:</strong> Universal USB mass storage and UAS support",
+    "<strong>Repair Wi-Fi:</strong> Reloads the kernel module and restarts NetworkManager — use this if Wi-Fi stopped working after a reboot",
+  "start-drivers-other-title": "Other Drivers",
+  "start-drivers-other-1":
+    "<strong>Printers:</strong> printer-driver-all for HP, Canon, Epson, Brother and major brands",
+  "start-drivers-other-2":
+    "<strong>Bluetooth:</strong> bluetooth + bluez + bluez-tools + blueman for universal Bluetooth support",
   "start-drivers-vm-title": "Virtual Machine Tools",
   "start-drivers-vm-1":
-    "<strong>VMware Tools:</strong> Open VM Tools Desktop for VMware Workstation/Player integration",
+    "<strong>VMware Tools:</strong> open-vm-tools-desktop for VMware Workstation/Player integration",
   "start-drivers-vm-2":
-    "<strong>QEMU/KVM Agent:</strong> Guest agent and tools for QEMU/KVM virtual machines",
+    "<strong>QEMU/KVM Tools:</strong> qemu-guest-agent + spice-vdagent + spice-webdavd for QEMU/KVM virtual machines",
   "start-drivers-vm-3":
-    "<strong>VirtualBox Guest Additions:</strong> Full VirtualBox integration with shared folders and clipboard",
-  "start-drivers-success-label": "Maximum Hardware Compatibility:",
+    "<strong>VirtualBox Guest Additions:</strong> VBoxLinuxAdditions for shared folders, clipboard and display resize",
+  "start-drivers-success-label": "Scan Hardware:",
   "start-drivers-success-text":
-    "Soplos Linux includes an extensive driver collection for maximum hardware compatibility across desktops, laptops, and virtual machines.",
+    "Use the \"Scan Hardware\" button first. It detects your GPU, Wi-Fi and other hardware and takes you directly to the recommended driver.",
 
   // Kernels
   "start-kernels-title": "Kernel Management",
   "start-kernels-info-label": "Kernels Tab:",
   "start-kernels-info-text":
-    "Install, remove, or clean up alternative kernels like Liquorix and XanMod to improve system performance.",
+    "Install and manage kernels directly from the Kernels tab in Soplos Welcome. Launch Soplos Kernel Installer to build a custom Debian-based kernel compiled from source, or quickly install pre-built Liquorix or XanMod kernels. Also manage CPU microcode and clean old kernels.",
   "start-kernels-avail-title": "Available Kernels",
+  "start-kernels-ski-title": "Soplos Kernel Installer",
+  "start-kernels-ski-desc":
+    "The flagship kernel tool. Compiles a custom Soplos kernel from source with a profile chosen for your use case. Each profile sets the right config flags and suggested patches so you get a kernel tuned specifically for your machine — no guesswork. Launched from the Kernels tab in Soplos Welcome.",
+  "start-kernels-ski-p1": "<strong>Gaming:</strong> HZ=1000, performance CPU governor, Huge Pages — suggested patches: BORE scheduler, NTSync",
+  "start-kernels-ski-p2": "<strong>Audio / Video:</strong> HZ=1000, low-latency settings for DAWs and video editing — suggested patch: RT (Real-Time)",
+  "start-kernels-ski-p3": "<strong>Minimal / Office:</strong> HZ=250, powersave governor, stripped of unused modules — ideal for older or low-power hardware",
+  "start-kernels-ski-p4": "<strong>Automatic:</strong> Detects your GPU, storage and VM hardware and enables only the needed drivers and optimizations",
+  "start-kernels-ski-p5": "<strong>Soplos Stock:</strong> Generic Soplos kernel with no profile modifications — compatible with all three distributions",
+  "start-kernels-ski-p6": "<strong>Custom:</strong> Full control — choose any combination of config options and patches yourself",
+  "start-kernels-prebuilt-title": "Soplos Pre-built Kernels",
+  "start-kernels-prebuilt-desc": "The Soplos Kernel Installer also provides a second tab with pre-compiled kernels directly from the Soplos repository. No compilation required — install with one click and reboot.",
+  "start-kernels-prebuilt-1": "<strong>Stock:</strong> Vanilla Soplos kernel with no patches — the safe default",
+  "start-kernels-prebuilt-2": "<strong>BORE:</strong> BORE scheduler patch — improves desktop responsiveness and reduces stutter",
+  "start-kernels-prebuilt-3": "<strong>Bore + NTSync:</strong> BORE scheduler combined with NTSync — recommended for gaming with Windows games via Proton",
+  "start-kernels-prebuilt-4": "<strong>NTSync:</strong> NTSync patch only — synchronization primitives for Proton/Wine compatibility",
+  "start-kernels-prebuilt-5": "<strong>RT (Real-Time):</strong> Real-time preemption patch — low-latency kernel for professional audio (DAWs, JACK)",
+  "start-kernels-prebuilt-6": "<strong>ZEN:</strong> ZEN kernel patches — general-purpose optimizations for interactive use",
   "start-kernels-liq-title": "Liquorix Kernel",
   "start-kernels-liq-desc":
-    "Kernel optimized for desktop and gaming, with low latency and performance improvements.",
+    "A drop-in replacement for the default Debian kernel, built for interactive desktops and gaming. It uses a low-latency preemption model and scheduler tweaks that reduce input lag and stutter under load. If the system feels sluggish during heavy tasks or gaming, Liquorix is the first kernel to try. Compatible with all CPU architectures and NVIDIA drivers.",
   "start-kernels-xan-title": "XanMod Kernel",
   "start-kernels-xan-desc":
-    "Kernel optimized for low latency and high performance, ideal for demanding tasks.",
+    "A high-performance kernel focused on throughput and raw speed. Available in two variants: <strong>x64v3</strong> (recommended — for Intel Haswell 2013+ and AMD Zen+, uses AVX2 optimizations) and <strong>x64v4</strong> (for Intel 12th gen+ and AMD Zen 4+, adds AVX-512 support). Ideal for workstations, compiling, rendering and demanding tasks where maximum throughput matters more than latency.",
+  "start-kernels-micro-title": "CPU Microcode",
+  "start-kernels-micro-1":
+    "<strong>Intel Microcode:</strong> intel-microcode — apply the latest Intel CPU firmware updates for security and stability fixes",
+  "start-kernels-micro-2":
+    "<strong>AMD Microcode:</strong> amd64-microcode — apply the latest AMD CPU firmware updates for security and stability fixes",
   "start-kernels-maint-title": "System Maintenance",
   "start-kernels-maint-1":
     "<strong>Clean Old Kernels:</strong> Remove old kernels and free up disk space",
@@ -1414,20 +1651,28 @@ Object.assign(window.LANG_EN, {
   "start-custom-tyron-title": "Tyron (XFCE)",
   "start-custom-tyron-1": "Right-click on Desktop → Settings → Appearance",
   "start-custom-tyron-2":
-    "Use <strong>Soplos Theme Manager</strong> for easy theme switching",
-  "start-custom-tyron-3": "Customize window decorations and icons",
+    "Use <strong>Soplos Theme Manager</strong> for easy theme switching, dock customization and icon management",
+  "start-custom-tyron-3":
+    "Use <strong>Soplos GRUB Editor</strong> to change the GRUB theme, timeout, and default boot entry",
+  "start-custom-tyron-4":
+    "Use <strong>Soplos Plymouth Manager</strong> to change the boot splash screen",
   "start-custom-tyson-title": "Tyson (Plasma)",
   "start-custom-tyson-1": "Right-click on Desktop → Configure Desktop",
   "start-custom-tyson-2": "System Settings → Appearance → Global Theme",
-  "start-custom-tyson-3": "Customize Plasma themes, icons, and cursors",
-  "start-custom-tyson-4": "Configure desktop effects and animations",
+  "start-custom-tyson-3":
+    "Use <strong>Soplos GRUB Editor</strong> to change the GRUB theme, timeout and default boot entry",
+  "start-custom-tyson-4":
+    "Use <strong>Soplos Plymouth Manager</strong> to change the boot splash screen",
   "start-custom-boro-title": "Boro (GNOME)",
   "start-custom-boro-1": "Settings → Appearance",
   "start-custom-boro-2":
     "Use <strong>GNOME Tweaks</strong> (pre-installed) for advanced customization",
   "start-custom-boro-3":
     "Use <strong>Extension Manager</strong> (pre-installed) to manage extensions",
-  "start-custom-boro-4": "Configure <strong>Dash to Panel</strong> settings",
+  "start-custom-boro-4":
+    "Use <strong>Soplos GRUB Editor</strong> to change the GRUB theme, timeout and default boot entry",
+  "start-custom-boro-5":
+    "Use <strong>Soplos Plymouth Manager</strong> to change the boot splash screen",
 
   // Multimedia
   "start-multi-title": "Multimedia Support",
@@ -1443,23 +1688,158 @@ Object.assign(window.LANG_EN, {
     "<strong>Container Formats:</strong> MP4, MKV, AVI, WebM, MOV, and others",
   "start-multi-incl-4":
     "<strong>Streaming Support:</strong> Ready for Netflix, YouTube, Spotify, and other services",
+  "start-multi-incl-5":
+    "<strong>Hardware Video Acceleration:</strong> VA-API and VDPAU support pre-configured for NVIDIA, AMD and Intel GPUs — video decoding and encoding offloaded to the GPU",
+  "start-multi-incl-6":
+    "<strong>DRM Widevine:</strong> Pre-installed in Chromium-based browsers for protected streaming (Netflix, Disney+, Prime Video)",
+  "start-multi-apps-title": "Media Players & Tools",
+  "start-multi-app1-title": "VLC & MPV",
+  "start-multi-app1-desc":
+    "Universal video players. VLC for convenience and format support; MPV for power users — minimal, GPU-accelerated, scriptable.",
+  "start-multi-app2-title": "Audacity & LMMS",
+  "start-multi-app2-desc":
+    "Audacity for audio recording and editing. LMMS for music production with MIDI support, synthesizers and effects.",
+  "start-multi-app3-title": "OBS Studio",
+  "start-multi-app3-desc":
+    "Professional screen recording and live streaming with full Wayland support via the PipeWire screen capture backend.",
+  "start-multi-app4-title": "Kdenlive, OpenShot & DaVinci Resolve",
+  "start-multi-app4-desc":
+    "Non-linear video editors. Kdenlive for professional multi-track editing with effects; OpenShot for quick and simple workflows; DaVinci Resolve for Hollywood-grade color grading and audio post-production.",
   "start-multi-pipe-label": "PipeWire Audio:",
   "start-multi-pipe-text":
-    "Soplos Linux uses PipeWire for optimal audio performance, low latency, and advanced routing capabilities right out of the box.",
+    "Soplos Linux uses PipeWire for optimal audio performance, low latency, and advanced routing capabilities out of the box. Compatible with PulseAudio and JACK applications simultaneously.",
 
   // Security
   "start-sec-title": "Security & Privacy",
+  "start-sec-backup-title": "System Backups",
+  "start-sec-timeshift-title": "Timeshift",
+  "start-sec-timeshift-1": "Creates automatic snapshots of the system — not personal files",
+  "start-sec-timeshift-2": "Install from the Security tab in Soplos Welcome before making major changes",
+  "start-sec-timeshift-3": "Restore from GRUB if the system fails to boot (requires grub-btrfs on BTRFS)",
+  "start-sec-grub-btrfs-title": "grub-btrfs",
+  "start-sec-grub-btrfs-desc":
+    "Available if your root partition uses BTRFS. Automatically adds Timeshift snapshots to the GRUB boot menu, so you can boot directly into a previous snapshot without booting the main system first.",
+  "start-sec-dejadup-title": "Deja Dup",
+  "start-sec-dejadup-desc":
+    "Simple backup tool for personal files with encryption support. Backs up your home directory to local storage, external drives or cloud services.",
+  "start-sec-btrfs-assistant-title": "BTRFS Assistant",
+  "start-sec-btrfs-assistant-desc":
+    "Graphical tool for advanced BTRFS subvolume and snapshot management. Only available on systems using BTRFS as the root filesystem.",
   "start-sec-fw-title": "Firewall",
-  "start-sec-fw-intro":
-    "Soplos Linux includes a pre-configured firewall with both command-line and graphical management:",
-  "start-sec-fw-gui-title": "Graphical Interface (GUFW)",
-  "start-sec-fw-gui-desc":
-    "For users who prefer a GUI, Soplos Linux includes GUFW (Graphical Uncomplicated Firewall) - a user-friendly interface for managing firewall rules without terminal commands.",
-  "start-sec-fw-cli-title": "Command Line",
+  "start-sec-gufw-title": "GUFW",
+  "start-sec-gufw-desc":
+    "Graphical interface for the UFW firewall. Control which network connections are allowed or blocked. Install from the Security tab in Soplos Welcome.",
+  "start-sec-cli-title": "Terminal",
+  "start-sec-portmaster-title": "Portmaster",
+  "start-sec-portmaster-desc":
+    "Application-level firewall that monitors and controls network connections per application. More granular control than UFW. Note: running both UFW and Portmaster at the same time can cause conflicts — choose one.",
+  "start-sec-vpn-title": "VPN",
+  "start-sec-protonvpn-title": "Proton VPN",
+  "start-sec-protonvpn-desc":
+    "Secure VPN service from Proton. Free tier available with unlimited bandwidth. Install via Flatpak from the Security tab in Soplos Welcome.",
+  "start-sec-surfshark-title": "Surfshark",
+  "start-sec-surfshark-desc":
+    "Fast VPN with unlimited simultaneous devices. Install via Flatpak from the Security tab in Soplos Welcome.",
+  "start-sec-mozilla-vpn-title": "Mozilla VPN",
+  "start-sec-mozilla-vpn-desc":
+    "VPN from Mozilla focused on privacy and simplicity. Install via Flatpak from the Security tab in Soplos Welcome.",
+  "start-sec-clean-title": "System Cleaning",
+  "start-sec-bleachbit-title": "BleachBit",
+  "start-sec-bleachbit-desc":
+    "Free disk space and maintain privacy. Cleans cache, cookies, temporary files and browser data across many applications.",
+  "start-sec-syscleaner-title": "Soplos Sys Cleaner",
+  "start-sec-syscleaner-desc":
+    "Soplos system optimizer. Scans APT cache, old kernels, Flatpak and Snap revisions, logs, temp files and unused locales — shows exactly how much space is recoverable per category before touching anything. Includes hardware detection and firmware management.",
+  "start-sec-stacer-title": "Stacer",
+  "start-sec-stacer-desc":
+    "System optimizer with resource monitoring, startup application manager and cache cleaner in a modern interface. Installed as AppImage.",
+  "start-sec-sweeper-title": "Sweeper",
+  "start-sec-sweeper-desc": "Simple KDE tool to clean temporary files and browsing history.",
+  "start-sec-av-title": "Antivirus & Malware",
+  "start-sec-clamtk-title": "ClamTk",
+  "start-sec-clamtk-desc":
+    "Graphical interface for ClamAV. Scan files and directories for viruses and malware. Includes a virus definition updater.",
+  "start-sec-clamui-title": "ClamUI",
+  "start-sec-clamui-desc": "Modern Flatpak-based graphical interface for ClamAV antivirus.",
+  "start-sec-rkhunter-title": "rkhunter",
+  "start-sec-rkhunter-desc":
+    "Command-line tool to detect rootkits, backdoors and system anomalies. Advanced tool for security auditing.",
   "start-sec-pass-title": "Password Security",
   "start-sec-pass-1": "Use strong, unique passwords",
   "start-sec-pass-2": "Enable automatic screen lock",
   "start-sec-pass-3": "Consider using a password manager",
+
+  // Gaming
+  "start-gaming-title": "Gaming",
+  "start-gaming-info-label": "Gaming Tab:",
+  "start-gaming-info-text":
+    "Soplos Welcome has a dedicated Gaming tab with one-click tools to optimize your system for maximum gaming performance. Optimizations are applied persistently and survive reboots.",
+  "start-gaming-gamemode-title": "GameMode",
+  "start-gaming-gamemode-desc":
+    "Feral GameMode dynamically adjusts CPU governor, I/O priority and process priority when a game is running. Compatible with Steam, Lutris and native games.",
+  "start-gaming-perfmode-title": "Performance Mode",
+  "start-gaming-perfmode-desc":
+    "Installs soplos-game-performance, which applies system-wide performance tweaks at boot. Disables power-saving features and maximizes CPU and GPU throughput.",
+  "start-gaming-sysctl-title": "Gaming Sysctl",
+  "start-gaming-sysctl-desc":
+    "Applies kernel parameters optimized for gaming: <code>vm.max_map_count=2147483642</code> (required for some Windows games via Proton), <code>vm.swappiness=10</code> and reduced system latency.",
+  "start-gaming-gpu-title": "Optimize GPU",
+  "start-gaming-gpu-desc":
+    "Applies GPU-specific performance tweaks. For NVIDIA: forces performance power mode. For AMD: sets performance profile via AMDGPU. For Intel: enables GuC/HuC firmware loading. On hybrid laptops, configures PRIME Render Offload automatically.",
+  "start-gaming-diskio-title": "Disk I/O",
+  "start-gaming-diskio-desc":
+    "Sets the optimal I/O scheduler for each disk type: BFQ for HDDs (better response time), mq-deadline for SSDs (low latency writes) and none for NVMe (hardware manages queuing internally).",
+  "start-gaming-mangohud-title": "MangoHud",
+  "start-gaming-mangohud-desc":
+    "In-game performance overlay showing FPS, frame time, GPU/CPU usage, temperatures and VRAM. Also installs GOverlay (GUI configurator), VulkanInfo, gamescope (Wayland compositor for games), DXVK and vkBasalt via Flatpak.",
+  "start-gaming-cpupower-title": "CPU Power",
+  "start-gaming-cpupower-desc":
+    "Installs linux-cpupower and cpupower-gui to manage CPU frequency scaling governors. Set the performance governor for maximum throughput during gaming sessions.",
+  "start-gaming-lutris-title": "Lutris Vulkan Fix",
+  "start-gaming-lutris-desc":
+    "Fixes Vulkan layer conflicts when using Lutris with MangoHud or other Vulkan layers. Ensures smooth compatibility between Lutris, DXVK and Vulkan overlays.",
+
+  // Shell & Terminal
+  "start-shell-title": "Shell & Terminal",
+  "start-shell-info-label": "RC1 Defaults:",
+  "start-shell-info-text":
+    "Soplos Linux RC1 ships with zsh as the default shell and Ghostty as the default terminal across all three distributions.",
+  "start-shell-zsh-title": "zsh — Default Shell",
+  "start-shell-zsh-desc":
+    "Soplos Linux uses zsh as the default login shell. It ships with a curated <code>.zshrc</code> that includes useful aliases, autocompletion, command history improvements and syntax highlighting. You can open a terminal and start using it immediately — no configuration needed.",
+  "start-shell-zsh-1":
+    "<strong>Autocompletion:</strong> Press Tab to complete commands, file paths and arguments",
+  "start-shell-zsh-2":
+    "<strong>Command history:</strong> Shared across terminal sessions with search via Ctrl+R",
+  "start-shell-zsh-3":
+    "<strong>Aliases:</strong> Common shortcuts pre-configured in <code>~/.zshrc</code>",
+  "start-shell-ghostty-title": "Ghostty — Default Terminal",
+  "start-shell-ghostty-desc":
+    "Ghostty is a modern, GPU-accelerated terminal emulator built for performance and low latency. It uses native rendering on each platform, supports true color, ligatures and is highly configurable via a plain text config file at <code>~/.config/ghostty/config</code>.",
+  "start-shell-ghostty-1":
+    "<strong>GPU rendering:</strong> Hardware-accelerated text rendering with minimal CPU usage",
+  "start-shell-ghostty-2":
+    "<strong>True color:</strong> Full 24-bit color support for modern terminal applications",
+  "start-shell-ghostty-3":
+    "<strong>Fast startup:</strong> Opens instantly with no noticeable delay",
+
+  // zRAM
+  "start-zram-title": "zRAM",
+  "start-zram-info-label": "Active by Default:",
+  "start-zram-info-text":
+    "zRAM is enabled by default in Soplos Linux RC1 on all three distributions. No configuration is needed.",
+  "start-zram-what-title": "What is zRAM",
+  "start-zram-what-desc":
+    "zRAM creates a compressed block device in RAM that the kernel uses as swap space. When physical memory runs low, instead of writing data to a slow disk, the kernel compresses and stores it in a dedicated region of RAM. Decompression is much faster than a disk read, so the system remains responsive under memory pressure.",
+  "start-zram-benefits-title": "Performance Benefits",
+  "start-zram-benefits-1":
+    "<strong>Faster swap:</strong> Compressed in-memory swap is orders of magnitude faster than swapping to an SSD or HDD",
+  "start-zram-benefits-2":
+    "<strong>More effective RAM:</strong> Compression ratios of 2:1 to 3:1 are common, effectively increasing usable memory",
+  "start-zram-benefits-3":
+    "<strong>Reduced disk wear:</strong> Swap activity goes to RAM instead of your SSD, extending its lifespan",
+  "start-zram-benefits-4":
+    "<strong>Better responsiveness:</strong> Systems with 4 GB or 8 GB RAM benefit most — fewer application freezes under load",
 
   // Next Steps
   "start-next-title": "What's Next?",
@@ -1521,6 +1901,30 @@ Object.assign(window.LANG_EN, {
   "faq-gen-q4": "Can I switch between Tyron, Tyson, and Boro?",
   "faq-gen-a4":
     "While it's technically possible to install multiple desktop environments, we recommend a clean reinstall for the best experience. Each variant is optimized for its specific desktop environment and includes tailored applications and configurations.",
+  "faq-gen-q5": "What is zRAM and why is it active by default?",
+  "faq-gen-a5-intro": "zRAM is a Linux kernel feature that creates a compressed swap space directly in RAM. Instead of writing swap data to a slow disk, it compresses it and keeps it in memory — making the system much more responsive when RAM is under pressure.",
+  "faq-gen-a5-benefits": "<strong>Why Soplos enables it by default:</strong>",
+  "faq-gen-a5-1": "Faster than disk-based swap — no I/O bottleneck",
+  "faq-gen-a5-2": "Reduces disk wear on SSDs and eMMC storage",
+  "faq-gen-a5-3": "Noticeably improves responsiveness on systems with 4–8 GB of RAM",
+  "faq-gen-a5-4": "Zero configuration needed — active on first boot",
+  "faq-gen-a5-outro": "zRAM is enabled automatically via <strong>Soplos System Service</strong> on every Soplos variant. You can check its status from the terminal with <code>zramctl</code>.",
+  "faq-gen-q6": "What is Ghostty and why is it the default terminal?",
+  "faq-gen-a6-intro": "Ghostty is a modern, GPU-accelerated terminal emulator focused on performance and correctness. It is the default terminal in all three Soplos variants (Tyron, Tyson and Boro) as of RC1.",
+  "faq-gen-a6-why": "<strong>Why Ghostty:</strong>",
+  "faq-gen-a6-1": "GPU rendering — smooth scrolling and zero latency even with heavy output",
+  "faq-gen-a6-2": "Full Unicode and ligature support out of the box",
+  "faq-gen-a6-3": "Native Wayland and X11 support",
+  "faq-gen-a6-4": "Minimal dependencies — fast to start, low on resources",
+  "faq-gen-a6-outro": "You can replace it with any terminal you prefer. Other terminals are available through <strong>Soplos Welcome → Software</strong> or via <code>sudo apt install</code>.",
+  "faq-gen-q7": "Why is zsh the default shell instead of bash?",
+  "faq-gen-a7-intro": "Soplos uses <strong>zsh</strong> as the default shell because it provides a significantly better interactive experience than bash while remaining fully compatible with bash scripts.",
+  "faq-gen-a7-1": "Smarter tab completion — completes commands, options, file paths and arguments",
+  "faq-gen-a7-2": "Shared command history across terminal sessions",
+  "faq-gen-a7-3": "Spelling correction for mistyped commands",
+  "faq-gen-a7-4": "Powerful globbing and pattern matching",
+  "faq-gen-a7-5": "Extensible via Oh My Zsh and other plugin frameworks",
+  "faq-gen-a7-outro": "If you prefer bash, you can switch anytime with <code>chsh -s /bin/bash</code>.",
 
   // Installation
   "faq-install-title": "Installation Questions",
@@ -1551,6 +1955,24 @@ Object.assign(window.LANG_EN, {
   "faq-inst-a3-rec-3": "Boro (GNOME): 50GB or more",
   "faq-inst-a3-note":
     "More space allows for additional software, updates, and personal files.",
+  "faq-inst-q4": "Can I use Ventoy to try Soplos Linux?",
+  "faq-inst-a4-intro": "Yes. <strong>Ventoy</strong> is fully supported and is the recommended way to try multiple ISOs from a single USB drive. Just copy the Soplos ISO file onto a Ventoy-formatted USB and it will appear in the boot menu automatically.",
+  "faq-inst-a4-1": "No need to re-flash the USB to switch ISOs — just copy or delete files",
+  "faq-inst-a4-2": "Boot any of the three Soplos variants (Tyron, Tyson, Boro) from the same USB",
+  "faq-inst-a4-3": "Available for Windows and Linux from <strong>ventoy.net</strong>",
+  "faq-inst-a4-outro": "Ventoy is also listed in the <a href=\"/wiki/install/\">Installation Guide</a> alongside other USB creation tools.",
+  "faq-inst-q5": "Can I install Soplos Linux in a virtual machine?",
+  "faq-inst-a5-intro": "Yes, all three Soplos variants run well in virtual machines. Recommended settings and supported hypervisors:",
+  "faq-inst-a5-1": "<strong>VirtualBox:</strong> Allocate at least 4 GB RAM and 64 MB video memory. Install VirtualBox Guest Additions from <strong>Soplos Welcome → Drivers → VM Tools</strong> for better resolution and clipboard sharing.",
+  "faq-inst-a5-2": "<strong>VMware (Workstation / Player):</strong> Fully supported. VMware Tools are detected and managed automatically by Soplos Welcome.",
+  "faq-inst-a5-3": "<strong>QEMU/KVM (virt-manager):</strong> Recommended for advanced users. Use the Virtio drivers for best performance. SPICE guest tools are available from Soplos Welcome.",
+  "faq-inst-a5-outro": "3D graphics performance is limited in all VMs. For gaming or GPU-heavy workloads, a bare-metal installation is recommended.",
+  "faq-inst-q6": "Is BTRFS the recommended filesystem for installation?",
+  "faq-inst-a6-intro": "Yes, BTRFS is the recommended filesystem if you want to use <strong>Timeshift snapshots</strong> and <strong>Grub BTRFS</strong> (boot directly into a snapshot from GRUB). Both tools require BTRFS on the root partition.",
+  "faq-inst-a6-1": "<strong>BTRFS + Timeshift:</strong> Automatic system snapshots before updates — roll back if something breaks",
+  "faq-inst-a6-2": "<strong>BTRFS + Grub BTRFS:</strong> Boot into a previous snapshot directly from the GRUB menu without needing a live USB",
+  "faq-inst-a6-3": "<strong>EXT4:</strong> Also supported and perfectly stable, but not compatible with Timeshift BTRFS snapshots or Grub BTRFS",
+  "faq-inst-a6-outro": "Select BTRFS in the Calamares partitioning step during installation. Timeshift and Grub BTRFS can then be installed from <strong>Soplos Welcome → Security → System Backups</strong>.",
 
   // System & Hardware
   "faq-sys-title": "System & Hardware",
@@ -1577,9 +1999,12 @@ Object.assign(window.LANG_EN, {
   "faq-sys-a2-1":
     "Open <strong>Soplos Welcome</strong> from the application menu",
   "faq-sys-a2-2": "Go to the <strong>Drivers</strong> tab",
-  "faq-sys-a2-3": "In the <strong>Graphics</strong> section, you'll find:",
-  "faq-sys-a2-3-1": "<strong>NVIDIA Legacy:</strong> For older graphics cards",
-  "faq-sys-a2-3-2": "<strong>NVIDIA Latest:</strong> For modern graphics cards",
+  "faq-sys-a2-3": "In the <strong>Graphics</strong> section, select the driver for your GPU:",
+  "faq-sys-a2-3-1": "<strong>610 / 590 / 580 (RC1 default: 580.159.04):</strong> RTX 5000, RTX 4000, RTX 3000, RTX 2000, GTX 1600 series and newer",
+  "faq-sys-a2-3-2": "<strong>550:</strong> Older GTX 900 / GTX 1000 series still supported by this branch",
+  "faq-sys-a2-3-3": "<strong>470 (Legacy):</strong> GTX 600 / GTX 700 series",
+  "faq-sys-a2-3-4": "<strong>390 (Legacy):</strong> GTX 400 / GTX 500 series",
+  "faq-sys-a2-3-5": "<strong>340 (Legacy):</strong> GeForce 8000 / 9000 / 200 / 300 series",
   "faq-sys-a2-4": "Click the Install button next to your appropriate driver",
   "faq-sys-a2-5": "Restart your system when installation completes",
   "faq-sys-a2-alt":
@@ -1643,6 +2068,15 @@ Object.assign(window.LANG_EN, {
     "<strong>Real-Time Monitoring:</strong> View active connections and firewall status",
   "faq-sys-a5-outro":
     "The firewall is automatically configured with sensible defaults, but GUFW allows you to customize rules according to your needs without technical complexity.",
+  "faq-sys-q6": "How do snapshots work with Timeshift and Grub BTRFS?",
+  "faq-sys-a6-intro": "Timeshift and Grub BTRFS work together to give you safe, bootable system snapshots:",
+  "faq-sys-a6-1": "<strong>Timeshift creates the snapshot:</strong> It takes a BTRFS snapshot of your root subvolume. Snapshots can be created manually or on a schedule (hourly, daily, weekly).",
+  "faq-sys-a6-2": "<strong>Grub BTRFS detects the snapshot:</strong> After each snapshot, Grub BTRFS automatically adds a new boot entry to GRUB pointing to that snapshot.",
+  "faq-sys-a6-3": "<strong>Booting into a snapshot:</strong> At boot, select <strong>BTRFS Snapshots</strong> in the GRUB menu to see the list of available snapshots and choose one to boot into (read-only).",
+  "faq-sys-a6-4": "<strong>Restoring permanently:</strong> Once booted into the snapshot, open Timeshift and click Restore to make that state permanent.",
+  "faq-sys-a6-outro": "Both tools are available from <strong>Soplos Welcome → Security → System Backups</strong>. BTRFS must be selected as the filesystem during installation.",
+  "faq-sys-q7": "Why does Tyson use Plasma Login Manager instead of SDDM?",
+  "faq-sys-a7": "Tyson (KDE Plasma) uses <strong>Plasma Login Manager</strong> — the new login manager introduced in KDE Plasma 6.3 as the official successor to SDDM. It provides deeper Plasma integration, a more consistent look and feel with the rest of the desktop, and better Wayland support. Soplos adopted it in RC1 alongside the upgrade to Plasma 6.6.5.",
 
   // Software & Anwendungen
   "faq-soft-title": "Software & Applications",
@@ -1678,31 +2112,37 @@ Object.assign(window.LANG_EN, {
   "faq-soft-a2-outro":
     "Many popular applications also have native Linux alternatives.",
   "faq-soft-q3": "What are the exclusive Soplos applications?",
-  "faq-soft-a3-intro":
-    "Soplos Linux includes several exclusive applications accessible through <strong>Soplos Welcome</strong>:",
-  "faq-soft-a3-1":
-    "<strong>Soplos Welcome:</strong> Central hub for system configuration, software installation, and driver management with 6 comprehensive tabs",
-  "faq-soft-a3-2":
-    "<strong>Soplos GRUB Editor:</strong> Easy bootloader customization and theme management",
-  "faq-soft-a3-3":
-    "<strong>Soplos Plymouth Manager:</strong> Boot splash screen customization and management",
-  "faq-soft-a3-4":
-    "<strong>Soplos Theme Manager:</strong> System-wide theme switching and customization",
-  "faq-soft-a3-5":
-    "<strong>Soplos Repo Selector:</strong> Repository management and mirror selection",
-  "faq-soft-a3-outro":
-    "Additionally, Soplos Welcome provides access to advanced kernel management (Liquorix, XanMod) and comprehensive hardware driver installation.",
+  "faq-soft-a3-intro": "Soplos Linux includes several exclusive applications developed in-house:",
+  "faq-soft-a3-1": "<strong>Soplos Welcome:</strong> Central hub for system configuration, software installation, driver management, kernel selection, security tools and gaming setup — 7 comprehensive tabs",
+  "faq-soft-a3-2": "<strong>Soplos GRUB Editor:</strong> Bootloader customization and theme management",
+  "faq-soft-a3-3": "<strong>Soplos Plymouth Manager:</strong> Boot splash screen customization",
+  "faq-soft-a3-4": "<strong>Soplos Theme Manager:</strong> Full desktop theming — themes, wallpapers, panels, dock and avatar (Tyron/XFCE)",
+  "faq-soft-a3-5": "<strong>Soplos Repo Selector:</strong> Repository management, mirror selection and sources generator",
+  "faq-soft-a3-6": "<strong>Soplos Sys Cleaner:</strong> Dual-layer system cleaner — APT cache, orphaned packages, old kernels, firmwares, Flatpak, Snap and user cache",
+  "faq-soft-a3-7": "<strong>Soplos AppImage Manager:</strong> Install, update and remove AppImages from a graphical interface",
+  "faq-soft-a3-8": "<strong>Soplos WebApp Manager:</strong> Convert any website into a standalone desktop application",
+  "faq-soft-a3-9": "<strong>Soplos System Service:</strong> Background system service that handles automatic tasks on startup",
+  "faq-soft-a3-outro": "GRUB Editor, Plymouth Manager and Theme Manager are available from the Soplos repositories via Soplos Welcome or Soplos Repo Selector. In Tyron (XFCE), Theme Manager is not included in the ISO but can be installed from the Soplos repos.",
   "faq-soft-q4": "Can I install different kernels in Soplos Linux?",
-  "faq-soft-a4-intro":
-    "Yes! Soplos Welcome includes a dedicated <strong>Kernels</strong> tab with advanced kernel options:",
-  "faq-soft-a4-1":
-    "<strong>Liquorix Kernel:</strong> Low-latency kernel optimized for desktop performance and gaming",
-  "faq-soft-a4-2":
-    "<strong>XanMod Kernel:</strong> Performance-oriented kernel with various optimization profiles",
-  "faq-soft-a4-3":
-    "<strong>Kernel Management Tools:</strong> Easy installation, removal, and maintenance of kernel versions",
-  "faq-soft-a4-outro":
-    "The Kernels tab offers one-click installation and automatic configuration, making it safe and easy to experiment with different kernel options for optimal performance.",
+  "faq-soft-a4-intro": "Yes. Soplos Welcome includes a dedicated <strong>Kernels</strong> tab with two approaches:",
+  "faq-soft-a4-1": "<strong>Soplos Kernel Installer (SKI):</strong> Compiles a custom kernel from source with selectable profiles. Also offers prebuilt Soplos kernels from the repository (no compilation required): Stock, BORE, BORE+NTSync, NTSync, RT, ZEN — all based on kernel 7.1",
+  "faq-soft-a4-2": "<strong>Liquorix Kernel:</strong> Low-latency kernel optimized for desktop performance and gaming",
+  "faq-soft-a4-3": "<strong>XanMod Kernel:</strong> Performance-focused kernel with various optimization profiles",
+  "faq-soft-a4-outro": "All options are available from <strong>Soplos Welcome → Kernels</strong> with one-click installation and automatic GRUB configuration.",
+  "faq-soft-q5": "What is Soplos AppImage Manager?",
+  "faq-soft-a5-intro": "<strong>Soplos AppImage Manager</strong> is a graphical tool to install, manage and remove AppImage applications on Soplos Linux. AppImages are self-contained Linux applications that run without installation.",
+  "faq-soft-a5-1": "Browse and install AppImages from a curated catalogue",
+  "faq-soft-a5-2": "Automatic desktop integration — icons, launchers and file associations",
+  "faq-soft-a5-3": "Check for and apply updates to installed AppImages",
+  "faq-soft-a5-4": "Clean removal including desktop entries and integration files",
+  "faq-soft-a5-outro": "Available from <strong>Soplos Welcome → Software</strong> or directly from the applications menu. See the <a href=\"/wiki/applications/soplos-appimage-manager/\">AppImage Manager wiki page</a> for full documentation.",
+  "faq-soft-q6": "What is Soplos WebApp Manager?",
+  "faq-soft-a6-intro": "<strong>Soplos WebApp Manager</strong> lets you convert any website into a standalone desktop application that launches in its own window, without browser tabs or toolbars.",
+  "faq-soft-a6-1": "Creates a dedicated desktop entry and icon for the web app",
+  "faq-soft-a6-2": "Launches in a minimal browser window — no tabs, no address bar",
+  "faq-soft-a6-3": "Works with any URL: web tools, SaaS apps, streaming services",
+  "faq-soft-a6-4": "Choose which browser engine to use as the backend",
+  "faq-soft-a6-outro": "Available from the applications menu on all three Soplos variants. See the <a href=\"/wiki/applications/soplos-webapp-manager/\">WebApp Manager wiki page</a> for details.",
 
   // Desktop-Umgebungen
   "faq-desktop-title": "Desktop Environment Questions",
@@ -1769,6 +2209,22 @@ Object.assign(window.LANG_EN, {
     "<strong>Filesystem errors:</strong> Boot from Live USB and run fsck",
   "faq-trouble-a3-outro":
     'If problems persist, use our <a href="../install/#troubleshooting">installation troubleshooting guide</a>.',
+  "faq-trouble-q4": "Black screen on boot with an NVIDIA GPU",
+  "faq-trouble-a4-intro": "A black screen after boot with an NVIDIA GPU usually means the proprietary driver is not installed. Follow these steps:",
+  "faq-trouble-a4-1": "At the GRUB menu, press <strong>E</strong> to edit the boot entry",
+  "faq-trouble-a4-2": "Find the line starting with <code>linux</code> and add <code>nomodeset</code> at the end",
+  "faq-trouble-a4-3": "Press <strong>F10</strong> to boot — you should reach the desktop",
+  "faq-trouble-a4-4": "Open <strong>Soplos Welcome → Drivers → Graphics</strong> and install the NVIDIA driver that matches your GPU",
+  "faq-trouble-a4-5": "Reboot — the system will now use the proprietary driver and the black screen will not return",
+  "faq-trouble-a4-outro": "If you are unsure which driver to install, the Drivers tab detects your GPU model automatically and highlights the recommended option.",
+  "faq-trouble-q5": "GRUB does not appear after installing in dual boot",
+  "faq-trouble-a5-intro": "If the system boots directly into Windows or the GRUB menu does not appear after a dual-boot installation, the GRUB bootloader may need to be repaired. The easiest way is using <strong>Soplos Welcome Live</strong>:",
+  "faq-trouble-a5-1": "Boot from the Soplos Linux USB (live session)",
+  "faq-trouble-a5-2": "Open <strong>Soplos Welcome Live</strong> from the desktop",
+  "faq-trouble-a5-3": "Go to the <strong>Repair</strong> tab and select <strong>Repair GRUB</strong>",
+  "faq-trouble-a5-4": "Select your installed Soplos partition and confirm",
+  "faq-trouble-a5-5": "Reboot — GRUB should now appear with both Soplos and Windows entries",
+  "faq-trouble-a5-outro": "This also fixes cases where a Windows update overwrote the GRUB bootloader after dual-boot was already working.",
 
   // Support
   "faq-support-title": "Getting Support",
@@ -1825,7 +2281,7 @@ Object.assign(window.LANG_EN, {
   "tyron-overview-title": "Overview",
   "tyron-overview-intro-pre":
     "Soplos Tyron is the lightweight variant of Soplos Linux featuring the ",
-  "tyron-overview-xfce-label": "XFCE 4.20 desktop environment",
+  "tyron-overview-xfce-label": "XFCE 4.20.1 desktop environment",
   "tyron-overview-intro-post":
     ". It's designed for users who prioritize performance, efficiency, and simplicity while maintaining a modern and attractive interface.",
   "tyron-feat-perf-title": "Performance-Oriented",
@@ -1851,7 +2307,7 @@ Object.assign(window.LANG_EN, {
     "Tyron offers a clean, minimalist desktop layout optimized for efficiency:",
   "tyron-interface-clean-title": "Clean Desktop",
   "tyron-interface-clean-desc":
-    "Minimal desktop surface focused on productivity. Clean workspace without unnecessary elements, keeping applications at the center.",
+    "Minimal desktop surface focused on productivity. Clean workspace without unnecessary elements, keeping applications at the center. New in RC1: zsh as default shell, Ghostty as default terminal and zRAM memory compression enabled by default.",
   "tyron-interface-menu-title": "Application Menu",
   "tyron-interface-menu-desc":
     "Whisker Menu provides quick access to all applications with search function and favorites area. Accessible via keyboard shortcut or desktop interaction.",
@@ -1945,6 +2401,9 @@ Object.assign(window.LANG_EN, {
   "tyron-soplos-theme-title": "Soplos Theme Manager",
   "tyron-soplos-theme-desc":
     "Simple and intuitive desktop theme manager. Create, save, and apply complete desktop themes easily with support for multiple desktop styles and full XFCE integration.",
+  "tyron-soplos-systemservice-title": "Soplos System Service",
+  "tyron-soplos-systemservice-desc":
+    "Graphical systemd service manager with color-coded status, Start/Stop/Restart controls and integrated journalctl log viewer.",
   "tyron-soplos-repo-title": "Soplos Repo Selector",
   "tyron-soplos-repo-desc":
     "Repository management tool for switching between software sources, finding the fastest mirrors, and enabling additional repositories with a user-friendly interface.",
@@ -2031,7 +2490,7 @@ Object.assign(window.LANG_EN, {
   "tyson-overview-title": "Overview",
   "tyson-overview-intro-pre":
     "Soplos Tyson is the modern variant of Soplos Linux, built on the ",
-  "tyson-overview-plasma-label": "KDE Plasma 6.5.4 desktop environment",
+  "tyson-overview-plasma-label": "KDE Plasma 6.6.5 desktop environment",
   "tyson-overview-intro-post":
     ". Tyson focuses on a polished visual experience, powerful customization, and integrated desktop features, while remaining responsive on mid-range hardware.",
   "tyson-feat-visual-title": "Visually Rich",
@@ -2045,7 +2504,7 @@ Object.assign(window.LANG_EN, {
     "Native KDE utilities (KWin, KRunner, Discover) provide a cohesive desktop experience with deep integration options.",
   "tyson-feat-session-title": "Modern Session",
   "tyson-feat-session-desc":
-    "Tyson comes with SDDM login and a polished welcome desktop tuned for visual consistency out of the box.",
+    "Tyson comes with Plasma Login Manager (PLM) for a polished, Wayland-native login and a welcome desktop tuned for visual consistency out of the box.",
   "tyson-overview-info-label": "Perfect for:",
   "tyson-overview-info":
     "Users who want a fully-featured, attractive desktop with deep customization and integrated features—good for daily workstations and creative setups.",
@@ -2054,7 +2513,7 @@ Object.assign(window.LANG_EN, {
   "tyson-interface-title": "Interface Tour",
   "tyson-interface-layout-title": "Desktop Layout",
   "tyson-interface-layout-intro":
-    "Tyson uses the standard Plasma layout: a top or bottom panel (configurable), system tray, application launcher, and desktop widgets (Plasmoids).",
+    "Tyson uses the standard Plasma layout: a top or bottom panel (configurable), system tray, application launcher, and desktop widgets (Plasmoids). New in RC1: zsh as default shell, Ghostty as default terminal and zRAM memory compression enabled by default.",
   "tyson-interface-launcher-title": "Application Launcher",
   "tyson-interface-launcher-desc":
     "Plasma's launcher offers quick search, categories, and a compact or full-screen view depending on preference.",
@@ -2064,9 +2523,9 @@ Object.assign(window.LANG_EN, {
   "tyson-interface-krunner-title": "KRunner",
   "tyson-interface-krunner-desc":
     "Press Alt+Space to launch KRunner — a powerful command, calculator, and launcher bar that speeds up workflows.",
-  "tyson-interface-sddm-title": "SDDM Login",
+  "tyson-interface-sddm-title": "Plasma Login Manager",
   "tyson-interface-sddm-desc":
-    "Tyson comes with SDDM for a polished graphical login and session management. The greeter is styled in the Soplos theme.",
+    "Tyson comes with Plasma Login Manager (PLM), a Wayland-native greeter built on KDE Plasma. The greeter is styled in the Soplos theme.",
   "tyson-screenshots-title": "Screenshots",
   "tyson-screenshots-desc": "Sample screenshots of Tyson from the ISO:",
 
@@ -2154,7 +2613,7 @@ Object.assign(window.LANG_EN, {
     "Choose fastest mirrors, enable additional repositories, and manage GPG keys with a simple interface designed to simplify package sources.",
   "tyson-soplos-note-label": "Note:",
   "tyson-soplos-note":
-    "Some Soplos utilities are shared between Tyron and Tyson. On Plasma, you can use native panel widgets instead of dock-specific tools if preferred.",
+    "All Soplos utilities listed here are accessible through Soplos Welcome. Some apps are shared with Tyron and Boro.",
 
   // Performance Tips
   "tyson-perf-title": "Performance Tips",
@@ -2185,10 +2644,10 @@ Object.assign(window.LANG_EN, {
   // Common Issues
   "tyson-trouble-title": "Common Issues",
   "tyson-trouble-q1": "Panel or widgets not showing",
-  "tyson-trouble-a1": "Try restarting the Plasma shell:",
+  "tyson-trouble-a1": "Log out and back in, or restart the Plasma shell:",
   "tyson-trouble-q2": "Login screen issues",
   "tyson-trouble-a2-intro":
-    "Check SDDM configuration and greeter logs in /var/log. Reconfigure SDDM if needed:",
+    "Check Plasma Login Manager logs and reconfigure if needed:",
   "tyson-trouble-q3": "Slow animations or effects",
   "tyson-trouble-a3":
     "Disable or tune effects in System Settings → Workspace Behavior → Desktop Effects and adjust compositor backend.",
@@ -2219,7 +2678,7 @@ Object.assign(window.LANG_EN, {
   "boro-overview-title": "Overview",
   "boro-overview-intro-pre":
     "Soplos Boro is the GNOME edition of Soplos Linux featuring the",
-  "boro-overview-gnome-label": "GNOME 49.4\n desktop environment",
+  "boro-overview-gnome-label": "GNOME 50\n desktop environment",
   "boro-overview-intro-mid": ". Like Tyron and Tyson, it is based on",
   "boro-overview-debian-label": "Debian\n Testing",
   "boro-overview-intro-post":
@@ -2242,16 +2701,16 @@ Object.assign(window.LANG_EN, {
   // Overview Section
   "boro-overview-info-label": "Perfect for:",
   "boro-overview-info":
-    "Older computers, laptops, users who prefer fast\n performance, minimalist setups, and all who value efficiency over visual\n effects.",
+    "Modern desktops and laptops, users who want a polished and elegant workflow, Wayland enthusiasts, and anyone looking for a complete, distraction-free GNOME experience.",
 
   // Interface Tour
   "boro-interface-title": "Interface Tour",
   "boro-interface-desktop-title": "Desktop Experience",
   "boro-interface-desktop-intro":
-    "Boro offers a polished GNOME 49.4 experience enhanced by Soplos Linux:",
-  "boro-interface-gnome-title": "GNOME 49.4",
+    "Boro offers a polished GNOME 50 experience enhanced by Soplos Linux:",
+  "boro-interface-gnome-title": "GNOME 50",
   "boro-interface-gnome-desc":
-    "The latest version of the GNOME desktop offers a modern, distraction-free\n workspace.",
+    "The latest version of the GNOME desktop, built on Libadwaita 1.9 and featuring Nautilus 50.1, offers a modern, distraction-free workspace. New in RC1: zsh as default shell, Ghostty as default terminal and zRAM memory compression enabled by default.",
   "boro-interface-activities-title": "Activities Overview",
   "boro-interface-activities-desc":
     "Press the Super key to see open windows, workspaces, and the application grid\n in one place. Search instantly for apps, files, and settings.",
@@ -2317,7 +2776,7 @@ Object.assign(window.LANG_EN, {
     "A powerful and customizable application menu. Quick click on\n the menu icon to choose layouts (Start Menu, KRunner style, etc.).",
   "boro-custom-ext-label": "GNOME Extensions:",
   "boro-custom-ext-desc":
-    'Use the "Extensions" app to manage\n pre-installed extensions like Dash to Panel, ArcMenu, and more.',
+    "Use the built-in Extensions app to manage pre-installed add-ons like Dash to Panel and ArcMenu.",
 
   // Default Applications
   "boro-apps-title": "Default Applications",
@@ -2345,6 +2804,9 @@ Object.assign(window.LANG_EN, {
   "boro-soplos-repo-title": "Soplos Repo Selector",
   "boro-soplos-repo-desc":
     "Choose the fastest mirrors for updates and software installation to\n ensure maximum download speeds.",
+  "boro-soplos-systemservice-title": "Soplos System Service",
+  "boro-soplos-systemservice-desc":
+    "Graphical systemd service manager with color-coded status, Start/Stop/Restart controls and integrated journalctl log viewer.",
   "boro-soplos-welcome-title": "Soplos Welcome",
   "boro-soplos-welcome-desc":
     "Your first stop after installation. Install drivers, software, and customize your\n desktop easily.",
@@ -2356,7 +2818,7 @@ Object.assign(window.LANG_EN, {
   "boro-soplos-welcome-live-feature-3": "Language switching with XDG folder migration",
   "boro-soplos-exclusive-label": "Exclusive to Boro:",
   "boro-soplos-exclusive":
-    "Soplos Linux Boro combines the power of GNOME 49.4\n with the exclusive Soplos customization suite for a unique user experience.",
+    "Soplos Linux Boro combines the power of GNOME 50 with the exclusive Soplos customization suite for a unique user experience.",
 
   // Performance Tips
   "boro-perf-title": "Performance Tips",
@@ -2387,7 +2849,7 @@ Object.assign(window.LANG_EN, {
     "# Clear package cache\nsudo apt autoclean\n\n# Remove unused packages\nsudo apt autoremove\n\n# Check system resources\nhtop\n\n# Check disk usage\ndf -h\n\n# Monitor memory usage\nfree -h",
   "boro-perf-advanced-label": "Advanced:",
   "boro-perf-advanced":
-    "Access performance kernels via Soplos Welcome →\n Kernels tab. Liquorix and XanMod kernels can provide significant performance improvements\n for desktop use.",
+    "Access Liquorix and XanMod performance kernels via Soplos Welcome → Kernels tab, or use Soplos Kernel Installer for custom kernel builds optimized for gaming, audio or minimal setups.",
 
   // Common Issues
   "boro-trouble-title": "Common Issues",
@@ -3406,6 +3868,8 @@ Object.assign(window.LANG_EN, {
   "repo-selector-feat-9-desc": "Each Debian suite gets its own independent <code>.sources</code> file, allowing individual enable/disable control per suite in the Repositories tab.",
   "repo-selector-feat-10-title": "Third-Party Protection",
   "repo-selector-feat-10-desc": "Guards prevent the accidental deletion of third-party repositories and their corresponding GPG keys during any operation.",
+  "repo-selector-feat-11-title": "Source Package Support",
+  "repo-selector-feat-11-desc": "Optional <code>deb-src</code> checkbox in the Sources Generator to include source packages in the generated APT sources file. Auto-detected from existing system repositories on startup.",
   "repo-selector-screenshots-title": "Screenshots",
   "repo-selector-screenshot-1": "Welcome",
   "repo-selector-screenshot-2": "Sources Generator",
@@ -3438,6 +3902,10 @@ Object.assign(window.LANG_EN, {
   "theme-manager-feat-5-desc": "Manage Docklike Taskbar pinned applications \u2014 add, remove and reorder from a browsable app list. Docklike configuration is fully integrated here.",
   "theme-manager-feat-6-title": "Theme Bundles (.sth):",
   "theme-manager-feat-6-desc": "Export and import themes as .sth files (tar.gz + manifest). A single file captures the entire desktop configuration and can be shared across Tyron installations.",
+  "theme-manager-feat-7-title": "Theme Scope:",
+  "theme-manager-feat-7-desc": "When applying a theme, choose between user-scope install (~/.themes, ~/.icons) or global install for all users (/usr/share/themes, /usr/share/icons) via pkexec privilege elevation.",
+  "theme-manager-feat-8-title": "Base Themes:",
+  "theme-manager-feat-8-desc": "Bundled base themes are automatically seeded into the user's theme library on first launch. A Restore button reimports any missing base themes on demand without overwriting existing ones.",
   "theme-manager-screenshots-title": "Screenshots",
   "theme-manager-screenshot-1": "Theme Gallery",
   "theme-manager-screenshot-2": "Wallpaper Browser",
@@ -3465,7 +3933,7 @@ Object.assign(window.LANG_EN, {
     "The application supports 8 languages with automatic detection, CSS-based theming that follows your system preferences, and uses privilege escalation (pkexec) for safe system-level operations. It integrates with APT, Flatpak, Snap and custom repositories to provide a comprehensive software management experience.",
   "welcome-features-title": "Key Features",
   "welcome-feat-1-title": "Hardware & Drivers:",
-  "welcome-feat-1-desc": "Automatic detection and installation of NVIDIA (including legacy 340/390/470), AMD, Wi-Fi (Intel, Realtek, Broadcom), printer, Bluetooth drivers and VM tools. Hybrid Graphics support: PRIME Render Offload for battery saving or NVIDIA Primary Mode for maximum performance on Intel+NVIDIA laptops. Wi-Fi Repair button for automatic driver recovery.",
+  "welcome-feat-1-desc": "Automatic detection and installation of NVIDIA (610/590/580/550 and legacy 470/390/340), AMD, Wi-Fi (Intel, Realtek, Broadcom), printer, Bluetooth drivers and VM tools. Hybrid Graphics support: PRIME Render Offload for battery saving or NVIDIA Primary Mode for maximum performance on Intel+NVIDIA laptops. Wi-Fi Repair button for automatic driver recovery.",
   "welcome-feat-2-title": "Kernel Management:",
   "welcome-feat-2-desc": "Install Liquorix and XanMod kernels (x64v3, x64v4, EDGE, LTS), CPU microcode updates and old kernel cleanup.",
   "welcome-feat-3-title": "Software Management:",
@@ -3479,7 +3947,7 @@ Object.assign(window.LANG_EN, {
   "welcome-feat-7-title": "Internationalization:",
   "welcome-feat-7-desc": "Full support for 8 languages with automatic system language detection.",
   "welcome-feat-8-title": "Gaming Center",
-  "welcome-feat-8-desc": "Dedicated gaming tab with 14+ game launcher installations (Steam, Lutris, Heroic, Bottles, PPSSPP...), system optimizations (MangoHud, RyzenAdj, Lutris Vulkan Fix, CPU power profiles, Disk I/O tuning) and a gaming wallpaper pack.",
+  "welcome-feat-8-desc": "Dedicated gaming tab with 14+ game launcher installations (Steam, Lutris, Heroic, Bottles, PPSSPP...), system optimizations (MangoHud, RyzenAdj, Lutris Vulkan Fix, CPU power profiles, Disk I/O tuning) and a gaming wallpaper pack. A quick-access Gaming Mode shortcut is available directly on the home screen.",
   "welcome-screenshots-title": "Screenshots",
   "welcome-screenshot-1": "Home",
   "welcome-screenshot-2": "Software",
@@ -3517,7 +3985,7 @@ Object.assign(window.LANG_EN, {
     "Launch the system installation directly from the welcome screen with automatic locale detection and privilege management.",
   "welcome-live-feat-2-title": "CHROOT Recovery Engine:",
   "welcome-live-feat-2-desc":
-    "Enter a professional recovery environment with intelligent partition detection, full BTRFS subvolume support, automatic mount-point suggestions, and cross-desktop terminal selection (kitty, konsole, gnome-terminal, and more).",
+    "Enter a professional recovery environment with intelligent partition detection, full BTRFS subvolume support, automatic mount-point suggestions, and cross-desktop terminal selection (Ghostty, kitty, konsole, gnome-terminal, and more).",
   "welcome-live-feat-3-title": "Live Language Switching:",
   "welcome-live-feat-3-desc":
     "Change the system language on the fly with automatic keyboard layout reconfiguration and screen resolution persistence across session restarts.",
@@ -3691,6 +4159,8 @@ Object.assign(window.LANG_EN, {
   "tyson-soplos-kernelinstaller-desc": "Build and install custom Linux kernels with a graphical interface. Select profiles and patches optimized for gaming, audio, or minimal setups.",
   "tyson-soplos-syscleaner-title": "Soplos Sys Cleaner",
   "tyson-soplos-syscleaner-desc": "System maintenance tool for removing orphaned packages, cache, logs and temporary files. Keeps your system fast and lean.",
+  "tyson-soplos-systemservice-title": "Soplos System Service",
+  "tyson-soplos-systemservice-desc": "Graphical systemd service manager with color-coded status, Start/Stop/Restart controls and integrated journalctl log viewer.",
 
   "boro-soplos-appimage-title": "Soplos AppImage Manager",
   "boro-soplos-appimage-desc": "Portable application manager for AppImage files. Integrate, launch and update AppImage packages with desktop and menu support.",
@@ -4611,6 +5081,16 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-2101-title": "2.1.0-1 — June 2026",
+  "wel-rel-2101-subtitle": "ROCm OpenCL and full ROCm suite added to AMD Extras, Helium browser added to Recommended, NVIDIA Extras checkmarks fixed, and VirtualBox Guest Additions updated to 7.2.10.",
+  "wel-rel-2101-added-li1": "<strong>AMD Extras — ROCm OpenCL:</strong> New AMD Extras section in the Drivers tab with OpenCL runtime for AMD GPUs (RDNA1+). Installs rocm-opencl-runtime from the official AMD ROCm 6.4 repository and adds the user to render and video groups. For DaVinci Resolve, Blender HIP and general GPU compute.",
+  "wel-rel-2101-added-li2": "<strong>AMD Extras — ROCm Full Suite:</strong> Full ROCm platform for AI/ML development with PyTorch and TensorFlow on AMD GPU. Several GB download. Both buttons support install/uninstall with checkmark detection.",
+  "wel-rel-2101-added-li3": "<strong>Recommended — Helium browser:</strong> Privacy-focused browser built on Chromium with YouTube integration. Installed from the latest GitHub release .deb (imputnet/helium-linux) via dynamic URL.",
+  "wel-rel-2101-fixed-li1": "<strong>NVIDIA Extras checkmarks:</strong> DaVinci Resolve Extras and Blender CUDA Toolkit buttons now show a checkmark when their packages (nvidia-opencl-icd, nvidia-cuda-toolkit) are installed. Previously they had no state detection.",
+  "wel-rel-2101-fixed-li2": "<strong>LACT removed from Drivers tab:</strong> LACT GPU Control Center was duplicated in both Drivers and Recommended tabs. Removed from Drivers — it belongs in Recommended only.",
+  "wel-rel-2101-fixed-li3": "<strong>VirtualBox Guest Additions updated to 7.2.10:</strong> Replaced bundled VBoxLinuxAdditions.run with the 7.2.10 release.",
+  "wel-rel-2101-fixed-li4": "<strong>Assets permissions normalized:</strong> All files under assets/ set to 644, directories to 755, VBoxLinuxAdditions.run kept at 755.",
+
   "wel-rel-210-title": "2.1.0 — June 2026",
   "wel-rel-210-subtitle": "NVIDIA 610 (Blackwell) driver support added to the Drivers tab, 590 relabelled as Stable, and a new Gaming Mode link on the home screen.",
   "wel-rel-210-added-li1": "<strong>Drivers tab — NVIDIA 610 (Latest):</strong> New driver button for Blackwell and newer hardware (RTX 50/60 series). Installed from the official NVIDIA CUDA repository for Debian 13 (<code>nvidia-driver-pinning-610</code> + <code>cuda-drivers-610</code>).",
@@ -4981,6 +5461,15 @@ Object.assign(window.LANG_EN, {
   "wl-rel-hero-title": "Soplos Welcome Live",
   "wl-rel-hero-subtitle": "Welcome application for Soplos Linux Live — Calamares installer integration and advanced CHROOT system recovery with full BTRFS support for XFCE, KDE Plasma and GNOME.",
 
+  "wl-rel-2024-title": "2.0.2-4 — June 2026",
+  "wl-rel-2024-subtitle": "Language changer now detects the active display manager at runtime instead of assuming a fixed one, resolving a VirtualBox crash cascade on Tyson RC1 after language change.",
+  "wl-rel-2024-fixed-li1": "<strong>Language changer — dynamic display manager detection:</strong> The language changer now uses systemctl is-active to detect the running display manager before restarting it, instead of always using the generic display-manager.service alias. On Tyson RC1 it restarts plasmalogin directly; on beta ISOs still on SDDM it restarts sddm; the generic alias is only used as a last resort. This resolves a bug on VirtualBox where the hot restart caused plasmalogin to show the Breeze wallpaper instead of the Soplos one and triggered a ksplashqml crash cascade on login.",
+
+  "wl-rel-2023-title": "2.0.2-3 — June 2026",
+  "wl-rel-2023-subtitle": "Ghostty set as first-priority terminal in the CHROOT recovery terminal launcher for all three desktop environments, reflecting its role as the default terminal across all three distros in RC1.",
+  "wl-rel-2023-fixed-li1": "<strong>CHROOT terminal launcher — Ghostty priority:</strong> Ghostty is now the first terminal tried in the recovery terminal launcher for XFCE/Tyron, KDE/Tyson and GNOME/Boro, reflecting its role as the default terminal in RC1 across all three distros.",
+  "wl-rel-2023-fixed-li2": "<strong>All 8 locale files updated</strong> to reflect the new terminal hint in the \"no terminal found\" error message.",
+
   "wl-rel-2022-title": "2.0.2-2 — June 2026",
   "wl-rel-2022-subtitle": "Language changer display manager restart fallback now tries <code>plasmalogin</code> before <code>sddm</code> on KDE, ensuring compatibility with both Tyson RC1 and beta users still on SDDM.",
   "wl-rel-2022-fixed-li1": "<strong>Language changer — display manager restart on KDE:</strong> The fallback restart logic now tries <code>plasmalogin</code> before <code>sddm</code>, ensuring compatibility with Tyson RC1 (which uses PLM as display manager) and beta users still running SDDM.",
@@ -5274,6 +5763,11 @@ Object.assign(window.LANG_EN, {
   "sc-rel-breadcrumb": "Soplos Sys Cleaner",
   "sc-rel-hero-title": "Soplos Sys Cleaner",
   "sc-rel-hero-subtitle": "System cleaner for Soplos Linux — remove APT cache, orphaned packages, old kernels, unused firmwares, Flatpak runtimes, Snap revisions, user cache and trash with dual-layer user/administrator scanning.",
+
+  "sc-rel-1027-title": "1.0.2-7 — June 2026",
+  "sc-rel-1027-subtitle": "VirtualBox guest file false positives fixed: guest service files are no longer shown as orphans when running inside a VM, and duplicate entries for <code>98vboxadd-xclient</code> are eliminated.",
+  "sc-rel-1027-fixed-li1": "<strong>VirtualBox (and other hypervisor) guest service files shown as orphans when running inside a VM:</strong> <code>get_orphan_module_refs()</code> was unaware of the current hypervisor guest type. When Boro/Tyron runs inside VirtualBox with Guest Additions installed from the ISO (not via apt), files like <code>vboxadd.service</code>, <code>98vboxadd-xclient</code> and <code>vboxclient.desktop</code> existed on disk without a matching dpkg package, so they were incorrectly reported as orphaned. The function now accepts <code>vm_guest_type</code> (from <code>systemd-detect-virt</code>) and protects all files belonging to the current guest platform: VirtualBox (<code>oracle</code>), VMware (<code>vmware</code>), Hyper-V (<code>microsoft</code>), KVM/QEMU (<code>kvm</code>/<code>qemu</code>).",
+  "sc-rel-1027-fixed-li2": "<strong>Duplicate entries for <code>98vboxadd-xclient</code>:</strong> The file <code>/etc/X11/Xsession.d/98vboxadd-xclient</code> was listed in both <code>virtualbox-guest-x11</code> and <code>virtualbox-guest-utils</code> entries of <code>PKG_AUTOSTART</code>, causing it to appear twice in the orphans list. Added <code>seen_paths</code> deduplication so each file path is reported at most once.",
 
   "sc-rel-1026-title": "1.0.2-6 — June 2026",
   "sc-rel-1026-subtitle": "KVM/QEMU guest tools fix: SPICE packages are now correctly protected when running in a KVM or QEMU virtual machine.",
@@ -5687,6 +6181,10 @@ Object.assign(window.LANG_EN, {
   "rs-rel-hero-title": "Soplos Repo Selector",
   "rs-rel-hero-subtitle": "APT repository manager with real-time search, DEB822 moderniser, mirror speed testing, GPG key management and full 8-language internationalisation.",
 
+  "rs-rel-202-9-title": "2.0.2-9 — June 2026",
+  "rs-rel-202-9-subtitle": "Sources Generator now supports including source packages via a new <code>deb-src</code> checkbox, auto-detected from existing system repositories on startup.",
+  "rs-rel-202-9-added-li1": "<strong>Sources Generator — <code>deb-src</code> checkbox:</strong> New option to include source packages in the generated APT sources file. The checkbox is auto-detected from existing system repositories on startup.",
+
   "rs-rel-202-8-title": "2.0.2-8 — May 2026",
   "rs-rel-202-8-subtitle": "Documentation-only release: version history corrected across the release page, CHANGELOG and forensic audit.",
   "rs-rel-202-8-docs-li1": "<strong>Version history:</strong> All 1.0.x release dates corrected to match the dates extracted from the internal CHANGELOG of each official package. Updated across the release page, CHANGELOG and forensic audit.",
@@ -6043,4 +6541,35 @@ Object.assign(window.LANG_EN, {
 
   "footer-privacy": "Privacy Policy",
   "footer-terms": "Terms of Use",
+
+  "sec-fw-basic-code": "# Enable firewall\nsudo ufw enable\n\n# Check status\nsudo ufw status\n\n# Check detailed status with numbered rules\nsudo ufw status numbered\n\n# Disable firewall\nsudo ufw disable",
+  "sec-fw-allow-code": "# Allow specific port\nsudo ufw allow 22/tcp        # SSH\nsudo ufw allow 80/tcp        # HTTP\nsudo ufw allow 443/tcp       # HTTPS\n\n# Allow port range\nsudo ufw allow 6000:6007/tcp\n\n# Allow from specific IP\nsudo ufw allow from 192.168.1.100\n\n# Allow specific IP to specific port\nsudo ufw allow from 192.168.1.100 to any port 22",
+  "sec-fw-deny-code": "# Deny specific port\nsudo ufw deny 23/tcp         # Telnet\n\n# Deny from specific IP\nsudo ufw deny from 192.168.1.50",
+  "sec-fw-del-code": "# Delete by rule number\nsudo ufw status numbered\nsudo ufw delete 3\n\n# Delete by specification\nsudo ufw delete allow 80/tcp",
+  "sec-fw-app-code": "# List available application profiles\nsudo ufw app list\n\n# Allow application\nsudo ufw allow 'OpenSSH'\nsudo ufw allow 'Apache Full'\n\n# View application info\nsudo ufw app info 'OpenSSH'",
+  "sec-fw-pol-code": "# Set default policies (recommended)\nsudo ufw default deny incoming\nsudo ufw default allow outgoing\n\n# Allow routed packets (for router/gateway)\nsudo ufw default deny routed",
+  "sec-fw-log-code": "# Enable logging\nsudo ufw logging on\n\n# Set log level (low, medium, high, full)\nsudo ufw logging medium\n\n# View firewall logs\nsudo tail -f /var/log/ufw.log",
+  "sec-vpn-proton-code": "# Install ProtonVPN CLI\nwget -q -O - https://repo.protonvpn.com/debian/public_key.asc | sudo gpg --dearmor -o /usr/share/keyrings/protonvpn-archive-keyring.gpg\necho \"deb [signed-by=/usr/share/keyrings/protonvpn-archive-keyring.gpg] https://repo.protonvpn.com/debian stable main\" | sudo tee /etc/apt/sources.list.d/protonvpn.list\nsudo apt update\nsudo apt install proton-vpn-gnome-desktop",
+  "sec-vpn-surfshark-code": "# Install Surfshark\ncurl -f https://downloads.surfshark.com/linux/debian-install.sh | sudo sh",
+  "sec-vpn-mozilla-code": "# Install Mozilla VPN (Flatpak)\nflatpak install flathub org.mozilla.vpn",
+  "sec-av-clam-code": "# Install ClamAV and ClamTK\nsudo apt install clamav clamtk\n\n# Update virus database\nsudo freshclam\n\n# Scan a directory\nclamscan -r ~/Downloads\n\n# Scan and remove infected files\nclamscan -r --remove ~/Downloads",
+  "sec-users-pm-code": "# Install KeePassXC\nsudo apt install keepassxc\n\n# Install Bitwarden (Flatpak)\nflatpak install flathub com.bitwarden.desktop",
+  "sec-users-sudo-code": "# View users with sudo access\ngrep '^sudo:' /etc/group\n\n# Add user to sudo group\nsudo usermod -aG sudo username",
+  "sec-users-lock-code": "# Install fail2ban\nsudo apt install fail2ban\n\n# Check status\nsudo systemctl status fail2ban\n\n# View banned IPs\nsudo fail2ban-client status sshd",
+  "sec-ssh-key-code": "# Generate SSH key (ED25519 is recommended)\nssh-keygen -t ed25519 -C \"your_email@example.com\"\n\n# Copy key to server\nssh-copy-id user@server_ip\n\n# Test connection\nssh user@server_ip",
+  "sec-ssh-conf-cmd-code": "# Edit SSH config\nsudo nano /etc/ssh/sshd_config",
+  "sec-ssh-conf-code": "# Disable root login\nPermitRootLogin no\n\n# Disable password authentication (use keys only)\nPasswordAuthentication no\nChallengeResponseAuthentication no\n\n# Change default port (optional but adds security through obscurity)\nPort 2222\n\n# Allow only specific users\nAllowUsers your_username\n\n# Use Protocol 2 only\nProtocol 2",
+  "sec-ssh-restart-code": "# Restart SSH service\nsudo systemctl restart sshd\n\n# Check SSH status\nsudo systemctl status sshd",
+  "sec-ssh-f2b-cmd-code": "# Install fail2ban\nsudo apt install fail2ban\n\n# Create local config\nsudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local\n\n# Edit configuration\nsudo nano /etc/fail2ban/jail.local",
+  "sec-ssh-f2b-conf-code": "[sshd]\nenabled = true\nport = 22  # Change if you changed SSH port\nmaxretry = 3\nbantime = 3600  # Ban for 1 hour\nfindtime = 600  # 10 minutes window",
+  "sec-hard-srv-code": "# List all running services\nsystemctl list-units --type=service --state=running\n\n# Disable unnecessary service\nsudo systemctl disable service-name\nsudo systemctl stop service-name\n\n# Check service status\nsudo systemctl status service-name",
+  "sec-hard-perm-code": "# Secure home directory\nchmod 750 ~/\n\n# Find files with world-writable permissions\nfind / -perm -002 -type f -ls 2>/dev/null\n\n# Find SUID files (potential security risk)\nfind / -perm /4000 2>/dev/null",
+  "sec-hard-app-code": "# Check AppArmor status\nsudo aa-status\n\n# List profiles\nsudo aa-status --verbose\n\n# Install AppArmor utilities\nsudo apt install apparmor-utils",
+  "sec-enc-gpg-code": "# Install GPG (usually pre-installed)\nsudo apt install gnupg\n\n# Encrypt a file\ngpg -c sensitive_file.txt\n\n# Decrypt a file\ngpg sensitive_file.txt.gpg\n\n# Encrypt with your GPG key\ngpg -e -r your_email@example.com file.txt",
+  "sec-enc-arch-code": "# Create encrypted zip\nzip -e archive.zip file1 file2\n\n# Create encrypted 7z (stronger encryption)\n7z a -p -mhe=on archive.7z files/",
+  "sec-priv-browser-code": "# Install LibreWolf (Flatpak)\nflatpak install flathub io.gitlab.librewolf-community\n\n# Install Brave Origin\ncurl -fsS https://dl.brave.com/install.sh | FLAVOR=origin sh",
+  "sec-priv-dns-code": "# In Firefox settings:\n# Privacy & Security > DNS over HTTPS > Enable\n# Choose provider: Cloudflare or Next DNS",
+  "sec-mon-logs-code": "# View authentication logs\nsudo journalctl -u ssh -f\n\n# Check failed login attempts\nsudo journalctl _SYSTEMD_UNIT=sshd.service | grep \"Failed\"\n\n# View all logs from today\nsudo journalctl --since today\n\n# Check kernel messages\nsudo dmesg | tail",
+  "sec-mon-root-code": "# Install rkhunter\nsudo apt install rkhunter\n\n# Update database\nsudo rkhunter --update\n\n# Run scan\nsudo rkhunter --check\n\n# Install chkrootkit\nsudo apt install chkrootkit\nsudo chkrootkit",
+  "sec-mon-conn-code": "# List active network connections\nsudo ss -tulpn\n\n# Check listening ports\nsudo netstat -tulpn | grep LISTEN\n\n# Show all active connections\nsudo lsof -i",
 });

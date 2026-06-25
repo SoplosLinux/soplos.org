@@ -214,6 +214,57 @@
                                         configurations.</p>
                                 </div>
                             </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q5">What is zRAM and why is it active by default?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-gen-a5-intro">zRAM is a Linux kernel feature that creates a compressed swap space directly in RAM. Instead of writing swap data to a slow disk, it compresses it and keeps it in memory — making the system much more responsive when RAM is under pressure.</p>
+                                    <p id="faq-gen-a5-benefits"><strong>Why Soplos enables it by default:</strong></p>
+                                    <ul>
+                                        <li id="faq-gen-a5-1">Faster than disk-based swap — no I/O bottleneck</li>
+                                        <li id="faq-gen-a5-2">Reduces disk wear on SSDs and eMMC storage</li>
+                                        <li id="faq-gen-a5-3">Noticeably improves responsiveness on systems with 4–8 GB of RAM</li>
+                                        <li id="faq-gen-a5-4">Zero configuration needed — active on first boot</li>
+                                    </ul>
+                                    <p id="faq-gen-a5-outro">zRAM is enabled automatically via <strong>Soplos System Service</strong> on every Soplos variant. You can check its status from the terminal with <code>zramctl</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q6">What is Ghostty and why is it the default terminal?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-gen-a6-intro">Ghostty is a modern, GPU-accelerated terminal emulator focused on performance and correctness. It is the default terminal in all three Soplos variants (Tyron, Tyson and Boro) as of RC1.</p>
+                                    <p id="faq-gen-a6-why"><strong>Why Ghostty:</strong></p>
+                                    <ul>
+                                        <li id="faq-gen-a6-1">GPU rendering — smooth scrolling and zero latency even with heavy output</li>
+                                        <li id="faq-gen-a6-2">Full Unicode and ligature support out of the box</li>
+                                        <li id="faq-gen-a6-3">Native Wayland and X11 support</li>
+                                        <li id="faq-gen-a6-4">Minimal dependencies — fast to start, low on resources</li>
+                                    </ul>
+                                    <p id="faq-gen-a6-outro">You can replace it with any terminal you prefer. Other terminals are available through <strong>Soplos Welcome → Software</strong> or via <code>sudo apt install</code>.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-gen-q7">Why is zsh the default shell instead of bash?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-gen-a7-intro">Soplos uses <strong>zsh</strong> as the default shell because it provides a significantly better interactive experience than bash while remaining fully compatible with bash scripts.</p>
+                                    <ul>
+                                        <li id="faq-gen-a7-1">Smarter tab completion — completes commands, options, file paths and arguments</li>
+                                        <li id="faq-gen-a7-2">Shared command history across terminal sessions</li>
+                                        <li id="faq-gen-a7-3">Spelling correction for mistyped commands</li>
+                                        <li id="faq-gen-a7-4">Powerful globbing and pattern matching</li>
+                                        <li id="faq-gen-a7-5">Extensible via Oh My Zsh and other plugin frameworks</li>
+                                    </ul>
+                                    <p id="faq-gen-a7-outro">If you prefer bash, you can switch anytime with <code>chsh -s /bin/bash</code>.</p>
+                                </div>
+                            </div>
                         </section>
 
                         <!-- Installation -->
@@ -283,6 +334,51 @@
                                         personal files.</p>
                                 </div>
                             </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-inst-q4">Can I use Ventoy to try Soplos Linux?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-inst-a4-intro">Yes. <strong>Ventoy</strong> is fully supported and is the recommended way to try multiple ISOs from a single USB drive. Just copy the Soplos ISO file onto a Ventoy-formatted USB and it will appear in the boot menu automatically.</p>
+                                    <ul>
+                                        <li id="faq-inst-a4-1">No need to re-flash the USB to switch ISOs — just copy or delete files</li>
+                                        <li id="faq-inst-a4-2">Boot any of the three Soplos variants (Tyron, Tyson, Boro) from the same USB</li>
+                                        <li id="faq-inst-a4-3">Available for Windows and Linux from <strong>ventoy.net</strong></li>
+                                    </ul>
+                                    <p id="faq-inst-a4-outro">Ventoy is also listed in the <a href="/wiki/install/">Installation Guide</a> alongside other USB creation tools.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-inst-q5">Can I install Soplos Linux in a virtual machine?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-inst-a5-intro">Yes, all three Soplos variants run well in virtual machines. Recommended settings and supported hypervisors:</p>
+                                    <ul>
+                                        <li id="faq-inst-a5-1"><strong>VirtualBox:</strong> Allocate at least 4 GB RAM and 64 MB video memory. Install VirtualBox Guest Additions from <strong>Soplos Welcome → Drivers → VM Tools</strong> for better resolution and clipboard sharing.</li>
+                                        <li id="faq-inst-a5-2"><strong>VMware (Workstation / Player):</strong> Fully supported. VMware Tools are detected and managed automatically by Soplos Welcome.</li>
+                                        <li id="faq-inst-a5-3"><strong>QEMU/KVM (virt-manager):</strong> Recommended for advanced users. Use the Virtio drivers for best performance. SPICE guest tools are available from Soplos Welcome.</li>
+                                    </ul>
+                                    <p id="faq-inst-a5-outro">3D graphics performance is limited in all VMs. For gaming or GPU-heavy workloads, a bare-metal installation is recommended.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-inst-q6">Is BTRFS the recommended filesystem for installation?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-inst-a6-intro">Yes, BTRFS is the recommended filesystem if you want to use <strong>Timeshift snapshots</strong> and <strong>Grub BTRFS</strong> (boot directly into a snapshot from GRUB). Both tools require BTRFS on the root partition.</p>
+                                    <ul>
+                                        <li id="faq-inst-a6-1"><strong>BTRFS + Timeshift:</strong> Automatic system snapshots before updates — roll back if something breaks</li>
+                                        <li id="faq-inst-a6-2"><strong>BTRFS + Grub BTRFS:</strong> Boot into a previous snapshot directly from the GRUB menu without needing a live USB</li>
+                                        <li id="faq-inst-a6-3"><strong>EXT4:</strong> Also supported and perfectly stable, but not compatible with Timeshift BTRFS snapshots or Grub BTRFS</li>
+                                    </ul>
+                                    <p id="faq-inst-a6-outro">Select BTRFS in the Calamares partitioning step during installation. Timeshift and Grub BTRFS can then be installed from <strong>Soplos Welcome → Security → System Backups</strong>.</p>
+                                </div>
+                            </div>
                         </section>
 
                         <!-- System & Hardware -->
@@ -341,12 +437,14 @@
                                         <li id="faq-sys-a2-1">Open <strong>Soplos Welcome</strong> from the applications
                                             menu</li>
                                         <li id="faq-sys-a2-2">Go to the <strong>Drivers</strong> tab</li>
-                                        <li id="faq-sys-a2-3">In the <strong>Graphics</strong> section, you'll find:
+                                        <li id="faq-sys-a2-3">In the <strong>Graphics</strong> section, select the driver
+                                            for your GPU:
                                             <ul>
-                                                <li id="faq-sys-a2-3-1"><strong>NVIDIA Legacy:</strong> For older
-                                                    graphics cards</li>
-                                                <li id="faq-sys-a2-3-2"><strong>NVIDIA Latest:</strong> For modern
-                                                    graphics cards</li>
+                                                <li id="faq-sys-a2-3-1"><strong>610 / 590 / 580 (RC1 default: 580.159.04):</strong> RTX 5000, RTX 4000, RTX 3000, RTX 2000, GTX 1600 series and newer</li>
+                                                <li id="faq-sys-a2-3-2"><strong>550:</strong> Older GTX 900 / GTX 1000 series still supported by this branch</li>
+                                                <li id="faq-sys-a2-3-3"><strong>470 (Legacy):</strong> GTX 600 / GTX 700 series</li>
+                                                <li id="faq-sys-a2-3-4"><strong>390 (Legacy):</strong> GTX 400 / GTX 500 series</li>
+                                                <li id="faq-sys-a2-3-5"><strong>340 (Legacy):</strong> GeForce 8000 / 9000 / 200 / 300 series</li>
                                             </ul>
                                         </li>
                                         <li id="faq-sys-a2-4">Click the install button next to your appropriate driver
@@ -484,6 +582,31 @@ sudo reboot</code></pre>
                                         you to customize rules according to your needs without technical complexity.</p>
                                 </div>
                             </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q6">How do snapshots work with Timeshift and Grub BTRFS?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a6-intro">Timeshift and Grub BTRFS work together to give you safe, bootable system snapshots:</p>
+                                    <ol>
+                                        <li id="faq-sys-a6-1"><strong>Timeshift creates the snapshot:</strong> It takes a BTRFS snapshot of your root subvolume. Snapshots can be created manually or on a schedule (hourly, daily, weekly).</li>
+                                        <li id="faq-sys-a6-2"><strong>Grub BTRFS detects the snapshot:</strong> After each snapshot, Grub BTRFS automatically adds a new boot entry to GRUB pointing to that snapshot.</li>
+                                        <li id="faq-sys-a6-3"><strong>Booting into a snapshot:</strong> At boot, select <strong>BTRFS Snapshots</strong> in the GRUB menu to see the list of available snapshots and choose one to boot into (read-only).</li>
+                                        <li id="faq-sys-a6-4"><strong>Restoring permanently:</strong> Once booted into the snapshot, open Timeshift and click Restore to make that state permanent.</li>
+                                    </ol>
+                                    <p id="faq-sys-a6-outro">Both tools are available from <strong>Soplos Welcome → Security → System Backups</strong>. BTRFS must be selected as the filesystem during installation.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-sys-q7">Why does Tyson use Plasma Login Manager instead of SDDM?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-sys-a7">Tyson (KDE Plasma) uses <strong>Plasma Login Manager</strong> — the new login manager introduced in KDE Plasma 6.3 as the official successor to SDDM. It provides deeper Plasma integration, a more consistent look and feel with the rest of the desktop, and better Wayland support. Soplos adopted it in RC1 alongside the upgrade to Plasma 6.6.5.</p>
+                                </div>
+                            </div>
                         </section>
 
                         <!-- Software & Applications -->
@@ -567,32 +690,34 @@ sudo reboot</code></pre>
                                 </h4>
                                 <div class="faq-answer">
                                     <p id="faq-soft-a3-intro">Soplos Linux includes several exclusive applications
-                                        accessible through
-                                        <strong>Soplos Welcome</strong>:
+                                        developed in-house:
                                     </p>
                                     <ul>
                                         <li id="faq-soft-a3-1"><strong>Soplos Welcome:</strong> Central hub for system
-                                            configuration,
-                                            software installation, and driver management with 6 comprehensive tabs</li>
-                                        <li id="faq-soft-a3-2"><strong>Soplos GRUB Editor:</strong> Easy bootloader
-                                            customization and theme
-                                            management</li>
+                                            configuration, software installation, driver management, kernel selection,
+                                            security tools and gaming setup — 7 comprehensive tabs</li>
+                                        <li id="faq-soft-a3-2"><strong>Soplos GRUB Editor:</strong> Bootloader
+                                            customization and theme management</li>
                                         <li id="faq-soft-a3-3"><strong>Soplos Plymouth Manager:</strong> Boot splash
-                                            screen customization
-                                            and management</li>
-                                        <li id="faq-soft-a3-4"><strong>Soplos Theme Manager:</strong> System-wide theme
-                                            switching and
-                                            customization</li>
+                                            screen customization</li>
+                                        <li id="faq-soft-a3-4"><strong>Soplos Theme Manager:</strong> Full desktop
+                                            theming — themes, wallpapers, panels, dock and avatar (Tyron/XFCE)</li>
                                         <li id="faq-soft-a3-5"><strong>Soplos Repo Selector:</strong> Repository
-                                            management and mirror
-                                            selection</li>
-                                        <li id="faq-soft-a3-6"><strong>Soplos Docklike:</strong> macOS-style dock panel
-                                            (available in Tyron
-                                            XFCE)</li>
+                                            management, mirror selection and sources generator</li>
+                                        <li id="faq-soft-a3-6"><strong>Soplos Sys Cleaner:</strong> Dual-layer system
+                                            cleaner — APT cache, orphaned packages, old kernels, firmwares,
+                                            Flatpak, Snap and user cache</li>
+                                        <li id="faq-soft-a3-7"><strong>Soplos AppImage Manager:</strong> Install, update
+                                            and remove AppImages from a graphical interface</li>
+                                        <li id="faq-soft-a3-8"><strong>Soplos WebApp Manager:</strong> Convert any
+                                            website into a standalone desktop application</li>
+                                        <li id="faq-soft-a3-9"><strong>Soplos System Service:</strong> Background system
+                                            service that handles automatic tasks on startup</li>
                                     </ul>
-                                    <p id="faq-soft-a3-outro">Additionally, Soplos Welcome provides access to advanced
-                                        kernel management
-                                        (Liquorix, XanMod) and comprehensive hardware driver installation.</p>
+                                    <p id="faq-soft-a3-outro">GRUB Editor, Plymouth Manager and Theme Manager are
+                                        available from the Soplos repositories via Soplos Welcome or Soplos Repo
+                                        Selector. In Tyron (XFCE), Theme Manager is not included in the ISO but can
+                                        be installed from the Soplos repos.</p>
                                 </div>
                             </div>
 
@@ -603,25 +728,54 @@ sudo reboot</code></pre>
                                         Linux?</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p id="faq-soft-a4-intro">Yes! Soplos Welcome includes a dedicated
-                                        <strong>Kernels</strong> tab with
-                                        advanced kernel options:
+                                    <p id="faq-soft-a4-intro">Yes. Soplos Welcome includes a dedicated
+                                        <strong>Kernels</strong> tab with two approaches:
                                     </p>
                                     <ul>
-                                        <li id="faq-soft-a4-1"><strong>Liquorix Kernel:</strong> Low-latency kernel
-                                            optimized for desktop
-                                            performance and gaming</li>
-                                        <li id="faq-soft-a4-2"><strong>XanMod Kernel:</strong> Performance-focused
-                                            kernel with various
-                                            optimization profiles</li>
-                                        <li id="faq-soft-a4-3"><strong>Kernel Management Tools:</strong> Easy
-                                            installation, removal, and
-                                            maintenance of kernel versions</li>
+                                        <li id="faq-soft-a4-1"><strong>Soplos Kernel Installer (SKI):</strong>
+                                            Compiles a custom kernel from source with selectable profiles. Also offers
+                                            prebuilt Soplos kernels from the repository (no compilation required):
+                                            Stock, BORE, BORE+NTSync, NTSync, RT, ZEN — all based on kernel 7.1</li>
+                                        <li id="faq-soft-a4-2"><strong>Liquorix Kernel:</strong> Low-latency kernel
+                                            optimized for desktop performance and gaming</li>
+                                        <li id="faq-soft-a4-3"><strong>XanMod Kernel:</strong> Performance-focused
+                                            kernel with various optimization profiles</li>
                                     </ul>
-                                    <p id="faq-soft-a4-outro">The Kernels tab provides one-click installation and
-                                        automatic configuration,
-                                        making it safe and easy to experiment with different kernel options for optimal
-                                        performance.</p>
+                                    <p id="faq-soft-a4-outro">All options are available from <strong>Soplos Welcome
+                                            → Kernels</strong> with one-click installation and automatic GRUB
+                                        configuration.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-soft-q5">What is Soplos AppImage Manager?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-soft-a5-intro"><strong>Soplos AppImage Manager</strong> is a graphical tool to install, manage and remove AppImage applications on Soplos Linux. AppImages are self-contained Linux applications that run without installation.</p>
+                                    <ul>
+                                        <li id="faq-soft-a5-1">Browse and install AppImages from a curated catalogue</li>
+                                        <li id="faq-soft-a5-2">Automatic desktop integration — icons, launchers and file associations</li>
+                                        <li id="faq-soft-a5-3">Check for and apply updates to installed AppImages</li>
+                                        <li id="faq-soft-a5-4">Clean removal including desktop entries and integration files</li>
+                                    </ul>
+                                    <p id="faq-soft-a5-outro">Available from <strong>Soplos Welcome → Software</strong> or directly from the applications menu. See the <a href="/wiki/applications/soplos-appimage-manager/">AppImage Manager wiki page</a> for full documentation.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-soft-q6">What is Soplos WebApp Manager?</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-soft-a6-intro"><strong>Soplos WebApp Manager</strong> lets you convert any website into a standalone desktop application that launches in its own window, without browser tabs or toolbars.</p>
+                                    <ul>
+                                        <li id="faq-soft-a6-1">Creates a dedicated desktop entry and icon for the web app</li>
+                                        <li id="faq-soft-a6-2">Launches in a minimal browser window — no tabs, no address bar</li>
+                                        <li id="faq-soft-a6-3">Works with any URL: web tools, SaaS apps, streaming services</li>
+                                        <li id="faq-soft-a6-4">Choose which browser engine to use as the backend</li>
+                                    </ul>
+                                    <p id="faq-soft-a6-outro">Available from the applications menu on all three Soplos variants. See the <a href="/wiki/applications/soplos-webapp-manager/">WebApp Manager wiki page</a> for details.</p>
                                 </div>
                             </div>
                         </section>
@@ -760,6 +914,40 @@ sudo reboot</code></pre>
                                     <p id="faq-trouble-a3-outro">If problems persist, use our <a
                                             href="../install/#troubleshooting">installation
                                             troubleshooting guide</a>.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-trouble-q4">Black screen on boot with an NVIDIA GPU</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-trouble-a4-intro">A black screen after boot with an NVIDIA GPU usually means the proprietary driver is not installed. Follow these steps:</p>
+                                    <ol>
+                                        <li id="faq-trouble-a4-1">At the GRUB menu, press <strong>E</strong> to edit the boot entry</li>
+                                        <li id="faq-trouble-a4-2">Find the line starting with <code>linux</code> and add <code>nomodeset</code> at the end</li>
+                                        <li id="faq-trouble-a4-3">Press <strong>F10</strong> to boot — you should reach the desktop</li>
+                                        <li id="faq-trouble-a4-4">Open <strong>Soplos Welcome → Drivers → Graphics</strong> and install the NVIDIA driver that matches your GPU</li>
+                                        <li id="faq-trouble-a4-5">Reboot — the system will now use the proprietary driver and the black screen will not return</li>
+                                    </ol>
+                                    <p id="faq-trouble-a4-outro">If you are unsure which driver to install, the Drivers tab detects your GPU model automatically and highlights the recommended option.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <h4 class="faq-question">
+                                    <i class="fas fa-chevron-right"></i> <span id="faq-trouble-q5">GRUB does not appear after installing in dual boot</span>
+                                </h4>
+                                <div class="faq-answer">
+                                    <p id="faq-trouble-a5-intro">If the system boots directly into Windows or the GRUB menu does not appear after a dual-boot installation, the GRUB bootloader may need to be repaired. The easiest way is using <strong>Soplos Welcome Live</strong>:</p>
+                                    <ol>
+                                        <li id="faq-trouble-a5-1">Boot from the Soplos Linux USB (live session)</li>
+                                        <li id="faq-trouble-a5-2">Open <strong>Soplos Welcome Live</strong> from the desktop</li>
+                                        <li id="faq-trouble-a5-3">Go to the <strong>Repair</strong> tab and select <strong>Repair GRUB</strong></li>
+                                        <li id="faq-trouble-a5-4">Select your installed Soplos partition and confirm</li>
+                                        <li id="faq-trouble-a5-5">Reboot — GRUB should now appear with both Soplos and Windows entries</li>
+                                    </ol>
+                                    <p id="faq-trouble-a5-outro">This also fixes cases where a Windows update overwrote the GRUB bootloader after dual-boot was already working.</p>
                                 </div>
                             </div>
                         </section>

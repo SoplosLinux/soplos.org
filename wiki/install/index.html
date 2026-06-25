@@ -128,9 +128,10 @@
                             <li><a href="#download" id="inst-toc-3">Download Soplos Linux</a></li>
                             <li><a href="#create-media" id="inst-toc-4">Create Installation Media</a></li>
                             <li><a href="#installation" id="inst-toc-5">Boot & Installation Process</a></li>
-                            <li><a href="#dual-boot" id="inst-toc-6">Dual Boot Guide</a></li>
-                            <li><a href="#first-boot" id="inst-toc-7">First Boot</a></li>
-                            <li><a href="#troubleshooting" id="inst-toc-8">Troubleshooting</a></li>
+                            <li><a href="#virtual-machines" id="inst-toc-6">Virtual Machines</a></li>
+                            <li><a href="#dual-boot" id="inst-toc-7">Dual Boot Guide</a></li>
+                            <li><a href="#first-boot" id="inst-toc-8">First Boot</a></li>
+                            <li><a href="#troubleshooting" id="inst-toc-9">Troubleshooting</a></li>
                         </ul>
                     </aside>
 
@@ -248,11 +249,11 @@
                                         for older hardware or
                                         users who prefer simplicity.</p>
                                     <div class="download-details">
-                                        <span class="file-size">~2.9 GB ISO</span>
+                                        <span class="file-size">~3.4 GB ISO</span>
                                         <span class="checksum">SHA256:
-                                            cec305e85f927c0abec5629a4ec3c29fdf5b92a781c653d191cb33119d6fa749</span>
+                                            f07d9085f810e8e6b69aed4cb12052c9965c805d6edb6093058684f3b4eee2a9</span>
                                     </div>
-                                    <a href="https://sourceforge.net/projects/soplos-linux/files/soplos-linux-tyron-beta-1.0.4.iso/download"
+                                    <a href="https://sourceforge.net/projects/soplos-linux/files/soplos-linux-tyron-rc1.iso/download"
                                         class="btn btn-primary" target="_blank">
                                         <i class="fas fa-download"></i> <span id="inst-dl-btn-tyron">Download
                                             Tyron</span>
@@ -265,11 +266,11 @@
                                         beautiful animations and
                                         advanced customization.</p>
                                     <div class="download-details">
-                                        <span class="file-size">~3.6 GB ISO</span>
+                                        <span class="file-size">~3.9 GB ISO</span>
                                         <span class="checksum">SHA256:
-                                            a61e4163978fd2ae5fab749f38a7e75e802fa29c0e718d15f3a7fce02999e01f</span>
+                                            ffe4615f1650c69c8b397adea5dfa60c90c4e2472ea880a70712de3743efd076</span>
                                     </div>
-                                    <a href="https://sourceforge.net/projects/soplos-linux-tyson/files/soplos-linux-tyson-beta-1.0.4.iso/download"
+                                    <a href="https://sourceforge.net/projects/soplos-linux-tyson/files/soplos-linux-tyson-rc1.iso/download"
                                         class="btn btn-primary" target="_blank">
                                         <i class="fas fa-download"></i> <span id="inst-dl-btn-tyson">Download
                                             Tyson</span>
@@ -282,11 +283,11 @@
                                         and polished for
                                         productivity.</p>
                                     <div class="download-details">
-                                        <span class="file-size">~3.3 GB ISO</span>
+                                        <span class="file-size">~3.6 GB ISO</span>
                                         <span class="checksum">SHA256:
-                                            cc93d4205d57559cda011c2860cda9797069c58031d3d459a1c371e0a7926dd6</span>
+                                            7f4865f3befe1ed5ccfc6ebf8744147e95216fb7bfedef3a12848deab5322dd7</span>
                                     </div>
-                                    <a href="https://sourceforge.net/projects/soplos-linux-boro/files/soplos-linux-boro-beta-1.0.4.iso/download"
+                                    <a href="https://sourceforge.net/projects/soplos-linux-boro/files/soplos-linux-boro-rc1.iso/download"
                                         class="btn btn-primary" target="_blank">
                                         <i class="fas fa-download"></i> <span id="inst-dl-btn-boro">Download Boro</span>
                                     </a>
@@ -308,22 +309,29 @@
                             <h2><i class="fab fa-usb"></i> <span id="inst-media-title">Create Installation Media</span>
                             </h2>
 
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="inst-media-ventoy-label">Ventoy (Recommended for multiboot):</strong> <span id="inst-media-ventoy-text">Ventoy lets you copy multiple ISO files to a single USB drive without reflashing. Just drop the ISO into the Ventoy USB and boot. Available for Windows and Linux.</span>
+                                </div>
+                            </div>
+
                             <h3 id="inst-media-tools-title">Recommended Tools</h3>
                             <div class="tools-grid">
                                 <div class="tool-card">
                                     <h4><i class="fab fa-windows"></i> Windows</h4>
                                     <ul>
-                                        <li id="inst-media-win-1"><strong>Rufus</strong> (Recommended)</li>
-                                        <li id="inst-media-win-2">Balena Etcher</li>
-                                        <li id="inst-media-win-3">Windows Media Creation Tool</li>
+                                        <li id="inst-media-win-1"><strong>Ventoy</strong> (Recommended, multiboot)</li>
+                                        <li id="inst-media-win-2"><strong>Rufus</strong></li>
+                                        <li id="inst-media-win-3">Balena Etcher</li>
                                     </ul>
                                 </div>
                                 <div class="tool-card">
                                     <h4><i class="fab fa-linux"></i> Linux</h4>
                                     <ul>
-                                        <li id="inst-media-lin-1"><strong>dd command</strong> (Advanced users)</li>
+                                        <li id="inst-media-lin-1"><strong>Ventoy</strong> (Recommended, multiboot)</li>
                                         <li id="inst-media-lin-2">Balena Etcher</li>
-                                        <li id="inst-media-lin-3">GNOME Disks</li>
+                                        <li id="inst-media-lin-3"><strong>dd command</strong> (Advanced users)</li>
                                     </ul>
                                 </div>
                                 <div class="tool-card">
@@ -487,6 +495,8 @@
                                             <li id="inst-boot-step7-3"><strong>Alongside existing OS:</strong> Dual-boot
                                                 configuration (if
                                                 applicable)</li>
+                                            <li id="inst-boot-step7-4"><strong>Encrypt disk:</strong> Full-disk encryption
+                                                with LUKS — you will be prompted for a passphrase on every boot</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -501,6 +511,8 @@
                                                 Approximately 4 minutes</li>
                                             <li id="inst-boot-step8-2"><strong>Soplos Tyson (Plasma):</strong>
                                                 Approximately 6-8 minutes</li>
+                                            <li id="inst-boot-step8-3"><strong>Soplos Boro (GNOME):</strong>
+                                                Approximately 5-6 minutes</li>
                                         </ul>
                                         <p id="inst-boot-step8-note"><em>These times are based on testing with
                                                 14-year-old hardware, so
@@ -512,12 +524,64 @@
                                 </div>
                             </div>
 
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong id="inst-boot-btrfs-label">BTRFS recommended:</strong> <span id="inst-boot-btrfs-text">When using manual partitioning, selecting BTRFS as the filesystem for the root partition enables Timeshift snapshots and grub-btrfs integration — allowing the system to boot directly from a snapshot via GRUB if something goes wrong.</span>
+                                </div>
+                            </div>
+
                             <div class="info-box success">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
                                     <strong id="inst-boot-tools-label">Additional Tools:</strong> <span
                                         id="inst-boot-tools-text">Soplos Welcome Live also provides system recovery
                                         tools (ChRoot environment) and GParted integration for advanced users.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Virtual Machines -->
+                        <section id="virtual-machines" class="content-section">
+                            <h2><i class="fas fa-server"></i> <span id="inst-vm-title">Virtual Machines</span></h2>
+                            <p id="inst-vm-intro">Soplos Linux runs well in virtual machines for testing or development. Note that 3D acceleration and GPU-intensive applications will have limited performance inside a VM.</p>
+
+                            <div class="troubleshooting-grid">
+                                <div class="trouble-card">
+                                    <h4 id="inst-vm-vbox-title"><i class="fas fa-box"></i> VirtualBox</h4>
+                                    <ul>
+                                        <li id="inst-vm-vbox-1">RAM: 4 GB minimum, 8 GB recommended</li>
+                                        <li id="inst-vm-vbox-2">Video memory: 128 MB, enable 3D acceleration</li>
+                                        <li id="inst-vm-vbox-3">Storage: VDI dynamically allocated, 40 GB+</li>
+                                        <li id="inst-vm-vbox-4">Install VirtualBox Guest Additions from Soplos Welcome (Drivers tab) for clipboard sharing and auto-resize</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-vm-vmware-title"><i class="fas fa-cloud"></i> VMware</h4>
+                                    <ul>
+                                        <li id="inst-vm-vmware-1">RAM: 4 GB minimum, 8 GB recommended</li>
+                                        <li id="inst-vm-vmware-2">Enable 3D graphics acceleration in VM settings</li>
+                                        <li id="inst-vm-vmware-3">Install VMware Tools from Soplos Welcome (Drivers tab) for best integration</li>
+                                        <li id="inst-vm-vmware-4">Use UEFI firmware for best compatibility</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-vm-qemu-title"><i class="fas fa-terminal"></i> QEMU/KVM</h4>
+                                    <ul>
+                                        <li id="inst-vm-qemu-1">Recommended for advanced users on Linux hosts</li>
+                                        <li id="inst-vm-qemu-2">Use virtio drivers for best disk and network performance</li>
+                                        <li id="inst-vm-qemu-3">Install QEMU Guest Agent from Soplos Welcome (Drivers tab)</li>
+                                        <li id="inst-vm-qemu-4">Virt-Manager provides a graphical interface for VM management</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong id="inst-vm-warn-label">3D Performance:</strong> <span id="inst-vm-warn-text">GPU-accelerated applications, compositing effects, and gaming will have limited performance inside a virtual machine. For full performance install on real hardware.</span>
                                 </div>
                             </div>
                         </section>
@@ -572,46 +636,60 @@
                         <section id="first-boot" class="content-section">
                             <h2><i class="fas fa-rocket"></i> <span id="inst-first-title">First Boot</span></h2>
 
-                            <p id="inst-first-intro">Congratulations! You've successfully installed Soplos Linux. Here's
-                                what happens next:
-                            </p>
+                            <p id="inst-first-intro">Congratulations. You have successfully installed Soplos Linux. Here is what to do next:</p>
 
                             <div class="first-boot-steps">
                                 <div class="boot-step">
-                                    <h4 id="inst-first-step1-title"><i class="fas fa-power-off"></i> Restart Your
-                                        Computer</h4>
-                                    <p id="inst-first-step1-desc">Remove the USB drive and restart your computer. Soplos
-                                        Linux should boot
-                                        automatically.</p>
+                                    <h4 id="inst-first-step1-title"><i class="fas fa-power-off"></i> Restart Your Computer</h4>
+                                    <p id="inst-first-step1-desc">Remove the USB drive and restart your computer. Soplos Linux should boot automatically.</p>
                                 </div>
 
                                 <div class="boot-step">
-                                    <h4 id="inst-first-step2-title"><i class="fas fa-user"></i> Login</h4>
-                                    <p id="inst-first-step2-desc">Use the username and password you created during
-                                        installation to log in.</p>
+                                    <h4 id="inst-first-step2-title"><i class="fas fa-user"></i> Log in</h4>
+                                    <p id="inst-first-step2-desc">Use the username and password you created during installation to log in.</p>
                                 </div>
 
                                 <div class="boot-step">
                                     <h4 id="inst-first-step3-title"><i class="fas fa-magic"></i> Welcome Screen</h4>
-                                    <p id="inst-first-step3-desc">The Soplos Welcome application will guide you through
-                                        initial setup and
-                                        customization.</p>
+                                    <p id="inst-first-step3-desc">The Soplos Welcome application opens automatically on first boot and guides you through initial setup.</p>
                                 </div>
 
                                 <div class="boot-step">
                                     <h4 id="inst-first-step4-title"><i class="fas fa-sync"></i> System Updates</h4>
-                                    <p id="inst-first-step4-desc">Check for and install system updates to ensure you
-                                        have the latest features and
-                                        security patches.</p>
+                                    <p id="inst-first-step4-desc">Run system updates before anything else. Open a terminal and run <code>sudo apt update && sudo apt upgrade</code>, or use the Update button in Soplos Welcome.</p>
+                                </div>
+
+                                <div class="boot-step">
+                                    <h4 id="inst-first-step5-title"><i class="fas fa-shield-alt"></i> Install Timeshift First</h4>
+                                    <p id="inst-first-step5-desc">Before making any major changes, go to the <strong>Security</strong> tab in Soplos Welcome and install Timeshift. This creates system snapshots so you can roll back if something goes wrong.</p>
                                 </div>
                             </div>
+
+                            <h3 id="inst-first-welcome-title">Soplos Welcome Tabs</h3>
+                            <p id="inst-first-welcome-intro">Soplos Welcome organizes everything you need into dedicated tabs:</p>
+                            <ul>
+                                <li id="inst-first-welcome-1"><strong>Software</strong> — Browse and install applications by category: Browsers, Communication, Development, Graphics, Multimedia, Office, Gaming, Utilities</li>
+                                <li id="inst-first-welcome-2"><strong>Recommended</strong> — Curated app selections tailored for your desktop environment</li>
+                                <li id="inst-first-welcome-3"><strong>Drivers</strong> — Hardware detection and driver installation for NVIDIA, AMD, Wi-Fi, Bluetooth, printers and VM tools</li>
+                                <li id="inst-first-welcome-4"><strong>Kernels</strong> — Install and manage alternative kernels via soplos-kernel-installer</li>
+                                <li id="inst-first-welcome-5"><strong>Security</strong> — Timeshift snapshots, grub-btrfs and BTRFS Assistant for system backup and recovery</li>
+                                <li id="inst-first-welcome-6"><strong>Customization</strong> — soplos-theme-manager, soplos-grub-editor and soplos-plymouth-manager</li>
+                                <li id="inst-first-welcome-7"><strong>Gaming</strong> — GameMode, Performance Mode, MangoHud, GPU optimization and CPU power profiles</li>
+                            </ul>
+
+                            <h3 id="inst-first-rc1-title">New in RC1</h3>
+                            <ul>
+                                <li id="inst-first-rc1-1"><strong>zsh as default shell</strong> — Soplos ships a custom <code>.zshrc</code> with useful aliases, autocompletion and a clean prompt. Your existing bash knowledge applies; syntax is nearly identical for everyday use.</li>
+                                <li id="inst-first-rc1-2"><strong>Ghostty as default terminal</strong> — A GPU-accelerated terminal with excellent performance and a minimal interface. Launch it from the taskbar or with your keyboard shortcut.</li>
+                                <li id="inst-first-rc1-3"><strong>zRAM enabled by default</strong> — Compressed swap in RAM. This improves responsiveness on systems with limited memory by reducing pressure before the system has to use disk swap.</li>
+                            </ul>
 
                             <div class="info-box success">
                                 <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <strong id="inst-first-success-label">Success!</strong> <span
-                                        id="inst-first-success-text">You're now running Soplos Linux. Check out our <a
-                                            href="../start/">First Steps guide</a> for tips on getting started.</span>
+                                    <strong id="inst-first-success-label">All set.</strong> <span
+                                        id="inst-first-success-text">Check out the <a
+                                            href="../start/">First Steps guide</a> for more tips on getting the most out of Soplos Linux.</span>
                                 </div>
                             </div>
                         </section>
@@ -659,6 +737,36 @@
                                         <li id="inst-trouble-stor-2">Check if hard drive is healthy</li>
                                         <li id="inst-trouble-stor-3">Try manual partitioning</li>
                                         <li id="inst-trouble-stor-4">Disable fast startup on Windows (dual boot)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-nvidia-title"><i class="fas fa-tv"></i> Black Screen (NVIDIA)</h4>
+                                    <ul>
+                                        <li id="inst-trouble-nvidia-1">Boot in recovery mode or safe graphics mode from GRUB</li>
+                                        <li id="inst-trouble-nvidia-2">Open Soplos Welcome and go to the Drivers tab</li>
+                                        <li id="inst-trouble-nvidia-3">Use "Scan Hardware" to detect your GPU and install the recommended NVIDIA driver</li>
+                                        <li id="inst-trouble-nvidia-4">Reboot after driver installation</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-wifi-title"><i class="fas fa-wifi"></i> Wi-Fi Not Detected</h4>
+                                    <ul>
+                                        <li id="inst-trouble-wifi-1">Connect via Ethernet temporarily</li>
+                                        <li id="inst-trouble-wifi-2">Open Soplos Welcome, go to the Drivers tab</li>
+                                        <li id="inst-trouble-wifi-3">Use "Scan Hardware" or manually install your Wi-Fi firmware (Intel, Realtek or Broadcom)</li>
+                                        <li id="inst-trouble-wifi-4">Use "Repair Wi-Fi" if the adapter was working before but stopped after a reboot</li>
+                                    </ul>
+                                </div>
+
+                                <div class="trouble-card">
+                                    <h4 id="inst-trouble-grub-title"><i class="fas fa-cogs"></i> GRUB Not Showing (Dual Boot)</h4>
+                                    <ul>
+                                        <li id="inst-trouble-grub-1">Boot from the Soplos Linux USB</li>
+                                        <li id="inst-trouble-grub-2">Open Soplos Welcome Live and use the ChRoot recovery tool</li>
+                                        <li id="inst-trouble-grub-3">From the chroot environment, run <code>grub-install</code> and <code>update-grub</code></li>
+                                        <li id="inst-trouble-grub-4">On UEFI systems, check that the Soplos entry exists in your firmware boot order</li>
                                     </ul>
                                 </div>
                             </div>

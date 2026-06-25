@@ -116,6 +116,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2024" class="toc-link">2.0.2-4 <span class="toc-date">— 2026-06-24</span></a></li>
+                            <li><a href="#v2023" class="toc-link">2.0.2-3 <span class="toc-date">— 2026-06-23</span></a></li>
                             <li><a href="#v2022" class="toc-link">2.0.2-2 <span class="toc-date">— 2026-06-22</span></a></li>
                             <li><a href="#v202" class="toc-link">2.0.2 <span class="toc-date">— 2026-03-31</span></a></li>
                             <li><a href="#v201-1" class="toc-link">2.0.1-1 <span class="toc-date">— 2026-03-21</span></a></li>
@@ -155,6 +157,35 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.2-4 -->
+                        <section id="v2024" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-2024-title">2.0.2-4 — June 2026</span></h2>
+                            <p id="wl-rel-2024-subtitle" class="lead">Language changer now detects the active display manager at runtime instead of assuming a fixed one, resolving a VirtualBox crash cascade on Tyson RC1 after language change.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-2024-fixed-li1"><strong>Language changer — dynamic display manager detection:</strong> The language changer now uses <code>systemctl is-active</code> to detect the running display manager before restarting it, instead of always using the generic <code>display-manager.service</code> alias. On Tyson RC1 it restarts <code>plasmalogin</code> directly; on beta ISOs still on SDDM it restarts <code>sddm</code>; the generic alias is only used as a last resort. This resolves a bug on VirtualBox where the hot restart caused plasmalogin to show the Breeze wallpaper instead of the Soplos one and triggered a ksplashqml crash cascade on login.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.0.2-3 -->
+                        <section id="v2023" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wl-rel-2023-title">2.0.2-3 — June 2026</span></h2>
+                            <p id="wl-rel-2023-subtitle" class="lead">Ghostty set as first-priority terminal in the CHROOT recovery terminal launcher for all three desktop environments, reflecting its role as the default terminal across all three distros in RC1.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wl-rel-2023-fixed-li1"><strong>CHROOT terminal launcher — Ghostty priority:</strong> Ghostty is now the first terminal tried in the recovery terminal launcher for XFCE/Tyron, KDE/Tyson and GNOME/Boro, reflecting its role as the default terminal in RC1 across all three distros.</li>
+                                <li id="wl-rel-2023-fixed-li2"><strong>All 8 locale files updated</strong> to reflect the new terminal hint in the "no terminal found" error message.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.2-2 -->
                         <section id="v2022" class="content-section">

@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                                <li><a href="#v1027" class="toc-link">1.0.2-7 <span class="toc-date">— 2026-06-24</span></a></li>
                                 <li><a href="#v1026" class="toc-link">1.0.2-6 <span class="toc-date">— 2026-06-14</span></a></li>
                                 <li><a href="#v1025" class="toc-link">1.0.2-5 <span class="toc-date">— 2026-06-12</span></a></li>
                             <li><a href="#v1024" class="toc-link">1.0.2-4 <span class="toc-date">— 2026-06-09</span></a></li>
@@ -130,6 +131,21 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-7 -->
+                        <section id="v1027" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-1027-title">1.0.2-7 — June 2026</span></h2>
+                            <p id="sc-rel-1027-subtitle" class="lead">VirtualBox guest file false positives fixed: guest service files are no longer shown as orphans when running inside a VM, and duplicate entries for <code>98vboxadd-xclient</code> are eliminated.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-1027-fixed-li1"><strong>VirtualBox (and other hypervisor) guest service files shown as orphans when running inside a VM:</strong> <code>get_orphan_module_refs()</code> was unaware of the current hypervisor guest type. When Boro/Tyron runs inside VirtualBox with Guest Additions installed from the ISO (not via apt), files like <code>vboxadd.service</code>, <code>98vboxadd-xclient</code> and <code>vboxclient.desktop</code> existed on disk without a matching dpkg package, so they were incorrectly reported as orphaned. The function now accepts <code>vm_guest_type</code> (from <code>systemd-detect-virt</code>) and protects all files belonging to the current guest platform: VirtualBox (<code>oracle</code>), VMware (<code>vmware</code>), Hyper-V (<code>microsoft</code>), KVM/QEMU (<code>kvm</code>/<code>qemu</code>).</li>
+                                <li id="sc-rel-1027-fixed-li2"><strong>Duplicate entries for <code>98vboxadd-xclient</code>:</strong> The file <code>/etc/X11/Xsession.d/98vboxadd-xclient</code> was listed in both <code>virtualbox-guest-x11</code> and <code>virtualbox-guest-utils</code> entries of <code>PKG_AUTOSTART</code>, causing it to appear twice in the orphans list. Added <code>seen_paths</code> deduplication so each file path is reported at most once.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-6 -->
                         <section id="v1026" class="content-section">

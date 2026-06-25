@@ -125,9 +125,14 @@
                         <h3 id="sec-toc-title">Contents</h3>
                         <ul>
                             <li><a href="#intro" id="sec-toc-1">Introduction</a></li>
+                            <li><a href="#welcome" id="sec-toc-welcome">Soplos Welcome</a></li>
                             <li><a href="#fundamentals" id="sec-toc-2">Security Fundamentals</a></li>
                             <li><a href="#sec-firewall-section" id="sec-toc-3">Firewall (UFW)</a></li>
-                            <li><a href="#gufw" id="sec-toc-4">Graphical Firewall</a></li>
+                            <li><a href="#gufw" id="sec-toc-4">Graphical Firewall & Portmaster</a></li>
+                            <li><a href="#vpn" id="sec-toc-vpn">VPN</a></li>
+                            <li><a href="#antivirus" id="sec-toc-av">Antivirus</a></li>
+                            <li><a href="#backups" id="sec-toc-backups">System Backups</a></li>
+                            <li><a href="#cleaning" id="sec-toc-cleaning">System Cleaning</a></li>
                             <li><a href="#users" id="sec-toc-5">User Security</a></li>
                             <li><a href="#ssh" id="sec-toc-6">SSH Security</a></li>
                             <li><a href="#auto-updates" id="sec-toc-7">Auto Updates</a></li>
@@ -156,6 +161,25 @@
                                 protect your system
                                 against
                                 common threats and vulnerabilities.</p>
+                        </section>
+
+                        <section id="welcome" class="content-section">
+                            <h2><i class="fas fa-hand-holding-heart"></i> <span id="sec-welcome-title">Soplos Welcome — Security Tab</span></h2>
+                            <p id="sec-welcome-p">Soplos Welcome includes a dedicated <strong>Security</strong> tab that lets you install and manage the most important security tools with a single click. No terminal required.</p>
+                            <p id="sec-welcome-open">Open Soplos Welcome from the application menu and navigate to the <strong>Security</strong> tab. The following tool groups are available:</p>
+                            <ul>
+                                <li id="sec-welcome-g1"><strong id="sec-welcome-g1-label">System Backups:</strong> <span id="sec-welcome-g1-desc">Timeshift, Grub BTRFS, Deja Dup, BTRFS Assistant</span></li>
+                                <li id="sec-welcome-g2"><strong id="sec-welcome-g2-label">Firewall:</strong> <span id="sec-welcome-g2-desc">UFW (command-line) and GUFW (graphical interface)</span></li>
+                                <li id="sec-welcome-g3"><strong id="sec-welcome-g3-label">VPN:</strong> <span id="sec-welcome-g3-desc">ProtonVPN, Surfshark, Mozilla VPN</span></li>
+                                <li id="sec-welcome-g4"><strong id="sec-welcome-g4-label">System Cleaning:</strong> <span id="sec-welcome-g4-desc">BleachBit, Stacer, Soplos Sys Cleaner</span></li>
+                                <li id="sec-welcome-g5"><strong id="sec-welcome-g5-label">Antivirus:</strong> <span id="sec-welcome-g5-desc">ClamTK, ClamUI, rkhunter</span></li>
+                            </ul>
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="sec-welcome-tip"><strong>Recommended first step:</strong> after installing Soplos, open Welcome and install Timeshift from the Security tab before making any other changes to the system.</span>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="fundamentals" class="content-section">
@@ -233,7 +257,7 @@
                             <h3 id="sec-fw-basic-h">Basic UFW Commands</h3>
                             <div class="code-example">
                                 <h4 id="sec-fw-basic-term">Terminal</h4>
-                                <pre><code># Enable firewall
+                                <pre><code id="sec-fw-basic-code"># Enable firewall
 sudo ufw enable
 
 # Check status
@@ -250,7 +274,7 @@ sudo ufw disable</code></pre>
                             <h4 id="sec-fw-allow-h">Allow Connections</h4>
                             <div class="code-example">
                                 <h4 id="sec-fw-allow-term">Terminal</h4>
-                                <pre><code># Allow specific port
+                                <pre><code id="sec-fw-allow-code"># Allow specific port
 sudo ufw allow 22/tcp        # SSH
 sudo ufw allow 80/tcp        # HTTP
 sudo ufw allow 443/tcp       # HTTPS
@@ -268,7 +292,7 @@ sudo ufw allow from 192.168.1.100 to any port 22</code></pre>
                             <h4 id="sec-fw-deny-h">Deny Connections</h4>
                             <div class="code-example">
                                 <h4 id="sec-fw-deny-term">Terminal</h4>
-                                <pre><code># Deny specific port
+                                <pre><code id="sec-fw-deny-code"># Deny specific port
 sudo ufw deny 23/tcp         # Telnet
 
 # Deny from specific IP
@@ -278,7 +302,7 @@ sudo ufw deny from 192.168.1.50</code></pre>
                             <h4 id="sec-fw-del-h">Delete Rules</h4>
                             <div class="code-example">
                                 <h4 id="sec-fw-del-term">Terminal</h4>
-                                <pre><code># Delete by rule number
+                                <pre><code id="sec-fw-del-code"># Delete by rule number
 sudo ufw status numbered
 sudo ufw delete 3
 
@@ -290,7 +314,7 @@ sudo ufw delete allow 80/tcp</code></pre>
                             <p id="sec-fw-app-p">UFW includes predefined profiles for common applications:</p>
                             <div class="code-example">
                                 <h4 id="sec-fw-app-term">Terminal</h4>
-                                <pre><code># List available application profiles
+                                <pre><code id="sec-fw-app-code"># List available application profiles
 sudo ufw app list
 
 # Allow application
@@ -304,7 +328,7 @@ sudo ufw app info 'OpenSSH'</code></pre>
                             <h3 id="sec-fw-pol-h">Default Policies</h3>
                             <div class="code-example">
                                 <h4 id="sec-fw-pol-term">Terminal</h4>
-                                <pre><code># Set default policies (recommended)
+                                <pre><code id="sec-fw-pol-code"># Set default policies (recommended)
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 
@@ -315,7 +339,7 @@ sudo ufw default deny routed</code></pre>
                             <h3 id="sec-fw-log-h">Logging</h3>
                             <div class="code-example">
                                 <h4 id="sec-fw-log-term">Terminal</h4>
-                                <pre><code># Enable logging
+                                <pre><code id="sec-fw-log-code"># Enable logging
 sudo ufw logging on
 
 # Set log level (low, medium, high, full)
@@ -361,6 +385,132 @@ sudo tail -f /var/log/ufw.log</code></pre>
                                 default,
                                 significantly
                                 improving your security.</p>
+
+                            <div class="subsection-header">
+                                <h3 id="sec-portmaster-h"><i class="fas fa-network-wired"></i> Portmaster</h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <p id="sec-portmaster-p">Portmaster is an application-level firewall that monitors and controls network connections per application. Unlike UFW which filters ports, Portmaster lets you allow or block internet access for each individual application.</p>
+                            <p id="sec-portmaster-install">Install from <strong>Soplos Welcome → Security → Firewall → Portmaster</strong>, or manually:</p>
+                            <div class="code-example">
+                                <h4 id="sec-portmaster-term">Terminal</h4>
+                                <pre><code>VERSION=$(curl -s https://updates.safing.io/stable.v3.json | python3 -c "import json,sys; print(json.load(sys.stdin)['Version'])")
+wget -O /tmp/portmaster.deb "https://updates.safing.io/latest/linux_amd64/packages/Portmaster_${VERSION}_amd64.deb"
+sudo apt install /tmp/portmaster.deb</code></pre>
+                            </div>
+                            <div class="info-box warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <span id="sec-portmaster-warn">Do not run Portmaster and UFW at the same time. Both control the netfilter firewall rules and will conflict. Choose one or the other.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="vpn" class="content-section">
+                            <h2><i class="fas fa-network-wired"></i> <span id="sec-vpn-title">VPN</span></h2>
+                            <p id="sec-vpn-intro">A VPN (Virtual Private Network) encrypts your internet traffic and hides your IP address. It is especially recommended when using public Wi-Fi or when you want to protect your privacy online.</p>
+                            <p id="sec-vpn-welcome">All three VPN clients below can be installed directly from <strong>Soplos Welcome → Security → VPN</strong>:</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-lock"></i> ProtonVPN</h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <p id="sec-vpn-proton-p">Privacy-focused VPN from the team behind ProtonMail. Offers a free tier with unlimited bandwidth, a strict no-logs policy, and open-source clients. Installed via the official ProtonVPN repository.</p>
+                            <div class="code-example">
+                                <h4 id="sec-vpn-proton-term">Terminal</h4>
+                                <pre><code id="sec-vpn-proton-code"># Install ProtonVPN CLI
+wget -q -O - https://repo.protonvpn.com/debian/public_key.asc | sudo gpg --dearmor -o /usr/share/keyrings/protonvpn-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/protonvpn-archive-keyring.gpg] https://repo.protonvpn.com/debian stable main" | sudo tee /etc/apt/sources.list.d/protonvpn.list
+sudo apt update
+sudo apt install proton-vpn-gnome-desktop</code></pre>
+                            </div>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-lock"></i> Surfshark</h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <p id="sec-vpn-surfshark-p">Fast and affordable VPN with unlimited simultaneous connections, no-logs policy, and a built-in ad and malware blocker (CleanWeb). Installed via the official Surfshark repository.</p>
+                            <div class="code-example">
+                                <h4 id="sec-vpn-surfshark-term">Terminal</h4>
+                                <pre><code id="sec-vpn-surfshark-code"># Install Surfshark
+curl -f https://downloads.surfshark.com/linux/debian-install.sh | sudo sh</code></pre>
+                            </div>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-lock"></i> Mozilla VPN</h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <p id="sec-vpn-mozilla-p">VPN service from Mozilla built on the WireGuard protocol. Subscription-based, no-logs policy, and backed by Mozilla's privacy standards. Installed as a Flatpak from Flathub.</p>
+                            <div class="code-example">
+                                <h4 id="sec-vpn-mozilla-term">Terminal</h4>
+                                <pre><code id="sec-vpn-mozilla-code"># Install Mozilla VPN (Flatpak)
+flatpak install flathub org.mozilla.vpn</code></pre>
+                            </div>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="sec-vpn-tip"><strong>Free option:</strong> ProtonVPN offers a genuinely unlimited free tier — no data cap, no speed throttle after a threshold. It is the recommended starting point if you do not have a VPN subscription.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="antivirus" class="content-section">
+                            <h2><i class="fas fa-bug"></i> <span id="sec-av-title">Antivirus</span></h2>
+                            <p id="sec-av-intro">Linux systems are significantly less susceptible to viruses than Windows, but antivirus software remains useful for scanning files shared with Windows users, checking email attachments, and auditing servers.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-shield-virus"></i> ClamAV</h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <p id="sec-av-clam-p">ClamAV is the standard open-source antivirus engine for Linux. Soplos Welcome installs one of two graphical frontends:</p>
+                            <ul>
+                                <li id="sec-av-clamtk-li"><strong>ClamTK:</strong> graphical interface for ClamAV (GTK). Installs <code>clamav</code> + <code>clamtk</code>, includes a virus definition updater. Available in all three distros.</li>
+                                <li id="sec-av-clamui-li"><strong>ClamUI:</strong> modern Flatpak graphical interface for ClamAV (<code>io.github.linx_systems.ClamUI</code>). Alternative to ClamTK with a cleaner layout.</li>
+                            </ul>
+                            <div class="code-example">
+                                <h4 id="sec-av-term">Terminal</h4>
+                                <pre><code id="sec-av-clam-code"># Install ClamAV and ClamTK
+sudo apt install clamav clamtk
+
+# Update virus database
+sudo freshclam
+
+# Scan a directory
+clamscan -r ~/Downloads
+
+# Scan and remove infected files
+clamscan -r --remove ~/Downloads</code></pre>
+                            </div>
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <span id="sec-av-tip">Run <code>sudo freshclam</code> before each scan to ensure the virus database is up to date.</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="backups" class="content-section">
+                            <h2><i class="fas fa-hdd"></i> <span id="sec-backups-title">System Backups</span></h2>
+                            <p id="sec-backups-intro">Creating regular system snapshots is one of the most effective protection measures — it lets you restore a working state after a bad update, configuration mistake, or ransomware attack.</p>
+                            <p id="sec-backups-welcome">All backup tools can be installed from <strong>Soplos Welcome → Security → System Backups</strong>. For detailed configuration see the <a href="../backup/">Backup wiki page</a>.</p>
+                            <ul>
+                                <li id="sec-backups-timeshift"><strong>Timeshift</strong> — creates automatic BTRFS or rsync snapshots of the system. Strongly recommended as the first thing to install after a fresh install.</li>
+                                <li id="sec-backups-grub-btrfs"><strong>Grub BTRFS</strong> — integrates BTRFS snapshots into the GRUB boot menu, allowing you to boot directly into a snapshot without entering the desktop. Requires BTRFS filesystem.</li>
+                                <li id="sec-backups-btrfs-assistant"><strong>BTRFS Assistant</strong> — graphical tool for managing BTRFS subvolumes and snapshots. Requires BTRFS filesystem.</li>
+                                <li id="sec-backups-dejadup"><strong>Deja Dup</strong> — simple personal file backups with encryption support, suitable for backing up home folder to an external drive or cloud storage.</li>
+                            </ul>
+                        </section>
+
+                        <section id="cleaning" class="content-section">
+                            <h2><i class="fas fa-broom"></i> <span id="sec-clean-title">System Cleaning</span></h2>
+                            <p id="sec-clean-intro">Removing unnecessary files, logs, and package cache reduces disk usage and can eliminate traces of sensitive data. All tools below can be installed from <strong>Soplos Welcome → Security → System Cleaning</strong>.</p>
+                            <ul>
+                                <li id="sec-clean-bleachbit"><strong>BleachBit</strong> — frees disk space and protects privacy. Cleans cache, cookies, temporary files, and browser data across many applications. <code>sudo apt install bleachbit</code></li>
+                                <li id="sec-clean-soplos"><strong>Soplos Sys Cleaner</strong> — Soplos-native system optimizer. Scans APT cache, old kernels, Flatpak revisions, logs, and unused locales, showing exactly how much space is recoverable per category before touching anything. Also includes hardware detection and firmware management.</li>
+                                <li id="sec-clean-stacer"><strong>Stacer</strong> — modern system optimizer with resource monitoring, startup app manager, and cache cleaner. Installed as AppImage from <code>~/AppImages/Stacer.AppImage</code>.</li>
+                                <li id="sec-clean-sweeper"><strong>Sweeper</strong> — simple KDE tool to clean temporary files and browsing history. <code>sudo apt install sweeper</code></li>
+                            </ul>
                         </section>
 
                         <section id="users" class="content-section">
@@ -388,7 +538,7 @@ sudo tail -f /var/log/ufw.log</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-users-pm-term">Terminal</h4>
-                                <pre><code># Install KeePassXC
+                                <pre><code id="sec-users-pm-code"># Install KeePassXC
 sudo apt install keepassxc
 
 # Install Bitwarden (Flatpak)
@@ -411,7 +561,7 @@ flatpak install flathub com.bitwarden.desktop</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-users-sudo-term">Terminal</h4>
-                                <pre><code># View users with sudo access
+                                <pre><code id="sec-users-sudo-code"># View users with sudo access
 grep '^sudo:' /etc/group
 
 # Add user to sudo group
@@ -422,7 +572,7 @@ sudo usermod -aG sudo username</code></pre>
                             <p id="sec-users-lock-p">Protect against brute-force attacks:</p>
                             <div class="code-example">
                                 <h4 id="sec-users-lock-term">Terminal</h4>
-                                <pre><code># Install fail2ban
+                                <pre><code id="sec-users-lock-code"># Install fail2ban
 sudo apt install fail2ban
 
 # Check status
@@ -452,7 +602,7 @@ sudo fail2ban-client status sshd</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-ssh-key-term">Terminal (Client)</h4>
-                                <pre><code># Generate SSH key (ED25519 is recommended)
+                                <pre><code id="sec-ssh-key-code"># Generate SSH key (ED25519 is recommended)
 ssh-keygen -t ed25519 -C "your_email@example.com"
 
 # Copy key to server
@@ -467,14 +617,14 @@ ssh user@server_ip</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-ssh-conf-term1">Terminal (Server)</h4>
-                                <pre><code># Edit SSH config
+                                <pre><code id="sec-ssh-conf-cmd-code"># Edit SSH config
 sudo nano /etc/ssh/sshd_config</code></pre>
                             </div>
 
                             <p id="sec-ssh-conf-rec">Recommended settings:</p>
                             <div class="code-example">
                                 <h4 id="sec-ssh-conf-file">/etc/ssh/sshd_config</h4>
-                                <pre><code># Disable root login
+                                <pre><code id="sec-ssh-conf-code"># Disable root login
 PermitRootLogin no
 
 # Disable password authentication (use keys only)
@@ -493,7 +643,7 @@ Protocol 2</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-ssh-conf-term2">Terminal</h4>
-                                <pre><code># Restart SSH service
+                                <pre><code id="sec-ssh-restart-code"># Restart SSH service
 sudo systemctl restart sshd
 
 # Check SSH status
@@ -517,7 +667,7 @@ sudo systemctl status sshd</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-ssh-f2b-term1">Terminal</h4>
-                                <pre><code># Install fail2ban
+                                <pre><code id="sec-ssh-f2b-cmd-code"># Install fail2ban
 sudo apt install fail2ban
 
 # Create local config
@@ -530,7 +680,7 @@ sudo nano /etc/fail2ban/jail.local</code></pre>
                             <p id="sec-ssh-f2b-conf">Basic SSH jail configuration:</p>
                             <div class="code-example">
                                 <h4 id="sec-ssh-f2b-file">/etc/fail2ban/jail.local</h4>
-                                <pre><code>[sshd]
+                                <pre><code id="sec-ssh-f2b-conf-code">[sshd]
 enabled = true
 port = 22  # Change if you changed SSH port
 maxretry = 3
@@ -540,78 +690,16 @@ findtime = 600  # 10 minutes window</code></pre>
                         </section>
 
                         <section id="auto-updates" class="content-section">
-                            <h2><i class="fas fa-sync-alt"></i> <span id="sec-auto-title">Automatic Security
-                                    Updates</span></h2>
-
-                            <p id="sec-auto-intro">Keeping your system updated is one of the most important security
-                                measures:</p>
-
-                            <h3 id="sec-auto-un-h">Unattended Upgrades</h3>
-                            <p id="sec-auto-un-p">Install and configure automatic security updates:</p>
-
-                            <div class="code-example">
-                                <h4 id="sec-auto-un-term">Terminal</h4>
-                                <pre><code># Install unattended-upgrades
-sudo apt install unattended-upgrades apt-listchanges
-
-# Configure
-sudo dpkg-reconfigure -plow unattended-upgrades</code></pre>
-                            </div>
-
-                            <h3 id="sec-auto-conf-h">Configuration</h3>
-                            <p id="sec-auto-conf-p">Edit the configuration file for more control:</p>
-
-                            <div class="code-example">
-                                <h4 id="sec-auto-conf-term">Terminal</h4>
-                                <pre><code># Edit main config
-sudo nano /etc/apt/apt.conf.d/50unattended-upgrades</code></pre>
-                            </div>
-
-                            <p id="sec-auto-conf-rec">Recommended settings:</p>
-                            <div class="code-example">
-                                <h4 id="sec-auto-conf-file">50unattended-upgrades</h4>
-                                <pre><code>// Automatically upgrade packages from security updates
-Unattended-Upgrade::Origins-Pattern {
-        "origin=Debian,codename=trixie-security";
-};
-
-// Email notifications (optional)
-Unattended-Upgrade::Mail "your-email@example.com";
-Unattended-Upgrade::MailReport "on-change";
-
-// Remove unused dependencies
-Unattended-Upgrade::Remove-Unused-Dependencies "true";
-
-// Automatically reboot if needed
-Unattended-Upgrade::Automatic-Reboot "false";  # Set to true if desired
-Unattended-Upgrade::Automatic-Reboot-Time "03:00";</code></pre>
-                            </div>
+                            <h2><i class="fas fa-sync-alt"></i> <span id="sec-auto-title">Automatic Updates</span></h2>
 
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 <div>
-                                    <span id="sec-auto-warn"><strong>Debian Testing Consideration:</strong> Since Soplos
-                                        is based on Debian
-                                        Testing,
-                                        be cautious with automatic updates. Security updates are important, but you may
-                                        want
-                                        to
-                                        review major updates manually.</span>
+                                    <span id="sec-auto-warn"><strong>Not recommended on Soplos:</strong> Unattended automatic updates are not recommended on Soplos Linux. Since Soplos is based on Debian Testing, unattended upgrades can introduce unexpected changes, break packages, or cause conflicts without notice. Always review updates before applying them.</span>
                                 </div>
                             </div>
 
-                            <h3 id="sec-auto-mon-h">Monitoring</h3>
-                            <div class="code-example">
-                                <h4 id="sec-auto-mon-term">Terminal</h4>
-                                <pre><code># Check unattended-upgrades status
-sudo systemctl status unattended-upgrades
-
-# View logs
-sudo cat /var/log/unattended-upgrades/unattended-upgrades.log
-
-# Dry run to test configuration
-sudo unattended-upgrade --dry-run --debug</code></pre>
-                            </div>
+                            <p id="sec-auto-rec">Keep your system secure by updating manually on a regular basis. See the <a href="/wiki/system/updates/">System Updates guide</a> for the recommended workflow.</p>
                         </section>
 
                         <section id="hardening" class="content-section">
@@ -622,7 +710,7 @@ sudo unattended-upgrade --dry-run --debug</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-hard-srv-term">Terminal</h4>
-                                <pre><code># List all running services
+                                <pre><code id="sec-hard-srv-code"># List all running services
 systemctl list-units --type=service --state=running
 
 # Disable unnecessary service
@@ -638,7 +726,7 @@ sudo systemctl status service-name</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-hard-perm-term">Terminal</h4>
-                                <pre><code># Secure home directory
+                                <pre><code id="sec-hard-perm-code"># Secure home directory
 chmod 750 ~/
 
 # Find files with world-writable permissions
@@ -653,7 +741,7 @@ find / -perm /4000 2>/dev/null</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-hard-app-term">Terminal</h4>
-                                <pre><code># Check AppArmor status
+                                <pre><code id="sec-hard-app-code"># Check AppArmor status
 sudo aa-status
 
 # List profiles
@@ -686,7 +774,7 @@ sudo apt install apparmor-utils</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-enc-gpg-term">Terminal</h4>
-                                <pre><code># Install GPG (usually pre-installed)
+                                <pre><code id="sec-enc-gpg-code"># Install GPG (usually pre-installed)
 sudo apt install gnupg
 
 # Encrypt a file
@@ -702,7 +790,7 @@ gpg -e -r your_email@example.com file.txt</code></pre>
                             <h3 id="sec-enc-arch-h">Password-Protected Archives</h3>
                             <div class="code-example">
                                 <h4 id="sec-enc-arch-term">Terminal</h4>
-                                <pre><code># Create encrypted zip
+                                <pre><code id="sec-enc-arch-code"># Create encrypted zip
 zip -e archive.zip file1 file2
 
 # Create encrypted 7z (stronger encryption)
@@ -726,17 +814,20 @@ zip -e archive.zip file1 file2
                             </ul>
 
                             <h3 id="sec-priv-priv-h">Privacy-Focused Browsers</h3>
+                            <p id="sec-priv-priv-p">All browsers below are available in Soplos Welcome → Software:</p>
                             <ul>
-                                <li id="sec-priv-priv-1"><strong>Firefox:</strong> Pre-installed, good privacy settings
-                                </li>
-                                <li id="sec-priv-priv-2"><strong>Brave:</strong> Built-in ad blocking</li>
-                                <li id="sec-priv-priv-3"><strong>Tor Browser:</strong> Maximum anonymity</li>
+                                <li id="sec-priv-priv-1"><strong>LibreWolf:</strong> Firefox fork hardened for privacy and security. No telemetry, stricter defaults than Firefox. Available as Flatpak (<code>io.gitlab.librewolf-community</code>).</li>
+                                <li id="sec-priv-priv-2"><strong>Helium:</strong> Chromium-based browser focused on privacy, with YouTube integration. Installed via .deb from the official GitHub releases.</li>
+                                <li id="sec-priv-priv-3"><strong>Brave Origin:</strong> privacy-focused browser by Brave with integrated AI assistant. Installed via the official Brave script.</li>
                             </ul>
 
                             <div class="code-example">
                                 <h4 id="sec-priv-priv-term">Terminal</h4>
-                                <pre><code># Install Tor Browser (Flatpak)
-flatpak install flathub com.github.micahflee.torbrowser-launcher</code></pre>
+                                <pre><code id="sec-priv-browser-code"># Install LibreWolf (Flatpak)
+flatpak install flathub io.gitlab.librewolf-community
+
+# Install Brave Origin
+curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin sh</code></pre>
                             </div>
 
                             <h3 id="sec-priv-dns-h">DNS over HTTPS</h3>
@@ -744,7 +835,7 @@ flatpak install flathub com.github.micahflee.torbrowser-launcher</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-priv-dns-term">Firefox</h4>
-                                <pre><code># In Firefox settings:
+                                <pre><code id="sec-priv-dns-code"># In Firefox settings:
 # Privacy & Security > DNS over HTTPS > Enable
 # Choose provider: Cloudflare or Next DNS</code></pre>
                             </div>
@@ -806,7 +897,7 @@ flatpak install flathub com.github.micahflee.torbrowser-launcher</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-mon-logs-term">Terminal</h4>
-                                <pre><code># View authentication logs
+                                <pre><code id="sec-mon-logs-code"># View authentication logs
 sudo journalctl -u ssh -f
 
 # Check failed login attempts
@@ -824,7 +915,7 @@ sudo dmesg | tail</code></pre>
 
                             <div class="code-example">
                                 <h4 id="sec-mon-root-term">Terminal</h4>
-                                <pre><code># Install rkhunter
+                                <pre><code id="sec-mon-root-code"># Install rkhunter
 sudo apt install rkhunter
 
 # Update database
@@ -841,7 +932,7 @@ sudo chkrootkit</code></pre>
                             <h3 id="sec-mon-conn-h">Active Connections</h3>
                             <div class="code-example">
                                 <h4 id="sec-mon-conn-term">Terminal</h4>
-                                <pre><code># List active network connections
+                                <pre><code id="sec-mon-conn-code"># List active network connections
 sudo ss -tulpn
 
 # Check listening ports

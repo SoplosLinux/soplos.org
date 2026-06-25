@@ -131,6 +131,7 @@
                             <li><a href="#terminal" id="upd-toc-terminal">Using Terminal</a></li>
                             <li><a href="#troubleshooting" id="upd-toc-troubleshooting">Troubleshooting</a></li>
                             <li><a href="#automatic" id="upd-toc-automatic">Automatic Updates</a></li>
+                            <li><a href="#flatpak" id="upd-toc-flatpak">Flatpak Updates</a></li>
                             <li><a href="#frequency" id="upd-toc-frequency">Update Frequency</a></li>
                         </ul>
                     </aside>
@@ -204,13 +205,13 @@
                         </section>
 
                         <section id="soplos-welcome" class="content-section">
-                            <h3 id="upd-soplos-title">Graphical Method: Soplos Welcome</h3>
+                            <h2 id="upd-soplos-title">Graphical Method: Soplos Welcome</h2>
                             <p id="upd-soplos-desc">The easiest way to update your system is through the <strong>Soplos
                                     Welcome</strong>
                                 tool, which comes pre-installed on all editions (Tyron, Tyson, and Boro).</p>
 
                             <figure style="margin: 30px 0;">
-                                <img src="../../../images/Tyron/welcome/002-software.png"
+                                <img src="../../../images/apps/soplos-welcome/screenshot02.png"
                                     alt="Soplos Welcome - Software Tab"
                                     style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                                 <figcaption
@@ -220,39 +221,34 @@
                                 </figcaption>
                             </figure>
 
-                            <div class="step-list">
-                                <ul>
-                                    <li id="upd-soplos-step1">Open <strong>Soplos Welcome</strong> from the applications
-                                        menu.</li>
-                                    <li id="upd-soplos-step2">Go to the <strong>Software</strong> tab.</li>
-                                    <li><span id="upd-soplos-step3">You will find two main buttons at the top:</span>
-                                        <ul>
-                                            <li id="upd-soplos-step3a"><strong>Update Repositories:</strong> Refreshes
-                                                the list of available
-                                                packages (equivalent to <code>apt update</code>).</li>
-                                            <li id="upd-soplos-step3b"><strong>Upgrade All:</strong> Installs all
-                                                available updates for your
-                                                system
-                                                and applications (equivalent to <code>apt upgrade</code>).</li>
-                                        </ul>
-                                    </li>
-                                    <li id="upd-soplos-step4">Click "Update Repositories" first and wait for it to
-                                        finish.</li>
-                                    <li id="upd-soplos-step5">Then click "Upgrade All" to apply the changes.</li>
-                                </ul>
-                            </div>
+                            <div class="setting-card" style="padding: 24px;">
+                                <div class="step-list">
+                                    <ul>
+                                        <li id="upd-soplos-step1">Open <strong>Soplos Welcome</strong> from the applications menu.</li>
+                                        <li id="upd-soplos-step2">Go to the <strong>Software</strong> tab.</li>
+                                        <li>
+                                            <span id="upd-soplos-step3">You will find two main buttons at the top:</span>
+                                            <div style="margin-top: 10px; padding-left: 16px; border-left: 3px solid var(--primary-color, #e67e22);">
+                                                <p style="margin: 0 0 8px 0;" id="upd-soplos-step3a"><strong>Update Repositories:</strong> Refreshes the list of available packages (equivalent to <code>apt update</code>).</p>
+                                                <p style="margin: 0;" id="upd-soplos-step3b"><strong>Upgrade All:</strong> Installs all available updates for your system and applications (equivalent to <code>apt upgrade</code>).</p>
+                                            </div>
+                                        </li>
+                                        <li id="upd-soplos-step4">Click "Update Repositories" first and wait for it to finish.</li>
+                                        <li id="upd-soplos-step5">Then click "Upgrade All" to apply the changes.</li>
+                                    </ul>
+                                </div>
 
-                            <div class="info-box info">
-                                <i class="fas fa-info-circle"></i>
-                                <div id="upd-soplos-note">
-                                    <strong>Note:</strong> You will be asked for your administrator (root/sudo) password
-                                    to perform these actions.
+                                <div class="info-box info" style="margin-top: 0;">
+                                    <i class="fas fa-info-circle"></i>
+                                    <div id="upd-soplos-note">
+                                        <strong>Note:</strong> You will be asked for your administrator (root/sudo) password to perform these actions.
+                                    </div>
                                 </div>
                             </div>
                         </section>
 
                         <section id="terminal" class="content-section">
-                            <h3 id="upd-term-title">Advanced Method: Terminal</h3>
+                            <h2 id="upd-term-title">Advanced Method: Terminal</h2>
                             <p id="upd-term-desc">If you prefer full control or are used to Debian/Ubuntu, you can use
                                 the terminal. Soplos
                                 Linux uses the <strong>APT</strong> package manager.</p>
@@ -324,11 +320,16 @@ The following packages will be upgraded:
                             </div>
 
                             <h4 id="upd-term-clean-title">Cleanup (Optional)</h4>
-                            <p id="upd-term-clean-desc">To remove packages that are no longer needed (orphaned
-                                dependencies):</p>
+                            <p id="upd-term-clean-desc">To remove packages that are no longer needed (orphaned dependencies):</p>
                             <div class="code-example">
                                 <h4 id="upd-term-cmd-label4">Terminal</h4>
                                 <pre><code>sudo apt autoremove</code></pre>
+                            </div>
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div id="upd-term-clean-tip">
+                                    <span id="upd-term-clean-tip-text"><strong>Soplos Sys Cleaner</strong> handles this and more from a graphical interface — APT cache, old kernels, Flatpak revisions, logs and temp files. Install it from the Security tab in Soplos Welcome.</span>
+                                </div>
                             </div>
                         </section>
 
@@ -404,37 +405,34 @@ sudo apt upgrade</code></pre>
                         </section>
 
                         <section id="automatic" class="content-section">
-                            <h2><i class="fas fa-clock"></i> <span id="upd-auto-title">Automatic Updates</span>
-                            </h2>
-
-                            <p id="upd-auto-desc">You can configure automatic security updates using
-                                <code>unattended-upgrades</code>:
-                            </p>
-
-                            <div class="code-example">
-                                <h4 id="upd-term-cmd-label9">Terminal</h4>
-                                <pre><code># Install unattended-upgrades
-sudo apt install unattended-upgrades
-
-# Enable automatic updates
-sudo dpkg-reconfigure -plow unattended-upgrades</code></pre>
-                            </div>
+                            <h2><i class="fas fa-clock"></i> <span id="upd-auto-title">Automatic Updates</span></h2>
 
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 <div id="upd-auto-warn">
-                                    <strong>Debian Testing Consideration:</strong> Since Soplos is based on Debian
-                                    Testing,
-                                    automatic updates should be configured carefully. It's generally recommended to
-                                    review
-                                    updates manually to avoid potential issues with large changes.
+                                    <strong id="upd-auto-warn-label">Debian Testing — Manual Updates Recommended:</strong> <span id="upd-auto-warn-text">Soplos is based on Debian Testing, which receives frequent and sometimes large updates. Automatic updates are not recommended — a batch update arriving at the wrong moment can break packages or require intervention. Update manually so you stay in control of when and what changes.</span>
                                 </div>
                             </div>
 
-                            <p id="upd-auto-recommend">For most users, <strong>manual updates are recommended</strong>
-                                to maintain better
-                                control
-                                over system changes.</p>
+                            <p id="upd-auto-recommend">Check for updates <strong>at least once a week</strong> using Soplos Welcome or the terminal. That is enough to keep the system secure and current without risking unattended breakage.</p>
+                        </section>
+
+                        <section id="flatpak" class="content-section">
+                            <h2><i class="fas fa-box"></i> <span id="upd-flat-title">Flatpak Updates</span></h2>
+                            <p id="upd-flat-desc">Many applications in Soplos are installed as Flatpak packages. These are updated separately from APT and are not included in <code>apt upgrade</code>.</p>
+
+                            <h3 id="upd-flat-cmd-title">Update Flatpak apps</h3>
+                            <div class="code-example">
+                                <h4 id="upd-flat-cmd-label">Terminal</h4>
+                                <pre><code>flatpak update</code></pre>
+                            </div>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div id="upd-flat-note">
+                                    <span id="upd-flat-note-text">Run <code>flatpak update</code> after <code>apt upgrade</code> to keep all your applications up to date. Soplos Welcome (Software tab) also triggers Flatpak updates when you click Upgrade All. Alternatively, <strong>Bazaar</strong> and <strong>Warehouse</strong> can update Flatpak apps graphically from their interface.</span>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="frequency" class="content-section">
@@ -479,9 +477,7 @@ sudo dpkg-reconfigure -plow unattended-upgrades</code></pre>
                                     updated</li>
                                 <li id="upd-freq-after-2"><strong>Service updates:</strong> Some services may need
                                     restart</li>
-                                <li id="upd-freq-after-3"><strong>Clean cache:</strong> Run
-                                    <code>sudo apt autoremove</code> periodically
-                                </li>
+                                <li id="upd-freq-after-3"><strong>Clean cache:</strong> Run <code>sudo apt autoremove</code> or use <strong>Soplos Sys Cleaner</strong> for a complete cleanup</li>
                             </ul>
 
                             <div class="info-box warning">

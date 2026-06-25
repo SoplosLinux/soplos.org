@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2101" class="toc-link">2.1.0-1 <span class="toc-date">— 2026-06-24</span></a></li>
                             <li><a href="#v210" class="toc-link">2.1.0 <span class="toc-date">— 2026-06-20</span></a></li>
                             <li><a href="#v2093" class="toc-link">2.0.9-3 <span class="toc-date">— 2026-06-09</span></a></li>
                             <li><a href="#v2092" class="toc-link">2.0.9-2 <span class="toc-date">— 2026-06-09</span></a></li>
@@ -179,6 +180,33 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.0-1 -->
+                        <section id="v2101" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2101-title">2.1.0-1 — June 2026</span></h2>
+                            <p id="wel-rel-2101-subtitle" class="lead">ROCm OpenCL and full ROCm suite added to AMD Extras, Helium browser added to Recommended, NVIDIA Extras checkmarks fixed, and VirtualBox Guest Additions updated to 7.2.10.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2101-added-li1"><strong>AMD Extras — ROCm OpenCL:</strong> New "AMD Extras" section in the Drivers tab with OpenCL runtime for AMD GPUs (RDNA1+). Installs <code>rocm-opencl-runtime</code> from the official AMD ROCm 6.4 repository and adds the user to <code>render</code> and <code>video</code> groups. For DaVinci Resolve, Blender HIP and general GPU compute.</li>
+                                <li id="wel-rel-2101-added-li2"><strong>AMD Extras — ROCm Full Suite:</strong> Full ROCm platform (<code>rocm</code>) for AI/ML development with PyTorch and TensorFlow on AMD GPU. Several GB download. Both buttons support install/uninstall with checkmark detection.</li>
+                                <li id="wel-rel-2101-added-li3"><strong>Recommended — Helium browser:</strong> Privacy-focused browser built on Chromium with YouTube integration. Installed from the latest GitHub release <code>.deb</code> (<code>imputnet/helium-linux</code>) via dynamic URL.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2101-fixed-li1"><strong>NVIDIA Extras checkmarks:</strong> DaVinci Resolve Extras and Blender CUDA Toolkit buttons now show a checkmark when their packages (<code>nvidia-opencl-icd</code>, <code>nvidia-cuda-toolkit</code>) are installed. Previously they had no state detection.</li>
+                                <li id="wel-rel-2101-fixed-li2"><strong>LACT removed from Drivers tab:</strong> LACT GPU Control Center was duplicated in both Drivers and Recommended tabs. Removed from Drivers — it belongs in Recommended only.</li>
+                                <li id="wel-rel-2101-fixed-li3"><strong>VirtualBox Guest Additions updated to 7.2.10:</strong> Replaced bundled <code>VBoxLinuxAdditions.run</code> with the 7.2.10 release.</li>
+                                <li id="wel-rel-2101-fixed-li4"><strong>Assets permissions normalized:</strong> All files under <code>assets/</code> set to 644, directories to 755, <code>VBoxLinuxAdditions.run</code> kept at 755.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.0 -->
                         <section id="v210" class="content-section">

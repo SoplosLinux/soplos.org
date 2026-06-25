@@ -164,8 +164,7 @@
 
                                 <div class="feature-item">
                                     <h3 id="tyson-feat-session-title"><i class="fas fa-user-shield"></i> Modern Session</h3>
-                                    <p id="tyson-feat-session-desc">Tyson ships with SDDM login and a polished welcome desktop tuned for
-                                        out-of-the-box visual consistency.</p>
+                                    <p id="tyson-feat-session-desc">Tyson ships with Plasma Login Manager (PLM) for a polished, Wayland-native login and a welcome desktop tuned for out-of-the-box visual consistency.</p>
                                 </div>
                             </div>
 
@@ -184,8 +183,7 @@
                             <h2><i class="fas fa-eye"></i> <span id="tyson-interface-title">Interface Tour</span></h2>
 
                             <h3 id="tyson-interface-layout-title">Desktop Layout</h3>
-                            <p id="tyson-interface-layout-intro">Tyson uses Plasma's default layout: a top or bottom panel (configurable), system tray,
-                                application launcher, and desktop widgets (Plasmoids).</p>
+                            <p id="tyson-interface-layout-intro">Tyson uses Plasma's default layout: a top or bottom panel (configurable), system tray, application launcher, and desktop widgets (Plasmoids). New in RC1: zsh as default shell, Ghostty as default terminal and zRAM memory compression enabled by default.</p>
 
                             <div class="settings-grid">
                                 <div class="settings-card">
@@ -207,9 +205,8 @@
                                 </div>
 
                                 <div class="settings-card">
-                                    <h4><i class="fas fa-user-circle"></i> <span id="tyson-interface-sddm-title">SDDM Login</span></h4>
-                                    <p id="tyson-interface-sddm-desc">Tyson ships with SDDM for a polished graphical login and session manager. The
-                                        greeter is themed to Soplos styling.</p>
+                                    <h4><i class="fas fa-user-circle"></i> <span id="tyson-interface-sddm-title">Plasma Login Manager</span></h4>
+                                    <p id="tyson-interface-sddm-desc">Tyson ships with Plasma Login Manager (PLM), a Wayland-native greeter built on KDE Plasma. The greeter is themed to Soplos styling.</p>
                                 </div>
                             </div>
 
@@ -386,6 +383,12 @@
                                 </div>
 
                                 <div class="feature-item">
+                                    <h3 id="tyson-soplos-systemservice-title"><img src="../../images/icons/org.soplos.systemservice.png"
+                                            alt="Soplos System Service" style="width: 48px; height: 48px;"> Soplos System Service</h3>
+                                    <p id="tyson-soplos-systemservice-desc">Graphical systemd service manager with color-coded status, Start/Stop/Restart controls and integrated journalctl log viewer.</p>
+                                </div>
+
+                                <div class="feature-item">
                                     <h3 id="tyson-soplos-webapp-title"><img src="../../images/icons/org.soplos.webappmanager.png"
                                             alt="Soplos WebApp Manager" style="width: 48px; height: 48px;"> Soplos WebApp Manager</h3>
                                     <p id="tyson-soplos-webapp-desc">Transform websites into independent desktop applications with isolated profiles and menu integration.</p>
@@ -410,9 +413,7 @@
                             <div class="info-box success">
                                 <i class="fas fa-star"></i>
                                 <div>
-                                    <strong id="tyson-soplos-note-label">Note:</strong> <span id="tyson-soplos-note">Some Soplos utilities are shared between Tyron and Tyson. On
-                                    Plasma you can use native panel widgets instead of dock-specific tools if you
-                                    prefer.</span>
+                                    <strong id="tyson-soplos-note-label">Note:</strong> <span id="tyson-soplos-note">All Soplos utilities listed here are accessible through Soplos Welcome. Some apps are shared with Tyron and Boro.</span>
                                 </div>
                             </div>
                         </section>
@@ -498,10 +499,9 @@ free -h</code></pre>
                                     <i class="fas fa-chevron-right"></i> <span id="tyson-trouble-q1">Panel or widgets not showing</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p id="tyson-trouble-a1">Try restarting Plasma shell:</p>
+                                    <p id="tyson-trouble-a1">Log out and back in, or restart the Plasma shell:</p>
                                     <div class="code-example">
                                         <pre><code># Restart Plasma shell
-kwin_x11 --replace &
 plasmashell --replace &</code></pre>
                                     </div>
                                 </div>
@@ -512,11 +512,10 @@ plasmashell --replace &</code></pre>
                                     <i class="fas fa-chevron-right"></i> <span id="tyson-trouble-q2">Login screen issues</span>
                                 </h4>
                                 <div class="faq-answer">
-                                    <p id="tyson-trouble-a2-intro">Check SDDM configuration and greeter logs in /var/log. Reconfigure SDDM if
-                                        needed:</p>
+                                    <p id="tyson-trouble-a2-intro">Check Plasma Login Manager logs and reconfigure if needed:</p>
                                     <ol>
-                                        <li>Inspect /var/log/sddm.log</li>
-                                        <li>Try: <code>sudo dpkg-reconfigure sddm</code></li>
+                                        <li>Inspect logs: <code>journalctl -u plasmalogin</code></li>
+                                        <li>Try: <code>sudo dpkg-reconfigure plasma-login-manager</code></li>
                                         <li>Test with a different session from the greeter</li>
                                     </ol>
                                 </div>

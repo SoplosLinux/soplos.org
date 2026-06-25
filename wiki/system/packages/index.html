@@ -138,6 +138,7 @@
                             <li><a href="#repositories" id="pkg-toc-9">Repositories</a></li>
                             <li><a href="#flatpak" id="pkg-toc-10">Flatpak</a></li>
                             <li><a href="#snap" id="pkg-toc-11">Snap</a></li>
+                            <li><a href="#appimage" id="pkg-toc-appimage">AppImage</a></li>
                             <li><a href="#troubleshooting" id="pkg-toc-12">Troubleshooting</a></li>
                             <li><a href="#best-practices" id="pkg-toc-13">Best Practices</a></li>
                         </ul>
@@ -423,7 +424,7 @@ sudo apt remove package-name</code></pre>
                         </section>
 
                         <section id="tyron" class="content-section">
-                            <h3 id="pkg-tyr-title">Tyron (XFCE Edition)</h3>
+                            <h2 id="pkg-tyr-title">Tyron (XFCE Edition)</h2>
                             <p id="pkg-tyr-p">The Tyron edition follows a minimalist and lightweight philosophy:</p>
                             <ul>
                                 <li id="pkg-tyr-1"><strong>Default:</strong> Does not include any heavy "software store"
@@ -443,13 +444,15 @@ sudo apt remove package-name</code></pre>
                                         <li id="pkg-tyr-2-3"><strong>GNOME Software:</strong> Full graphical store. When
                                             installed from
                                             Welcome, it is automatically configured with Flatpak and Snap plugins.</li>
+                                        <li id="pkg-tyr-2-4"><strong>Bazaar:</strong> Lightweight graphical Flatpak manager.</li>
                                     </ul>
                                 </li>
+                                <li id="pkg-tyr-3"><strong>Repo Selector:</strong> <strong>Soplos Repo Selector</strong> is also available from <em>Soplos Welcome</em> to switch between Debian repository branches without editing configuration files.</li>
                             </ul>
                         </section>
 
                         <section id="tyson" class="content-section">
-                            <h3 id="pkg-tys-title">Tyson (Plasma Edition)</h3>
+                            <h2 id="pkg-tys-title">Tyson (Plasma Edition)</h2>
                             <p id="pkg-tys-p">The Tyson edition offers a modern experience integrated with KDE:</p>
                             <ul>
                                 <li id="pkg-tys-1"><strong>Default:</strong> Comes with <strong>Discover</strong>, the
@@ -462,14 +465,13 @@ sudo apt remove package-name</code></pre>
                                         Welcome</em>, the system will automatically install the necessary plugins for
                                     Discover to manage these formats.
                                 </li>
-                                <li id="pkg-tys-3"><strong>Alternatives:</strong> As in Tyron, you can install Synaptic
-                                    or Gdebi if you
-                                    prefer more traditional tools.</li>
+                                <li id="pkg-tys-3"><strong>Alternatives:</strong> As in Tyron, you can install Synaptic, Gdebi or Bazaar from <em>Soplos Welcome</em>.</li>
+                                <li id="pkg-tys-4"><strong>Repo Selector:</strong> <strong>Soplos Repo Selector</strong> is also available from <em>Soplos Welcome</em> to switch between Debian repository branches without editing configuration files.</li>
                             </ul>
                         </section>
 
                         <section id="boro" class="content-section">
-                            <h3 id="pkg-bor-title">Boro (GNOME Edition)</h3>
+                            <h2 id="pkg-bor-title">Boro (GNOME Edition)</h2>
                             <p id="pkg-bor-p">The Boro edition offers the full GNOME experience:</p>
                             <ul>
                                 <li id="pkg-bor-1"><strong>Default:</strong> Includes <strong>GNOME Software</strong>
@@ -480,6 +482,8 @@ sudo apt remove package-name</code></pre>
                                     configured
                                     out of the box, offering immediate access to thousands of applications.
                                 </li>
+                                <li id="pkg-bor-3"><strong>Additional tools:</strong> Synaptic, Gdebi and Bazaar are also available from <em>Soplos Welcome</em>.</li>
+                                <li id="pkg-bor-4"><strong>Repo Selector:</strong> <strong>Soplos Repo Selector</strong> is also available from <em>Soplos Welcome</em> to switch between Debian repository branches without editing configuration files.</li>
                             </ul>
                         </section>
 
@@ -596,6 +600,13 @@ flatpak uninstall com.spotify.Client
 flatpak uninstall --unused</code></pre>
                             </div>
 
+                            <h3 id="pkg-flat-mgr-h">Graphical Flatpak Managers</h3>
+                            <p id="pkg-flat-mgr-p">If you prefer a graphical interface to manage your Flatpak applications, two tools are available from <strong>Soplos Welcome</strong> → Recommended tab:</p>
+                            <ul>
+                                <li id="pkg-flat-mgr-1"><strong>Bazaar:</strong> Lightweight Flatpak store. Browse, install and remove Flatpak apps from Flathub.</li>
+                                <li id="pkg-flat-mgr-2"><strong>Warehouse:</strong> Advanced Flatpak manager. Manage installed apps, view and clean up unused runtimes, manage permissions and data.</li>
+                            </ul>
+
                             <h3 id="pkg-flat-when-h">When to Use Flatpak</h3>
                             <ul>
                                 <li id="pkg-flat-when-1"><strong>Latest versions:</strong> When Debian repos have older
@@ -611,13 +622,7 @@ flatpak uninstall --unused</code></pre>
                             <div class="info-box tip">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
-                                    <div>
-                                        <span id="pkg-flat-tip"><strong>Integration:</strong> Flatpak applications
-                                            appear in your application menu
-                                            alongside
-                                            regular packages and can be managed from GNOME Software or KDE
-                                            Discover.</span>
-                                    </div>
+                                    <span id="pkg-flat-tip"><strong>Integration:</strong> Flatpak applications appear in your application menu alongside regular packages and can be managed graphically with <strong>GNOME Software</strong> (Boro), <strong>Discover</strong> (Tyson), <strong>Bazaar</strong> (all editions) or <strong>Warehouse</strong> (all editions, available from Soplos Welcome Recommended tab).</span>
                                 </div>
                             </div>
                         </section>
@@ -725,7 +730,7 @@ sudo snap remove package-name</code></pre>
                                         <td id="pkg-snap-vs-td11"
                                             style="padding: 12px; border: 1px solid var(--border-color);">Yes</td>
                                         <td id="pkg-snap-vs-td12"
-                                            style="padding: 12px; border: 1px solid var(--border-color);">If needed</td>
+                                            style="padding: 12px; border: 1px solid var(--border-color);">Only if the app is not available on Flatpak</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -745,6 +750,44 @@ sudo snap remove package-name</code></pre>
                             </div>
                         </section>
 
+                        <section id="appimage" class="content-section">
+                            <h2><i class="fas fa-cube"></i> <span id="pkg-ai-title">AppImage</span></h2>
+
+                            <h3 id="pkg-ai-what-h">What is AppImage?</h3>
+                            <p id="pkg-ai-what-p"><strong>AppImage</strong> is a portable application format. Each AppImage is a single self-contained file that runs without installation — no root access required and no system files modified.</p>
+                            <ul>
+                                <li id="pkg-ai-what-1">Single file — download and run directly</li>
+                                <li id="pkg-ai-what-2">No installation or superuser privileges needed</li>
+                                <li id="pkg-ai-what-3">Works across different Linux distributions</li>
+                                <li id="pkg-ai-what-4">Easy to remove — just delete the file</li>
+                            </ul>
+
+                            <h3 id="pkg-ai-run-h">Running an AppImage</h3>
+                            <div class="code-example">
+                                <h4 id="pkg-ai-run-term">Terminal</h4>
+                                <pre><code># Make the file executable
+chmod +x Application.AppImage
+
+# Run it
+./Application.AppImage</code></pre>
+                            </div>
+                            <p id="pkg-ai-run-p">Alternatively, right-click the file in your file manager, go to <strong>Properties</strong>, enable "Allow executing as program" and double-click to launch.</p>
+
+                            <h3 id="pkg-ai-mgr-h">Graphical AppImage Managers</h3>
+                            <p id="pkg-ai-mgr-p">Two graphical tools are available from <strong>Soplos Welcome</strong> → Recommended tab to manage your AppImages:</p>
+                            <ul>
+                                <li id="pkg-ai-mgr-1"><strong>Soplos AppImage Manager:</strong> Manage and integrate AppImages on your system. Automatically extracts metadata and icons, creates desktop entries, and checks for updates via GitHub, GitLab and Codeberg.</li>
+                                <li id="pkg-ai-mgr-2"><strong>Gear Lever:</strong> Organize AppImages, generate desktop entries and app metadata, update apps in place and keep multiple versions side by side.</li>
+                            </ul>
+
+                            <div class="info-box info">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <span id="pkg-ai-note"><strong>When to use AppImage:</strong> Useful for applications not available in Debian repositories or Flathub, or when you need a specific version without affecting your system packages.</span>
+                                </div>
+                            </div>
+                        </section>
+
                         <section id="troubleshooting" class="content-section">
                             <h2><i class="fas fa-wrench"></i> <span id="pkg-trb-title">Troubleshooting Common
                                     Issues</span></h2>
@@ -753,7 +796,7 @@ sudo snap remove package-name</code></pre>
                             <p id="pkg-trb-not-p">If APT cannot find a package, try updating the lists first:</p>
                             <div class="code-example">
                                 <h4 id="pkg-trb-not-term">Terminal</h4>
-                                <pre><code># Update package lists first
+                                <pre><code id="pkg-trb-not-code"># Update package lists first
 sudo apt update
 
 # Try searching for similar names
@@ -766,7 +809,7 @@ apt search package-keyword
                             <h3 id="pkg-trb-dep-h">Broken Dependencies</h3>
                             <div class="code-example">
                                 <h4 id="pkg-trb-dep-term">Terminal</h4>
-                                <pre><code># Fix broken dependencies
+                                <pre><code id="pkg-trb-dep-code"># Fix broken dependencies
 sudo apt --fix-broken install
 
 # If that fails, try:
@@ -780,7 +823,7 @@ sudo apt install -f</code></pre>
                             </p>
                             <div class="code-example">
                                 <h4 id="pkg-trb-con-term">Terminal</h4>
-                                <pre><code># Remove the conflicting package first
+                                <pre><code id="pkg-trb-con-code"># Remove the conflicting package first
 sudo apt remove conflicting-package
 
 # Then install the desired package
@@ -790,7 +833,7 @@ sudo apt install desired-package</code></pre>
                             <h3 id="pkg-trb-rep-h">Repository Errors</h3>
                             <div class="code-example">
                                 <h4 id="pkg-trb-rep-term">Terminal</h4>
-                                <pre><code># If you get GPG errors, update keyrings:
+                                <pre><code id="pkg-trb-rep-code"># If you get GPG errors, update keyrings:
 sudo apt update --allow-insecure-repositories
 sudo apt install debian-archive-keyring
 
@@ -801,7 +844,7 @@ sudo apt update</code></pre>
                             <h3 id="pkg-trb-dsk-h">Disk Space Issues</h3>
                             <div class="code-example">
                                 <h4 id="pkg-trb-dsk-term">Terminal</h4>
-                                <pre><code># Check disk space
+                                <pre><code id="pkg-trb-dsk-code"># Check disk space
 df -h
 
 # Clean package cache
