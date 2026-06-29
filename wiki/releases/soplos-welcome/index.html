@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2102" class="toc-link">2.1.0-2 <span class="toc-date">— 2026-06-29</span></a></li>
                             <li><a href="#v2101" class="toc-link">2.1.0-1 <span class="toc-date">— 2026-06-24</span></a></li>
                             <li><a href="#v210" class="toc-link">2.1.0 <span class="toc-date">— 2026-06-20</span></a></li>
                             <li><a href="#v2093" class="toc-link">2.0.9-3 <span class="toc-date">— 2026-06-09</span></a></li>
@@ -180,6 +181,23 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.0-2 -->
+                        <section id="v2102" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2102-title">2.1.0-2 — June 2026</span></h2>
+                            <p id="wel-rel-2102-subtitle" class="lead">Drivers tab fixes for NVIDIA DKMS cleanup, escaped quotes in 590/610 repo setup, and ROCm codename updates.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2102-fixed-li1"><strong>DKMS not cleaned on uninstall:</strong> <code>apt purge</code> leaves compiled <code>.ko</code> files in <code>/lib/modules/</code>. Uninstall script now runs <code>dkms remove --force</code> on all NVIDIA entries and removes orphaned <code>.ko</code> files from every kernel directory before purging packages.</li>
+                                <li id="wel-rel-2102-fixed-li2"><strong>DKMS not cleaned on install:</strong> Both the CUDA-repo path (590/610) and the Debian-repo path (550) now perform the same DKMS cleanup before <code>apt install</code> to prevent installation failures.</li>
+                                <li id="wel-rel-2102-fixed-li3"><strong>Escaped quotes in 590 and 610 repo setup:</strong> The <code>rm -rf "$TEMP_DIR"</code> line inside Python triple-quoted strings generated an extra trailing quote in the bash output. Fixed by converting those blocks to raw strings.</li>
+                                <li id="wel-rel-2102-fixed-li4"><strong>ROCm codename:</strong> The <code>CODENAME</code> case statement included <code>bookworm</code> as a branch, but Soplos is based on Debian Testing/Trixie moving toward Forky. Replaced with <code>trixie</code> and <code>forky</code> cases only.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.0-1 -->
                         <section id="v2101" class="content-section">
