@@ -4939,6 +4939,10 @@ Object.assign(window.LANG_FR, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Nettoyeur système pour Soplos Linux — supprime le cache APT, les paquets orphelins, les noyaux obsolètes, les firmwares inutilisés, les runtimes Flatpak, les révisions Snap, le cache utilisateur et la corbeille avec une analyse en double couche utilisateur/administrateur.",
 
+    "sc-rel-1029-title": "1.0.2-9 — Juin 2026",
+    "sc-rel-1029-subtitle": "Correction de sécurité et de logique : Protection des modules DKMS actifs du noyau Soplos pour éviter qu'ils ne soient signalés à tort comme orphelins.",
+    "sc-rel-1029-fixed-li1": "<strong>Scanner d'orphelins DKMS :</strong> Corrigé un bug de logique d'indentation qui gérait mal les versions du noyau Soplos, causant des faux positifs (NVIDIA, v4l2loopback).",
+
     "sc-rel-1028-title": "1.0.2-8 — Juin 2026",
     "sc-rel-1028-subtitle": "Douze corrections de bogues : faux positifs dans la détection active du noyau, condition de course dans le nettoyage des orphelins APT, scanner DKMS étendu à tous les noyaux installés, lecteur hwmon priorisé pour la température CPU (k10temp/coretemp avant acpitz), corrections de correspondance par sous-chaîne dans modprobe.d et noms de modules, et vérification des fichiers de service orphelins exigeant que tous les paquets co-propriétaires soient désinstallés.",
     "sc-rel-1028-fixed-li1": "<strong>Faux positif dans la détection active du noyau (<code>kernels.py</code>) :</strong> <code>version in current</code> utilisait la correspondance par sous-chaîne — <code>6.1.0-2-amd64</code> était une sous-chaîne de <code>6.1.0-27-amd64</code>, un ancien noyau pouvait donc être marqué comme actif et protégé de la suppression. Changé en égalité exacte (<code>==</code>) dans <code>get_installed_kernels</code> et <code>_find_unmatched_modules_dirs</code>.",

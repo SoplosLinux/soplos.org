@@ -4939,6 +4939,10 @@ Object.assign(window.LANG_PT, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Limpador de sistema para Soplos Linux — remove cache APT, pacotes órfãos, kernels antigos, firmwares não utilizados, runtimes Flatpak, revisões Snap, cache do utilizador e lixo com análise dual em modo utilizador/administrador.",
 
+    "sc-rel-1029-title": "1.0.2-9 — Junho 2026",
+    "sc-rel-1029-subtitle": "Correção de segurança e lógica: Proteção de módulos DKMS ativos do kernel Soplos para evitar que sejam marcados incorretamente como órfãos.",
+    "sc-rel-1029-fixed-li1": "<strong>Scanner de órfãos DKMS:</strong> Corrigido um bug de lógica de indentação que lidava incorretamente com versões do kernel Soplos, causando falsos positivos (NVIDIA, v4l2loopback).",
+
     "sc-rel-1028-title": "1.0.2-8 — Junho 2026",
     "sc-rel-1028-subtitle": "Doze correções de erros: falsos positivos na deteção ativa do kernel, condição de corrida na limpeza de órfãos APT, scanner DKMS estendido a todos os kernels instalados, leitor hwmon priorizado para temperatura da CPU (k10temp/coretemp antes de acpitz), correções de correspondência por subcadeia em modprobe.d e nomes de módulos, e verificação de ficheiros de serviço órfãos que exige que todos os pacotes co-proprietários estejam desinstalados.",
     "sc-rel-1028-fixed-li1": "<strong>Falso positivo na deteção ativa do kernel (<code>kernels.py</code>):</strong> <code>version in current</code> usava correspondência por subcadeia — <code>6.1.0-2-amd64</code> era uma subcadeia de <code>6.1.0-27-amd64</code>, pelo que um kernel antigo podia ser marcado como ativo e protegido da remoção. Alterado para igualdade exata (<code>==</code>) em <code>get_installed_kernels</code> e <code>_find_unmatched_modules_dirs</code>.",

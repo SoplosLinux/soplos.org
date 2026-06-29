@@ -5771,6 +5771,10 @@ Object.assign(window.LANG_EN, {
   "sc-rel-hero-title": "Soplos Sys Cleaner",
   "sc-rel-hero-subtitle": "System cleaner for Soplos Linux — remove APT cache, orphaned packages, old kernels, unused firmwares, Flatpak runtimes, Snap revisions, user cache and trash with dual-layer user/administrator scanning.",
 
+  "sc-rel-1029-title": "1.0.2-9 — June 2026",
+  "sc-rel-1029-subtitle": "Security and logic fix: Protected active Soplos kernel DKMS modules from being incorrectly flagged as orphans.",
+  "sc-rel-1029-fixed-li1": "<strong>DKMS orphan scanner:</strong> Fixed an indentation logic bug that incorrectly handled Soplos kernel versions causing false positives (NVIDIA, v4l2loopback).",
+
   "sc-rel-1028-title": "1.0.2-8 — June 2026",
   "sc-rel-1028-subtitle": "Twelve bug fixes: kernel active-detection false positives, race condition in APT cache cleanup, DKMS scanner extended to all installed kernels, CPU temperature prioritized hwmon reader (k10temp/coretemp over acpitz), substring-match fixes for modprobe.d and module names, and service file orphan check requiring all co-owning packages to be uninstalled.",
   "sc-rel-1028-fixed-li1": "<strong>Kernel false-positive active detection (<code>kernels.py</code>):</strong> <code>version in current</code> used substring matching — <code>6.1.0-2-amd64</code> was a substring of <code>6.1.0-27-amd64</code>, so an old kernel could be marked as active and protected from removal. Changed to exact equality (<code>==</code>) in both <code>get_installed_kernels</code> and <code>_find_unmatched_modules_dirs</code>.",

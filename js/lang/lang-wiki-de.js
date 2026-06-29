@@ -4947,6 +4947,10 @@ Object.assign(window.LANG_DE, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Systemreiniger für Soplos Linux — entfernt APT-Cache, verwaiste Pakete, alte Kernel, ungenutzte Firmware, Flatpak-Laufzeiten, Snap-Revisionen, Benutzer-Cache und Papierkorb mit zweischichtigem Benutzer-/Administrator-Scan.",
 
+    "sc-rel-1029-title": "1.0.2-9 — Juni 2026",
+    "sc-rel-1029-subtitle": "Sicherheits- und Logik-Fix: Schutz aktiver Soplos-Kernel-DKMS-Module vor fälschlicher Markierung als Waisen.",
+    "sc-rel-1029-fixed-li1": "<strong>DKMS-Waisen-Scanner:</strong> Behoben: Ein Einrückungs-Logikfehler behandelte Soplos-Kernel-Versionen falsch, was zu falschen Positiven führte (NVIDIA, v4l2loopback).",
+
     "sc-rel-1028-title": "1.0.2-8 — Juni 2026",
     "sc-rel-1028-subtitle": "Zwölf Fehlerbehebungen: Falsch-Positive bei der aktiven Kernel-Erkennung, Race Condition bei der APT-Cache-Bereinigung, DKMS-Scanner auf alle installierten Kernel erweitert, priorisierter hwmon-Leser für CPU-Temperatur (k10temp/coretemp vor acpitz), Teilstring-Übereinstimmungskorrekturen für modprobe.d und Modulnamen, und Waisen-Prüfung für Service-Dateien erfordert jetzt, dass alle mitbesitzenden Pakete deinstalliert sind.",
     "sc-rel-1028-fixed-li1": "<strong>Falsch-Positive bei der aktiven Kernel-Erkennung (<code>kernels.py</code>):</strong> <code>version in current</code> verwendete Teilstring-Übereinstimmung — <code>6.1.0-2-amd64</code> war ein Teilstring von <code>6.1.0-27-amd64</code>, sodass ein alter Kernel als aktiv markiert und vor der Entfernung geschützt werden konnte. Geändert zu exakter Gleichheit (<code>==</code>) in <code>get_installed_kernels</code> und <code>_find_unmatched_modules_dirs</code>.",

@@ -4946,6 +4946,10 @@ Object.assign(window.LANG_RO, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Curățitor de sistem pentru Soplos Linux — elimină memoria cache APT, pachetele orfane, nucleele vechi, firmware-ul nefolosit, runtime-urile Flatpak, reviziile Snap, memoria cache a utilizatorului și coșul de gunoi cu scanare dublă utilizator/administrator.",
 
+    "sc-rel-1029-title": "1.0.2-9 — Iunie 2026",
+    "sc-rel-1029-subtitle": "Remediere de securitate și logică: Protejarea modulelor DKMS active ale nucleului Soplos pentru a preveni marcarea incorectă a acestora ca fiind orfane.",
+    "sc-rel-1029-fixed-li1": "<strong>Scaner de orfani DKMS:</strong> A fost remediată o eroare logică de indentare care a tratat incorect versiunile de nucleu Soplos, cauzând rezultate fals pozitive (NVIDIA, v4l2loopback).",
+
     "sc-rel-1028-title": "1.0.2-8 — Iunie 2026",
     "sc-rel-1028-subtitle": "Douăsprezece corecții de erori: fals pozitive în detectarea activă a kernel-ului, condiție de cursă la curățarea orfanilor APT, scanner DKMS extins la toate kernel-urile instalate, cititor hwmon priorizar pentru temperatura CPU (k10temp/coretemp înaintea acpitz), corecții de potrivire prin subșir în modprobe.d și nume de module, și verificarea fișierelor de serviciu orfane care necesită ca toate pachetele co-proprietare să fie dezinstalate.",
     "sc-rel-1028-fixed-li1": "<strong>Fals pozitiv în detectarea activă a kernel-ului (<code>kernels.py</code>):</strong> <code>version in current</code> folosea potrivirea prin subșir — <code>6.1.0-2-amd64</code> era un subșir al <code>6.1.0-27-amd64</code>, astfel un kernel vechi putea fi marcat ca activ și protejat de ștergere. Schimbat la egalitate exactă (<code>==</code>) în <code>get_installed_kernels</code> și <code>_find_unmatched_modules_dirs</code>.",

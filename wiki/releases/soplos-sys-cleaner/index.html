@@ -116,6 +116,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                                <li><a href="#v1029" class="toc-link">1.0.2-9 <span class="toc-date">— 2026-06-29</span></a></li>
                                 <li><a href="#v1028" class="toc-link">1.0.2-8 <span class="toc-date">— 2026-06-29</span></a></li>
                                 <li><a href="#v1027" class="toc-link">1.0.2-7 <span class="toc-date">— 2026-06-24</span></a></li>
                                 <li><a href="#v1026" class="toc-link">1.0.2-6 <span class="toc-date">— 2026-06-14</span></a></li>
@@ -132,6 +133,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-9 -->
+                        <section id="v1029" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-1029-title">1.0.2-9 — June 2026</span></h2>
+                            <p id="sc-rel-1029-subtitle" class="lead">Security and logic fix: Protected active Soplos kernel DKMS modules from being incorrectly flagged as orphans.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-1029-fixed-li1"><strong>DKMS orphan scanner:</strong> Fixed an indentation logic bug that incorrectly handled Soplos kernel versions causing false positives (NVIDIA, v4l2loopback).</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-8 -->
                         <section id="v1028" class="content-section">
