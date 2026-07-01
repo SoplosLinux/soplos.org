@@ -7,6 +7,7 @@ window.LANG_RO = {
     "menuCommunityDropdown": "Comunitate",
     "menuContributors": "Contributori",
     "menuVideos": "Videoclipuri",
+    "menuBranding": "Identitate",
     "menuDiscord": "Discord",
     "menuDiscover": "Descoperă",
     "menuDocs": "Documentație",
@@ -21,6 +22,25 @@ window.LANG_RO = {
     "menuTwitter": "Twitter",
     "menuWiki": "Wiki",
     "quickAccessTitle": "Acces Rapid",
+
+    // Branding Page
+    "branding-breadcrumb-home": "Acasa",
+    "branding-breadcrumb": "Identitate",
+    "branding-hero-title": "Identitate Vizuala",
+    "branding-hero-desc": "Paleta de culori, tipografie si logo-uri oficiale pentru designeri si creatori de continut care doresc sa foloseasca identitatea vizuala Soplos Linux.",
+    "branding-usage-note": "Aceste resurse sunt furnizate pentru uz comunitar: recenzii, tutoriale, articole si fan art. Utilizarea comerciala sau redistribuirea ca parte a altui brand necesita autorizare prealabila.",
+    "branding-colors-title": "Paleta de Culori",
+    "branding-color-primary": "Portocaliu Principal",
+    "branding-color-secondary": "Galben Secundar",
+    "branding-color-accent": "Rosu-Portocaliu Accent",
+    "branding-color-dark": "Fundal Intunecat",
+    "branding-color-text": "Text Principal",
+    "branding-color-light": "Deschis / Alb",
+    "branding-typography-title": "Tipografie",
+    "branding-logos-title": "Logo-uri",
+    "branding-logo-icon": "Pictograma",
+    "branding-logo-full": "Logo Complet",
+    "branding-logo-icon-light": "Pictograma — Fundal Deschis",
 
     // Videos Page
     "videos-breadcrumb-home": "Acasă",

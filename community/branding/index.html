@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding - Soplos Linux</title>
+    <meta name="description" content="Official Soplos Linux color palette, typography and logos for designers and content creators.">
+    <meta name="keywords" content="soplos, linux, branding, colors, palette, logos, design, identity">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Branding - Soplos Linux">
+    <meta property="og:description" content="Official Soplos Linux color palette, typography and logos for designers and content creators.">
+
+    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .branding-section {
+            padding: 2.5rem 0;
+        }
+
+        .branding-section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .color-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .color-swatch {
+            height: 100px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 0.8rem 1rem;
+        }
+
+        .color-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--light-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .color-hex {
+            font-size: 0.8rem;
+            font-family: monospace;
+            color: var(--text-color);
+        }
+
+        /* Typography */
+        .typography-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+        }
+
+        .font-sample-large {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--light-text);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .font-sample-medium {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .font-sample-small {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .font-stack {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            padding: 0.6rem 1rem;
+            background: rgba(255,125,46,0.08);
+            border-radius: 6px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* Logos */
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .logo-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .logo-card img {
+            max-height: 80px;
+            max-width: 100%;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .logo-card-dark {
+            background: #ffffff;
+        }
+
+        .logo-card-dark img {
+            filter: none;
+        }
+
+        .logo-name {
+            font-size: 0.85rem;
+            color: var(--text-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .logo-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 0.35rem 0.8rem;
+            transition: background 0.2s;
+        }
+
+        .logo-download:hover {
+            background: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        /* Usage note */
+        .usage-note {
+            background: rgba(255,125,46,0.07);
+            border: 1px solid rgba(255,125,46,0.2);
+            border-radius: 10px;
+            padding: 1.2rem 1.5rem;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+
+        .usage-note i {
+            color: var(--primary-color);
+            margin-top: 0.1rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../">
+                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../index.html#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
+                                <li><a href="../../index.html#docs" id="menuDocs">Documentation</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
+                                <li>
+                                    <a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                </li>
+                                <li>
+                                    <a href="https://paypal.me/isubdes" id="menuDonate" target="_blank">PayPal</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../"><i class="fas fa-home"></i> <span id="branding-breadcrumb-home">Home</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="branding-breadcrumb">Branding</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="transition-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-palette"></i> <span id="branding-hero-title">Branding</span></h1>
+                    <p id="branding-hero-desc">Official color palette, typography and logos for designers and content creators who want to use the Soplos Linux visual identity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contributors-section">
+            <div class="container">
+                <div class="contributors-page">
+
+                    <!-- Usage note -->
+                    <div class="usage-note" style="margin-bottom: 2.5rem;">
+                        <i class="fas fa-info-circle"></i>
+                        <span id="branding-usage-note">These assets are provided for community use: reviews, tutorials, articles and fan art. Commercial use or redistribution as part of another brand requires prior authorization.</span>
+                    </div>
+
+                    <!-- Color Palette -->
+                    <section class="content-section branding-section">
+                        <div class="branding-section-title">
+                            <i class="fas fa-fill-drip"></i>
+                            <span id="branding-colors-title">Color Palette</span>
+                        </div>
+                        <div class="color-grid">
+                            <div class="color-card">
+                                <div class="color-swatch" style="background: #ff7d2e;"></div>
+                                <div class="color-info">
+                                    <div class="color-name" id="branding-color-primary">Primary Orange</div>
+                                    <div class="color-hex">#ff7d2e</div>
+                                </div>
+                            </div>
+                            <div class="color-card">
+                                <div class="color-swatch" style="background: #fec431;"></div>
+                                <div class="color-info">
+                                    <div class="color-name" id="branding-color-secondary">Secondary Yellow</div>
+                                    <div class="color-hex">#fec431</div>
+                                </div>
+                            </div>
+                            <div class="color-card">
+                                <div class="color-swatch" style="background: #ef5a33;"></div>
+                                <div class="color-info">
+                                    <div class="color-name" id="branding-color-accent">Accent Red-Orange</div>
+                                    <div class="color-hex">#ef5a33</div>
+                                </div>
+                            </div>
+                            <div class="color-card">
+                                <div class="color-swatch" style="background: #252527;"></div>
+                                <div class="color-info">
+                                    <div class="color-name" id="branding-color-dark">Dark Background</div>
+                                    <div class="color-hex">#252527</div>
+                                </div>
+                            </div>
+                            <div class="color-card">
+                                <div class="color-swatch" style="background: #c0c0c0; border-bottom: 1px solid rgba(255,255,255,0.1);"></div>
+                                <div class="color-info">
+                                    <div class="color-name" id="branding-color-text">Body Text</div>
+                                    <div class="color-hex">#c0c0c0</div>
+                                </div>
+                            </div>
+                            <div class="color-card">
+                                <div class="color-swatch" style="background: #ffffff; border-bottom: 1px solid rgba(255,255,255,0.1);"></div>
+                                <div class="color-info">
+                                    <div class="color-name" id="branding-color-light">Light / White</div>
+                                    <div class="color-hex">#ffffff</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Typography -->
+                    <section class="content-section branding-section">
+                        <div class="branding-section-title">
+                            <i class="fas fa-font"></i>
+                            <span id="branding-typography-title">Typography</span>
+                        </div>
+                        <div class="typography-card">
+                            <div class="font-sample-large">Soplos Linux</div>
+                            <div class="font-sample-medium">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
+                            <div class="font-sample-small">a b c d e f g h i j k l m n o p q r s t u v w x y z &nbsp; 0 1 2 3 4 5 6 7 8 9</div>
+                            <div class="font-stack">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</div>
+                        </div>
+                    </section>
+
+                    <!-- Logos -->
+                    <section class="content-section branding-section">
+                        <div class="branding-section-title">
+                            <i class="fas fa-image"></i>
+                            <span id="branding-logos-title">Logos</span>
+                        </div>
+                        <div class="logos-grid">
+                            <div class="logo-card">
+                                <img src="../../images/logo/soplos-logo.png" alt="Soplos Linux Icon">
+                                <div class="logo-name" id="branding-logo-icon">Icon</div>
+                                <a href="../../images/logo/soplos-logo.png" download class="logo-download">
+                                    <i class="fas fa-download"></i> PNG
+                                </a>
+                            </div>
+                            <div class="logo-card">
+                                <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                                <div class="logo-name" id="branding-logo-full">Full Logo</div>
+                                <a href="../../images/logo/web-logo.png" download class="logo-download">
+                                    <i class="fas fa-download"></i> PNG
+                                </a>
+                            </div>
+                            <div class="logo-card logo-card-dark">
+                                <img src="../../images/logo/soplos-logo.png" alt="Soplos Linux Icon on light background">
+                                <div class="logo-name" style="color: #252527;" id="branding-logo-icon-light">Icon — Light Background</div>
+                                <a href="../../images/logo/soplos-logo.png" download class="logo-download">
+                                    <i class="fas fa-download"></i> PNG
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2026 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../legal/terms.html" id="footer-terms">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../js/logger.js"></script>
+    <script src="../../js/language-loader.js"></script>
+    <script src="../../js/language-switcher.js"></script>
+    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

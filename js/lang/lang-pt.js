@@ -7,6 +7,7 @@ window.LANG_PT = {
     "menuCommunityDropdown": "Comunidade",
     "menuContributors": "Colaboradores",
     "menuVideos": "Vídeos",
+    "menuBranding": "Identidade",
     "menuDiscord": "Discord",
     "menuDiscover": "Descobrir",
     "menuDocs": "Documentação",
@@ -21,6 +22,25 @@ window.LANG_PT = {
     "menuTwitter": "Twitter",
     "menuWiki": "Wiki",
     "quickAccessTitle": "Acesso Rápido",
+
+    // Branding Page
+    "branding-breadcrumb-home": "Inicio",
+    "branding-breadcrumb": "Identidade",
+    "branding-hero-title": "Identidade Visual",
+    "branding-hero-desc": "Paleta de cores, tipografia e logotipos oficiais para designers e criadores de conteudo que desejam usar a identidade visual do Soplos Linux.",
+    "branding-usage-note": "Estes recursos sao fornecidos para uso comunitario: avaliacoes, tutoriais, artigos e fan art. O uso comercial ou a redistribuicao como parte de outra marca requer autorizacao previa.",
+    "branding-colors-title": "Paleta de Cores",
+    "branding-color-primary": "Laranja Principal",
+    "branding-color-secondary": "Amarelo Secundario",
+    "branding-color-accent": "Vermelho-Laranja de Destaque",
+    "branding-color-dark": "Fundo Escuro",
+    "branding-color-text": "Texto Principal",
+    "branding-color-light": "Claro / Branco",
+    "branding-typography-title": "Tipografia",
+    "branding-logos-title": "Logotipos",
+    "branding-logo-icon": "Icone",
+    "branding-logo-full": "Logotipo Completo",
+    "branding-logo-icon-light": "Icone — Fundo Claro",
 
     // Videos Page
     "videos-breadcrumb-home": "Início",

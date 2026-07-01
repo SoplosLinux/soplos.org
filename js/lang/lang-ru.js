@@ -7,6 +7,7 @@ window.LANG_RU = {
     "menuCommunityDropdown": "Сообщество",
     "menuContributors": "Участники",
     "menuVideos": "Видео",
+    "menuBranding": "Айдентика",
     "menuDiscord": "Discord",
     "menuDiscover": "Открыть",
     "menuDocs": "Документация",
@@ -21,6 +22,25 @@ window.LANG_RU = {
     "menuTwitter": "Twitter",
     "menuWiki": "Вики",
     "quickAccessTitle": "Быстрый Доступ",
+
+    // Branding Page
+    "branding-breadcrumb-home": "Главная",
+    "branding-breadcrumb": "Айдентика",
+    "branding-hero-title": "Визуальная Айдентика",
+    "branding-hero-desc": "Официальная цветовая палитра, типографика и логотипы для дизайнеров и авторов контента, желающих использовать визуальный стиль Soplos Linux.",
+    "branding-usage-note": "Эти ресурсы предоставляются для использования сообществом: рецензии, обучающие материалы, статьи и фан-арт. Коммерческое использование или распространение в рамках другого бренда требует предварительного разрешения.",
+    "branding-colors-title": "Цветовая Палитра",
+    "branding-color-primary": "Основной Оранжевый",
+    "branding-color-secondary": "Вторичный Жёлтый",
+    "branding-color-accent": "Акцент Красно-Оранжевый",
+    "branding-color-dark": "Тёмный Фон",
+    "branding-color-text": "Основной Текст",
+    "branding-color-light": "Светлый / Белый",
+    "branding-typography-title": "Типографика",
+    "branding-logos-title": "Логотипы",
+    "branding-logo-icon": "Иконка",
+    "branding-logo-full": "Полный Логотип",
+    "branding-logo-icon-light": "Иконка — Светлый Фон",
 
     // Videos Page
     "videos-breadcrumb-home": "Главная",
