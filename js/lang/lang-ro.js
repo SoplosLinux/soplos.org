@@ -37,6 +37,8 @@ window.LANG_RO = {
     "branding-color-text": "Text Principal",
     "branding-color-light": "Deschis / Alb",
     "branding-typography-title": "Tipografie",
+    "branding-font-montserrat-use": "Logouri, titluri și identitate vizuală",
+    "branding-font-ubuntu-use": "Interfața sistemului și aplicații",
     "branding-logos-title": "Logo-uri",
     "branding-logo-icon": "Pictograma",
     "branding-logo-full": "Logo Complet",

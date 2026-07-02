@@ -14,6 +14,9 @@
 
     <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -73,37 +76,55 @@
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 10px;
-            padding: 1.5rem 2rem;
+            padding: 2rem 2.5rem;
+            margin-bottom: 1.2rem;
         }
 
-        .font-sample-large {
-            font-size: 2.2rem;
+        .font-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .font-label {
+            font-size: 0.75rem;
             font-weight: 700;
-            color: var(--light-text);
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-color);
         }
 
-        .font-sample-medium {
-            font-size: 1.2rem;
+        .font-use {
+            font-size: 0.8rem;
             color: var(--text-color);
-            margin-bottom: 0.5rem;
+            opacity: 0.7;
         }
 
-        .font-sample-small {
-            font-size: 0.9rem;
+        .font-demo {
+            font-size: 3rem;
+            color: #ffffff;
+            line-height: 1.1;
+            margin: 1rem 0 0.8rem;
+        }
+
+        .font-alphabet {
+            font-size: 0.95rem;
             color: var(--text-color);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
         }
 
         .font-stack {
             font-family: monospace;
             font-size: 0.8rem;
             color: var(--primary-color);
-            margin-top: 1rem;
-            padding: 0.6rem 1rem;
+            padding: 0.5rem 1rem;
             background: rgba(255,125,46,0.08);
             border-radius: 6px;
             border-left: 3px solid var(--primary-color);
+            display: inline-block;
         }
 
         /* Logos */
@@ -346,14 +367,32 @@
                     <!-- Typography -->
                     <section class="content-section branding-section">
                         <div class="branding-section-title">
-                            <i class="fas fa-font"></i>
+                            <i class="fas fa-pen-nib"></i>
                             <span id="branding-typography-title">Typography</span>
                         </div>
                         <div class="typography-card">
-                            <div class="font-sample-large">Soplos Linux</div>
-                            <div class="font-sample-medium">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
-                            <div class="font-sample-small">a b c d e f g h i j k l m n o p q r s t u v w x y z &nbsp; 0 1 2 3 4 5 6 7 8 9</div>
-                            <div class="font-stack">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</div>
+                            <div class="font-header">
+                                <div class="font-label">Montserrat</div>
+                                <div class="font-use" id="branding-font-montserrat-use">Logos, titles and visual identity</div>
+                            </div>
+                            <div class="font-demo" style="font-family: 'Montserrat', sans-serif; font-weight: 100;">Soplos Linux</div>
+                            <div class="font-alphabet" style="font-family: 'Montserrat', sans-serif; font-weight: 100;">
+                                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                                a b c d e f g h i j k l m n o p q r s t u v w x y z &nbsp; 0 1 2 3 4 5 6 7 8 9
+                            </div>
+                            <div class="font-stack">Montserrat Thin (100)</div>
+                        </div>
+                        <div class="typography-card">
+                            <div class="font-header">
+                                <div class="font-label">Ubuntu</div>
+                                <div class="font-use" id="branding-font-ubuntu-use">System interface and applications</div>
+                            </div>
+                            <div class="font-demo" style="font-family: 'Ubuntu', sans-serif; font-weight: 400;">Soplos Linux</div>
+                            <div class="font-alphabet" style="font-family: 'Ubuntu', sans-serif; font-weight: 400;">
+                                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                                a b c d e f g h i j k l m n o p q r s t u v w x y z &nbsp; 0 1 2 3 4 5 6 7 8 9
+                            </div>
+                            <div class="font-stack">Ubuntu Regular (400) / Bold (700)</div>
                         </div>
                     </section>
 

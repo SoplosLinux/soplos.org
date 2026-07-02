@@ -37,6 +37,8 @@ window.LANG_EN = {
     "branding-color-text": "Body Text",
     "branding-color-light": "Light / White",
     "branding-typography-title": "Typography",
+    "branding-font-montserrat-use": "Logos, titles and visual identity",
+    "branding-font-ubuntu-use": "System interface and applications",
     "branding-logos-title": "Logos",
     "branding-logo-icon": "Icon",
     "branding-logo-full": "Full Logo",

@@ -37,6 +37,8 @@ window.LANG_IT = {
     "branding-color-text": "Testo Principale",
     "branding-color-light": "Chiaro / Bianco",
     "branding-typography-title": "Tipografia",
+    "branding-font-montserrat-use": "Loghi, titoli e identità visiva",
+    "branding-font-ubuntu-use": "Interfaccia di sistema e applicazioni",
     "branding-logos-title": "Loghi",
     "branding-logo-icon": "Icona",
     "branding-logo-full": "Logo Completo",

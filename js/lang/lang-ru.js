@@ -37,6 +37,8 @@ window.LANG_RU = {
     "branding-color-text": "Основной Текст",
     "branding-color-light": "Светлый / Белый",
     "branding-typography-title": "Типографика",
+    "branding-font-montserrat-use": "Логотипы, заголовки и визуальная идентичность",
+    "branding-font-ubuntu-use": "Системный интерфейс и приложения",
     "branding-logos-title": "Логотипы",
     "branding-logo-icon": "Иконка",
     "branding-logo-full": "Полный Логотип",
