@@ -4679,6 +4679,9 @@ Object.assign(window.LANG_FR, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Application de bienvenue pour Soplos Linux Live — intégration avec l'installateur Calamares et récupération système avancée en CHROOT avec prise en charge complète de BTRFS pour XFCE, KDE Plasma et GNOME.",
 
+    "wl-rel-2025-title": "2.0.2-5 — Juillet 2026",
+    "wl-rel-2025-subtitle": "Calamares est désormais lancé avec <code>QT_STYLE_OVERRIDE=fusion</code> sur KDE Plasma pour garantir un rendu correct.",
+    "wl-rel-2025-fixed-li1": "<strong>Calamares — Rendu sur KDE Plasma :</strong> Calamares est désormais lancé avec <code>QT_STYLE_OVERRIDE=fusion</code> sur KDE Plasma pour garantir le rendu correct des widgets.",
     "wl-rel-2024-title": "2.0.2-4 — Juin 2026",
     "wl-rel-2024-subtitle": "Le changeur de langue detecte maintenant le gestionnaire d'affichage actif au moment de l'execution au lieu d'en supposer un fixe, resolvant un crash en cascade sur VirtualBox avec Tyson RC1 apres un changement de langue.",
     "wl-rel-2024-fixed-li1": "<strong>Changeur de langue — detection dynamique du gestionnaire d'affichage :</strong> Le changeur de langue utilise maintenant systemctl is-active pour detecter le gestionnaire d'affichage en cours avant de le redemarrer, au lieu d'utiliser toujours l'alias generique display-manager.service. Sur Tyson RC1 il redemarre plasmalogin directement ; sur les ISOs beta encore sur SDDM il redemarre sddm ; l'alias generique n'est utilise qu'en dernier recours. Cela resout un bug sur VirtualBox ou le redemarrage a chaud causait l'affichage du fond d'ecran Breeze au lieu de celui de Soplos et declenchait un crash en cascade de ksplashqml a la connexion.",

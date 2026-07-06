@@ -5511,6 +5511,9 @@ Object.assign(window.LANG_EN, {
   "wl-rel-hero-title": "Soplos Welcome Live",
   "wl-rel-hero-subtitle": "Welcome application for Soplos Linux Live — Calamares installer integration and advanced CHROOT system recovery with full BTRFS support for XFCE, KDE Plasma and GNOME.",
 
+  "wl-rel-2025-title": "2.0.2-5 — July 2026",
+  "wl-rel-2025-subtitle": "Calamares is now launched with <code>QT_STYLE_OVERRIDE=fusion</code> on KDE Plasma to ensure correct rendering.",
+  "wl-rel-2025-fixed-li1": "<strong>Calamares — KDE Plasma rendering:</strong> Calamares is now launched with <code>QT_STYLE_OVERRIDE=fusion</code> on KDE Plasma to ensure correct widget rendering.",
   "wl-rel-2024-title": "2.0.2-4 — June 2026",
   "wl-rel-2024-subtitle": "Language changer now detects the active display manager at runtime instead of assuming a fixed one, resolving a VirtualBox crash cascade on Tyson RC1 after language change.",
   "wl-rel-2024-fixed-li1": "<strong>Language changer — dynamic display manager detection:</strong> The language changer now uses systemctl is-active to detect the running display manager before restarting it, instead of always using the generic display-manager.service alias. On Tyson RC1 it restarts plasmalogin directly; on beta ISOs still on SDDM it restarts sddm; the generic alias is only used as a last resort. This resolves a bug on VirtualBox where the hot restart caused plasmalogin to show the Breeze wallpaper instead of the Soplos one and triggered a ksplashqml crash cascade on login.",

@@ -4686,6 +4686,9 @@ Object.assign(window.LANG_DE, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Willkommensanwendung für Soplos Linux Live — Integration mit dem Calamares-Installer und erweitertes CHROOT-Systemwiederherstellung mit vollständiger BTRFS-Unterstützung für XFCE, KDE Plasma und GNOME.",
 
+    "wl-rel-2025-title": "2.0.2-5 — Juli 2026",
+    "wl-rel-2025-subtitle": "Calamares wird auf KDE Plasma jetzt mit <code>QT_STYLE_OVERRIDE=fusion</code> gestartet, um eine korrekte Darstellung sicherzustellen.",
+    "wl-rel-2025-fixed-li1": "<strong>Calamares — Darstellung auf KDE Plasma:</strong> Calamares wird auf KDE Plasma jetzt mit <code>QT_STYLE_OVERRIDE=fusion</code> gestartet, um die korrekte Darstellung der Widgets sicherzustellen.",
     "wl-rel-2024-title": "2.0.2-4 — Juni 2026",
     "wl-rel-2024-subtitle": "Der Sprachumschalter erkennt jetzt den aktiven Anzeigemanager zur Laufzeit, anstatt einen festen anzunehmen, und lost damit einen Absturz auf VirtualBox mit Tyson RC1 nach dem Sprachwechsel.",
     "wl-rel-2024-fixed-li1": "<strong>Sprachumschalter — dynamische Anzeigemanager-Erkennung:</strong> Der Sprachumschalter verwendet jetzt systemctl is-active, um den laufenden Anzeigemanager zu erkennen, bevor er neu gestartet wird, anstatt immer den generischen Alias display-manager.service zu verwenden. Auf Tyson RC1 wird plasmalogin direkt neu gestartet; auf Beta-ISOs, die noch SDDM verwenden, wird sddm neu gestartet; der generische Alias wird nur als letzte Moglichkeit verwendet. Dies behebt einen Fehler auf VirtualBox, bei dem der Neustart dazu fuhrte, dass plasmalogin das Breeze-Hintergrundbild statt des Soplos-Hintergrundbilds anzeigte und beim Anmelden einen ksplashqml-Absturz ausloste.",
