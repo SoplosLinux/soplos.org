@@ -117,6 +117,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2104" class="toc-link">2.1.0-4 <span class="toc-date">— 2026-07-06</span></a></li>
                             <li><a href="#v2103" class="toc-link">2.1.0-3 <span class="toc-date">— 2026-06-30</span></a></li>
                             <li><a href="#v2102" class="toc-link">2.1.0-2 <span class="toc-date">— 2026-06-29</span></a></li>
                             <li><a href="#v2101" class="toc-link">2.1.0-1 <span class="toc-date">— 2026-06-24</span></a></li>
@@ -183,6 +184,38 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.0-4 -->
+                        <section id="v2104" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2104-title">2.1.0-4 — July 2026</span></h2>
+                            <p id="wel-rel-2104-subtitle" class="lead">LucidGlyph font rendering tool added to Customization tab for all three DEs with DE-specific post-install steps; amdgpu_top and nvtop added to the Recommended tab; FileZilla duplicate removed from Developer category.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2104-added-li1"><strong>Customization Tab — LucidGlyph:</strong> New entry in the Soplos Tools section for XFCE, GNOME and KDE. Downloads the latest release tarball from GitHub, extracts it and runs <code>./lucidglyph.sh install</code> via pkexec. Uninstall runs <code>./lucidglyph.sh remove</code>. Detection via <code>/usr/local/share/lucidglyph/version</code> marker file. On GNOME, <code>gsettings set org.gnome.desktop.interface font-antialiasing grayscale</code> is applied automatically after install and reset on removal. On KDE, a manual instruction dialog is shown pointing to System Settings - Text and Fonts - Sub-pixel rendering = None.</li>
+                                <li id="wel-rel-2104-added-li2"><strong>Recommended Tab — amdgpu_top:</strong> Real-time AMD GPU usage monitor. Installs via GitHub latest release <code>.deb</code> (dynamic URL via GitHub API).</li>
+                                <li id="wel-rel-2104-added-li3"><strong>Recommended Tab — nvtop:</strong> GPU process monitor for NVIDIA, AMD and Intel. Installs from the official Debian repository.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2104-fixed-li1"><strong>Recommended Tab — FileZilla duplicate:</strong> FileZilla was listed in both Developer and Files categories. Removed from Developer; remains only in Files.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-language"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2104-i18n-li1">All 8 languages (en, es, de, fr, it, pt, ro, ru) updated with new strings for LucidGlyph install/uninstall flow, amdgpu_top and nvtop descriptions.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.0-3 -->
                         <section id="v2103" class="content-section">
