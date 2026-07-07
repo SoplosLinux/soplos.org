@@ -4118,6 +4118,9 @@ Object.assign(window.LANG_DE, {
     "tyron-rel-table-update-policy-value": "Rolling (Debian Testing)",
 
     // Theme Manager 2.0.1-2
+    "tm-rel-2014-title": "2.0.1-4 — Juli 2026",
+    "tm-rel-2014-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "tm-rel-2014-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "tm-rel-2013-title": "2.0.1-3 — Juni 2026",
     "tm-rel-2013-subtitle": "Polkit-Abhaengigkeit auf <code>polkitd</code> aktualisiert, den korrekten Paketnamen im aktuellen Debian. Veraltete Alternativen <code>policykit-1-gnome</code> und <code>policykit-1</code> entfernt.",
     "tm-rel-2013-fixed-li1": "<strong>Polkit-Abhaengigkeit:</strong> Auf <code>polkitd</code> aktualisiert, den korrekten Paketnamen im aktuellen Debian. Veraltete Alternativen <code>policykit-1-gnome</code> und <code>policykit-1</code> entfernt, die nicht mehr existieren und Warnungen bei der Paketinstallation verursachten.",
@@ -4283,6 +4286,9 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-2105-title": "2.1.0-5 — Juli 2026",
+    "wel-rel-2105-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "wel-rel-2105-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "wel-rel-2104-title": "2.1.0-4 — Juli 2026",
     "wel-rel-2104-subtitle": "LucidGlyph zur Anpassungs-Registerkarte für alle drei Desktopumgebungen hinzugefügt mit DE-spezifischen Schritten nach der Installation; amdgpu_top und nvtop zur Empfehlen-Registerkarte hinzugefügt; FileZilla-Duplikat aus der Kategorie Entwickler entfernt.",
     "wel-rel-2104-added-li1": "<strong>Anpassungs-Registerkarte — LucidGlyph:</strong> Neuer Eintrag im Bereich Soplos-Tools für XFCE, GNOME und KDE. Lädt das aktuelle Release-Archiv von GitHub herunter, entpackt es und führt <code>./lucidglyph.sh install</code> via pkexec aus. Die Deinstallation führt <code>./lucidglyph.sh remove</code> aus. Erkennung über die Markierungsdatei <code>/usr/local/share/lucidglyph/version</code>. Unter GNOME wird <code>gsettings set org.gnome.desktop.interface font-antialiasing grayscale</code> nach der Installation automatisch angewendet und bei der Deinstallation zurückgesetzt. Unter KDE wird ein manueller Hinweisdialog angezeigt, der auf Systemeinstellungen - Text und Schriften - Subpixel-Rendering = Keine verweist.",
@@ -4686,6 +4692,9 @@ Object.assign(window.LANG_DE, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Willkommensanwendung für Soplos Linux Live — Integration mit dem Calamares-Installer und erweitertes CHROOT-Systemwiederherstellung mit vollständiger BTRFS-Unterstützung für XFCE, KDE Plasma und GNOME.",
 
+    "wl-rel-2026-title": "2.0.2-6 — Juli 2026",
+    "wl-rel-2026-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "wl-rel-2026-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "wl-rel-2025-title": "2.0.2-5 — Juli 2026",
     "wl-rel-2025-subtitle": "Calamares wird auf KDE Plasma jetzt mit <code>QT_STYLE_OVERRIDE=fusion</code> gestartet, um eine korrekte Darstellung sicherzustellen.",
     "wl-rel-2025-fixed-li1": "<strong>Calamares — Darstellung auf KDE Plasma:</strong> Calamares wird auf KDE Plasma jetzt mit <code>QT_STYLE_OVERRIDE=fusion</code> gestartet, um die korrekte Darstellung der Widgets sicherzustellen.",
@@ -4993,6 +5002,9 @@ Object.assign(window.LANG_DE, {
     "sc-rel-hero-title": "Soplos Sys Cleaner",
     "sc-rel-hero-subtitle": "Systemreiniger für Soplos Linux — entfernt APT-Cache, verwaiste Pakete, alte Kernel, ungenutzte Firmware, Flatpak-Laufzeiten, Snap-Revisionen, Benutzer-Cache und Papierkorb mit zweischichtigem Benutzer-/Administrator-Scan.",
 
+    "sc-rel-103-title": "1.0.3 — Juli 2026",
+    "sc-rel-103-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "sc-rel-103-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "sc-rel-1029-title": "1.0.2-9 — Juni 2026",
     "sc-rel-1029-subtitle": "Sicherheits- und Logik-Fix: Schutz aktiver Soplos-Kernel-DKMS-Module vor fälschlicher Markierung als Waisen.",
     "sc-rel-1029-fixed-li1": "<strong>DKMS-Waisen-Scanner:</strong> Behoben: Ein Einrückungs-Logikfehler behandelte Soplos-Kernel-Versionen falsch, was zu falschen Positiven führte (NVIDIA, v4l2loopback).",
@@ -5193,6 +5205,9 @@ Object.assign(window.LANG_DE, {
     "aim-rel-hero-title": "Soplos AppImage Manager",
     "aim-rel-hero-subtitle": "AppImage-Verwaltung für Soplos Linux — AppImage-Anwendungen hinzufügen, integrieren und verwalten mit automatischer Metadaten-Extraktion, Desktop-Eintrag-Erstellung und integrierter Update-Prüfung von GitHub, GitLab und Codeberg.",
 
+    "aim-rel-101-1-title": "1.0.1-1 — Juli 2026",
+    "aim-rel-101-1-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "aim-rel-101-1-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "aim-rel-101-title": "1.0.1 — März 2026",
     "aim-rel-101-subtitle": "Eigenschaften-Dialog mit bearbeitbaren Metadaten, automatische Update-Prüfung via GitHub/GitLab/Codeberg-APIs, Massenaktionen Alle Updates prüfen und Alle aktualisieren, Als root ausführen-Schalter und Korrekturen für Icon-Extraktion, Übersetzungsabdeckung und Theme-Unterstützung.",
     "aim-rel-101-added-li1": "<strong>Eigenschaften-Dialog:</strong> Name, Version, Beschreibung, Kategorien und Update-URL jedes integrierten AppImages anzeigen und bearbeiten.",
@@ -5240,6 +5255,9 @@ Object.assign(window.LANG_DE, {
     "ge-rel-hero-title": "Soplos GRUB Editor",
     "ge-rel-hero-subtitle": "Grafischer GTK3-Editor für GRUB2 — Themenverwaltung, Schriftartenkonvertierung, Hintergrundbild-Konfiguration, Boot-Einträge bearbeiten und erweiterte Kernel-Parameter, mit vollständiger Internationalisierung in 8 Sprachen.",
 
+    "ge-rel-202-5-title": "2.0.2-5 — Juli 2026",
+    "ge-rel-202-5-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "ge-rel-202-5-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "ge-rel-202-4-title": "2.0.2-4 — Mai 2026",
     "ge-rel-202-4-subtitle": "Rein dokumentarische Version — Legacy-1.x-Zeitlinie von Tyson angepasst und veraltete Metainfo-Tags bereinigt.",
     "ge-rel-202-4-docs-li1": "<strong>Tyson-Legacy-Zeitlinie:</strong> Die Legacy-1.x-Release-Zeitlinie von Tyson wurde auf die korrekten Zeitstempel vom Juli 2025 ausgerichtet.",
@@ -5429,6 +5447,9 @@ Object.assign(window.LANG_DE, {
     "rs-rel-hero-title": "Soplos Repo Selector",
     "rs-rel-hero-subtitle": "APT-Repository-Verwaltung mit Echtzeit-Suche, DEB822-Modernisierer, Spiegel-Geschwindigkeitstest, GPG-Schlüsselverwaltung und vollständiger Internationalisierung in 8 Sprachen.",
 
+    "rs-rel-203-title": "2.0.3 — Juli 2026",
+    "rs-rel-203-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "rs-rel-203-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "rs-rel-202-9-title": "2.0.2-9 — Juni 2026",
     "rs-rel-202-9-subtitle": "Der Quellen-Generator unterstützt jetzt das Einschließen von Quellpaketen über eine neue <code>deb-src</code>-Checkbox, die beim Start automatisch aus vorhandenen Systemrepositorys erkannt wird.",
     "rs-rel-202-9-added-li1": "<strong>Quellen-Generator — <code>deb-src</code>-Checkbox:</strong> Neue Option zum Einschließen von Quellpaketen in die generierte APT-Quellendatei. Die Checkbox wird beim Start automatisch aus vorhandenen Systemrepositorys erkannt.",
@@ -5623,6 +5644,9 @@ Object.assign(window.LANG_DE, {
     "pm-rel-hero-title": "Soplos Plymouth Manager",
     "pm-rel-hero-subtitle": "Grafischer GTK3-Manager für Plymouth-Boot-Splash-Themen — Vorschau, Installation und Anwendung von Themen mit Wayland/X11-Unterstützung, erweiterten Xephyr-Vorschauen und vollständiger Internationalisierung in 8 Sprachen.",
 
+    "pm-rel-200-8-title": "2.0.0-8 — Juli 2026",
+    "pm-rel-200-8-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "pm-rel-200-8-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "pm-rel-200-7-title": "2.0.0-7 — Juni 2026",
     "pm-rel-200-7-subtitle": "Polkit-Abhaengigkeit auf nur <code>polkit</code> reduziert. Veraltete Alternativen <code>policykit-1-gnome</code> und <code>policykit-1</code>, die im aktuellen Debian nicht mehr existieren, wurden entfernt.",
     "pm-rel-200-7-fixed-li1": "<strong>Polkit-Abhaengigkeit:</strong> Auf nur <code>polkit</code> reduziert. Veraltete Alternativen <code>policykit-1-gnome</code> und <code>policykit-1</code> entfernt, die im aktuellen Debian nicht mehr vorhanden sind und Warnungen bei der Paketinstallation verursachten.",
@@ -5754,6 +5778,9 @@ Object.assign(window.LANG_DE, {
     "wm-rel-breadcrumb": "Soplos WebApp Manager",
     "wm-rel-hero-title": "Soplos WebApp Manager",
     "wm-rel-hero-subtitle": "SSB-Engine für Soplos Linux — verwandeln Sie jede Website in eine eigenständige Desktop-App mit isolierten Browser-Profilen, Multi-Browser-Unterstützung und vollständiger Internationalisierung.",
+    "wm-rel-1005-title": "1.0.0-5 — Juli 2026",
+    "wm-rel-1005-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
+    "wm-rel-1005-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
     "wm-rel-1004-title": "1.0.0-4 — April 2026",
     "wm-rel-1004-subtitle": "Fußzeilentext auf Soplos-Standard vereinfacht, Icon-Persistenz verbessert und System-Theme-Unterstützung korrigiert.",
     "wm-rel-1004-changed-li1": "<strong>Fußzeilentext:</strong> Vereinfacht auf das moderne Soplos-Standard-Layout (<code>XFCE · X11</code>).",
