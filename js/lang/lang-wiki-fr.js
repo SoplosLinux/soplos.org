@@ -4279,6 +4279,9 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-2106-title": "2.1.0-6 — Juillet 2026",
+    "wel-rel-2106-subtitle": "Detection de version Qt corrigee — <code>FileNotFoundError</code> ajoutee au bloc de capture des exceptions, evitant un crash au demarrage quand <code>qmake</code> n'est pas installe.",
+    "wel-rel-2106-fixed-li1": "<strong>Detection d'environnement — version Qt :</strong> <code>_detect_qt_version()</code> dans <code>core/environment.py</code> a ajoute <code>FileNotFoundError</code> au bloc de capture — auparavant seuls <code>subprocess.SubprocessError</code> et <code>subprocess.TimeoutExpired</code> etaient geres, donc quand <code>qmake</code> n'est pas installe <code>subprocess.run</code> levait <code>FileNotFoundError</code> qui se propagait via <code>detect_all()</code> et faisait planter l'application au demarrage.",
     "wel-rel-2105-title": "2.1.0-5 — Juillet 2026",
     "wel-rel-2105-subtitle": "Mise a jour de la dependance de compilation — <code>python3-all</code> remplace par <code>python3</code> dans <code>debian/control</code>.",
     "wel-rel-2105-changed-li1": "Dependance de compilation <code>python3-all</code> remplacee par <code>python3</code>.",

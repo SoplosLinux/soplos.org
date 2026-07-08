@@ -4286,6 +4286,9 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-2106-title": "2.1.0-6 — Juli 2026",
+    "wel-rel-2106-subtitle": "Qt-Versionserkennung behoben — <code>FileNotFoundError</code> zur Ausnahmebehandlung hinzugefuegt, verhindert Absturz beim Start wenn <code>qmake</code> nicht installiert ist.",
+    "wel-rel-2106-fixed-li1": "<strong>Umgebungserkennung — Qt-Version:</strong> <code>_detect_qt_version()</code> in <code>core/environment.py</code> hat <code>FileNotFoundError</code> zur Ausnahmebehandlung hinzugefuegt — zuvor wurden nur <code>subprocess.SubprocessError</code> und <code>subprocess.TimeoutExpired</code> abgefangen, sodass bei fehlendem <code>qmake</code> ein <code>FileNotFoundError</code> durch <code>detect_all()</code> propagiert wurde und die Anwendung beim Start abstuerzte.",
     "wel-rel-2105-title": "2.1.0-5 — Juli 2026",
     "wel-rel-2105-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
     "wel-rel-2105-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",

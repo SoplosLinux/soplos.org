@@ -161,8 +161,20 @@ header .container {
     transition: height 0.25s cubic-bezier(.4, 0, .2, 1);
 }
 
+.mourning-ribbon {
+    flex-shrink: 0;
+    height: 40px;
+    width: auto;
+    margin-bottom: 2px;
+    transition: height 0.25s cubic-bezier(.4, 0, .2, 1);
+}
+
 header.scrolled .logo img {
     height: 32px;
+}
+
+header.scrolled .mourning-ribbon {
+    height: 28px;
 }
 
 .header-right {

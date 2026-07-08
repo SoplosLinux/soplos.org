@@ -4288,6 +4288,9 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-2106-title": "2.1.0-6 — Июль 2026",
+    "wel-rel-2106-subtitle": "Определение версии Qt исправлено — <code>FileNotFoundError</code> добавлен в блок перехвата исключений, предотвращая сбой при запуске если <code>qmake</code> не установлен.",
+    "wel-rel-2106-fixed-li1": "<strong>Определение среды — версия Qt:</strong> <code>_detect_qt_version()</code> в <code>core/environment.py</code> добавил <code>FileNotFoundError</code> в блок перехвата исключений — ранее обрабатывались только <code>subprocess.SubprocessError</code> и <code>subprocess.TimeoutExpired</code>, поэтому при отсутствии <code>qmake</code> <code>subprocess.run</code> вызывал <code>FileNotFoundError</code>, который распространялся через <code>detect_all()</code> и приводил к сбою приложения при запуске.",
     "wel-rel-2105-title": "2.1.0-5 — Июль 2026",
     "wel-rel-2105-subtitle": "Обновление сборочной зависимости — <code>python3-all</code> заменён на <code>python3</code> в <code>debian/control</code>.",
     "wel-rel-2105-changed-li1": "Сборочная зависимость <code>python3-all</code> заменена на <code>python3</code>.",

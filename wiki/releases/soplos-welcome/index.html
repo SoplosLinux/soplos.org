@@ -19,6 +19,7 @@
                 <a href="../../../">
                     <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
                 </a>
+                <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
             <div class="header-right">
                 <button class="mobile-menu-toggle" aria-label="Menu">
@@ -117,6 +118,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2106" class="toc-link">2.1.0-6 <span class="toc-date">— 2026-07-08</span></a></li>
                             <li><a href="#v2105" class="toc-link">2.1.0-5 <span class="toc-date">— 2026-07-07</span></a></li>
                             <li><a href="#v2104" class="toc-link">2.1.0-4 <span class="toc-date">— 2026-07-06</span></a></li>
                             <li><a href="#v2103" class="toc-link">2.1.0-3 <span class="toc-date">— 2026-06-30</span></a></li>
@@ -185,6 +187,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.0-6 -->
+                        <section id="v2106" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2106-title">2.1.0-6 — July 2026</span></h2>
+                            <p id="wel-rel-2106-subtitle" class="lead">Qt version detection fixed — <code>FileNotFoundError</code> added to exception catch, preventing a startup crash when <code>qmake</code> is not installed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2106-fixed-li1"><strong>Environment detection — Qt version:</strong> <code>_detect_qt_version()</code> in <code>core/environment.py</code> added <code>FileNotFoundError</code> to the exception catch — previously only <code>subprocess.SubprocessError</code> and <code>subprocess.TimeoutExpired</code> were handled, so when <code>qmake</code> is not installed <code>subprocess.run</code> raised <code>FileNotFoundError</code> that propagated through <code>detect_all()</code> and crashed the application on startup.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.0-5 -->
                         <section id="v2105" class="content-section">

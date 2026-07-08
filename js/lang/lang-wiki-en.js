@@ -5111,6 +5111,9 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-2106-title": "2.1.0-6 — July 2026",
+  "wel-rel-2106-subtitle": "Qt version detection fixed — <code>FileNotFoundError</code> added to exception catch, preventing a startup crash when <code>qmake</code> is not installed.",
+  "wel-rel-2106-fixed-li1": "<strong>Environment detection — Qt version:</strong> <code>_detect_qt_version()</code> in <code>core/environment.py</code> added <code>FileNotFoundError</code> to the exception catch — previously only <code>subprocess.SubprocessError</code> and <code>subprocess.TimeoutExpired</code> were handled, so when <code>qmake</code> is not installed <code>subprocess.run</code> raised <code>FileNotFoundError</code> that propagated through <code>detect_all()</code> and crashed the application on startup.",
   "wel-rel-2105-title": "2.1.0-5 — July 2026",
   "wel-rel-2105-subtitle": "Build dependency update — <code>python3-all</code> replaced with <code>python3</code> in <code>debian/control</code>.",
   "wel-rel-2105-changed-li1": "Build dependency <code>python3-all</code> replaced with <code>python3</code>.",
