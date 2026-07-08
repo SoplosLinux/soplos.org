@@ -4695,6 +4695,9 @@ Object.assign(window.LANG_DE, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Willkommensanwendung für Soplos Linux Live — Integration mit dem Calamares-Installer und erweitertes CHROOT-Systemwiederherstellung mit vollständiger BTRFS-Unterstützung für XFCE, KDE Plasma und GNOME.",
 
+    "wl-rel-2027-title": "2.0.2-7 — Juli 2026",
+    "wl-rel-2027-subtitle": "Qt6-Kompatibilitaet — alle <code>qdbus</code>-Aufrufe nach Entfernung von Qt5 aus dem Basissystem durch <code>qdbus6</code> ersetzt.",
+    "wl-rel-2027-fixed-li1": "<strong>Qt6-Kompatibilitaet — <code>qdbus</code> durch <code>qdbus6</code> ersetzt:</strong> alle <code>qdbus</code>-Aufrufe nach Entfernung von Qt5 aus dem Basissystem auf <code>qdbus6</code> aktualisiert. Betrifft den Sprachumschalter (Zuruecksetzen des Tastaturlayouts und Aktualisierung der Plasma-Shell) und den Sitzungsmanager (KDE-Abmeldeskript).",
     "wl-rel-2026-title": "2.0.2-6 — Juli 2026",
     "wl-rel-2026-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
     "wl-rel-2026-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",
