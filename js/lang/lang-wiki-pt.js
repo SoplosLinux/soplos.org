@@ -4305,6 +4305,14 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-2107-title": "2.1.0-7 — Julho 2026",
+    "wel-rel-2107-subtitle": "CUDA 12 Toolkit, modulos de kernel abertos da NVIDIA e Intel oneAPI Base Toolkit adicionados ao separador Controladores; os controladores NVIDIA 590/610 incluem agora automaticamente os modulos de kernel abertos; todas as cadeias traduzidas em 8 idiomas.",
+    "wel-rel-2107-added-li1": "<strong>Separador Controladores — CUDA 12 Toolkit:</strong> Nova entrada no separador Controladores. Instala o NVIDIA CUDA 12 Toolkit a partir do repositorio APT oficial da NVIDIA.",
+    "wel-rel-2107-added-li2": "<strong>Separador Controladores — Modulos de kernel abertos da NVIDIA:</strong> Nova entrada autonoma para instalar o pacote de modulos de kernel de codigo aberto da NVIDIA (<code>nvidia-open</code>), separado da pilha de controladores proprietarios.",
+    "wel-rel-2107-added-li3": "<strong>Separador Controladores — Intel oneAPI Base Toolkit:</strong> Nova entrada no separador Controladores. Instala o Intel oneAPI Base Toolkit a partir do repositorio APT oficial da Intel.",
+    "wel-rel-2107-changed-li1": "<strong>Separador Controladores — NVIDIA 590/610:</strong> Ambas as entradas incluem agora automaticamente <code>nvidia-open</code> (modulos de kernel abertos) na lista de pacotes a instalar, sem necessitar de passo manual adicional.",
+    "wel-rel-2107-i18n-li1": "Os 8 idiomas (en, es, de, fr, it, pt, ro, ru) atualizados com novas cadeias para CUDA 12 Toolkit, modulos de kernel abertos da NVIDIA e Intel oneAPI Base Toolkit.",
+
     "wel-rel-2106-title": "2.1.0-6 — Julho 2026",
     "wel-rel-2106-subtitle": "Deteccao de versao Qt corrigida — <code>FileNotFoundError</code> adicionado ao bloco de excecoes, evitando crash ao iniciar quando <code>qmake</code> nao esta instalado.",
     "wel-rel-2106-fixed-li1": "<strong>Deteccao de ambiente — versao Qt:</strong> <code>_detect_qt_version()</code> em <code>core/environment.py</code> adicionou <code>FileNotFoundError</code> ao bloco de excecoes — anteriormente apenas <code>subprocess.SubprocessError</code> e <code>subprocess.TimeoutExpired</code> eram tratados, portanto quando <code>qmake</code> nao esta instalado <code>subprocess.run</code> levantava <code>FileNotFoundError</code> que se propagava por <code>detect_all()</code> e causava o crash da aplicacao ao iniciar.",

@@ -4313,6 +4313,14 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-2107-title": "2.1.0-7 — Juli 2026",
+    "wel-rel-2107-subtitle": "CUDA 12 Toolkit, offene NVIDIA-Kernelmodule und Intel oneAPI Base Toolkit zum Reiter Treiber hinzugefuegt; NVIDIA 590/610-Treiber binden nun automatisch die offenen Kernelmodule ein; alle Zeichenketten in 8 Sprachen uebersetzt.",
+    "wel-rel-2107-added-li1": "<strong>Reiter Treiber — CUDA 12 Toolkit:</strong> Neuer Eintrag im Reiter Treiber. Installiert das NVIDIA CUDA 12 Toolkit aus dem offiziellen NVIDIA-APT-Repository.",
+    "wel-rel-2107-added-li2": "<strong>Reiter Treiber — Offene NVIDIA-Kernelmodule:</strong> Neuer eigenstaendiger Eintrag zur Installation des Open-Source-NVIDIA-Kernelmodulpakets (<code>nvidia-open</code>), getrennt vom proprietaeren Treiber-Stack.",
+    "wel-rel-2107-added-li3": "<strong>Reiter Treiber — Intel oneAPI Base Toolkit:</strong> Neuer Eintrag im Reiter Treiber. Installiert das Intel oneAPI Base Toolkit aus dem offiziellen Intel-APT-Repository.",
+    "wel-rel-2107-changed-li1": "<strong>Reiter Treiber — NVIDIA 590/610:</strong> Beide Eintraege enthalten nun automatisch <code>nvidia-open</code> (offene Kernelmodule) in ihrer Paketliste, ohne manuellen Zusatzschritt.",
+    "wel-rel-2107-i18n-li1": "Alle 8 Sprachen (en, es, de, fr, it, pt, ro, ru) mit neuen Zeichenketten fuer CUDA 12 Toolkit, offene NVIDIA-Kernelmodule und Intel oneAPI Base Toolkit aktualisiert.",
+
     "wel-rel-2106-title": "2.1.0-6 — Juli 2026",
     "wel-rel-2106-subtitle": "Qt-Versionserkennung behoben — <code>FileNotFoundError</code> zur Ausnahmebehandlung hinzugefuegt, verhindert Absturz beim Start wenn <code>qmake</code> nicht installiert ist.",
     "wel-rel-2106-fixed-li1": "<strong>Umgebungserkennung — Qt-Version:</strong> <code>_detect_qt_version()</code> in <code>core/environment.py</code> hat <code>FileNotFoundError</code> zur Ausnahmebehandlung hinzugefuegt — zuvor wurden nur <code>subprocess.SubprocessError</code> und <code>subprocess.TimeoutExpired</code> abgefangen, sodass bei fehlendem <code>qmake</code> ein <code>FileNotFoundError</code> durch <code>detect_all()</code> propagiert wurde und die Anwendung beim Start abstuerzte.",

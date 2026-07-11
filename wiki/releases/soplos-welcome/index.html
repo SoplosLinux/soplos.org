@@ -118,6 +118,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2107" class="toc-link">2.1.0-7 <span class="toc-date">— 2026-07-10</span></a></li>
                             <li><a href="#v2106" class="toc-link">2.1.0-6 <span class="toc-date">— 2026-07-08</span></a></li>
                             <li><a href="#v2105" class="toc-link">2.1.0-5 <span class="toc-date">— 2026-07-07</span></a></li>
                             <li><a href="#v2104" class="toc-link">2.1.0-4 <span class="toc-date">— 2026-07-06</span></a></li>
@@ -187,6 +188,38 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.0-7 -->
+                        <section id="v2107" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-2107-title">2.1.0-7 — July 2026</span></h2>
+                            <p id="wel-rel-2107-subtitle" class="lead">CUDA 12 Toolkit, NVIDIA Open Kernel Modules and Intel oneAPI Base Toolkit added to the Drivers tab; NVIDIA 590/610 drivers now bundle open kernel modules automatically; all strings translated in 8 languages.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2107-added-li1"><strong>Drivers Tab — CUDA 12 Toolkit:</strong> New entry in the Drivers tab. Installs the NVIDIA CUDA 12 Toolkit from the official NVIDIA APT repository.</li>
+                                <li id="wel-rel-2107-added-li2"><strong>Drivers Tab — NVIDIA Open Kernel Modules:</strong> New standalone entry to install the open-source NVIDIA kernel modules package (<code>nvidia-open</code>), separate from the proprietary driver stack.</li>
+                                <li id="wel-rel-2107-added-li3"><strong>Drivers Tab — Intel oneAPI Base Toolkit:</strong> New entry in the Drivers tab. Installs Intel oneAPI Base Toolkit from the official Intel APT repository.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2107-changed-li1"><strong>Drivers Tab — NVIDIA 590/610:</strong> Both driver entries now include <code>nvidia-open</code> (open kernel modules) in their install package list automatically, without requiring a separate manual step.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-language"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-2107-i18n-li1">All 8 languages (en, es, de, fr, it, pt, ro, ru) updated with new strings for CUDA 12 Toolkit, NVIDIA Open Kernel Modules and Intel oneAPI Base Toolkit.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.0-6 -->
                         <section id="v2106" class="content-section">

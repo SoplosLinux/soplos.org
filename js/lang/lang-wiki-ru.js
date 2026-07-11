@@ -4315,6 +4315,14 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-2107-title": "2.1.0-7 — Июль 2026",
+    "wel-rel-2107-subtitle": "CUDA 12 Toolkit, открытые модули ядра NVIDIA и Intel oneAPI Base Toolkit добавлены во вкладку Драйверы; драйверы NVIDIA 590/610 теперь автоматически включают открытые модули ядра; все строки переведены на 8 языков.",
+    "wel-rel-2107-added-li1": "<strong>Вкладка Драйверы — CUDA 12 Toolkit:</strong> Новая запись во вкладке Драйверы. Устанавливает NVIDIA CUDA 12 Toolkit из официального APT-репозитория NVIDIA.",
+    "wel-rel-2107-added-li2": "<strong>Вкладка Драйверы — Открытые модули ядра NVIDIA:</strong> Новая отдельная запись для установки пакета открытых модулей ядра NVIDIA (<code>nvidia-open</code>), независимо от стека проприетарных драйверов.",
+    "wel-rel-2107-added-li3": "<strong>Вкладка Драйверы — Intel oneAPI Base Toolkit:</strong> Новая запись во вкладке Драйверы. Устанавливает Intel oneAPI Base Toolkit из официального APT-репозитория Intel.",
+    "wel-rel-2107-changed-li1": "<strong>Вкладка Драйверы — NVIDIA 590/610:</strong> Обе записи теперь автоматически включают <code>nvidia-open</code> (открытые модули ядра) в список устанавливаемых пакетов, без дополнительного ручного шага.",
+    "wel-rel-2107-i18n-li1": "Все 8 языков (en, es, de, fr, it, pt, ro, ru) обновлены с новыми строками для CUDA 12 Toolkit, открытых модулей ядра NVIDIA и Intel oneAPI Base Toolkit.",
+
     "wel-rel-2106-title": "2.1.0-6 — Июль 2026",
     "wel-rel-2106-subtitle": "Определение версии Qt исправлено — <code>FileNotFoundError</code> добавлен в блок перехвата исключений, предотвращая сбой при запуске если <code>qmake</code> не установлен.",
     "wel-rel-2106-fixed-li1": "<strong>Определение среды — версия Qt:</strong> <code>_detect_qt_version()</code> в <code>core/environment.py</code> добавил <code>FileNotFoundError</code> в блок перехвата исключений — ранее обрабатывались только <code>subprocess.SubprocessError</code> и <code>subprocess.TimeoutExpired</code>, поэтому при отсутствии <code>qmake</code> <code>subprocess.run</code> вызывал <code>FileNotFoundError</code>, который распространялся через <code>detect_all()</code> и приводил к сбою приложения при запуске.",

@@ -4312,6 +4312,14 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-2107-title": "2.1.0-7 — Iulie 2026",
+    "wel-rel-2107-subtitle": "CUDA 12 Toolkit, module kernel deschise NVIDIA si Intel oneAPI Base Toolkit adaugate in fila Drivere; driverele NVIDIA 590/610 includ acum automat modulele kernel deschise; toate sirurile traduse in 8 limbi.",
+    "wel-rel-2107-added-li1": "<strong>Fila Drivere — CUDA 12 Toolkit:</strong> Noua intrare in fila Drivere. Instaleaza NVIDIA CUDA 12 Toolkit din depozitul APT oficial NVIDIA.",
+    "wel-rel-2107-added-li2": "<strong>Fila Drivere — Module kernel deschise NVIDIA:</strong> Noua intrare autonoma pentru instalarea pachetului de module kernel open-source NVIDIA (<code>nvidia-open</code>), separat de stiva de drivere proprietare.",
+    "wel-rel-2107-added-li3": "<strong>Fila Drivere — Intel oneAPI Base Toolkit:</strong> Noua intrare in fila Drivere. Instaleaza Intel oneAPI Base Toolkit din depozitul APT oficial Intel.",
+    "wel-rel-2107-changed-li1": "<strong>Fila Drivere — NVIDIA 590/610:</strong> Ambele intrari includ acum automat <code>nvidia-open</code> (module kernel deschise) in lista lor de pachete de instalat, fara a necesita un pas manual suplimentar.",
+    "wel-rel-2107-i18n-li1": "Toate cele 8 limbi (en, es, de, fr, it, pt, ro, ru) actualizate cu siruri noi pentru CUDA 12 Toolkit, module kernel deschise NVIDIA si Intel oneAPI Base Toolkit.",
+
     "wel-rel-2106-title": "2.1.0-6 — Iulie 2026",
     "wel-rel-2106-subtitle": "Detectie versiune Qt corectata — <code>FileNotFoundError</code> adaugat la captura exceptiilor, prevenind crash-ul la pornire cand <code>qmake</code> nu este instalat.",
     "wel-rel-2106-fixed-li1": "<strong>Detectie mediu — versiunea Qt:</strong> <code>_detect_qt_version()</code> din <code>core/environment.py</code> a adaugat <code>FileNotFoundError</code> la captura exceptiilor — anterior doar <code>subprocess.SubprocessError</code> si <code>subprocess.TimeoutExpired</code> erau gestionate, deci cand <code>qmake</code> nu este instalat <code>subprocess.run</code> ridica <code>FileNotFoundError</code> care se propaga prin <code>detect_all()</code> si bloca aplicatia la pornire.",

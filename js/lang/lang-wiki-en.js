@@ -5138,6 +5138,14 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-2107-title": "2.1.0-7 — July 2026",
+  "wel-rel-2107-subtitle": "CUDA 12 Toolkit, NVIDIA Open Kernel Modules and Intel oneAPI Base Toolkit added to the Drivers tab; NVIDIA 590/610 drivers now bundle open kernel modules automatically; all strings translated in 8 languages.",
+  "wel-rel-2107-added-li1": "<strong>Drivers Tab — CUDA 12 Toolkit:</strong> New entry in the Drivers tab. Installs the NVIDIA CUDA 12 Toolkit from the official NVIDIA APT repository.",
+  "wel-rel-2107-added-li2": "<strong>Drivers Tab — NVIDIA Open Kernel Modules:</strong> New standalone entry to install the open-source NVIDIA kernel modules package (<code>nvidia-open</code>), separate from the proprietary driver stack.",
+  "wel-rel-2107-added-li3": "<strong>Drivers Tab — Intel oneAPI Base Toolkit:</strong> New entry in the Drivers tab. Installs Intel oneAPI Base Toolkit from the official Intel APT repository.",
+  "wel-rel-2107-changed-li1": "<strong>Drivers Tab — NVIDIA 590/610:</strong> Both driver entries now include <code>nvidia-open</code> (open kernel modules) in their install package list automatically, without requiring a separate manual step.",
+  "wel-rel-2107-i18n-li1": "All 8 languages (en, es, de, fr, it, pt, ro, ru) updated with new strings for CUDA 12 Toolkit, NVIDIA Open Kernel Modules and Intel oneAPI Base Toolkit.",
+
   "wel-rel-2106-title": "2.1.0-6 — July 2026",
   "wel-rel-2106-subtitle": "Qt version detection fixed — <code>FileNotFoundError</code> added to exception catch, preventing a startup crash when <code>qmake</code> is not installed.",
   "wel-rel-2106-fixed-li1": "<strong>Environment detection — Qt version:</strong> <code>_detect_qt_version()</code> in <code>core/environment.py</code> added <code>FileNotFoundError</code> to the exception catch — previously only <code>subprocess.SubprocessError</code> and <code>subprocess.TimeoutExpired</code> were handled, so when <code>qmake</code> is not installed <code>subprocess.run</code> raised <code>FileNotFoundError</code> that propagated through <code>detect_all()</code> and crashed the application on startup.",

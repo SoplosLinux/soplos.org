@@ -4310,6 +4310,14 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-2107-title": "2.1.0-7 — Luglio 2026",
+    "wel-rel-2107-subtitle": "CUDA 12 Toolkit, moduli kernel aperti NVIDIA e Intel oneAPI Base Toolkit aggiunti alla scheda Driver; i driver NVIDIA 590/610 includono ora automaticamente i moduli kernel aperti; tutte le stringhe tradotte in 8 lingue.",
+    "wel-rel-2107-added-li1": "<strong>Scheda Driver — CUDA 12 Toolkit:</strong> Nuova voce nella scheda Driver. Installa NVIDIA CUDA 12 Toolkit dal repository APT ufficiale NVIDIA.",
+    "wel-rel-2107-added-li2": "<strong>Scheda Driver — Moduli kernel aperti NVIDIA:</strong> Nuova voce autonoma per installare il pacchetto di moduli kernel open-source NVIDIA (<code>nvidia-open</code>), separato dallo stack di driver proprietari.",
+    "wel-rel-2107-added-li3": "<strong>Scheda Driver — Intel oneAPI Base Toolkit:</strong> Nuova voce nella scheda Driver. Installa Intel oneAPI Base Toolkit dal repository APT ufficiale Intel.",
+    "wel-rel-2107-changed-li1": "<strong>Scheda Driver — NVIDIA 590/610:</strong> Entrambe le voci includono ora automaticamente <code>nvidia-open</code> (moduli kernel aperti) nella lista dei pacchetti da installare, senza richiedere un passaggio manuale aggiuntivo.",
+    "wel-rel-2107-i18n-li1": "Tutte e 8 le lingue (en, es, de, fr, it, pt, ro, ru) aggiornate con nuove stringhe per CUDA 12 Toolkit, moduli kernel aperti NVIDIA e Intel oneAPI Base Toolkit.",
+
     "wel-rel-2106-title": "2.1.0-6 — Luglio 2026",
     "wel-rel-2106-subtitle": "Rilevamento versione Qt corretto — <code>FileNotFoundError</code> aggiunto alla cattura delle eccezioni, impedendo il crash all'avvio quando <code>qmake</code> non e installato.",
     "wel-rel-2106-fixed-li1": "<strong>Rilevamento ambiente — versione Qt:</strong> <code>_detect_qt_version()</code> in <code>core/environment.py</code> ha aggiunto <code>FileNotFoundError</code> alla cattura delle eccezioni — in precedenza venivano gestiti solo <code>subprocess.SubprocessError</code> e <code>subprocess.TimeoutExpired</code>, quindi quando <code>qmake</code> non e installato <code>subprocess.run</code> sollevava <code>FileNotFoundError</code> che si propagava attraverso <code>detect_all()</code> e causava il crash all'avvio.",

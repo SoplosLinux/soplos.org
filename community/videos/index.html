@@ -16,6 +16,38 @@
 
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .yt-facade {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .yt-facade img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.2s;
+        }
+        .yt-facade:hover img { opacity: 0.75; }
+        .yt-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            pointer-events: none;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+            transition: transform 0.15s;
+        }
+        .yt-facade:hover .yt-play { transform: translate(-50%, -50%) scale(1.12); }
+    </style>
 </head>
 
 <body>
@@ -388,6 +420,20 @@
                                 <div class="video-channel-info">
                                     <img src="https://flagcdn.com/w20/mx.png" alt="México">
                                     <span>Human Technology</span>
+                                </div>
+                            </div>
+
+                            <div class="video-card">
+                                <div class="video-embed-wrapper">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/CYEBH_zuLNQ"
+                                        title="Adiós Linux Mint... La nueva REINA acaba de llegar"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-channel-info">
+                                    <img src="https://flagcdn.com/w20/mx.png" alt="México">
+                                    <span>Ezku</span>
                                 </div>
                             </div>
 
@@ -770,6 +816,52 @@
     <script src="../../js/language-switcher.js"></script>
     <script src="../../js/soplos-ui.js"></script>
     <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.video-embed-wrapper iframe').forEach(function (iframe) {
+                var src = iframe.getAttribute('src');
+                var title = iframe.getAttribute('title') || '';
+                var match = src.match(/embed\/([^?/]+)/);
+                if (!match) return;
+                var id = match[1];
+
+                var facade = document.createElement('div');
+                facade.className = 'yt-facade';
+                facade.dataset.src = src;
+                facade.dataset.title = title;
+
+                var img = document.createElement('img');
+                img.src = 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg';
+                img.alt = title;
+                img.loading = 'lazy';
+
+                var btn = document.createElement('button');
+                btn.className = 'yt-play';
+                btn.setAttribute('aria-label', 'Play');
+                btn.innerHTML = '<svg viewBox="0 0 68 48" width="64" height="45"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg>';
+
+                facade.appendChild(img);
+                facade.appendChild(btn);
+
+                facade.addEventListener('click', function () {
+                    var f = document.createElement('iframe');
+                    f.src = this.dataset.src + '?autoplay=1&rel=0';
+                    f.title = this.dataset.title;
+                    f.frameBorder = '0';
+                    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    f.allowFullscreen = true;
+                    f.style.width = '100%';
+                    f.style.height = '100%';
+                    f.style.position = 'absolute';
+                    f.style.top = '0';
+                    f.style.left = '0';
+                    this.parentElement.replaceChild(f, this);
+                });
+
+                iframe.parentElement.replaceChild(facade, iframe);
+            });
+        });
+    </script>
 </body>
 
 </html>

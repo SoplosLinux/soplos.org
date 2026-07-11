@@ -4314,6 +4314,14 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-2107-title": "2.1.0-7 — Julio 2026",
+    "wel-rel-2107-subtitle": "CUDA 12 Toolkit, modulos de kernel abiertos de NVIDIA e Intel oneAPI Base Toolkit añadidos a la pestaña Controladores; los controladores NVIDIA 590/610 incluyen ahora los modulos de kernel abiertos automaticamente; todas las cadenas traducidas en 8 idiomas.",
+    "wel-rel-2107-added-li1": "<strong>Pestaña Controladores — CUDA 12 Toolkit:</strong> Nueva entrada en la pestaña Controladores. Instala NVIDIA CUDA 12 Toolkit desde el repositorio APT oficial de NVIDIA.",
+    "wel-rel-2107-added-li2": "<strong>Pestaña Controladores — Modulos de kernel abiertos de NVIDIA:</strong> Nueva entrada independiente para instalar el paquete de modulos de kernel de codigo abierto de NVIDIA (<code>nvidia-open</code>), separado del conjunto de controladores propietarios.",
+    "wel-rel-2107-added-li3": "<strong>Pestaña Controladores — Intel oneAPI Base Toolkit:</strong> Nueva entrada en la pestaña Controladores. Instala Intel oneAPI Base Toolkit desde el repositorio APT oficial de Intel.",
+    "wel-rel-2107-changed-li1": "<strong>Pestaña Controladores — NVIDIA 590/610:</strong> Ambas entradas incluyen ahora <code>nvidia-open</code> (modulos de kernel abiertos) en su lista de paquetes a instalar automaticamente, sin requerir un paso manual adicional.",
+    "wel-rel-2107-i18n-li1": "Los 8 idiomas (en, es, de, fr, it, pt, ro, ru) actualizados con nuevas cadenas para CUDA 12 Toolkit, modulos de kernel abiertos de NVIDIA e Intel oneAPI Base Toolkit.",
+
     "wel-rel-2106-title": "2.1.0-6 — Julio 2026",
     "wel-rel-2106-subtitle": "Deteccion de version Qt corregida — <code>FileNotFoundError</code> añadido al bloque de excepciones, evitando el crash al iniciar cuando <code>qmake</code> no esta instalado.",
     "wel-rel-2106-fixed-li1": "<strong>Deteccion de entorno — version Qt:</strong> <code>_detect_qt_version()</code> en <code>core/environment.py</code> ha añadido <code>FileNotFoundError</code> al bloque de excepciones — antes solo se capturaban <code>subprocess.SubprocessError</code> y <code>subprocess.TimeoutExpired</code>, por lo que cuando <code>qmake</code> no esta instalado <code>subprocess.run</code> lanzaba <code>FileNotFoundError</code> que se propagaba por <code>detect_all()</code> y crasheaba la aplicacion al iniciar.",
