@@ -67,7 +67,7 @@ $years_json = json_encode($chart_years);
         /* Donation method cards */
         .donate-methods-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
@@ -742,6 +742,16 @@ $years_json = json_encode($chart_years);
                                 <h3 id="donate-stripe-title">Card payment</h3>
                                 <p id="donate-stripe-desc">Direct card payment without leaving the site. Powered by Stripe.</p>
                                 <span class="badge-soon" id="donate-stripe-soon">Coming soon</span>
+                            </div>
+
+                            <!-- Ko-fi -->
+                            <div class="donate-card inactive">
+                                <div class="donate-card-icon" style="color:#ff5e5b;">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                                <h3 id="donate-kofi-title">Ko-fi</h3>
+                                <p id="donate-kofi-desc">Buy me a coffee. Simple one-time or recurring support with no fees.</p>
+                                <span class="badge-soon" id="donate-kofi-soon">Coming soon</span>
                             </div>
 
                         </div>
