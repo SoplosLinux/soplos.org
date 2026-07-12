@@ -21,6 +21,7 @@ window.LANG_PT = {
     "menuReleases": "Lançamentos",
     "menuResources": "Recursos",
     "menuTwitter": "Twitter",
+    "menuDistroWatch": "DistroWatch",
     "menuWiki": "Wiki",
     "quickAccessTitle": "Acesso Rápido",
 

@@ -21,6 +21,7 @@ window.LANG_FR = {
     "menuReleases": "Versions",
     "menuResources": "Ressources",
     "menuTwitter": "Twitter",
+    "menuDistroWatch": "DistroWatch",
     "menuWiki": "Wiki",
     "quickAccessTitle": "Accès Rapide",
 

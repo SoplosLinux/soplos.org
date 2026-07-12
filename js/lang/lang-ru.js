@@ -21,6 +21,7 @@ window.LANG_RU = {
     "menuReleases": "Релизы",
     "menuResources": "Ресурсы",
     "menuTwitter": "Twitter",
+    "menuDistroWatch": "DistroWatch",
     "menuWiki": "Вики",
     "quickAccessTitle": "Быстрый Доступ",
 

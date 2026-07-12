@@ -420,6 +420,7 @@ $years_json = json_encode($chart_years);
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                                 <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
                             </ul>
                         </li>

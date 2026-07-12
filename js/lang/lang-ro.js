@@ -21,6 +21,7 @@ window.LANG_RO = {
     "menuReleases": "Lansări",
     "menuResources": "Resurse",
     "menuTwitter": "Twitter",
+    "menuDistroWatch": "DistroWatch",
     "menuWiki": "Wiki",
     "quickAccessTitle": "Acces Rapid",
 
