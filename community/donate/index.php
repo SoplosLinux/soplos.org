@@ -418,12 +418,13 @@ $years_json = json_encode($chart_years);
                                 <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
                                 <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
                                 <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
                                 <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
-                                <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
                             </ul>
                         </li>
+                        <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
                     </ul>
                 </nav>
                 <div class="language-selector" id="language-selector">
@@ -726,13 +727,16 @@ $years_json = json_encode($chart_years);
                             </div>
 
                             <!-- Patreon -->
-                            <div class="donate-card inactive">
+                            <div class="donate-card">
                                 <div class="donate-card-icon patreon">
                                     <i class="fab fa-patreon"></i>
                                 </div>
                                 <h3 id="donate-patreon-title">Patreon</h3>
                                 <p id="donate-patreon-desc">Monthly membership. Get early access to news and a badge on the contributors page.</p>
-                                <span class="badge-soon" id="donate-patreon-soon">Coming soon</span>
+                                <a class="donate-btn" href="https://www.patreon.com/cw/SoplosLinux" target="_blank" rel="noopener">
+                                    <i class="fab fa-patreon"></i>
+                                    <span id="donate-patreon-btn">Support on Patreon</span>
+                                </a>
                             </div>
 
                             <!-- Stripe -->
@@ -746,13 +750,16 @@ $years_json = json_encode($chart_years);
                             </div>
 
                             <!-- Ko-fi -->
-                            <div class="donate-card inactive">
+                            <div class="donate-card">
                                 <div class="donate-card-icon" style="color:#ff5e5b;">
                                     <i class="fas fa-mug-hot"></i>
                                 </div>
                                 <h3 id="donate-kofi-title">Ko-fi</h3>
                                 <p id="donate-kofi-desc">Buy me a coffee. Simple one-time or recurring support with no fees.</p>
-                                <span class="badge-soon" id="donate-kofi-soon">Coming soon</span>
+                                <a class="donate-btn" href="https://ko-fi.com/soploslinux" target="_blank" rel="noopener" style="background:#ff5e5b;">
+                                    <i class="fas fa-mug-hot"></i>
+                                    <span id="donate-kofi-btn">Support on Ko-fi</span>
+                                </a>
                             </div>
 
                         </div>
