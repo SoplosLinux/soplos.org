@@ -4982,6 +4982,10 @@ Object.assign(window.LANG_RU, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
 
+    "ki-rel-101r1-title": "1.0.1-1 — Июль 2026",
+    "ki-rel-101r1-subtitle": "Исправлено определение пакетов по уровню march и отображаемые имена во вкладке Ядра Soplos.",
+    "ki-rel-101r1-fixed-li1": "<strong>Определение пакетов по уровню march:</strong> Регулярное выражение фильтра пакетов теперь принимает суффиксы уровня march (<code>v1</code>–<code>v4</code>), поэтому пакеты вроде <code>linux-soplos-bore-v3</code> корректно отображаются во вкладке Ядра Soplos.",
+    "ki-rel-101r1-fixed-li2": "<strong>Отображаемые имена для пакетов с уровнем march:</strong> Пакеты теперь показывают уровень march как отдельную метку — <code>linux-soplos-v3</code> → \"Stock V3\", <code>linux-soplos-bore-v3</code> → \"BORE V3\".",
     "ki-rel-101-title": "1.0.1 — Июль 2026",
     "ki-rel-101-subtitle": "Выбор уровня микроархитектуры x86-64 и патч планировщика AMD X3D VCache в режиме Stock, автоматически генерируемые имена ядра и кнопка помощи по вики во вкладке Ядра Soplos.",
     "ki-rel-101-added-li1": "<strong>Выбор уровня march x86-64</strong> (режим Stock): Сборка ядер для уровней микроархитектуры v1 (Общий), v2 (SSE4.2+), v3 (AVX2+) или v4 (AVX-512) через <code>CONFIG_GENERIC_CPU{2,3,4}</code>. По умолчанию выбран v1 для максимальной совместимости с оборудованием.",

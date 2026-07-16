@@ -5804,6 +5804,10 @@ Object.assign(window.LANG_EN, {
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
 
+  "ki-rel-101r1-title": "1.0.1-1 — July 2026",
+  "ki-rel-101r1-subtitle": "Fixed march-level package detection and display names in the Soplos Kernels tab.",
+  "ki-rel-101r1-fixed-li1": "<strong>March-level package detection:</strong> Package filter regex now accepts march-level suffixes (<code>v1</code>–<code>v4</code>) so packages like <code>linux-soplos-bore-v3</code> are correctly listed in the Soplos Kernels tab.",
+  "ki-rel-101r1-fixed-li2": "<strong>Display names for march-level packages:</strong> Packages now show the march level as a separate label — <code>linux-soplos-v3</code> → \"Stock V3\", <code>linux-soplos-bore-v3</code> → \"BORE V3\".",
   "ki-rel-101-title": "1.0.1 — July 2026",
   "ki-rel-101-subtitle": "x86-64 microarchitecture level selector and AMD X3D VCache scheduler patch in Stock mode, plus auto-generated kernel names and a wiki help button in the Soplos Kernels tab.",
   "ki-rel-101-added-li1": "<strong>x86-64 march level selector</strong> (Stock mode): Build kernels targeting v1 (Generic), v2 (SSE4.2+), v3 (AVX2+) or v4 (AVX-512) microarchitecture levels via <code>CONFIG_GENERIC_CPU{2,3,4}</code>. v1 is selected by default for maximum hardware compatibility.",

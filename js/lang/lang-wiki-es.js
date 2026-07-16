@@ -4980,6 +4980,10 @@ Object.assign(window.LANG_ES, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
 
+    "ki-rel-101r1-title": "1.0.1-1 — Julio 2026",
+    "ki-rel-101r1-subtitle": "Corregida la detección de paquetes por nivel march y los nombres de visualización en la pestaña Kernels Soplos.",
+    "ki-rel-101r1-fixed-li1": "<strong>Detección de paquetes por nivel march:</strong> El regex del filtro de paquetes ahora acepta sufijos de nivel march (<code>v1</code>–<code>v4</code>), por lo que paquetes como <code>linux-soplos-bore-v3</code> se listan correctamente en la pestaña Kernels Soplos.",
+    "ki-rel-101r1-fixed-li2": "<strong>Nombres de visualización para paquetes con nivel march:</strong> Los paquetes ahora muestran el nivel march como etiqueta separada — <code>linux-soplos-v3</code> → \"Stock V3\", <code>linux-soplos-bore-v3</code> → \"BORE V3\".",
     "ki-rel-101-title": "1.0.1 — Julio 2026",
     "ki-rel-101-subtitle": "Selector de nivel de microarquitectura x86-64 y parche de planificador AMD X3D VCache en el modo Stock, además de nombres de kernel generados automáticamente y un botón de ayuda de la wiki en la pestaña de Kernels Soplos.",
     "ki-rel-101-added-li1": "<strong>Selector de nivel march x86-64</strong> (modo Stock): Compila kernels para los niveles de microarquitectura v1 (Genérico), v2 (SSE4.2+), v3 (AVX2+) o v4 (AVX-512) mediante <code>CONFIG_GENERIC_CPU{2,3,4}</code>. v1 está seleccionado por defecto para máxima compatibilidad.",

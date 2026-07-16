@@ -128,6 +128,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v101r1" class="toc-link">1.0.1-1 <span class="toc-date">— 2026-07-16</span></a></li>
                             <li><a href="#v101" class="toc-link">1.0.1 <span class="toc-date">— 2026-07-16</span></a></li>
                             <li><a href="#v1004" class="toc-link">1.0.0-4 <span class="toc-date">— 2026-06-02</span></a></li>
                             <li><a href="#v1003" class="toc-link">1.0.0-3 <span class="toc-date">— 2026-06-02</span></a></li>
@@ -138,6 +139,21 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.1-1 -->
+                        <section id="v101r1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-101r1-title">1.0.1-1 — July 2026</span></h2>
+                            <p id="ki-rel-101r1-subtitle" class="lead">Fixed march-level package detection and display names in the Soplos Kernels tab.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r1-fixed-li1"><strong>March-level package detection:</strong> Package filter regex now accepts march-level suffixes (<code>v1</code>–<code>v4</code>) so packages like <code>linux-soplos-bore-v3</code> are correctly listed in the Soplos Kernels tab.</li>
+                                <li id="ki-rel-101r1-fixed-li2"><strong>Display names for march-level packages:</strong> Packages now show the march level as a separate label — <code>linux-soplos-v3</code> → "Stock V3", <code>linux-soplos-bore-v3</code> → "BORE V3".</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.1 -->
                         <section id="v101" class="content-section">

@@ -4980,6 +4980,10 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-101r1-title": "1.0.1-1 — Juli 2026",
+    "ki-rel-101r1-subtitle": "Behoben: Erkennung von March-Level-Paketen und Anzeigenamen im Tab Soplos-Kernel.",
+    "ki-rel-101r1-fixed-li1": "<strong>Erkennung von March-Level-Paketen:</strong> Der Paketfilter-Regex akzeptiert jetzt March-Level-Suffixe (<code>v1</code>–<code>v4</code>), sodass Pakete wie <code>linux-soplos-bore-v3</code> korrekt im Tab Soplos-Kernel aufgelistet werden.",
+    "ki-rel-101r1-fixed-li2": "<strong>Anzeigenamen für March-Level-Pakete:</strong> Pakete zeigen jetzt den March-Level als separate Bezeichnung — <code>linux-soplos-v3</code> → \"Stock V3\", <code>linux-soplos-bore-v3</code> → \"BORE V3\".",
     "ki-rel-101-title": "1.0.1 — Juli 2026",
     "ki-rel-101-subtitle": "x86-64-Mikroarchitekturstufen-Selektor und AMD X3D VCache-Scheduler-Patch im Stock-Modus, automatisch generierte Kernelnamen und eine Wiki-Hilfe-Schaltfläche im Tab Soplos-Kernel.",
     "ki-rel-101-added-li1": "<strong>x86-64-March-Selektor</strong> (Stock-Modus): Kernel für die Mikroarchitekturebenen v1 (Generisch), v2 (SSE4.2+), v3 (AVX2+) oder v4 (AVX-512) über <code>CONFIG_GENERIC_CPU{2,3,4}</code> kompilieren. v1 ist standardmäßig für maximale Hardware-Kompatibilität ausgewählt.",
