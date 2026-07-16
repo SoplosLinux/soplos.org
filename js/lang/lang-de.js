@@ -14,7 +14,6 @@ window.LANG_DE = {
     "menuBuilding": "Aus dem Quellcode erstellen",
     "menuDiscord": "Discord",
     "menuDiscover": "Entdecken",
-    "menuDocs": "Dokumentation",
     "menuDownload": "Herunterladen",
     "menuFeatures": "Funktionen",
     "menuForum": "Forum",

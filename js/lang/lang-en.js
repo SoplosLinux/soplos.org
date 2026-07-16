@@ -14,7 +14,6 @@ window.LANG_EN = {
     "menuBuilding": "Building from Source",
     "menuDiscord": "Discord",
     "menuDiscover": "Discover",
-    "menuDocs": "Documentation",
     "menuDownload": "Download",
     "menuFeatures": "Features",
     "menuForum": "Forums",

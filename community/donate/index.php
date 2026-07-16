@@ -407,7 +407,6 @@ $years_json = json_encode($chart_years);
                             <ul class="submenu">
                                 <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
                                 <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
-                                <li><a href="../../index.html#docs" id="menuDocs">Documentation</a></li>
                                 <li><a href="../../forums/" id="menuForum">Forum</a></li>
                             </ul>
                         </li>

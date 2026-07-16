@@ -14,7 +14,6 @@ window.LANG_RU = {
     "menuBuilding": "Сборка из исходников",
     "menuDiscord": "Discord",
     "menuDiscover": "Открыть",
-    "menuDocs": "Документация",
     "menuDownload": "Скачать",
     "menuFeatures": "Возможности",
     "menuForum": "Форум",

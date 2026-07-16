@@ -14,7 +14,6 @@ window.LANG_RO = {
     "menuBuilding": "Compilare din sursă",
     "menuDiscord": "Discord",
     "menuDiscover": "Descoperă",
-    "menuDocs": "Documentație",
     "menuDownload": "Descarcă",
     "menuFeatures": "Caracteristici",
     "menuForum": "Forum",

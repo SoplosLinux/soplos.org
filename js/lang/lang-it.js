@@ -14,7 +14,6 @@ window.LANG_IT = {
     "menuBuilding": "Compilare dai sorgenti",
     "menuDiscord": "Discord",
     "menuDiscover": "Scopri",
-    "menuDocs": "Documentazione",
     "menuDownload": "Scarica",
     "menuFeatures": "Caratteristiche",
     "menuForum": "Forum",

@@ -12,6 +12,21 @@
 
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .compat-table-wrap { overflow-x: auto; margin: 16px 0; }
+        .compat-table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+        .compat-table th, .compat-table td { padding: 9px 14px; border: 1px solid var(--border-color, #dde1e7); text-align: left; vertical-align: top; }
+        .compat-table thead th { background: var(--card-bg, #f4f6fb); font-weight: 600; }
+        .compat-table tbody tr:nth-child(even) { background: var(--card-bg, #f4f6fb); }
+        @media (prefers-color-scheme: dark) {
+            .compat-table th, .compat-table td { border-color: #3a3d44; }
+            .compat-table thead th, .compat-table tbody tr:nth-child(even) { background: #1e2128; }
+        }
+        :root[data-theme="dark"] .compat-table th,
+        :root[data-theme="dark"] .compat-table td { border-color: #3a3d44; }
+        :root[data-theme="dark"] .compat-table thead th,
+        :root[data-theme="dark"] .compat-table tbody tr:nth-child(even) { background: #1e2128; }
+    </style>
 </head>
 
 <body>
@@ -45,7 +60,6 @@
                             <ul class="submenu">
                                 <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
                                 <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
-                                <li><a href="../../../index.html#docs" id="menuDocs">Documentation</a></li>
                                 <li><a href="/wiki/development/contribute/" id="menuContribute">How to Contribute</a></li>
                                 <li><a href="/wiki/development/building/" id="menuBuilding">Building from Source</a></li>
                                 <li><a href="/wiki/development/packaging/" id="menuPackaging">Package Creation</a></li>
@@ -125,6 +139,7 @@
                         <ul>
                             <li><a href="#overview" id="kernelinstaller-toc-1">Overview</a></li>
                             <li><a href="#features" id="kernelinstaller-toc-2">Features</a></li>
+                            <li><a href="#compatibility" id="kernelinstaller-toc-compat">CPU Compatibility</a></li>
                             <li><a href="#soplos-kernels" id="kernelinstaller-toc-3">Soplos Kernels</a></li>
                             <li><a href="#patches" id="kernelinstaller-toc-4">Available patches</a></li>
                             <li><a href="#screenshots" id="kernelinstaller-toc-5">Screenshots</a></li>
@@ -149,6 +164,66 @@
                                 <li><strong id="kernelinstaller-feat-5-title">Installation history:</strong> <span id="kernelinstaller-feat-5-desc">Persistent build history with automatic kernel tagging (XanMod, Liquorix, Zen, System...) that survives build directory cleanup.</span></li>
                                 <li><strong id="kernelinstaller-feat-6-title">Save packages:</strong> <span id="kernelinstaller-feat-6-desc">Offers to save compiled .deb packages to a chosen folder before deleting the build directory.</span></li>
                                 <li><strong id="kernelinstaller-feat-7-title">Keyboard shortcuts:</strong> <span id="kernelinstaller-feat-7-desc">Ctrl+Q (quit), Ctrl+W (close), F5 (refresh), F1 (about), Ctrl+Tab / Ctrl+Shift+Tab (switch tabs).</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="compatibility">
+                            <h2><span id="kernelinstaller-compat-title">CPU Compatibility</span></h2>
+                            <p id="kernelinstaller-compat-intro">The <strong>CPU architecture level</strong> determines which instruction set extensions the compiled kernel can use. Choosing the right level improves performance without sacrificing compatibility.</p>
+
+                            <div class="info-box tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <strong id="kernelinstaller-compat-tip-title">Not sure which level to pick?</strong>&nbsp;
+                                    <span id="kernelinstaller-compat-tip-text">Use <strong>Generic (v1)</strong> — it runs on all 64-bit hardware. If your machine is from 2013 or later, <strong>x86-64-v3</strong> is the best balance of performance and compatibility.</span>
+                                </div>
+                            </div>
+
+                            <div class="compat-table-wrap">
+                                <table class="compat-table">
+                                    <thead>
+                                        <tr>
+                                            <th id="kernelinstaller-compat-th-level">Level</th>
+                                            <th id="kernelinstaller-compat-th-req">Requirements</th>
+                                            <th id="kernelinstaller-compat-th-cpus">Reference CPUs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>v1 — Generic</strong></td>
+                                            <td id="kernelinstaller-compat-v1-req">Any 64-bit CPU</td>
+                                            <td id="kernelinstaller-compat-v1-cpus">All hardware — maximum compatibility</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>v2 — x86-64-v2</strong></td>
+                                            <td id="kernelinstaller-compat-v2-req">SSE4.2 + POPCNT</td>
+                                            <td id="kernelinstaller-compat-v2-cpus">Intel Core 2xxx+ / AMD Phenom II+ (~2009)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>v3 — x86-64-v3</strong></td>
+                                            <td id="kernelinstaller-compat-v3-req">AVX2 + BMI1/BMI2</td>
+                                            <td id="kernelinstaller-compat-v3-cpus">Intel Haswell (4xxx) / AMD Zen+ (~2013)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>v4 — x86-64-v4</strong></td>
+                                            <td id="kernelinstaller-compat-v4-req">AVX-512</td>
+                                            <td id="kernelinstaller-compat-v4-cpus">Intel Skylake-X / AMD Zen 4 (~2017+)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3><span id="kernelinstaller-compat-x3d-title">AMD 3D VCache (X3D)</span></h3>
+                            <p id="kernelinstaller-compat-x3d-intro">Soplos kernels include the <strong>amd_x3d_vcache</strong> scheduler patch for dual-CCD Ryzen X3D processors (Ryzen 9 7950X3D, 9950X3D). These CPUs have an asymmetric L3 cache topology: one CCD carries 3D VCache stacking — roughly three times more L3 than the other CCD.</p>
+                            <p id="kernelinstaller-compat-x3d-desc">At boot the patch detects this asymmetry and marks the VCache CCD cores. The scheduler then biases new tasks towards those cores when an idle VCache CPU is available and the VCache CCD is not already carrying a higher average load than the standard CCD — reducing cache misses for gaming and latency-sensitive workloads with no user configuration required.</p>
+                            <p id="kernelinstaller-compat-x3d-note">Single-CCD X3D processors (5800X3D, 7800X3D, 9800X3D) have a symmetric L3 layout — all cores share the same cache size — so the patch has no effect and remains disabled on those systems.</p>
+
+                            <h3 id="kernelinstaller-compat-patches-title">Patch compatibility</h3>
+                            <ul>
+                                <li><strong>NTSYNC:</strong> <span id="kernelinstaller-compat-ntsync">Requires kernel 6.14 or later. On older versions the option is automatically disabled by the installer.</span></li>
+                                <li><strong>PREEMPT_RT:</strong> <span id="kernelinstaller-compat-rt">Integrated upstream since kernel 6.12 — no external patch download is needed on those versions.</span></li>
+                                <li><strong>Zen:</strong> <span id="kernelinstaller-compat-zen">Not available for RC (release candidate) kernels — stable and LTS versions only.</span></li>
+                                <li><strong>BORE:</strong> <span id="kernelinstaller-compat-bore">Available for most stable and LTS versions. Falls back to the CachyOS patch repository automatically if the primary source does not carry the patch for a given version.</span></li>
                             </ul>
                         </section>
 
