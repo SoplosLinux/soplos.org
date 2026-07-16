@@ -3429,6 +3429,7 @@ Object.assign(window.LANG_FR, {
     "kernelinstaller-soplos-stock": "Noyau upstream vanilla, base de toutes les distributions Soplos.",
     "kernelinstaller-soplos-bore": "Ordonnanceur BORE (Burst-Oriented Response Enhancer) pour une meilleure réactivité du bureau.",
     "kernelinstaller-soplos-borentsync": "BORE + NTSYNC — optimisé pour le gaming avec Wine et Proton.",
+    "kernelinstaller-soplos-x3d": "Noyau Stock avec le patch de planificateur AMD X3D VCache et un niveau march x86-64 spécifique (v1–v4). Disponible uniquement pour les processeurs Ryzen X3D à double CCD (7950X3D, 9950X3D). Compilé depuis les sources via l'onglet Compilateur de noyaux Soplos.",
     "kernelinstaller-soplos-zen": "Noyau Zen avec optimisations bureau et gaming.",
     "kernelinstaller-soplos-ntsync": "Primitives de synchronisation NT pour la compatibilité Wine/Proton.",
     "kernelinstaller-soplos-rt": "Noyau temps réel (PREEMPT_RT) pour la production audio/vidéo.",

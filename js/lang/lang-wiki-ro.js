@@ -3429,6 +3429,7 @@ Object.assign(window.LANG_RO, {
     "kernelinstaller-soplos-stock": "Kernel upstream vanilla, baza tuturor distribuțiilor Soplos.",
     "kernelinstaller-soplos-bore": "Planificatorul BORE (Burst-Oriented Response Enhancer) pentru o reactivitate îmbunătățită a desktopului.",
     "kernelinstaller-soplos-borentsync": "BORE + NTSYNC — optimizat pentru gaming cu Wine și Proton.",
+    "kernelinstaller-soplos-x3d": "Kernel Stock cu patch-ul de planificator AMD X3D VCache si un nivel march x86-64 specific (v1–v4). Disponibil doar pentru procesoare Ryzen X3D cu CCD dual (7950X3D, 9950X3D). Compilat din sursa prin fila Compilator de kerneluri Soplos.",
     "kernelinstaller-soplos-zen": "Kernel Zen cu optimizări pentru desktop și gaming.",
     "kernelinstaller-soplos-ntsync": "Primitive de sincronizare NT pentru compatibilitate Wine/Proton.",
     "kernelinstaller-soplos-rt": "Kernel în timp real (PREEMPT_RT) pentru producție audio/video.",

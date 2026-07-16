@@ -3432,6 +3432,7 @@ Object.assign(window.LANG_RU, {
     "kernelinstaller-soplos-stock": "Ванильное upstream-ядро, основа всех дистрибутивов Soplos.",
     "kernelinstaller-soplos-bore": "Планировщик BORE (Burst-Oriented Response Enhancer) для улучшенной отзывчивости рабочего стола.",
     "kernelinstaller-soplos-borentsync": "BORE + NTSYNC — оптимизировано для игр с Wine и Proton.",
+    "kernelinstaller-soplos-x3d": "Ядро Stock с патчем планировщика AMD X3D VCache и конкретным уровнем march x86-64 (v1–v4). Доступно только для двухчиплетных процессоров Ryzen X3D (7950X3D, 9950X3D). Собирается из исходного кода через вкладку «Компилятор ядер Soplos».",
     "kernelinstaller-soplos-zen": "Ядро Zen с оптимизациями для рабочего стола и игр.",
     "kernelinstaller-soplos-ntsync": "Примитивы синхронизации NT для совместимости с Wine/Proton.",
     "kernelinstaller-soplos-rt": "Ядро реального времени (PREEMPT_RT) для аудио/видеопроизводства.",
