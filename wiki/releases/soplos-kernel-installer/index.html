@@ -154,6 +154,7 @@
                                 <li id="ki-rel-101r2-fixed-li1"><strong>X3D VCache patch download:</strong> Now uses a per-kernel-version URL (6.x / 7.0 / 7.1) instead of a single stale link that no longer existed in the source repository.</li>
                                 <li id="ki-rel-101r2-fixed-li2"><strong>Base kernel configuration:</strong> Now fetched fresh from Debian sid on every build instead of copying the config of a previously installed kernel — avoids configuration drift accumulating across builds and missing support for recently-added hardware.</li>
                                 <li id="ki-rel-101r2-fixed-li3"><strong>Build failure from inherited module signing key path:</strong> The base config's <code>MODULE_SIG_KEY</code> could point to a path that only exists inside Debian's own build system, breaking <code>dpkg-buildpackage</code> at the certs stage. Now reset to the kernel's own default path when no custom Secure Boot key is set.</li>
+                                <li id="ki-rel-101r2-fixed-li4"><strong>Patch tooltips always in English:</strong> The descriptions shown on hover in the Patches selector (BORE, PREEMPT_RT, Zen, NTSYNC, X3D VCache) were never passed through the translation system. Now properly localized in all 8 languages, with missing NTSYNC and X3D VCache translations added.</li>
                             </ul>
 
                             <div class="subsection-header">
