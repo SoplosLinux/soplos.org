@@ -5339,6 +5339,10 @@ Object.assign(window.LANG_IT, {
     "aim-rel-hero-title": "Soplos AppImage Manager",
     "aim-rel-hero-subtitle": "Gestore AppImage per Soplos Linux — aggiungi, integra e gestisci applicazioni AppImage con estrazione automatica dei metadati, creazione di voci desktop e verifica aggiornamenti integrata da GitHub, GitLab e Codeberg.",
 
+    "aim-rel-101-2-title": "1.0.1-2 — Luglio 2026",
+    "aim-rel-101-2-subtitle": "Opzione copia invece di sposta durante l'aggiunta di AppImage — mantieni il file originale nella sua posizione di origine.",
+    "aim-rel-101-2-added-li1": "<strong>Copia invece di sposta:</strong> Quando si aggiunge un AppImage (tramite il pulsante Aggiungi o trascinamento), è ora possibile scegliere di copiarlo in <code>~/AppImages/</code> invece di spostarlo — utile quando l'AppImage si trova in una cartella sincronizzata su più computer.",
+
     "aim-rel-101-1-title": "1.0.1-1 — Luglio 2026",
     "aim-rel-101-1-subtitle": "Aggiornamento della dipendenza di compilazione — <code>python3-all</code> sostituito con <code>python3</code> in <code>debian/control</code>.",
     "aim-rel-101-1-changed-li1": "Dipendenza di compilazione <code>python3-all</code> sostituita con <code>python3</code>.",
