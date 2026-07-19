@@ -300,6 +300,8 @@ window.LANG_DE = {
     "appGrubEditorDesc": "Grafische Oberfläche zur Anpassung des GRUB-Bootloaders. Verwalten Sie Booteinträge, Themen, Hintergründe und Schriften mit vollständiger Submenü-Unterstützung.",
     "appKernelInstallerTitle": "Soplos Kernel Installer",
     "appKernelInstallerDesc": "Kompilieren und installieren Sie benutzerdefinierte Linux-Kernel mit BORE-, NTSYNC- und PREEMPT_RT-Unterstützung. Inklusive Secure Boot und DKMS-Integration.",
+    "appLayoutSwitcherTitle": "Soplos Layout Switcher",
+    "appLayoutSwitcherDesc": "Wechseln Sie den GNOME-Shell-Desktop zwischen vordefinierten Layouts — Soplos, Dock, Kachelung und GNOME — durch Aktivieren der erforderlichen Erweiterungen und Anwenden der passenden Einstellungen.",
     "appPlymouthManagerTitle": "Soplos Plymouth Manager",
     "appPlymouthManagerDesc": "Boot-Splash-Manager mit intelligenten Vorschauen, Wayland-Unterstützung und automatischem Initramfs-Neuaufbau.",
     "appRepoSelectorTitle": "Soplos Repo Selector",

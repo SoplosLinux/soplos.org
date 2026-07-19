@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soplos Layout Switcher - Soplos Linux Wiki</title>
+    <meta name="description" content="Documentation for Soplos Layout Switcher, a graphical utility for switching between predefined GNOME Shell layouts on Soplos Boro.">
+    <meta name="keywords" content="soplos, layout switcher, gnome, boro, extensions, layouts">
+
+    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../../styles/wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../../../">
+                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                </a>
+                <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
+            </div>
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="../../../" id="menuHome">Home</a></li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuDiscover">Discover <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
+                                <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#requirements" id="menuRequirements">System Requirements</a></li>
+                                <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuResources">Resources <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="/wiki/" id="menuWiki">Wiki</a></li>
+                                <li><a href="/wiki/releases/" id="menuReleases">Releases</a></li>
+                                <li><a href="/wiki/development/contribute/" id="menuContribute">How to Contribute</a></li>
+                                <li><a href="/wiki/development/building/" id="menuBuilding">Building from Source</a></li>
+                                <li><a href="/wiki/development/packaging/" id="menuPackaging">Package Creation</a></li>
+                                <li><a href="/wiki/development/api/" id="menuApi">API Documentation</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="#" class="menu-dropdown-toggle" id="menuCommunityDropdown">Community <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="../../../index.html#community" id="menuCommunity">Join</a></li>
+                                <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
+                                <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
+                                <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
+                                <li><a href="/forums/" id="menuForum">Forum</a></li>
+                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
+                    </ul>
+                </nav>
+                <div class="language-selector" id="language-selector">
+                    <div class="selected-language">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+                        <span>EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> EN</a>
+                        <a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> ES</a>
+                        <a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> FR</a>
+                        <a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> PT</a>
+                        <a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> DE</a>
+                        <a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> IT</a>
+                        <a href="#" data-lang="ro"><img src="https://flagcdn.com/w20/ro.png" alt="Română"> RO</a>
+                        <a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../../"><i class="fas fa-home"></i> <span id="layoutswitcher-breadcrumb-home">Home</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../"><span id="layoutswitcher-breadcrumb-wiki">Wiki</span></a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current" id="layoutswitcher-breadcrumb">Soplos Layout Switcher</span>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <div class="wiki-header-group">
+            <section class="wiki-hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>
+                            <img src="../../../images/icons/org.soplos.layoutswitcher.png" alt="Icon"
+                                style="height: 48px; vertical-align: middle; margin-right: 10px;">
+                            <span id="layoutswitcher-hero-title">Soplos Layout Switcher</span>
+                        </h1>
+                        <p id="layoutswitcher-hero-desc">Switch between predefined GNOME Shell layouts on Soplos Boro with automatic extension management.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="wiki-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <aside class="toc">
+                        <h3 id="layoutswitcher-toc-title">Contents</h3>
+                        <ul>
+                            <li><a href="#overview" id="layoutswitcher-toc-overview">Overview</a></li>
+                            <li><a href="#layouts" id="layoutswitcher-toc-layouts">Layouts</a></li>
+                            <li><a href="#settings" id="layoutswitcher-toc-settings">Settings Tab</a></li>
+                            <li><a href="#cli" id="layoutswitcher-toc-cli">CLI</a></li>
+                            <li><a href="#screenshots" id="layoutswitcher-toc-screenshots">Screenshots</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="main-content">
+
+                        <section class="content-section" id="overview">
+                            <h2><span id="layoutswitcher-overview-title">Overview</span></h2>
+                            <p id="layoutswitcher-overview-p1">Soplos Layout Switcher is a graphical utility for Soplos Boro (GNOME) that switches the desktop between four predefined GNOME Shell layouts. Selecting a layout enables the required extensions, disables conflicting ones and applies the matching gsettings in a single step.</p>
+                            <p id="layoutswitcher-overview-p2">A set of global extensions — CoverflowAltTab, Clipboard Manager, Desktop Cube, Drive Menu and User Themes — remains active in all layouts regardless of the selection.</p>
+                        </section>
+
+                        <section class="content-section" id="layouts">
+                            <h2><span id="layoutswitcher-layouts-title">Layouts</span></h2>
+
+                            <h3 id="layoutswitcher-soplos-title">Soplos</h3>
+                            <p id="layoutswitcher-soplos-desc">The default Boro look. Enables Dash to Panel at the bottom (48 px icons, Soplos orange running indicator), ArcMenu in enterprise layout with Soplos branding, Desktop Icons NG and Quick Settings Tweaks.</p>
+
+                            <h3 id="layoutswitcher-dock-title">Dock</h3>
+                            <p id="layoutswitcher-dock-desc">A floating bottom dock. Enables Dash to Dock in floating mode at the bottom (80% screen width, 48 px icons) with the Soplos theme applied.</p>
+
+                            <h3 id="layoutswitcher-tiling-title">Tiling</h3>
+                            <p id="layoutswitcher-tiling-desc">A tiling window manager layout. Enables Forge (tiling engine), Dash to Dock on the left side (32 px icons, no custom theme), Open Bar in Islands style with the Soplos orange accent, AppIndicator Support, Blur my Shell and Workspace Indicator.</p>
+
+                            <h3 id="layoutswitcher-gnome-title">GNOME</h3>
+                            <p id="layoutswitcher-gnome-desc">Stock GNOME Shell with no layout extensions. All layout-specific extensions are disabled. Only the global extensions remain active.</p>
+                        </section>
+
+                        <section class="content-section" id="settings">
+                            <h2><span id="layoutswitcher-settings-title">Settings Tab</span></h2>
+                            <p id="layoutswitcher-settings-p1">The Settings tab provides quick access to common GNOME configuration tools without leaving the application.</p>
+                            <ul>
+                                <li id="layoutswitcher-settings-feature-1">Quick access buttons for GNOME Tweaks, Extensions manager, GDM Settings and Firefox theming (Add Water)</li>
+                                <li id="layoutswitcher-settings-feature-2">System tray toggle (AppIndicator Support extension)</li>
+                                <li id="layoutswitcher-settings-feature-3">Desktop icons toggle (Desktop Icons NG extension)</li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="cli">
+                            <h2><span id="layoutswitcher-cli-title">CLI</span></h2>
+                            <p id="layoutswitcher-cli-p1">The <code>soplos-layout-switcher-cli</code> command applies any layout without opening the GUI, useful for installers and automation scripts.</p>
+                            <ul>
+                                <li><code>apply-soplos</code></li>
+                                <li><code>apply-dock</code></li>
+                                <li><code>apply-tiling</code></li>
+                                <li><code>apply-gnome</code></li>
+                                <li><code>reload-gnome-shell</code></li>
+                            </ul>
+                        </section>
+
+                        <section class="content-section" id="screenshots">
+                            <h2><span id="layoutswitcher-screenshots-title">Screenshots</span></h2>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/boro/layout-switcher/screenshot1.png" alt="Soplos Layout Switcher main window">
+                                    <figcaption id="layoutswitcher-screenshot-1">Layout selection</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/boro/layout-switcher/screenshot2.png" alt="Soplos Layout Switcher Settings tab">
+                                    <figcaption id="layoutswitcher-screenshot-2">Settings tab</figcaption>
+                                </figure>
+                            </div>
+                        </section>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="container">
+                <p>&copy; 2026 Sergi Perich</p>
+                <p class="legal-links">
+                    <a href="../../../legal/privacy.html" id="footer-privacy">Privacy Policy</a> |
+                    <a href="../../../legal/terms.html" id="footer-terms">Terms of Use</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="../../../js/logger.js"></script>
+    <script src="../../../js/language-loader.js"></script>
+    <script src="../../../js/language-switcher.js"></script>
+    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+
+</html>

@@ -672,6 +672,14 @@ class BreadcrumbController {
         const referrer = document.referrer;
         if (!referrer) return;
 
+        // Do not inject parent breadcrumb when already on the distro apps index page
+        const currentPath = window.location.pathname;
+        if (
+            currentPath.includes('/applications/tyron/') ||
+            currentPath.includes('/applications/tyson/') ||
+            currentPath.includes('/applications/boro/')
+        ) return;
+
         let dictKey = '';
         let parentUrl = '';
 

@@ -300,6 +300,8 @@ window.LANG_RU = {
     "appGrubEditorDesc": "Графический интерфейс для настройки загрузчика GRUB. Управляйте записями загрузки, темами, фонами и шрифтами с полной поддержкой подменю.",
     "appKernelInstallerTitle": "Soplos Kernel Installer",
     "appKernelInstallerDesc": "Компилируйте и устанавливайте пользовательские ядра Linux с поддержкой BORE, NTSYNC и PREEMPT_RT. Включает интеграцию Secure Boot и DKMS.",
+    "appLayoutSwitcherTitle": "Soplos Layout Switcher",
+    "appLayoutSwitcherDesc": "Переключайте рабочий стол GNOME Shell между предустановленными макетами — Soplos, Dock, Плитка и GNOME — включая нужные расширения и применяя соответствующие настройки.",
     "appPlymouthManagerTitle": "Soplos Plymouth Manager",
     "appPlymouthManagerDesc": "Менеджер экрана загрузки с интеллектуальными предпросмотрами, поддержкой Wayland и автоматической пересборкой initramfs.",
     "appRepoSelectorTitle": "Soplos Repo Selector",

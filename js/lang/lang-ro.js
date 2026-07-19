@@ -300,6 +300,8 @@ window.LANG_RO = {
     "appGrubEditorDesc": "Interfață grafică pentru personalizarea bootloader-ului GRUB. Gestionează intrările de boot, teme, fundaluri și fonturi cu suport complet pentru submeniuri.",
     "appKernelInstallerTitle": "Soplos Kernel Installer",
     "appKernelInstallerDesc": "Compilează și instalează kernel-uri Linux personalizate cu suport BORE, NTSYNC și PREEMPT_RT. Include integrare Secure Boot și DKMS.",
+    "appLayoutSwitcherTitle": "Soplos Layout Switcher",
+    "appLayoutSwitcherDesc": "Comuta desktopul GNOME Shell intre aspecte predefinite — Soplos, Dock, Mozaic si GNOME — activand extensiile necesare si aplicand setarile corespunzatoare.",
     "appPlymouthManagerTitle": "Soplos Plymouth Manager",
     "appPlymouthManagerDesc": "Manager pentru ecranul de pornire cu previzualizări inteligente, suport Wayland și reconstrucție automată a initramfs.",
     "appRepoSelectorTitle": "Soplos Repo Selector",

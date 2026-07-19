@@ -300,6 +300,8 @@ window.LANG_ES = {
     "appGrubEditorDesc": "Interfaz gráfica para personalizar el cargador de arranque GRUB. Gestiona entradas, temas, fondos y fuentes con soporte completo de submenús.",
     "appKernelInstallerTitle": "Soplos Kernel Installer",
     "appKernelInstallerDesc": "Compila e instala kernels Linux personalizados con soporte BORE, NTSYNC y PREEMPT_RT. Incluye integración con Secure Boot y DKMS.",
+    "appLayoutSwitcherTitle": "Soplos Layout Switcher",
+    "appLayoutSwitcherDesc": "Cambia el escritorio de GNOME Shell entre diseños predefinidos — Soplos, Dock, Mosaico y GNOME — activando las extensiones necesarias y aplicando los ajustes correspondientes.",
     "appPlymouthManagerTitle": "Soplos Plymouth Manager",
     "appPlymouthManagerDesc": "Gestor de pantalla de arranque con previsualizaciones inteligentes, soporte Wayland y reconstrucción automática del initramfs.",
     "appRepoSelectorTitle": "Soplos Repo Selector",

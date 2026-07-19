@@ -411,6 +411,14 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
       },
       "kernel-installer": sharedApps["kernel-installer"],
+      "layout-switcher": {
+        titleKey: "appLayoutSwitcherTitle",
+        descKey: "appLayoutSwitcherDesc",
+        images: [
+          "images/boro/layout-switcher/screenshot1.png",
+          "images/boro/layout-switcher/screenshot2.png",
+        ],
+      },
       "plymouth-manager": {
         titleKey: "appPlymouthManagerTitle",
         descKey: "appPlymouthManagerDesc",
@@ -452,6 +460,14 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "welcome-live": sharedApps["welcome-live"],
       "webapp-manager": sharedApps["webapp-manager"],
+      "layout-switcher": {
+        titleKey: "appLayoutSwitcherTitle",
+        descKey: "appLayoutSwitcherDesc",
+        images: [
+          "images/boro/layout-switcher/screenshot1.png",
+          "images/boro/layout-switcher/screenshot2.png",
+        ],
+      },
     },
   };
 
