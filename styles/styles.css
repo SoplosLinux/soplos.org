@@ -3974,6 +3974,19 @@ footer .container p {
     flex-direction: column;
     gap: 8px;
 }
+.contributor-card-memorial {
+    position: relative;
+}
+.contributor-card-memorial .card-memorial-ribbon {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 52px;
+    height: 52px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.92;
+}
 .contributor-card-header {
     display: flex;
     flex-direction: column;
@@ -4024,6 +4037,19 @@ footer .container p {
     background: rgba(255,0,0,0.12);
     color: #ff6060;
     border: 1px solid rgba(255,0,0,0.3);
+    white-space: nowrap;
+    width: fit-content;
+}
+.badge-translator {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: rgba(0,180,216,0.12);
+    color: #4cc9f0;
+    border: 1px solid rgba(0,180,216,0.3);
     white-space: nowrap;
     width: fit-content;
 }

@@ -78,6 +78,10 @@ window.LANG_PT = {
     "contrib-badge-creator": "Criador de Conteúdo",
     "contrib-yoyo-role": "Youtuber &amp; Podcaster",
     "contrib-yoyo-text": "Analisou o Soplos Linux nas suas primeiras fases e reportou correções que ajudaram a moldar o projeto. Uma voz chave na comunidade Linux de língua hispânica.",
+    "contrib-translators-title": "Tradutores",
+    "contrib-badge-translator": "Tradutor",
+    "contrib-xavier-role": "Tradutor para Catalão",
+    "contrib-xavier-text": "A trabalhar para levar o Soplos Linux e as suas aplicações aos falantes de catalão. As suas traduções tornam o projeto acessível a toda uma comunidade na sua própria língua.",
 
     // Donate Page
     "donate-breadcrumb-home": "Inicio",
