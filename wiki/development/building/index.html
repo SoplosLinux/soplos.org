@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building from Source - Soplos Linux Wiki</title>
-    <meta name="description" content="Guide to building Soplos Linux ISOs from source code using live-build.">
+    <title>Development Tools - Soplos Wiki</title>
+    <meta name="description" content="Overview of the internal tools used to build Soplos.">
     <meta name="keywords" content="soplos, linux, build, iso, source, live-build, development">
 
     <!-- Open Graph / Facebook -->
@@ -55,7 +55,6 @@
                                 <li><a href="/wiki/development/contribute/" id="menuContribute">How to Contribute</a></li>
                                 <li><a href="/wiki/development/building/" id="menuBuilding">Building from Source</a></li>
                                 <li><a href="/wiki/development/packaging/" id="menuPackaging">Package Creation</a></li>
-                                <li><a href="/wiki/development/api/" id="menuApi">API Documentation</a></li>
                             </ul>
                         </li>
                         <li class="menu-dropdown">
@@ -117,7 +116,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1><i class="fas fa-hammer"></i> <span id="building-hero-title">Building from Source</span></h1>
-                    <p id="building-hero-desc">Learn how to compile the kernel and build the Soplos Linux ISO from scratch.</p>
+                    <p id="building-hero-desc">An overview of the internal tools used to build Soplos.</p>
                 </div>
             </div>
         </section>
@@ -131,9 +130,14 @@
                         <h3 id="building-toc-title">Contents</h3>
                         <ul>
                             <li><a href="#overview" id="building-toc-overview">Overview</a></li>
-                            <li><a href="#tools" id="building-toc-tools">Soplos Tools</a></li>
-                            <li><a href="#kernel" id="building-toc-kernel">Kernel Compilation</a></li>
-                            <li><a href="#iso" id="building-toc-iso">ISO Builder</a></li>
+                            <li><a href="#tools" id="building-toc-tools">Soplos Tools</a>
+                                <ul>
+                                    <li><a href="#tool-kernel">Soplos Kernel Installer</a></li>
+                                    <li><a href="#tool-repo">Soplos Repo Manager</a></li>
+                                    <li><a href="#tool-packager">Soplos Packager</a></li>
+                                    <li><a href="#tool-iso">Soplos ISO Builder</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </aside>
 
@@ -155,48 +159,56 @@
                         <section id="tools" class="content-section">
                             <h2><i class="fas fa-toolbox"></i> <span id="building-tools-title">Soplos Tools</span></h2>
                             <p id="building-tools-intro">The Soplos build infrastructure consists of several specialized tools:</p>
-                            <ul>
-                                <li><strong id="building-tools-iso-label">Soplos ISO Builder:</strong> <span id="building-tools-iso-desc">Creates bootable ISO images for all Soplos
-                                    editions (Boro, Tyron, Tyson).</span></li>
-                                <li><strong id="building-tools-pkg-label">Soplos Packager:</strong> <span id="building-tools-pkg-desc">Simplifies the creation of <code>.deb</code>
-                                    packages with proper metadata and dependencies.</span></li>
-                                <li><strong id="building-tools-repo-label">Soplos Repo Manager:</strong> <span id="building-tools-repo-desc">Manages the official package repositories,
-                                    handles signing, and updates metadata.</span></li>
-                                <li><strong id="building-tools-kernel-label">Kernel Build Tool:</strong> <span id="building-tools-kernel-desc">Custom tooling for compiling and packaging the
-                                    Soplos-optimized Linux kernel.</span></li>
-                            </ul>
-                            <div class="info-box tip">
-                                <i class="fas fa-lightbulb"></i>
-                                <div>
-                                    <strong id="building-tools-soon-label">Coming Soon:</strong> <span id="building-tools-soon-text">The <strong>Soplos Linux Developer Kit</strong> will
-                                    provide a unified set of tools for contributors to build and test Soplos components
-                                    locally.</span>
-                                </div>
+
+                            <h3 id="tool-kernel">Soplos Kernel Installer</h3>
+                            <p id="building-tools-kernel-desc">Handles compilation and packaging of the Soplos-optimized Linux kernel. It is the only build tool publicly available — users on Soplos Linux can install it to compile custom kernels.</p>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot4.png" alt="Soplos Kernel Installer">
+                                    <figcaption id="building-screenshot-kernel-1">Kernel Installer</figcaption>
+                                </figure>
+                            </div>
+
+                            <h3 id="tool-repo">Soplos Repo Manager</h3>
+                            <p id="building-tools-repo-desc">Manages the official Soplos Linux package repositories: signing, metadata updates and mirror synchronization. Internal use only.</p>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-repo-manager/screenshot1.png" alt="Soplos Repo Manager">
+                                    <figcaption id="building-screenshot-repo-1">Repo Manager</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-repo-manager/screenshot2.png" alt="Soplos Repo Manager">
+                                    <figcaption id="building-screenshot-repo-2">Repo Manager</figcaption>
+                                </figure>
+                            </div>
+
+                            <h3 id="tool-packager">Soplos Packager</h3>
+                            <p id="building-tools-pkg-desc">Simplifies the creation of <code>.deb</code> packages with proper metadata, dependencies and AppStream metainfo. Internal use only.</p>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-packager/screenshot1.png" alt="Soplos Packager">
+                                    <figcaption id="building-screenshot-pkg-1">Packager</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-packager/screenshot2.png" alt="Soplos Packager">
+                                    <figcaption id="building-screenshot-pkg-2">Packager</figcaption>
+                                </figure>
+                            </div>
+
+                            <h3 id="tool-iso">Soplos ISO Builder</h3>
+                            <p id="building-tools-iso-desc">Creates bootable ISO images for all Soplos editions (Boro, Tyron, Tyson). Handles package selection, live environment setup and Calamares integration. Internal use only.</p>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-iso-builder/screenshot1.png" alt="Soplos ISO Builder">
+                                    <figcaption id="building-screenshot-iso-1">ISO Builder</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-iso-builder/screenshot2.png" alt="Soplos ISO Builder">
+                                    <figcaption id="building-screenshot-iso-2">ISO Builder</figcaption>
+                                </figure>
                             </div>
                         </section>
 
-                        <section id="kernel" class="content-section">
-                            <h2><i class="fas fa-microchip"></i> <span id="building-kernel-title">Kernel Compilation</span></h2>
-                            <p id="building-kernel-desc-1">Soplos Linux uses a custom-configured Linux kernel optimized for desktop performance. The
-                                kernel is compiled using internal tooling that automates configuration and packaging.
-                            </p>
-                            <p id="building-kernel-desc-2">Kernel source code is based on upstream Linux with Soplos-specific patches and
-                                configuration.</p>
-                        </section>
-
-                        <section id="iso" class="content-section">
-                            <h2><i class="fas fa-compact-disc"></i> <span id="building-iso-title">Soplos ISO Builder</span></h2>
-                            <p id="building-iso-intro">The <strong>Soplos ISO Builder</strong> is the tool used to generate the official
-                                installation images. It handles:</p>
-                            <ul>
-                                <li id="building-iso-list-1">Package selection for each edition</li>
-                                <li id="building-iso-list-2">Desktop environment configuration</li>
-                                <li id="building-iso-list-3">Live environment setup</li>
-                                <li id="building-iso-list-4">Installer integration (Calamares)</li>
-                                <li id="building-iso-list-5">The resulting ISO is for <strong>internal testing only</strong>.</li>
-                            </ul>
-                            <p id="building-iso-desc">ISOs created with this tool are tested extensively before public release.</p>
-                        </section>
 
                     </article>
                 </div>

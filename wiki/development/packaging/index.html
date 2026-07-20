@@ -55,7 +55,6 @@
                                 <li><a href="/wiki/development/contribute/" id="menuContribute">How to Contribute</a></li>
                                 <li><a href="/wiki/development/building/" id="menuBuilding">Building from Source</a></li>
                                 <li><a href="/wiki/development/packaging/" id="menuPackaging">Package Creation</a></li>
-                                <li><a href="/wiki/development/api/" id="menuApi">API Documentation</a></li>
                             </ul>
                         </li>
                         <li class="menu-dropdown">
@@ -117,7 +116,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1><i class="fas fa-box"></i> <span id="packaging-hero-title">Package Creation</span></h1>
-                    <p id="packaging-hero-desc">Master the art of packaging software for Soplos Linux. From source to <code>.deb</code>.</p>
+                    <p id="packaging-hero-desc">How Soplos packages its software and how to propose a new one.</p>
                 </div>
             </div>
         </section>
@@ -132,8 +131,7 @@
                         <ul>
                             <li><a href="#overview" id="packaging-toc-overview">Overview</a></li>
                             <li><a href="#packager" id="packaging-toc-packager">Soplos Packager</a></li>
-                            <li><a href="#standards" id="packaging-toc-standards">Quality Standards</a></li>
-                            <li><a href="#submission" id="packaging-toc-submission">Submission Process</a></li>
+                            <li><a href="#propose" id="packaging-toc-propose">Propose a Program</a></li>
                         </ul>
                     </aside>
 
@@ -141,64 +139,43 @@
                     <article class="main-content">
                         <section id="overview" class="content-section">
                             <h2><i class="fas fa-info-circle"></i> <span id="packaging-overview-title">Overview</span></h2>
-                            <p id="packaging-overview-desc">Soplos Linux maintains a <strong>strictly curated</strong> repository. Quality and
-                                security are our top priorities. All packages are reviewed, built, and signed by the
-                                Core Team.</p>
+                            <p id="packaging-overview-desc">The Soplos repository is strictly curated. Every package is built, signed and maintained internally by the developer. There are no third-party uploads or community-built packages — everything in the repo goes through the same internal process.</p>
                         </section>
 
                         <section id="packager" class="content-section">
                             <h2><i class="fas fa-box-open"></i> <span id="packaging-packager-title">Soplos Packager</span></h2>
-                            <p id="packaging-packager-intro"><strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code>
-                                packages for the Soplos repositories. It automates:</p>
+                            <p id="packaging-packager-intro"><strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code> packages for the Soplos repository. It handles the full packaging workflow:</p>
                             <ul>
-                                <li id="packaging-packager-list-1">Debian package structure generation</li>
-                                <li id="packaging-packager-list-2">Dependency resolution and metadata</li>
-                                <li id="packaging-packager-list-3">Build process standardization</li>
-                                <li id="packaging-packager-list-4">Linting and policy compliance checks</li>
+                                <li id="packaging-packager-list-1">Debian package structure and metadata</li>
+                                <li id="packaging-packager-list-2">AppStream metainfo generation</li>
+                                <li id="packaging-packager-list-3">GPG signing</li>
+                                <li id="packaging-packager-list-4">Repository integration via Soplos Repo Manager</li>
                             </ul>
-                            <p id="packaging-packager-desc">This tool ensures all packages follow the same quality standards and structure.</p>
-                        </section>
-
-                        <section id="standards" class="content-section">
-                            <h2><i class="fas fa-check-circle"></i> <span id="packaging-standards-title">Quality Standards</span></h2>
-                            <p id="packaging-standards-intro">All packages submitted to Soplos repositories must meet these requirements:</p>
-                            <ul>
-                                <li><strong id="packaging-standards-list-1-label">Debian Policy Compliance:</strong> <span id="packaging-standards-list-1-text">Follow the Debian Policy Manual</span></li>
-                                <li><strong id="packaging-standards-list-2-label">No Lintian Errors:</strong> <span id="packaging-standards-list-2-text">All packages must pass lintian checks</span></li>
-                                <li><strong id="packaging-standards-list-3-label">Security Audit:</strong> <span id="packaging-standards-list-3-text">Code must be reviewed for vulnerabilities</span></li>
-                                <li><strong id="packaging-standards-list-4-label">Reproducible Builds:</strong> <span id="packaging-standards-list-4-text">Packages must build identically from source</span>
-                                </li>
-                                <li><strong id="packaging-standards-list-5-label">License Compliance:</strong> <span id="packaging-standards-list-5-text">Clear licensing and copyright information</span></li>
-                            </ul>
-                        </section>
-
-                        <section id="submission" class="content-section">
-                            <h2><i class="fas fa-lock"></i> <span id="packaging-submission-title">Submission Process</span></h2>
-                            <div class="info-box warning">
-                                <i class="fas fa-shield-alt"></i>
-                                <div>
-                                    <strong id="packaging-submission-warning-label">Security Notice:</strong> <span id="packaging-submission-warning-text">Direct binary uploads are <strong>NOT</strong>
-                                    permitted. All packages undergo manual security audit by the Core Team.</span>
-                                </div>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img src="../../../images/apps/soplos-packager/screenshot1.png" alt="Soplos Packager">
+                                    <figcaption id="packaging-screenshot-1">Soplos Packager</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-packager/screenshot2.png" alt="Soplos Packager">
+                                    <figcaption id="packaging-screenshot-2">Soplos Packager</figcaption>
+                                </figure>
                             </div>
-                            <p id="packaging-submission-intro">To propose a new package for Soplos repositories:</p>
-                            <ol class="step-list">
-                                <li><strong id="packaging-submission-step-1-label">Prepare Source Package:</strong> <span id="packaging-submission-step-1-text">Create a clean, well-documented source
-                                    package following Debian standards.</span></li>
-                                <li><strong id="packaging-submission-step-2-label">Submit for Review:</strong> <span id="packaging-submission-step-2-text">Open a "Package Request" issue on GitHub with a
-                                    link to your source code repository.</span></li>
-                                <li><strong id="packaging-submission-step-3-label">Security Audit:</strong> <span id="packaging-submission-step-3-text">The Core Team reviews the source code for security
-                                    vulnerabilities and policy compliance.</span></li>
-                                <li><strong id="packaging-submission-step-4-label">Build & Sign:</strong> <span id="packaging-submission-step-4-text">If approved, the Core Team uses <strong>Soplos
-                                        Packager</strong> to build and sign the package.</span></li>
-                                <li><strong id="packaging-submission-step-5-label">Repository Integration:</strong> <span id="packaging-submission-step-5-text">The signed package is added to the official
-                                    repository using <strong>Soplos Repo Manager</strong>.</span></li>
-                            </ol>
-                            <div class="info-box tip">
+                        </section>
+
+                        <section id="propose" class="content-section">
+                            <h2><i class="fas fa-paper-plane"></i> <span id="packaging-propose-title">Propose a Program</span></h2>
+                            <p id="packaging-propose-intro">If you have developed a program and would like to share it with the Soplos community, you can propose it. We will test it and, if it is viable, package it and publish it in our repositories.</p>
+                            <p id="packaging-propose-contact">You can send your proposal through any of these channels:</p>
+                            <ul>
+                                <li id="packaging-propose-github">GitHub Issues — <a href="https://github.com/SoplosLinux" target="_blank" rel="noopener">github.com/SoplosLinux</a></li>
+                                <li id="packaging-propose-forum">Soplos Linux Forums — <a href="https://soplos.org/forums/" target="_blank" rel="noopener">soplos.org/forums</a></li>
+                                <li id="packaging-propose-telegram">Telegram community group</li>
+                            </ul>
+                            <div class="info-box warning">
                                 <i class="fas fa-info-circle"></i>
                                 <div>
-                                    <strong id="packaging-submission-tip-label">Trust Model:</strong> <span id="packaging-submission-tip-text">The Soplos package manager only trusts packages signed
-                                    with the official Core Team GPG key.</span>
+                                    <strong id="packaging-propose-note-label">Note:</strong> <span id="packaging-propose-note-text">Not all proposals will be accepted. Inclusion depends on relevance, quality and compatibility with the distribution.</span>
                                 </div>
                             </div>
                         </section>

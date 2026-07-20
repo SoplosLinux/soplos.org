@@ -1212,6 +1212,11 @@ Object.assign(window.LANG_EN, {
     "Install QEMU Guest Agent from Soplos Welcome (Drivers tab)",
   "inst-vm-qemu-4":
     "Virt-Manager provides a graphical interface for VM management",
+  "inst-vm-proxmox-title": "Proxmox VE",
+  "inst-vm-proxmox-1": "Create a new VM with UEFI firmware (OVMF) and VirtIO SCSI controller",
+  "inst-vm-proxmox-2": "RAM: 4 GB minimum, 8 GB recommended",
+  "inst-vm-proxmox-3": "Use VirtIO drivers for disk and network for best performance",
+  "inst-vm-proxmox-4": "Install QEMU Guest Agent from Soplos Welcome (Drivers tab) for Proxmox integration",
   "inst-vm-warn-label": "3D Performance:",
   "inst-vm-warn-text":
     "GPU-accelerated applications, compositing effects, and gaming will have limited performance inside a virtual machine. For full performance install on real hardware.",
@@ -3353,66 +3358,37 @@ Object.assign(window.LANG_EN, {
   // Contribute Page (/wiki/development/contribute/)
   "contribute-breadcrumb": "Contribute",
   "contribute-hero-title": "Contribute",
-  "contribute-hero-desc":
-    "Help us build the future of Soplos Linux. Code, design, translate, or write.",
+  "contribute-hero-desc": "Ways to support and improve Soplos Linux.",
   "contribute-toc-title": "Contents",
-  "contribute-toc-1": "Getting Started",
-  "contribute-toc-2": "Workflow",
-  "contribute-toc-3": "Coding Standards",
-  "contribute-toc-4": "Documentation",
-  "contribute-toc-5": "Translation",
-  "contribute-start-title": "Getting Started",
-  "contribute-start-intro":
-    "Before you start contributing, you'll need a few things set up:",
-  "contribute-start-req1-label": "GitHub Account:",
-  "contribute-start-req1": "We use GitHub for all our code and issue tracking.",
-  "contribute-start-req2-label": "Git:",
-  "contribute-start-req2":
-    "Make sure you have <code>git</code> installed and configured.",
-  "contribute-start-req3-label": "Development Environment:",
-  "contribute-start-req3":
-    "Depending on what you work on, you might need Python, C compilers, or web tools.",
-  "contribute-workflow-title": "Workflow",
-  "contribute-workflow-intro": "We follow a standard Fork-and-Pull workflow:",
-  "contribute-workflow-step1":
-    "<strong>Fork</strong> the repository you want to work on.",
-  "contribute-workflow-step2": "<strong>Clone</strong> your fork locally.",
-  "contribute-workflow-step3":
-    "<strong>Create a Branch</strong> for your feature or fix (e.g., <code>fix/login-bug</code>).",
-  "contribute-workflow-step4":
-    "<strong>Commit</strong> your changes with clear messages.",
-  "contribute-workflow-step5":
-    "<strong>Push</strong> to your fork and submit a <strong>Pull Request (PR)</strong>.",
-  "contribute-standards-title": "Coding Standards",
-  "contribute-standards-intro":
-    "To keep our codebase clean, please adhere to these rules:",
-  "contribute-standards-py-label": "Python:",
-  "contribute-standards-py": "Follow PEP 8.",
-  "contribute-standards-bash-label": "Bash:",
-  "contribute-standards-bash": "Use <code>shellcheck</code> to verify scripts.",
-  "contribute-standards-commit-label": "Commits:",
-  "contribute-standards-commit":
-    'Use imperative mood (e.g., "Fix login bug" not "Fixed login bug").',
-  "contribute-docs-title": "Documentation",
-  "contribute-docs-intro":
-    "Our Wiki is built with simple HTML/CSS. To contribute:",
-  "contribute-docs-1":
-    "Edit the pages directly in the <code>wiki/</code> directory.",
-  "contribute-docs-2": "Ensure all links are relative and working.",
-  "contribute-docs-3": "Use the existing CSS classes for consistency.",
+  "contribute-toc-bugs": "Bug Reports",
+  "contribute-toc-translate": "Translation",
+  "contribute-toc-testing": "Testing",
+  "contribute-toc-donate": "Donations",
+  "contribute-bugs-title": "Bug Reports",
+  "contribute-bugs-intro": "Found something that does not work as expected? You can report it through either of these channels:",
+  "contribute-bugs-github-label": "GitHub Issues:",
+  "contribute-bugs-github": "Open an issue in the corresponding repository at <a href=\"https://github.com/SoplosLinux\" target=\"_blank\" rel=\"noopener\">github.com/SoplosLinux</a>. Include your distribution version, a description of the problem and steps to reproduce it.",
+  "contribute-bugs-forum-label": "Forums:",
+  "contribute-bugs-forum": "Post in the support section of the <a href=\"https://soplos.org/forums/\" target=\"_blank\" rel=\"noopener\">Soplos Linux forums</a>. The community and the developer read every thread.",
   "contribute-translate-title": "Translation",
-  "contribute-translate-intro": "We use standard tools for localization:",
-  "contribute-translate-apps-label": "Applications:",
-  "contribute-translate-apps": "We use <code>.po</code> files (Gettext).",
-  "contribute-translate-web-label": "Website:",
-  "contribute-translate-web":
-    "We use a JavaScript-based dictionary system for dynamic translation.",
+  "contribute-translate-intro": "Soplos Linux and its applications are available in 8 languages. If you want to contribute a new language or improve an existing translation, get in touch first — translation is a coordinated effort, not an open submission.",
+  "contribute-translate-contact": "Contact via any of these channels before starting:",
+  "contribute-translate-forum": "Soplos Linux forums",
+  "contribute-translate-github": "GitHub Issues",
+  "contribute-translate-telegram": "Telegram community group",
+  "contribute-testing-title": "Testing",
+  "contribute-testing-intro": "Pre-release versions of Soplos Linux are tested by a small group of committed users selected by the developer. Testing access is not open to everyone — it requires a demonstrated commitment to the project.",
+  "contribute-testing-note-label": "Note:",
+  "contribute-testing-note-text": "Test builds are for people who will actually test and report. If you are looking for early access to new versions, this is not the right channel.",
+  "contribute-donate-title": "Donations",
+  "contribute-donate-intro": "Soplos Linux is developed and maintained by a single person in their free time, with no corporate backing. Financial contributions help cover server costs, hardware and development tools.",
+  "contribute-donate-link": "You can donate via the <a href=\"/community/donate/\">Donations page</a>.",
+  "contribute-donate-page": "Donations page",
 
   // Building Wiki
-  "building-breadcrumb": "Building",
-  "building-hero-title": "Building from Source",
-  "building-hero-desc":
-    "Learn how to compile the kernel and build the Soplos Linux ISO from scratch.",
+  "building-breadcrumb": "Dev Tools",
+  "building-hero-title": "Development Tools",
+  "building-hero-desc": "An overview of the internal tools used to build Soplos.",
   "building-toc-title": "Contents",
   "building-toc-overview": "Overview",
   "building-toc-tools": "Soplos Tools",
@@ -3462,65 +3438,29 @@ Object.assign(window.LANG_EN, {
   // Packaging Wiki
   "packaging-breadcrumb": "Packaging",
   "packaging-hero-title": "Package Creation",
-  "packaging-hero-desc":
-    "Master the art of packaging software for Soplos Linux. From source to <code>.deb</code>.",
+  "packaging-hero-desc": "How Soplos packages its software and how to propose a new one.",
   "packaging-toc-title": "Contents",
   "packaging-toc-overview": "Overview",
   "packaging-toc-packager": "Soplos Packager",
-  "packaging-toc-standards": "Quality Standards",
-  "packaging-toc-submission": "Submission Process",
+  "packaging-toc-propose": "Propose a Program",
   "packaging-overview-title": "Overview",
-  "packaging-overview-desc":
-    "Soplos Linux maintains a <strong>strictly curated</strong> repository. Quality and security are our top priorities. All packages are reviewed, built, and signed by the Core Team.",
+  "packaging-overview-desc": "The Soplos repository is strictly curated. Every package is built, signed and maintained internally by the developer. There are no third-party uploads or community-built packages — everything in the repo goes through the same internal process.",
   "packaging-packager-title": "Soplos Packager",
-  "packaging-packager-intro":
-    "<strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code> packages for the Soplos repositories. It automates:",
-  "packaging-packager-list-1": "Debian package structure generation",
-  "packaging-packager-list-2": "Dependency resolution and metadata",
-  "packaging-packager-list-3": "Build process standardization",
-  "packaging-packager-list-4": "Linting and policy compliance checks",
-  "packaging-packager-desc":
-    "This tool ensures all packages follow the same quality standards and structure.",
-  "packaging-standards-title": "Quality Standards",
-  "packaging-standards-intro":
-    "All packages submitted to Soplos repositories must meet these requirements:",
-  "packaging-standards-list-1-label": "Debian Policy Compliance:",
-  "packaging-standards-list-1-text": "Follow the Debian Policy Manual",
-  "packaging-standards-list-2-label": "No Lintian Errors:",
-  "packaging-standards-list-2-text": "All packages must pass lintian checks",
-  "packaging-standards-list-3-label": "Security Audit:",
-  "packaging-standards-list-3-text":
-    "Code must be reviewed for vulnerabilities",
-  "packaging-standards-list-4-label": "Reproducible Builds:",
-  "packaging-standards-list-4-text":
-    "Packages must build identically from source",
-  "packaging-standards-list-5-label": "License Compliance:",
-  "packaging-standards-list-5-text":
-    "Clear licensing and copyright information",
-  "packaging-submission-title": "Submission Process",
-  "packaging-submission-warning-label": "Security Notice:",
-  "packaging-submission-warning-text":
-    "Direct binary uploads are <strong>NOT</strong> permitted. All packages undergo manual security audit by the Core Team.",
-  "packaging-submission-intro":
-    "To propose a new package for Soplos repositories:",
-  "packaging-submission-step-1-label": "Prepare Source Package:",
-  "packaging-submission-step-1-text":
-    "Create a clean, well-documented source package following Debian standards.",
-  "packaging-submission-step-2-label": "Submit for Review:",
-  "packaging-submission-step-2-text":
-    'Open a "Package Request" issue on GitHub with a link to your source code repository.',
-  "packaging-submission-step-3-label": "Security Audit:",
-  "packaging-submission-step-3-text":
-    "The Core Team reviews the source code for security vulnerabilities and policy compliance.",
-  "packaging-submission-step-4-label": "Build & Sign:",
-  "packaging-submission-step-4-text":
-    "If approved, the Core Team uses <strong>Soplos Packager</strong> to build and sign the package.",
-  "packaging-submission-step-5-label": "Repository Integration:",
-  "packaging-submission-step-5-text":
-    "The signed package is added to the official repository using <strong>Soplos Repo Manager</strong>.",
-  "packaging-submission-tip-label": "Trust Model:",
-  "packaging-submission-tip-text":
-    "The Soplos package manager only trusts packages signed with the official Core Team GPG key.",
+  "packaging-packager-intro": "<strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code> packages for the Soplos repository. It handles the full packaging workflow:",
+  "packaging-packager-list-1": "Debian package structure and metadata",
+  "packaging-packager-list-2": "AppStream metainfo generation",
+  "packaging-packager-list-3": "GPG signing",
+  "packaging-packager-list-4": "Repository integration via Soplos Repo Manager",
+  "packaging-screenshot-1": "Soplos Packager",
+  "packaging-screenshot-2": "Soplos Packager",
+  "packaging-propose-title": "Propose a Program",
+  "packaging-propose-intro": "If you have developed a program and would like to share it with the Soplos community, you can propose it. We will test it and, if it is viable, package it and publish it in our repositories.",
+  "packaging-propose-contact": "You can send your proposal through any of these channels:",
+  "packaging-propose-github": "GitHub Issues — <a href=\"https://github.com/SoplosLinux\" target=\"_blank\" rel=\"noopener\">github.com/SoplosLinux</a>",
+  "packaging-propose-forum": "Soplos Linux Forums — <a href=\"https://soplos.org/forums/\" target=\"_blank\" rel=\"noopener\">soplos.org/forums</a>",
+  "packaging-propose-telegram": "Telegram community group",
+  "packaging-propose-note-label": "Note:",
+  "packaging-propose-note-text": "Not all proposals will be accepted. Inclusion depends on relevance, quality and compatibility with the distribution.",
 
   // API Documentation Wiki
   "api-breadcrumb": "API",

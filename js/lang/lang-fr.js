@@ -11,7 +11,7 @@ window.LANG_FR = {
     "menuDonate": "Faire un don",
     "menuVideos": "Vidéos",
     "menuBranding": "Identité",
-    "menuBuilding": "Compilation depuis les sources",
+    "menuBuilding": "Outils de Développement",
     "menuDiscord": "Discord",
     "menuDiscover": "Découvrir",
     "menuDownload": "Télécharger",
@@ -402,9 +402,8 @@ window.LANG_FR = {
     "legalTermsTitle": "Conditions d'utilisation",
 
     // Wiki Index
-    "apiLink": "Documentation API",
     "backupLink": "Solutions de Sauvegarde",
-    "buildingLink": "Compilation depuis les Sources",
+    "buildingLink": "Outils de Développement",
     "categoriesTitle": "Catégories de Documentation",
     "communityHelpLink": "Support de la Communauté",
     "contactLink": "Contacter le Support",

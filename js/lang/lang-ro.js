@@ -11,7 +11,7 @@ window.LANG_RO = {
     "menuDonate": "Donati",
     "menuVideos": "Videoclipuri",
     "menuBranding": "Identitate",
-    "menuBuilding": "Compilare din sursă",
+    "menuBuilding": "Instrumente de Dezvoltare",
     "menuDiscord": "Discord",
     "menuDiscover": "Descoperă",
     "menuDownload": "Descarcă",
@@ -402,9 +402,8 @@ window.LANG_RO = {
     "legalTermsTitle": "Termeni de utilizare",
 
     // Wiki Index
-    "apiLink": "Documentație API",
     "backupLink": "Soluții de Backup",
-    "buildingLink": "Compilare din Surse",
+    "buildingLink": "Instrumente de Dezvoltare",
     "categoriesTitle": "Categorii de Documentație",
     "communityHelpLink": "Suport Comunitate",
     "contactLink": "Contactează Suportul",

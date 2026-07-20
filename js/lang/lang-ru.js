@@ -11,7 +11,7 @@ window.LANG_RU = {
     "menuDonate": "Пожертвовать",
     "menuVideos": "Видео",
     "menuBranding": "Айдентика",
-    "menuBuilding": "Сборка из исходников",
+    "menuBuilding": "Инструменты разработки",
     "menuDiscord": "Discord",
     "menuDiscover": "Открыть",
     "menuDownload": "Скачать",
@@ -402,9 +402,8 @@ window.LANG_RU = {
     "legalTermsTitle": "Условия использования",
 
     // Wiki Index
-    "apiLink": "Документация API",
     "backupLink": "Решения для Резервного Копирования",
-    "buildingLink": "Сборка из Исходников",
+    "buildingLink": "Инструменты разработки",
     "categoriesTitle": "Категории Документации",
     "communityHelpLink": "Поддержка Сообщества",
     "contactLink": "Связаться с Поддержкой",

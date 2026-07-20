@@ -11,7 +11,7 @@ window.LANG_DE = {
     "menuDonate": "Spenden",
     "menuVideos": "Videos",
     "menuBranding": "Branding",
-    "menuBuilding": "Aus dem Quellcode erstellen",
+    "menuBuilding": "Entwicklungswerkzeuge",
     "menuDiscord": "Discord",
     "menuDiscover": "Entdecken",
     "menuDownload": "Herunterladen",
@@ -402,9 +402,8 @@ window.LANG_DE = {
     "legalTermsTitle": "Nutzungsbedingungen",
 
     // Wiki Index
-    "apiLink": "API-Dokumentation",
     "backupLink": "Backup-Lösungen",
-    "buildingLink": "Aus Quellcode erstellen",
+    "buildingLink": "Entwicklungswerkzeuge",
     "categoriesTitle": "Dokumentationskategorien",
     "communityHelpLink": "Community-Support",
     "contactLink": "Support kontaktieren",
