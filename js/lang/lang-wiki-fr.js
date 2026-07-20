@@ -4994,6 +4994,9 @@ Object.assign(window.LANG_FR, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
 
+    "ki-rel-101r3-title": "1.0.1-3 — Juillet 2026",
+    "ki-rel-101r3-subtitle": "Correction d'un bug de sélection X3D VCache qui pouvait envoyer une combinaison de patchs incompatible à la compilation.",
+    "ki-rel-101r3-fixed-li1": "<strong>Sélection X3D VCache laissant Zen coché avec BORE :</strong> La sélection de X3D force l'activation de BORE, mais comme cela se produisait pendant le blocage des signaux de bascule, la logique de BORE qui décoche Zen (incompatible) ne s'exécutait jamais — Zen pouvait rester coché avec BORE+X3D s'il était déjà actif, envoyant une combinaison de patchs incorrecte. La sélection automatique de X3D efface désormais tout ce qui est incompatible avec BORE.",
     "ki-rel-101r2-title": "1.0.1-2 — Juillet 2026",
     "ki-rel-101r2-subtitle": "Trois corrections de fiabilité de compilation et deux ajouts : support des pilotes EC pour consoles portables et garde-fou automatique du niveau march pour le patch X3D VCache.",
     "ki-rel-101r2-fixed-li1": "<strong>Téléchargement du patch X3D VCache :</strong> Utilise désormais une URL spécifique à la version du noyau (6.x / 7.0 / 7.1) au lieu d'un lien obsolète qui n'existait plus dans le dépôt source.",

@@ -5002,6 +5002,9 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-101r3-title": "1.0.1-3 — Juli 2026",
+    "ki-rel-101r3-subtitle": "Behoben: Ein Fehler bei der X3D-VCache-Auswahl, der eine inkompatible Patch-Kombination an den Build senden konnte.",
+    "ki-rel-101r3-fixed-li1": "<strong>X3D-VCache-Auswahl ließ Zen neben BORE aktiviert:</strong> Die Auswahl von X3D erzwingt BORE, aber da dies während blockierter Toggle-Signale geschah, wurde die BORE-Logik zum Deaktivieren von Zen (inkompatibel) nie ausgeführt — Zen konnte neben BORE+X3D aktiviert bleiben, wenn es bereits aktiv war, und eine fehlerhafte Patch-Kombination an den Build senden. Die automatische Auswahl von X3D bereinigt jetzt auch alles, was mit BORE inkompatibel ist.",
     "ki-rel-101r2-title": "1.0.1-2 — Juli 2026",
     "ki-rel-101r2-subtitle": "Drei Build-Zuverlässigkeitskorrekturen und zwei Ergänzungen: EC-Treiber-Unterstützung für Handheld-Gaming und eine automatische March-Level-Absicherung für den X3D VCache-Patch.",
     "ki-rel-101r2-fixed-li1": "<strong>Download des X3D VCache-Patches:</strong> Verwendet jetzt eine kernel-versionsspezifische URL (6.x / 7.0 / 7.1) anstelle eines veralteten Links, der im Quell-Repository nicht mehr existierte.",
