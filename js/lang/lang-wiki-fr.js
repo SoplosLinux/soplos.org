@@ -4349,6 +4349,10 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-2109-title": "2.1.0-9 — Juillet 2026",
+    "wel-rel-2109-subtitle": "Correction de trois chaînes de traduction manquantes dans l'onglet Personnalisation (GNOME) pour l'entrée Layout Switcher.",
+    "wel-rel-2109-fixed-heading": "Traductions",
+    "wel-rel-2109-fixed-li1": "<strong>Onglet Personnalisation (GNOME) — Layout Switcher :</strong> Trois chaînes manquaient dans les 8 fichiers de langue — \"Layout Switcher\", \"Switch between GNOME Shell layout presets\" et \"Launch Soplos Layout Switcher\". Traductions ajoutées en en, es, de, fr, it, pt, ro, ru et tous les fichiers .mo recompilés.",
     "wel-rel-2108-title": "2.1.0-8 — Juillet 2026",
     "wel-rel-2108-subtitle": "Boro (GNOME) uniquement : Layout Switcher ajouté à l'onglet Personnalisation (section Outils Soplos) avec prise en charge de l'installation à la demande.",
     "wel-rel-2108-added-li1": "<strong>Onglet Personnalisation — Layout Switcher (Boro uniquement) :</strong> Ajouté à la section Outils Soplos aux côtés de GRUB Editor et Plymouth Manager. Lance <code>soplos-layout-switcher</code> pour changer entre les dispositions GNOME Shell prédéfinies. Installe le paquet automatiquement via <code>pkexec apt-get install soplos-layout-switcher</code> s'il n'est pas déjà présent.",
@@ -4994,6 +4998,9 @@ Object.assign(window.LANG_FR, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
 
+    "ki-rel-101r4-title": "1.0.1-4 — Juillet 2026",
+    "ki-rel-101r4-subtitle": "Le bouton \"Quel noyau convient à mon matériel ?\" détecte désormais le niveau d'architecture x86-64 du CPU et l'affiche directement, au lieu d'ouvrir le wiki.",
+    "ki-rel-101r4-changed-li1": "<strong>Bouton \"Quel noyau convient à mon matériel ?\" :</strong> N'ouvre plus la page wiki. Il détecte désormais le niveau d'architecture x86-64 le plus élevé (v1–v4) réellement supporté par le CPU et l'affiche directement, afin que les utilisateurs sachent quelle variante de paquet noyau choisir sans quitter l'application.",
     "ki-rel-101r3-title": "1.0.1-3 — Juillet 2026",
     "ki-rel-101r3-subtitle": "Correction d'un bug de sélection X3D VCache qui pouvait envoyer une combinaison de patchs incompatible à la compilation.",
     "ki-rel-101r3-fixed-li1": "<strong>Sélection X3D VCache laissant Zen coché avec BORE :</strong> La sélection de X3D force l'activation de BORE, mais comme cela se produisait pendant le blocage des signaux de bascule, la logique de BORE qui décoche Zen (incompatible) ne s'exécutait jamais — Zen pouvait rester coché avec BORE+X3D s'il était déjà actif, envoyant une combinaison de patchs incorrecte. La sélection automatique de X3D efface désormais tout ce qui est incompatible avec BORE.",

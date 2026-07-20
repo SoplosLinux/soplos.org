@@ -4353,6 +4353,10 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-2109-title": "2.1.0-9 — Luglio 2026",
+    "wel-rel-2109-subtitle": "Corrette tre stringhe di traduzione mancanti nella scheda Personalizzazione (GNOME) per la voce Layout Switcher.",
+    "wel-rel-2109-fixed-heading": "Traduzioni",
+    "wel-rel-2109-fixed-li1": "<strong>Scheda Personalizzazione (GNOME) — Layout Switcher:</strong> Tre stringhe mancavano in tutti gli 8 file lingua — \"Layout Switcher\", \"Switch between GNOME Shell layout presets\" e \"Launch Soplos Layout Switcher\". Aggiunte le traduzioni in en, es, de, fr, it, pt, ro, ru e ricompilati tutti i file .mo.",
     "wel-rel-2108-title": "2.1.0-8 — Luglio 2026",
     "wel-rel-2108-subtitle": "Solo Boro (GNOME): Layout Switcher aggiunto alla scheda Personalizzazione (sezione Strumenti Soplos) con supporto per l'installazione su richiesta.",
     "wel-rel-2108-added-li1": "<strong>Scheda Personalizzazione — Layout Switcher (solo Boro):</strong> Aggiunto alla sezione Strumenti Soplos insieme a GRUB Editor e Plymouth Manager. Avvia <code>soplos-layout-switcher</code> per passare tra i layout predefiniti di GNOME Shell. Installa il pacchetto automaticamente tramite <code>pkexec apt-get install soplos-layout-switcher</code> se non è già presente.",
@@ -4999,6 +5003,9 @@ Object.assign(window.LANG_IT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilatore di kernel Linux personalizzati e installatore di kernel precompilati per Soplos Linux — compila il tuo kernel con patch BORE, Zen, NTSYNC e PREEMPT_RT, o installa kernel Soplos pronti all'uso dal repository ufficiale.",
 
+    "ki-rel-101r4-title": "1.0.1-4 — Luglio 2026",
+    "ki-rel-101r4-subtitle": "Il pulsante \"Quale kernel è adatto al mio hardware?\" ora rileva il livello di architettura x86-64 della CPU e lo mostra direttamente, invece di aprire il wiki.",
+    "ki-rel-101r4-changed-li1": "<strong>Pulsante \"Quale kernel è adatto al mio hardware?\":</strong> Non apre più la pagina wiki. Ora rileva il livello di architettura x86-64 più alto (v1–v4) effettivamente supportato dalla CPU e lo mostra direttamente, in modo che gli utenti sappiano quale variante di pacchetto kernel scegliere dall'elenco senza uscire dall'app.",
     "ki-rel-101r3-title": "1.0.1-3 — Luglio 2026",
     "ki-rel-101r3-subtitle": "Corretto un bug nella selezione X3D VCache che poteva inviare una combinazione di patch incompatibile alla compilazione.",
     "ki-rel-101r3-fixed-li1": "<strong>Selezione X3D VCache lasciava Zen attivo insieme a BORE:</strong> La selezione di X3D forza l'attivazione di BORE, ma poiché ciò avveniva con i segnali di toggle bloccati, la logica di BORE che deseleziona Zen (incompatibile) non veniva mai eseguita — Zen poteva restare selezionato insieme a BORE+X3D se era già attivo, inviando una combinazione di patch errata. La selezione automatica di X3D ora elimina anche tutto ciò che è incompatibile con BORE.",

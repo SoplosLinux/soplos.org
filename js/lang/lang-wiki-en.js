@@ -5151,6 +5151,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-2109-title": "2.1.0-9 — July 2026",
+  "wel-rel-2109-subtitle": "Fixed three missing translation strings in the Customization tab (GNOME) for the Layout Switcher entry.",
+  "wel-rel-2109-fixed-heading": "Translations",
+  "wel-rel-2109-fixed-li1": "<strong>Customization Tab (GNOME) — Layout Switcher:</strong> Three strings were missing from all 8 language files — \"Layout Switcher\", \"Switch between GNOME Shell layout presets\" and \"Launch Soplos Layout Switcher\". Added translations in en, es, de, fr, it, pt, ro, ru and recompiled all .mo files.",
   "wel-rel-2108-title": "2.1.0-8 — July 2026",
   "wel-rel-2108-subtitle": "Boro (GNOME) only: Layout Switcher added to the Customization tab (Soplos Tools section) with install-on-demand support.",
   "wel-rel-2108-added-li1": "<strong>Customization Tab — Layout Switcher (Boro only):</strong> Added to the Soplos Tools section alongside GRUB Editor and Plymouth Manager. Launches <code>soplos-layout-switcher</code> to switch between GNOME Shell layout presets. Installs the package automatically via <code>pkexec apt-get install soplos-layout-switcher</code> if not already present.",
@@ -5796,6 +5800,9 @@ Object.assign(window.LANG_EN, {
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
 
+  "ki-rel-101r4-title": "1.0.1-4 — July 2026",
+  "ki-rel-101r4-subtitle": "The \"Which kernel is right for my hardware?\" button now detects the CPU's x86-64 architecture level and shows it directly, instead of opening the wiki.",
+  "ki-rel-101r4-changed-li1": "<strong>\"Which kernel is right for my hardware?\" button:</strong> No longer opens the wiki page. It now detects the highest x86-64 architecture level (v1–v4) the CPU actually supports and shows it directly, so users know which kernel package variant to pick from the list without leaving the app.",
   "ki-rel-101r3-title": "1.0.1-3 — July 2026",
   "ki-rel-101r3-subtitle": "Fixed an X3D VCache selection bug that could send an incompatible patch combination to the build.",
   "ki-rel-101r3-fixed-li1": "<strong>X3D VCache selection leaving Zen checked alongside BORE:</strong> Selecting X3D force-enables BORE, but since that happened while patch-toggle signals were blocked, BORE's own \"uncheck Zen (incompatible)\" logic never ran — Zen could stay checked alongside BORE+X3D if it was already active, sending a broken patch combination to the build. X3D's auto-select now also clears whatever is incompatible with BORE.",

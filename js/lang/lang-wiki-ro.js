@@ -4355,6 +4355,10 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-2109-title": "2.1.0-9 — Iulie 2026",
+    "wel-rel-2109-subtitle": "Corectate trei siruri de traducere lipsa din fila Personalizare (GNOME) pentru intrarea Layout Switcher.",
+    "wel-rel-2109-fixed-heading": "Traduceri",
+    "wel-rel-2109-fixed-li1": "<strong>Fila Personalizare (GNOME) — Layout Switcher:</strong> Trei siruri lipseau din toate cele 8 fisiere de limba — \"Layout Switcher\", \"Switch between GNOME Shell layout presets\" si \"Launch Soplos Layout Switcher\". Traducerile au fost adaugate in en, es, de, fr, it, pt, ro, ru si toate fisierele .mo au fost recompilate.",
     "wel-rel-2108-title": "2.1.0-8 — Iulie 2026",
     "wel-rel-2108-subtitle": "Doar Boro (GNOME): Layout Switcher adaugat in fila Personalizare (sectiunea Instrumente Soplos) cu suport pentru instalare la cerere.",
     "wel-rel-2108-added-li1": "<strong>Fila Personalizare — Layout Switcher (doar Boro):</strong> Adaugat in sectiunea Instrumente Soplos alaturi de GRUB Editor si Plymouth Manager. Lanseaza <code>soplos-layout-switcher</code> pentru a comuta intre aspectele predefinite GNOME Shell. Instaleaza pachetul automat cu <code>pkexec apt-get install soplos-layout-switcher</code> daca nu este deja prezent.",
@@ -5001,6 +5005,9 @@ Object.assign(window.LANG_RO, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
 
+    "ki-rel-101r4-title": "1.0.1-4 — Iulie 2026",
+    "ki-rel-101r4-subtitle": "Butonul \"Ce kernel este potrivit pentru hardware-ul meu?\" detecteaza acum nivelul de arhitectura x86-64 al CPU-ului si il afiseaza direct, in loc sa deschida wiki-ul.",
+    "ki-rel-101r4-changed-li1": "<strong>Butonul \"Ce kernel este potrivit pentru hardware-ul meu?\":</strong> Nu mai deschide pagina wiki. Acum detecteaza cel mai inalt nivel de arhitectura x86-64 (v1–v4) suportat efectiv de CPU si il afiseaza direct, astfel incat utilizatorii sa stie ce varianta de pachet kernel sa aleaga din lista fara a parasi aplicatia.",
     "ki-rel-101r3-title": "1.0.1-3 — Iulie 2026",
     "ki-rel-101r3-subtitle": "Remediat un bug de selectie X3D VCache care putea trimite o combinatie de patch-uri incompatibila catre compilare.",
     "ki-rel-101r3-fixed-li1": "<strong>Selectia X3D VCache lasa Zen bifat alaturi de BORE:</strong> Selectarea X3D activeaza fortat BORE, dar deoarece aceasta se intampla cu semnalele de comutare blocate, logica BORE care debifaza Zen (incompatibil) nu rula niciodata — Zen putea ramane bifat alaturi de BORE+X3D daca era deja activ, trimitand o combinatie de patch-uri eronata. Selectia automata a X3D elimina acum si tot ce este incompatibil cu BORE.",

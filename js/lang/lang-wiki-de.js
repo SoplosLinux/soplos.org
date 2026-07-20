@@ -4356,6 +4356,10 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-2109-title": "2.1.0-9 — Juli 2026",
+    "wel-rel-2109-subtitle": "Drei fehlende Übersetzungsstrings im Anpassungs-Tab (GNOME) für den Layout Switcher-Eintrag korrigiert.",
+    "wel-rel-2109-fixed-heading": "Übersetzungen",
+    "wel-rel-2109-fixed-li1": "<strong>Anpassungs-Tab (GNOME) — Layout Switcher:</strong> Drei Strings fehlten in allen 8 Sprachdateien — \"Layout Switcher\", \"Switch between GNOME Shell layout presets\" und \"Launch Soplos Layout Switcher\". Übersetzungen in en, es, de, fr, it, pt, ro, ru hinzugefügt und alle .mo-Dateien neu kompiliert.",
     "wel-rel-2108-title": "2.1.0-8 — Juli 2026",
     "wel-rel-2108-subtitle": "Nur Boro (GNOME): Layout Switcher zum Anpassungs-Tab (Soplos-Tools-Bereich) mit Installation-auf-Anfrage-Unterstützung hinzugefügt.",
     "wel-rel-2108-added-li1": "<strong>Anpassungs-Tab — Layout Switcher (nur Boro):</strong> Zum Soplos-Tools-Bereich neben GRUB Editor und Plymouth Manager hinzugefügt. Startet <code>soplos-layout-switcher</code> zum Wechseln zwischen vordefinierten GNOME-Shell-Layouts. Installiert das Paket automatisch über <code>pkexec apt-get install soplos-layout-switcher</code>, falls es noch nicht vorhanden ist.",
@@ -5002,6 +5006,9 @@ Object.assign(window.LANG_DE, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
 
+    "ki-rel-101r4-title": "1.0.1-4 — Juli 2026",
+    "ki-rel-101r4-subtitle": "Die Schaltfläche \"Welcher Kernel passt zu meiner Hardware?\" erkennt jetzt die x86-64-Architekturebene der CPU und zeigt sie direkt an, anstatt das Wiki zu öffnen.",
+    "ki-rel-101r4-changed-li1": "<strong>Schaltfläche \"Welcher Kernel passt zu meiner Hardware?\":</strong> Öffnet nicht mehr die Wiki-Seite. Sie erkennt jetzt die höchste von der CPU tatsächlich unterstützte x86-64-Architekturebene (v1–v4) und zeigt sie direkt an, damit Benutzer wissen, welche Kernel-Paketvariante sie aus der Liste wählen sollen, ohne die App zu verlassen.",
     "ki-rel-101r3-title": "1.0.1-3 — Juli 2026",
     "ki-rel-101r3-subtitle": "Behoben: Ein Fehler bei der X3D-VCache-Auswahl, der eine inkompatible Patch-Kombination an den Build senden konnte.",
     "ki-rel-101r3-fixed-li1": "<strong>X3D-VCache-Auswahl ließ Zen neben BORE aktiviert:</strong> Die Auswahl von X3D erzwingt BORE, aber da dies während blockierter Toggle-Signale geschah, wurde die BORE-Logik zum Deaktivieren von Zen (inkompatibel) nie ausgeführt — Zen konnte neben BORE+X3D aktiviert bleiben, wenn es bereits aktiv war, und eine fehlerhafte Patch-Kombination an den Build senden. Die automatische Auswahl von X3D bereinigt jetzt auch alles, was mit BORE inkompatibel ist.",

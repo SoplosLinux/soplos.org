@@ -4358,6 +4358,10 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-2109-title": "2.1.0-9 — Июль 2026",
+    "wel-rel-2109-subtitle": "Исправлены три отсутствующих строки перевода на вкладке Настройка (GNOME) для записи Layout Switcher.",
+    "wel-rel-2109-fixed-heading": "Переводы",
+    "wel-rel-2109-fixed-li1": "<strong>Вкладка Настройка (GNOME) — Layout Switcher:</strong> Три строки отсутствовали во всех 8 языковых файлах — \"Layout Switcher\", \"Switch between GNOME Shell layout presets\" и \"Launch Soplos Layout Switcher\". Переводы добавлены в en, es, de, fr, it, pt, ro, ru, все файлы .mo перекомпилированы.",
     "wel-rel-2108-title": "2.1.0-8 — Июль 2026",
     "wel-rel-2108-subtitle": "Только Boro (GNOME): Layout Switcher добавлен на вкладку Настройка (раздел Инструменты Soplos) с поддержкой установки по требованию.",
     "wel-rel-2108-added-li1": "<strong>Вкладка Настройка — Layout Switcher (только Boro):</strong> Добавлен в раздел Инструменты Soplos рядом с GRUB Editor и Plymouth Manager. Запускает <code>soplos-layout-switcher</code> для переключения между предустановленными макетами GNOME Shell. Устанавливает пакет автоматически командой <code>pkexec apt-get install soplos-layout-switcher</code>, если он ещё не установлен.",
@@ -5004,6 +5008,9 @@ Object.assign(window.LANG_RU, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
 
+    "ki-rel-101r4-title": "1.0.1-4 — Июль 2026",
+    "ki-rel-101r4-subtitle": "Кнопка «Какое ядро подходит для моего оборудования?» теперь определяет уровень архитектуры x86-64 процессора и отображает его напрямую, вместо открытия вики.",
+    "ki-rel-101r4-changed-li1": "<strong>Кнопка «Какое ядро подходит для моего оборудования?»:</strong> Больше не открывает страницу вики. Теперь определяет наивысший поддерживаемый уровень архитектуры x86-64 (v1–v4) процессора и отображает его напрямую, чтобы пользователи знали, какой вариант пакета ядра выбрать из списка, не выходя из приложения.",
     "ki-rel-101r3-title": "1.0.1-3 — Июль 2026",
     "ki-rel-101r3-subtitle": "Исправлена ошибка выбора X3D VCache, которая могла отправить несовместимую комбинацию патчей в сборку.",
     "ki-rel-101r3-fixed-li1": "<strong>Выбор X3D VCache оставлял Zen отмеченным вместе с BORE:</strong> Выбор X3D принудительно активирует BORE, но поскольку это происходило при заблокированных сигналах переключения, логика BORE, снимающая отметку Zen (несовместимого), никогда не выполнялась — Zen мог оставаться отмеченным вместе с BORE+X3D, если уже был активен, отправляя в сборку некорректную комбинацию патчей. Автовыбор X3D теперь также сбрасывает всё, что несовместимо с BORE.",
