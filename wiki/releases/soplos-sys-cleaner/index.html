@@ -121,6 +121,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                                <li><a href="#v103r2" class="toc-link">1.0.3-2 <span class="toc-date">— 2026-07-21</span></a></li>
+                                <li><a href="#v103r1" class="toc-link">1.0.3-1 <span class="toc-date">— 2026-07-21</span></a></li>
                                 <li><a href="#v103" class="toc-link">1.0.3 <span class="toc-date">— 2026-07-07</span></a></li>
                                 <li><a href="#v1029" class="toc-link">1.0.2-9 <span class="toc-date">— 2026-06-29</span></a></li>
                                 <li><a href="#v1028" class="toc-link">1.0.2-8 <span class="toc-date">— 2026-06-29</span></a></li>
@@ -139,6 +141,62 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3-2 -->
+                        <section id="v103r2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-103r2-title">1.0.3-2 — July 2026</span></h2>
+                            <p id="sc-rel-103r2-subtitle" class="lead">New Administrator desktop launcher created automatically on first root session; two bug fixes for duplicate VM package entries and Intel GPU firmware locked without a real Intel GPU.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r2-added-li1"><strong><code>--root</code> launch flag and Administrator <code>.desktop</code> launcher:</strong> New CLI flag relaunches the app via <code>pkexec</code> straight into Administrator mode. A second <code>.desktop</code> entry (<code>org.soplos.sys-cleaner-root.desktop</code>) is written to <code>/usr/share/applications/</code> automatically the first time a root session is established — no additional authentication prompt. Idempotent: checks for the file's existence first.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r2-fixed-li1"><strong>Duplicate <code>spice-vdagent</code> / <code>spice-webdavd</code> entries on non-KVM/QEMU guests:</strong> <code>VM_GUEST_PACKAGES</code> lists the same two packages under both the <code>kvm</code> and <code>qemu</code> keys. On any other guest type (e.g. VMware), both keys were iterated with no cross-key deduplication, listing each package twice and breaking the "Select all" checkbox. Added a <code>seen_vm_pkgs</code> set to deduplicate by package name across the whole loop.</li>
+                                <li id="sc-rel-103r2-fixed-li2"><strong>Intel GPU firmware (<code>i915</code>) locked without a real Intel GPU:</strong> <code>get_firmware_protection_set()</code> protected <code>i915</code> / <code>intel</code> / <code>iwlwifi</code> firmware whenever any PCI device with vendor <code>8086</code> was present — including chipset/bridge/USB-controller devices emulated by VMware and other hypervisors on AMD hosts. <code>i915</code> is now only protected when a genuine GPU-class Intel device is present (<code>gpu_pci_vendors</code>), mirroring the same distinction already used for Intel driver packages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.3-1 -->
+                        <section id="v103r1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-103r1-title">1.0.3-1 — July 2026</span></h2>
+                            <p id="sc-rel-103r1-subtitle" class="lead">Four bug fixes across firmware handling, KVM package detection, orphaned dracut config cleanup, and VirtualBox Guest Additions uninstall; plus firmware families without a dedicated package now marked as temporary.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r1-fixed-li1"><strong>NVIDIA firmware deletion left the driver package installed:</strong> <code>do_remove_firmware</code> only checked the dedicated <code>firmware-*</code> package before deciding whether to delete files directly; if the full driver stack (<code>nvidia-driver</code>, <code>nvidia-kernel-dkms</code>, etc.) was installed under a different package, its firmware got wiped while the driver stayed installed. Now checks the full driver package stack from <code>hardware.py</code> before purging.</li>
+                                <li id="sc-rel-103r1-fixed-li2"><strong><code>virt-viewer</code> / <code>virt-manager</code> / <code>libvirt-clients</code> false positive in <code>KVM_PACKAGES</code>:</strong> These are remote-capable client tools that connect to any libvirt/QEMU/SPICE host over the network, independent of local KVM support — a user accessing a remote Proxmox host via <code>virt-viewer</code> from a non-KVM machine had it flagged as unused. Removed from the host-only package list.</li>
+                                <li id="sc-rel-103r1-fixed-li3"><strong>Orphaned <code>/etc/dracut.conf.d/*.conf</code> from driver installers never cleaned:</strong> Files like <code>nvidia.conf</code> / <code>blacklist-nouveau.conf</code> are written directly by driver install scripts, not as package conffiles, so <code>apt purge</code> never removes them. Added as a fifth orphan-reference source in <code>get_orphan_module_refs()</code>, with a hard exclusion list for distro-policy files (<code>soplos.conf</code>, <code>i18n.conf</code>, <code>local.conf</code>) that must never be touched.</li>
+                                <li id="sc-rel-103r1-fixed-li4"><strong>VirtualBox Guest Additions never fully uninstalled:</strong> Orphan cleanup only removed leftover systemd service/autostart files, never the actual kernel modules/DKMS/<code>/opt/VBoxGuestAdditions-*</code> payload installed by the official <code>.run</code> installer (not tracked by dpkg). Now runs the official <code>uninstall.sh</code> (or <code>rcvboxadd cleanup</code>) first when present.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r1-added-li1"><strong>Firmware families without a dedicated package marked as temporary:</strong> Families bundled inside <code>firmware-linux-nonfree</code> / <code>firmware-misc-nonfree</code> are resolved via real <code>dpkg -S</code> ownership lookup (fixed for merged-usr <code>/lib</code> → <code>/usr/lib</code> symlink resolution) and shown with a warning icon — deleting them only reclaims space until the next package update, it is not permanent.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r1-changed-li1"><strong>Unified package/module mapping across <code>hardware.py</code>, <code>cache.py</code>, <code>root_helper.py</code>:</strong> Each file previously kept its own hand-written copy of the package ↔ kernel module mapping, which had already drifted. Consolidated into a single <code>PKG_MODULES</code> dict in <code>hardware.py</code>, with <code>get_module_to_package_map()</code> deriving the inverse direction.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.3 -->
                         <section id="v103" class="content-section">
