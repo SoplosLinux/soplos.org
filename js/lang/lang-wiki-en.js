@@ -5151,6 +5151,13 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-211r1-title": "2.1.1-1 — July 2026",
+  "wel-rel-211r1-subtitle": "Fixed VirtualBox Guest Additions not detected inside a real VM, added a combined \"Remove All Detected\" button for unnecessary software, and added 4 new translation strings to all 8 language files.",
+  "wel-rel-211r1-fixed-heading": "Drivers Tab",
+  "wel-rel-211r1-fixed-li1": "<strong>VirtualBox Guest Additions never detected inside a real VM:</strong> The unnecessary-software VBox check was nested inside <code>if not vm_info.get('is_vm'):</code>, so it only ever ran when the machine was NOT detected as a virtual machine — meaning it never fired on Proxmox, VMware or VirtualBox itself, exactly the cases where Guest Additions are actually installed. Moved out of that block; now checked unconditionally, with the detail message adjusted depending on whether the machine is a VM or not.",
+  "wel-rel-211r1-added-heading": "Drivers Tab",
+  "wel-rel-211r1-added-li1": "<strong>\"Remove All Detected\" button:</strong> The \"Unnecessary Software Detected\" section previously rendered one separate \"Uninstall\" button per finding — up to five rows, each requiring its own click and confirmation dialog. The new button (shown when there is more than one finding) presents one combined confirmation and runs every item's removal in a single script. The NVIDIA and VirtualBox uninstall scripts were extracted into shared helpers so both the individual buttons and the combined action use the exact same script body.",
+
   "wel-rel-211-title": "2.1.1 — July 2026",
   "wel-rel-211-subtitle": "Four bug fixes in the Drivers tab (Wi-Fi repair, VirtualBox uninstall, generic driver uninstall, NVIDIA RTX 50 recommendation) and new unnecessary software detection in the hardware scan.",
   "wel-rel-211-fixed-heading": "Drivers Tab",

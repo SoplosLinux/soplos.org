@@ -4353,6 +4353,13 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-211r1-title": "2.1.1-1 — Luglio 2026",
+    "wel-rel-211r1-subtitle": "Corretto il bug per cui le Guest Additions di VirtualBox non venivano rilevate all'interno di una VM reale, aggiunto un pulsante combinato \"Rimuovi tutti i rilevati\" per il software non necessario, e aggiunte 4 nuove stringhe di traduzione a tutti gli 8 file di lingua.",
+    "wel-rel-211r1-fixed-heading": "Scheda Driver",
+    "wel-rel-211r1-fixed-li1": "<strong>Guest Additions di VirtualBox mai rilevate all'interno di una VM reale:</strong> Il controllo del software non necessario per VBox era annidato in <code>if not vm_info.get('is_vm'):</code>, quindi veniva eseguito solo quando la macchina NON era rilevata come virtuale — il che significa che non si attivava mai su Proxmox, VMware o VirtualBox stesso. Spostato fuori da quel blocco; ora verificato incondizionatamente, con il messaggio di dettaglio adattato a seconda che la macchina sia o meno una VM.",
+    "wel-rel-211r1-added-heading": "Scheda Driver",
+    "wel-rel-211r1-added-li1": "<strong>Pulsante \"Rimuovi tutti i rilevati\":</strong> La sezione \"Software non necessario rilevato\" mostrava in precedenza un pulsante \"Disinstalla\" separato per ogni risultato — fino a cinque righe, ognuna con il proprio clic e finestra di conferma. Il nuovo pulsante (mostrato quando c'è più di un risultato) presenta una conferma combinata ed esegue la rimozione di tutti gli elementi in un unico script. Gli script di disinstallazione di NVIDIA e VirtualBox sono stati estratti in funzioni di supporto condivise.",
+
     "wel-rel-211-title": "2.1.1 — Luglio 2026",
     "wel-rel-211-subtitle": "Quattro correzioni nella scheda Driver (riparazione Wi-Fi, disinstallazione VirtualBox, disinstallazione generica driver, raccomandazione NVIDIA RTX 50) e nuova rilevazione di software non necessario nella scansione hardware.",
     "wel-rel-211-fixed-heading": "Scheda Driver",

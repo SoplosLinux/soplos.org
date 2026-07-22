@@ -4348,6 +4348,13 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-211r1-title": "2.1.1-1 — Julho 2026",
+    "wel-rel-211r1-subtitle": "Corrigida a falha em que as Guest Additions do VirtualBox não eram detetadas dentro de uma VM real, adicionado um botão combinado \"Remover tudo o detetado\" para software desnecessário, e adicionadas 4 novas cadeias de tradução a todos os 8 ficheiros de idioma.",
+    "wel-rel-211r1-fixed-heading": "Separador Controladores",
+    "wel-rel-211r1-fixed-li1": "<strong>Guest Additions do VirtualBox nunca detetadas dentro de uma VM real:</strong> A verificação de software desnecessário para VBox estava aninhada dentro de <code>if not vm_info.get('is_vm'):</code>, pelo que só era executada quando a máquina NÃO era detetada como virtual — nunca disparava no Proxmox, VMware ou no próprio VirtualBox. Movida para fora desse bloco; agora verificada incondicionalmente, com a mensagem ajustada conforme a máquina seja ou não uma VM.",
+    "wel-rel-211r1-added-heading": "Separador Controladores",
+    "wel-rel-211r1-added-li1": "<strong>Botão \"Remover tudo o detetado\":</strong> A secção \"Software desnecessário detetado\" mostrava anteriormente um botão \"Desinstalar\" separado por resultado — até cinco linhas, cada uma exigindo o seu próprio clique e diálogo de confirmação. O novo botão (mostrado quando há mais de um resultado) apresenta uma confirmação combinada e executa a remoção de todos os itens num único script. Os scripts de desinstalação do NVIDIA e VirtualBox foram extraídos para funções auxiliares partilhadas.",
+
     "wel-rel-211-title": "2.1.1 — Julho 2026",
     "wel-rel-211-subtitle": "Quatro correções no separador Controladores (reparação Wi-Fi, desinstalação VirtualBox, desinstalação genérica de drivers, recomendação NVIDIA RTX 50) e nova deteção de software desnecessário na análise de hardware.",
     "wel-rel-211-fixed-heading": "Separador Controladores",

@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v211r1" class="toc-link">2.1.1-1 <span class="toc-date">— 2026-07-22</span></a></li>
                             <li><a href="#v211" class="toc-link">2.1.1 <span class="toc-date">— 2026-07-21</span></a></li>
                             <li><a href="#v2109" class="toc-link">2.1.0-9 <span class="toc-date">— 2026-07-20</span></a></li>
                             <li><a href="#v2108" class="toc-link">2.1.0-8 <span class="toc-date">— 2026-07-19</span></a></li>
@@ -194,6 +195,29 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.1 -->
+                        <!-- 2.1.1-1 -->
+                        <section id="v211r1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r1-title">2.1.1-1 — July 2026</span></h2>
+                            <p id="wel-rel-211r1-subtitle" class="lead">Fixed VirtualBox Guest Additions not detected inside a real VM, added a combined "Remove All Detected" button for unnecessary software, and added 4 new translation strings to all 8 language files.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span> — <span id="wel-rel-211r1-fixed-heading">Drivers Tab</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r1-fixed-li1"><strong>VirtualBox Guest Additions never detected inside a real VM:</strong> The unnecessary-software VBox check was nested inside <code>if not vm_info.get('is_vm'):</code>, so it only ever ran when the machine was NOT detected as a virtual machine — meaning it never fired on Proxmox, VMware or VirtualBox itself, exactly the cases where Guest Additions are actually installed. Moved out of that block; now checked unconditionally, with the detail message adjusted depending on whether the machine is a VM or not.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span> — <span id="wel-rel-211r1-added-heading">Drivers Tab</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r1-added-li1"><strong>"Remove All Detected" button:</strong> The "Unnecessary Software Detected" section previously rendered one separate "Uninstall" button per finding — up to five rows, each requiring its own click and confirmation dialog. The new button (shown when there is more than one finding) presents one combined confirmation and runs every item's removal in a single script. The NVIDIA and VirtualBox uninstall scripts were extracted into shared helpers so both the individual buttons and the combined action use the exact same script body.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.1 -->
                         <section id="v211" class="content-section">

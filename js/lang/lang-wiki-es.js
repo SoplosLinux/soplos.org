@@ -4357,6 +4357,13 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-211r1-title": "2.1.1-1 — Julio 2026",
+    "wel-rel-211r1-subtitle": "Corregido el fallo por el que las Guest Additions de VirtualBox no se detectaban dentro de una VM real, añadido un botón combinado \"Eliminar todo lo detectado\" para software innecesario, y añadidas 4 nuevas cadenas de traducción a los 8 archivos de idioma.",
+    "wel-rel-211r1-fixed-heading": "Pestaña Controladores",
+    "wel-rel-211r1-fixed-li1": "<strong>Guest Additions de VirtualBox nunca detectadas dentro de una VM real:</strong> La comprobación de software innecesario para VBox estaba anidada dentro de <code>if not vm_info.get('is_vm'):</code>, por lo que solo se ejecutaba cuando la máquina NO era detectada como virtual — es decir, nunca se activaba en Proxmox, VMware ni en el propio VirtualBox. Movida fuera de ese bloque; ahora se comprueba incondicionalmente, ajustando el mensaje según si la máquina es o no una VM.",
+    "wel-rel-211r1-added-heading": "Pestaña Controladores",
+    "wel-rel-211r1-added-li1": "<strong>Botón \"Eliminar todo lo detectado\":</strong> La sección \"Software innecesario detectado\" mostraba un botón \"Desinstalar\" independiente por cada hallazgo — hasta cinco filas, cada una con su propio clic y diálogo de confirmación. El nuevo botón (visible cuando hay más de un hallazgo) presenta una confirmación combinada y ejecuta la eliminación de todos los elementos en un único script. Los scripts de desinstalación de NVIDIA y VirtualBox se han extraído a funciones auxiliares compartidas.",
+
     "wel-rel-211-title": "2.1.1 — Julio 2026",
     "wel-rel-211-subtitle": "Cuatro correcciones en la pestaña Controladores (reparación Wi-Fi, desinstalación de VirtualBox, desinstalación genérica de drivers, recomendación NVIDIA RTX 50) y nueva detección de software innecesario en el análisis de hardware.",
     "wel-rel-211-fixed-heading": "Pestaña Controladores",

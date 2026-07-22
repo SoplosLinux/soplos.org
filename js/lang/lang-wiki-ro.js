@@ -4355,6 +4355,13 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-211r1-title": "2.1.1-1 — Iulie 2026",
+    "wel-rel-211r1-subtitle": "Remediat bug-ul prin care Guest Additions VirtualBox nu erau detectate în interiorul unei VM reale, adăugat un buton combinat \"Elimină tot detectatul\" pentru software inutil și adăugate 4 noi șiruri de traducere în toate cele 8 fișiere de limbă.",
+    "wel-rel-211r1-fixed-heading": "Fila Drivere",
+    "wel-rel-211r1-fixed-li1": "<strong>Guest Additions VirtualBox niciodată detectate în interiorul unei VM reale:</strong> Verificarea software-ului inutil pentru VBox era imbricată în <code>if not vm_info.get('is_vm'):</code>, deci se executa doar când mașina NU era detectată ca virtuală — ceea ce înseamnă că nu se declanșa niciodată pe Proxmox, VMware sau chiar VirtualBox. Mutată în afara acelui bloc; acum verificată necondiționat, cu mesajul de detaliu ajustat în funcție de dacă mașina este sau nu o VM.",
+    "wel-rel-211r1-added-heading": "Fila Drivere",
+    "wel-rel-211r1-added-li1": "<strong>Butonul \"Elimină tot detectatul\":</strong> Secțiunea \"Software inutil detectat\" afișa anterior câte un buton \"Dezinstalează\" separat pentru fiecare rezultat — până la cinci rânduri, fiecare necesitând propriul clic și dialog de confirmare. Noul buton (afișat când există mai mult de un rezultat) prezintă o confirmare combinată și execută eliminarea tuturor elementelor într-un singur script. Scripturile de dezinstalare NVIDIA și VirtualBox au fost extrase în funcții auxiliare partajate.",
+
     "wel-rel-211-title": "2.1.1 — Iulie 2026",
     "wel-rel-211-subtitle": "Patru corectii in fila Drivere (reparare Wi-Fi, dezinstalare VirtualBox, dezinstalare generica drivere, recomandare NVIDIA RTX 50) si noua detectie de software inutil in scanarea hardware.",
     "wel-rel-211-fixed-heading": "Fila Drivere",

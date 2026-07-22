@@ -4349,6 +4349,13 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-211r1-title": "2.1.1-1 — Juillet 2026",
+    "wel-rel-211r1-subtitle": "Correction de la non-détection des Guest Additions VirtualBox dans une VM réelle, ajout d'un bouton combiné \"Supprimer tout le détecté\" pour les logiciels inutiles, et ajout de 4 nouvelles chaînes de traduction dans les 8 fichiers de langue.",
+    "wel-rel-211r1-fixed-heading": "Onglet Pilotes",
+    "wel-rel-211r1-fixed-li1": "<strong>Les Guest Additions VirtualBox n'étaient jamais détectées dans une VM réelle :</strong> La vérification des logiciels inutiles pour VBox était imbriquée dans <code>if not vm_info.get('is_vm'):</code>, donc elle ne s'exécutait que si la machine n'était PAS détectée comme virtuelle — ce qui signifie qu'elle ne se déclenchait jamais sur Proxmox, VMware ou VirtualBox lui-même. Déplacée hors de ce bloc ; désormais vérifiée inconditionnellement, avec le message ajusté selon que la machine est une VM ou non.",
+    "wel-rel-211r1-added-heading": "Onglet Pilotes",
+    "wel-rel-211r1-added-li1": "<strong>Bouton \"Supprimer tout le détecté\" :</strong> La section \"Logiciels inutiles détectés\" affichait auparavant un bouton \"Désinstaller\" séparé par résultat — jusqu'à cinq lignes, chacune nécessitant son propre clic et sa propre boîte de confirmation. Le nouveau bouton (affiché quand il y a plus d'un résultat) présente une confirmation groupée et exécute la suppression de tous les éléments en un seul script. Les scripts de désinstallation NVIDIA et VirtualBox ont été extraits dans des fonctions partagées.",
+
     "wel-rel-211-title": "2.1.1 — Juillet 2026",
     "wel-rel-211-subtitle": "Quatre corrections dans l'onglet Pilotes (réparation Wi-Fi, désinstallation VirtualBox, désinstallation générique de pilotes, recommandation NVIDIA RTX 50) et nouvelle détection de logiciels inutiles dans l'analyse matérielle.",
     "wel-rel-211-fixed-heading": "Onglet Pilotes",

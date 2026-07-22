@@ -4356,6 +4356,13 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-211r1-title": "2.1.1-1 — Juli 2026",
+    "wel-rel-211r1-subtitle": "Fehler behoben, bei dem VirtualBox Guest Additions innerhalb einer echten VM nicht erkannt wurden, kombinierte Schaltfläche \"Alle Erkannten entfernen\" für unnötige Software hinzugefügt und 4 neue Übersetzungszeichenfolgen in alle 8 Sprachdateien eingefügt.",
+    "wel-rel-211r1-fixed-heading": "Reiter Treiber",
+    "wel-rel-211r1-fixed-li1": "<strong>VirtualBox Guest Additions in echter VM nie erkannt:</strong> Die Prüfung auf unnötige VBox-Software war in <code>if not vm_info.get('is_vm'):</code> verschachtelt und wurde daher nur ausgeführt, wenn die Maschine NICHT als virtuelle Maschine erkannt wurde — sie wurde also auf Proxmox, VMware oder VirtualBox selbst nie ausgelöst. Aus diesem Block herausverschoben; wird nun bedingungslos geprüft, wobei die Detailmeldung je nach VM-Status angepasst wird.",
+    "wel-rel-211r1-added-heading": "Reiter Treiber",
+    "wel-rel-211r1-added-li1": "<strong>Schaltfläche \"Alle Erkannten entfernen\":</strong> Der Abschnitt \"Unnötige Software erkannt\" zeigte bisher für jeden Fund eine separate \"Deinstallieren\"-Schaltfläche — bis zu fünf Zeilen, jede mit eigenem Klick und Bestätigungsdialog. Die neue Schaltfläche (angezeigt bei mehr als einem Fund) präsentiert eine gemeinsame Bestätigung und führt die Entfernung aller Elemente in einem einzigen Skript aus. Die Deinstallationsskripte für NVIDIA und VirtualBox wurden in gemeinsam genutzte Hilfsfunktionen ausgelagert.",
+
     "wel-rel-211-title": "2.1.1 — Juli 2026",
     "wel-rel-211-subtitle": "Vier Fehlerbehebungen im Treiber-Tab (WLAN-Reparatur, VirtualBox-Deinstallation, generische Treiber-Deinstallation, NVIDIA-RTX-50-Empfehlung) und neue Erkennung unnötiger Software im Hardware-Scan.",
     "wel-rel-211-fixed-heading": "Treiber-Tab",
