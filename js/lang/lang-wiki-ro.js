@@ -5021,6 +5021,10 @@ Object.assign(window.LANG_RO, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
 
+    "ki-rel-101r5-title": "1.0.1-5 — Iulie 2026",
+    "ki-rel-101r5-subtitle": "Fereastra pop-up \"Ce kernel este potrivit pentru hardware-ul meu?\" afișează acum și modelul de CPU detectat, GPU-ul și RAM-ul total alături de nivelul de arhitectură x86-64.",
+    "ki-rel-101r5-changed-li1": "<strong>Fereastra pop-up \"Ce kernel este potrivit pentru hardware-ul meu?\":</strong> Afișează acum și modelul de CPU detectat, GPU-ul și RAM-ul total alături de nivelul de arhitectură x86-64 suportat, oferind utilizatorului o imagine mai completă a hardware-ului înainte de a alege pachetul de kernel.",
+
     "ki-rel-101r4-title": "1.0.1-4 — Iulie 2026",
     "ki-rel-101r4-subtitle": "Butonul \"Ce kernel este potrivit pentru hardware-ul meu?\" detecteaza acum nivelul de arhitectura x86-64 al CPU-ului si il afiseaza direct, in loc sa deschida wiki-ul.",
     "ki-rel-101r4-changed-li1": "<strong>Butonul \"Ce kernel este potrivit pentru hardware-ul meu?\":</strong> Nu mai deschide pagina wiki. Acum detecteaza cel mai inalt nivel de arhitectura x86-64 (v1–v4) suportat efectiv de CPU si il afiseaza direct, astfel incat utilizatorii sa stie ce varianta de pachet kernel sa aleaga din lista fara a parasi aplicatia.",

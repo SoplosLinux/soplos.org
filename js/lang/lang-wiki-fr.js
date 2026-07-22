@@ -5014,6 +5014,10 @@ Object.assign(window.LANG_FR, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
 
+    "ki-rel-101r5-title": "1.0.1-5 — Juillet 2026",
+    "ki-rel-101r5-subtitle": "La fenêtre contextuelle \"Quel noyau convient à mon matériel ?\" affiche désormais le modèle de CPU détecté, le GPU et la RAM totale en plus du niveau d'architecture x86-64.",
+    "ki-rel-101r5-changed-li1": "<strong>Fenêtre contextuelle \"Quel noyau convient à mon matériel ?\" :</strong> Affiche désormais aussi le modèle de CPU détecté, le GPU et la RAM totale aux côtés du niveau d'architecture x86-64 pris en charge, offrant à l'utilisateur une vue plus complète de son matériel avant de choisir le paquet noyau.",
+
     "ki-rel-101r4-title": "1.0.1-4 — Juillet 2026",
     "ki-rel-101r4-subtitle": "Le bouton \"Quel noyau convient à mon matériel ?\" détecte désormais le niveau d'architecture x86-64 du CPU et l'affiche directement, au lieu d'ouvrir le wiki.",
     "ki-rel-101r4-changed-li1": "<strong>Bouton \"Quel noyau convient à mon matériel ?\" :</strong> N'ouvre plus la page wiki. Il détecte désormais le niveau d'architecture x86-64 le plus élevé (v1–v4) réellement supporté par le CPU et l'affiche directement, afin que les utilisateurs sachent quelle variante de paquet noyau choisir sans quitter l'application.",

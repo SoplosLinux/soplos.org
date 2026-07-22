@@ -5014,6 +5014,10 @@ Object.assign(window.LANG_PT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels pré-compilados para Soplos Linux — compile o seu próprio kernel com patches BORE, Zen, NTSYNC e PREEMPT_RT, ou instale kernels Soplos prontos a usar a partir do repositório oficial.",
 
+    "ki-rel-101r5-title": "1.0.1-5 — Julho 2026",
+    "ki-rel-101r5-subtitle": "A janela \"Qual kernel é adequado para o meu hardware?\" mostra agora também o modelo de CPU detetado, a GPU e a RAM total, além do nível de arquitetura x86-64.",
+    "ki-rel-101r5-changed-li1": "<strong>Janela \"Qual kernel é adequado para o meu hardware?\":</strong> Mostra agora também o modelo de CPU detetado, a GPU e a RAM total juntamente com o nível de arquitetura x86-64 suportado, dando ao utilizador uma visão mais completa do seu hardware antes de escolher o pacote de kernel.",
+
     "ki-rel-101r4-title": "1.0.1-4 — Julho 2026",
     "ki-rel-101r4-subtitle": "O botão \"Qual kernel é o certo para o meu hardware?\" agora deteta o nível de arquitetura x86-64 da CPU e mostra-o diretamente, em vez de abrir a wiki.",
     "ki-rel-101r4-changed-li1": "<strong>Botão \"Qual kernel é o certo para o meu hardware?\":</strong> Já não abre a página da wiki. Agora deteta o nível de arquitetura x86-64 mais alto (v1–v4) suportado pela CPU e mostra-o diretamente, para que os utilizadores saibam qual variante de pacote de kernel escolher sem sair da aplicação.",
