@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                                <li><a href="#v103r3" class="toc-link">1.0.3-3 <span class="toc-date">— 2026-07-22</span></a></li>
                                 <li><a href="#v103r2" class="toc-link">1.0.3-2 <span class="toc-date">— 2026-07-21</span></a></li>
                                 <li><a href="#v103r1" class="toc-link">1.0.3-1 <span class="toc-date">— 2026-07-21</span></a></li>
                                 <li><a href="#v103" class="toc-link">1.0.3 <span class="toc-date">— 2026-07-07</span></a></li>
@@ -141,6 +142,30 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3-3 -->
+                        <section id="v103r3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-103r3-title">1.0.3-3 — July 2026</span></h2>
+                            <p id="sc-rel-103r3-subtitle" class="lead">Removed the Administrator desktop launcher added in 1.0.3-2 due to a Gio.Application D-Bus conflict; three bug fixes for firmware falsely locked without real hardware, Intel firmware still locked by emulated chipset devices, and a discarded VirtualBox uninstall result.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r3-changed-li1"><strong>Removed the <code>--root</code> flag and Administrator <code>.desktop</code> launcher (added in 1.0.3-2):</strong> <code>Gio.Application</code> enforces one registered instance per <code>application_id</code> over D-Bus — the relaunched root process and the normal unprivileged instance shared the same ID, so whichever lost registration simply forwarded its command line back to the other, opening the user-mode window instead of an elevated one. The feature is removed outright. The leftover <code>.desktop</code> file from 1.0.3-2 is deleted automatically the first time a root session starts after upgrading.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r3-fixed-li1"><strong>Firmware falsely locked as "required" with no matching real hardware:</strong> Layer 3 ran <code>modinfo -F firmware</code> on every module in <code>lsmod</code>, regardless of whether it was bound to a device. A loaded-but-unused module (e.g. <code>nouveau</code>/<code>iwlwifi</code> auto-probed on a VM with no matching hardware) returns firmware paths for every chip that driver supports — hundreds of paths for hardware never present. Added <code>_module_bound_to_device()</code>, checking <code>/sys/module/&lt;mod&gt;/drivers/</code> for an actual bus-address entry before trusting a module's firmware list.</li>
+                                <li id="sc-rel-103r3-fixed-li2"><strong><code>intel</code> firmware still locked by emulated Intel chipset/audio devices:</strong> The <code>i915</code>-only exception from 1.0.3-2 did not cover <code>intel</code> (Bluetooth/WiFi-combo firmware) or <code>iwlwifi</code>, so QEMU/VMware's emulated i440FX/PIIX chipset — or a real ICH9 HDA audio device — still forced the lock. Added <code>_scan_network_pci_vendors()</code> and <code>_scan_audio_pci_vendors()</code> (PCI class-based) and now gate <code>intel</code> and <code>iwlwifi</code> on a genuine Intel <em>network</em>-class device only.</li>
+                                <li id="sc-rel-103r3-fixed-li3"><strong>VirtualBox Guest Additions uninstall result silently discarded:</strong> When orphaned VBox systemd/autostart refs triggered <code>clean_module_refs</code> (which runs the official <code>uninstall.sh</code>) before <code>apt_autoremove</code>, its result was thrown away — the generic "Orphaned packages removed" message showed regardless of whether VBox actually uninstalled. Its error, if any, is now appended to the final message.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.3-2 -->
                         <section id="v103r2" class="content-section">
