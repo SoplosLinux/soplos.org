@@ -1520,6 +1520,8 @@ footer .container p {
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #ef5a33) rgba(255, 255, 255, 0.05);
 }
 
 .toc h3 {
@@ -1580,16 +1582,16 @@ footer .container p {
 
 .toc::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 .toc::-webkit-scrollbar-thumb {
-  background: rgba(255, 125, 46, 0.5);
-  border-radius: 10px;
+  background: var(--accent-color, #ef5a33);
+  border-radius: 3px;
 }
 
 .toc::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 125, 46, 0.8);
+  background: color-mix(in srgb, var(--accent-color, #ef5a33) 80%, white);
 }
 
 /* Main Content */
