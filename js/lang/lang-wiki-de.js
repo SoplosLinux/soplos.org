@@ -5414,6 +5414,17 @@ Object.assign(window.LANG_DE, {
     "ge-rel-hero-title": "Soplos GRUB Editor",
     "ge-rel-hero-subtitle": "Grafischer GTK3-Editor für GRUB2 — Themenverwaltung, Schriftartenkonvertierung, Hintergrundbild-Konfiguration, Boot-Einträge bearbeiten und erweiterte Kernel-Parameter, mit vollständiger Internationalisierung in 8 Sprachen.",
 
+    "ge-rel-202-6-title": "2.0.2-6 — Juli 2026",
+    "ge-rel-202-6-subtitle": "Überarbeitung des Reiters Starteinträge: doppelte Memtest-Einträge entfernt, Pfadspalte korrigiert, Deaktivieren/Löschen von Memtest-Einträgen, Anzeige realer Pfade und funktionale \"Eintrag hinzufügen\"-Funktion, die in /etc/grub.d/40_custom schreibt.",
+    "ge-rel-202-6-fixed-li1": "<strong>Doppelte Memtest-Einträge:</strong> Der Parser für Starteinträge listet keine doppelten Memtest-Einträge mehr, die durch die <code>pc</code>/<code>efi</code>-Plattformkonditionale von GRUB erzeugt werden.",
+    "ge-rel-202-6-fixed-li2": "<strong>Typbezeichnung der Starteinträge:</strong> Erkennt nun korrekt \"Memory test\"-Titel, anstatt auf den Typ \"system\" zurückzufallen.",
+    "ge-rel-202-6-fixed-li3": "<strong>Pfadspalte der Starteinträge:</strong> Fehlerhafter regulärer Ausdruck behoben, der verhinderte, dass die Pfadspalte je einen Wert anzeigte.",
+    "ge-rel-202-6-added-li1": "<strong>Memtest-Einträge deaktivieren/löschen:</strong> Memtest-Einträge können nun deaktiviert (auskommentiert) oder dauerhaft entfernt (Binärdatei aus <code>/boot</code> gelöscht) werden, anstatt nur die Liste auf dem Bildschirm zu aktualisieren.",
+    "ge-rel-202-6-added-li2": "<strong>Deaktivierte Memtest-Einträge bleiben sichtbar:</strong> Deaktivierte Memtest-Einträge bleiben (abgeblendet) in der Liste, damit sie später wieder aktiviert oder gelöscht werden können.",
+    "ge-rel-202-6-added-li3": "<strong>Echter Kernel-/Binärpfad:</strong> Der Reiter Starteinträge zeigt nun den echten Kernel- oder Binärpfad an, der von jedem Eintrag geladen wird.",
+    "ge-rel-202-6-added-li4": "<strong>Funktionale \"Eintrag hinzufügen\":</strong> Schreibt nun einen echten benutzerdefinierten <code>menuentry</code>-Block in <code>/etc/grub.d/40_custom</code>, anstatt nichts zu tun.",
+    "ge-rel-202-6-changed-li1": "<strong>Wiederherstellungs- und Fremdeinträge ausgeblendet:</strong> Wiederherstellungsmodus- und Fremd-OS-Einträge werden im Reiter Starteinträge nicht mehr aufgelistet, da sie bereits als Kategorie in den Allgemeinen Einstellungen verwaltet werden — vermeidet eine redundante Steuerung für denselben GRUB-Schalter.",
+
     "ge-rel-202-5-title": "2.0.2-5 — Juli 2026",
     "ge-rel-202-5-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
     "ge-rel-202-5-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",

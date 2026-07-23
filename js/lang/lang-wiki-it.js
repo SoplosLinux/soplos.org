@@ -5412,6 +5412,17 @@ Object.assign(window.LANG_IT, {
     "ge-rel-hero-title": "Soplos GRUB Editor",
     "ge-rel-hero-subtitle": "Editor grafico GTK3 per GRUB2 — gestione dei temi, conversione dei font, configurazione dello sfondo, modifica delle voci di avvio e parametri avanzati del kernel, con internazionalizzazione completa in 8 lingue.",
 
+    "ge-rel-202-6-title": "2.0.2-6 — Luglio 2026",
+    "ge-rel-202-6-subtitle": "Revisione completa della scheda Voci di avvio: rimossi i duplicati memtest, corretta la colonna del percorso, supporto per disabilitare/eliminare memtest, visualizzazione del percorso reale e \"Aggiungi voce\" funzionale che scrive in /etc/grub.d/40_custom.",
+    "ge-rel-202-6-fixed-li1": "<strong>Voci memtest duplicate:</strong> Il parser delle voci di avvio non elenca più le voci memtest duplicate generate dalle condizionali di piattaforma <code>pc</code>/<code>efi</code> di GRUB.",
+    "ge-rel-202-6-fixed-li2": "<strong>Etichetta del tipo di voce:</strong> Ora riconosce correttamente i titoli \"Memory test\" invece di ricorrere al tipo \"system\".",
+    "ge-rel-202-6-fixed-li3": "<strong>Colonna del percorso della voce:</strong> Corretta un'espressione regolare non funzionante che impediva alla colonna del percorso di mostrare qualsiasi valore.",
+    "ge-rel-202-6-added-li1": "<strong>Disabilitare/eliminare le voci memtest:</strong> Le voci memtest possono ora essere disabilitate (commentate) o rimosse definitivamente (binario eliminato da <code>/boot</code>), invece di aggiornare solo l'elenco a schermo.",
+    "ge-rel-202-6-added-li2": "<strong>Le voci memtest disabilitate restano visibili:</strong> Le voci memtest disabilitate rimangono visibili (attenuate) nell'elenco in modo da poter essere riabilitate o eliminate in seguito.",
+    "ge-rel-202-6-added-li3": "<strong>Percorso reale del kernel/binario:</strong> La scheda Voci di avvio mostra ora il percorso reale del kernel o del binario caricato da ogni voce.",
+    "ge-rel-202-6-added-li4": "<strong>\"Aggiungi voce\" funzionale:</strong> Scrive ora un vero blocco <code>menuentry</code> personalizzato in <code>/etc/grub.d/40_custom</code> invece di non fare nulla.",
+    "ge-rel-202-6-changed-li1": "<strong>Voci di ripristino e altri SO nascoste:</strong> Le voci in modalità di ripristino e altri sistemi operativi non vengono più elencate nella scheda Voci di avvio, poiché sono già gestite come categoria nelle Impostazioni generali — evita un controllo ridondante per lo stesso interruttore GRUB.",
+
     "ge-rel-202-5-title": "2.0.2-5 — Luglio 2026",
     "ge-rel-202-5-subtitle": "Aggiornamento della dipendenza di compilazione — <code>python3-all</code> sostituito con <code>python3</code> in <code>debian/control</code>.",
     "ge-rel-202-5-changed-li1": "Dipendenza di compilazione <code>python3-all</code> sostituita con <code>python3</code>.",

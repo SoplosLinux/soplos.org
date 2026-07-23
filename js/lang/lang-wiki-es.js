@@ -5414,6 +5414,17 @@ Object.assign(window.LANG_ES, {
     "ge-rel-hero-title": "Soplos GRUB Editor",
     "ge-rel-hero-subtitle": "Editor gráfico GTK3 para GRUB2 — gestión de temas, conversión de fuentes, configuración de fondo, edición de entradas de arranque y parámetros avanzados del kernel, con internacionalización completa en 8 idiomas.",
 
+    "ge-rel-202-6-title": "2.0.2-6 — Julio 2026",
+    "ge-rel-202-6-subtitle": "Revisión completa de la pestaña Entradas de arranque: eliminados duplicados de memtest, corregida la columna de ruta, soporte para deshabilitar/eliminar memtest, visualización de rutas reales y \"Agregar entrada\" funcional que escribe en /etc/grub.d/40_custom.",
+    "ge-rel-202-6-fixed-li1": "<strong>Entradas memtest duplicadas:</strong> El analizador de entradas de arranque ya no lista entradas memtest duplicadas generadas por las condicionales de plataforma <code>pc</code>/<code>efi</code> de GRUB.",
+    "ge-rel-202-6-fixed-li2": "<strong>Etiqueta de tipo de entrada:</strong> Ahora reconoce correctamente los títulos \"Memory test\" en lugar de recurrir al tipo \"system\".",
+    "ge-rel-202-6-fixed-li3": "<strong>Columna de ruta de entrada:</strong> Corregida una expresión regular rota que impedía que la columna de ruta mostrara algún valor.",
+    "ge-rel-202-6-added-li1": "<strong>Deshabilitar/eliminar entradas memtest:</strong> Las entradas memtest ahora pueden deshabilitarse (comentadas) o eliminarse permanentemente (binario borrado de <code>/boot</code>), en lugar de solo actualizar la lista en pantalla.",
+    "ge-rel-202-6-added-li2": "<strong>Entradas memtest deshabilitadas siguen visibles:</strong> Las entradas memtest deshabilitadas permanecen visibles (atenuadas) en la lista para poder reactivarlas o eliminarlas después.",
+    "ge-rel-202-6-added-li3": "<strong>Ruta real del kernel/binario:</strong> La pestaña Entradas de arranque ahora muestra la ruta real del kernel o binario cargado por cada entrada.",
+    "ge-rel-202-6-added-li4": "<strong>\"Agregar entrada\" funcional:</strong> Ahora escribe un bloque <code>menuentry</code> personalizado real en <code>/etc/grub.d/40_custom</code> en lugar de no hacer nada.",
+    "ge-rel-202-6-changed-li1": "<strong>Entradas de recuperación y otros SO ocultas:</strong> Las entradas de modo de recuperación y otros sistemas operativos ya no se listan en la pestaña Entradas de arranque, ya que se gestionan como categoría en Configuración general — evita un control redundante para el mismo interruptor de GRUB.",
+
     "ge-rel-202-5-title": "2.0.2-5 — Julio 2026",
     "ge-rel-202-5-subtitle": "Actualizacion de dependencia de compilacion — <code>python3-all</code> sustituido por <code>python3</code> en <code>debian/control</code>.",
     "ge-rel-202-5-changed-li1": "Dependencia de compilacion <code>python3-all</code> sustituida por <code>python3</code>.",

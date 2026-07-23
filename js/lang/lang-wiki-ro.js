@@ -5414,6 +5414,17 @@ Object.assign(window.LANG_RO, {
     "ge-rel-hero-title": "Soplos GRUB Editor",
     "ge-rel-hero-subtitle": "Editor grafic GTK3 pentru GRUB2 — gestionarea temelor, conversia fonturilor, configurarea fundalului, editarea intrărilor de pornire și parametrii avansați ai kernelului, cu internaționalizare completă în 8 limbi.",
 
+    "ge-rel-202-6-title": "2.0.2-6 — Iulie 2026",
+    "ge-rel-202-6-subtitle": "Revizuire completă a filei Intrări de pornire: eliminate intrările memtest duplicate, corectată coloana de cale, suport pentru dezactivare/ștergere memtest, afișarea căii reale și \"Adaugă intrare\" funcțional care scrie în /etc/grub.d/40_custom.",
+    "ge-rel-202-6-fixed-li1": "<strong>Intrări memtest duplicate:</strong> Parserul de intrări de pornire nu mai listează intrările memtest duplicate generate de condiționalele de platformă <code>pc</code>/<code>efi</code> ale GRUB.",
+    "ge-rel-202-6-fixed-li2": "<strong>Eticheta tipului de intrare:</strong> Acum recunoaște corect titlurile \"Memory test\" în loc să recurgă la tipul \"system\".",
+    "ge-rel-202-6-fixed-li3": "<strong>Coloana de cale a intrării:</strong> Corectată o expresie regulată defectă care împiedica coloana de cale să afișeze vreodată o valoare.",
+    "ge-rel-202-6-added-li1": "<strong>Dezactivare/ștergere intrări memtest:</strong> Intrările memtest pot fi acum dezactivate (comentate) sau eliminate definitiv (binar șters din <code>/boot</code>), în loc să se actualizeze doar lista de pe ecran.",
+    "ge-rel-202-6-added-li2": "<strong>Intrările memtest dezactivate rămân vizibile:</strong> Intrările memtest dezactivate rămân vizibile (estompate) în listă pentru a putea fi reactivate sau șterse ulterior.",
+    "ge-rel-202-6-added-li3": "<strong>Calea reală a kernelului/binarului:</strong> Fila Intrări de pornire afișează acum calea reală a kernelului sau binarului încărcat de fiecare intrare.",
+    "ge-rel-202-6-added-li4": "<strong>\"Adaugă intrare\" funcțional:</strong> Scrie acum un bloc <code>menuentry</code> personalizat real în <code>/etc/grub.d/40_custom</code> în loc să nu facă nimic.",
+    "ge-rel-202-6-changed-li1": "<strong>Intrările de recuperare și alte SO ascunse:</strong> Intrările în modul de recuperare și alte sisteme de operare nu mai sunt listate în fila Intrări de pornire, deoarece sunt deja gestionate ca o categorie în Setările generale — evită un control redundant pentru același comutator GRUB.",
+
     "ge-rel-202-5-title": "2.0.2-5 — Iulie 2026",
     "ge-rel-202-5-subtitle": "Actualizare dependenta de compilare — <code>python3-all</code> inlocuit cu <code>python3</code> in <code>debian/control</code>.",
     "ge-rel-202-5-changed-li1": "Dependenta de compilare <code>python3-all</code> inlocuita cu <code>python3</code>.",
