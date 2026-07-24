@@ -4382,6 +4382,10 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-211r2-title": "2.1.1-2 — Juillet 2026",
+    "wel-rel-211r2-subtitle": "Correction d'une liste noire nouveau dupliquée écrite par les chemins d'installation NVIDIA — l'écriture dans modprobe était redondante et entrait en conflit avec la liste noire propre au paquet.",
+    "wel-rel-211r2-fixed-heading": "Onglet Pilotes",
+    "wel-rel-211r2-fixed-li1": "<strong>Liste noire nouveau dupliquée lors de l'installation NVIDIA :</strong> Les chemins d'installation de base et CUDA écrivaient tous deux <code>/etc/modprobe.d/blacklist-nouveau.conf</code> en plus du <code>/etc/dracut.conf.d/blacklist-nouveau.conf</code> géré par dracut. Le paquet NVIDIA crée déjà sa propre liste noire modprobe via <code>/etc/modprobe.d/nvidia.conf</code>, rendant le fichier écrit par Welcome redondant et source potentielle de conflits. Les écritures modprobe ont été supprimées ; <code>dracut.conf.d</code> reste la seule source de vérité pour le blocage de nouveau.",
     "wel-rel-211r1-title": "2.1.1-1 — Juillet 2026",
     "wel-rel-211r1-subtitle": "Correction de la non-détection des Guest Additions VirtualBox dans une VM réelle, ajout d'un bouton combiné \"Supprimer tout le détecté\" pour les logiciels inutiles, et ajout de 4 nouvelles chaînes de traduction dans les 8 fichiers de langue.",
     "wel-rel-211r1-fixed-heading": "Onglet Pilotes",

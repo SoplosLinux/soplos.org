@@ -4389,6 +4389,10 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-211r2-title": "2.1.1-2 — Juli 2026",
+    "wel-rel-211r2-subtitle": "Behoben: Eine doppelte Nouveau-Blacklist wurde von den NVIDIA-Installationspfaden geschrieben — der modprobe-Eintrag war redundant und konfliktierte mit der eigenen Blacklist des Pakets.",
+    "wel-rel-211r2-fixed-heading": "Treiber-Tab",
+    "wel-rel-211r2-fixed-li1": "<strong>Doppelte Nouveau-Blacklist bei NVIDIA-Installation:</strong> Die grundlegenden und CUDA-Installationspfade schrieben beide <code>/etc/modprobe.d/blacklist-nouveau.conf</code> zusätzlich zur dracut-verwalteten <code>/etc/dracut.conf.d/blacklist-nouveau.conf</code>. Das NVIDIA-Paket erstellt bereits seine eigene modprobe-Blacklist über <code>/etc/modprobe.d/nvidia.conf</code>, was die von Welcome geschriebene Datei redundant und eine potenzielle Konfliktquelle macht. Die modprobe-Schreibvorgänge wurden entfernt; <code>dracut.conf.d</code> bleibt die einzige Quelle der Wahrheit für die Nouveau-Sperrung.",
     "wel-rel-211r1-title": "2.1.1-1 — Juli 2026",
     "wel-rel-211r1-subtitle": "Fehler behoben, bei dem VirtualBox Guest Additions innerhalb einer echten VM nicht erkannt wurden, kombinierte Schaltfläche \"Alle Erkannten entfernen\" für unnötige Software hinzugefügt und 4 neue Übersetzungszeichenfolgen in alle 8 Sprachdateien eingefügt.",
     "wel-rel-211r1-fixed-heading": "Reiter Treiber",

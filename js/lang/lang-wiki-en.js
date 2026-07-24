@@ -5187,6 +5187,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-211r2-title": "2.1.1-2 — July 2026",
+  "wel-rel-211r2-subtitle": "Fixed a duplicate nouveau blacklist written by the NVIDIA install paths — the modprobe write was redundant and conflicted with the package's own blacklist.",
+  "wel-rel-211r2-fixed-heading": "Drivers Tab",
+  "wel-rel-211r2-fixed-li1": "<strong>Duplicate nouveau blacklist on NVIDIA install:</strong> The basic and CUDA install paths both wrote <code>/etc/modprobe.d/blacklist-nouveau.conf</code> in addition to the dracut-managed <code>/etc/dracut.conf.d/blacklist-nouveau.conf</code>. The NVIDIA package already creates its own modprobe blacklist via <code>/etc/modprobe.d/nvidia.conf</code>, making the Welcome-written modprobe file redundant and a potential source of conflicts. Removed the modprobe writes; <code>dracut.conf.d</code> remains the single source of truth for nouveau blacklisting.",
   "wel-rel-211r1-title": "2.1.1-1 — July 2026",
   "wel-rel-211r1-subtitle": "Fixed VirtualBox Guest Additions not detected inside a real VM, added a combined \"Remove All Detected\" button for unnecessary software, and added 4 new translation strings to all 8 language files.",
   "wel-rel-211r1-fixed-heading": "Drivers Tab",

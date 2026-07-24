@@ -4388,6 +4388,10 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-211r2-title": "2.1.1-2 — Iulie 2026",
+    "wel-rel-211r2-subtitle": "Rezolvată o listă neagră nouveau duplicată scrisă de căile de instalare NVIDIA — scrierea în modprobe era redundantă și intra în conflict cu lista neagră proprie a pachetului.",
+    "wel-rel-211r2-fixed-heading": "Fila Drivere",
+    "wel-rel-211r2-fixed-li1": "<strong>Listă neagră nouveau duplicată la instalarea NVIDIA:</strong> Căile de instalare de bază și CUDA scriau ambele <code>/etc/modprobe.d/blacklist-nouveau.conf</code> pe lângă <code>/etc/dracut.conf.d/blacklist-nouveau.conf</code> gestionat de dracut. Pachetul NVIDIA creează deja propria listă neagră modprobe prin <code>/etc/modprobe.d/nvidia.conf</code>, făcând fișierul scris de Welcome redundant și o sursă potențială de conflicte. Eliminatele scrierile modprobe; <code>dracut.conf.d</code> rămâne singura sursă de adevăr pentru blocarea nouveau.",
     "wel-rel-211r1-title": "2.1.1-1 — Iulie 2026",
     "wel-rel-211r1-subtitle": "Remediat bug-ul prin care Guest Additions VirtualBox nu erau detectate în interiorul unei VM reale, adăugat un buton combinat \"Elimină tot detectatul\" pentru software inutil și adăugate 4 noi șiruri de traducere în toate cele 8 fișiere de limbă.",
     "wel-rel-211r1-fixed-heading": "Fila Drivere",

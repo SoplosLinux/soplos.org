@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v211r2" class="toc-link">2.1.1-2 <span class="toc-date">— 2026-07-24</span></a></li>
                             <li><a href="#v211r1" class="toc-link">2.1.1-1 <span class="toc-date">— 2026-07-22</span></a></li>
                             <li><a href="#v211" class="toc-link">2.1.1 <span class="toc-date">— 2026-07-21</span></a></li>
                             <li><a href="#v2109" class="toc-link">2.1.0-9 <span class="toc-date">— 2026-07-20</span></a></li>
@@ -195,6 +196,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.1-2 -->
+                        <section id="v211r2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r2-title">2.1.1-2 — July 2026</span></h2>
+                            <p id="wel-rel-211r2-subtitle" class="lead">Fixed a duplicate nouveau blacklist written by the NVIDIA install paths — the modprobe write was redundant and conflicted with the package's own blacklist.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span> — <span id="wel-rel-211r2-fixed-heading">Drivers Tab</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r2-fixed-li1"><strong>Duplicate nouveau blacklist on NVIDIA install:</strong> The basic and CUDA install paths both wrote <code>/etc/modprobe.d/blacklist-nouveau.conf</code> in addition to the dracut-managed <code>/etc/dracut.conf.d/blacklist-nouveau.conf</code>. The NVIDIA package already creates its own modprobe blacklist via <code>/etc/modprobe.d/nvidia.conf</code>, making the Welcome-written modprobe file redundant and a potential source of conflicts. Removed the modprobe writes; <code>dracut.conf.d</code> remains the single source of truth for nouveau blacklisting.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.1 -->
                         <!-- 2.1.1-1 -->

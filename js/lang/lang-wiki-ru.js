@@ -4391,6 +4391,10 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-211r2-title": "2.1.1-2 — Июль 2026",
+    "wel-rel-211r2-subtitle": "Исправлен дублирующийся чёрный список nouveau, записываемый путями установки NVIDIA — запись в modprobe была избыточной и конфликтовала с собственным чёрным списком пакета.",
+    "wel-rel-211r2-fixed-heading": "Вкладка Драйверы",
+    "wel-rel-211r2-fixed-li1": "<strong>Дублирующийся чёрный список nouveau при установке NVIDIA:</strong> Базовый и CUDA пути установки оба записывали <code>/etc/modprobe.d/blacklist-nouveau.conf</code> в дополнение к <code>/etc/dracut.conf.d/blacklist-nouveau.conf</code>, управляемому dracut. Пакет NVIDIA уже создаёт собственный чёрный список modprobe через <code>/etc/modprobe.d/nvidia.conf</code>, что делает файл, записанный Welcome, избыточным и потенциальным источником конфликтов. Записи в modprobe удалены; <code>dracut.conf.d</code> остаётся единственным источником истины для блокировки nouveau.",
     "wel-rel-211r1-title": "2.1.1-1 — Июль 2026",
     "wel-rel-211r1-subtitle": "Исправлена ошибка, из-за которой Guest Additions VirtualBox не обнаруживались внутри реальной виртуальной машины; добавлена объединённая кнопка «Удалить всё обнаруженное» для лишнего ПО; в все 8 файлов языков добавлены 4 новые строки перевода.",
     "wel-rel-211r1-fixed-heading": "Вкладка Драйверы",
