@@ -4826,6 +4826,9 @@ Object.assign(window.LANG_PT, {
     "wl-rel-hero-title": "Soplos Welcome Live",
     "wl-rel-hero-subtitle": "Aplicação de boas-vindas para o Soplos Linux Live — integração com o instalador Calamares e recuperação avançada do sistema em CHROOT com suporte completo a BTRFS para XFCE, KDE Plasma e GNOME.",
 
+    "wl-rel-2028-title": "2.0.2-8 — Julho 2026",
+    "wl-rel-2028-subtitle": "Ligação de doação atualizada para apontar para a página de doações Soplos em vez de diretamente para o PayPal.",
+    "wl-rel-2028-changed-li1": "<strong>Ligação de doação:</strong> Aponta agora para <code>https://soplos.org/community/donate/</code> em vez de diretamente para o PayPal.",
     "wl-rel-2027-title": "2.0.2-7 — Julho 2026",
     "wl-rel-2027-subtitle": "Compatibilidade com Qt6 — todas as chamadas <code>qdbus</code> substituidas por <code>qdbus6</code> apos a remocao do Qt5 do sistema base.",
     "wl-rel-2027-fixed-li1": "<strong>Compatibilidade Qt6 — <code>qdbus</code> substituido por <code>qdbus6</code>:</strong> todas as chamadas <code>qdbus</code> atualizadas para <code>qdbus6</code> apos a remocao do Qt5 do sistema base. Afeta o seletor de idioma (reinicio do layout de teclado e atualizacao do shell Plasma) e o gestor de sessao (script de logout do KDE).",
