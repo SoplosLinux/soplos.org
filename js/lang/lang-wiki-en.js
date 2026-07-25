@@ -5187,6 +5187,9 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-211r3-title": "2.1.1-3 — July 2026",
+  "wel-rel-211r3-subtitle": "Donate button updated to point to the Soplos donations page instead of PayPal directly.",
+  "wel-rel-211r3-changed-li1": "<strong>Donate button:</strong> Now points to <code>https://soplos.org/community/donate/</code> instead of PayPal directly.",
   "wel-rel-211r2-title": "2.1.1-2 — July 2026",
   "wel-rel-211r2-subtitle": "Fixed a duplicate nouveau blacklist written by the NVIDIA install paths — the modprobe write was redundant and conflicted with the package's own blacklist.",
   "wel-rel-211r2-fixed-heading": "Drivers Tab",

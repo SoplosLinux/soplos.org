@@ -4388,6 +4388,9 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-211r3-title": "2.1.1-3 — Iulie 2026",
+    "wel-rel-211r3-subtitle": "Butonul de donație actualizat pentru a indica pagina de donații Soplos în loc de PayPal direct.",
+    "wel-rel-211r3-changed-li1": "<strong>Buton de donație:</strong> Indică acum <code>https://soplos.org/community/donate/</code> în loc de PayPal direct.",
     "wel-rel-211r2-title": "2.1.1-2 — Iulie 2026",
     "wel-rel-211r2-subtitle": "Rezolvată o listă neagră nouveau duplicată scrisă de căile de instalare NVIDIA — scrierea în modprobe era redundantă și intra în conflict cu lista neagră proprie a pachetului.",
     "wel-rel-211r2-fixed-heading": "Fila Drivere",

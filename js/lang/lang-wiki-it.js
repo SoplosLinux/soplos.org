@@ -4386,6 +4386,9 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-211r3-title": "2.1.1-3 — Luglio 2026",
+    "wel-rel-211r3-subtitle": "Pulsante di donazione aggiornato per puntare alla pagina donazioni Soplos invece che direttamente a PayPal.",
+    "wel-rel-211r3-changed-li1": "<strong>Pulsante di donazione:</strong> Punta ora a <code>https://soplos.org/community/donate/</code> invece che direttamente a PayPal.",
     "wel-rel-211r2-title": "2.1.1-2 — Luglio 2026",
     "wel-rel-211r2-subtitle": "Corretto un blacklist nouveau duplicato scritto dai percorsi di installazione NVIDIA — la scrittura in modprobe era ridondante e in conflitto con il blacklist proprio del pacchetto.",
     "wel-rel-211r2-fixed-heading": "Scheda Driver",

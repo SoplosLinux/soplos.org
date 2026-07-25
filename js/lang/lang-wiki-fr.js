@@ -4382,6 +4382,9 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-211r3-title": "2.1.1-3 — Juillet 2026",
+    "wel-rel-211r3-subtitle": "Bouton de don mis à jour pour pointer vers la page de dons Soplos plutôt que directement vers PayPal.",
+    "wel-rel-211r3-changed-li1": "<strong>Bouton de don :</strong> Pointe désormais vers <code>https://soplos.org/community/donate/</code> plutôt que directement vers PayPal.",
     "wel-rel-211r2-title": "2.1.1-2 — Juillet 2026",
     "wel-rel-211r2-subtitle": "Correction d'une liste noire nouveau dupliquée écrite par les chemins d'installation NVIDIA — l'écriture dans modprobe était redondante et entrait en conflit avec la liste noire propre au paquet.",
     "wel-rel-211r2-fixed-heading": "Onglet Pilotes",

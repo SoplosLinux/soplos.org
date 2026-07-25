@@ -4390,6 +4390,9 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-211r3-title": "2.1.1-3 — Julio 2026",
+    "wel-rel-211r3-subtitle": "Botón de donación actualizado para apuntar a la página de donaciones de Soplos en vez de a PayPal directamente.",
+    "wel-rel-211r3-changed-li1": "<strong>Botón de donación:</strong> Ahora apunta a <code>https://soplos.org/community/donate/</code> en vez de a PayPal directamente.",
     "wel-rel-211r2-title": "2.1.1-2 — Julio 2026",
     "wel-rel-211r2-subtitle": "Corregida una lista negra de nouveau duplicada escrita por las rutas de instalación de NVIDIA — la escritura en modprobe era redundante y conflictiva con la lista negra propia del paquete.",
     "wel-rel-211r2-fixed-heading": "Pestaña Controladores",
