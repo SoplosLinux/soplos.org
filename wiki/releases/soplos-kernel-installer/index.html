@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v101r7" class="toc-link">1.0.1-7 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v101r6" class="toc-link">1.0.1-6 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v101r5" class="toc-link">1.0.1-5 <span class="toc-date">— 2026-07-22</span></a></li>
                             <li><a href="#v101r4" class="toc-link">1.0.1-4 <span class="toc-date">— 2026-07-20</span></a></li>
@@ -143,6 +144,30 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.1-7 -->
+                        <section id="v101r7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-101r7-title">1.0.1-7 — July 2026</span></h2>
+                            <p id="ki-rel-101r7-subtitle" class="lead">Compile-tab core count selector added; Soplos Kernels tab gains profile and version filter dropdowns; filter button-label blank and filter-row boundary glitches fixed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r7-fixed-li1"><strong>Filter changes left Install/Remove buttons blank:</strong> Changing a filter in the Soplos Kernels tab left the Install/Remove buttons without a label until something else (e.g. clicking Refresh) triggered a full re-render — <code>_rebuild_kernels_list()</code> recreates buttons without a label, and only <code>_refresh_soplos_kernels_tab()</code> actually sets it. Filter changes now trigger both.</li>
+                                <li id="ki-rel-101r7-fixed-li2"><strong>Filter row visually stuck to kernel list:</strong> The filter row had no clear visual boundary from the kernel list beneath it — the single-pixel in-card separator was barely noticeable on the dark theme. The filter row is now inside its own card, matching the visual pattern of the repository-status and kernel-list cards.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r7-added-li1"><strong>Core count selector:</strong> The "Compile kernel" tab now has a spin button ("Cores to use for compilation") next to the cleanup checkbox, defaulting to all logical cores. Available for both regular profiles and Stock/developer mode. The chosen value is threaded through <code>full_install()</code> to <code>installer.build()</code>, where <code>make -j{n}</code> uses it instead of always auto-detecting.</li>
+                                <li id="ki-rel-101r7-added-li2"><strong>Soplos Kernels tab: profile and version filters:</strong> Two dropdowns ("Profile" and "Version") above the kernel list, populated dynamically from the packages actually present in the repository — so a newly published flavor like Zen appears on its own without anything hardcoded. Supports filtering by profile, by march level (V1–V4), or both simultaneously.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.1-5 -->
                         <!-- 1.0.1-6 -->
