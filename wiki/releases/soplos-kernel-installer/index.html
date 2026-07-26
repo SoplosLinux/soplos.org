@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v101r6" class="toc-link">1.0.1-6 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v101r5" class="toc-link">1.0.1-5 <span class="toc-date">— 2026-07-22</span></a></li>
                             <li><a href="#v101r4" class="toc-link">1.0.1-4 <span class="toc-date">— 2026-07-20</span></a></li>
                             <li><a href="#v101r3" class="toc-link">1.0.1-3 <span class="toc-date">— 2026-07-20</span></a></li>
@@ -144,6 +145,30 @@
                     <article class="main-content">
 
                         <!-- 1.0.1-5 -->
+                        <!-- 1.0.1-6 -->
+                        <section id="v101r6" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-101r6-title">1.0.1-6 — July 2026</span></h2>
+                            <p id="ki-rel-101r6-subtitle" class="lead">BORE and Zen patch source selection hardened with dry-run verification before acceptance; Zen's alternate scheduler (PDS) now correctly enabled at build time; new fallback sources added for both BORE and Zen.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r6-fixed-li1"><strong>BORE/Zen patch source selection:</strong> A patch source could download successfully and still fail to apply against the current kernel point release — the failure only surfaced during the actual <code>patch</code> apply step, by which point it was too late to fall back to another source. Downloaded BORE/Zen candidates are now verified with a <code>patch --dry-run</code> against the extracted kernel tree before being accepted; if a source downloads fine but doesn't apply, the next source in the chain is tried automatically instead of aborting the build.</li>
+                                <li id="ki-rel-101r6-fixed-li2"><strong>Zen's alternate scheduler never actually built:</strong> Selecting the "zen" patch applied the full patchset and the build succeeded, but the kernel silently ran mainline CFS/EEVDF instead of BMQ/PDS — <code>CONFIG_SCHED_ALT</code> defaults to <code>n</code> in Kconfig, so it needed to be forced on explicitly. <code>configure()</code> now enables <code>CONFIG_SCHED_ALT</code> and <code>CONFIG_SCHED_PDS</code> whenever "zen" is selected. Verified on real hardware: <code>CONFIG_SCHED_ALT=y</code>/<code>CONFIG_SCHED_PDS=y</code> in the running kernel's config, and Project C-specific sysctls (<code>kernel.yield_type</code>) present while CFS-only sysctls are gone, confirming PDS is genuinely active.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r6-added-li1"><strong>BORE — third fallback source:</strong> <a href="https://github.com/SoplosLinux/bore-soplos" target="_blank">SoplosLinux/bore-soplos</a>, used only when neither firelzrd nor CachyOS have a working patch for the requested kernel version yet.</li>
+                                <li id="ki-rel-101r6-added-li2"><strong>Zen — fallback source:</strong> <a href="https://github.com/SoplosLinux/zen-soplos" target="_blank">SoplosLinux/zen-soplos</a>, used when zen-kernel/zen-kernel hasn't published a matching release yet.</li>
+                            </ul>
+                        </section>
+
                         <section id="v101r5" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="ki-rel-101r5-title">1.0.1-5 — July 2026</span></h2>
                             <p id="ki-rel-101r5-subtitle" class="lead">The "Which kernel is right for my hardware?" popup now shows the detected CPU model, GPU and total RAM alongside the x86-64 architecture level.</p>
