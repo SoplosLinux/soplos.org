@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v211r5" class="toc-link">2.1.1-5 <span class="toc-date">— 2026-07-27</span></a></li>
                             <li><a href="#v211r4" class="toc-link">2.1.1-4 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v211r3" class="toc-link">2.1.1-3 <span class="toc-date">— 2026-07-25</span></a></li>
                             <li><a href="#v211r2" class="toc-link">2.1.1-2 <span class="toc-date">— 2026-07-24</span></a></li>
@@ -198,6 +199,30 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.1-5 -->
+                        <section id="v211r5" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r5-title">2.1.1-5 — July 2026</span></h2>
+                            <p id="wel-rel-211r5-subtitle" class="lead">NVIDIA 590/610 install fixed (open kernel modules now installed directly); silent false "success" on failed commands fixed; standalone Open Kernel Modules button removed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r5-fixed-li1"><strong>Drivers tab — NVIDIA 590/610 install failing:</strong> A previous edit forced <code>apt install</code> to request <code>cuda-drivers-590</code>/<code>cuda-drivers-610</code> together with <code>nvidia-kernel-open-dkms</code> in the same command — but NVIDIA's <code>cuda-drivers</code> package explicitly declares <code>Conflicts: nvidia-kernel-open-dkms, nvidia-open</code>, making the two mutually unsatisfiable. <code>apt</code> aborted every time with a dependency error. Reverted that change.</li>
+                                <li id="wel-rel-211r5-fixed-li2"><strong>Drivers tab — silent false "success" on failed installs:</strong> <code>CommandRunner.run_command</code> never checked the subprocess exit code after <code>process.wait()</code>, so any failed script (apt errors, <code>pkexec</code> cancelled, network failure) was reported as "Operation completed successfully". Now checks <code>process.returncode</code> and shows a failure message when it is non-zero.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r5-changed-li1"><strong>Drivers tab — NVIDIA 590/610 now install open kernel modules:</strong> Switched the install target from <code>cuda-drivers-590</code>/<code>cuda-drivers-610</code> (closed <code>nvidia-kernel-dkms</code>) to <code>nvidia-open-590</code>/<code>nvidia-open-610</code> (NVIDIA's official open-kernel-module meta-package), matching the hardware these branches target (Turing and newer).</li>
+                                <li id="wel-rel-211r5-changed-li2"><strong>Drivers tab — standalone "Open Kernel Modules" button removed:</strong> The button (<code>_on_nvidia_open_clicked</code>) always hit the same <code>cuda-drivers</code> vs <code>nvidia-kernel-open-dkms</code> conflict when a 590/610 driver was already installed, and is no longer needed now that 590/610 installs open modules directly.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.1-4 -->
                         <section id="v211r4" class="content-section">
