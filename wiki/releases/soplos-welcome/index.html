@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v211r6" class="toc-link">2.1.1-6 <span class="toc-date">— 2026-07-27</span></a></li>
                             <li><a href="#v211r5" class="toc-link">2.1.1-5 <span class="toc-date">— 2026-07-27</span></a></li>
                             <li><a href="#v211r4" class="toc-link">2.1.1-4 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v211r3" class="toc-link">2.1.1-3 <span class="toc-date">— 2026-07-25</span></a></li>
@@ -199,6 +200,32 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.1-6 -->
+                        <section id="v211r6" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r6-title">2.1.1-6 — July 2026</span></h2>
+                            <p id="wel-rel-211r6-subtitle" class="lead">Four NVIDIA driver installation fixes: system no longer left without a graphics driver when DKMS cannot build; VMA locking patch now applied by Welcome; initramfs no longer regenerated before modules exist; CUDA repository cleaned up after 590/610 install. Driver recommendation and button availability updated for Turing vs. Pascal/Maxwell.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r6-fixed-li1"><strong>System left with no graphics driver after NVIDIA install:</strong> The install proceeded even when DKMS could not build the module — having <code>linux-headers</code> installed is not enough if the build tree under <code>/lib/modules/&lt;kernel&gt;/build</code> is missing or broken. DKMS would silently skip the build and leave the module as <code>added</code>; since the NVIDIA package blacklists nouveau, the machine then booted to a black screen. Both install paths now verify the build tree, reinstall headers when needed, and abort with a clear message instead of installing a driver that cannot be built.</li>
+                                <li id="wel-rel-211r6-fixed-li2"><strong>DKMS compatibility patch never applied:</strong> The VMA locking patch for Soplos 7.x kernels was only applied by soplos-kernel-installer, never by Welcome — which is the path the distribution recommends after installing. Now applied in both install paths, covering both the proprietary source layout (<code>/usr/src/nvidia-*/nvidia/</code>) and the open module one (<code>/usr/src/nvidia-*/kernel-open/nvidia/</code>), and only when the source actually uses <code>VMA_LOCK_OFFSET</code>.</li>
+                                <li id="wel-rel-211r6-fixed-li3"><strong>initramfs regenerated too early:</strong> dracut ran before the DKMS modules existed, producing an initramfs that excluded nouveau and requested NVIDIA modules that were not there yet. The patch and module rebuild now run before the initramfs is regenerated.</li>
+                                <li id="wel-rel-211r6-fixed-li4"><strong>NVIDIA repository left configured after 590/610 install:</strong> The 590 and 610 branches never removed the CUDA repository after installing, leaving it to shadow Debian packages such as <code>dkms</code> and potentially move the user to a different driver branch on a routine <code>apt upgrade</code>. Both now clean it up after installing, as the 580 branch already did.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r6-changed-li1"><strong>Driver recommendation updated:</strong> Turing and newer (GTX 16xx, RTX 20/30/40/50, MX450/550) now recommend the 610 branch. Pascal and Maxwell (GTX 10xx, GTX 9xx, MX330/350) recommend 580, their maximum supported branch.</li>
+                                <li id="wel-rel-211r6-changed-li2"><strong>590/610 buttons disabled on pre-Turing GPUs:</strong> Instead of letting the user install an unsupported branch, the buttons are now greyed out with a tooltip explaining why.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.1-5 -->
                         <section id="v211r5" class="content-section">
