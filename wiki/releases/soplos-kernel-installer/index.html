@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v101r8" class="toc-link">1.0.1-8 <span class="toc-date">— 2026-07-28</span></a></li>
                             <li><a href="#v101r7" class="toc-link">1.0.1-7 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v101r6" class="toc-link">1.0.1-6 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v101r5" class="toc-link">1.0.1-5 <span class="toc-date">— 2026-07-22</span></a></li>
@@ -144,6 +145,29 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.1-8 -->
+                        <section id="v101r8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-101r8-title">1.0.1-8 — July 2026</span></h2>
+                            <p id="ki-rel-101r8-subtitle" class="lead">NVIDIA DKMS patch now covers open-module driver layouts (nvidia-open-590/610); patch skipped on driver versions that no longer use the old VMA locking API; dead constants removed from installer core.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r8-fixed-li1"><strong>NVIDIA DKMS patch silently skipped on open kernel modules:</strong> <code>get_nvidia_dkms_patch_commands()</code> only looked for <code>nvidia/nv-mmap.c</code> inside each <code>/usr/src/nvidia-*/</code> tree. The <code>nvidia-open-590</code> and <code>nvidia-open-610</code> packages keep their sources under <code>kernel-open/nvidia/</code>, so the patch was skipped without any warning on every system using them — which is now all Turing and newer hardware. Both source layouts are now walked.</li>
+                                <li id="ki-rel-101r8-fixed-li2"><strong>Spurious patch-failed warning on recent driver versions:</strong> The VMA Locking patch was attempted unconditionally, printing a "patch failed" warning on driver versions that no longer use the old VMA locking API. It is now applied only when <code>VMA_LOCK_OFFSET</code> is actually present in the source.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span data-i18n="rel-label-removed">Removed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r8-removed-li1"><strong>Dead constants in installer core:</strong> <code>DRACUT_CONF_DIR</code> and <code>DRACUT_SOPLOS_CONF</code> in <code>core/installer.py</code> were defined but never referenced anywhere in the project.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.1-7 -->
                         <section id="v101r7" class="content-section">

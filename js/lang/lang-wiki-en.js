@@ -5882,6 +5882,12 @@ Object.assign(window.LANG_EN, {
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
 
+  "ki-rel-101r8-title": "1.0.1-8 — July 2026",
+  "ki-rel-101r8-subtitle": "NVIDIA DKMS patch now covers open-module driver layouts (nvidia-open-590/610); patch skipped on driver versions that no longer use the old VMA locking API; dead constants removed from installer core.",
+  "ki-rel-101r8-fixed-li1": "<strong>NVIDIA DKMS patch silently skipped on open kernel modules:</strong> <code>get_nvidia_dkms_patch_commands()</code> only looked for <code>nvidia/nv-mmap.c</code> inside each <code>/usr/src/nvidia-*/</code> tree. The <code>nvidia-open-590</code> and <code>nvidia-open-610</code> packages keep their sources under <code>kernel-open/nvidia/</code>, so the patch was skipped without any warning on every system using them — which is now all Turing and newer hardware. Both source layouts are now walked.",
+  "ki-rel-101r8-fixed-li2": "<strong>Spurious patch-failed warning on recent driver versions:</strong> The VMA Locking patch was attempted unconditionally, printing a \"patch failed\" warning on driver versions that no longer use the old VMA locking API. It is now applied only when <code>VMA_LOCK_OFFSET</code> is actually present in the source.",
+  "ki-rel-101r8-removed-li1": "<strong>Dead constants in installer core:</strong> <code>DRACUT_CONF_DIR</code> and <code>DRACUT_SOPLOS_CONF</code> in <code>core/installer.py</code> were defined but never referenced anywhere in the project.",
+
   "ki-rel-101r7-title": "1.0.1-7 — July 2026",
   "ki-rel-101r7-subtitle": "Compile-tab core count selector added; Soplos Kernels tab gains profile and version filter dropdowns; filter button-label blank and filter-row boundary glitches fixed.",
   "ki-rel-101r7-fixed-li1": "<strong>Filter changes left Install/Remove buttons blank:</strong> Changing a filter in the Soplos Kernels tab left the Install/Remove buttons without a label until something else (e.g. clicking Refresh) triggered a full re-render — <code>_rebuild_kernels_list()</code> recreates buttons without a label, and only <code>_refresh_soplos_kernels_tab()</code> actually sets it. Filter changes now trigger both.",
