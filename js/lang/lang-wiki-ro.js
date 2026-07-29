@@ -5495,6 +5495,12 @@ Object.assign(window.LANG_RO, {
     "ge-rel-hero-title": "Soplos GRUB Editor",
     "ge-rel-hero-subtitle": "Editor grafic GTK3 pentru GRUB2 — gestionarea temelor, conversia fonturilor, configurarea fundalului, editarea intrărilor de pornire și parametrii avansați ai kernelului, cu internaționalizare completă în 8 limbi.",
 
+    "ge-rel-202-7-title": "2.0.2-7 — Iulie 2026",
+    "ge-rel-202-7-subtitle": "Rezoluția ecranului este scrisă ca valoare brută în loc de eticheta tradusă; intrările personalizate pot fi acum eliminate și rămân vizibile când sunt dezactivate; corectată asocierea ferestrei cu lansatorul.",
+    "ge-rel-202-7-fixed-li1": "<strong>Rezoluție ecran salvată ca etichetă tradusă:</strong> <code>GRUB_GFXMODE</code> era scris folosind eticheta afișată în interfață în loc de valoarea brută — pe un sistem german aceasta producea <code>GRUB_GFXMODE=automatisch</code>, pe care GRUB nu o înțelege. Combo-ul stochează acum valoarea brută separat de textul afișat.",
+    "ge-rel-202-7-fixed-li2": "<strong>Intrările personalizate nu puteau fi eliminate:</strong> Fila Intrări de pornire clasifica intrările personalizate ca intrări de kernel și refuza să le șteargă, afirmând că aparțin unui kernel instalat. Pot fi acum activate, dezactivate și șterse, cu o confirmare înainte de eliminare.",
+    "ge-rel-202-7-fixed-li3": "<strong>Intrările personalizate dezactivate dispăreau din listă:</strong> Dezactivarea unei intrări personalizate o făcea să dispară din filă, făcând imposibilă reactivarea sau ștergerea ei ulterioară. Intrările dezactivate rămân acum vizibile — același comportament pe care îl aveau deja intrările memtest.",
+    "ge-rel-202-7-fixed-li4": "<strong>Fereastră neasisociată cu lansatorul său:</strong> Wrapper-ul lansatorului înregistra fereastra sub <code>com.soplos.grubeditor</code> în timp ce fișierul .desktop declară <code>org.soplos.grubeditor</code>, deci fereastra nu se grupa cu lansatorul din bara de activități și putea afișa o pictogramă generică.",
     "ge-rel-202-6-title": "2.0.2-6 — Iulie 2026",
     "ge-rel-202-6-subtitle": "Revizuire completă a filei Intrări de pornire: eliminate intrările memtest duplicate, corectată coloana de cale, suport pentru dezactivare/ștergere memtest, afișarea căii reale și \"Adaugă intrare\" funcțional care scrie în /etc/grub.d/40_custom.",
     "ge-rel-202-6-fixed-li1": "<strong>Intrări memtest duplicate:</strong> Parserul de intrări de pornire nu mai listează intrările memtest duplicate generate de condiționalele de platformă <code>pc</code>/<code>efi</code> ale GRUB.",
