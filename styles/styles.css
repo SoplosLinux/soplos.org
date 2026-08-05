@@ -1583,6 +1583,90 @@ nav ul>li>.menu-dropdown-toggle {
     overflow: visible;
 }
 
+/* Download split button group */
+.download-btn-group {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.download-more-btn {
+    background-color: rgba(254, 196, 49, 0.15);
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--light-text);
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.download-more-btn:hover {
+    background-color: rgba(254, 196, 49, 0.3);
+    color: var(--secondary-color);
+}
+
+.download-btn-group .download-btn {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.download-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2a2a2c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    z-index: 200;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.download-btn-group.open .download-dropdown {
+    display: block;
+}
+
+.download-btn-group.open .download-more-btn i {
+    transform: rotate(180deg);
+}
+
+.download-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.download-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.download-dropdown a:hover {
+    background-color: rgba(254, 196, 49, 0.12);
+    color: var(--secondary-color);
+}
+
+.download-dropdown a i {
+    width: 14px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
 /* Coming soon badge style */
 .coming-soon-badge {
     position: absolute;

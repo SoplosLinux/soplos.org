@@ -121,6 +121,9 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v211r9" class="toc-link">2.1.1-9 <span class="toc-date">— 2026-08-04</span></a></li>
+                            <li><a href="#v211r8" class="toc-link">2.1.1-8 <span class="toc-date">— 2026-08-03</span></a></li>
+                            <li><a href="#v211r7" class="toc-link">2.1.1-7 <span class="toc-date">— 2026-07-27</span></a></li>
                             <li><a href="#v211r6" class="toc-link">2.1.1-6 <span class="toc-date">— 2026-07-27</span></a></li>
                             <li><a href="#v211r5" class="toc-link">2.1.1-5 <span class="toc-date">— 2026-07-27</span></a></li>
                             <li><a href="#v211r4" class="toc-link">2.1.1-4 <span class="toc-date">— 2026-07-26</span></a></li>
@@ -200,6 +203,90 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.1-6 -->
+                        <!-- 2.1.1-9 -->
+                        <section id="v211r9" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r9-title">2.1.1-9 — August 2026</span></h2>
+                            <p id="wel-rel-211r9-subtitle" class="lead">Kudu all-in-one maintenance suite added to the Security tab; Zed high-performance code editor added to the Recommended tab; BleachBit no longer marked as Recommended — Soplos Sys Cleaner is the recommended cleaner.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r9-added-li1"><strong>Security tab — Kudu (System Cleaning):</strong> Added Kudu, an all-in-one maintenance suite covering cache cleaning, malware scanning, performance monitoring and app uninstalling. Installed as a <code>.deb</code> resolved dynamically from its GitHub releases, following the same pattern already used for Portmaster.</li>
+                                <li id="wel-rel-211r9-added-li2"><strong>Recommended tab — Zed (Developer):</strong> Added Zed (<code>dev.zed.Zed</code>, Flatpak), a high-performance multiplayer code editor.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r9-changed-li1"><strong>Security tab — BleachBit no longer marked as Recommended:</strong> Removed the "Recommended" badge from BleachBit — Soplos Sys Cleaner is the recommended option in the System Cleaning section.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.1.1-8 -->
+                        <section id="v211r8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r8-title">2.1.1-8 — August 2026</span></h2>
+                            <p id="wel-rel-211r8-subtitle" class="lead">Eight driver fixes: professional and laptop NVIDIA GPUs now detected correctly; 610/590 buttons no longer disabled on supported Turing cards; GT 750M and unrecognised GPUs no longer offered branches that cannot build; nouveau and AMD stack now correctly reported as active on Wayland; Nouveau button now explains what is needed to switch back; CUDA 12 repository cleaned up after toolkit install. MX150/MX250 moved to the 580 branch.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r8-fixed-li1"><strong>Professional and laptop NVIDIA GPUs got the wrong driver:</strong> The GPU model was read with a pattern that only matched names starting with <code>GeForce</code>. Quadro, Tesla and RTX A-series cards fell through to a fallback that returned the chip codename instead of the marketing name (<code>[Quadro T1000 Mobile]</code> came back as <code>Corporation TU117GLM</code>), matched no rule, and ended up on the Debian 550 branch. The bracketed marketing name, which is what lspci actually publishes, is now read first.</li>
+                                <li id="wel-rel-211r8-fixed-li2"><strong>610 and 590 buttons disabled on supported cards:</strong> The guard that disables those branches on pre-Turing GPUs kept its own marker list, separate from the one used to recommend a driver, and the two had drifted apart. Quadro T400/T600/T1000 and Tesla T4 are Turing and support 610, yet the buttons were greyed out. Both now read a single shared classifier, <code>is_nvidia_turing_or_newer()</code>, which also covers the T500/T550/T1200 laptop parts, MX570 and the RTX A-series.</li>
+                                <li id="wel-rel-211r8-fixed-li3"><strong>GT 750M offered a branch that cannot build:</strong> The marker sat among the Maxwell laptop parts in the 580 group, but the GT 750M is Kepler and 580 starts at Maxwell. The module could not build and, with nouveau blacklisted by the NVIDIA package, the laptop was left with no graphics driver. Moved to the 470 group, next to its sibling the GT 650M.</li>
+                                <li id="wel-rel-211r8-fixed-li4"><strong>Unrecognised GPUs offered a branch that cannot build:</strong> Any NVIDIA card matching no rule fell back to <code>nvidia-driver</code>, the Debian 550 branch, which only covers Maxwell to Ada. A Fermi such as the GT 540M ended up there with the same result as above. The fallback is now nouveau, which always works.</li>
+                                <li id="wel-rel-211r8-fixed-li5"><strong>Nouveau never reported as active on Boro and Tyson:</strong> The check required <code>xserver-xorg-video-nouveau</code>, an Xorg driver that is irrelevant and usually absent on Wayland. It returned False even when nouveau was the driver in use. Only the modprobe blacklist is checked now, since nouveau itself ships with the kernel.</li>
+                                <li id="wel-rel-211r8-fixed-li6"><strong>AMD stack never reported as installed on Boro and Tyson:</strong> The same mistake, this time requiring <code>xserver-xorg-video-all</code>. The check now looks only at the parts that matter under both display protocols. The package is still installed, because an X11 session can be selected at login on either distribution.</li>
+                                <li id="wel-rel-211r8-fixed-li7"><strong>Nouveau button did nothing when switching back from NVIDIA:</strong> Pressing it ran an <code>apt install</code> while the NVIDIA package kept nouveau blacklisted, so nothing changed and the button never marked itself as active. It now explains the situation and offers to remove the NVIDIA drivers, which is the only thing actually required. Its uninstall action no longer purges the Xorg driver, which stripped it on Tyron and did nothing on the other two.</li>
+                                <li id="wel-rel-211r8-fixed-li8"><strong>CUDA 12 repository left configured:</strong> The toolkit installer added the repository with <code>trusted=yes</code>, needed because the debian12 CUDA repo signs with SHA1, and never removed it, leaving an unverified source enabled indefinitely and shadowing Debian packages. It is now removed after installing, as the driver flows already did.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r8-changed-li1"><strong>Driver recommendation:</strong> MX150 and MX250 moved to the 580 branch. They are Pascal, like the MX330 and MX350 already there.</li>
+                                <li id="wel-rel-211r8-changed-li2"><strong>NVIDIA Primary messages:</strong> The message about the Xorg configuration now states that it applies to X11 sessions, and the driver upgrade advice points to the 610 branch.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r8-added-li1"><strong>Translations:</strong> 4 new strings for the Nouveau switch dialog added to all 8 languages.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.1.1-7 -->
+                        <section id="v211r7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-211r7-title">2.1.1-7 — July 2026</span></h2>
+                            <p id="wel-rel-211r7-subtitle" class="lead">Dead cleanup code removed from the PRIME Render Offload script; ART RAW photo editor added to the Recommended tab.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r7-fixed-li1"><strong>Drivers tab (dead cleanup code in PRIME Render Offload script):</strong> The script still removed <code>/etc/sddm.conf.d/10-wayland.conf</code>, a file no longer written anywhere in the project. Removed the no-op cleanup block.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-211r7-added-li1"><strong>Recommended tab — ART photo editor:</strong> Added ART (<code>us.pixls.art.ART</code>, Flatpak), a RAW photo editor, to Graphics and Design → Photography/RAW.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.1-6 -->
                         <section id="v211r6" class="content-section">

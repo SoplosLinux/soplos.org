@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2015" class="toc-link">2.0.1-5 <span class="toc-date">— 2026-07-20</span></a></li>
                             <li><a href="#v2014" class="toc-link">2.0.1-4 <span class="toc-date">— 2026-07-07</span></a></li>
                             <li><a href="#v2013" class="toc-link">2.0.1-3 <span class="toc-date">— 2026-06-21</span></a></li>
                             <li><a href="#v2012" class="toc-link">2.0.1-2 <span class="toc-date">— 2026-06-19</span></a></li>
@@ -140,6 +141,53 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.1-5 -->
+                        <section id="v2015" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="tm-rel-2015-title">2.0.1-5 — July 2026</span></h2>
+                            <p id="tm-rel-2015-subtitle" class="lead">Three new tabs (GTK Themes, Icons &amp; Cursors, Login Screen), Panel and Dock upgrades, <code>.sth</code> MIME type registration, <code>build-deb.sh</code> and full translation to 8 languages. User tab removed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2015-added-li1"><strong>Wallpapers tab — SVG support and Install Wallpaper button:</strong> The wallpaper scanner now recognises <code>.svg</code> files alongside the existing formats. A new Install Wallpaper button opens a multi-select file chooser and copies the selected images into <code>/usr/share/backgrounds</code> via a single <code>pkexec</code> call.</li>
+                                <li id="tm-rel-2015-added-li2"><strong>New tab — GTK Themes:</strong> Lists, activates and installs GTK widget themes. Detection uses <code>gtk-3.0/</code> or <code>gtk-2.0/</code> subdirectories. Activating a theme that also ships <code>xfwm4/</code> applies the matching window-border theme automatically. Package install supports <code>.tar.gz</code>, <code>.tar.xz</code>, <code>.tar.bz2</code> and <code>.zip</code> with path-traversal protection and recursive installable-theme detection.</li>
+                                <li id="tm-rel-2015-added-li3"><strong>New tab — Icons &amp; Cursors:</strong> Lists, activates and installs icon and cursor themes. Icon theme rows show the theme's own folder icon via a per-row <code>Gtk.IconTheme</code>. Cursor theme rows show the actual pointer bitmap parsed from the Xcursor binary format directly.</li>
+                                <li id="tm-rel-2015-added-li4"><strong>New tab — Login Screen (LightDM):</strong> Edits <code>/etc/lightdm/lightdm-gtk-greeter.conf</code>: background, GTK/icon/cursor theme, user avatar, font, login-box position (3×3 anchor grid + percent offsets with live on-screen preview), show-avatar toggle, per-user wallpaper toggle, clock format. All writes via <code>pkexec</code>.</li>
+                                <li id="tm-rel-2015-added-li5"><strong>Panel tab — full restructure:</strong> Settings grouped into three cards (Position / Appearance / Behavior); live preview shows the panel position on screen; panel selector became a segmented pill switcher; plugin list shows each plugin's description inline and supports double-click to add.</li>
+                                <li id="tm-rel-2015-added-li6"><strong>Dock tab — live horizontal preview:</strong> A rounded floating-bar preview above the pinned-apps list mirrors the dock in real time, updating on add/remove/drag-reorder.</li>
+                                <li id="tm-rel-2015-added-li7"><strong><code>.sth</code> MIME type registration:</strong> Registered <code>application/x-soplos-theme</code> with glob <code>*.sth</code>. Opening a <code>.sth</code> from a file manager switches to the Themes tab and starts the install flow in the already-running instance.</li>
+                                <li id="tm-rel-2015-added-li8"><strong><code>build-deb.sh</code>:</strong> Manual <code>.deb</code> builder that generates <code>DEBIAN/control</code> from <code>debian/control</code> and produces <code>postinst</code>/<code>postrm</code> scripts running <code>update-mime-database</code>, <code>update-desktop-database</code> and <code>gtk-update-icon-cache</code>. Added because <code>soplos-packager</code> 1.x has no MIME registration support.</li>
+                                <li id="tm-rel-2015-added-li9"><strong>Full translation to 8 languages:</strong> All 188 translatable strings across <code>main.py</code>, <code>services/</code>, <code>ui/main_window.py</code> and all <code>ui/tabs/*.py</code> translated into Spanish, English, French, Portuguese, German, Italian, Russian and Romanian.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span data-i18n="rel-label-removed">Removed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2015-removed-li1"><strong>User tab:</strong> The avatar/user data manager tab (<code>ui/tabs/avatar_tab.py</code>) has been removed. It managed OS user account data (name, email, phone, avatar, group membership) unrelated to desktop theme personalisation, which is this application's scope.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2015-fixed-li1"><strong>Window no longer grows when switching tabs:</strong> The new tabs could exceed the app's default window height, causing GTK to silently grow the window — it never shrank back on returning to a shorter tab. All tab content is now wrapped so a short window scrolls instead of resizing.</li>
+                                <li id="tm-rel-2015-fixed-li2"><strong>Panel plugin list — Gtk-WARNING spam:</strong> <code>&lt;small alpha=...&gt;</code> is not valid Pango markup. Replaced with <code>&lt;span alpha=... size='small'&gt;</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tm-rel-2015-changed-li1"><strong>README, <code>debian/control</code> and metainfo:</strong> Updated to reflect the removal of the avatar/user manager feature and the new tabs. <code>shared-mime-info</code> and <code>desktop-file-utils</code> added to <code>Depends</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.1-4 -->
                         <section id="v2014" class="content-section">

@@ -368,10 +368,78 @@ $years_json = json_encode($chart_years);
             margin-bottom: 1.25rem;
         }
 
+        /* Merch grid */
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .merch-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--card-bg, #1e1e1e);
+            border: 1px solid var(--border-color, #2a2a2a);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .merch-card:hover {
+            border-color: var(--accent-color, #f5a623);
+            transform: translateY(-3px);
+        }
+
+        .merch-img-wrap {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .merch-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .merch-card:hover .merch-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .merch-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.85rem 1rem;
+            gap: 0.5rem;
+        }
+
+        .merch-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .merch-cta {
+            font-size: 0.82rem;
+            color: var(--accent-color, #f5a623);
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
         /* Responsive */
+        @media (max-width: 768px) {
+            .merch-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 600px) {
             .donate-methods-grid { grid-template-columns: 1fr; }
             .stat-divider { display: none; }
+            .merch-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
         }
     </style>
 </head>
@@ -691,6 +759,88 @@ $years_json = json_encode($chart_years);
                             <span class="supporter-chip">Jose Ramón</span>
                             <span class="supporter-chip">Fernando</span>
                             <span class="supporter-chip">René</span>
+                        </div>
+                    </section>
+
+                    <!-- Merch -->
+                    <section class="content-section" style="margin-top: 0;">
+                        <div class="gold-section-title">
+                            <i class="fas fa-tshirt"></i>
+                            <h2 style="margin: 0;" id="donate-merch-title">Official Merchandise</h2>
+                        </div>
+                        <p class="donate-intro" style="margin-bottom: 1.75rem;" id="donate-merch-desc">
+                            Official Soplos Linux gear. Every purchase directly supports the project.
+                        </p>
+
+                        <div class="merch-grid">
+
+                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=812&sellable=3LAmGpZljrhZ9VqkreY8-812-7&appearance=2" target="_blank" rel="noopener">
+                                <div class="merch-img-wrap">
+                                    <img src="../../images/Shop/01-shirt-man.jpg" alt="Men's T-Shirt" loading="lazy">
+                                </div>
+                                <div class="merch-card-body">
+                                    <span class="merch-name" id="donate-merch-p1">Men's T-Shirt</span>
+                                    <span class="merch-cta">Shop <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+
+                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=813&sellable=3LAmGpZljrhZ9VqkreY8-813-8&appearance=2" target="_blank" rel="noopener">
+                                <div class="merch-img-wrap">
+                                    <img src="../../images/Shop/02-shirt-woman.jpg" alt="Women's T-Shirt" loading="lazy">
+                                </div>
+                                <div class="merch-card-body">
+                                    <span class="merch-name" id="donate-merch-p2">Women's T-Shirt</span>
+                                    <span class="merch-cta">Shop <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+
+                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=905&sellable=3LAmGpZljrhZ9VqkreY8-905-34&appearance=14&size=29" target="_blank" rel="noopener">
+                                <div class="merch-img-wrap">
+                                    <img src="../../images/Shop/03-cap.jpg" alt="Snapback Cap" loading="lazy">
+                                </div>
+                                <div class="merch-card-body">
+                                    <span class="merch-name" id="donate-merch-p3">Snapback Cap</span>
+                                    <span class="merch-cta">Shop <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+
+                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=3339&sellable=3LAmGpZljrhZ9VqkreY8-3339-36&appearance=2&size=29" target="_blank" rel="noopener">
+                                <div class="merch-img-wrap">
+                                    <img src="../../images/Shop/04-beanie.jpg" alt="Beanie" loading="lazy">
+                                </div>
+                                <div class="merch-card-body">
+                                    <span class="merch-name" id="donate-merch-p4">Beanie</span>
+                                    <span class="merch-cta">Shop <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+
+                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=704&sellable=3LAmGpZljrhZ9VqkreY8-704-33&appearance=2&size=29" target="_blank" rel="noopener">
+                                <div class="merch-img-wrap">
+                                    <img src="../../images/Shop/05-backpack.jpg" alt="Backpack" loading="lazy">
+                                </div>
+                                <div class="merch-card-body">
+                                    <span class="merch-name" id="donate-merch-p5">Backpack</span>
+                                    <span class="merch-cta">Shop <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+
+                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=268&sellable=3LAmGpZljrhZ9VqkreY8-268-32&appearance=70&size=29" target="_blank" rel="noopener">
+                                <div class="merch-img-wrap">
+                                    <img src="../../images/Shop/06-mug.jpg" alt="Mug" loading="lazy">
+                                </div>
+                                <div class="merch-card-body">
+                                    <span class="merch-name" id="donate-merch-p6">Mug</span>
+                                    <span class="merch-cta">Shop <i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div style="text-align: center; margin-top: 1.75rem;">
+                            <a class="donate-btn" href="https://soploslinux.myspreadshop.es/soplos?idea=68bebd819811dd174f52c985" target="_blank" rel="noopener" style="background: #e8304a; display: inline-flex;">
+                                <i class="fas fa-store"></i>
+                                <span id="donate-merch-btn">View full collection</span>
+                            </a>
                         </div>
                     </section>
 

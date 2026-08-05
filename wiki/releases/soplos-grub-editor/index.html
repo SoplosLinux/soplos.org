@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v202-8" class="toc-link">2.0.2-8 <span class="toc-date">— 2026-08-01</span></a></li>
                             <li><a href="#v202-7" class="toc-link">2.0.2-7 <span class="toc-date">— 2026-07-29</span></a></li>
                             <li><a href="#v202-6" class="toc-link">2.0.2-6 <span class="toc-date">— 2026-07-23</span></a></li>
                             <li><a href="#v202-5" class="toc-link">2.0.2-5 <span class="toc-date">— 2026-07-07</span></a></li>
@@ -151,6 +152,29 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.2-8 -->
+                        <section id="v202-8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-8-title">2.0.2-8 — August 2026</span></h2>
+                            <p id="ge-rel-202-8-subtitle" class="lead">New "Default Boot Mode" selector with three explicit choices; boot entry dropdown disabled when GRUB picks the entry itself; fixed unconditional overwrite of <code>GRUB_DEFAULT</code> on every save.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-8-added-li1"><strong>Default Boot Mode selector:</strong> New control in General settings with three explicit choices — fixed entry, last installed kernel, or last booted kernel. Previously these three GRUB behaviours required editing <code>/etc/default/grub</code> by hand.</li>
+                                <li id="ge-rel-202-8-added-li2"><strong>Boot entry selector disabled in non-fixed modes:</strong> The boot entry dropdown is now greyed out unless "Fixed entry" is selected, since in the other two modes GRUB picks the entry itself and any value shown there would be ignored.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ge-rel-202-8-fixed-li1"><strong>Applying General settings pinned the boot entry to the current kernel:</strong> <code>GRUB_DEFAULT</code> was rewritten with the literal menu entry title on every save, even when the boot entry dropdown had never been touched. A newly installed kernel was therefore never selected on reboot. The stored value is now left untouched unless the user actively selects a different entry.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.2-7 -->
                         <section id="v202-7" class="content-section">

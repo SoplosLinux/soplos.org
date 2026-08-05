@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                                <li><a href="#v103r4" class="toc-link">1.0.3-4 <span class="toc-date">— 2026-08-02</span></a></li>
                                 <li><a href="#v103r3" class="toc-link">1.0.3-3 <span class="toc-date">— 2026-07-22</span></a></li>
                                 <li><a href="#v103r2" class="toc-link">1.0.3-2 <span class="toc-date">— 2026-07-21</span></a></li>
                                 <li><a href="#v103r1" class="toc-link">1.0.3-1 <span class="toc-date">— 2026-07-21</span></a></li>
@@ -142,6 +143,28 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3-4 -->
+                        <section id="v103r4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="sc-rel-103r4-title">1.0.3-4 — August 2026</span></h2>
+                            <p id="sc-rel-103r4-subtitle" class="lead">Light/dark theme detection now dispatched per desktop environment (XFCE, Plasma, GNOME); light stylesheet brought to full selector parity with the dark one.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-improved">Improved</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r4-changed-li1"><strong>Light/dark theme detection per desktop environment (<code>core/environment.py</code>):</strong> The same package ships on Tyron (XFCE), Tyson (Plasma) and Boro (GNOME), each of which exposes its dark/light preference in a different place. <code>_detect_theme_type()</code> now dispatches to a dedicated per-desktop probe: XFCE reads the active GTK theme name from <code>xfconf-query -c xsettings -p /Net/ThemeName</code> (the <code>gsettings color-scheme</code> key stays at a stale default on XFCE); Plasma reads <code>ColorScheme</code> from <code>~/.config/kdeglobals</code>, falling back to the luminance of <code>Colors:Window</code>'s <code>BackgroundNormal</code> and then to <code>gtk-3.0/settings.ini</code>; GNOME reads <code>color-scheme</code> with a <code>gtk-theme</code> fallback. The default on an unrecognised desktop is now <code>light</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="sc-rel-103r4-fixed-li1"><strong>Light theme incomplete against the dark one (<code>assets/themes/light.css</code>):</strong> The light stylesheet was missing rules the dark one already had, so on a light desktop the unstyled widgets fell back to system colours and clashed with the parts Soplos does style. <code>light.css</code> is now at full selector parity with <code>dark.css</code> — header bar and its title buttons, dialogs, notebook tabs, <code>stackswitcher</code>, <code>progressbar</code>, <code>entry</code>, lists/treeviews and <code>.summary-card</code> all styled in both variants.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.3-3 -->
                         <section id="v103r3" class="content-section">
