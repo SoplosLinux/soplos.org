@@ -131,7 +131,7 @@
 
                         <section class="content-section" id="overview">
                             <h2><span id="theme-manager-overview-title">Overview</span></h2>
-                            <p id="theme-manager-overview-p1">Soplos Theme Manager v2.0 is the official theming tool for Soplos Linux Tyron (XFCE). It brings together in a single application everything needed to control the look and feel of the desktop: theme gallery, wallpaper browser, user manager, panel configuration and dock management.</p>
+                            <p id="theme-manager-overview-p1">Soplos Theme Manager v2.0.1 is the official theming tool for Soplos Linux Tyron (XFCE). It brings together in a single application everything needed to control the look and feel of the desktop: theme gallery, wallpaper browser, GTK themes, icons and cursors, panel configuration, dock management and login screen settings.</p>
                             <p id="theme-manager-overview-p2">Themes can be exported and imported as .sth files — a portable bundle that captures the complete desktop state and can be shared or restored on any Tyron installation.</p>
                         </section>
 
@@ -140,12 +140,12 @@
                             <ul>
                                 <li><strong id="theme-manager-feat-1-title">Theme Gallery:</strong> <span id="theme-manager-feat-1-desc">Apply, create, export and import complete XFCE desktop themes. Each theme card shows an automatic screenshot preview captured with the desktop minimized.</span></li>
                                 <li><strong id="theme-manager-feat-2-title">Wallpaper Browser:</strong> <span id="theme-manager-feat-2-desc">Browse and apply wallpapers from system directories. Thumbnails are decoded in a background thread for near-instant loading.</span></li>
-                                <li><strong id="theme-manager-feat-3-title">User Manager:</strong> <span id="theme-manager-feat-3-desc">Set the user avatar with a crop dialog, edit personal data and manage group membership with checkboxes — changes applied via polkit. Replaces Mugshot.</span></li>
-                                <li><strong id="theme-manager-feat-4-title">Panel:</strong> <span id="theme-manager-feat-4-desc">Full XFCE panel configuration — position, size, icon size, length, rows, auto-hide, dark mode and lock. Add, remove and reorder plugins from a single interface.</span></li>
-                                <li><strong id="theme-manager-feat-5-title">Dock:</strong> <span id="theme-manager-feat-5-desc">Manage Docklike Taskbar pinned applications — add, remove and reorder from a browsable app list. Docklike configuration is fully integrated here.</span></li>
-                                <li><strong id="theme-manager-feat-6-title">Theme Bundles (.sth):</strong> <span id="theme-manager-feat-6-desc">Export and import themes as .sth files (tar.gz + manifest). A single file captures the entire desktop configuration and can be shared across Tyron installations.</span></li>
-                                <li><strong id="theme-manager-feat-7-title">Theme Scope:</strong> <span id="theme-manager-feat-7-desc">When applying a theme, choose between user-scope install (~/.themes, ~/.icons) or global install for all users (/usr/share/themes, /usr/share/icons) via pkexec privilege elevation.</span></li>
-                                <li><strong id="theme-manager-feat-8-title">Base Themes:</strong> <span id="theme-manager-feat-8-desc">Bundled base themes are automatically seeded into the user's theme library on first launch. A Restore button reimports any missing base themes on demand without overwriting existing ones.</span></li>
+                                <li><strong id="theme-manager-feat-3-title">GTK Themes:</strong> <span id="theme-manager-feat-3-desc">Browse and activate installed GTK themes. Install new ones directly from a package with a single click.</span></li>
+                                <li><strong id="theme-manager-feat-4-title">Icons &amp; Cursors:</strong> <span id="theme-manager-feat-4-desc">Switch icon theme and cursor theme independently. Shows the number of installed themes and the currently active one at a glance.</span></li>
+                                <li><strong id="theme-manager-feat-5-title">Panel:</strong> <span id="theme-manager-feat-5-desc">Full XFCE panel configuration — position, size, icon size, length, rows, auto-hide, dark mode and lock. Add, remove and reorder plugins from a single interface.</span></li>
+                                <li><strong id="theme-manager-feat-6-title">Dock:</strong> <span id="theme-manager-feat-6-desc">Manage Docklike Taskbar pinned applications — add, remove and reorder from a browsable app list with live preview of the resulting dock.</span></li>
+                                <li><strong id="theme-manager-feat-7-title">Login Screen (LightDM):</strong> <span id="theme-manager-feat-7-desc">Configure the LightDM greeter — GTK theme, icon theme, cursor, font, background, user image, login box position and clock format.</span></li>
+                                <li><strong id="theme-manager-feat-8-title">Theme Bundles (.sth):</strong> <span id="theme-manager-feat-8-desc">Export and import themes as .sth files (tar.gz + manifest). A single file captures the entire desktop configuration and can be shared across Tyron installations.</span></li>
                             </ul>
                         </section>
 
@@ -153,24 +153,40 @@
                             <h2><span id="theme-manager-screenshots-title">Screenshots</span></h2>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/apps/soplos-theme-manager/screenshot1.png" alt="Theme Manager gallery">
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot1.png" alt="Theme Gallery">
                                     <figcaption id="theme-manager-screenshot-1">Theme Gallery</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-theme-manager/screenshot2.png" alt="Wallpaper browser">
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot2.png" alt="Wallpaper Browser">
                                     <figcaption id="theme-manager-screenshot-2">Wallpaper Browser</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-theme-manager/screenshot3.png" alt="User manager">
-                                    <figcaption id="theme-manager-screenshot-3">User Manager</figcaption>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot3.png" alt="GTK Themes">
+                                    <figcaption id="theme-manager-screenshot-3">GTK Themes</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-theme-manager/screenshot4.png" alt="Panel configuration">
-                                    <figcaption id="theme-manager-screenshot-4">Panel Configuration</figcaption>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot4.png" alt="Icons and Cursors">
+                                    <figcaption id="theme-manager-screenshot-4">Icons &amp; Cursors</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-theme-manager/screenshot5.png" alt="Dock management">
-                                    <figcaption id="theme-manager-screenshot-5">Dock Management</figcaption>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot5.png" alt="Panel Configuration">
+                                    <figcaption id="theme-manager-screenshot-5">Panel Configuration</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot6.png" alt="Panel Plugins">
+                                    <figcaption id="theme-manager-screenshot-6">Panel Plugins</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot7.png" alt="Dock Management">
+                                    <figcaption id="theme-manager-screenshot-7">Dock Management</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot8.png" alt="Login Screen">
+                                    <figcaption id="theme-manager-screenshot-8">Login Screen (LightDM)</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="../../../images/apps/soplos-theme-manager/screenshot9.png" alt="Login Screen settings">
+                                    <figcaption id="theme-manager-screenshot-9">Login Screen — Position &amp; Clock</figcaption>
                                 </figure>
                             </div>
                         </section>
