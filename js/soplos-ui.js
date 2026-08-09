@@ -1,5 +1,5 @@
 /**
- * Soplos UI Components
+ * SlopOS UI Components
  * Consolidated logic for Carousels, Modals, and Scroll effects.
  */
 
@@ -104,9 +104,9 @@ class ScrollController {
 }
 
 /* =========================================
-   Soplos Carousel (Mobile)
+   SlopOS Carousel (Mobile)
    ========================================= */
-class SoplosCarousel {
+class SlopOSCarousel {
     constructor(containerSelector, itemSelector, options = {}) {
         this.container = document.querySelector(containerSelector);
         this.itemSelector = itemSelector;
@@ -343,7 +343,7 @@ class SoplosCarousel {
             // Features carousel had a specific transform (translateX(-50%) scale(...)) because it was top:0
             // We can normalize this. If we set top:50% left:50% for all, the above formula works.
             // But if 'feature-card' needs top:0, we might need adjustment.
-            // Let's stick to the generic one which centers everything. 
+            // Let's stick to the generic one which centers everything.
             // If feature-card looks weird, we might need to adjust its CSS or this logic.
             // Actually, features-carousel.js used: translateX(calc(${(i - idx) * 100}% - 50%))
             // which is equivalent to translate(-50%) translateX(...) if we ignore the second translate(-50%) for Y.
@@ -412,9 +412,9 @@ class SoplosCarousel {
 }
 
 /* =========================================
-   Soplos Modal (Base)
+   SlopOS Modal (Base)
    ========================================= */
-class SoplosModal {
+class SlopOSModal {
     constructor(modalId, options = {}) {
         this.modal = document.getElementById(modalId);
         this.options = options;
@@ -483,9 +483,9 @@ class SoplosModal {
 }
 
 /* =========================================
-   Soplos Image Modal (Gallery & Apps)
+   SlopOS Image Modal (Gallery & Apps)
    ========================================= */
-class SoplosImageModal extends SoplosModal {
+class SlopOSImageModal extends SlopOSModal {
     constructor(modalId, options = {}) {
         super(modalId, options);
 
@@ -713,7 +713,7 @@ class BreadcrumbController {
                 newLink.id = dictKey;
                 // Try translation first
                 newLink.textContent = window.getTranslatedText ? window.getTranslatedText(dictKey) : (
-                    dictKey === 'apps-tyron-breadcrumb' ? 'Tyron Apps' : 
+                    dictKey === 'apps-tyron-breadcrumb' ? 'Tyron Apps' :
                     dictKey === 'apps-boro-breadcrumb' ? 'Boro Apps' : 'Tyson Apps'
                 );
 
@@ -815,11 +815,11 @@ class TableExpandController {
 }
 
 // Export classes globally
-window.SoplosUI = {
+window.SlopOSUI = {
     ScrollController,
-    SoplosCarousel,
-    SoplosModal,
-    SoplosImageModal,
+    SlopOSCarousel,
+    SlopOSModal,
+    SlopOSImageModal,
     BreadcrumbController,
     TableExpandController
 };

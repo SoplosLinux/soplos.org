@@ -1,173 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://soplos.org/</loc>
+    <loc>https://slopos.org/</loc>
     <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://soplos.org/legal/privacy.html</loc>
+    <loc>https://slopos.org/legal/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://soplos.org/legal/terms.html</loc>
+    <loc>https://slopos.org/legal/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/</loc>
+    <loc>https://slopos.org/wiki/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/install/</loc>
+    <loc>https://slopos.org/wiki/install/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/start/</loc>
+    <loc>https://slopos.org/wiki/start/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/faq/</loc>
+    <loc>https://slopos.org/wiki/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/customization/</loc>
+    <loc>https://slopos.org/wiki/customization/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/themes/</loc>
+    <loc>https://slopos.org/wiki/themes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/troubleshooting/</loc>
+    <loc>https://slopos.org/wiki/troubleshooting/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/community/</loc>
+    <loc>https://slopos.org/wiki/community/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/contact/</loc>
+    <loc>https://slopos.org/wiki/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/tyron/</loc>
+    <loc>https://slopos.org/wiki/tyron/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/tyson/</loc>
+    <loc>https://slopos.org/wiki/tyson/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/boro/</loc>
+    <loc>https://slopos.org/wiki/boro/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/</loc>
+    <loc>https://slopos.org/wiki/applications/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-welcome/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-welcome/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-welcome-live/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-welcome-live/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-repo-selector/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-repo-selector/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-grub-editor/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-grub-editor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-plymouth-manager/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-plymouth-manager/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-docklike/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-docklike/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/soplos-theme-manager/</loc>
+    <loc>https://slopos.org/wiki/applications/slopos-theme-manager/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/tyron/</loc>
+    <loc>https://slopos.org/wiki/applications/tyron/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/tyson/</loc>
+    <loc>https://slopos.org/wiki/applications/tyson/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/applications/boro/</loc>
+    <loc>https://slopos.org/wiki/applications/boro/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/system/updates/</loc>
+    <loc>https://slopos.org/wiki/system/updates/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/system/packages/</loc>
+    <loc>https://slopos.org/wiki/system/packages/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/system/security/</loc>
+    <loc>https://slopos.org/wiki/system/security/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/system/backup/</loc>
+    <loc>https://slopos.org/wiki/system/backup/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/development/contribute/</loc>
+    <loc>https://slopos.org/wiki/development/contribute/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/development/building/</loc>
+    <loc>https://slopos.org/wiki/development/building/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/development/packaging/</loc>
+    <loc>https://slopos.org/wiki/development/packaging/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://soplos.org/wiki/development/api/</loc>
+    <loc>https://slopos.org/wiki/development/api/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

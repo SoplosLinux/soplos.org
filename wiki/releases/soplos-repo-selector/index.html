@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="rs-rel-page-title">Soplos Repo Selector — Releases</title>
-    <meta name="description" content="Release history and changelog for Soplos Repo Selector.">
+    <title id="rs-rel-page-title">SlopOS Repo Selector — Releases</title>
+    <meta name="description" content="Release history and changelog for SlopOS Repo Selector.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -34,7 +34,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../../#download" id="menuDownload">Download</a></li>
                             </ul>
@@ -59,9 +59,9 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../" id="breadcrumbReleases">Releases</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current" id="rs-rel-breadcrumb">Soplos Repo Selector</span>
+                <span class="breadcrumb-current" id="rs-rel-breadcrumb">SlopOS Repo Selector</span>
             </nav>
         </div>
     </div>
@@ -107,7 +107,7 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><img src="../../../images/icons/org.soplos.reposelector.png" alt="Soplos Repo Selector" class="hero-app-icon"> <span id="rs-rel-hero-title">Soplos Repo Selector</span></h1>
+                        <h1><img src="../../../images/icons/org.slopos.reposelector.png" alt="SlopOS Repo Selector" class="hero-app-icon"> <span id="rs-rel-hero-title">SlopOS Repo Selector</span></h1>
                         <p id="rs-rel-hero-subtitle">APT repository manager with real-time search, DEB822 moderniser, mirror speed testing, GPG key management and full 8-language internationalisation.</p>
                     </div>
                 </div>
@@ -197,14 +197,14 @@
                         <!-- 2.0.2-7 -->
                         <section id="v202-7" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="rs-rel-202-7-title">2.0.2-7 — April 2026</span></h2>
-                            <p id="rs-rel-202-7-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern Soplos layout standard.</p>
+                            <p id="rs-rel-202-7-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern SlopOS layout standard.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="rs-rel-202-7-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern Soplos standard layout (<code>XFCE · X11</code>).</li>
+                                <li id="rs-rel-202-7-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern SlopOS standard layout (<code>XFCE · X11</code>).</li>
                             </ul>
                         </section>
 
@@ -271,7 +271,7 @@
                                 <li id="rs-rel-202-4-fixed-li1"><strong>HeaderBar CSS:</strong> Global <code>button {}</code> rule no longer overrides CSD window controls (close/minimize/maximize) on GNOME.</li>
                                 <li id="rs-rel-202-4-fixed-li2"><strong>Double repository load:</strong> Repositories were loaded twice on startup and twice after each save/modernise operation; fixed by using the cache properly.</li>
                                 <li id="rs-rel-202-4-fixed-li3"><strong>Bare <code>except:</code> clauses:</strong> Replaced with <code>except Exception:</code> in <code>repo_file_manager.py</code>.</li>
-                                <li id="rs-rel-202-4-fixed-li4"><strong>Email and version docstring:</strong> Email corrected to <code>info@soploslinux.com</code> and version docstring updated to 2.0.2.</li>
+                                <li id="rs-rel-202-4-fixed-li4"><strong>Email and version docstring:</strong> Email corrected to <code>info@sloposlinux.com</code> and version docstring updated to 2.0.2.</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -354,9 +354,9 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="rs-rel-202-docs-li1"><strong>Man page:</strong> Complete manual page (<code>docs/soplos-repo-selector.1</code>) with standard sections (NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT, SEE ALSO).</li>
+                                <li id="rs-rel-202-docs-li1"><strong>Man page:</strong> Complete manual page (<code>docs/slopos-repo-selector.1</code>) with standard sections (NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT, SEE ALSO).</li>
                                 <li id="rs-rel-202-docs-li2"><strong>Debian copyright:</strong> Machine-readable copyright file (<code>debian/copyright</code>) following Debian 1.0 format with full GPL-3.0+ license block.</li>
-                                <li id="rs-rel-202-docs-li3"><strong>Packager integration:</strong> Updated <code>soplos-packager</code> to automatically include documentation in generated <code>.deb</code> packages.</li>
+                                <li id="rs-rel-202-docs-li3"><strong>Packager integration:</strong> Updated <code>slopos-packager</code> to automatically include documentation in generated <code>.deb</code> packages.</li>
                             </ul>
                         </section>
 
@@ -410,9 +410,9 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="rs-rel-200-changed-li1"><strong>App ID:</strong> Changed to <code>org.soplos.reposelector</code>.</li>
+                                <li id="rs-rel-200-changed-li1"><strong>App ID:</strong> Changed to <code>org.slopos.reposelector</code>.</li>
                                 <li id="rs-rel-200-changed-li2"><strong>i18n system:</strong> Migrated to GNU Gettext standard with <code>.mo</code> files; complete translation coverage for all 8 languages.</li>
-                                <li id="rs-rel-200-changed-li3"><strong>Theming engine:</strong> CSS-based engine aligned with Soplos Welcome; automatic dark/light theme detection with improved visual consistency.</li>
+                                <li id="rs-rel-200-changed-li3"><strong>Theming engine:</strong> CSS-based engine aligned with SlopOS Welcome; automatic dark/light theme detection with improved visual consistency.</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -549,7 +549,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="rs-rel-ts-103-fixed-li1"><strong>Blue colour issue:</strong> Resolved forced Adwaita theme that caused incorrect colours in Soplos orange environments.</li>
+                                <li id="rs-rel-ts-103-fixed-li1"><strong>Blue colour issue:</strong> Resolved forced Adwaita theme that caused incorrect colours in SlopOS orange environments.</li>
                                 <li id="rs-rel-ts-103-fixed-li2"><strong>GTK configuration:</strong> Avoids overwriting user theme configurations.</li>
                             </ul>
                         </section>
@@ -633,7 +633,7 @@
                             <ul>
                                 <li id="rs-rel-tr-101-added-li1"><strong>Complete i18n system:</strong> Support for 8 languages: ES, EN, FR, PT, DE, IT, RU, RO with full UI localisation.</li>
                                 <li id="rs-rel-tr-101-added-li2"><strong>Automatic language detection:</strong> Based on system configuration with robust fallback system.</li>
-                                <li id="rs-rel-tr-101-added-li3"><strong>Tyron distribution templates:</strong> Quick access to preconfigured repository templates for Soplos Linux Tyron.</li>
+                                <li id="rs-rel-tr-101-added-li3"><strong>Tyron distribution templates:</strong> Quick access to preconfigured repository templates for SlopOS Linux Tyron.</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -751,10 +751,10 @@
 
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            if (window.SoplosUI) new SoplosUI.ScrollController();
+            if (window.SlopOSUI) new SlopOSUI.ScrollController();
         });
     </script>
     <script>

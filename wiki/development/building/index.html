@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Development Tools - Soplos Wiki</title>
-    <meta name="description" content="Overview of the internal tools used to build Soplos.">
-    <meta name="keywords" content="soplos, linux, build, iso, source, live-build, development">
+    <title>Development Tools - SlopOS Wiki</title>
+    <meta name="description" content="Overview of the internal tools used to build SlopOS.">
+    <meta name="keywords" content="slopos, linux, build, iso, source, live-build, development">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Building from Source - Soplos Linux Wiki">
-    <meta property="og:description" content="Create your own Soplos Linux ISO.">
+    <meta property="og:title" content="Building from Source - SlopOS Linux Wiki">
+    <meta property="og:description" content="Create your own SlopOS Linux ISO.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
-    
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
+
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -23,7 +23,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -40,7 +40,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../index.html#requirements" id="menuRequirements">System
                                         Requirements</a></li>
                                 <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
@@ -66,11 +66,11 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a>
                                 </li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -116,7 +116,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1><i class="fas fa-hammer"></i> <span id="building-hero-title">Building from Source</span></h1>
-                    <p id="building-hero-desc">An overview of the internal tools used to build Soplos.</p>
+                    <p id="building-hero-desc">An overview of the internal tools used to build SlopOS.</p>
                 </div>
             </div>
         </section>
@@ -130,12 +130,12 @@
                         <h3 id="building-toc-title">Contents</h3>
                         <ul>
                             <li><a href="#overview" id="building-toc-overview">Overview</a></li>
-                            <li><a href="#tools" id="building-toc-tools">Soplos Tools</a>
+                            <li><a href="#tools" id="building-toc-tools">SlopOS Tools</a>
                                 <ul>
-                                    <li><a href="#tool-kernel">Soplos Kernel Installer</a></li>
-                                    <li><a href="#tool-repo">Soplos Repo Manager</a></li>
-                                    <li><a href="#tool-packager">Soplos Packager</a></li>
-                                    <li><a href="#tool-iso">Soplos ISO Builder</a></li>
+                                    <li><a href="#tool-kernel">SlopOS Kernel Installer</a></li>
+                                    <li><a href="#tool-repo">SlopOS Repo Manager</a></li>
+                                    <li><a href="#tool-packager">SlopOS Packager</a></li>
+                                    <li><a href="#tool-iso">SlopOS ISO Builder</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -145,7 +145,7 @@
                     <article class="main-content">
                         <section id="overview" class="content-section">
                             <h2><i class="fas fa-info-circle"></i> <span id="building-overview-title">Overview</span></h2>
-                            <p id="building-overview-desc">Soplos Linux is built using a set of custom tools developed specifically for the
+                            <p id="building-overview-desc">SlopOS Linux is built using a set of custom tools developed specifically for the
                                 distribution. This page provides an overview of the build infrastructure.</p>
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
@@ -157,53 +157,53 @@
                         </section>
 
                         <section id="tools" class="content-section">
-                            <h2><i class="fas fa-toolbox"></i> <span id="building-tools-title">Soplos Tools</span></h2>
-                            <p id="building-tools-intro">The Soplos build infrastructure consists of several specialized tools:</p>
+                            <h2><i class="fas fa-toolbox"></i> <span id="building-tools-title">SlopOS Tools</span></h2>
+                            <p id="building-tools-intro">The SlopOS build infrastructure consists of several specialized tools:</p>
 
-                            <h3 id="tool-kernel">Soplos Kernel Installer</h3>
-                            <p id="building-tools-kernel-desc">Handles compilation and packaging of the Soplos-optimized Linux kernel. It is the only build tool publicly available — users on Soplos Linux can install it to compile custom kernels.</p>
+                            <h3 id="tool-kernel">SlopOS Kernel Installer</h3>
+                            <p id="building-tools-kernel-desc">Handles compilation and packaging of the SlopOS-optimized Linux kernel. It is the only build tool publicly available — users on SlopOS Linux can install it to compile custom kernels.</p>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/apps/soplos-kernel-installer/screenshot4.png" alt="Soplos Kernel Installer">
+                                    <img src="../../../images/apps/slopos-kernel-installer/screenshot4.png" alt="SlopOS Kernel Installer">
                                     <figcaption id="building-screenshot-kernel-1">Kernel Installer</figcaption>
                                 </figure>
                             </div>
 
-                            <h3 id="tool-repo">Soplos Repo Manager</h3>
-                            <p id="building-tools-repo-desc">Manages the official Soplos Linux package repositories: signing, metadata updates and mirror synchronization. Internal use only.</p>
+                            <h3 id="tool-repo">SlopOS Repo Manager</h3>
+                            <p id="building-tools-repo-desc">Manages the official SlopOS Linux package repositories: signing, metadata updates and mirror synchronization. Internal use only.</p>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/apps/soplos-repo-manager/screenshot1.png" alt="Soplos Repo Manager">
+                                    <img src="../../../images/apps/slopos-repo-manager/screenshot1.png" alt="SlopOS Repo Manager">
                                     <figcaption id="building-screenshot-repo-1">Repo Manager</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-repo-manager/screenshot2.png" alt="Soplos Repo Manager">
+                                    <img src="../../../images/apps/slopos-repo-manager/screenshot2.png" alt="SlopOS Repo Manager">
                                     <figcaption id="building-screenshot-repo-2">Repo Manager</figcaption>
                                 </figure>
                             </div>
 
-                            <h3 id="tool-packager">Soplos Packager</h3>
+                            <h3 id="tool-packager">SlopOS Packager</h3>
                             <p id="building-tools-pkg-desc">Simplifies the creation of <code>.deb</code> packages with proper metadata, dependencies and AppStream metainfo. Internal use only.</p>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/apps/soplos-packager/screenshot1.png" alt="Soplos Packager">
+                                    <img src="../../../images/apps/slopos-packager/screenshot1.png" alt="SlopOS Packager">
                                     <figcaption id="building-screenshot-pkg-1">Packager</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-packager/screenshot2.png" alt="Soplos Packager">
+                                    <img src="../../../images/apps/slopos-packager/screenshot2.png" alt="SlopOS Packager">
                                     <figcaption id="building-screenshot-pkg-2">Packager</figcaption>
                                 </figure>
                             </div>
 
-                            <h3 id="tool-iso">Soplos ISO Builder</h3>
-                            <p id="building-tools-iso-desc">Creates bootable ISO images for all Soplos editions (Boro, Tyron, Tyson). Handles package selection, live environment setup and Calamares integration. Internal use only.</p>
+                            <h3 id="tool-iso">SlopOS ISO Builder</h3>
+                            <p id="building-tools-iso-desc">Creates bootable ISO images for all SlopOS editions (Boro, Tyron, Tyson). Handles package selection, live environment setup and Calamares integration. Internal use only.</p>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/apps/soplos-iso-builder/screenshot1.png" alt="Soplos ISO Builder">
+                                    <img src="../../../images/apps/slopos-iso-builder/screenshot1.png" alt="SlopOS ISO Builder">
                                     <figcaption id="building-screenshot-iso-1">ISO Builder</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-iso-builder/screenshot2.png" alt="Soplos ISO Builder">
+                                    <img src="../../../images/apps/slopos-iso-builder/screenshot2.png" alt="SlopOS ISO Builder">
                                     <figcaption id="building-screenshot-iso-2">ISO Builder</figcaption>
                                 </figure>
                             </div>
@@ -233,7 +233,7 @@
     <script src="../../../js/logger.js"></script>
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
 

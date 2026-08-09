@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="wl-rel-page-title">Soplos Welcome Live — Releases</title>
-    <meta name="description" content="Release history and changelog for Soplos Welcome Live.">
+    <title id="wl-rel-page-title">SlopOS Welcome Live — Releases</title>
+    <meta name="description" content="Release history and changelog for SlopOS Welcome Live.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -34,7 +34,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../../#download" id="menuDownload">Download</a></li>
                             </ul>
@@ -59,9 +59,9 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../" id="breadcrumbReleases">Releases</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current" id="wl-rel-breadcrumb">Soplos Welcome Live</span>
+                <span class="breadcrumb-current" id="wl-rel-breadcrumb">SlopOS Welcome Live</span>
             </nav>
         </div>
     </div>
@@ -107,8 +107,8 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><img src="../../../images/icons/org.soplos.welcomelive.png" alt="Soplos Welcome Live" class="hero-app-icon"> <span id="wl-rel-hero-title">Soplos Welcome Live</span></h1>
-                        <p id="wl-rel-hero-subtitle">Welcome application for Soplos Linux Live — Calamares installer integration and advanced CHROOT system recovery with full BTRFS support for XFCE, KDE Plasma and GNOME.</p>
+                        <h1><img src="../../../images/icons/org.slopos.welcomelive.png" alt="SlopOS Welcome Live" class="hero-app-icon"> <span id="wl-rel-hero-title">SlopOS Welcome Live</span></h1>
+                        <p id="wl-rel-hero-subtitle">Welcome application for SlopOS Linux Live — Calamares installer integration and advanced CHROOT system recovery with full BTRFS support for XFCE, KDE Plasma and GNOME.</p>
                     </div>
                 </div>
             </section>
@@ -170,14 +170,14 @@
                         <!-- 2.0.2-8 -->
                         <section id="v2028" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="wl-rel-2028-title">2.0.2-8 — July 2026</span></h2>
-                            <p id="wl-rel-2028-subtitle" class="lead">Donate link updated to point to the Soplos donations page instead of PayPal directly.</p>
+                            <p id="wl-rel-2028-subtitle" class="lead">Donate link updated to point to the SlopOS donations page instead of PayPal directly.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-2028-changed-li1"><strong>Donate link:</strong> Now points to <code>https://soplos.org/community/donate/</code> instead of PayPal directly.</li>
+                                <li id="wl-rel-2028-changed-li1"><strong>Donate link:</strong> Now points to <code>https://slopos.org/community/donate/</code> instead of PayPal directly.</li>
                             </ul>
                         </section>
 
@@ -233,7 +233,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-2024-fixed-li1"><strong>Language changer — dynamic display manager detection:</strong> The language changer now uses <code>systemctl is-active</code> to detect the running display manager before restarting it, instead of always using the generic <code>display-manager.service</code> alias. On Tyson RC1 it restarts <code>plasmalogin</code> directly; on beta ISOs still on SDDM it restarts <code>sddm</code>; the generic alias is only used as a last resort. This resolves a bug on VirtualBox where the hot restart caused plasmalogin to show the Breeze wallpaper instead of the Soplos one and triggered a ksplashqml crash cascade on login.</li>
+                                <li id="wl-rel-2024-fixed-li1"><strong>Language changer — dynamic display manager detection:</strong> The language changer now uses <code>systemctl is-active</code> to detect the running display manager before restarting it, instead of always using the generic <code>display-manager.service</code> alias. On Tyson RC1 it restarts <code>plasmalogin</code> directly; on beta ISOs still on SDDM it restarts <code>sddm</code>; the generic alias is only used as a last resort. This resolves a bug on VirtualBox where the hot restart caused plasmalogin to show the Breeze wallpaper instead of the SlopOS one and triggered a ksplashqml crash cascade on login.</li>
                             </ul>
                         </section>
 
@@ -347,7 +347,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-201-added-li1"><strong>Man page</strong> (<code>docs/soplos-welcome-live.1</code>) with standard sections: NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT, SEE ALSO.</li>
+                                <li id="wl-rel-201-added-li1"><strong>Man page</strong> (<code>docs/slopos-welcome-live.1</code>) with standard sections: NAME, SYNOPSIS, DESCRIPTION, OPTIONS, FILES, AUTHOR, COPYRIGHT, SEE ALSO.</li>
                                 <li id="wl-rel-201-added-li2"><strong>Debian copyright file</strong> (<code>debian/copyright</code>) following Debian 1.0 format with full GPL-3.0+ license block.</li>
                             </ul>
                         </section>
@@ -362,7 +362,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-200-added-li1"><strong>Modular architecture:</strong> Core, UI, Config and Utils layers matching Soplos Welcome 2.0. Clean separation of concerns for maintainability.</li>
+                                <li id="wl-rel-200-added-li1"><strong>Modular architecture:</strong> Core, UI, Config and Utils layers matching SlopOS Welcome 2.0. Clean separation of concerns for maintainability.</li>
                                 <li id="wl-rel-200-added-li2"><strong>Universal desktop support:</strong> Single codebase for XFCE with NumLock integration, KDE Plasma with native integration and GNOME (Boro) with full compatibility. Smart DE detection.</li>
                                 <li id="wl-rel-200-added-li3"><strong>Full Wayland support:</strong> Complete X11 and Wayland compatibility with automatic protocol detection.</li>
                                 <li id="wl-rel-200-added-li4"><strong>GNU Gettext i18n:</strong> Migrated to <code>.po</code>/<code>.mo</code> files. 8 languages at 100%: ES, EN, FR, DE, PT, IT, RO, RU. Keyboard mnemonics in all languages and automatic locale detection.</li>
@@ -378,7 +378,7 @@
                                 <li id="wl-rel-200-changed-li2"><strong>Patch 2025-12-09 — KDE bookmarks:</strong> Removed remapping logic; language switcher now deletes <code>~/.local/share/user-places.xbel</code> before restarting the session so KDE/Dolphin regenerates localized bookmarks.</li>
                                 <li id="wl-rel-200-changed-li3"><strong>Patch 2025-12-09 — GNOME/Wayland display:</strong> Robust D-Bus parsing for <code>GetCurrentState</code>, GDK-first fallback for screen geometry, safer <code>ApplyMonitorsConfig</code> usage, increased D-Bus timeout to 5 s, best refresh rate selection when multiple modes match.</li>
                                 <li id="wl-rel-200-changed-li4"><strong>Patch 2025-12-10 — CHROOT:</strong> Re-implemented robust chroot logic with <code>safe_umount</code>, strict mounting sequence and validation. Cross-DE terminal detection (Kitty/Xfce4-terminal for XFCE, Konsole for Plasma, Gnome-terminal/Ptyxis for GNOME).</li>
-                                <li id="wl-rel-200-changed-li5"><strong>Patch 2025-12-10 — Resolution persistence:</strong> GNOME Wayland switched to persistent <code>ApplyMonitorsConfig</code>; XFCE X11 generates autostart script (<code>soplos-resolution.desktop</code>).</li>
+                                <li id="wl-rel-200-changed-li5"><strong>Patch 2025-12-10 — Resolution persistence:</strong> GNOME Wayland switched to persistent <code>ApplyMonitorsConfig</code>; XFCE X11 generates autostart script (<code>slopos-resolution.desktop</code>).</li>
                                 <li id="wl-rel-200-changed-li6"><strong>Patch 2025-12-10 — Translations:</strong> Complete quality review and refinement of all 8 languages ensuring 100% string coverage and natural phrasing.</li>
                             </ul>
                         </section>
@@ -410,7 +410,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-ts-115-li1"><strong>Welcome tab URLs</strong> updated to soplos.org.</li>
+                                <li id="wl-rel-ts-115-li1"><strong>Welcome tab URLs</strong> updated to slopos.org.</li>
                             </ul>
                         </section>
 
@@ -486,7 +486,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-tr-111-li1"><strong>Welcome tab URLs</strong> updated to soplos.org.</li>
+                                <li id="wl-rel-tr-111-li1"><strong>Welcome tab URLs</strong> updated to slopos.org.</li>
                             </ul>
                         </section>
 
@@ -544,7 +544,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-tr-109-li1"><strong>Program icon</strong> updated to new design for better Soplos Linux branding integration.</li>
+                                <li id="wl-rel-tr-109-li1"><strong>Program icon</strong> updated to new design for better SlopOS Linux branding integration.</li>
                             </ul>
                         </section>
 
@@ -740,7 +740,7 @@
                         <!-- 1.0.3 Tyson -->
                         <section id="ts-v103" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-103-title">1.0.3 — June 2025 <em>(Tyson only)</em></span></h2>
-                            <p id="wl-rel-ts-103-subtitle" class="lead">Initial release of Soplos Welcome Live for KDE Plasma.</p>
+                            <p id="wl-rel-ts-103-subtitle" class="lead">Initial release of SlopOS Welcome Live for KDE Plasma.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
@@ -828,7 +828,7 @@
                         <!-- 1.0.0 Tyson -->
                         <section id="ts-v100" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="wl-rel-ts-100-title">1.0.0 — May 2025 <em>(Tyson only)</em></span></h2>
-                            <p id="wl-rel-ts-100-subtitle" class="lead">Initial release of Soplos Welcome Live for KDE Plasma.</p>
+                            <p id="wl-rel-ts-100-subtitle" class="lead">Initial release of SlopOS Welcome Live for KDE Plasma.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
@@ -845,14 +845,14 @@
                         <!-- 1.0.0 Tyron -->
                         <section id="tr-v100" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="wl-rel-tr-100-title">1.0.0 — April 2025 <em>(Tyron only)</em></span></h2>
-                            <p id="wl-rel-tr-100-subtitle" class="lead">Initial release of Soplos Welcome Live for XFCE.</p>
+                            <p id="wl-rel-tr-100-subtitle" class="lead">Initial release of SlopOS Welcome Live for XFCE.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="wl-rel-tr-100-li1"><strong>Basic welcome interface</strong> for Soplos Linux Live.</li>
+                                <li id="wl-rel-tr-100-li1"><strong>Basic welcome interface</strong> for SlopOS Linux Live.</li>
                                 <li id="wl-rel-tr-100-li2"><strong>Basic CHROOT functionality</strong> for system recovery.</li>
                                 <li id="wl-rel-tr-100-li3"><strong>Initial multi-language support.</strong></li>
                             </ul>
@@ -878,10 +878,10 @@
 
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            if (window.SoplosUI) new SoplosUI.ScrollController();
+            if (window.SlopOSUI) new SlopOSUI.ScrollController();
         });
     </script>
     <script>

@@ -7,7 +7,7 @@
    1. VARIABLES Y RESET
    ========================= */
 :root {
-  /* Official Soplos Linux Colors */
+  /* Official SlopOS Linux Colors */
   --primary-color: #ff7d2e;
   --secondary-color: #fec431;
   --dark-color: #252527;
@@ -1763,7 +1763,7 @@ footer .container p {
 
 /* Accent class to reuse success decoration for specific tip/info boxes */
 .info-box.accent-success {
-  /* Use Soplos primary/orange accent instead of success/green */
+  /* Use SlopOS primary/orange accent instead of success/green */
   background-color: rgba(255, 125, 46, 0.1);
   border-left: 4px solid var(--primary-color);
   color: var(--primary-color);
@@ -1771,7 +1771,7 @@ footer .container p {
 
 /* Accent class to reuse warning decoration for specific tip/info boxes */
 .info-box.accent-warning {
-  /* Use Soplos secondary/yellow accent for warnings */
+  /* Use SlopOS secondary/yellow accent for warnings */
   background-color: rgba(254, 196, 49, 0.1);
   border-left: 4px solid var(--secondary-color);
   color: var(--secondary-color);

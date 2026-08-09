@@ -90,8 +90,8 @@ $currencies = ['EUR', 'USD', 'GBP'];
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donations Admin — Soplos Linux</title>
-<link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+<title>Donations Admin — SlopOS Linux</title>
+<link rel="icon" href="../../images/logo/slopos-logo.png" type="image/png">
 <link rel="stylesheet" href="../../styles/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
@@ -223,7 +223,7 @@ $currencies = ['EUR', 'USD', 'GBP'];
     <div class="container">
         <div class="logo">
             <a href="../../">
-                <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                <img src="../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
             </a>
             <img class="mourning-ribbon" src="../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
         </div>
@@ -239,7 +239,7 @@ $currencies = ['EUR', 'USD', 'GBP'];
                         <ul class="submenu">
                             <li><a href="../../index.html#features" id="menuFeatures">Features</a></li>
                             <li><a href="../../index.html#galleries" id="menuGalleries">Galleries</a></li>
-                            <li><a href="../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                            <li><a href="../../index.html#apps" id="menuApps">SlopOS Apps</a></li>
                             <li><a href="../../index.html#requirements" id="menuRequirements">System Requirements</a></li>
                             <li><a href="../../index.html#download" id="menuDownload">Download</a></li>
                         </ul>
@@ -259,9 +259,9 @@ $currencies = ['EUR', 'USD', 'GBP'];
                             <li><a href="/community/contributors/" id="menuContributors">Contributors</a></li>
                             <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                             <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
-                            <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                            <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                            <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                            <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                            <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                            <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
                         </ul>
                     </li>
@@ -506,7 +506,7 @@ $currencies = ['EUR', 'USD', 'GBP'];
 <script src="../../js/logger.js"></script>
 <script src="../../js/language-loader.js"></script>
 <script src="../../js/language-switcher.js"></script>
-<script src="../../js/soplos-ui.js"></script>
+<script src="../../js/slopos-ui.js"></script>
 <script src="../../js/main.js"></script>
 </body>
 </html>
