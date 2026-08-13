@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v101r9" class="toc-link">1.0.1-9 <span class="toc-date">— 2026-08-13</span></a></li>
                             <li><a href="#v101r8" class="toc-link">1.0.1-8 <span class="toc-date">— 2026-07-28</span></a></li>
                             <li><a href="#v101r7" class="toc-link">1.0.1-7 <span class="toc-date">— 2026-07-26</span></a></li>
                             <li><a href="#v101r6" class="toc-link">1.0.1-6 <span class="toc-date">— 2026-07-26</span></a></li>
@@ -145,6 +146,44 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.1-9 -->
+                        <section id="v101r9" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-101r9-title">1.0.1-9 — August 2026</span></h2>
+                            <p id="ki-rel-101r9-subtitle" class="lead">Unattended release build queues all kernels of a release with no interaction; x86-64 architecture level was never actually applied since 1.0.1 — fixed via a proper Kconfig patch; translations completed for all eight languages.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r9-added-li1"><strong>Unattended release build (Stock mode):</strong> builds every kernel of a release one after another with no interaction — 6 variants for v1 and v2 plus x3d for v3 and v4. Destination folder and core count are chosen once, dependencies are resolved once, and the machine is kept awake for the whole queue. Every kernel starts from a completely fresh build directory. Packages are saved to <code>&lt;destination&gt;/&lt;version&gt;/V1</code> through <code>V4</code>. The queue stops at the first failure and keeps that build directory intact for inspection. Uses the existing build screen with its live log, system stats and cancel button — the cancel button stops the whole queue.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r9-fixed-li1"><strong>x86-64 architecture level was never applied:</strong> The build set <code>CONFIG_GENERIC_CPU{2,3,4}</code>, symbols that do not exist in mainline — they come from an out-of-tree patch that was never applied. <code>scripts/config</code> wrote them, <code>olddefconfig</code> dropped them silently, and every kernel compiled at the v1 baseline. Kernels named <code>-v2</code>, <code>-v3</code> and <code>-v4</code> were byte-identical to <code>-v1</code> apart from <code>CONFIG_LOCALVERSION</code>. This affected every release built since 1.0.1, including the published 7.1.4, 7.1.5 and 7.1.7 kernel sets. The level now comes from <a href="https://github.com/SoplosLinux/soplos-cpu-kernel-patch" target="_blank">SoplosLinux/soplos-cpu-kernel-patch</a>, which adds a proper Kconfig choice (<code>X86_64_ISA_V1</code> to <code>V4</code>) and the matching <code>-march=x86-64-v{2,3,4}</code> branches. The patch is downloaded and applied automatically whenever the level is above v1. The build now aborts if the level symbol does not survive <code>olddefconfig</code>, instead of silently producing a mislabelled kernel.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r9-changed-li1"><strong>v1 no longer writes any architecture symbol.</strong> It is the upstream baseline and now builds exactly as vanilla does.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-language"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-101r9-translations-li1">Translated the batch interface into all eight languages, plus six older strings that had been left untranslated since 1.0.1-7: <code>Profile:</code>, <code>Version:</code>, <code>Cores to use for compilation:</code>, its tooltip, the empty-filter message and the build directory deletion error.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.1-8 -->
                         <section id="v101r8" class="content-section">
