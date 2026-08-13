@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="tm-rel-page-title">Soplos Theme Manager — Releases</title>
-    <meta name="description" content="Release history and changelog for Soplos Theme Manager.">
+    <title id="tm-rel-page-title">SlopOS Theme Manager — Releases</title>
+    <meta name="description" content="Release history and changelog for SlopOS Theme Manager.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -34,7 +34,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../../#download" id="menuDownload">Download</a></li>
                             </ul>
@@ -59,9 +59,9 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../" id="breadcrumbReleases">Releases</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current" id="tm-rel-breadcrumb">Soplos Theme Manager</span>
+                <span class="breadcrumb-current" id="tm-rel-breadcrumb">SlopOS Theme Manager</span>
             </nav>
         </div>
     </div>
@@ -107,8 +107,8 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><img src="../../../images/icons/org.soplos.thememanager.png" alt="Soplos Theme Manager" class="hero-app-icon"> <span id="tm-rel-hero-title">Soplos Theme Manager</span></h1>
-                        <p id="tm-rel-hero-subtitle">Complete XFCE theming suite with tabbed interface, bundle export and screenshot previews. Exclusive to Soplos Tyron.</p>
+                        <h1><img src="../../../images/icons/org.slopos.thememanager.png" alt="SlopOS Theme Manager" class="hero-app-icon"> <span id="tm-rel-hero-title">SlopOS Theme Manager</span></h1>
+                        <p id="tm-rel-hero-subtitle">Complete XFCE theming suite with tabbed interface, bundle export and screenshot previews. Exclusive to SlopOS Tyron.</p>
                     </div>
                 </div>
             </section>
@@ -158,8 +158,8 @@
                                 <li id="tm-rel-2015-added-li4"><strong>New tab — Login Screen (LightDM):</strong> Edits <code>/etc/lightdm/lightdm-gtk-greeter.conf</code>: background, GTK/icon/cursor theme, user avatar, font, login-box position (3×3 anchor grid + percent offsets with live on-screen preview), show-avatar toggle, per-user wallpaper toggle, clock format. All writes via <code>pkexec</code>.</li>
                                 <li id="tm-rel-2015-added-li5"><strong>Panel tab — full restructure:</strong> Settings grouped into three cards (Position / Appearance / Behavior); live preview shows the panel position on screen; panel selector became a segmented pill switcher; plugin list shows each plugin's description inline and supports double-click to add.</li>
                                 <li id="tm-rel-2015-added-li6"><strong>Dock tab — live horizontal preview:</strong> A rounded floating-bar preview above the pinned-apps list mirrors the dock in real time, updating on add/remove/drag-reorder.</li>
-                                <li id="tm-rel-2015-added-li7"><strong><code>.sth</code> MIME type registration:</strong> Registered <code>application/x-soplos-theme</code> with glob <code>*.sth</code>. Opening a <code>.sth</code> from a file manager switches to the Themes tab and starts the install flow in the already-running instance.</li>
-                                <li id="tm-rel-2015-added-li8"><strong><code>build-deb.sh</code>:</strong> Manual <code>.deb</code> builder that generates <code>DEBIAN/control</code> from <code>debian/control</code> and produces <code>postinst</code>/<code>postrm</code> scripts running <code>update-mime-database</code>, <code>update-desktop-database</code> and <code>gtk-update-icon-cache</code>. Added because <code>soplos-packager</code> 1.x has no MIME registration support.</li>
+                                <li id="tm-rel-2015-added-li7"><strong><code>.sth</code> MIME type registration:</strong> Registered <code>application/x-slopos-theme</code> with glob <code>*.sth</code>. Opening a <code>.sth</code> from a file manager switches to the Themes tab and starts the install flow in the already-running instance.</li>
+                                <li id="tm-rel-2015-added-li8"><strong><code>build-deb.sh</code>:</strong> Manual <code>.deb</code> builder that generates <code>DEBIAN/control</code> from <code>debian/control</code> and produces <code>postinst</code>/<code>postrm</code> scripts running <code>update-mime-database</code>, <code>update-desktop-database</code> and <code>gtk-update-icon-cache</code>. Added because <code>slopos-packager</code> 1.x has no MIME registration support.</li>
                                 <li id="tm-rel-2015-added-li9"><strong>Full translation to 8 languages:</strong> All 188 translatable strings across <code>main.py</code>, <code>services/</code>, <code>ui/main_window.py</code> and all <code>ui/tabs/*.py</code> translated into Spanish, English, French, Portuguese, German, Italian, Russian and Romanian.</li>
                             </ul>
 
@@ -227,9 +227,9 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-2012-added-li1"><strong>Themes tab — base themes auto-seeded on first launch:</strong> Bundled <code>.sth</code> files in <code>assets/base-themes/</code> are imported automatically into <code>~/.config/soplos-theme-manager/themes/</code> on startup if not already present. No pkexec, no prompts. If the user deletes a base theme it is not reimposed — a manual restore is required.</li>
+                                <li id="tm-rel-2012-added-li1"><strong>Themes tab — base themes auto-seeded on first launch:</strong> Bundled <code>.sth</code> files in <code>assets/base-themes/</code> are imported automatically into <code>~/.config/slopos-theme-manager/themes/</code> on startup if not already present. No pkexec, no prompts. If the user deletes a base theme it is not reimposed — a manual restore is required.</li>
                                 <li id="tm-rel-2012-added-li2"><strong>Themes tab — Restore button:</strong> New button in the gallery toolbar reimports any missing base themes on demand. Already-present themes are skipped. Shows an info dialog if all base themes are present.</li>
-                                <li id="tm-rel-2012-added-li3"><strong>Startup — v1.x legacy cleanup:</strong> On first launch after upgrade from v1.x, removes legacy artifacts: <code>~/xfce-panel-backup/</code>, <code>~/.themes-backup/</code> and legacy logs under <code>~/.config/soplos-theme-manager/logs/</code>. Runs once and writes a marker file to avoid repeating.</li>
+                                <li id="tm-rel-2012-added-li3"><strong>Startup — v1.x legacy cleanup:</strong> On first launch after upgrade from v1.x, removes legacy artifacts: <code>~/xfce-panel-backup/</code>, <code>~/.themes-backup/</code> and legacy logs under <code>~/.config/slopos-theme-manager/logs/</code>. Runs once and writes a marker file to avoid repeating.</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -238,7 +238,7 @@
                             </div>
                             <ul>
                                 <li id="tm-rel-2012-fixed-li1"><strong>Packaging — reduced dependencies:</strong> <code>debian/control</code> was pulling in multiple polkit-related packages unnecessarily. Reduced to just <code>polkit</code>.</li>
-                                <li id="tm-rel-2012-fixed-li2"><strong>Base themes seed — wrong asset path:</strong> Seed and Restore button were looking for <code>.sth</code> files in <code>assets/soplos-base-themes/</code> instead of <code>assets/base-themes/</code>.</li>
+                                <li id="tm-rel-2012-fixed-li2"><strong>Base themes seed — wrong asset path:</strong> Seed and Restore button were looking for <code>.sth</code> files in <code>assets/slopos-base-themes/</code> instead of <code>assets/base-themes/</code>.</li>
                                 <li id="tm-rel-2012-fixed-li3"><strong>User-scope install — system assets duplicated to home:</strong> <code>_install_tar_user</code> was copying icon themes and GTK themes to <code>~/.icons/</code> and <code>~/.themes/</code> even when the same asset already existed in <code>/usr/share/</code>. Assets present at system level are now skipped.</li>
                             </ul>
                         </section>
@@ -262,12 +262,12 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-201-changed-li1"><strong>Theme bundle format v2 (breaking — old <code>.sth</code> files not compatible):</strong> Bundles now contain the actual asset directories (GTK theme, icon theme, cursor, wallpaper) as a <code>.zip</code> archive instead of xfconf dumps. Themes stored unpacked under <code>~/.config/soplos-theme-manager/themes/</code> with <code>metadata.json</code> + <code>theme.conf</code> + <code>assets/</code> + <code>preview/</code>.</li>
+                                <li id="tm-rel-201-changed-li1"><strong>Theme bundle format v2 (breaking — old <code>.sth</code> files not compatible):</strong> Bundles now contain the actual asset directories (GTK theme, icon theme, cursor, wallpaper) as a <code>.zip</code> archive instead of xfconf dumps. Themes stored unpacked under <code>~/.config/slopos-theme-manager/themes/</code> with <code>metadata.json</code> + <code>theme.conf</code> + <code>assets/</code> + <code>preview/</code>.</li>
                                 <li id="tm-rel-201-changed-li2"><strong>Apply theme — visual-only xfconf changes:</strong> <code>apply_theme</code> now sets only visual xfconf properties (GTK theme, icon theme, cursor, WM theme, wallpaper). No longer touches keyboard shortcuts, desktop icon visibility, desktop menu or any behavioral property.</li>
                                 <li id="tm-rel-201-changed-li3"><strong>Apply theme — no XML file copying and no panel directory overwrite:</strong> <code>xfce4-desktop.xml</code>, <code>xfce4-panel.xml</code> and <code>~/.config/xfce4/panel/</code> are no longer touched on apply. Panel layout and desktop behavior remain fully under user control.</li>
-                                <li id="tm-rel-201-changed-li4"><strong>Theme store location:</strong> User themes moved from <code>~/.themes-backup/</code> to <code>~/.config/soplos-theme-manager/themes/</code>. Preview directory renamed from <code>view/</code> to <code>preview/</code>.</li>
+                                <li id="tm-rel-201-changed-li4"><strong>Theme store location:</strong> User themes moved from <code>~/.themes-backup/</code> to <code>~/.config/slopos-theme-manager/themes/</code>. Preview directory renamed from <code>view/</code> to <code>preview/</code>.</li>
                                 <li id="tm-rel-201-changed-li5"><strong>Bundle format v3:</strong> Assets stored as tars (<code>gtk.tar</code>, <code>icons.tar</code>, <code>cursor.tar</code>) inside the bundle instead of raw directory trees. Old v2 bundles rejected on import.</li>
-                                <li id="tm-rel-201-changed-li6"><strong>UI — Themes gallery:</strong> Card grid wrapped in a dark rounded box (<code>soplos-content</code> class), matching Plymouth Manager style. Selected theme card shows a thin 1px orange border; fixed <code>FlowBoxChild</code> container painting solid orange on selection.</li>
+                                <li id="tm-rel-201-changed-li6"><strong>UI — Themes gallery:</strong> Card grid wrapped in a dark rounded box (<code>slopos-content</code> class), matching Plymouth Manager style. Selected theme card shows a thin 1px orange border; fixed <code>FlowBoxChild</code> container painting solid orange on selection.</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -276,7 +276,7 @@
                             </div>
                             <ul>
                                 <li id="tm-rel-201-fixed-li1"><strong>Apply theme — keyboard shortcuts, desktop icons and docklike apps overwritten:</strong> <code>shortcuts.conf</code>, desktop icon/menu properties and <code>panel/</code> directory were applied unconditionally, replacing the user's settings. All three now left untouched.</li>
-                                <li id="tm-rel-201-fixed-li2"><strong>Apply theme — wallpaper paths hardcoded from source machine:</strong> The old format stored absolute paths (e.g. <code>/home/soplos/.themes-backup/…</code>), causing broken wallpapers on any other machine. Fixed by bundling the actual wallpaper file.</li>
+                                <li id="tm-rel-201-fixed-li2"><strong>Apply theme — wallpaper paths hardcoded from source machine:</strong> The old format stored absolute paths (e.g. <code>/home/slopos/.themes-backup/…</code>), causing broken wallpapers on any other machine. Fixed by bundling the actual wallpaper file.</li>
                                 <li id="tm-rel-201-fixed-li3"><strong>Apply theme — xfconfd served cached panel config:</strong> After writing <code>xfce4-panel.xml</code>, xfconfd restarted from its in-memory copy. Fixed by killing xfconfd after <code>xfce4-panel --quit</code> so it re-reads from disk.</li>
                                 <li id="tm-rel-201-fixed-li4"><strong>Apply/save theme — orphan panel plugin files:</strong> Files from previous panel sessions accumulated in <code>~/.config/xfce4/panel/</code> and bled into saved themes. Apply and save now filter by IDs present in <code>xfce4-panel.xml</code>; orphan files removed after apply.</li>
                                 <li id="tm-rel-201-fixed-li5"><strong>Apply/save theme — dark mode not persisted:</strong> <code>gtk-application-prefer-dark-theme</code> was not saved or restored. Now stored as <code>prefer_dark</code> in <code>theme.conf</code> and written to both <code>~/.config/gtk-3.0/settings.ini</code> and <code>~/.config/gtk-4.0/settings.ini</code> on apply. Inferred from GTK theme name when <code>settings.ini</code> is absent.</li>
@@ -333,15 +333,15 @@
                                 <li id="tm-rel-2001-fixed-li1"><strong>Panel tab — width not respected:</strong> <code>length-adjust</code> was not written back when length was unchanged, causing XFCE to default to 100%. Fixed by preserving the original value and recalculating when length changes.</li>
                                 <li id="tm-rel-2001-fixed-li2"><strong>Panel tab — locale decimal separator:</strong> <code>xfconf-query</code> returns <code>52,083333</code> on Spanish locale; <code>float()</code> raised <code>ValueError</code>. Fixed by replacing <code>,</code> with <code>.</code> before parsing.</li>
                                 <li id="tm-rel-2001-fixed-li3"><strong>Panel tab — plugin ID collision on new panel:</strong> New panel's plugin IDs started from 1, overwriting main panel plugins. Fixed by computing <code>next_id</code> across all panels.</li>
-                                <li id="tm-rel-2001-fixed-li4"><strong>Panel tab — wrong p values:</strong> Position string <code>p</code> values corrected from confirmed Soplos theme XMLs: <code>p=6</code> top, <code>p=8</code> bottom, <code>p=10</code> left, <code>p=1</code> right.</li>
+                                <li id="tm-rel-2001-fixed-li4"><strong>Panel tab — wrong p values:</strong> Position string <code>p</code> values corrected from confirmed SlopOS theme XMLs: <code>p=6</code> top, <code>p=8</code> bottom, <code>p=10</code> left, <code>p=1</code> right.</li>
                                 <li id="tm-rel-2001-fixed-li5"><strong>Panel tab — alignment ignored for snapped panels:</strong> Switched to <code>p=0</code> floating with center coordinates for partial-width panels. Full-width panels use snapped <code>p</code> values so the WM receives <code>_NET_WM_STRUT</code> hints.</li>
                                 <li id="tm-rel-2001-fixed-li6"><strong>Panel tab — windows maximizing under top panel:</strong> <code>enable-struts</code> property was not being set. Now written as <code>true</code> on every apply and new panel creation.</li>
                                 <li id="tm-rel-2001-fixed-li7"><strong>Panel tab — async reload cleared user-added plugins:</strong> <code>_reload_worker</code> called after new panel creation wiped plugins the user had just added. Fixed by reading settings synchronously in <code>_on_new_panel_done</code>.</li>
                                 <li id="tm-rel-2001-fixed-li8"><strong>Panel tab — delete panel removed all panels:</strong> <code>_set_array</code> wrote single-element arrays as xfconf scalars; xfce4-panel could not read <code>/panels</code> as a list. Fixed by adding <code>--force-array</code> flag to all <code>_set_array</code> calls.</li>
                                 <li id="tm-rel-2001-fixed-li9"><strong>Panel tab — length change did not trigger position recalculation:</strong> Switching between 100% and partial width did not update the position string. Fixed by including <code>length_changed</code> in the recalculation condition.</li>
-                                <li id="tm-rel-2001-fixed-li10"><strong>Desktop file empty:</strong> <code>debian/org.soplos.thememanager.desktop</code> was 0 bytes — app did not appear in the XFCE menu. Rewritten with full <code>[Desktop Entry]</code> content.</li>
+                                <li id="tm-rel-2001-fixed-li10"><strong>Desktop file empty:</strong> <code>debian/org.slopos.thememanager.desktop</code> was 0 bytes — app did not appear in the XFCE menu. Rewritten with full <code>[Desktop Entry]</code> content.</li>
                                 <li id="tm-rel-2001-fixed-li11"><strong>Keyboard shortcuts Ctrl+Tab / Ctrl+Shift+Tab not working:</strong> GTK intercepts these inside child widgets before <code>AccelGroup</code> fires. Fixed by connecting <code>key-press-event</code> on the main window.</li>
-                                <li id="tm-rel-2001-fixed-li12"><strong>Wrapper script oversized:</strong> Simplified to the standard Soplos wrapper pattern (<code>exec python3 main.py</code>). <code>Gdk.set_program_class</code> moved to <code>main.py</code>.</li>
+                                <li id="tm-rel-2001-fixed-li12"><strong>Wrapper script oversized:</strong> Simplified to the standard SlopOS wrapper pattern (<code>exec python3 main.py</code>). <code>Gdk.set_program_class</code> moved to <code>main.py</code>.</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -375,10 +375,10 @@
                                 <li id="tm-rel-200-added-li7"><strong>Dock tab:</strong> Dedicated tab for Docklike pinned apps. Shows pinned apps with icons, move up/down/remove, add from available apps browser.</li>
                                 <li id="tm-rel-200-added-li8"><strong>Theme bundles (.sth):</strong> Export and import themes as <code>tar.gz</code> archives with <code>manifest.json</code>.</li>
                                 <li id="tm-rel-200-added-li9"><strong>Screenshot previews:</strong> <code>scrot</code> + <code>imagemagick</code> capture with <code>notify-send</code> notification, <code>wmctrl</code> desktop minimize/restore.</li>
-                                <li id="tm-rel-200-added-li10"><strong>Footer progress bar:</strong> Soplos-standard <code>Gtk.Revealer</code> + <code>Gtk.ProgressBar</code> for all operations.</li>
-                                <li id="tm-rel-200-added-li11"><strong>App ID:</strong> Migrated from <code>com.soplos.thememanager</code> to <code>org.soplos.thememanager</code>.</li>
+                                <li id="tm-rel-200-added-li10"><strong>Footer progress bar:</strong> SlopOS-standard <code>Gtk.Revealer</code> + <code>Gtk.ProgressBar</code> for all operations.</li>
+                                <li id="tm-rel-200-added-li11"><strong>App ID:</strong> Migrated from <code>com.slopos.thememanager</code> to <code>org.slopos.thememanager</code>.</li>
                                 <li id="tm-rel-200-added-li12"><strong>i18n:</strong> gettext-based internationalization with 8 languages, replacing legacy dictionary strings.</li>
-                                <li id="tm-rel-200-added-li13"><strong>CSS:</strong> Updated to Soplos Welcome standard (entry, filechooser, treeview, notebook borders).</li>
+                                <li id="tm-rel-200-added-li13"><strong>CSS:</strong> Updated to SlopOS Welcome standard (entry, filechooser, treeview, notebook borders).</li>
                             </ul>
 
                             <div class="subsection-header">
@@ -387,7 +387,7 @@
                             </div>
                             <ul>
                                 <li id="tm-rel-200-changed-li1"><strong>Theme directory:</strong> <code>~/.themes-backup</code> (backwards compatible with v1).</li>
-                                <li id="tm-rel-200-changed-li2"><strong>Default theme CSS:</strong> Always dark for Soplos Linux Tyron, configurable via <code>settings.json</code>.</li>
+                                <li id="tm-rel-200-changed-li2"><strong>Default theme CSS:</strong> Always dark for SlopOS Linux Tyron, configurable via <code>settings.json</code>.</li>
                                 <li id="tm-rel-200-changed-li3"><strong>Window decorations:</strong> SSD (no CSD), <code>GTK_CSD=0</code>.</li>
                                 <li id="tm-rel-200-changed-li4"><strong>Wallpaper browser:</strong> Pixbuf decoding moved to background thread — gallery renders instantly. Reload button removed (load is automatic on tab activation).</li>
                                 <li id="tm-rel-200-changed-li5"><strong>User tab:</strong> Renamed from "Avatar" to "User". Apply button moved inside the form column; groups column added.</li>
@@ -435,8 +435,8 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-106-li1"><strong>Icon and desktop file naming:</strong> Reverted to <code>com.soplos.thememanager</code> convention for consistency.</li>
-                                <li id="tm-rel-106-li2"><strong>Desktop file path:</strong> Restored to <code>/usr/share/applications/com.soplos.thememanager.desktop</code>.</li>
+                                <li id="tm-rel-106-li1"><strong>Icon and desktop file naming:</strong> Reverted to <code>com.slopos.thememanager</code> convention for consistency.</li>
+                                <li id="tm-rel-106-li2"><strong>Desktop file path:</strong> Restored to <code>/usr/share/applications/com.slopos.thememanager.desktop</code>.</li>
                             </ul>
                         </section>
 
@@ -449,7 +449,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-105-li1"><strong>Metainfo App ID:</strong> Corrected from <code>com.soplosthememanager</code> back to <code>com.soplos.thememanager</code> (dot notation restored).</li>
+                                <li id="tm-rel-105-li1"><strong>Metainfo App ID:</strong> Corrected from <code>com.sloposthememanager</code> back to <code>com.slopos.thememanager</code> (dot notation restored).</li>
                             </ul>
                         </section>
 
@@ -462,7 +462,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-104-li1"><strong>Unified App ID constant</strong> <code>APP_ID = "com.soplos.thememanager"</code> across <code>main.py</code>.</li>
+                                <li id="tm-rel-104-li1"><strong>Unified App ID constant</strong> <code>APP_ID = "com.slopos.thememanager"</code> across <code>main.py</code>.</li>
                                 <li id="tm-rel-104-li2"><strong>WMCLASS env var support:</strong> <code>WMCLASS</code> environment variable for consistent window class assignment.</li>
                                 <li id="tm-rel-104-li3"><strong><code>window.realize()</code>:</strong> Called before show for proper window property propagation.</li>
                             </ul>
@@ -477,24 +477,24 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-103-li1"><strong>Soplos Packager App ID block:</strong> Re-injected after it was removed in 1.0.2.</li>
-                                <li id="tm-rel-103-li2"><strong>Base directory:</strong> Corrected path back to <code>/usr/share/soplos-theme-manager</code>.</li>
+                                <li id="tm-rel-103-li1"><strong>SlopOS Packager App ID block:</strong> Re-injected after it was removed in 1.0.2.</li>
+                                <li id="tm-rel-103-li2"><strong>Base directory:</strong> Corrected path back to <code>/usr/share/slopos-theme-manager</code>.</li>
                             </ul>
                         </section>
 
                         <!-- 1.0.2 -->
                         <section id="v102" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="tm-rel-102-title">1.0.2 — May 2025</span></h2>
-                            <p id="tm-rel-102-subtitle" class="lead">Packaging: renamed all assets to soplos-theme-manager naming convention.</p>
+                            <p id="tm-rel-102-subtitle" class="lead">Packaging: renamed all assets to slopos-theme-manager naming convention.</p>
                             <div class="subsection-header">
                                 <h3><i class="fas fa-sync-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="tm-rel-102-li1"><strong>Asset naming:</strong> Renamed from <code>com.soplos.thememanager</code> to <code>soplos-theme-manager</code> convention (desktop file, metainfo, icons).</li>
-                                <li id="tm-rel-102-li2"><strong>WM_CLASS:</strong> Fixed to static strings <code>"soplos-theme-manager", "Soplos Theme Manager"</code>.</li>
+                                <li id="tm-rel-102-li1"><strong>Asset naming:</strong> Renamed from <code>com.slopos.thememanager</code> to <code>slopos-theme-manager</code> convention (desktop file, metainfo, icons).</li>
+                                <li id="tm-rel-102-li2"><strong>WM_CLASS:</strong> Fixed to static strings <code>"slopos-theme-manager", "SlopOS Theme Manager"</code>.</li>
                                 <li id="tm-rel-102-li3"><strong>Removed <code>debug_wmclass.py</code>.</strong></li>
-                                <li id="tm-rel-102-li4"><strong>Cleaned up</strong> Soplos Packager App ID injection block from <code>main.py</code>.</li>
+                                <li id="tm-rel-102-li4"><strong>Cleaned up</strong> SlopOS Packager App ID injection block from <code>main.py</code>.</li>
                             </ul>
                         </section>
 
@@ -515,7 +515,7 @@
                         <!-- 1.0.0 -->
                         <section id="v100" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="tm-rel-100-title">1.0.0 — May 2025</span></h2>
-                            <p id="tm-rel-100-subtitle" class="lead">Initial release of Soplos Theme Manager.</p>
+                            <p id="tm-rel-100-subtitle" class="lead">Initial release of SlopOS Theme Manager.</p>
                             <div class="subsection-header">
                                 <h3><i class="fas fa-star"></i> <span data-i18n="rel-label-initial">Initial Release</span></h3>
                                 <div class="accent-hr"></div>
@@ -523,7 +523,7 @@
                             <ul>
                                 <li id="tm-rel-100-li1"><strong>Graphical interface</strong> for managing XFCE desktop themes.</li>
                                 <li id="tm-rel-100-li2"><strong>Create, save and apply</strong> desktop themes.</li>
-                                <li id="tm-rel-100-li3"><strong>Compatible</strong> with Soplos Linux Tyron.</li>
+                                <li id="tm-rel-100-li3"><strong>Compatible</strong> with SlopOS Linux Tyron.</li>
                                 <li id="tm-rel-100-li4"><strong>Translations</strong> for 8 languages.</li>
                             </ul>
                         </section>
@@ -548,10 +548,10 @@
 
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            if (window.SoplosUI) new SoplosUI.ScrollController();
+            if (window.SlopOSUI) new SlopOSUI.ScrollController();
         });
     </script>
     <script>

@@ -51,14 +51,14 @@ $years_json = json_encode($chart_years);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - Soplos Linux</title>
-    <meta name="description" content="Support Soplos Linux development through donations. Every contribution helps keep the project independent and alive.">
-    <meta name="keywords" content="soplos, linux, donate, support, patreon, paypal">
+    <title>Donate - SlopOS Linux</title>
+    <meta name="description" content="Support SlopOS Linux development through donations. Every contribution helps keep the project independent and alive.">
+    <meta name="keywords" content="slopos, linux, donate, support, patreon, paypal">
 
-    <meta property="og:title" content="Donate - Soplos Linux">
-    <meta property="og:description" content="Support Soplos Linux development through donations.">
+    <meta property="og:title" content="Donate - SlopOS Linux">
+    <meta property="og:description" content="Support SlopOS Linux development through donations.">
 
-    <link rel="icon" href="../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="icon" href="../../images/logo/slopos-logo.png" type="image/png">
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -449,7 +449,7 @@ $years_json = json_encode($chart_years);
         <div class="container">
             <div class="logo">
                 <a href="../../">
-                    <img src="../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -465,7 +465,7 @@ $years_json = json_encode($chart_years);
                             <ul class="submenu">
                                 <li><a href="../../index.html#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../index.html#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../index.html#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../index.html#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../index.html#download" id="menuDownload">Download</a></li>
                             </ul>
@@ -486,9 +486,9 @@ $years_json = json_encode($chart_years);
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -529,8 +529,8 @@ $years_json = json_encode($chart_years);
         <section class="transition-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-heart"></i> <span id="donate-hero-title">Support Soplos Linux</span></h1>
-                    <p id="donate-hero-desc">Soplos Linux is an independent project with no corporate backing. Your support keeps it alive.</p>
+                    <h1><i class="fas fa-heart"></i> <span id="donate-hero-title">Support SlopOS Linux</span></h1>
+                    <p id="donate-hero-desc">SlopOS Linux is an independent project with no corporate backing. Your support keeps it alive.</p>
                 </div>
             </div>
         </section>
@@ -542,7 +542,7 @@ $years_json = json_encode($chart_years);
                     <!-- Intro -->
                     <section class="content-section">
                         <p class="donate-intro" id="donate-intro-text">
-                            Soplos Linux is developed by a single person in their free time, without external funding or sponsorship. Every donation — regardless of the amount — helps cover server costs, hardware, development tools and the time invested in building a better Linux experience for everyone.
+                            SlopOS Linux is developed by a single person in their free time, without external funding or sponsorship. Every donation — regardless of the amount — helps cover server costs, hardware, development tools and the time invested in building a better Linux experience for everyone.
                         </p>
 
                         <div class="donate-stats">
@@ -552,7 +552,7 @@ $years_json = json_encode($chart_years);
                             </div>
                             <div class="donate-stat">
                                 <strong>12+</strong>
-                                <span id="donate-stat-apps">Soplos Apps</span>
+                                <span id="donate-stat-apps">SlopOS Apps</span>
                             </div>
                             <div class="donate-stat">
                                 <strong>8</strong>
@@ -739,7 +739,7 @@ $years_json = json_encode($chart_years);
                             <i class="fas fa-laptop"></i>
                             <h2 style="margin: 0;" id="donate-supporters-title">SlimBook One supporters</h2>
                         </div>
-                        <p class="slimbook-desc" id="donate-supporters-desc">People who donated to help purchase the SlimBook One used as the main development machine for Soplos Linux. Thank you.</p>
+                        <p class="slimbook-desc" id="donate-supporters-desc">People who donated to help purchase the SlimBook One used as the main development machine for SlopOS Linux. Thank you.</p>
                         <div class="supporter-chips">
                             <span class="supporter-chip">Usuario anónimo</span>
                             <span class="supporter-chip">Ismael de León</span>
@@ -769,12 +769,12 @@ $years_json = json_encode($chart_years);
                             <h2 style="margin: 0;" id="donate-merch-title">Official Merchandise</h2>
                         </div>
                         <p class="donate-intro" style="margin-bottom: 1.75rem;" id="donate-merch-desc">
-                            Official Soplos Linux gear. Every purchase directly supports the project.
+                            Official SlopOS Linux gear. Every purchase directly supports the project.
                         </p>
 
                         <div class="merch-grid">
 
-                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=812&sellable=3LAmGpZljrhZ9VqkreY8-812-7&appearance=2" target="_blank" rel="noopener">
+                            <a class="merch-card" href="https://sloposlinux.myspreadshop.es/slopos-A68bebd819811dd174f52c985?productType=812&sellable=3LAmGpZljrhZ9VqkreY8-812-7&appearance=2" target="_blank" rel="noopener">
                                 <div class="merch-img-wrap">
                                     <img src="../../images/Shop/01-shirt-man.jpg" alt="Men's T-Shirt" loading="lazy">
                                 </div>
@@ -784,7 +784,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                             </a>
 
-                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=813&sellable=3LAmGpZljrhZ9VqkreY8-813-8&appearance=2" target="_blank" rel="noopener">
+                            <a class="merch-card" href="https://sloposlinux.myspreadshop.es/slopos-A68bebd819811dd174f52c985?productType=813&sellable=3LAmGpZljrhZ9VqkreY8-813-8&appearance=2" target="_blank" rel="noopener">
                                 <div class="merch-img-wrap">
                                     <img src="../../images/Shop/02-shirt-woman.jpg" alt="Women's T-Shirt" loading="lazy">
                                 </div>
@@ -794,7 +794,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                             </a>
 
-                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=905&sellable=3LAmGpZljrhZ9VqkreY8-905-34&appearance=14&size=29" target="_blank" rel="noopener">
+                            <a class="merch-card" href="https://sloposlinux.myspreadshop.es/slopos-A68bebd819811dd174f52c985?productType=905&sellable=3LAmGpZljrhZ9VqkreY8-905-34&appearance=14&size=29" target="_blank" rel="noopener">
                                 <div class="merch-img-wrap">
                                     <img src="../../images/Shop/03-cap.jpg" alt="Snapback Cap" loading="lazy">
                                 </div>
@@ -804,7 +804,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                             </a>
 
-                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=3339&sellable=3LAmGpZljrhZ9VqkreY8-3339-36&appearance=2&size=29" target="_blank" rel="noopener">
+                            <a class="merch-card" href="https://sloposlinux.myspreadshop.es/slopos-A68bebd819811dd174f52c985?productType=3339&sellable=3LAmGpZljrhZ9VqkreY8-3339-36&appearance=2&size=29" target="_blank" rel="noopener">
                                 <div class="merch-img-wrap">
                                     <img src="../../images/Shop/04-beanie.jpg" alt="Beanie" loading="lazy">
                                 </div>
@@ -814,7 +814,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                             </a>
 
-                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=704&sellable=3LAmGpZljrhZ9VqkreY8-704-33&appearance=2&size=29" target="_blank" rel="noopener">
+                            <a class="merch-card" href="https://sloposlinux.myspreadshop.es/slopos-A68bebd819811dd174f52c985?productType=704&sellable=3LAmGpZljrhZ9VqkreY8-704-33&appearance=2&size=29" target="_blank" rel="noopener">
                                 <div class="merch-img-wrap">
                                     <img src="../../images/Shop/05-backpack.jpg" alt="Backpack" loading="lazy">
                                 </div>
@@ -824,7 +824,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                             </a>
 
-                            <a class="merch-card" href="https://soploslinux.myspreadshop.es/soplos-A68bebd819811dd174f52c985?productType=268&sellable=3LAmGpZljrhZ9VqkreY8-268-32&appearance=70&size=29" target="_blank" rel="noopener">
+                            <a class="merch-card" href="https://sloposlinux.myspreadshop.es/slopos-A68bebd819811dd174f52c985?productType=268&sellable=3LAmGpZljrhZ9VqkreY8-268-32&appearance=70&size=29" target="_blank" rel="noopener">
                                 <div class="merch-img-wrap">
                                     <img src="../../images/Shop/06-mug.jpg" alt="Mug" loading="lazy">
                                 </div>
@@ -837,7 +837,7 @@ $years_json = json_encode($chart_years);
                         </div>
 
                         <div style="text-align: center; margin-top: 1.75rem;">
-                            <a class="donate-btn" href="https://soploslinux.myspreadshop.es/soplos?idea=68bebd819811dd174f52c985" target="_blank" rel="noopener" style="background: #e8304a; display: inline-flex;">
+                            <a class="donate-btn" href="https://sloposlinux.myspreadshop.es/slopos?idea=68bebd819811dd174f52c985" target="_blank" rel="noopener" style="background: #e8304a; display: inline-flex;">
                                 <i class="fas fa-store"></i>
                                 <span id="donate-merch-btn">View full collection</span>
                             </a>
@@ -882,7 +882,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                                 <h3 id="donate-patreon-title">Patreon</h3>
                                 <p id="donate-patreon-desc">Monthly membership. Get early access to news and a badge on the contributors page.</p>
-                                <a class="donate-btn" href="https://www.patreon.com/cw/SoplosLinux" target="_blank" rel="noopener">
+                                <a class="donate-btn" href="https://www.patreon.com/cw/SlopOSLinux" target="_blank" rel="noopener">
                                     <i class="fab fa-patreon"></i>
                                     <span id="donate-patreon-btn">Support on Patreon</span>
                                 </a>
@@ -905,7 +905,7 @@ $years_json = json_encode($chart_years);
                                 </div>
                                 <h3 id="donate-kofi-title">Ko-fi</h3>
                                 <p id="donate-kofi-desc">Buy me a coffee. Simple one-time or recurring support with no fees.</p>
-                                <a class="donate-btn" href="https://ko-fi.com/soploslinux" target="_blank" rel="noopener" style="background:#ff5e5b;">
+                                <a class="donate-btn" href="https://ko-fi.com/sloposlinux" target="_blank" rel="noopener" style="background:#ff5e5b;">
                                     <i class="fas fa-mug-hot"></i>
                                     <span id="donate-kofi-btn">Support on Ko-fi</span>
                                 </a>
@@ -936,7 +936,7 @@ $years_json = json_encode($chart_years);
     <script src="../../js/logger.js"></script>
     <script src="../../js/language-loader.js"></script>
     <script src="../../js/language-switcher.js"></script>
-    <script src="../../js/soplos-ui.js"></script>
+    <script src="../../js/slopos-ui.js"></script>
     <script src="../../js/main.js"></script>
 
     <?php if (!empty($chart_years)): ?>

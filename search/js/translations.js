@@ -1,20 +1,20 @@
 /**
- * Sistema de traducciones para Soplos Linux Startpage
+ * Sistema de traducciones para SlopOS Linux Startpage
  */
 
 // Traducciones
 const translations = {
   es: {
-    title: "Busca con Soplos Linux",
+    title: "Busca con SlopOS Linux",
     searchPlaceholder: "Buscar en Google",
     searchButton: "Buscar",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Sitio Web",
     wikiLink: "Wiki",
     forumLink: "Foros",
     githubLink: "GitHub",
     donateLink: "Donar",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Sitios frecuentes",
     "modal-title": "Añadir sitio frecuente",
@@ -32,16 +32,16 @@ const translations = {
     "delete-error": "Error al eliminar el sitio"
   },
   en: {
-    title: "Search with Soplos Linux",
+    title: "Search with SlopOS Linux",
     searchPlaceholder: "Search on Google",
     searchButton: "Search",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Website",
     wikiLink: "Wiki",
     forumLink: "Forums",
     githubLink: "GitHub",
     donateLink: "Donate",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Frequent sites",
     "modal-title": "Add frequent site",
@@ -59,16 +59,16 @@ const translations = {
     "delete-error": "Error deleting the site"
   },
   pt: {
-    title: "Pesquise com Soplos Linux",
+    title: "Pesquise com SlopOS Linux",
     searchPlaceholder: "Pesquisar no Google",
     searchButton: "Pesquisar",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Site",
     wikiLink: "Wiki",
     forumLink: "Fóruns",
     githubLink: "GitHub",
     donateLink: "Doar",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Sites frequentes",
     "modal-title": "Adicionar site frequente",
@@ -86,16 +86,16 @@ const translations = {
     "delete-error": "Erro ao excluir o site"
   },
   fr: {
-    title: "Recherchez avec Soplos Linux",
+    title: "Recherchez avec SlopOS Linux",
     searchPlaceholder: "Rechercher sur Google",
     searchButton: "Rechercher",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Site Web",
     wikiLink: "Wiki",
     forumLink: "Forums",
     githubLink: "GitHub",
     donateLink: "Faire un don",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Sites fréquents",
     "modal-title": "Ajouter un site fréquent",
@@ -113,16 +113,16 @@ const translations = {
     "delete-error": "Erreur lors de la suppression du site"
   },
   de: {
-    title: "Suchen Sie mit Soplos Linux",
+    title: "Suchen Sie mit SlopOS Linux",
     searchPlaceholder: "Suchen auf Google",
     searchButton: "Suchen",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Webseite",
     wikiLink: "Wiki",
     forumLink: "Foren",
     githubLink: "GitHub",
     donateLink: "Spenden",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Häufige Seiten",
     "modal-title": "Häufig besuchte Seite hinzufügen",
@@ -140,16 +140,16 @@ const translations = {
     "delete-error": "Fehler beim Löschen der Seite"
   },
   it: {
-    title: "Cerca con Soplos Linux",
+    title: "Cerca con SlopOS Linux",
     searchPlaceholder: "Cerca su Google",
     searchButton: "Cerca",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Sito Web",
     wikiLink: "Wiki",
     forumLink: "Forum",
     githubLink: "GitHub",
     donateLink: "Donare",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Siti frequenti",
     "modal-title": "Aggiungi sito frequente",
@@ -167,16 +167,16 @@ const translations = {
     "delete-error": "Errore nella cancellazione del sito"
   },
   ro: {
-    title: "Caută cu Soplos Linux",
+    title: "Caută cu SlopOS Linux",
     searchPlaceholder: "Caută pe Google",
     searchButton: "Caută",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Site Web",
     wikiLink: "Wiki",
     forumLink: "Forumuri",
     githubLink: "GitHub",
     donateLink: "Donează",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Site-uri frecvente",
     "modal-title": "Adaugă site frecvent",
@@ -194,16 +194,16 @@ const translations = {
     "delete-error": "Eroare la ștergerea site-ului"
   },
   ru: {
-    title: "Поиск с Soplos Linux",
+    title: "Поиск с SlopOS Linux",
     searchPlaceholder: "Искать в Google",
     searchButton: "Поиск",
-    footer: "&copy; 2026 Soplos Linux",
+    footer: "&copy; 2026 SlopOS Linux",
     homeLink: "Веб-сайт",
     wikiLink: "Вики",
     forumLink: "Форумы",
     githubLink: "GitHub",
     donateLink: "Пожертвовать",
-    
+
     // Sitios frecuentes
     "frequent-sites-title": "Частые сайты",
     "modal-title": "Добавить частый сайт",
@@ -226,7 +226,7 @@ const translations = {
 function changeLanguage(lang) {
   document.documentElement.lang = lang;
   document.getElementById("title").innerText = translations[lang].title;
-  
+
   // Actualizar placeholder con el motor actual (no hardcodeado)
   const searchInput = document.getElementById("search-input");
   if (searchInput && window.searchEngines && window.currentEngine) {
@@ -236,37 +236,37 @@ function changeLanguage(lang) {
     // Fallback si no está disponible la info del motor
     document.getElementById("search-input").placeholder = translations[lang].searchPlaceholder;
   }
-  
+
   document.getElementById("search-button").value = translations[lang].searchButton;
   document.getElementById("footer").innerHTML = translations[lang].footer;
-  
+
   // Actualizar los textos de los enlaces del sitio
   document.getElementById("home-link").innerText = translations[lang].homeLink;
   document.getElementById("tyron-link").innerText = translations[lang].wikiLink;
   document.getElementById("forum-link").innerText = translations[lang].forumLink;
   document.getElementById("github-link").innerText = translations[lang].githubLink;
   document.getElementById("donate-link").innerText = translations[lang].donateLink;
-  
+
   // Actualizar el título de sitios frecuentes
   document.getElementById("frequent-sites-title").innerText = translations[lang]["frequent-sites-title"];
-  
+
   // Actualizar textos del modal
   document.getElementById("modal-title").innerText = translations[lang]["modal-title"];
   document.getElementById("site-name-label").innerText = translations[lang]["site-name-label"];
   document.getElementById("site-url-label").innerText = translations[lang]["site-url-label"];
   document.getElementById("site-icon-label").innerText = translations[lang]["site-icon-label"];
   document.getElementById("save-site-btn").innerText = translations[lang]["save-site-btn"];
-  
+
   // Actualizar placeholders
   document.getElementById("site-name").placeholder = translations[lang]["site-name-placeholder"];
   document.getElementById("site-url").placeholder = translations[lang]["site-url-placeholder"];
-  
+
   // Guardar preferencia en localStorage
-  localStorage.setItem('soplosStartPageLang', lang);
-  
+  localStorage.setItem('sloposStartPageLang', lang);
+
   // Notificar que se ha cambiado el idioma para otros componentes
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
-  
+
   // Forzar actualización del motor de búsqueda para sincronizar placeholder
   if (typeof setSearchEngine === 'function' && window.currentEngine) {
     setTimeout(() => {
@@ -277,15 +277,15 @@ function changeLanguage(lang) {
 
 // Helper para obtener una cadena traducida
 function getTranslatedString(key, lang, replacements) {
-  lang = lang || localStorage.getItem('soplosStartPageLang') || 'es';
+  lang = lang || localStorage.getItem('sloposStartPageLang') || 'es';
   let text = translations[lang][key] || key;
-  
+
   // Realizar reemplazos si existen
   if (replacements) {
     for (const [placeholder, value] of Object.entries(replacements)) {
       text = text.replace(`{${placeholder}}`, value);
     }
   }
-  
+
   return text;
 }

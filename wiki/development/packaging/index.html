@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Package Creation - Soplos Linux Wiki</title>
-    <meta name="description" content="Guide to creating Debian packages (.deb) for Soplos Linux.">
-    <meta name="keywords" content="soplos, linux, packaging, debian, deb, package, create">
+    <title>Package Creation - SlopOS Linux Wiki</title>
+    <meta name="description" content="Guide to creating Debian packages (.deb) for SlopOS Linux.">
+    <meta name="keywords" content="slopos, linux, packaging, debian, deb, package, create">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Package Creation - Soplos Linux Wiki">
-    <meta property="og:description" content="Learn how to package software for Soplos Linux.">
+    <meta property="og:title" content="Package Creation - SlopOS Linux Wiki">
+    <meta property="og:description" content="Learn how to package software for SlopOS Linux.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
-    
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
+
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -23,7 +23,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -40,7 +40,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../index.html#requirements" id="menuRequirements">System
                                         Requirements</a></li>
                                 <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
@@ -66,11 +66,11 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a>
                                 </li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -116,7 +116,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1><i class="fas fa-box"></i> <span id="packaging-hero-title">Package Creation</span></h1>
-                    <p id="packaging-hero-desc">How Soplos packages its software and how to propose a new one.</p>
+                    <p id="packaging-hero-desc">How SlopOS packages its software and how to propose a new one.</p>
                 </div>
             </div>
         </section>
@@ -130,7 +130,7 @@
                         <h3 id="packaging-toc-title">Contents</h3>
                         <ul>
                             <li><a href="#overview" id="packaging-toc-overview">Overview</a></li>
-                            <li><a href="#packager" id="packaging-toc-packager">Soplos Packager</a></li>
+                            <li><a href="#packager" id="packaging-toc-packager">SlopOS Packager</a></li>
                             <li><a href="#propose" id="packaging-toc-propose">Propose a Program</a></li>
                         </ul>
                     </aside>
@@ -139,37 +139,37 @@
                     <article class="main-content">
                         <section id="overview" class="content-section">
                             <h2><i class="fas fa-info-circle"></i> <span id="packaging-overview-title">Overview</span></h2>
-                            <p id="packaging-overview-desc">The Soplos repository is strictly curated. Every package is built, signed and maintained internally by the developer. There are no third-party uploads or community-built packages — everything in the repo goes through the same internal process.</p>
+                            <p id="packaging-overview-desc">The SlopOS repository is strictly curated. Every package is built, signed and maintained internally by the developer. There are no third-party uploads or community-built packages — everything in the repo goes through the same internal process.</p>
                         </section>
 
                         <section id="packager" class="content-section">
-                            <h2><i class="fas fa-box-open"></i> <span id="packaging-packager-title">Soplos Packager</span></h2>
-                            <p id="packaging-packager-intro"><strong>Soplos Packager</strong> is the internal tool used to create <code>.deb</code> packages for the Soplos repository. It handles the full packaging workflow:</p>
+                            <h2><i class="fas fa-box-open"></i> <span id="packaging-packager-title">SlopOS Packager</span></h2>
+                            <p id="packaging-packager-intro"><strong>SlopOS Packager</strong> is the internal tool used to create <code>.deb</code> packages for the SlopOS repository. It handles the full packaging workflow:</p>
                             <ul>
                                 <li id="packaging-packager-list-1">Debian package structure and metadata</li>
                                 <li id="packaging-packager-list-2">AppStream metainfo generation</li>
                                 <li id="packaging-packager-list-3">GPG signing</li>
-                                <li id="packaging-packager-list-4">Repository integration via Soplos Repo Manager</li>
+                                <li id="packaging-packager-list-4">Repository integration via SlopOS Repo Manager</li>
                             </ul>
                             <div class="gallery-grid">
                                 <figure>
-                                    <img src="../../../images/apps/soplos-packager/screenshot1.png" alt="Soplos Packager">
-                                    <figcaption id="packaging-screenshot-1">Soplos Packager</figcaption>
+                                    <img src="../../../images/apps/slopos-packager/screenshot1.png" alt="SlopOS Packager">
+                                    <figcaption id="packaging-screenshot-1">SlopOS Packager</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="../../../images/apps/soplos-packager/screenshot2.png" alt="Soplos Packager">
-                                    <figcaption id="packaging-screenshot-2">Soplos Packager</figcaption>
+                                    <img src="../../../images/apps/slopos-packager/screenshot2.png" alt="SlopOS Packager">
+                                    <figcaption id="packaging-screenshot-2">SlopOS Packager</figcaption>
                                 </figure>
                             </div>
                         </section>
 
                         <section id="propose" class="content-section">
                             <h2><i class="fas fa-paper-plane"></i> <span id="packaging-propose-title">Propose a Program</span></h2>
-                            <p id="packaging-propose-intro">If you have developed a program and would like to share it with the Soplos community, you can propose it. We will test it and, if it is viable, package it and publish it in our repositories.</p>
+                            <p id="packaging-propose-intro">If you have developed a program and would like to share it with the SlopOS community, you can propose it. We will test it and, if it is viable, package it and publish it in our repositories.</p>
                             <p id="packaging-propose-contact">You can send your proposal through any of these channels:</p>
                             <ul>
-                                <li id="packaging-propose-github">GitHub Issues — <a href="https://github.com/SoplosLinux" target="_blank" rel="noopener">github.com/SoplosLinux</a></li>
-                                <li id="packaging-propose-forum">Soplos Linux Forums — <a href="https://soplos.org/forums/" target="_blank" rel="noopener">soplos.org/forums</a></li>
+                                <li id="packaging-propose-github">GitHub Issues — <a href="https://github.com/SlopOSLinux" target="_blank" rel="noopener">github.com/SlopOSLinux</a></li>
+                                <li id="packaging-propose-forum">SlopOS Linux Forums — <a href="https://slopos.org/forums/" target="_blank" rel="noopener">slopos.org/forums</a></li>
                                 <li id="packaging-propose-telegram">Telegram community group</li>
                             </ul>
                             <div class="info-box warning">
@@ -203,7 +203,7 @@
     <script src="../../../js/logger.js"></script>
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
 

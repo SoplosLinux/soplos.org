@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security - Soplos Linux Wiki</title>
-    <meta name="description" content="Basic security guide and firewall configuration in Soplos Linux.">
-    <meta name="keywords" content="soplos, linux, security, firewall, ufw, gufw, protection">
+    <title>Security - SlopOS Linux Wiki</title>
+    <meta name="description" content="Basic security guide and firewall configuration in SlopOS Linux.">
+    <meta name="keywords" content="slopos, linux, security, firewall, ufw, gufw, protection">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Security - Soplos Linux Wiki">
-    <meta property="og:description" content="Protect your Soplos Linux installation.">
+    <meta property="og:title" content="Security - SlopOS Linux Wiki">
+    <meta property="og:description" content="Protect your SlopOS Linux installation.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
-    
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
+
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -23,7 +23,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -40,7 +40,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../index.html#requirements" id="menuRequirements">System
                                         Requirements</a></li>
                                 <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
@@ -66,11 +66,11 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a>
                                 </li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -116,7 +116,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1><i class="fas fa-shield-alt"></i> <span id="sec-hero-title">Security</span></h1>
-                    <p id="sec-hero-desc">Basic security guide and firewall configuration in Soplos Linux.</p>
+                    <p id="sec-hero-desc">Basic security guide and firewall configuration in SlopOS Linux.</p>
                 </div>
             </div>
         </section>
@@ -130,7 +130,7 @@
                         <h3 id="sec-toc-title">Contents</h3>
                         <ul>
                             <li><a href="#intro" id="sec-toc-1">Introduction</a></li>
-                            <li><a href="#welcome" id="sec-toc-welcome">Soplos Welcome</a></li>
+                            <li><a href="#welcome" id="sec-toc-welcome">SlopOS Welcome</a></li>
                             <li><a href="#fundamentals" id="sec-toc-2">Security Fundamentals</a></li>
                             <li><a href="#sec-firewall-section" id="sec-toc-3">Firewall (UFW)</a></li>
                             <li><a href="#gufw" id="sec-toc-4">Graphical Firewall & Portmaster</a></li>
@@ -154,9 +154,9 @@
                     <!-- Main Content -->
                     <article class="main-content">
                         <section id="intro" class="content-section">
-                            <h2><i class="fas fa-info-circle"></i> <span id="sec-intro-title">Security in Soplos
+                            <h2><i class="fas fa-info-circle"></i> <span id="sec-intro-title">Security in SlopOS
                                     Linux</span></h2>
-                            <p id="sec-intro-p1">Soplos Linux inherits the robustness and security of Debian. However,
+                            <p id="sec-intro-p1">SlopOS Linux inherits the robustness and security of Debian. However,
                                 it is always
                                 recommended to take additional measures to protect your equipment, especially if you
                                 connect
@@ -169,20 +169,20 @@
                         </section>
 
                         <section id="welcome" class="content-section">
-                            <h2><i class="fas fa-hand-holding-heart"></i> <span id="sec-welcome-title">Soplos Welcome — Security Tab</span></h2>
-                            <p id="sec-welcome-p">Soplos Welcome includes a dedicated <strong>Security</strong> tab that lets you install and manage the most important security tools with a single click. No terminal required.</p>
-                            <p id="sec-welcome-open">Open Soplos Welcome from the application menu and navigate to the <strong>Security</strong> tab. The following tool groups are available:</p>
+                            <h2><i class="fas fa-hand-holding-heart"></i> <span id="sec-welcome-title">SlopOS Welcome — Security Tab</span></h2>
+                            <p id="sec-welcome-p">SlopOS Welcome includes a dedicated <strong>Security</strong> tab that lets you install and manage the most important security tools with a single click. No terminal required.</p>
+                            <p id="sec-welcome-open">Open SlopOS Welcome from the application menu and navigate to the <strong>Security</strong> tab. The following tool groups are available:</p>
                             <ul>
                                 <li id="sec-welcome-g1"><strong id="sec-welcome-g1-label">System Backups:</strong> <span id="sec-welcome-g1-desc">Timeshift, Grub BTRFS, Deja Dup, BTRFS Assistant</span></li>
                                 <li id="sec-welcome-g2"><strong id="sec-welcome-g2-label">Firewall:</strong> <span id="sec-welcome-g2-desc">UFW (command-line) and GUFW (graphical interface)</span></li>
                                 <li id="sec-welcome-g3"><strong id="sec-welcome-g3-label">VPN:</strong> <span id="sec-welcome-g3-desc">ProtonVPN, Surfshark, Mozilla VPN</span></li>
-                                <li id="sec-welcome-g4"><strong id="sec-welcome-g4-label">System Cleaning:</strong> <span id="sec-welcome-g4-desc">BleachBit, Stacer, Soplos Sys Cleaner</span></li>
+                                <li id="sec-welcome-g4"><strong id="sec-welcome-g4-label">System Cleaning:</strong> <span id="sec-welcome-g4-desc">BleachBit, Stacer, SlopOS Sys Cleaner</span></li>
                                 <li id="sec-welcome-g5"><strong id="sec-welcome-g5-label">Antivirus:</strong> <span id="sec-welcome-g5-desc">ClamTK, ClamUI, rkhunter</span></li>
                             </ul>
                             <div class="info-box tip">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
-                                    <span id="sec-welcome-tip"><strong>Recommended first step:</strong> after installing Soplos, open Welcome and install Timeshift from the Security tab before making any other changes to the system.</span>
+                                    <span id="sec-welcome-tip"><strong>Recommended first step:</strong> after installing SlopOS, open Welcome and install Timeshift from the Security tab before making any other changes to the system.</span>
                                 </div>
                             </div>
                         </section>
@@ -204,7 +204,7 @@
                             </ul>
 
                             <h3 id="sec-fund-deb-h">Debian's Security Model</h3>
-                            <p id="sec-fund-deb-p">Soplos Linux benefits from Debian's strong security foundation:</p>
+                            <p id="sec-fund-deb-p">SlopOS Linux benefits from Debian's strong security foundation:</p>
                             <ul>
                                 <li id="sec-fund-deb-1"><strong>Security updates:</strong> Regular patches for
                                     vulnerabilities</li>
@@ -245,7 +245,7 @@
 
                         <section id="sec-firewall-section" class="content-section">
                             <h2><i class="fas fa-fire"></i> <span id="sec-fw-title">Firewall (UFW)</span></h2>
-                            <p id="sec-fw-intro">Soplos Linux comes with <strong>UFW</strong> (Uncomplicated Firewall)
+                            <p id="sec-fw-intro">SlopOS Linux comes with <strong>UFW</strong> (Uncomplicated Firewall)
                                 installed by
                                 default,
                                 but <strong>inactive</strong> to avoid initial conflicts with user network services.</p>
@@ -368,7 +368,7 @@ sudo tail -f /var/log/ufw.log</code></pre>
                         <section id="gufw" class="content-section">
                             <h2><i class="fas fa-window-maximize"></i> <span id="sec-gufw-title">Graphical Management:
                                     GUFW</span></h2>
-                            <p id="sec-gufw-intro">If you prefer not to use the terminal, Soplos Linux makes it easy to
+                            <p id="sec-gufw-intro">If you prefer not to use the terminal, SlopOS Linux makes it easy to
                                 install
                                 <strong>GUFW</strong>, a simple graphical interface to control the firewall.
                             </p>
@@ -396,7 +396,7 @@ sudo tail -f /var/log/ufw.log</code></pre>
                                 <div class="accent-hr"></div>
                             </div>
                             <p id="sec-portmaster-p">Portmaster is an application-level firewall that monitors and controls network connections per application. Unlike UFW which filters ports, Portmaster lets you allow or block internet access for each individual application.</p>
-                            <p id="sec-portmaster-install">Install from <strong>Soplos Welcome → Security → Firewall → Portmaster</strong>, or manually:</p>
+                            <p id="sec-portmaster-install">Install from <strong>SlopOS Welcome → Security → Firewall → Portmaster</strong>, or manually:</p>
                             <div class="code-example">
                                 <h4 id="sec-portmaster-term">Terminal</h4>
                                 <pre><code>VERSION=$(curl -s https://updates.safing.io/stable.v3.json | python3 -c "import json,sys; print(json.load(sys.stdin)['Version'])")
@@ -414,7 +414,7 @@ sudo apt install /tmp/portmaster.deb</code></pre>
                         <section id="vpn" class="content-section">
                             <h2><i class="fas fa-network-wired"></i> <span id="sec-vpn-title">VPN</span></h2>
                             <p id="sec-vpn-intro">A VPN (Virtual Private Network) encrypts your internet traffic and hides your IP address. It is especially recommended when using public Wi-Fi or when you want to protect your privacy online.</p>
-                            <p id="sec-vpn-welcome">All three VPN clients below can be installed directly from <strong>Soplos Welcome → Security → VPN</strong>:</p>
+                            <p id="sec-vpn-welcome">All three VPN clients below can be installed directly from <strong>SlopOS Welcome → Security → VPN</strong>:</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-lock"></i> ProtonVPN</h3>
@@ -468,7 +468,7 @@ flatpak install flathub org.mozilla.vpn</code></pre>
                                 <h3><i class="fas fa-shield-virus"></i> ClamAV</h3>
                                 <div class="accent-hr"></div>
                             </div>
-                            <p id="sec-av-clam-p">ClamAV is the standard open-source antivirus engine for Linux. Soplos Welcome installs one of two graphical frontends:</p>
+                            <p id="sec-av-clam-p">ClamAV is the standard open-source antivirus engine for Linux. SlopOS Welcome installs one of two graphical frontends:</p>
                             <ul>
                                 <li id="sec-av-clamtk-li"><strong>ClamTK:</strong> graphical interface for ClamAV (GTK). Installs <code>clamav</code> + <code>clamtk</code>, includes a virus definition updater. Available in all three distros.</li>
                                 <li id="sec-av-clamui-li"><strong>ClamUI:</strong> modern Flatpak graphical interface for ClamAV (<code>io.github.linx_systems.ClamUI</code>). Alternative to ClamTK with a cleaner layout.</li>
@@ -498,7 +498,7 @@ clamscan -r --remove ~/Downloads</code></pre>
                         <section id="backups" class="content-section">
                             <h2><i class="fas fa-hdd"></i> <span id="sec-backups-title">System Backups</span></h2>
                             <p id="sec-backups-intro">Creating regular system snapshots is one of the most effective protection measures — it lets you restore a working state after a bad update, configuration mistake, or ransomware attack.</p>
-                            <p id="sec-backups-welcome">All backup tools can be installed from <strong>Soplos Welcome → Security → System Backups</strong>. For detailed configuration see the <a href="../backup/">Backup wiki page</a>.</p>
+                            <p id="sec-backups-welcome">All backup tools can be installed from <strong>SlopOS Welcome → Security → System Backups</strong>. For detailed configuration see the <a href="../backup/">Backup wiki page</a>.</p>
                             <ul>
                                 <li id="sec-backups-timeshift"><strong>Timeshift</strong> — creates automatic BTRFS or rsync snapshots of the system. Strongly recommended as the first thing to install after a fresh install.</li>
                                 <li id="sec-backups-grub-btrfs"><strong>Grub BTRFS</strong> — integrates BTRFS snapshots into the GRUB boot menu, allowing you to boot directly into a snapshot without entering the desktop. Requires BTRFS filesystem.</li>
@@ -509,10 +509,10 @@ clamscan -r --remove ~/Downloads</code></pre>
 
                         <section id="cleaning" class="content-section">
                             <h2><i class="fas fa-broom"></i> <span id="sec-clean-title">System Cleaning</span></h2>
-                            <p id="sec-clean-intro">Removing unnecessary files, logs, and package cache reduces disk usage and can eliminate traces of sensitive data. All tools below can be installed from <strong>Soplos Welcome → Security → System Cleaning</strong>.</p>
+                            <p id="sec-clean-intro">Removing unnecessary files, logs, and package cache reduces disk usage and can eliminate traces of sensitive data. All tools below can be installed from <strong>SlopOS Welcome → Security → System Cleaning</strong>.</p>
                             <ul>
                                 <li id="sec-clean-bleachbit"><strong>BleachBit</strong> — frees disk space and protects privacy. Cleans cache, cookies, temporary files, and browser data across many applications. <code>sudo apt install bleachbit</code></li>
-                                <li id="sec-clean-soplos"><strong>Soplos Sys Cleaner</strong> — Soplos-native system optimizer. Scans APT cache, old kernels, Flatpak revisions, logs, and unused locales, showing exactly how much space is recoverable per category before touching anything. Also includes hardware detection and firmware management.</li>
+                                <li id="sec-clean-slopos"><strong>SlopOS Sys Cleaner</strong> — SlopOS-native system optimizer. Scans APT cache, old kernels, Flatpak revisions, logs, and unused locales, showing exactly how much space is recoverable per category before touching anything. Also includes hardware detection and firmware management.</li>
                                 <li id="sec-clean-stacer"><strong>Stacer</strong> — modern system optimizer with resource monitoring, startup app manager, and cache cleaner. Installed as AppImage from <code>~/AppImages/Stacer.AppImage</code>.</li>
                                 <li id="sec-clean-sweeper"><strong>Sweeper</strong> — simple KDE tool to clean temporary files and browsing history. <code>sudo apt install sweeper</code></li>
                             </ul>
@@ -551,7 +551,7 @@ flatpak install flathub com.bitwarden.desktop</code></pre>
                             </div>
 
                             <h3 id="sec-users-sudo-h">sudo vs root</h3>
-                            <p id="sec-users-sudo-p">Soplos Linux follows Debian's approach:</p>
+                            <p id="sec-users-sudo-p">SlopOS Linux follows Debian's approach:</p>
                             <ul>
                                 <li id="sec-users-sudo-1"><strong>Don't use root account:</strong> The root account is
                                     disabled by default
@@ -700,7 +700,7 @@ findtime = 600  # 10 minutes window</code></pre>
                             <div class="info-box warning">
                                 <i class="fas fa-exclamation-triangle"></i>
                                 <div>
-                                    <span id="sec-auto-warn"><strong>Not recommended on Soplos:</strong> Unattended automatic updates are not recommended on Soplos Linux. Since Soplos is based on Debian Testing, unattended upgrades can introduce unexpected changes, break packages, or cause conflicts without notice. Always review updates before applying them.</span>
+                                    <span id="sec-auto-warn"><strong>Not recommended on SlopOS:</strong> Unattended automatic updates are not recommended on SlopOS Linux. Since SlopOS is based on Debian Testing, unattended upgrades can introduce unexpected changes, break packages, or cause conflicts without notice. Always review updates before applying them.</span>
                                 </div>
                             </div>
 
@@ -742,7 +742,7 @@ find / -perm /4000 2>/dev/null</code></pre>
                             </div>
 
                             <h3 id="sec-hard-app-h">AppArmor</h3>
-                            <p id="sec-hard-app-p">Soplos Linux includes AppArmor for mandatory access control:</p>
+                            <p id="sec-hard-app-p">SlopOS Linux includes AppArmor for mandatory access control:</p>
 
                             <div class="code-example">
                                 <h4 id="sec-hard-app-term">Terminal</h4>
@@ -819,7 +819,7 @@ zip -e archive.zip file1 file2
                             </ul>
 
                             <h3 id="sec-priv-priv-h">Privacy-Focused Browsers</h3>
-                            <p id="sec-priv-priv-p">All browsers below are available in Soplos Welcome → Software:</p>
+                            <p id="sec-priv-priv-p">All browsers below are available in SlopOS Welcome → Software:</p>
                             <ul>
                                 <li id="sec-priv-priv-1"><strong>LibreWolf:</strong> Firefox fork hardened for privacy and security. No telemetry, stricter defaults than Firefox. Available as Flatpak (<code>io.gitlab.librewolf-community</code>).</li>
                                 <li id="sec-priv-priv-2"><strong>Helium:</strong> Chromium-based browser focused on privacy, with YouTube integration. Installed via .deb from the official GitHub releases.</li>
@@ -1087,7 +1087,7 @@ sudo lsof -i</code></pre>
     <script src="../../../js/logger.js"></script>
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
 

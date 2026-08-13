@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backups - Soplos Linux Wiki</title>
+    <title>Backups - SlopOS Linux Wiki</title>
     <meta name="description"
-        content="Learn how to backup and restore your Soplos Linux system with Timeshift and BTRFS.">
-    <meta name="keywords" content="soplos, linux, backup, security copy, timeshift, btrfs, restore">
+        content="Learn how to backup and restore your SlopOS Linux system with Timeshift and BTRFS.">
+    <meta name="keywords" content="slopos, linux, backup, security copy, timeshift, btrfs, restore">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Backups - Soplos Linux Wiki">
+    <meta property="og:title" content="Backups - SlopOS Linux Wiki">
     <meta property="og:description" content="Protect your data and system with backups.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
-    
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
+
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -24,7 +24,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -41,7 +41,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../index.html#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../index.html#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../index.html#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../index.html#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../index.html#requirements" id="menuRequirements">System
                                         Requirements</a></li>
                                 <li><a href="../../../index.html#download" id="menuDownload">Download</a></li>
@@ -67,11 +67,11 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a>
                                 </li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a>
                                 </li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -117,7 +117,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 id="bk-hero-title"><i class="fas fa-hdd"></i> System Backups</h1>
-                    <p id="bk-hero-desc">Comprehensive guide to protecting your system and data in Soplos Linux.</p>
+                    <p id="bk-hero-desc">Comprehensive guide to protecting your system and data in SlopOS Linux.</p>
                 </div>
             </div>
         </section>
@@ -149,12 +149,12 @@
                             </h2>
                             <p id="bk-intro-p">Data loss can happen to anyone due to hardware failure, accidental
                                 deletion, or malicious
-                                attacks. Soplos Linux provides powerful tools to ensure your system and personal files
+                                attacks. SlopOS Linux provides powerful tools to ensure your system and personal files
                                 are safe.</p>
                             <div class="info-box tip">
                                 <i class="fas fa-lightbulb"></i>
                                 <div>
-                                    <span id="bk-intro-welcome"><strong>Soplos Welcome:</strong> Timeshift, Grub BTRFS, BTRFS Assistant and Deja Dup can all be installed directly from <strong>Soplos Welcome → Security → System Backups</strong>. No terminal required.</span>
+                                    <span id="bk-intro-welcome"><strong>SlopOS Welcome:</strong> Timeshift, Grub BTRFS, BTRFS Assistant and Deja Dup can all be installed directly from <strong>SlopOS Welcome → Security → System Backups</strong>. No terminal required.</span>
                                 </div>
                             </div>
                         </section>
@@ -202,7 +202,7 @@
                                 updates or configuration mistakes.</p>
 
                             <h3 id="bk-ts-inst-h">Installation</h3>
-                            <p id="bk-ts-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
+                            <p id="bk-ts-inst-p">Install from <strong>SlopOS Welcome → Security → System Backups</strong>, or via terminal:</p>
                             <div class="code-example">
                                 <h4 id="bk-ts-inst-term">Terminal</h4>
                                 <pre><code id="bk-ts-inst-code"># Install Timeshift
@@ -211,7 +211,7 @@ sudo apt install timeshift</code></pre>
 
                             <h3 id="bk-ts-conf-h">Configuration: RSYNC vs BTRFS</h3>
                             <ul>
-                                <li id="bk-ts-conf-1"><strong>BTRFS:</strong> Recommended if you installed Soplos on
+                                <li id="bk-ts-conf-1"><strong>BTRFS:</strong> Recommended if you installed SlopOS on
                                     BTRFS. Snapshots are
                                     instant and take minimal space.</li>
                                 <li id="bk-ts-conf-2"><strong>RSYNC:</strong> Works on all file systems (EXT4, etc.).
@@ -237,7 +237,7 @@ sudo apt install timeshift</code></pre>
                             </p>
                             <p id="bk-ts-res-p2"><strong>From Live USB (If system won't boot):</strong></p>
                             <ol class="step-list">
-                                <li id="bk-ts-res-1">Boot from your Soplos Linux Live USB.</li>
+                                <li id="bk-ts-res-1">Boot from your SlopOS Linux Live USB.</li>
                                 <li id="bk-ts-res-2">Install Timeshift if not present.</li>
                                 <li id="bk-ts-res-3">Open Timeshift and select your system drive.</li>
                                 <li id="bk-ts-res-4">Select a snapshot and restore.</li>
@@ -249,10 +249,10 @@ sudo apt install timeshift</code></pre>
                             <p id="bk-gb-intro">Grub BTRFS integrates your BTRFS snapshots directly into the GRUB boot menu. This lets you boot into a previous snapshot without even entering the desktop — the safest way to recover from a broken system update or bad configuration.</p>
 
                             <h3 id="bk-gb-req-h">Requirements</h3>
-                            <p id="bk-gb-req-p">Grub BTRFS only works if your root partition (<code>/</code>) uses the <strong>BTRFS</strong> filesystem. If you installed Soplos with EXT4, this tool is not compatible.</p>
+                            <p id="bk-gb-req-p">Grub BTRFS only works if your root partition (<code>/</code>) uses the <strong>BTRFS</strong> filesystem. If you installed SlopOS with EXT4, this tool is not compatible.</p>
 
                             <h3 id="bk-gb-inst-h">Installation</h3>
-                            <p id="bk-gb-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
+                            <p id="bk-gb-inst-p">Install from <strong>SlopOS Welcome → Security → System Backups</strong>, or via terminal:</p>
                             <div class="code-example">
                                 <h4 id="bk-gb-inst-term">Terminal</h4>
                                 <pre><code id="bk-gb-inst-code"># Install Grub BTRFS
@@ -285,7 +285,7 @@ sudo update-grub</code></pre>
                             <p id="bk-ba-req-p">Requires a <strong>BTRFS</strong> root partition. Not compatible with EXT4 or other filesystems.</p>
 
                             <h3 id="bk-ba-inst-h">Installation</h3>
-                            <p id="bk-ba-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
+                            <p id="bk-ba-inst-p">Install from <strong>SlopOS Welcome → Security → System Backups</strong>, or via terminal:</p>
                             <div class="code-example">
                                 <h4 id="bk-ba-inst-term">Terminal</h4>
                                 <pre><code id="bk-ba-inst-code"># Install BTRFS Assistant
@@ -309,7 +309,7 @@ sudo apt install btrfs-assistant</code></pre>
                                 simple, integrated, and supports encryption.</p>
 
                             <h3 id="bk-dd-inst-h">Installation</h3>
-                            <p id="bk-dd-inst-p">Install from <strong>Soplos Welcome → Security → System Backups</strong>, or via terminal:</p>
+                            <p id="bk-dd-inst-p">Install from <strong>SlopOS Welcome → Security → System Backups</strong>, or via terminal:</p>
                             <div class="code-example">
                                 <h4 id="bk-dd-inst-term">Terminal</h4>
                                 <pre><code id="bk-dd-inst-code"># Install Deja Dup
@@ -446,7 +446,7 @@ rclone copy file.txt remote:Backup/</code></pre>
     <script src="../../../js/logger.js"></script>
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script src="../../../js/main.js"></script>
 </body>
 

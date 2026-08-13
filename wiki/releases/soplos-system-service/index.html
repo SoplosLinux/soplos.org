@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="ss-rel-page-title">Soplos System Service — Releases</title>
-    <meta name="description" content="Release history and changelog for Soplos System Service.">
+    <title id="ss-rel-page-title">SlopOS System Service — Releases</title>
+    <meta name="description" content="Release history and changelog for SlopOS System Service.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -34,7 +34,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../../#download" id="menuDownload">Download</a></li>
                             </ul>
@@ -59,9 +59,9 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../" id="breadcrumbReleases">Releases</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current" id="ss-rel-breadcrumb">Soplos System Service</span>
+                <span class="breadcrumb-current" id="ss-rel-breadcrumb">SlopOS System Service</span>
             </nav>
         </div>
     </div>
@@ -107,8 +107,8 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><img src="../../../images/icons/org.soplos.systemservice.png" alt="Soplos System Service" class="hero-app-icon"> <span id="ss-rel-hero-title">Soplos System Service</span></h1>
-                        <p id="ss-rel-hero-subtitle">Systemd service manager for Soplos Linux. View, control and monitor services with color-coded status, Start/Stop/Restart controls, journalctl log viewer and full dark/light theme support.</p>
+                        <h1><img src="../../../images/icons/org.slopos.systemservice.png" alt="SlopOS System Service" class="hero-app-icon"> <span id="ss-rel-hero-title">SlopOS System Service</span></h1>
+                        <p id="ss-rel-hero-subtitle">Systemd service manager for SlopOS Linux. View, control and monitor services with color-coded status, Start/Stop/Restart controls, journalctl log viewer and full dark/light theme support.</p>
                     </div>
                 </div>
             </section>
@@ -142,7 +142,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ss-rel-1005-fixed-li1"><strong>GNOME crash on launch (gtkiconhelper / gdk-pixbuf SVG loader):</strong> The wrapper was passing <code>HOME=/home/soplos</code> to the root pkexec process. The gdk-pixbuf SVG rasterizer uses bubblewrap as a sandbox; when the parent is root but <code>HOME</code> points to a user directory, the bwrap sandbox fails to initialize and GTK aborts. Fixed by passing <code>HOME=/root</code>, matching how soplos-grub-editor handles it.</li>
+                                <li id="ss-rel-1005-fixed-li1"><strong>GNOME crash on launch (gtkiconhelper / gdk-pixbuf SVG loader):</strong> The wrapper was passing <code>HOME=/home/slopos</code> to the root pkexec process. The gdk-pixbuf SVG rasterizer uses bubblewrap as a sandbox; when the parent is root but <code>HOME</code> points to a user directory, the bwrap sandbox fails to initialize and GTK aborts. Fixed by passing <code>HOME=/root</code>, matching how slopos-grub-editor handles it.</li>
                             </ul>
                         </section>
 
@@ -163,14 +163,14 @@
                         <!-- 1.0.0-3 -->
                         <section id="v1003" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="ss-rel-1003-title">1.0.0-3 — June 2026</span></h2>
-                            <p id="ss-rel-1003-subtitle" class="lead">Native titlebar in XFCE and KDE: the CSD HeaderBar is now only used in GNOME and other environments; XFCE and KDE use native window decorations matching the rest of the Soplos apps.</p>
+                            <p id="ss-rel-1003-subtitle" class="lead">Native titlebar in XFCE and KDE: the CSD HeaderBar is now only used in GNOME and other environments; XFCE and KDE use native window decorations matching the rest of the SlopOS apps.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ss-rel-1003-fixed-li1"><strong>Titlebar uses native window decorations in XFCE and KDE/Plasma:</strong> The CSD <code>Gtk.HeaderBar</code> is now only active in GNOME and other desktop environments. In XFCE and KDE the application uses native decorations, matching the behavior of the rest of the Soplos applications.</li>
+                                <li id="ss-rel-1003-fixed-li1"><strong>Titlebar uses native window decorations in XFCE and KDE/Plasma:</strong> The CSD <code>Gtk.HeaderBar</code> is now only active in GNOME and other desktop environments. In XFCE and KDE the application uses native decorations, matching the behavior of the rest of the SlopOS applications.</li>
                                 <li id="ss-rel-1003-fixed-li2"><strong><code>set_status()</code> adapted for native mode:</strong> In desktop environments that use native decorations, <code>set_status()</code> updates the window title instead of the HeaderBar subtitle, so operation feedback remains visible in all environments.</li>
                             </ul>
                         </section>
@@ -178,19 +178,19 @@
                         <!-- 1.0.0-2 -->
                         <section id="v1002" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="ss-rel-1002-title">1.0.0-2 — June 2026</span></h2>
-                            <p id="ss-rel-1002-subtitle" class="lead">Launcher and packaging fixes: wrapper renamed to soplos-system-service, pkexec now calls python3 -c inline, GLib and Gtk.Application initialization fixes, postinst path corrected; plus UX fixes: corrected progress bar, scrollable details panel, smart action buttons and color-coded Loaded column.</p>
+                            <p id="ss-rel-1002-subtitle" class="lead">Launcher and packaging fixes: wrapper renamed to slopos-system-service, pkexec now calls python3 -c inline, GLib and Gtk.Application initialization fixes, postinst path corrected; plus UX fixes: corrected progress bar, scrollable details panel, smart action buttons and color-coded Loaded column.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ss-rel-1002-fixed-li1"><strong>Wrapper renamed from <code>soplos-system-services</code> to <code>soplos-system-service</code>:</strong> Matches the project name and the Soplos packaging convention followed by all other apps.</li>
-                                <li id="ss-rel-1002-fixed-li2"><strong>Wrapper follows the Soplos pattern — pkexec calls <code>python3 -c</code> inline:</strong> Instead of calling the wrapper recursively, pkexec now runs <code>python3 -c "import main; main.main()"</code>. This avoids the need for a matching polkit <code>exec.path</code> policy and matches how <code>soplos-grub-editor</code> works.</li>
+                                <li id="ss-rel-1002-fixed-li1"><strong>Wrapper renamed from <code>slopos-system-services</code> to <code>slopos-system-service</code>:</strong> Matches the project name and the SlopOS packaging convention followed by all other apps.</li>
+                                <li id="ss-rel-1002-fixed-li2"><strong>Wrapper follows the SlopOS pattern — pkexec calls <code>python3 -c</code> inline:</strong> Instead of calling the wrapper recursively, pkexec now runs <code>python3 -c "import main; main.main()"</code>. This avoids the need for a matching polkit <code>exec.path</code> policy and matches how <code>slopos-grub-editor</code> works.</li>
                                 <li id="ss-rel-1002-fixed-li3"><strong><code>GLib.set_prgname</code> and <code>GLib.set_application_name</code> set before importing main:</strong> Eliminates the <em>"g_set_application_name() called multiple times"</em> terminal warning that appeared on every launch.</li>
                                 <li id="ss-rel-1002-fixed-li4"><strong><code>Gtk.Application</code> changed from <code>FLAGS_NONE</code> to <code>HANDLES_COMMAND_LINE</code>:</strong> Added a <code>do_command_line</code> handler that calls <code>activate()</code>. <code>FLAGS_NONE</code> caused a silent exit when the D-Bus singleton registration failed running as root via pkexec.</li>
-                                <li id="ss-rel-1002-fixed-li5"><strong><code>postinst</code> path corrected:</strong> The previous script used <code>/usr/share/soplos-system-services/</code> (wrong path with a trailing <em>s</em>) which made <code>set -e</code> exit immediately, leaving the package in a broken half-installed state.</li>
-                                <li id="ss-rel-1002-fixed-li6"><strong>pkexec handling moved entirely to the bash wrapper:</strong> As per the Soplos app pattern, privilege elevation is now entirely in the launcher script; <code>main.py</code> no longer calls pkexec and only runs the GTK application.</li>
+                                <li id="ss-rel-1002-fixed-li5"><strong><code>postinst</code> path corrected:</strong> The previous script used <code>/usr/share/slopos-system-services/</code> (wrong path with a trailing <em>s</em>) which made <code>set -e</code> exit immediately, leaving the package in a broken half-installed state.</li>
+                                <li id="ss-rel-1002-fixed-li6"><strong>pkexec handling moved entirely to the bash wrapper:</strong> As per the SlopOS app pattern, privilege elevation is now entirely in the launcher script; <code>main.py</code> no longer calls pkexec and only runs the GTK application.</li>
                                 <li id="ss-rel-1002-fixed-li7"><strong><code>GTK_IM_MODULE</code> set in the wrapper:</strong> Set to <code>gtk-im-context-simple</code> to suppress ibus connection warnings when running as root.</li>
                                 <li id="ss-rel-1002-fixed-li8"><strong>Dark/light theme detection moved to the bash wrapper:</strong> Detection now uses <code>xfconf-query</code> (XFCE) and <code>gsettings</code> (GNOME) in the wrapper before pkexec elevation, then passes the result via <code>SOPLOS_COLOR_SCHEME</code>.</li>
                                 <li id="ss-rel-1002-fixed-li9"><strong>Progress bar position corrected:</strong> Was appearing below the footer in -1 due to reversed <code>pack_end</code> ordering; footer is now packed first so the progress bar sits correctly between content and footer.</li>
@@ -198,7 +198,7 @@
                                 <li id="ss-rel-1002-fixed-li11"><strong>Details panel replaced <code>Gtk.Label</code> with <code>Gtk.TextView</code> inside <code>Gtk.ScrolledWindow</code>:</strong> Prevents window deformation on long <code>systemctl</code> output and adds scroll support for lengthy service details.</li>
                                 <li id="ss-rel-1002-fixed-li12"><strong>Smart action button state improved:</strong> Start is now disabled when the selected service is active; Stop and Restart are disabled when it is inactive, preventing nonsensical operations.</li>
                                 <li id="ss-rel-1002-fixed-li13"><strong>Color-coded Loaded column — not-found entries shown in red:</strong> Services where the unit file was not found are now highlighted in red in the Loaded column, matching the Active column color logic.</li>
-                                <li id="ss-rel-1002-fixed-li14"><strong>Black border artifact removed from details panel:</strong> Moving the <code>soplos-card</code> CSS class from an inner widget to the <code>Gtk.ScrolledWindow</code> and setting <code>ShadowType.NONE</code> eliminates the double-border visual artifact.</li>
+                                <li id="ss-rel-1002-fixed-li14"><strong>Black border artifact removed from details panel:</strong> Moving the <code>slopos-card</code> CSS class from an inner widget to the <code>Gtk.ScrolledWindow</code> and setting <code>ShadowType.NONE</code> eliminates the double-border visual artifact.</li>
                             </ul>
                         </section>
 
@@ -214,7 +214,7 @@
                             <ul>
                                 <li id="ss-rel-1001-rewritten-li1"><strong>GTK.Notebook two-tab interface:</strong> Services tab with sortable TreeView (green active / red failed / red not-found) and Logs tab with monospace journalctl viewer, replacing the original skeleton layout.</li>
                                 <li id="ss-rel-1001-rewritten-li2"><strong>Smart action buttons:</strong> Start, Stop and Restart buttons enabled or disabled based on the current service state; all controls disabled until a service is selected.</li>
-                                <li id="ss-rel-1001-rewritten-li3"><strong>CSD HeaderBar and Soplos footer:</strong> HeaderBar with operation subtitle (loading count, errors). Footer shows DE and display protocol on the left, version on the right. Progress bar in pulse mode shown during listing and operations.</li>
+                                <li id="ss-rel-1001-rewritten-li3"><strong>CSD HeaderBar and SlopOS footer:</strong> HeaderBar with operation subtitle (loading count, errors). Footer shows DE and display protocol on the left, version on the right. Progress bar in pulse mode shown during listing and operations.</li>
                                 <li id="ss-rel-1001-rewritten-li4"><strong>Dark/light theme forwarded through pkexec:</strong> Detected as the regular user before elevation and passed via <code>SOPLOS_COLOR_SCHEME</code>, ensuring correct colors when running as root under XFCE, KDE or GNOME.</li>
                                 <li id="ss-rel-1001-rewritten-li5"><strong>Full i18n and modular architecture:</strong> All UI strings through the dict-based <code>_()</code> system across all 8 languages. Modular layout: <code>core/</code>, <code>ui/</code>, <code>services/systemd.py</code> and <code>utils/</code>. All relevant env variables forwarded through pkexec.</li>
                             </ul>
@@ -224,7 +224,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ss-rel-1001-added-li1"><strong>Polkit policy, desktop launcher and bash wrapper:</strong> <code>org.soplos.systemservice.policy</code>, <code>org.soplos.systemservice.desktop</code> (with Name and Comment in all 8 languages) and <code>soplos-system-services</code> launcher script.</li>
+                                <li id="ss-rel-1001-added-li1"><strong>Polkit policy, desktop launcher and bash wrapper:</strong> <code>org.slopos.systemservice.policy</code>, <code>org.slopos.systemservice.desktop</code> (with Name and Comment in all 8 languages) and <code>slopos-system-services</code> launcher script.</li>
                                 <li id="ss-rel-1001-added-li2"><strong>Debian packaging and icons:</strong> <code>debian/control</code> and <code>debian/copyright</code>. Icons at 48×48, 64×64 and 128×128 pixels under <code>assets/icons/</code>.</li>
                             </ul>
 
@@ -284,10 +284,10 @@
 
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            if (window.SoplosUI) new SoplosUI.ScrollController();
+            if (window.SlopOSUI) new SlopOSUI.ScrollController();
         });
     </script>
     <script>

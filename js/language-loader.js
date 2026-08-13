@@ -5,7 +5,7 @@ const loaderScriptSrc = document.currentScript.src;
 const basePath = loaderScriptSrc.substring(0, loaderScriptSrc.lastIndexOf('/') + 1); // ends with js/
 
 // Track current language
-window.currentLanguage = localStorage.getItem('soplosLanguage') || 'en';
+window.currentLanguage = localStorage.getItem('sloposLanguage') || 'en';
 
 // Helper function to get translated text for dynamic content (like modals)
 window.getTranslatedText = function (key) {
@@ -115,11 +115,11 @@ function applyLanguage(lang) {
                     if (textNode) {
                         textNode.nodeValue = dict[key];
                     } else {
-                        // Fallback: if no text node found, just append? 
+                        // Fallback: if no text node found, just append?
                         // Or force innerHTML if we can't find where to put text?
                         // For now, let's use textContent which might wipe icons but ensures text is seen
-                        // element.textContent = dict[key]; 
-                        // Better: do nothing or log warning? 
+                        // element.textContent = dict[key];
+                        // Better: do nothing or log warning?
                         // Let's try setting textContent as fallback, user will report if icons disappear
                         // But better to be safe for Main UI:
                         // If we can't find a text node, maybe it's an empty button waiting for text?

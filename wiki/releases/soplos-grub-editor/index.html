@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="ge-rel-page-title">Soplos GRUB Editor — Releases</title>
-    <meta name="description" content="Release history and changelog for Soplos GRUB Editor.">
+    <title id="ge-rel-page-title">SlopOS GRUB Editor — Releases</title>
+    <meta name="description" content="Release history and changelog for SlopOS GRUB Editor.">
 
-    <link rel="icon" href="../../../images/logo/soplos-logo.png" type="image/png">
+    <link rel="icon" href="../../../images/logo/slopos-logo.png" type="image/png">
     <link rel="stylesheet" href="../../styles/wiki.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../../../">
-                    <img src="../../../images/logo/web-logo.png" alt="Soplos Linux Logo">
+                    <img src="../../../images/logo/web-logo.png" alt="SlopOS Linux Logo">
                 </a>
                 <img class="mourning-ribbon" src="../../../images/ribbon/Black_Ribbon.png" alt="En memoria de Marc Miralles">
             </div>
@@ -34,7 +34,7 @@
                             <ul class="submenu">
                                 <li><a href="../../../#features" id="menuFeatures">Features</a></li>
                                 <li><a href="../../../#galleries" id="menuGalleries">Galleries</a></li>
-                                <li><a href="../../../#apps" id="menuApps">Soplos Apps</a></li>
+                                <li><a href="../../../#apps" id="menuApps">SlopOS Apps</a></li>
                                 <li><a href="../../../#requirements" id="menuRequirements">System Requirements</a></li>
                                 <li><a href="../../../#download" id="menuDownload">Download</a></li>
                             </ul>
@@ -59,9 +59,9 @@
                                 <li><a href="/community/videos/" id="menuVideos">Videos</a></li>
                                 <li><a href="/community/branding/" id="menuBranding">Branding</a></li>
                                 <li><a href="/forums/" id="menuForum">Forum</a></li>
-                                <li><a href="https://github.com/SoplosLinux" id="menuGitHub" target="_blank">GitHub</a></li>
-                                <li><a href="https://x.com/soploslinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
-                                <li><a href="https://distrowatch.com/table.php?distribution=soplos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
+                                <li><a href="https://github.com/SlopOSLinux" id="menuGitHub" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/sloposlinux" id="menuTwitter" target="_blank">X (Twitter)</a></li>
+                                <li><a href="https://distrowatch.com/table.php?distribution=slopos" id="menuDistroWatch" target="_blank">DistroWatch</a></li>
                             </ul>
                         </li>
                         <li><a href="/community/donate/" id="menuDonate">Donate</a></li>
@@ -97,7 +97,7 @@
                 <span class="breadcrumb-separator">›</span>
                 <a href="../" id="breadcrumbReleases">Releases</a>
                 <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current" id="ge-rel-breadcrumb">Soplos GRUB Editor</span>
+                <span class="breadcrumb-current" id="ge-rel-breadcrumb">SlopOS GRUB Editor</span>
             </nav>
         </div>
     </div>
@@ -107,7 +107,7 @@
             <section class="wiki-hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1><img src="../../../images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor" class="hero-app-icon"> <span id="ge-rel-hero-title">Soplos GRUB Editor</span></h1>
+                        <h1><img src="../../../images/icons/org.slopos.grubeditor.png" alt="SlopOS GRUB Editor" class="hero-app-icon"> <span id="ge-rel-hero-title">SlopOS GRUB Editor</span></h1>
                         <p id="ge-rel-hero-subtitle">Graphical GTK3 editor for GRUB2 — theme management, font conversion, background configuration, boot entry editing and advanced kernel parameters, with full 8-language internationalisation.</p>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                                 <li id="ge-rel-202-7-fixed-li1"><strong>Screen resolution saved as translated label:</strong> <code>GRUB_GFXMODE</code> was written using the label shown in the UI rather than the raw value — on a German system this produced <code>GRUB_GFXMODE=automatisch</code>, which GRUB does not understand. The combo now stores the raw value separately from the display text.</li>
                                 <li id="ge-rel-202-7-fixed-li2"><strong>Custom entries could not be removed:</strong> The Boot Entries tab classified custom entries as kernel entries and refused to delete them, claiming they belonged to an installed kernel. Custom entries can now be enabled, disabled, and deleted, with a confirmation prompt before removal.</li>
                                 <li id="ge-rel-202-7-fixed-li3"><strong>Disabled custom entries disappeared from the list:</strong> Disabling a custom entry caused it to vanish from the Boot Entries tab, making it impossible to re-enable or delete it later. Disabled custom entries now stay visible — same behaviour memtest entries already had.</li>
-                                <li id="ge-rel-202-7-fixed-li4"><strong>Window not associated with its launcher:</strong> The launcher wrapper registered the window under <code>com.soplos.grubeditor</code> while the desktop file declares <code>org.soplos.grubeditor</code>, so the window did not group with its taskbar launcher and could show a generic icon.</li>
+                                <li id="ge-rel-202-7-fixed-li4"><strong>Window not associated with its launcher:</strong> The launcher wrapper registered the window under <code>com.slopos.grubeditor</code> while the desktop file declares <code>org.slopos.grubeditor</code>, so the window did not group with its taskbar launcher and could show a generic icon.</li>
                             </ul>
                         </section>
 
@@ -275,14 +275,14 @@
                         <!-- 2.0.2-2 -->
                         <section id="v202-2" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="ge-rel-202-2-title">2.0.2-2 — April 2026</span></h2>
-                            <p id="ge-rel-202-2-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern Soplos layout standard.</p>
+                            <p id="ge-rel-202-2-subtitle" class="lead">Minor UI polish — simplified footer text to match the modern SlopOS layout standard.</p>
 
                             <div class="subsection-header">
                                 <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ge-rel-202-2-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern Soplos standard layout (<code>XFCE · X11</code>).</li>
+                                <li id="ge-rel-202-2-changed-li1"><strong>Footer UI text:</strong> Simplified to match the modern SlopOS standard layout (<code>XFCE · X11</code>).</li>
                             </ul>
                         </section>
 
@@ -307,9 +307,9 @@
                             </div>
                             <ul>
                                 <li id="ge-rel-202-1-fixed-li1"><strong>Inactive tab label color:</strong> Tab labels no longer appear orange in inactive tabs — removed <code>color: inherit</code> rule that incorrectly propagated the active tab color.</li>
-                                <li id="ge-rel-202-1-fixed-li2"><strong>Icon naming:</strong> Icon files renamed from <code>com.soplos</code> to <code>org.soplos</code> for consistency.</li>
+                                <li id="ge-rel-202-1-fixed-li2"><strong>Icon naming:</strong> Icon files renamed from <code>com.slopos</code> to <code>org.slopos</code> for consistency.</li>
                                 <li id="ge-rel-202-1-fixed-li3"><strong>Duplicate GTK_THEME env var:</strong> Duplicate <code>GTK_THEME</code> environment variable entry in the pkexec launcher eliminated.</li>
-                                <li id="ge-rel-202-1-fixed-li4"><strong>Wrong i18n domain:</strong> Default domain corrected from <code>soplos-repo-selector</code> to <code>soplos-grub-editor</code>.</li>
+                                <li id="ge-rel-202-1-fixed-li4"><strong>Wrong i18n domain:</strong> Default domain corrected from <code>slopos-repo-selector</code> to <code>slopos-grub-editor</code>.</li>
                                 <li id="ge-rel-202-1-fixed-li5"><strong>Inline imports:</strong> Inline <code>import subprocess</code> statements moved to module level in <code>appearance_view.py</code>.</li>
                                 <li id="ge-rel-202-1-fixed-li6"><strong>Debug print removed:</strong> <code>[DEBUG]</code> print statement removed from production code.</li>
                             </ul>
@@ -319,8 +319,8 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ge-rel-202-1-improved-li1"><strong>CSS architecture:</strong> Refactored to <code>base.css</code> (structural styles) + <code>dark.css</code>/<code>light.css</code> (color variables only), matching the Soplos standard.</li>
-                                <li id="ge-rel-202-1-improved-li2"><strong>About dialog:</strong> Appearance standardized across XFCE, GNOME and KDE to match all other Soplos apps.</li>
+                                <li id="ge-rel-202-1-improved-li1"><strong>CSS architecture:</strong> Refactored to <code>base.css</code> (structural styles) + <code>dark.css</code>/<code>light.css</code> (color variables only), matching the SlopOS standard.</li>
+                                <li id="ge-rel-202-1-improved-li2"><strong>About dialog:</strong> Appearance standardized across XFCE, GNOME and KDE to match all other SlopOS apps.</li>
                             </ul>
                         </section>
 
@@ -361,7 +361,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ge-rel-201-fixed-li1"><strong>Robust theme management:</strong> Now correctly disables both <code>05_debian_theme</code> and <code>05_soplos_theme</code> to prevent system conflicts.</li>
+                                <li id="ge-rel-201-fixed-li1"><strong>Robust theme management:</strong> Now correctly disables both <code>05_debian_theme</code> and <code>05_slopos_theme</code> to prevent system conflicts.</li>
                                 <li id="ge-rel-201-fixed-li2"><strong>Cache cleanup:</strong> Automatically removes problematic <code>.background_cache.*</code> images (such as progressive JPEGs) that caused the "invalid argument" GRUB crash.</li>
                                 <li id="ge-rel-201-fixed-li3"><strong>Smart UI automation:</strong> "Show boot menu" checkbox is automatically disabled and unchecked when Timeout is set to 0.</li>
                             </ul>
@@ -432,7 +432,7 @@
                                 <li id="ge-rel-tr-109-added-li1"><strong>Complete internationalisation:</strong> 8 languages natively supported via <code>translations/strings.py</code> and <code>app_locale/</code>.</li>
                                 <li id="ge-rel-tr-109-added-li2"><strong>Full Tyron desktop integration:</strong> Native integration with the Tyron window manager and taskbars.</li>
                                 <li id="ge-rel-tr-109-added-li3"><strong>Asset optimisation:</strong> Massive optimisation of screenshots and icon assets; multi-size icon packaging (48×48, 64×64, 128×128).</li>
-                                <li id="ge-rel-tr-109-added-li4"><strong>Updated authorship:</strong> <code>setup.py</code> updated to Sergi Perich &lt;info@soploslinux.com&gt;.</li>
+                                <li id="ge-rel-tr-109-added-li4"><strong>Updated authorship:</strong> <code>setup.py</code> updated to Sergi Perich &lt;info@sloposlinux.com&gt;.</li>
                             </ul>
                         </section>
 
@@ -460,7 +460,7 @@
                                 <div class="accent-hr"></div>
                             </div>
                             <ul>
-                                <li id="ge-rel-tr-107-fixed-li1"><strong>Application ID restored</strong> to <code>com.soplos.grubeditor</code>.</li>
+                                <li id="ge-rel-tr-107-fixed-li1"><strong>Application ID restored</strong> to <code>com.slopos.grubeditor</code>.</li>
                                 <li id="ge-rel-tr-107-fixed-li2"><strong>Strings module relocated</strong> back to <code>translations/strings.py</code>.</li>
                             </ul>
                         </section>
@@ -616,7 +616,7 @@
                             </div>
                             <ul>
                                 <li id="ge-rel-tr-102-changed-li1"><strong>Strings module:</strong> UI strings extracted to <code>strings.py</code> in the project root.</li>
-                                <li id="ge-rel-tr-102-changed-li2"><strong>Application ID:</strong> Changed to <code>com.soplosgrubeditor</code>.</li>
+                                <li id="ge-rel-tr-102-changed-li2"><strong>Application ID:</strong> Changed to <code>com.sloposgrubeditor</code>.</li>
                             </ul>
                         </section>
 
@@ -742,10 +742,10 @@
 
     <script src="../../../js/language-loader.js"></script>
     <script src="../../../js/language-switcher.js"></script>
-    <script src="../../../js/soplos-ui.js"></script>
+    <script src="../../../js/slopos-ui.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            if (window.SoplosUI) new SoplosUI.ScrollController();
+            if (window.SlopOSUI) new SlopOSUI.ScrollController();
         });
     </script>
     <script>

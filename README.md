@@ -1,11 +1,11 @@
-# Soplos.org — Official Website
+# SlopOS.org — Official Website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://soploslinux.github.io/soplos.org/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://sloposlinux.github.io/slopos.org/)
 
-This repository contains the official website and documentation for **Soplos Linux**, a modern, user-friendly Linux distribution based on Debian Testing.
+This repository contains the official website and documentation for **SlopOS Linux**, a modern, user-friendly Linux distribution based on Debian Testing.
 
-🌐 **Live Site**: [soploslinux.github.io/soplos.org](https://soploslinux.github.io/soplos.org/)
+🌐 **Live Site**: [sloposlinux.github.io/slopos.org](https://sloposlinux.github.io/slopos.org/)
 
 ---
 
@@ -24,8 +24,8 @@ This repository contains the official website and documentation for **Soplos Lin
 
 ## About
 
-Soplos.org serves as the central hub for:
-- Product information about Soplos Linux distributions (Tyron, Tyson, Boro)
+SlopOS.org serves as the central hub for:
+- Product information about SlopOS Linux distributions (Tyron, Tyson, Boro)
 - Comprehensive wiki documentation
 - Download links and installation guides
 - Community resources and support
@@ -37,7 +37,7 @@ The website is fully static (HTML/CSS/JavaScript) and supports **8 languages**: 
 ## 📁 Project Structure
 
 ```
-soplos.org/
+slopos.org/
 ├── index.html              # Homepage
 ├── wiki/                   # Documentation pages
 │   ├── install/           # Installation guide
@@ -110,13 +110,13 @@ Found a typo or want to improve a translation?
 - Keep HTML tags and special characters (`<strong>`, `<code>`, etc.) intact
 - Preserve line breaks (`\n`) and formatting
 - Do not translate:
-  - Product names (Soplos, Tyron, Tyson, Boro)
+  - Product names (SlopOS, Tyron, Tyson, Boro)
   - Technical commands (e.g., `sudo apt install`)
   - File paths and URLs
 
 ### 🐛 Reporting Issues
 
-Found a bug, broken link, or incorrect documentation? Please [open an issue](https://github.com/SoplosLinux/soplos.org/issues/new) with:
+Found a bug, broken link, or incorrect documentation? Please [open an issue](https://github.com/SlopOSLinux/slopos.org/issues/new) with:
 
 - **Clear title** describing the problem
 - **URL** or page where the issue occurs
@@ -152,7 +152,7 @@ For non-translation code contributions:
 No build step required! Just serve the files:
 
 ```bash
-cd soplos.org
+cd slopos.org
 python3 -m http.server 8000
 ```
 
@@ -189,10 +189,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **Official Website**: [soplos.org](https://soploslinux.github.io/soplos.org/)
-- **GitHub Organization**: [@SoplosLinux](https://github.com/SoplosLinux)
-- **Issue Tracker**: [Report Issues](https://github.com/SoplosLinux/soplos.org/issues)
-- **Pull Requests**: [Contribute](https://github.com/SoplosLinux/soplos.org/pulls)
+- **Official Website**: [slopos.org](https://sloposlinux.github.io/slopos.org/)
+- **GitHub Organization**: [@SlopOSLinux](https://github.com/SlopOSLinux)
+- **Issue Tracker**: [Report Issues](https://github.com/SlopOSLinux/slopos.org/issues)
+- **Pull Requests**: [Contribute](https://github.com/SlopOSLinux/slopos.org/pulls)
 
 ---
 
@@ -200,10 +200,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Need help or have questions?
 
-- 📧 Open an [issue](https://github.com/SoplosLinux/soplos.org/issues)
+- 📧 Open an [issue](https://github.com/SlopOSLinux/slopos.org/issues)
 - 💬 Join our community forums (link in website)
 - 🐦 Follow us on social media (links on website)
 
 ---
 
-**Thank you for contributing to Soplos Linux!** 🎉
+**Thank you for contributing to SlopOS Linux!** 🎉

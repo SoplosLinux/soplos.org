@@ -1,16 +1,16 @@
 /**
- * Main Script for Soplos.org
+ * Main Script for SlopOS.org
  * Initializes UI components and handles global logic.
  */
 
 document.addEventListener("DOMContentLoaded", function () {
   // 1. Initialize Scroll Controller (Header, Back to Top, Smooth Scroll)
-  new SoplosUI.ScrollController();
-  new SoplosUI.BreadcrumbController();
+  new SlopOSUI.ScrollController();
+  new SlopOSUI.BreadcrumbController();
 
   // 2. Initialize Mobile Carousels
   // Features Carousel
-  new SoplosUI.SoplosCarousel(".features-grid", ".feature-card", {
+  new SlopOSUI.SlopOSCarousel(".features-grid", ".feature-card", {
     prevClass: "features-arrow prev",
     nextClass: "features-arrow next",
     dotsClass: "features-dots",
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Galleries Carousel (Screenshots)
-  new SoplosUI.SoplosCarousel(".screenshot-gallery", ".screenshot", {
+  new SlopOSUI.SlopOSCarousel(".screenshot-gallery", ".screenshot", {
     prevClass: "gallery-arrow prev",
     nextClass: "gallery-arrow next",
     dotsClass: "gallery-dots",
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Apps Carousel
-  new SoplosUI.SoplosCarousel(".apps-versions-grid", ".apps-version-card", {
+  new SlopOSUI.SlopOSCarousel(".apps-versions-grid", ".apps-version-card", {
     prevClass: "apps-arrow prev",
     nextClass: "apps-arrow next",
     dotsClass: "apps-dots",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Requirements Carousel
-  new SoplosUI.SoplosCarousel(
+  new SlopOSUI.SlopOSCarousel(
     "#requirements .requirements-cards",
     ".requirements-card",
     {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   reqModals.forEach((req) => {
     const btn = document.getElementById(req.btnId);
     if (btn) {
-      const modal = new SoplosUI.SoplosModal(req.modalId, {
+      const modal = new SlopOSUI.SlopOSModal(req.modalId, {
         closeSelector: ".close-modal-requirements",
       });
       btn.addEventListener("click", (e) => {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Gallery Modal (Screenshots)
   let galleryModal;
   if (document.getElementById("modalGallery")) {
-    galleryModal = new SoplosUI.SoplosImageModal("modalGallery", {
+    galleryModal = new SlopOSUI.SlopOSImageModal("modalGallery", {
       closeSelector: ".close-modal-gallery",
       trackSelector: ".modal-gallery-track",
       captionSelector: ".modal-gallery-caption",
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // App Modal
   let appModal;
   if (document.getElementById("modalApp")) {
-    appModal = new SoplosUI.SoplosImageModal("modalApp", {
+    appModal = new SlopOSUI.SlopOSImageModal("modalApp", {
       closeSelector: ".close-modal-app",
       trackSelector: ".modal-app-track", // Updated to point to inner track
       captionSelector: ".modal-app-caption",
@@ -203,71 +203,71 @@ document.addEventListener("DOMContentLoaded", function () {
       titleKey: "appAppImageManagerTitle",
       descKey: "appAppImageManagerDesc",
       images: [
-        "images/apps/soplos-appimage-manager/screenshot1.png",
-        "images/apps/soplos-appimage-manager/screenshot2.png",
-        "images/apps/soplos-appimage-manager/screenshot3.png",
-        "images/apps/soplos-appimage-manager/screenshot4.png",
-        "images/apps/soplos-appimage-manager/screenshot5.png",
+        "images/apps/slopos-appimage-manager/screenshot1.png",
+        "images/apps/slopos-appimage-manager/screenshot2.png",
+        "images/apps/slopos-appimage-manager/screenshot3.png",
+        "images/apps/slopos-appimage-manager/screenshot4.png",
+        "images/apps/slopos-appimage-manager/screenshot5.png",
       ],
     },
     "kernel-installer": {
       titleKey: "appKernelInstallerTitle",
       descKey: "appKernelInstallerDesc",
       images: [
-        "images/apps/soplos-kernel-installer/screenshot1.png",
-        "images/apps/soplos-kernel-installer/screenshot2.png",
-        "images/apps/soplos-kernel-installer/screenshot3.png",
-        "images/apps/soplos-kernel-installer/screenshot4.png",
-        "images/apps/soplos-kernel-installer/screenshot5.png",
+        "images/apps/slopos-kernel-installer/screenshot1.png",
+        "images/apps/slopos-kernel-installer/screenshot2.png",
+        "images/apps/slopos-kernel-installer/screenshot3.png",
+        "images/apps/slopos-kernel-installer/screenshot4.png",
+        "images/apps/slopos-kernel-installer/screenshot5.png",
       ],
     },
     "system-service": {
       titleKey: "appSystemServiceTitle",
       descKey: "appSystemServiceDesc",
       images: [
-        "images/apps/soplos-system-service/screenshot01.png",
-        "images/apps/soplos-system-service/screenshot02.png",
-        "images/apps/soplos-system-service/screenshot03.png",
+        "images/apps/slopos-system-service/screenshot01.png",
+        "images/apps/slopos-system-service/screenshot02.png",
+        "images/apps/slopos-system-service/screenshot03.png",
       ],
     },
     "sys-cleaner": {
       titleKey: "appSysCleanerTitle",
       descKey: "appSysCleanerDesc",
       images: [
-        "images/apps/soplos-sys-cleaner/screenshot01.png",
-        "images/apps/soplos-sys-cleaner/screenshot02.png",
-        "images/apps/soplos-sys-cleaner/screenshot03.png",
-        "images/apps/soplos-sys-cleaner/screenshot04.png",
-        "images/apps/soplos-sys-cleaner/screenshot05.png",
-        "images/apps/soplos-sys-cleaner/screenshot06.png",
-        "images/apps/soplos-sys-cleaner/screenshot07.png",
-        "images/apps/soplos-sys-cleaner/screenshot08.png",
-        "images/apps/soplos-sys-cleaner/screenshot09.png",
-        "images/apps/soplos-sys-cleaner/screenshot10.png",
-        "images/apps/soplos-sys-cleaner/screenshot11.png",
-        "images/apps/soplos-sys-cleaner/screenshot12.png",
-        "images/apps/soplos-sys-cleaner/screenshot13.png",
-        "images/apps/soplos-sys-cleaner/screenshot14.png",
+        "images/apps/slopos-sys-cleaner/screenshot01.png",
+        "images/apps/slopos-sys-cleaner/screenshot02.png",
+        "images/apps/slopos-sys-cleaner/screenshot03.png",
+        "images/apps/slopos-sys-cleaner/screenshot04.png",
+        "images/apps/slopos-sys-cleaner/screenshot05.png",
+        "images/apps/slopos-sys-cleaner/screenshot06.png",
+        "images/apps/slopos-sys-cleaner/screenshot07.png",
+        "images/apps/slopos-sys-cleaner/screenshot08.png",
+        "images/apps/slopos-sys-cleaner/screenshot09.png",
+        "images/apps/slopos-sys-cleaner/screenshot10.png",
+        "images/apps/slopos-sys-cleaner/screenshot11.png",
+        "images/apps/slopos-sys-cleaner/screenshot12.png",
+        "images/apps/slopos-sys-cleaner/screenshot13.png",
+        "images/apps/slopos-sys-cleaner/screenshot14.png",
       ],
     },
     "webapp-manager": {
       titleKey: "appWebAppManagerTitle",
       descKey: "appWebAppManagerDesc",
       images: [
-        "images/apps/soplos-webapp-manager/screenshot1.png",
-        "images/apps/soplos-webapp-manager/screenshot2.png",
-        "images/apps/soplos-webapp-manager/screenshot3.png",
+        "images/apps/slopos-webapp-manager/screenshot1.png",
+        "images/apps/slopos-webapp-manager/screenshot2.png",
+        "images/apps/slopos-webapp-manager/screenshot3.png",
       ],
     },
     "welcome-live": {
       titleKey: "appWelcomeLiveTitle",
       descKey: "appWelcomeLiveDesc",
       images: [
-        "images/apps/soplos-welcome-live/screenshot1.png",
-        "images/apps/soplos-welcome-live/screenshot2.png",
-        "images/apps/soplos-welcome-live/screenshot3.png",
-        "images/apps/soplos-welcome-live/screenshot4.png",
-        "images/apps/soplos-welcome-live/screenshot5.png",
+        "images/apps/slopos-welcome-live/screenshot1.png",
+        "images/apps/slopos-welcome-live/screenshot2.png",
+        "images/apps/slopos-welcome-live/screenshot3.png",
+        "images/apps/slopos-welcome-live/screenshot4.png",
+        "images/apps/slopos-welcome-live/screenshot5.png",
       ],
     },
 
@@ -312,30 +312,30 @@ document.addEventListener("DOMContentLoaded", function () {
         titleKey: "appThemeManagerTitle",
         descKey: "appThemeManagerDesc",
         images: [
-          "images/apps/soplos-theme-manager/screenshot1.png",
-          "images/apps/soplos-theme-manager/screenshot2.png",
-          "images/apps/soplos-theme-manager/screenshot3.png",
-          "images/apps/soplos-theme-manager/screenshot4.png",
-          "images/apps/soplos-theme-manager/screenshot5.png",
+          "images/apps/slopos-theme-manager/screenshot1.png",
+          "images/apps/slopos-theme-manager/screenshot2.png",
+          "images/apps/slopos-theme-manager/screenshot3.png",
+          "images/apps/slopos-theme-manager/screenshot4.png",
+          "images/apps/slopos-theme-manager/screenshot5.png",
         ],
       },
       welcome: {
         titleKey: "appWelcomeTitle",
         descKey: "appWelcomeDesc",
         images: [
-          "images/apps/soplos-welcome/screenshot01.png",
-          "images/apps/soplos-welcome/screenshot02.png",
-          "images/apps/soplos-welcome/screenshot03.png",
-          "images/apps/soplos-welcome/screenshot04.png",
-          "images/apps/soplos-welcome/screenshot05.png",
-          "images/apps/soplos-welcome/screenshot06.png",
-          "images/apps/soplos-welcome/screenshot07.png",
-          "images/apps/soplos-welcome/screenshot08.png",
-          "images/apps/soplos-welcome/screenshot09.png",
-          "images/apps/soplos-welcome/screenshot10.png",
-          "images/apps/soplos-welcome/screenshot11.png",
-          "images/apps/soplos-welcome/screenshot12.png",
-          "images/apps/soplos-welcome/screenshot13.png",
+          "images/apps/slopos-welcome/screenshot01.png",
+          "images/apps/slopos-welcome/screenshot02.png",
+          "images/apps/slopos-welcome/screenshot03.png",
+          "images/apps/slopos-welcome/screenshot04.png",
+          "images/apps/slopos-welcome/screenshot05.png",
+          "images/apps/slopos-welcome/screenshot06.png",
+          "images/apps/slopos-welcome/screenshot07.png",
+          "images/apps/slopos-welcome/screenshot08.png",
+          "images/apps/slopos-welcome/screenshot09.png",
+          "images/apps/slopos-welcome/screenshot10.png",
+          "images/apps/slopos-welcome/screenshot11.png",
+          "images/apps/slopos-welcome/screenshot12.png",
+          "images/apps/slopos-welcome/screenshot13.png",
         ],
       },
       "welcome-live": sharedApps["welcome-live"],
@@ -379,19 +379,19 @@ document.addEventListener("DOMContentLoaded", function () {
         titleKey: "appWelcomeTitle",
         descKey: "appWelcomeDesc",
         images: [
-          "images/apps/soplos-welcome/screenshot01.png",
-          "images/apps/soplos-welcome/screenshot02.png",
-          "images/apps/soplos-welcome/screenshot03.png",
-          "images/apps/soplos-welcome/screenshot04.png",
-          "images/apps/soplos-welcome/screenshot05.png",
-          "images/apps/soplos-welcome/screenshot06.png",
-          "images/apps/soplos-welcome/screenshot07.png",
-          "images/apps/soplos-welcome/screenshot08.png",
-          "images/apps/soplos-welcome/screenshot09.png",
-          "images/apps/soplos-welcome/screenshot10.png",
-          "images/apps/soplos-welcome/screenshot11.png",
-          "images/apps/soplos-welcome/screenshot12.png",
-          "images/apps/soplos-welcome/screenshot13.png",
+          "images/apps/slopos-welcome/screenshot01.png",
+          "images/apps/slopos-welcome/screenshot02.png",
+          "images/apps/slopos-welcome/screenshot03.png",
+          "images/apps/slopos-welcome/screenshot04.png",
+          "images/apps/slopos-welcome/screenshot05.png",
+          "images/apps/slopos-welcome/screenshot06.png",
+          "images/apps/slopos-welcome/screenshot07.png",
+          "images/apps/slopos-welcome/screenshot08.png",
+          "images/apps/slopos-welcome/screenshot09.png",
+          "images/apps/slopos-welcome/screenshot10.png",
+          "images/apps/slopos-welcome/screenshot11.png",
+          "images/apps/slopos-welcome/screenshot12.png",
+          "images/apps/slopos-welcome/screenshot13.png",
         ],
       },
       "welcome-live": sharedApps["welcome-live"],
@@ -443,19 +443,19 @@ document.addEventListener("DOMContentLoaded", function () {
         titleKey: "appWelcomeTitle",
         descKey: "appWelcomeDesc",
         images: [
-          "images/apps/soplos-welcome/screenshot01.png",
-          "images/apps/soplos-welcome/screenshot02.png",
-          "images/apps/soplos-welcome/screenshot03.png",
-          "images/apps/soplos-welcome/screenshot04.png",
-          "images/apps/soplos-welcome/screenshot05.png",
-          "images/apps/soplos-welcome/screenshot06.png",
-          "images/apps/soplos-welcome/screenshot07.png",
-          "images/apps/soplos-welcome/screenshot08.png",
-          "images/apps/soplos-welcome/screenshot09.png",
-          "images/apps/soplos-welcome/screenshot10.png",
-          "images/apps/soplos-welcome/screenshot11.png",
-          "images/apps/soplos-welcome/screenshot12.png",
-          "images/apps/soplos-welcome/screenshot13.png",
+          "images/apps/slopos-welcome/screenshot01.png",
+          "images/apps/slopos-welcome/screenshot02.png",
+          "images/apps/slopos-welcome/screenshot03.png",
+          "images/apps/slopos-welcome/screenshot04.png",
+          "images/apps/slopos-welcome/screenshot05.png",
+          "images/apps/slopos-welcome/screenshot06.png",
+          "images/apps/slopos-welcome/screenshot07.png",
+          "images/apps/slopos-welcome/screenshot08.png",
+          "images/apps/slopos-welcome/screenshot09.png",
+          "images/apps/slopos-welcome/screenshot10.png",
+          "images/apps/slopos-welcome/screenshot11.png",
+          "images/apps/slopos-welcome/screenshot12.png",
+          "images/apps/slopos-welcome/screenshot13.png",
         ],
       },
       "welcome-live": sharedApps["welcome-live"],

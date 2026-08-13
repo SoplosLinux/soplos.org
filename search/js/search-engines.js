@@ -1,5 +1,5 @@
 /**
- * Gestión de motores de búsqueda para Soplos Linux Startpage
+ * Gestión de motores de búsqueda para SlopOS Linux Startpage
  */
 
 // Motores de búsqueda soportados
@@ -27,7 +27,7 @@ const searchEngines = {
 };
 
 // Motor de búsqueda actual
-let currentEngine = localStorage.getItem('soplosSearchEngine') || "google";
+let currentEngine = localStorage.getItem('sloposSearchEngine') || "google";
 
 // Cambiar motor de búsqueda
 function setSearchEngine(engine) {
@@ -39,18 +39,18 @@ function setSearchEngine(engine) {
   currentEngine = engine;
   const searchForm = document.getElementById("search-form");
   const searchInput = document.getElementById("search-input");
-  
+
   if (searchForm) {
     searchForm.action = searchEngines[engine].url;
     // Actualizar el atributo name del input para el parámetro correcto
     searchInput.name = searchEngines[engine].param;
   }
-  
+
   // Actualizar placeholder inmediatamente
   if (searchInput) {
-    const currentLang = localStorage.getItem('soplosStartPageLang') || 'es';
+    const currentLang = localStorage.getItem('sloposStartPageLang') || 'es';
     let placeholderText;
-    
+
     if (window.translations && window.translations[currentLang] && window.translations[currentLang].searchPlaceholder) {
       // Usar la traducción base y reemplazar "Google" con el motor actual
       placeholderText = window.translations[currentLang].searchPlaceholder.replace("Google", searchEngines[engine].name);
@@ -68,16 +68,16 @@ function setSearchEngine(engine) {
       };
       placeholderText = fallbacks[currentLang] || `Buscar en ${searchEngines[engine].name}`;
     }
-    
+
     searchInput.placeholder = placeholderText;
   }
-  
+
   // Actualizar estado visual de los botones
   updateSearchEngineButtons();
-  
+
   // Guardar preferencia en localStorage
-  localStorage.setItem('soplosSearchEngine', engine);
-  
+  localStorage.setItem('sloposSearchEngine', engine);
+
   console.log(`Motor de búsqueda cambiado a: ${searchEngines[engine].name}`);
   console.log(`Placeholder actualizado a: ${searchInput ? searchInput.placeholder : 'N/A'}`);
 }
@@ -89,10 +89,10 @@ function updateSearchEngineButtons() {
     // Resetear estilo
     button.style.border = "1px solid #444";
     button.style.backgroundColor = "transparent";
-    
+
     // Obtener el motor del botón basado en data-engine
     const buttonEngine = button.getAttribute('data-engine');
-    
+
     if (buttonEngine === currentEngine) {
       button.style.border = "2px solid #ff9800";
       button.style.backgroundColor = "rgba(255, 152, 0, 0.2)";

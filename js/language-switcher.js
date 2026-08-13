@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdown.classList.remove('show');
 
             // Save language preference
-            localStorage.setItem('soplosLanguage', lang);
+            localStorage.setItem('sloposLanguage', lang);
 
             // Load and apply language
             loadLanguage(lang);
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Initialize with saved language or default to English
-    const savedLang = localStorage.getItem('soplosLanguage') || 'en';
+    const savedLang = localStorage.getItem('sloposLanguage') || 'en';
     updateLanguageUI(savedLang);
     loadLanguage(savedLang);
 });
