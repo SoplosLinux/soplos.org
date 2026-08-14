@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v212" class="toc-link">2.1.2 <span class="toc-date">— 2026-08-14</span></a></li>
                             <li><a href="#v211r9" class="toc-link">2.1.1-9 <span class="toc-date">— 2026-08-04</span></a></li>
                             <li><a href="#v211r8" class="toc-link">2.1.1-8 <span class="toc-date">— 2026-08-03</span></a></li>
                             <li><a href="#v211r7" class="toc-link">2.1.1-7 <span class="toc-date">— 2026-07-27</span></a></li>
@@ -203,6 +204,38 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.2 -->
+                        <section id="v212" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212-title">2.1.2 — August 2026</span></h2>
+                            <p id="wel-rel-212-subtitle" class="lead">Major fix release: eleven bugs corrected across the Kernels and Drivers tabs — XanMod x64v4 removed (replaced by RT), broken repository detection and repair added, ROCm pointing to Ubuntu suites fixed, NVIDIA GPU classification overhauled. Drift and Prism added to the Recommended tab.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212-fixed-li1"><strong>Kernels tab — XanMod repository 404 on update:</strong> The repository was configured with the <code>releases</code> suite, which upstream retired. XanMod now publishes one suite per Debian codename, so every install failed on <code>apt update</code>. The codename is now read from the Debian repositories configured on the system — <code>/etc/os-release</code> cannot be used, since Soplos declares its own <code>VERSION_CODENAME</code>. If no Debian codename can be determined, the script aborts with a message instead of guessing.</li>
+                                <li id="wel-rel-212-fixed-li2"><strong>Kernels tab — x64v4 button installed a non-existent package:</strong> <code>linux-xanmod-x64v4</code> is not published in any suite of the repository. The variant was removed and the RT (PREEMPT_RT) build took its place.</li>
+                                <li id="wel-rel-212-fixed-li3"><strong>Kernels tab — variants could leave an unbootable system:</strong> The x86-64 psABI level of the CPU is now detected and the package is resolved accordingly — v3 on capable CPUs, v2 otherwise. Below x86-64-v2 only LTS remains available and the other variants are greyed out with the reason shown.</li>
+                                <li id="wel-rel-212-fixed-li4"><strong>Kernels tab — XanMod keyring failed silently:</strong> <code>/etc/apt/keyrings</code> was not created and the <code>gpg</code> error was swallowed by <code>|| true</code>. The directory is now created and a failed key download aborts the install.</li>
+                                <li id="wel-rel-212-fixed-li5"><strong>Kernels tab — Liquorix reported success after a failed download:</strong> The installer was piped straight from <code>curl -s</code> into a root shell, so an HTTP error page was executed as root and the tab still showed "Installation complete". It is now downloaded with <code>curl -fsSL</code> and only executed if the download succeeded.</li>
+                                <li id="wel-rel-212-fixed-li6"><strong>Kernels tab — uninstalling Liquorix left its repository behind:</strong> <code>liquorix.list</code> and its keyring are now removed as well.</li>
+                                <li id="wel-rel-212-fixed-li7"><strong>Kernels tab — cleaning old kernels removed the Debian fallback:</strong> Soplos kernels were classified together with Debian's, so only the higher version of the two survived. They are now their own family, and the latest of each of the four — Debian, Soplos, Liquorix and XanMod — is kept.</li>
+                                <li id="wel-rel-212-fixed-li8"><strong>Drivers tab — ROCm could not be installed and broke apt:</strong> The repository was written with a Debian suite, and AMD only publishes Ubuntu suites. Beyond failing, the invalid entry stayed behind and made every later <code>apt update</code> fail. It now points at <code>repo.radeon.com/rocm/apt/latest noble main</code>, confined by an APT pin so it can never replace a Debian package.</li>
+                                <li id="wel-rel-212-fixed-li9"><strong>Drivers tab — wrong ROCm hardware requirements:</strong> The dialog claimed RDNA1 and newer, listing the RX 5000 series and 600M/700M integrated GPUs. ROCm supports none of those. It now states RDNA2 (RX 6800 and newer), RDNA3, RDNA4 and Instinct accelerators.</li>
+                                <li id="wel-rel-212-fixed-li10"><strong>Drivers tab — Intel oneAPI installed a 2025 release:</strong> <code>intel-basekit</code> has been a transitional alias since 2025.0 and resolves to <code>intel-oneapi-base-toolkit</code>, which Intel froze at 2025.3.2. The current umbrella <code>intel-oneapi-toolkit</code> is installed instead, confined by an APT pin and restricted to amd64.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212-added-li1"><strong>Kernels and Drivers tabs — broken repository repair notice:</strong> Detects the broken XanMod and ROCm repositories left behind by earlier versions and removes them on request. Reinstalling either also repairs the state on its own.</li>
+                                <li id="wel-rel-212-added-li2"><strong>Recommended tab — Drift and Prism (Multimedia):</strong> Added Drift (<code>org.cutwire.Drift</code>) and Prism (<code>org.cutwire.Prism</code>), both installed as Flatpak.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.1-6 -->
                         <!-- 2.1.1-9 -->
