@@ -5244,6 +5244,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-212r1-title": "2.1.2-1 — August 2026",
+  "wel-rel-212r1-subtitle": "NVIDIA DKMS build failure on kernel 7.2+ fixed: nvidia/os-interface.c calls strncpy() without including linux/string.h — the same fix already shipped in soplos-kernel-installer 1.0.2-1, keeping both copies in sync.",
+  "wel-rel-212r1-fixed-li1": "<strong>Drivers tab — NVIDIA DKMS build failure on kernel 7.2+:</strong> <code>nvidia/os-interface.c</code> calls <code>strncpy()</code> without including <code>&lt;linux/string.h&gt;</code>, relying on some other kernel header to pull it in transitively — which stopped happening on 7.2+, turning it into a hard build error (<code>implicit declaration of function 'strncpy'</code>). Welcome's own copy of the NVIDIA DKMS compatibility patcher only carried the earlier <code>VMA_LOCK_OFFSET</code> fix; added the same <code>NV_STRING_H_PATCH</code> already applied by <code>soplos-kernel-installer</code> and published in the <code>nvidia-patches</code> repo (Fix 4), keeping both copies in sync as intended.",
+
   "wel-rel-212-title": "2.1.2 — August 2026",
   "wel-rel-212-subtitle": "Major fix release: eleven bugs corrected across the Kernels and Drivers tabs — XanMod x64v4 removed (replaced by RT), broken repository detection and repair added, ROCm pointing to Ubuntu suites fixed, NVIDIA GPU classification overhauled. Drift and Prism added to the Recommended tab.",
   "wel-rel-212-fixed-li1": "<strong>Kernels tab — XanMod repository 404 on update:</strong> The repository was configured with the <code>releases</code> suite, which upstream retired. XanMod now publishes one suite per Debian codename, so every install failed on <code>apt update</code>. The codename is now read from the Debian repositories configured on the system — <code>/etc/os-release</code> cannot be used, since Soplos declares its own <code>VERSION_CODENAME</code>. If no Debian codename can be determined, the script aborts with a message instead of guessing.",
@@ -5976,6 +5980,10 @@ Object.assign(window.LANG_EN, {
   "ki-rel-breadcrumb": "Soplos Kernel Installer",
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
+
+  "ki-rel-102r1-title": "1.0.2-1 — August 2026",
+  "ki-rel-102r1-subtitle": "NVIDIA DKMS build failure on kernel 7.2+ fixed: nvidia/os-interface.c calls strncpy() without including linux/string.h — a transitive include that disappeared on 7.2. The missing header is now patched in automatically alongside the existing VMA-locking fix.",
+  "ki-rel-102r1-fixed-li1": "<strong>NVIDIA DKMS build failure on kernel 7.2+:</strong> <code>nvidia/os-interface.c</code> calls <code>strncpy()</code> without including <code>&lt;linux/string.h&gt;</code>, relying on some other kernel header to provide the declaration transitively. That transitive include disappeared starting with kernel 7.2, and GCC treats an implicit function declaration as a hard error, so DKMS builds failed outright (<code>implicit declaration of function 'strncpy'</code>). Added a new embedded compatibility patch (<code>NV_STRING_H_PATCH</code>) that adds the missing include, applied automatically alongside the existing VMA-locking fix — same mechanism, same idempotency guard, unrelated issue (different file, different API, different kernel boundary). Mirrored in the standalone <code>nvidia-patches</code> repo as Fix 4.",
 
   "ki-rel-102-title": "1.0.2 — August 2026",
   "ki-rel-102-subtitle": "March patch silently never applied on kernels other than 7.1.x — simplified tag logic always requests the 7.x file now verified to apply unchanged across 7.1.x and 7.2.",

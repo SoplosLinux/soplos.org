@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v102r1" class="toc-link">1.0.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v102" class="toc-link">1.0.2 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v101r9" class="toc-link">1.0.1-9 <span class="toc-date">— 2026-08-13</span></a></li>
                             <li><a href="#v101r8" class="toc-link">1.0.1-8 <span class="toc-date">— 2026-07-28</span></a></li>
@@ -147,6 +148,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-1 -->
+                        <section id="v102r1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r1-title">1.0.2-1 — August 2026</span></h2>
+                            <p id="ki-rel-102r1-subtitle" class="lead">NVIDIA DKMS build failure on kernel 7.2+ fixed: <code>nvidia/os-interface.c</code> calls <code>strncpy()</code> without including <code>&lt;linux/string.h&gt;</code> — a transitive include that disappeared on 7.2. The missing header is now patched in automatically alongside the existing VMA-locking fix.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r1-fixed-li1"><strong>NVIDIA DKMS build failure on kernel 7.2+:</strong> <code>nvidia/os-interface.c</code> calls <code>strncpy()</code> without including <code>&lt;linux/string.h&gt;</code>, relying on some other kernel header to provide the declaration transitively. That transitive include disappeared starting with kernel 7.2, and GCC treats an implicit function declaration as a hard error, so DKMS builds failed outright (<code>implicit declaration of function 'strncpy'</code>). Added a new embedded compatibility patch (<code>NV_STRING_H_PATCH</code>) that adds the missing include, applied automatically alongside the existing VMA-locking fix — same mechanism, same idempotency guard, unrelated issue (different file, different API, different kernel boundary). Mirrored in the standalone <code>nvidia-patches</code> repo as Fix 4.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2 -->
                         <section id="v102" class="content-section">
