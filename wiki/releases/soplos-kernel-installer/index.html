@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v102r2" class="toc-link">1.0.2-2 <span class="toc-date">— 2026-08-18</span></a></li>
                             <li><a href="#v102r1" class="toc-link">1.0.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v102" class="toc-link">1.0.2 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v101r9" class="toc-link">1.0.1-9 <span class="toc-date">— 2026-08-13</span></a></li>
@@ -148,6 +149,32 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-2 -->
+                        <section id="v102r2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r2-title">1.0.2-2 — August 2026</span></h2>
+                            <p id="ki-rel-102r2-subtitle" class="lead">March selector extended to all profiles; kernel selection and resume added to the Stock batch build; march level now reflected in the kernel name for non-Stock profiles; batch button label fixed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r2-added-li1"><strong>March (x86-64 psABI) selector available for every profile:</strong> Gaming, Audio/Video, Minimal/Office and Automatic builds can now pick V1–V4 too, instead of always building at the compiler default.</li>
+                                <li id="ki-rel-102r2-added-li2"><strong>Kernel selection for the Stock batch build:</strong> a "Select kernels..." dialog lists all 26 jobs of the release queue with checkboxes, instead of always building all-or-nothing.</li>
+                                <li id="ki-rel-102r2-added-li3"><strong>Resume for the Stock batch build:</strong> a checkbox skips any kernel whose metapackage <code>.deb</code> already exists in the destination folder, so a queue that failed partway through can continue from where it stopped instead of rebuilding everything from V1.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r2-fixed-li1"><strong>The march selector never appeared for the default profile at startup:</strong> <code>ProfileSelector</code>'s first radio button is already <code>active=True</code> when the group is created, so its own <code>set_active(True)</code> call was a no-op and never emitted <code>toggled</code> — <code>profile-changed</code> (and everything that listens for it, march selector visibility included) only ever fired when the user switched profiles by hand, never for the profile shown on launch. Synced explicitly once after the window is built.</li>
+                                <li id="ki-rel-102r2-fixed-li2"><strong>A V3/V4 build outside Stock mode looked identical to a V1 one:</strong> the march selector applied to the build but was never reflected in the kernel's name for non-Stock profiles. The march level is now appended to the name (and its live preview) whenever it isn't the default v1.</li>
+                                <li id="ki-rel-102r2-fixed-li3"><strong>The batch "Build all 26 kernels" button kept its label after narrowing the selection:</strong> it always said "26" regardless of how many kernels were actually checked. Now reads "Build N selected kernels" and only says "all 26" when every job is selected.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-1 -->
                         <section id="v102r1" class="content-section">
