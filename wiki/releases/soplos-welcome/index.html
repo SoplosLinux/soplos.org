@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v212r2" class="toc-link">2.1.2-2 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v212r1" class="toc-link">2.1.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v212" class="toc-link">2.1.2 <span class="toc-date">— 2026-08-14</span></a></li>
                             <li><a href="#v211r9" class="toc-link">2.1.1-9 <span class="toc-date">— 2026-08-04</span></a></li>
@@ -205,6 +206,38 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.2-2 -->
+                        <section id="v212r2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212r2-title">2.1.2-2 — August 2026</span></h2>
+                            <p id="wel-rel-212r2-subtitle" class="lead">Gaming tab promoted to a permanent tab; GeForce NOW switches to the official native Flatpak app; Mocktail and VPN Unlimited added; Flatpak badge detection fixed for apps installed via custom remotes.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r2-added-li1"><strong>Gaming tab — GeForce NOW native Flatpak:</strong> now installs NVIDIA's official native Flatpak app (<code>com.nvidia.geforcenow</code>, from NVIDIA's own Flatpak remote) instead of the old WebApp shortcut, now that it is out of beta with official Linux support. Also added to Recommended → Gaming.</li>
+                                <li id="wel-rel-212r2-added-li2"><strong>Gaming tab — Mocktail:</strong> added Mocktail (<code>space.bigrat.mocktail</code>), an independent community Roblox client.</li>
+                                <li id="wel-rel-212r2-added-li3"><strong>Security tab — VPN Unlimited:</strong> added VPN Unlimited (<code>com.keepsolid.VpnUnlimited</code>).</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r2-changed-li1"><strong>Gaming tab is now a permanent tab:</strong> no longer hidden behind the Ctrl+G easter egg or the "Activate Gaming Mode" link on the welcome page — it has grown into a full feature (launchers, GameMode, sysctl tweaks, disk I/O schedulers) that deserved to be discoverable. The welcome page keeps a plain feature-list entry instead of the removed link.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r2-fixed-li1"><strong>Gaming tab / Recommended tab — wrong badge on GeForce NOW:</strong> install-method badges were inferred only from the coarse install method (<code>flatpak</code> vs <code>custom</code> vs <code>webapp</code>), so GeForce NOW's Flatpak-via-custom-remote-add install showed as "AppImage" (Gaming tab) or no badge at all (Recommended tab). Both now detect a <code>flatpak install</code> call inside custom install commands and show the Flatpak badge correctly.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.2-1 -->
                         <section id="v212r1" class="content-section">
