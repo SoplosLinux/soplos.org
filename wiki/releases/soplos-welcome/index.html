@@ -121,6 +121,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v212r4" class="toc-link">2.1.2-4 <span class="toc-date">— 2026-08-23</span></a></li>
+                            <li><a href="#v212r3" class="toc-link">2.1.2-3 <span class="toc-date">— 2026-08-23</span></a></li>
                             <li><a href="#v212r2" class="toc-link">2.1.2-2 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v212r1" class="toc-link">2.1.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v212" class="toc-link">2.1.2 <span class="toc-date">— 2026-08-14</span></a></li>
@@ -206,6 +208,61 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.2-4 -->
+                        <section id="v212r4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212r4-title">2.1.2-4 — August 2026</span></h2>
+                            <p id="wel-rel-212r4-subtitle" class="lead">NordVPN added to the Security tab with proper keyring handling and group management; KutEditor switched to a prebuilt apt package from Soplos repositories; three uninstaller bugs fixed (Cloudflare WARP keyring leftover, double polkit prompts, Portmaster/Kudu directories not removed).</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r4-added-li1"><strong>Security tab — NordVPN:</strong> installed from NordVPN's own apt repository. The signing key goes to <code>/etc/apt/keyrings</code> with <code>signed-by</code> rather than to <code>/etc/apt/trusted.gpg.d</code> (where it would be trusted for every repository on the system), and <code>apt</code> runs non-interactively. Installing also adds the desktop user to the <code>nordvpn</code> group (which NordVPN's postinst creates but leaves empty), and a dialog explains that the session must be restarted before the client can reach <code>/run/nordvpn/nordvpnd.sock</code>. Uninstalling purges both packages, removes the user from the group, deletes the group when empty, and removes the repository and the keyring.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r4-changed-li1"><strong>Recommended tab — KutEditor now a normal apt package:</strong> the previous entry installed a full Qt6 build toolchain, cloned the upstream repository as root and compiled it — a build that could not even succeed on a clean system (<code>libdeepfilter.so.0.5</code> ships with no unversioned symlink, so the link step failed on undefined symbols; with no <code>set -e</code>, this was reported as "Operation completed successfully"). KutEditor has since been packaged properly as a <code>.deb</code> in the Soplos repositories, so the entry is now six lines with no <code>install_commands</code> at all.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r4-fixed-li1"><strong>Security tab — Cloudflare WARP uninstaller left the keyring behind:</strong> the installer writes the key to <code>/etc/apt/keyrings/cloudflare-warp-archive-keyring.gpg</code> while the uninstaller deleted <code>/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg</code>. Different path, so <code>rm -f</code> silently removed nothing. Both paths are now removed.</li>
+                                <li id="wel-rel-212r4-fixed-li2"><strong>Security tab — two password prompts to uninstall Cloudflare WARP:</strong> the script body carried one <code>pkexec</code> per privileged line, so polkit authenticated each separately. The <code>pkexec</code> now wraps the whole script, as its installer and the rest of the application already did.</li>
+                                <li id="wel-rel-212r4-fixed-li3"><strong>Security tab — Portmaster and Kudu uninstallers left their files on disk:</strong> only the <code>apt purge</code> line carried <code>pkexec</code>; the <code>rm -rf /opt/safing</code> and <code>rm -rf /opt/Kudu</code> calls below it ran unprivileged against root-owned paths and failed silently. With no <code>set -e</code>, the script carried on and reported "Uninstallation complete". Both scripts now run entirely under a single <code>pkexec</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-language"></i> <span data-i18n="rel-label-translations">Translations</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r4-trans-li1">Four new NordVPN strings across all 8 languages (description, Open button, installed dialog title and its group/re-login message).</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.1.2-3 -->
+                        <section id="v212r3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212r3-title">2.1.2-3 — August 2026</span></h2>
+                            <p id="wel-rel-212r3-subtitle" class="lead">Cloudflare WARP added to the Security tab; KutEditor (native Qt6 podcast editor with AI transcription) added to Recommended — built from source on the user's machine and packaged as a real .deb via CPack.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r3-added-li1"><strong>Security tab — Cloudflare WARP:</strong> installed from Cloudflare's official apt repository. Their repo only publishes Debian codenames <code>trixie</code>/<code>bookworm</code> (and older <code>bullseye</code>/<code>buster</code>/<code>stretch</code>) — Soplos's real base (<code>forky</code>) isn't published there, so the suite is hardcoded to <code>trixie</code> (verified: <code>.../dists/trixie/Release</code> returns 200, <code>.../dists/forky/Release</code> returns 404), same reasoning as the ROCm fix.</li>
+                                <li id="wel-rel-212r3-added-li2"><strong>Recommended tab — KutEditor (Multimedia → Audio/DAW):</strong> a native Qt6/QML podcast editor with multitrack audio, AI transcription and Podcasting 2.0 chapters, by Ernesto Acosta. No prebuilt package exists upstream, so the install script builds it from source: installs build dependencies, clones the repo, builds with CMake, packages the result into a real <code>.deb</code> with <code>cpack -G DEB</code>, then installs that freshly-built package with <code>apt install</code>. AI transcription (whisper.cpp) is left disabled by default to keep the build lighter and less likely to fail.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.2-2 -->
                         <section id="v212r2" class="content-section">
