@@ -3428,7 +3428,7 @@ Object.assign(window.LANG_RU, {
     "kernelinstaller-patch-zen": "Оптимизации рабочего стола и игр из проекта Zen kernel, включая альтернативный планировщик BMQ/PDS. Получается из <a href=\"https://github.com/SoplosLinux/zen-soplos\" target=\"_blank\">SoplosLinux/zen-soplos</a> как запасной источник, когда официальный upstream ещё не опубликовал версию для запрошенного ядра.",
     "kernelinstaller-patch-ntsync": "Примитивы синхронизации NT. Значительно улучшает совместимость Wine и Proton для игр.",
     "kernelinstaller-patch-x3d": "Патч планировщика Soplos для процессоров AMD Ryzen X3D с двумя CCD (7950X3D, 9950X3D). При загрузке определяет асимметричную топологию кэша L3 и направляет задачи на CCD с VCache для снижения промахов кэша в играх и нагрузках, чувствительных к задержке. Получается из <a href=\"https://github.com/SoplosLinux/x3d-soplos\" target=\"_blank\">SoplosLinux/x3d-soplos</a>. Доступен только в режиме Stock (уровни марша v3/v4). Не оказывает эффекта на процессоры X3D с одним CCD (5800X3D, 7800X3D, 9800X3D).",
-    "kernelinstaller-patch-nvidia": "Патч совместимости VMA locking API для источников DKMS NVIDIA. Обязателен на ядре 7.0 и новее — без него драйвер NVIDIA не может быть собран против нового дерева ядра. Применяется автоматически перед каждой сборкой и перед установкой или обновлением предсобранных ядер Soplos на системах с GPU NVIDIA. Получается из <a href=\"https://github.com/SoplosLinux/nvidia-patches\" target=\"_blank\">SoplosLinux/nvidia-patches</a>.",
+    "kernelinstaller-patch-nvidia": "Два патча совместимости, автоматически применяемых к источникам DKMS NVIDIA перед каждой сборкой и перед установкой или обновлением предсобранных ядер Soplos на системах с GPU NVIDIA: исправление VMA locking API (ядро 7.0+, необходимо для сборки драйвера против нового дерева ядра) и исправление include <code>linux/string.h</code> (ядро 7.2+, добавляет заголовочный файл, теперь обязательный для GCC — неявное объявление <code>strncpy()</code> стало жёсткой ошибкой). Оба патча идемпотентны — уже пропатченные деревья пропускаются. Получается из <a href=\"https://github.com/SoplosLinux/nvidia-patches\" target=\"_blank\">SoplosLinux/nvidia-patches</a>.",
     "kernelinstaller-screenshots-title": "Снимки экрана",
     "kernelinstaller-screenshot-1": "Главное окно — вкладка Build Kernel",
     "kernelinstaller-screenshot-2": "Прогресс компиляции",
@@ -5204,6 +5204,10 @@ Object.assign(window.LANG_RU, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
+
+    "ki-rel-102r3-title": "1.0.2-3 — Август 2026",
+    "ki-rel-102r3-subtitle": "CONFIG_CGROUP_DMEM включён безусловно в каждой сборке.",
+    "ki-rel-102r3-added-li1": "CONFIG_CGROUP_DMEM включён безусловно: cgroup для учёта памяти устройства/VRAM, отключённый по умолчанию в базовой конфигурации Debian. Включён сейчас, чтобы избежать принудительной перекомпиляции, когда soplos-game-daemon потребует его. Удалённый символ после olddefconfig генерирует только предупреждение (в отличие от проверки уровня march), поскольку от него пока ничего не зависит.",
 
     "ki-rel-102r2-title": "1.0.2-2 — Август 2026",
     "ki-rel-102r2-subtitle": "Селектор march расширен на все профили; выбор ядер и возобновление добавлены в пакетную сборку Stock; уровень march теперь отображается в имени ядра для профилей не-Stock; исправлена подпись кнопки пакетной сборки.",

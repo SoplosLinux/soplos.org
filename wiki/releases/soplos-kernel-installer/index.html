@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v102r3" class="toc-link">1.0.2-3 <span class="toc-date">— 2026-08-28</span></a></li>
                             <li><a href="#v102r2" class="toc-link">1.0.2-2 <span class="toc-date">— 2026-08-18</span></a></li>
                             <li><a href="#v102r1" class="toc-link">1.0.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v102" class="toc-link">1.0.2 <span class="toc-date">— 2026-08-17</span></a></li>
@@ -149,6 +150,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-3 -->
+                        <section id="v102r3" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r3-title">1.0.2-3 — August 2026</span></h2>
+                            <p id="ki-rel-102r3-subtitle" class="lead"><code>CONFIG_CGROUP_DMEM</code> enabled unconditionally on every build.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r3-added-li1"><strong><code>CONFIG_CGROUP_DMEM</code> enabled unconditionally:</strong> device/VRAM memory accounting cgroup, disabled by default in the Debian base config. Baked in now to avoid a forced recompile once <code>soplos-game-daemon</code> needs it. A dropped symbol after <code>olddefconfig</code> only warns (unlike the march-level check), since nothing depends on it yet.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-2 -->
                         <section id="v102r2" class="content-section">

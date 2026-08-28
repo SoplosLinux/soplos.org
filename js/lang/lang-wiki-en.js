@@ -4222,7 +4222,7 @@ Object.assign(window.LANG_EN, {
   "kernelinstaller-patch-zen": "Desktop and gaming optimizations from the Zen kernel project, including the BMQ/PDS alternate scheduler. Sourced from <a href=\"https://github.com/SoplosLinux/zen-soplos\" target=\"_blank\">SoplosLinux/zen-soplos</a> as fallback when the official upstream has not yet published a release for the requested kernel version.",
   "kernelinstaller-patch-ntsync": "NT synchronization primitives. Significantly improves Wine and Proton compatibility for gaming.",
   "kernelinstaller-patch-x3d": "Soplos scheduler patch for dual-CCD AMD Ryzen X3D processors (7950X3D, 9950X3D). Detects asymmetric L3 cache topology at boot and biases tasks towards the VCache CCD to reduce cache misses in gaming and latency-sensitive workloads. Sourced from <a href=\"https://github.com/SoplosLinux/x3d-soplos\" target=\"_blank\">SoplosLinux/x3d-soplos</a>. Only available in Stock mode (v3/v4 march levels). Has no effect on single-CCD X3D processors (5800X3D, 7800X3D, 9800X3D).",
-  "kernelinstaller-patch-nvidia": "VMA locking API compatibility patch for NVIDIA DKMS sources. Required on kernel 7.0 and later — without it the NVIDIA driver fails to build against the new kernel tree. Applied automatically before every build and before installing or updating pre-built Soplos kernels on systems with an NVIDIA GPU. Sourced from <a href=\"https://github.com/SoplosLinux/nvidia-patches\" target=\"_blank\">SoplosLinux/nvidia-patches</a>.",
+  "kernelinstaller-patch-nvidia": "Two compatibility patches applied automatically to NVIDIA DKMS sources before every build and before installing or updating pre-built Soplos kernels on systems with an NVIDIA GPU: the VMA locking API fix (kernel 7.0+, required for the driver to build against the new kernel tree) and the <code>linux/string.h</code> include fix (kernel 7.2+, adds the missing header that GCC now requires — an implicit <code>strncpy()</code> declaration became a hard error). Both patches are idempotent — already-patched trees are skipped. Sourced from <a href=\"https://github.com/SoplosLinux/nvidia-patches\" target=\"_blank\">SoplosLinux/nvidia-patches</a>.",
   "kernelinstaller-screenshots-title": "Screenshots",
   "kernelinstaller-screenshot-1": "Main window — Build Kernel tab",
   "kernelinstaller-screenshot-2": "Compilation progress",
@@ -6002,6 +6002,10 @@ Object.assign(window.LANG_EN, {
   "ki-rel-breadcrumb": "Soplos Kernel Installer",
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
+
+  "ki-rel-102r3-title": "1.0.2-3 — August 2026",
+  "ki-rel-102r3-subtitle": "CONFIG_CGROUP_DMEM enabled unconditionally on every build.",
+  "ki-rel-102r3-added-li1": "CONFIG_CGROUP_DMEM enabled unconditionally: device/VRAM memory accounting cgroup, disabled by default in the Debian base config. Baked in now to avoid a forced recompile once soplos-game-daemon needs it. A dropped symbol after olddefconfig only warns (unlike the march-level check), since nothing depends on it yet.",
 
   "ki-rel-102r2-title": "1.0.2-2 — August 2026",
   "ki-rel-102r2-subtitle": "March selector extended to all profiles; kernel selection and resume added to the Stock batch build; march level now reflected in the kernel name for non-Stock profiles; batch button label fixed.",
