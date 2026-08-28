@@ -121,7 +121,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
-                            <li><a href="#v212r4" class="toc-link">2.1.2-4 <span class="toc-date">— 2026-08-23</span></a></li>
+                            <li><a href="#v212r5" class="toc-link">2.1.2-5 <span class="toc-date">— 2026-08-29</span></a></li>
+                            <li><a href="#v212r4" class="toc-link">2.1.2-4 <span class="toc-date">— 2026-08-28</span></a></li>
                             <li><a href="#v212r3" class="toc-link">2.1.2-3 <span class="toc-date">— 2026-08-23</span></a></li>
                             <li><a href="#v212r2" class="toc-link">2.1.2-2 <span class="toc-date">— 2026-08-17</span></a></li>
                             <li><a href="#v212r1" class="toc-link">2.1.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
@@ -208,6 +209,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.2-5 -->
+                        <section id="v212r5" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212r5-title">2.1.2-5 — August 2026</span></h2>
+                            <p id="wel-rel-212r5-subtitle" class="lead">Liquorix install button unblocked on NVIDIA machines.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r5-fixed-li1"><strong>Kernels tab — Liquorix blocked on any NVIDIA machine:</strong> the Install button was greyed out with an "Incompatible with NVIDIA" label whenever a GPU from that vendor was detected. The condition checked only the vendor string from <code>detect_gpu()</code>, so it also blocked machines running nouveau, which have no relation to the proprietary driver. Liquorix works with NVIDIA and upstream documents no such incompatibility, so the block has been removed — Liquorix now installs like any other kernel.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.2-4 -->
                         <section id="v212r4" class="content-section">
