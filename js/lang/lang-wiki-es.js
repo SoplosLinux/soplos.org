@@ -3613,6 +3613,9 @@ Object.assign(window.LANG_ES, {
     "rel-label-packages-removed": "Paquetes eliminados",
     "rel-label-packages-updated": "Paquetes actualizados",
     "rel-label-stats": "Estadísticas",
+    "rel-label-docs": "Documentación",
+    "rel-label-notes": "Notas",
+    "rel-label-security": "Seguridad",
 
     // Boro releases
     "boro-rel-page-title": "Soplos Boro — Versiones",
@@ -3631,6 +3634,14 @@ Object.assign(window.LANG_ES, {
     "boro-rel-2026-08-hw-nvidia-removed": "Driver propietario NVIDIA eliminado: nvidia-driver 580.173.02 y todos los paquetes relacionados han sido eliminados de la distribución. Pueden instalarse a través de Soplos Welcome.",
     "boro-rel-2026-08-label-stats": "Estadísticas",
     "boro-rel-2026-08-stats": "Total de paquetes: 2160 → 2105 (+6 añadidos / -61 eliminados / ~128 actualizados)",
+
+    "boro-rel-2026-09-title": "2026.09 — Septiembre 2026",
+    "boro-rel-2026-09-subtitle": "Kernel Soplos 7.2.3-soplos-v1. Paquetes de idioma de Firefox añadidos; shell fish y g++-15 eliminados.",
+    "boro-rel-2026-09-label-kernel": "Kernel",
+    "boro-rel-2026-09-label-packages-added": "Paquetes añadidos",
+    "boro-rel-2026-09-label-packages-removed": "Paquetes eliminados",
+    "boro-rel-2026-09-label-stats": "Estadísticas",
+    "boro-rel-2026-09-stats": "Total de paquetes: 2105 → 2121 (+34 añadidos / -18 eliminados / ~661 actualizados)",
 
     "boro-rel-rc4-title": "RC4 — Julio 2026",
     "boro-rel-rc4-subtitle": "Kernel Soplos 7.1.4-soplos-v1, soplos-welcome 2.1.1 y soplos-release 0.2.7-4. Python 3.14 reemplaza a Python 3.13.",
@@ -3821,6 +3832,14 @@ Object.assign(window.LANG_ES, {
     "tyson-rel-2026-08-hw-nvidia-removed": "Driver propietario NVIDIA eliminado: nvidia-driver 580.173.02 y todos los paquetes relacionados han sido eliminados de la distribución. Pueden instalarse a través de Soplos Welcome.",
     "tyson-rel-2026-08-label-stats": "Estadísticas",
     "tyson-rel-2026-08-stats": "Total de paquetes: 2552 → 2495 (+6 añadidos / -63 eliminados / ~116 actualizados)",
+
+    "tyson-rel-2026-09-title": "2026.09 — Septiembre 2026",
+    "tyson-rel-2026-09-subtitle": "Kernel Soplos 7.2.3-soplos-v1. Paquetes de idioma de Firefox añadidos; g++-15, python3.13 y milou eliminados.",
+    "tyson-rel-2026-09-label-kernel": "Kernel",
+    "tyson-rel-2026-09-label-packages-added": "Paquetes añadidos",
+    "tyson-rel-2026-09-label-packages-removed": "Paquetes eliminados",
+    "tyson-rel-2026-09-label-stats": "Estadísticas",
+    "tyson-rel-2026-09-stats": "Total de paquetes: 2495 → 2496 (+26 añadidos / -25 eliminados / ~1046 actualizados)",
 
     "tyson-rel-rc4-title": "RC4 — Julio 2026",
     "tyson-rel-rc4-subtitle": "Kernel Soplos 7.1.4-soplos-v1, soplos-welcome 2.1.1 y soplos-release 0.1.8-5. Python 3.14 reemplaza a Python 3.13.",
@@ -4042,6 +4061,14 @@ Object.assign(window.LANG_ES, {
     "tyron-rel-2026-08-hw-nvidia-removed": "Driver propietario NVIDIA eliminado: nvidia-driver 580.173.02 y todos los paquetes relacionados han sido eliminados de la distribución. Pueden instalarse a través de Soplos Welcome.",
     "tyron-rel-2026-08-label-stats": "Estadísticas",
     "tyron-rel-2026-08-stats": "Total de paquetes: 2060 → 1993 (+6 añadidos / -73 eliminados / ~122 actualizados)",
+
+    "tyron-rel-2026-09-title": "2026.09 — Septiembre 2026",
+    "tyron-rel-2026-09-subtitle": "Kernel Soplos 7.2.3-soplos-v1. Paquetes de idioma de Firefox añadidos; g++-15, python3.13-tk y fish eliminados.",
+    "tyron-rel-2026-09-label-kernel": "Kernel",
+    "tyron-rel-2026-09-label-packages-added": "Paquetes añadidos",
+    "tyron-rel-2026-09-label-packages-removed": "Paquetes eliminados",
+    "tyron-rel-2026-09-label-stats": "Estadísticas",
+    "tyron-rel-2026-09-stats": "Total de paquetes: 1993 → 1997 (+22 añadidos / -18 eliminados / ~633 actualizados)",
 
     "tyron-rel-rc4-title": "RC4 — Julio 2026",
     "tyron-rel-rc4-subtitle": "Kernel Soplos 7.1.4-soplos-v1, soplos-welcome 2.1.1 y soplos-release 0.3.1-7. Python 3.14 reemplaza a Python 3.13.",

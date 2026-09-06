@@ -2173,7 +2173,7 @@ Object.assign(window.LANG_EN, {
   "faq-desktop-q2": "How do I change the desktop wallpaper?",
   "faq-desktop-a2-intro": "All desktop environments:",
   "faq-desktop-a2-1": "Right-click on an empty area of the desktop",
-  "faq-desktop-a2-2": 'Select "Desktop Settings" or "Configure Desktop"',
+  "faq-desktop-a2-2": "Select \"Desktop Settings\" or \"Configure Desktop\",",
   "faq-desktop-a2-3": "Choose from included wallpapers or browse your own",
   "faq-desktop-a2-4": "Set up slideshow mode for rotating wallpapers",
 
@@ -3021,7 +3021,7 @@ Object.assign(window.LANG_EN, {
     "Test theme changes on a local user first before applying system-wide so you can easily revert without affecting other users.",
   "custom-next-label": "Next:",
   "custom-next":
-    'After customizing, visit the <a href="../tyron/">Tyron Guide</a>, <a href="../tyson/">Tyson Guide</a>, or <a href="../boro/">Boro Guide</a> for desktop-specific tips and screenshots.',
+    "After customizing, visit the <a href=\"../tyron/\">Tyron Guide</a>, <a href=\"../tyson/\">Tyson Guide</a>, or <a href=\"../boro/\">Boro Guide</a> for desktop-specific tips and screenshots.",
 
   // Themes Page (/wiki/themes/)
   "themes-hero-title": "Themes & Appearance",
@@ -4404,6 +4404,9 @@ Object.assign(window.LANG_EN, {
   "rel-label-packages-removed": "Removed packages",
   "rel-label-packages-updated": "Updated packages",
   "rel-label-stats": "Statistics",
+  "rel-label-docs": "Documentation",
+  "rel-label-notes": "Notes",
+  "rel-label-security": "Security",
 
   // Boro releases
   "boro-rel-page-title": "Soplos Boro — Releases",
@@ -4422,6 +4425,14 @@ Object.assign(window.LANG_EN, {
   "boro-rel-2026-08-hw-nvidia-removed": "NVIDIA proprietary driver removed: nvidia-driver 580.173.02 and all related packages have been removed from the distribution. They can be installed through Soplos Welcome.",
   "boro-rel-2026-08-label-stats": "Statistics",
   "boro-rel-2026-08-stats": "Total packages: 2160 → 2105 (+6 added / -61 removed / ~128 updated)",
+
+  "boro-rel-2026-09-title": "2026.09 — September 2026",
+  "boro-rel-2026-09-subtitle": "Soplos kernel 7.2.3-soplos-v1. Firefox language packs added; fish shell and g++-15 removed.",
+  "boro-rel-2026-09-label-kernel": "Kernel",
+  "boro-rel-2026-09-label-packages-added": "Added packages",
+  "boro-rel-2026-09-label-packages-removed": "Removed packages",
+  "boro-rel-2026-09-label-stats": "Statistics",
+  "boro-rel-2026-09-stats": "Total packages: 2105 → 2121 (+34 added / -18 removed / ~661 updated)",
 
   "boro-rel-rc4-title": "RC4 — July 2026",
   "boro-rel-rc4-subtitle": "Soplos kernel 7.1.4-soplos-v1, soplos-welcome 2.1.1 and soplos-release 0.2.7-4. Python 3.14 replaces Python 3.13.",
@@ -4613,6 +4624,14 @@ Object.assign(window.LANG_EN, {
   "tyson-rel-2026-08-hw-nvidia-removed": "NVIDIA proprietary driver removed: nvidia-driver 580.173.02 and all related packages have been removed from the distribution. They can be installed through Soplos Welcome.",
   "tyson-rel-2026-08-label-stats": "Statistics",
   "tyson-rel-2026-08-stats": "Total packages: 2552 → 2495 (+6 added / -63 removed / ~116 updated)",
+
+  "tyson-rel-2026-09-title": "2026.09 — September 2026",
+  "tyson-rel-2026-09-subtitle": "Soplos kernel 7.2.3-soplos-v1. Firefox language packs added; g++-15, python3.13 and milou removed.",
+  "tyson-rel-2026-09-label-kernel": "Kernel",
+  "tyson-rel-2026-09-label-packages-added": "Added packages",
+  "tyson-rel-2026-09-label-packages-removed": "Removed packages",
+  "tyson-rel-2026-09-label-stats": "Statistics",
+  "tyson-rel-2026-09-stats": "Total packages: 2495 → 2496 (+26 added / -25 removed / ~1046 updated)",
 
   "tyson-rel-rc4-title": "RC4 — July 2026",
   "tyson-rel-rc4-subtitle": "Soplos kernel 7.1.4-soplos-v1, soplos-welcome 2.1.1 and soplos-release 0.1.8-5. Python 3.14 replaces Python 3.13.",
@@ -4835,6 +4854,14 @@ Object.assign(window.LANG_EN, {
   "tyron-rel-2026-08-hw-nvidia-removed": "NVIDIA proprietary driver removed: nvidia-driver 580.173.02 and all related packages have been removed from the distribution. They can be installed through Soplos Welcome.",
   "tyron-rel-2026-08-label-stats": "Statistics",
   "tyron-rel-2026-08-stats": "Total packages: 2060 → 1993 (+6 added / -73 removed / ~122 updated)",
+
+  "tyron-rel-2026-09-title": "2026.09 — September 2026",
+  "tyron-rel-2026-09-subtitle": "Soplos kernel 7.2.3-soplos-v1. Firefox language packs added; g++-15, python3.13-tk and fish removed.",
+  "tyron-rel-2026-09-label-kernel": "Kernel",
+  "tyron-rel-2026-09-label-packages-added": "Added packages",
+  "tyron-rel-2026-09-label-packages-removed": "Removed packages",
+  "tyron-rel-2026-09-label-stats": "Statistics",
+  "tyron-rel-2026-09-stats": "Total packages: 1993 → 1997 (+22 added / -18 removed / ~633 updated)",
 
   "tyron-rel-rc4-title": "RC4 — July 2026",
   "tyron-rel-rc4-subtitle": "Soplos kernel 7.1.4-soplos-v1, soplos-welcome 2.1.1 and soplos-release 0.3.1-7. Python 3.14 replaces Python 3.13.",
@@ -6020,11 +6047,11 @@ Object.assign(window.LANG_EN, {
   "ki-rel-102r2-title": "1.0.2-2 — August 2026",
   "ki-rel-102r2-subtitle": "March selector extended to all profiles; kernel selection and resume added to the Stock batch build; march level now reflected in the kernel name for non-Stock profiles; batch button label fixed.",
   "ki-rel-102r2-added-li1": "<strong>March (x86-64 psABI) selector available for every profile:</strong> Gaming, Audio/Video, Minimal/Office and Automatic builds can now pick V1–V4 too, instead of always building at the compiler default.",
-  "ki-rel-102r2-added-li2": "<strong>Kernel selection for the Stock batch build:</strong> a "Select kernels..." dialog lists all 26 jobs of the release queue with checkboxes, instead of always building all-or-nothing.",
+  "ki-rel-102r2-added-li2": "<strong>Kernel selection for the Stock batch build:</strong> a \"Select kernels...\" dialog lists all 26 jobs of the release queue with checkboxes, instead of always building all-or-nothing.",
   "ki-rel-102r2-added-li3": "<strong>Resume for the Stock batch build:</strong> a checkbox skips any kernel whose metapackage <code>.deb</code> already exists in the destination folder, so a queue that failed partway through can continue from where it stopped instead of rebuilding everything from V1.",
   "ki-rel-102r2-fixed-li1": "<strong>The march selector never appeared for the default profile at startup:</strong> <code>ProfileSelector</code>'s first radio button is already <code>active=True</code> when the group is created, so its own <code>set_active(True)</code> call was a no-op and never emitted <code>toggled</code> — <code>profile-changed</code> (and everything that listens for it, march selector visibility included) only ever fired when the user switched profiles by hand, never for the profile shown on launch. Synced explicitly once after the window is built.",
   "ki-rel-102r2-fixed-li2": "<strong>A V3/V4 build outside Stock mode looked identical to a V1 one:</strong> the march selector applied to the build but was never reflected in the kernel's name for non-Stock profiles. The march level is now appended to the name (and its live preview) whenever it isn't the default v1.",
-  "ki-rel-102r2-fixed-li3": "<strong>The batch "Build all 26 kernels" button kept its label after narrowing the selection:</strong> it always said "26" regardless of how many kernels were actually checked. Now reads "Build N selected kernels" and only says "all 26" when every job is selected.",
+  "ki-rel-102r2-fixed-li3": "<strong>The batch \"Build all 26 kernels\" button kept its label after narrowing the selection:</strong> it always said \"26\" regardless of how many kernels were actually checked. Now reads \"Build N selected kernels\" and only says \"all 26\" when every job is selected.",
 
   "ki-rel-102r1-title": "1.0.2-1 — August 2026",
   "ki-rel-102r1-subtitle": "NVIDIA DKMS build failure on kernel 7.2+ fixed: nvidia/os-interface.c calls strncpy() without including linux/string.h — a transitive include that disappeared on 7.2. The missing header is now patched in automatically alongside the existing VMA-locking fix.",
