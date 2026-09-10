@@ -127,6 +127,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v102r5" class="toc-link">1.0.2-5 <span class="toc-date">— 2026-09-10</span></a></li>
+                            <li><a href="#v102r4" class="toc-link">1.0.2-4 <span class="toc-date">— 2026-09-09</span></a></li>
                             <li><a href="#v102r3" class="toc-link">1.0.2-3 <span class="toc-date">— 2026-08-28</span></a></li>
                             <li><a href="#v102r2" class="toc-link">1.0.2-2 <span class="toc-date">— 2026-08-18</span></a></li>
                             <li><a href="#v102r1" class="toc-link">1.0.2-1 <span class="toc-date">— 2026-08-17</span></a></li>
@@ -150,6 +152,42 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-5 -->
+                        <section id="v102r5" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r5-title">1.0.2-5 — September 2026</span></h2>
+                            <p id="ki-rel-102r5-subtitle" class="lead"><code>CONFIG_ANDROID_BINDER_IPC</code> corrected to built-in (<code>=y</code>) — the 1.0.2-4 module form was silently dropped by <code>olddefconfig</code>; batch build gains a revision counter.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r5-fixed-li1"><strong><code>CONFIG_ANDROID_BINDER_IPC</code> enabled as built-in, not module:</strong> this symbol is a plain <code>bool</code> in Kconfig — it has no module form. The 1.0.2-4 attempt to set it as <code>=m</code> was silently normalized back to <code>n</code> by <code>make olddefconfig</code>, meaning every 7.2.4 kernel built with that release never actually had Waydroid support. It is now enabled with <code>--enable</code> (the only valid form for a bool symbol), and a post-<code>olddefconfig</code> verification step warns instead of failing silently if it is ever dropped for any other reason.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r5-added-li1"><strong>Batch build revision counter:</strong> revision 0 (default) means a brand-new kernel version — the resulting <code>.deb</code> files are identical to before. Revision 1, 2, 3... mean this is the 1st, 2nd, 3rd recompile of the same kernel version with different patches or fixes, so <code>apt</code> and <code>reprepro</code> see each new build as a genuine upgrade rather than a package collision. A new Revision spinner is shown on the batch build page.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2-4 -->
+                        <section id="v102r4" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r4-title">1.0.2-4 — September 2026</span></h2>
+                            <p id="ki-rel-102r4-subtitle" class="lead"><code>CONFIG_ANDROID_BINDER_IPC</code> enabled as a module on every build, giving Waydroid support with no kernel patch needed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r4-added-li1"><strong><code>CONFIG_ANDROID_BINDER_IPC</code> enabled as a module on every build:</strong> built as <code>=m</code> on purpose — users who never use Waydroid never load the module, at no cost. Device names (<code>binder</code>, <code>hwbinder</code>, <code>vndbinder</code>) are left for whoever loads the module, not fixed at compile time.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-3 -->
                         <section id="v102r3" class="content-section">

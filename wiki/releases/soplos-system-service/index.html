@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v1006" class="toc-link">1.0.0-6 <span class="toc-date">— 2026-09-07</span></a></li>
                             <li><a href="#v1005" class="toc-link">1.0.0-5 <span class="toc-date">— 2026-06-21</span></a></li>
                             <li><a href="#v1004" class="toc-link">1.0.0-4 <span class="toc-date">— 2026-06-14</span></a></li>
                             <li><a href="#v1003" class="toc-link">1.0.0-3 <span class="toc-date">— 2026-06-14</span></a></li>
@@ -131,6 +132,37 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.0-6 -->
+                        <section id="v1006" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ss-rel-1006-title">1.0.0-6 — September 2026</span></h2>
+                            <p id="ss-rel-1006-subtitle" class="lead">New Optimization tab: scans the system and suggests services to disable or enable based on hardware presence, redundant stacks, orphaned packages and boot performance. Includes batch scan for speed and a boot timing panel.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1006-added-li1"><strong>New "Optimization" tab:</strong> Scans the system and suggests systemd services to disable or enable, each tagged with a category (hardware not present, redundant stack, orphaned package, recommended maintenance, blocks boot) and the resource it optimizes (RAM, boot time, power, disk, cleanup).</li>
+                                <li id="ss-rel-1006-added-li2"><strong>Virtualization detection:</strong> Uses <code>systemd-detect-virt</code> with a DMI fallback to suggest disabling VM guest tool services on bare metal.</li>
+                                <li id="ss-rel-1006-added-li3"><strong>Bluetooth and Wi-Fi hardware detection:</strong> Checks <code>/sys/class/bluetooth</code> and <code>/sys/class/ieee80211</code> to suggest disabling Bluetooth or Wi-Fi services when no matching adapter is present.</li>
+                                <li id="ss-rel-1006-added-li4"><strong>Redundant audio stack detection:</strong> Suggests disabling <code>pulseaudio.service</code> when PipeWire is active and running as a replacement.</li>
+                                <li id="ss-rel-1006-added-li5"><strong>Dangling enablement symlink detection:</strong> Finds <code>*.wants</code> and <code>*.requires</code> symlinks pointing at units with <code>LoadState: not-found</code> — leftovers from packages removed without cleaning their systemd hooks — and offers to remove them, showing the exact path of each symlink.</li>
+                                <li id="ss-rel-1006-added-li6"><strong>Orphaned service detection:</strong> Identifies unit files whose owning dpkg package is no longer installed on the system.</li>
+                                <li id="ss-rel-1006-added-li7"><strong><code>fstrim.timer</code> enablement suggestion:</strong> Shown when an SSD or NVMe drive is present and periodic TRIM is not enabled.</li>
+                                <li id="ss-rel-1006-added-li8"><strong><code>NetworkManager-wait-online.service</code> disablement suggestion:</strong> Speeds up boot; flagged as medium risk for novice users since machines with network-dependent startup jobs could race against it.</li>
+                                <li id="ss-rel-1006-added-li9"><strong>Boot timing informational panel:</strong> Non-actionable panel listing the slowest services and timers at boot (<code>systemd-analyze blame</code>, filtered to <code>.service</code> and <code>.timer</code> units) and timers with a short re-trigger interval.</li>
+                                <li id="ss-rel-1006-added-li10"><strong>"Select all" button and per-row checkboxes:</strong> Added to the Optimization tab to allow applying multiple suggestions at once.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-bug"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ss-rel-1006-fixed-li1"><strong>Optimization scan no longer spawns one <code>systemctl show</code> and <code>dpkg -S</code> subprocess per service:</strong> Both calls are now batched, which was the main cause of a slow scan on systems with hundreds of services.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.0-5 -->
                         <section id="v1005" class="content-section">

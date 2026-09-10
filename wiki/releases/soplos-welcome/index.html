@@ -121,6 +121,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v212r8" class="toc-link">2.1.2-8 <span class="toc-date">— 2026-09-10</span></a></li>
+                            <li><a href="#v212r7" class="toc-link">2.1.2-7 <span class="toc-date">— 2026-09-09</span></a></li>
                             <li><a href="#v212r6" class="toc-link">2.1.2-6 <span class="toc-date">— 2026-09-02</span></a></li>
                             <li><a href="#v212r5" class="toc-link">2.1.2-5 <span class="toc-date">— 2026-08-29</span></a></li>
                             <li><a href="#v212r4" class="toc-link">2.1.2-4 <span class="toc-date">— 2026-08-28</span></a></li>
@@ -210,6 +212,36 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.2-8 -->
+                        <section id="v212r8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212r8-title">2.1.2-8 — September 2026</span></h2>
+                            <p id="wel-rel-212r8-subtitle" class="lead">Recommended tab — Waydroid adapted to <code>ANDROID_BINDER_IPC</code> going built-in: <code>modprobe</code> steps removed, availability check switched to <code>/dev/binder</code>.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r8-fixed-li1"><strong>Recommended tab — Waydroid adapted to Android Binder going built-in:</strong> <code>ANDROID_BINDER_IPC</code> is a plain bool in Kconfig with no module form, so kernel-installer 1.0.2-5 enables it as <code>=y</code> instead of <code>=m</code>. The install script no longer writes <code>/etc/modules-load.d/waydroid.conf</code> or <code>/etc/modprobe.d/waydroid.conf</code> and no longer runs <code>modprobe</code> — there is nothing to load, the driver initialises at boot. The availability gate is switched from <code>modinfo binder_linux</code> (which never detects a built-in symbol) to checking for <code>/dev/binder</code>.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 2.1.2-7 -->
+                        <section id="v212r7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-212r7-title">2.1.2-7 — September 2026</span></h2>
+                            <p id="wel-rel-212r7-subtitle" class="lead">Waydroid added to the Recommended tab (Development) with automatic <code>binder_linux</code> module configuration and a kernel compatibility gate.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-212r7-added-li1"><strong>Recommended tab (Development) — Waydroid:</strong> Android container for developing and testing Android apps. Its official repo (<code>repo.waydro.id</code>) auto-detects the distro codename and fails on Soplos, so the suite is pinned to <code>trixie</code> (verified: real packages exist there), same reasoning as the XanMod/ROCm/Cloudflare WARP fixes.</li>
+                                <li id="wel-rel-212r7-added-li2"><strong>Recommended tab — Waydroid modprobe automation:</strong> Waydroid's own <code>waydroid-container.service</code> expects the <code>binder_linux</code> kernel module already loaded — it never loads it itself, the most commonly reported Waydroid installation failure on any distro. The install step writes <code>/etc/modules-load.d/waydroid.conf</code> (autoload on every boot) and <code>/etc/modprobe.d/waydroid.conf</code> (the three device nodes Waydroid needs: <code>binder</code>, <code>hwbinder</code>, <code>vndbinder</code>), and loads the module immediately so Waydroid works without a reboot.</li>
+                                <li id="wel-rel-212r7-added-li3"><strong>Recommended tab — Waydroid kernel gate:</strong> <code>binder_linux</code> only exists on Soplos kernels built after the corresponding kernel-installer change. The Install button is disabled with an explanatory tooltip when <code>modinfo binder_linux</code> does not find the module, instead of letting the user hit a guaranteed failure.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.2-6 -->
                         <section id="v212r6" class="content-section">
