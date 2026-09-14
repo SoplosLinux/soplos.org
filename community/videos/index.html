@@ -17,6 +17,49 @@
     <link rel="stylesheet" href="../../styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        .videos-flag-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .flag-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            background: none;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: 8px 10px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            color: inherit;
+        }
+        .flag-btn:hover {
+            background: rgba(255,255,255,0.06);
+        }
+        .flag-btn.active {
+            border-color: currentColor;
+            background: rgba(255,255,255,0.08);
+        }
+        .flag-btn img {
+            width: 40px;
+            height: 27px;
+            object-fit: cover;
+            border-radius: 2px;
+            display: block;
+        }
+        .flag-btn span {
+            font-size: 0.72rem;
+            white-space: nowrap;
+        }
+        .videos-country-block {
+            display: none;
+        }
+        .videos-country-block.active {
+            display: block;
+        }
         .yt-facade {
             position: relative;
             width: 100%;
@@ -557,6 +600,20 @@
                                 <div class="video-embed-wrapper">
                                     <iframe src="https://www.youtube-nocookie.com/embed/goAwQs8C3AM"
                                         title="Soplos Linux — Linux for All"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-channel-info">
+                                    <img src="https://flagcdn.com/w20/ar.png" alt="Argentina">
+                                    <span>Linux for All</span>
+                                </div>
+                            </div>
+
+                            <div class="video-card">
+                                <div class="video-embed-wrapper">
+                                    <iframe src="https://www.youtube-nocookie.com/embed/Y9tj9iIAdow"
+                                        title="Soplos Linux 09.2026 | Instalacion Boro, Tyson, Tyron (Hardware real)"
                                         frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen loading="lazy"></iframe>
@@ -1210,8 +1267,8 @@
                     <!-- Català -->
                     <div class="videos-country-block">
                         <div class="videos-country-header">
-                            <img src="https://cdn.jsdelivr.net/npm/flag-icons/flags/4x3/es-ct.svg" alt="Català" style="width:40px; height:auto;">
-                            <h2>Català</h2>
+                            <img src="https://cdn.jsdelivr.net/npm/flag-icons/flags/4x3/es-ct.svg" alt="Català">
+                            <h2>Cataluña</h2>
                         </div>
                         <div class="videos-grid">
 
@@ -1353,6 +1410,47 @@
     <script src="../../js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            var selector = document.createElement('div');
+            selector.className = 'videos-flag-selector';
+            var blocks = document.querySelectorAll('.videos-country-block');
+            var btns = [];
+
+            blocks.forEach(function (block, i) {
+                var header = block.querySelector('.videos-country-header');
+                var img = header.querySelector('img');
+                var name = header.querySelector('h2').textContent;
+
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'flag-btn';
+
+                var flagImg = document.createElement('img');
+                flagImg.src = img.src;
+                flagImg.alt = img.alt;
+
+                var label = document.createElement('span');
+                label.textContent = name;
+
+                btn.appendChild(flagImg);
+                btn.appendChild(label);
+                btns.push(btn);
+
+                btn.addEventListener('click', function () {
+                    var isActive = block.classList.contains('active');
+                    blocks.forEach(function (b) { b.classList.remove('active'); });
+                    btns.forEach(function (b) { b.classList.remove('active'); });
+                    if (!isActive) {
+                        block.classList.add('active');
+                        btn.classList.add('active');
+                    }
+                });
+
+                selector.appendChild(btn);
+            });
+
+            var videosPage = document.querySelector('.videos-page');
+            videosPage.insertBefore(selector, videosPage.firstChild);
+
             document.querySelectorAll('.video-embed-wrapper iframe').forEach(function (iframe) {
                 var src = iframe.getAttribute('src');
                 var title = iframe.getAttribute('title') || '';
