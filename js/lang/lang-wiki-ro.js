@@ -5949,6 +5949,14 @@ Object.assign(window.LANG_RO, {
     "rs-rel-hero-title": "Soplos Repo Selector",
     "rs-rel-hero-subtitle": "Manager de depozite APT cu căutare în timp real, modernizator DEB822, testare viteză mirror, gestionare chei GPG și internaționalizare completă în 8 limbi.",
 
+    "rs-rel-203r1-title": "2.0.3-1 — Septembrie 2026",
+    "rs-rel-203r1-subtitle": "Cinci corecții de comportament: potrivirea cheii GPG după numele complet al gazdei, detectarea intrărilor DEB822 dezactivate, reutilizarea memoriei cache la pornire, decodificarea UTF-8 a keyring-urilor și un apel duplicat al numelui aplicației în lansator.",
+    "rs-rel-203r1-fixed-li1": "<strong>Rezolvarea cheii GPG la modernizare:</strong> <code>_find_gpg_key()</code> se potrivește acum mai întâi cu numele complet al gazdei (ex. <code>debian.griffo.io</code>) înainte de a recurge la potrivirea prin cuvânt cheie, împiedicând un cuvânt generic precum <code>debian</code> să selecteze un keyring Debian oficial nerelated și să rupă verificarea semnăturii la conversia unui <code>.list</code> în <code>.sources</code>.",
+    "rs-rel-203r1-fixed-li2": "<strong>Detectarea intrărilor DEB822 dezactivate:</strong> un stanza <code>.sources</code> este acum considerat dezactivat doar când fiecare linie ne-goală este comentată, nu doar prima — fișierele cu comentarii informative de antet înaintea câmpurilor active (Google Chrome, VS Code) erau afișate incorect ca dezactivate.",
+    "rs-rel-203r1-fixed-li3": "<strong>Citire duplicată a depozitelor la pornire:</strong> fila Depozite reutilizează acum memoria cache deja populată de fila Generator de Surse la încărcarea inițială, în loc să forțeze o a doua citire completă a fiecărui fișier sursă.",
+    "rs-rel-203r1-fixed-li4": "<strong>Decodificarea informațiilor despre cheia GPG:</strong> ieșirea comenzii <code>gpg --show-keys</code> este acum decodificată cu <code>errors='replace'</code> în loc de UTF-8 strict, astfel încât keyring-urile mari cu UID-uri necodificate în UTF-8 nu mai întrerup listarea cheilor.",
+    "rs-rel-203r1-fixed-li5": "<strong><code>g_set_application_name()</code> apelat de mai multe ori:</strong> eliminat un bloc redundant de configurare GLib/GTK în lansatorul <code>debian/soplos-repo-selector</code> care duplica — cu un nume netradus și o pictogramă greșită — ceea ce <code>core/application.py</code> configurează deja corect.",
+
     "rs-rel-203-title": "2.0.3 — Iulie 2026",
     "rs-rel-203-subtitle": "Actualizare dependenta de compilare — <code>python3-all</code> inlocuit cu <code>python3</code> in <code>debian/control</code>.",
     "rs-rel-203-changed-li1": "Dependenta de compilare <code>python3-all</code> inlocuita cu <code>python3</code>.",

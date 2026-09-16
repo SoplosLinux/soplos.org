@@ -5949,6 +5949,14 @@ Object.assign(window.LANG_DE, {
     "rs-rel-hero-title": "Soplos Repo Selector",
     "rs-rel-hero-subtitle": "APT-Repository-Verwaltung mit Echtzeit-Suche, DEB822-Modernisierer, Spiegel-Geschwindigkeitstest, GPG-Schlüsselverwaltung und vollständiger Internationalisierung in 8 Sprachen.",
 
+    "rs-rel-203r1-title": "2.0.3-1 — September 2026",
+    "rs-rel-203r1-subtitle": "Fünf Korrekturen: GPG-Schlüsselabgleich per vollständigem Hostnamen, Erkennung deaktivierter DEB822-Einträge, Wiederverwendung des Startcaches, UTF-8-Dekodierung von Keyrings und ein doppelter Aufruf des Anwendungsnamens im Launcher.",
+    "rs-rel-203r1-fixed-li1": "<strong>GPG-Schlüsselauflösung beim Modernisieren:</strong> <code>_find_gpg_key()</code> gleicht nun zunächst den vollständigen Hostnamen (z.B. <code>debian.griffo.io</code>) ab, bevor auf die Stichwortsuche zurückgegriffen wird — ein generisches Stichwort wie <code>debian</code> konnte zuvor einen offiziellen Debian-Keyring treffen und die Signaturprüfung nach der Konvertierung einer <code>.list</code> in <code>.sources</code> brechen.",
+    "rs-rel-203r1-fixed-li2": "<strong>Erkennung deaktivierter DEB822-Einträge:</strong> ein <code>.sources</code>-Stanza gilt nun erst als deaktiviert, wenn jede nicht leere Zeile auskommentiert ist, nicht nur die erste — Dateien mit einem Informationskommentar vor den aktiven Feldern (Google Chrome, VS Code) wurden fälschlicherweise als deaktiviert angezeigt.",
+    "rs-rel-203r1-fixed-li3": "<strong>Doppeltes Lesen der Repositorys beim Start:</strong> der Reiter Repositorys nutzt nun den Cache, den der Quellen-Generator beim initialen Laden bereits befüllt hat, statt eine zweite vollständige Neueinlesung aller Quelldateien zu erzwingen.",
+    "rs-rel-203r1-fixed-li4": "<strong>Dekodierung der GPG-Schlüsselinformationen:</strong> die Ausgabe von <code>gpg --show-keys</code> wird nun mit <code>errors='replace'</code> statt striktem UTF-8 dekodiert, damit große Keyrings mit nicht-UTF-8-kodierten UIDs die Schlüsselauflistung nicht mehr abbrechen.",
+    "rs-rel-203r1-fixed-li5": "<strong><code>g_set_application_name()</code> mehrfach aufgerufen:</strong> ein redundanter GLib/GTK-Einrichtungsblock im Launcher <code>debian/soplos-repo-selector</code> wurde entfernt, der — mit unübersetztem Namen und falschem Icon — das duplizierte, was <code>core/application.py</code> bereits korrekt einrichtet.",
+
     "rs-rel-203-title": "2.0.3 — Juli 2026",
     "rs-rel-203-subtitle": "Aktualisierung der Build-Abhaengigkeit — <code>python3-all</code> durch <code>python3</code> in <code>debian/control</code> ersetzt.",
     "rs-rel-203-changed-li1": "Build-Abhaengigkeit <code>python3-all</code> durch <code>python3</code> ersetzt.",

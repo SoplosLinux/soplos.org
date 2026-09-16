@@ -5948,6 +5948,14 @@ Object.assign(window.LANG_IT, {
     "rs-rel-hero-title": "Soplos Repo Selector",
     "rs-rel-hero-subtitle": "Gestore di repository APT con ricerca in tempo reale, modernizzatore DEB822, test di velocità dei mirror, gestione chiavi GPG e internazionalizzazione completa in 8 lingue.",
 
+    "rs-rel-203r1-title": "2.0.3-1 — Settembre 2026",
+    "rs-rel-203r1-subtitle": "Cinque correzioni di comportamento: corrispondenza della chiave GPG per nome host completo, rilevamento delle voci DEB822 disabilitate, riutilizzo della cache all'avvio, decodifica UTF-8 dei keyring e una chiamata duplicata al nome dell'applicazione nel launcher.",
+    "rs-rel-203r1-fixed-li1": "<strong>Risoluzione della chiave GPG durante la modernizzazione:</strong> <code>_find_gpg_key()</code> ora corrisponde prima al nome host completo (es. <code>debian.griffo.io</code>) prima di ricorrere alla corrispondenza per parola chiave, evitando che una parola generica come <code>debian</code> selezioni un keyring Debian ufficiale non correlato e rompa la verifica della firma durante la conversione di un <code>.list</code> in <code>.sources</code>.",
+    "rs-rel-203r1-fixed-li2": "<strong>Rilevamento delle voci DEB822 disabilitate:</strong> uno stanza <code>.sources</code> è ora considerato disabilitato solo quando ogni riga non vuota è commentata, non solo la prima — file con commenti di intestazione informativi prima dei campi attivi (Google Chrome, VS Code) venivano mostrati erroneamente come disabilitati.",
+    "rs-rel-203r1-fixed-li3": "<strong>Lettura duplicata dei repository all'avvio:</strong> la scheda Repository ora riutilizza la cache già popolata dalla scheda Generatore di Sorgenti al suo caricamento iniziale, invece di forzare una seconda lettura completa di ogni file sorgente.",
+    "rs-rel-203r1-fixed-li4": "<strong>Decodifica delle informazioni sulla chiave GPG:</strong> l'output di <code>gpg --show-keys</code> viene ora decodificato con <code>errors='replace'</code> invece di UTF-8 rigoroso, in modo che i keyring di grandi dimensioni contenenti UID non codificati in UTF-8 non interrompano più il listaggio delle chiavi.",
+    "rs-rel-203r1-fixed-li5": "<strong><code>g_set_application_name()</code> chiamato più volte:</strong> rimosso un blocco di configurazione GLib/GTK ridondante nel launcher <code>debian/soplos-repo-selector</code> che duplicava — con nome non tradotto e icona errata — ciò che <code>core/application.py</code> configura già correttamente.",
+
     "rs-rel-203-title": "2.0.3 — Luglio 2026",
     "rs-rel-203-subtitle": "Aggiornamento della dipendenza di compilazione — <code>python3-all</code> sostituito con <code>python3</code> in <code>debian/control</code>.",
     "rs-rel-203-changed-li1": "Dipendenza di compilazione <code>python3-all</code> sostituita con <code>python3</code>.",

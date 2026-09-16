@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v203r1" class="toc-link">2.0.3-1 <span class="toc-date">— 2026-09-16</span></a></li>
                             <li><a href="#v203" class="toc-link">2.0.3 <span class="toc-date">— 2026-07-07</span></a></li>
                             <li><a href="#v202-9" class="toc-link">2.0.2-9 <span class="toc-date">— 2026-06-23</span></a></li>
                             <li><a href="#v202-8" class="toc-link">2.0.2-8 <span class="toc-date">— 2026-05-19</span></a></li>
@@ -151,6 +152,24 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.0.3-1 -->
+                        <section id="v203r1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="rs-rel-203r1-title">2.0.3-1 — September 2026</span></h2>
+                            <p id="rs-rel-203r1-subtitle" class="lead">Five correctness fixes: GPG key matching by full hostname, DEB822 disabled detection, startup cache reuse, keyring UTF-8 decoding, and a duplicate application-name setup call in the launcher wrapper.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="rs-rel-203r1-fixed-li1"><strong>GPG key resolution on modernize:</strong> <code>_find_gpg_key()</code> now matches the full hostname (e.g. <code>debian.griffo.io</code>) before falling back to loose keyword matching, preventing a generic keyword like <code>debian</code> from hitting an unrelated official Debian keyring and breaking signature verification after converting a <code>.list</code> to <code>.sources</code>.</li>
+                                <li id="rs-rel-203r1-fixed-li2"><strong>DEB822 disabled detection:</strong> a <code>.sources</code> stanza is now only treated as disabled when every non-empty line is commented out, not just the first one — files that ship an informational header comment before the active fields (Google Chrome, VS Code) were incorrectly shown as disabled.</li>
+                                <li id="rs-rel-203r1-fixed-li3"><strong>Duplicate repository read on startup:</strong> the Repositories tab now reuses the cache already populated by the Sources Generator tab on its initial load instead of forcing a second full re-read of every source file.</li>
+                                <li id="rs-rel-203r1-fixed-li4"><strong>GPG key info decoding:</strong> <code>gpg --show-keys</code> output is now decoded with <code>errors='replace'</code> instead of strict UTF-8, so large keyrings containing non-UTF-8 encoded UIDs no longer abort key listing.</li>
+                                <li id="rs-rel-203r1-fixed-li5"><strong><code>g_set_application_name()</code> called multiple times:</strong> removed a redundant GLib/GTK setup block in the <code>debian/soplos-repo-selector</code> launcher wrapper that duplicated — with an untranslated name and wrong icon — what <code>core/application.py</code> already sets up correctly.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.0.3 -->
                         <section id="v203" class="content-section">

@@ -6748,6 +6748,14 @@ Object.assign(window.LANG_EN, {
   "rs-rel-hero-title": "Soplos Repo Selector",
   "rs-rel-hero-subtitle": "APT repository manager with real-time search, DEB822 moderniser, mirror speed testing, GPG key management and full 8-language internationalisation.",
 
+  "rs-rel-203r1-title": "2.0.3-1 — September 2026",
+  "rs-rel-203r1-subtitle": "Five correctness fixes: GPG key matching by full hostname, DEB822 disabled detection, startup cache reuse, keyring UTF-8 decoding, and a duplicate application-name setup call in the launcher wrapper.",
+  "rs-rel-203r1-fixed-li1": "<strong>GPG key resolution on modernize:</strong> <code>_find_gpg_key()</code> now matches the full hostname (e.g. <code>debian.griffo.io</code>) before falling back to loose keyword matching, preventing a generic keyword like <code>debian</code> from hitting an unrelated official Debian keyring and breaking signature verification after converting a <code>.list</code> to <code>.sources</code>.",
+  "rs-rel-203r1-fixed-li2": "<strong>DEB822 disabled detection:</strong> a <code>.sources</code> stanza is now only treated as disabled when every non-empty line is commented out, not just the first one — files that ship an informational header comment before the active fields (Google Chrome, VS Code) were incorrectly shown as disabled.",
+  "rs-rel-203r1-fixed-li3": "<strong>Duplicate repository read on startup:</strong> the Repositories tab now reuses the cache already populated by the Sources Generator tab on its initial load instead of forcing a second full re-read of every source file.",
+  "rs-rel-203r1-fixed-li4": "<strong>GPG key info decoding:</strong> <code>gpg --show-keys</code> output is now decoded with <code>errors='replace'</code> instead of strict UTF-8, so large keyrings containing non-UTF-8 encoded UIDs no longer abort key listing.",
+  "rs-rel-203r1-fixed-li5": "<strong><code>g_set_application_name()</code> called multiple times:</strong> removed a redundant GLib/GTK setup block in the <code>debian/soplos-repo-selector</code> launcher wrapper that duplicated — with an untranslated name and wrong icon — what <code>core/application.py</code> already sets up correctly.",
+
   "rs-rel-203-title": "2.0.3 — July 2026",
   "rs-rel-203-subtitle": "Build dependency update — <code>python3-all</code> replaced with <code>python3</code> in <code>debian/control</code>.",
   "rs-rel-203-changed-li1": "Build dependency <code>python3-all</code> replaced with <code>python3</code>.",
