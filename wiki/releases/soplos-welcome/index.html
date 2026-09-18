@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v213" class="toc-link">2.1.3 <span class="toc-date">— 2026-09-18</span></a></li>
                             <li><a href="#v212r9" class="toc-link">2.1.2-9 <span class="toc-date">— 2026-09-15</span></a></li>
                             <li><a href="#v212r8" class="toc-link">2.1.2-8 <span class="toc-date">— 2026-09-10</span></a></li>
                             <li><a href="#v212r7" class="toc-link">2.1.2-7 <span class="toc-date">— 2026-09-09</span></a></li>
@@ -213,6 +214,30 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2.1.3 -->
+                        <section id="v213" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-213-title">2.1.3 — September 2026</span></h2>
+                            <p id="wel-rel-213-subtitle" class="lead">Two new Recommended tab categories — Remote Desktops and Virtualization — plus two fixes: a rendering regression that hid the new categories, and a missing <code>wmctrl</code> packaging dependency.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-213-added-li1"><strong>Recommended tab (Remote Desktops):</strong> new category with Remmina (<code>org.remmina.Remmina</code>), RustDesk (<code>com.rustdesk.RustDesk</code>), AnyDesk (<code>com.anydesk.Anydesk</code>) and NoMachine (<code>com.nomachine.NoMachine</code>), all Flatpak.</li>
+                                <li id="wel-rel-213-added-li2"><strong>Recommended tab (Virtualization):</strong> new category with <code>virt-manager</code> and GNOME Boxes, both installed via <code>apt</code>.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-213-fixed-li1"><strong>Recommended tab (new categories weren't showing up):</strong> <code>_load_recommended_software()</code> renders categories from a hardcoded list instead of iterating every key in <code>SOFTWARE_CATEGORIES</code>, so the two new categories existed in the data but never got drawn until they were added to that list too.</li>
+                                <li id="wel-rel-213-fixed-li2"><strong>Packaging (missing <code>wmctrl</code> dependency):</strong> <code>core/environment.py</code> shells out to <code>wmctrl</code> to detect the running window manager, but the package was never declared in <code>debian/control</code>'s <code>Depends</code>. On a bare Debian install where nothing else pulled it in, Welcome would fail on startup. Added <code>wmctrl</code> to <code>Depends</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 2.1.2-8 -->
                         <!-- 2.1.2-9 -->

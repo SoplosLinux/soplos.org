@@ -5271,6 +5271,13 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-213-title": "2.1.3 — September 2026",
+  "wel-rel-213-subtitle": "Two new Recommended tab categories — Remote Desktops and Virtualization — plus two fixes: a rendering regression that hid the new categories, and a missing <code>wmctrl</code> packaging dependency.",
+  "wel-rel-213-added-li1": "<strong>Recommended tab (Remote Desktops):</strong> new category with Remmina (<code>org.remmina.Remmina</code>), RustDesk (<code>com.rustdesk.RustDesk</code>), AnyDesk (<code>com.anydesk.Anydesk</code>) and NoMachine (<code>com.nomachine.NoMachine</code>), all Flatpak.",
+  "wel-rel-213-added-li2": "<strong>Recommended tab (Virtualization):</strong> new category with <code>virt-manager</code> and GNOME Boxes, both installed via <code>apt</code>.",
+  "wel-rel-213-fixed-li1": "<strong>Recommended tab (new categories weren't showing up):</strong> <code>_load_recommended_software()</code> renders categories from a hardcoded list instead of iterating every key in <code>SOFTWARE_CATEGORIES</code>, so the two new categories existed in the data but never got drawn until they were added to that list too.",
+  "wel-rel-213-fixed-li2": "<strong>Packaging (missing <code>wmctrl</code> dependency):</strong> <code>core/environment.py</code> shells out to <code>wmctrl</code> to detect the running window manager, but the package was never declared in <code>debian/control</code>'s <code>Depends</code>. On a bare Debian install where nothing else pulled it in, Welcome would fail on startup. Added <code>wmctrl</code> to <code>Depends</code>.",
+
   "wel-rel-212r9-title": "2.1.2-9 — September 2026",
   "wel-rel-212r9-subtitle": "Recommended tab — <code>set -e</code> now in every generated script, exposing and fixing seven previously silent install failures; GenOffice added; Software tab — Snap Store no longer prompts for the password twice.",
   "wel-rel-212r9-added-li1": "<strong>Recommended tab (Office) — GenOffice:</strong> open-source AI office suite (Docs, Sheets, Slides, PDF, HTML and Markdown editors). Installs from the <code>.deb</code> served at <code>genoffice.ai/download/linux-deb</code>, which always redirects to the vendor's latest GitHub release, so the entry never needs to be re-pinned to a version.",
