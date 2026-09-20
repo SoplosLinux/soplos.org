@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v102r7" class="toc-link">1.0.2-7 <span class="toc-date">— 2026-09-20</span></a></li>
                             <li><a href="#v102r6" class="toc-link">1.0.2-6 <span class="toc-date">— 2026-09-14</span></a></li>
                             <li><a href="#v102r5" class="toc-link">1.0.2-5 <span class="toc-date">— 2026-09-10</span></a></li>
                             <li><a href="#v102r4" class="toc-link">1.0.2-4 <span class="toc-date">— 2026-09-09</span></a></li>
@@ -153,6 +154,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-7 -->
+                        <section id="v102r7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r7-title">1.0.2-7 — September 2026</span></h2>
+                            <p id="ki-rel-102r7-subtitle" class="lead">RT kernels now always apply the Soplos <code>rt-i915</code> patch and abort if <code>DRM_I915</code> does not survive <code>olddefconfig</code> — prevents producing RT kernels that cannot boot on Intel graphics.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r7-fixed-li1"><strong>RT kernels no longer boot to a black screen on Intel:</strong> <code>DRM_I915</code> has a <code>depends on !PREEMPT_RT</code> constraint, so <code>olddefconfig</code> silently dropped it on every RT build from 7.0.3 through 7.2.6, leaving any machine with an Intel iGPU at a blinking cursor. The only available fix, a third-party download, was skipped on any build machine without an Intel GPU. RT builds now always apply the Soplos patch from <code>SoplosLinux/rt-i915-soplos</code>, verified with a dry-run before acceptance, and abort after <code>olddefconfig</code> if <code>DRM_I915</code> still does not survive — producing a correct kernel or no kernel, never a mislabelled one. Only a 7.2 patch exists so far; an RT build of any other kernel line stops at the check until a patch for that line is available.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-5 -->
                         <!-- 1.0.2-6 -->
