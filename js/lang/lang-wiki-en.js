@@ -5271,6 +5271,14 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-213r1-title": "2.1.3-1 — September 2026",
+  "wel-rel-213r1-subtitle": "WhatsApp switched to a WebApp shortcut; Warehouse, Easy Flatpak and Discover added to the Software tab; Telegram now installs from the Soplos repository; full translation pass for all strings since 2.1.3.",
+  "wel-rel-213r1-added-li1": "<strong>Recommended tab (Communication) — WhatsApp:</strong> switched from an unofficial third-party Flatpak to a WebApp shortcut created through the same mechanism as Soplos WebApp Manager — the webapp install, uninstall and status-check machinery was ported from <code>gaming_tab.py</code> into <code>recommended_tab.py</code>, which had no webapp support before.",
+  "wel-rel-213r1-added-li2": "<strong>Software tab:</strong> Warehouse and Easy Flatpak (both Flatpak) added to all three desktop variants (GNOME, Plasma, Xfce). Discover (KDE's software center) added too, with a confirmation dialog on non-Plasma desktops explaining the extra KDE Frameworks packages it pulls in — matching the same confirmation pattern already used for Bazaar.",
+  "wel-rel-213r1-added-li3": "<strong>Translations:</strong> real translations across all 8 languages for every string introduced since 2.1.3 — Remote Desktops, Virtualization and their packages, GenOffice, the WhatsApp webapp description, the WebApp badge, and the three new software stores including Discover's confirmation dialog.",
+  "wel-rel-213r1-changed-li1": "<strong>Recommended tab (Communication) — Telegram:</strong> now installs from the Soplos apt repository instead of Flatpak, now that it is packaged there.",
+  "wel-rel-213r1-changed-li2": "<strong>Software tab:</strong> Repo Selector moved to the first position in the grid in all three desktop variants, matching Welcome 3.0's ordering.",
+
   "wel-rel-213-title": "2.1.3 — September 2026",
   "wel-rel-213-subtitle": "Two new Recommended tab categories — Remote Desktops and Virtualization — plus two fixes: a rendering regression that hid the new categories, and a missing <code>wmctrl</code> packaging dependency.",
   "wel-rel-213-added-li1": "<strong>Recommended tab (Remote Desktops):</strong> new category with Remmina (<code>org.remmina.Remmina</code>), RustDesk (<code>com.rustdesk.RustDesk</code>), AnyDesk (<code>com.anydesk.Anydesk</code>) and NoMachine (<code>com.nomachine.NoMachine</code>), all Flatpak.",

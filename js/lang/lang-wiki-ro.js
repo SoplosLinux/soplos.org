@@ -4470,6 +4470,14 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-213r1-title": "2.1.3-1 — Septembrie 2026",
+    "wel-rel-213r1-subtitle": "WhatsApp înlocuit cu o comandă rapidă WebApp; Warehouse, Easy Flatpak și Discover adăugate la fila Software; Telegram se instalează acum din depozitul Soplos; traducere completă a tuturor șirurilor de la 2.1.3.",
+    "wel-rel-213r1-added-li1": "<strong>Fila Recomandate (Comunicare) — WhatsApp:</strong> înlocuit cu o comandă rapidă WebApp creată prin același mecanism ca Soplos WebApp Manager — mecanismul de instalare, dezinstalare și verificare a stării webapp-urilor a fost portat din <code>gaming_tab.py</code> în <code>recommended_tab.py</code>, care nu avusese anterior suport pentru webapp-uri.",
+    "wel-rel-213r1-added-li2": "<strong>Fila Software:</strong> Warehouse și Easy Flatpak (ambele Flatpak) adăugate în toate cele trei variante de desktop (GNOME, Plasma, Xfce). Discover (centrul de software KDE) adăugat și el, cu un dialog de confirmare pe desktop-urile non-Plasma care explică pachetele KDE Frameworks suplimentare pe care le instalează — urmând același tipar de confirmare folosit deja pentru Bazaar.",
+    "wel-rel-213r1-added-li3": "<strong>Traduceri:</strong> traduceri reale în toate cele 8 limbi pentru fiecare șir introdus de la 2.1.3 — Desktop-uri la Distanță, Virtualizare și pachetele lor, GenOffice, descrierea webapp-ului WhatsApp, emblema WebApp și cele trei noi magazine de software inclusiv dialogul de confirmare al Discover.",
+    "wel-rel-213r1-changed-li1": "<strong>Fila Recomandate (Comunicare) — Telegram:</strong> se instalează acum din depozitul apt Soplos în loc de Flatpak, acum că este pachetizat acolo.",
+    "wel-rel-213r1-changed-li2": "<strong>Fila Software:</strong> Repo Selector mutat pe prima poziție în grilă în toate cele trei variante de desktop, urmând ordinea din Welcome 3.0.",
+
     "wel-rel-213-title": "2.1.3 — Septembrie 2026",
     "wel-rel-213-subtitle": "Două noi categorii în fila Recomandate — Desktop-uri la Distanță și Virtualizare — plus două corecții: o regresie de randare care ascundea noile categorii și o dependință de pachet <code>wmctrl</code> lipsă.",
     "wel-rel-213-added-li1": "<strong>Fila Recomandate (Desktop-uri la Distanță):</strong> categorie nouă cu Remmina (<code>org.remmina.Remmina</code>), RustDesk (<code>com.rustdesk.RustDesk</code>), AnyDesk (<code>com.anydesk.Anydesk</code>) și NoMachine (<code>com.nomachine.NoMachine</code>), toate Flatpak.",

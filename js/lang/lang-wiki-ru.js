@@ -4472,6 +4472,14 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-213r1-title": "2.1.3-1 — Сентябрь 2026",
+    "wel-rel-213r1-subtitle": "WhatsApp заменён на ярлык WebApp; Warehouse, Easy Flatpak и Discover добавлены на вкладку Software; Telegram теперь устанавливается из репозитория Soplos; полный перевод всех строк с версии 2.1.3.",
+    "wel-rel-213r1-added-li1": "<strong>Вкладка «Рекомендуемое» (Связь) — WhatsApp:</strong> заменён на ярлык WebApp, созданный тем же механизмом, что и Soplos WebApp Manager — механизм установки, удаления и проверки состояния веб-приложений перенесён из <code>gaming_tab.py</code> в <code>recommended_tab.py</code>, в котором ранее не было поддержки веб-приложений.",
+    "wel-rel-213r1-added-li2": "<strong>Вкладка «Программы»:</strong> Warehouse и Easy Flatpak (оба Flatpak) добавлены во все три варианта рабочего стола (GNOME, Plasma, Xfce). Также добавлен Discover (центр программ KDE) с диалогом подтверждения на рабочих столах, отличных от Plasma, объясняющим дополнительные пакеты KDE Frameworks — аналогично уже используемому паттерну подтверждения для Bazaar.",
+    "wel-rel-213r1-added-li3": "<strong>Переводы:</strong> полноценные переводы на все 8 языков для каждой строки, добавленной с версии 2.1.3 — Удалённые рабочие столы, Виртуализация и их пакеты, GenOffice, описание веб-приложения WhatsApp, значок WebApp и три новых магазина программ, включая диалог подтверждения Discover.",
+    "wel-rel-213r1-changed-li1": "<strong>Вкладка «Рекомендуемое» (Связь) — Telegram:</strong> теперь устанавливается из репозитория apt Soplos вместо Flatpak, поскольку там он теперь упакован.",
+    "wel-rel-213r1-changed-li2": "<strong>Вкладка «Программы»:</strong> Repo Selector перемещён на первую позицию в сетке во всех трёх вариантах рабочего стола, соответствуя порядку Welcome 3.0.",
+
     "wel-rel-213-title": "2.1.3 — Сентябрь 2026",
     "wel-rel-213-subtitle": "Две новые категории во вкладке «Рекомендуемые» — Удалённые рабочие столы и Виртуализация — плюс два исправления: регрессия отрисовки, скрывавшая новые категории, и отсутствующая зависимость пакета <code>wmctrl</code>.",
     "wel-rel-213-added-li1": "<strong>Вкладка «Рекомендуемые» (Удалённые рабочие столы):</strong> новая категория с Remmina (<code>org.remmina.Remmina</code>), RustDesk (<code>com.rustdesk.RustDesk</code>), AnyDesk (<code>com.anydesk.Anydesk</code>) и NoMachine (<code>com.nomachine.NoMachine</code>), все Flatpak.",
