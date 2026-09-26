@@ -5271,6 +5271,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-213r2-title": "2.1.3-2 — September 2026",
+  "wel-rel-213r2-subtitle": "Packaging fix: added a dependency on <code>soplos-fontconfig-woff-fix</code> to prevent Qt application crashes triggered by Chromium 154-based browsers rewriting the user font cache.",
+  "wel-rel-213r2-fixed-li1": "<strong>Qt crash after Chromium 154-based browsers rewrite the font cache:</strong> a bug in fontconfig (<a href=\"https://gitlab.freedesktop.org/fontconfig/fontconfig/-/issues/565\" target=\"_blank\">#565</a>) causes <code>FcCharSetHasChar</code> to abort when it encounters a corrupted cache entry. Chromium 154 rewrites the user font cache in a format that triggers this on the next Qt application launch. Added a dependency on <code>soplos-fontconfig-woff-fix</code>, which patches fontconfig to handle the malformed entry gracefully instead of crashing.",
+
   "wel-rel-213r1-title": "2.1.3-1 — September 2026",
   "wel-rel-213r1-subtitle": "WhatsApp switched to a WebApp shortcut; Warehouse, Easy Flatpak and Discover added to the Software tab; Telegram now installs from the Soplos repository; full translation pass for all strings since 2.1.3.",
   "wel-rel-213r1-added-li1": "<strong>Recommended tab (Communication) — WhatsApp:</strong> switched from an unofficial third-party Flatpak to a WebApp shortcut created through the same mechanism as Soplos WebApp Manager — the webapp install, uninstall and status-check machinery was ported from <code>gaming_tab.py</code> into <code>recommended_tab.py</code>, which had no webapp support before.",

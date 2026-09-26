@@ -4465,6 +4465,10 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-213r2-title": "2.1.3-2 — Setembro 2026",
+    "wel-rel-213r2-subtitle": "Correção de empacotamento: adicionada dependência de <code>soplos-fontconfig-woff-fix</code> para evitar falhas em aplicações Qt desencadeadas pelos navegadores baseados no Chromium 154 ao reescrever a cache de fontes do utilizador.",
+    "wel-rel-213r2-fixed-li1": "<strong>Falha do Qt após reescrita da cache de fontes por navegadores baseados no Chromium 154:</strong> um erro no fontconfig (<a href=\"https://gitlab.freedesktop.org/fontconfig/fontconfig/-/issues/565\" target=\"_blank\">#565</a>) faz com que <code>FcCharSetHasChar</code> aborte ao encontrar uma entrada de cache corrompida. O Chromium 154 reescreve a cache de fontes do utilizador num formato que desencadeia este problema no próximo arranque de qualquer aplicação Qt. Adicionada dependência de <code>soplos-fontconfig-woff-fix</code>, que corrige o fontconfig para lidar com a entrada malformada sem falhar.",
+
     "wel-rel-213r1-title": "2.1.3-1 — Setembro 2026",
     "wel-rel-213r1-subtitle": "WhatsApp substituído por um atalho WebApp; Warehouse, Easy Flatpak e Discover adicionados ao separador Software; Telegram agora instala a partir do repositório Soplos; tradução completa de todas as strings desde 2.1.3.",
     "wel-rel-213r1-added-li1": "<strong>Separador Recomendado (Comunicação) — WhatsApp:</strong> substituído por um atalho WebApp criado pelo mesmo mecanismo que o Soplos WebApp Manager — a maquinaria de instalação, desinstalação e verificação de estado das webapps foi portada de <code>gaming_tab.py</code> para <code>recommended_tab.py</code>, que antes não tinha suporte a webapps.",
