@@ -4472,6 +4472,11 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-213r3-title": "2.1.3-3 — Сентябрь 2026",
+    "wel-rel-213r3-subtitle": "Вкладка «Рекомендуемое» (Графика) — добавлены Fog Panther и Patchy.",
+    "wel-rel-213r3-added-li1": "<strong>Вкладка «Рекомендуемое» (Графика) — Fog Panther:</strong> добавлен как Flatpak (<code>com.fogpanther.FogPanther</code>) из Flathub.",
+    "wel-rel-213r3-added-li2": "<strong>Вкладка «Рекомендуемое» (Графика) — Patchy:</strong> редактор изображений с открытым исходным кодом, ориентированный на совместимость с PSD. Не представлен на Flathub, поэтому устанавливается из пакета <code>.flatpak</code>, опубликованного в его GitHub-релизах на уровне пользователя — <code>pkexec</code> перенаправляет вызов Flatpak через <code>sudo -u $REAL_USER</code> (определяется из <code>$PKEXEC_UID</code>), чтобы приложение попало в установку вошедшего в систему пользователя.",
+
     "wel-rel-213r2-title": "2.1.3-2 — Сентябрь 2026",
     "wel-rel-213r2-subtitle": "Исправление пакета: добавлена зависимость от <code>soplos-fontconfig-woff-fix</code> для предотвращения аварийного завершения Qt-приложений, вызванного браузерами на базе Chromium 154 при перезаписи пользовательского кэша шрифтов.",
     "wel-rel-213r2-fixed-li1": "<strong>Аварийное завершение Qt после перезаписи кэша шрифтов браузерами на базе Chromium 154:</strong> ошибка в fontconfig (<a href=\"https://gitlab.freedesktop.org/fontconfig/fontconfig/-/issues/565\" target=\"_blank\">#565</a>) приводит к тому, что <code>FcCharSetHasChar</code> прерывается при обнаружении повреждённой записи в кэше. Chromium 154 перезаписывает пользовательский кэш шрифтов в формате, который вызывает это при следующем запуске любого Qt-приложения. Добавлена зависимость от <code>soplos-fontconfig-woff-fix</code>, которая исправляет fontconfig для корректной обработки некорректной записи вместо аварийного завершения.",

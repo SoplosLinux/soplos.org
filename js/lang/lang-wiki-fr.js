@@ -4466,6 +4466,11 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-213r3-title": "2.1.3-3 — Septembre 2026",
+    "wel-rel-213r3-subtitle": "Onglet Recommandé (Graphiques) — Fog Panther et Patchy ajoutés.",
+    "wel-rel-213r3-added-li1": "<strong>Onglet Recommandé (Graphiques) — Fog Panther :</strong> ajouté en tant que Flatpak (<code>com.fogpanther.FogPanther</code>) depuis Flathub.",
+    "wel-rel-213r3-added-li2": "<strong>Onglet Recommandé (Graphiques) — Patchy :</strong> éditeur d'images open-source axé sur la compatibilité PSD. Absent de Flathub, il s'installe donc depuis le bundle <code>.flatpak</code> publié sur ses releases GitHub au niveau utilisateur — <code>pkexec</code> achemine l'appel Flatpak via <code>sudo -u $REAL_USER</code> (résolu depuis <code>$PKEXEC_UID</code>) pour que l'application s'installe bien dans l'installation de l'utilisateur connecté.",
+
     "wel-rel-213r2-title": "2.1.3-2 — Septembre 2026",
     "wel-rel-213r2-subtitle": "Correction d'empaquetage : ajout d'une dépendance à <code>soplos-fontconfig-woff-fix</code> pour éviter les plantages des applications Qt déclenchés par les navigateurs basés sur Chromium 154 lors de la réécriture du cache de polices utilisateur.",
     "wel-rel-213r2-fixed-li1": "<strong>Plantage de Qt après réécriture du cache de polices par les navigateurs basés sur Chromium 154 :</strong> un bogue dans fontconfig (<a href=\"https://gitlab.freedesktop.org/fontconfig/fontconfig/-/issues/565\" target=\"_blank\">#565</a>) provoque l'abandon de <code>FcCharSetHasChar</code> lorsqu'il rencontre une entrée de cache corrompue. Chromium 154 réécrit le cache de polices utilisateur dans un format qui déclenche ce problème au prochain lancement d'une application Qt. Ajout d'une dépendance à <code>soplos-fontconfig-woff-fix</code>, qui corrige fontconfig pour gérer l'entrée malformée sans planter.",

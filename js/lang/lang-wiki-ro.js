@@ -4470,6 +4470,11 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-213r3-title": "2.1.3-3 — Septembrie 2026",
+    "wel-rel-213r3-subtitle": "Fila Recomandate (Grafică) — Fog Panther și Patchy adăugate.",
+    "wel-rel-213r3-added-li1": "<strong>Fila Recomandate (Grafică) — Fog Panther:</strong> adăugat ca Flatpak (<code>com.fogpanther.FogPanther</code>) din Flathub.",
+    "wel-rel-213r3-added-li2": "<strong>Fila Recomandate (Grafică) — Patchy:</strong> editor de imagini open-source axat pe compatibilitatea cu PSD. Nu este pe Flathub, deci se instalează din pachetul <code>.flatpak</code> publicat în release-urile sale de pe GitHub la nivel de utilizator — <code>pkexec</code> direcționează apelul Flatpak prin <code>sudo -u $REAL_USER</code> (rezolvat din <code>$PKEXEC_UID</code>) pentru ca aplicația să ajungă în instalarea utilizatorului conectat.",
+
     "wel-rel-213r2-title": "2.1.3-2 — Septembrie 2026",
     "wel-rel-213r2-subtitle": "Corectare de pachetizare: adăugată dependență de <code>soplos-fontconfig-woff-fix</code> pentru a preveni blocările aplicațiilor Qt declanșate de browserele bazate pe Chromium 154 când rescriu memoria cache a fonturilor utilizatorului.",
     "wel-rel-213r2-fixed-li1": "<strong>Blocare Qt după rescrierea memoriei cache a fonturilor de către browserele bazate pe Chromium 154:</strong> un bug în fontconfig (<a href=\"https://gitlab.freedesktop.org/fontconfig/fontconfig/-/issues/565\" target=\"_blank\">#565</a>) determină <code>FcCharSetHasChar</code> să se întrerupă când întâlnește o intrare coruptă în cache. Chromium 154 rescrie memoria cache a fonturilor utilizatorului într-un format care declanșează acest lucru la următoarea lansare a oricărei aplicații Qt. Adăugată dependență de <code>soplos-fontconfig-woff-fix</code>, care corectează fontconfig pentru a gestiona intrarea malformată fără să se blocheze.",

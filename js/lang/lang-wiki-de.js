@@ -4471,6 +4471,11 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-213r3-title": "2.1.3-3 — September 2026",
+    "wel-rel-213r3-subtitle": "Empfohlen-Tab (Grafik) — Fog Panther und Patchy hinzugefügt.",
+    "wel-rel-213r3-added-li1": "<strong>Empfohlen-Tab (Grafik) — Fog Panther:</strong> als Flatpak (<code>com.fogpanther.FogPanther</code>) aus Flathub hinzugefügt.",
+    "wel-rel-213r3-added-li2": "<strong>Empfohlen-Tab (Grafik) — Patchy:</strong> quelloffener Bildeditor mit Schwerpunkt auf PSD-Kompatibilität. Nicht auf Flathub verfügbar, daher Installation aus dem <code>.flatpak</code>-Bundle auf seinen GitHub-Releases auf Benutzerebene — <code>pkexec</code> leitet den Flatpak-Aufruf über <code>sudo -u $REAL_USER</code> (aufgelöst aus <code>$PKEXEC_UID</code>) weiter, damit die App in der Installation des angemeldeten Benutzers landet.",
+
     "wel-rel-213r2-title": "2.1.3-2 — September 2026",
     "wel-rel-213r2-subtitle": "Paketierungskorrektur: Abhängigkeit von <code>soplos-fontconfig-woff-fix</code> hinzugefügt, um Qt-Anwendungsabstürze zu verhindern, die durch auf Chromium 154 basierende Browser beim Überschreiben des Benutzer-Font-Caches ausgelöst werden.",
     "wel-rel-213r2-fixed-li1": "<strong>Qt-Absturz nach Überschreiben des Font-Caches durch auf Chromium 154 basierende Browser:</strong> ein Fehler in fontconfig (<a href=\"https://gitlab.freedesktop.org/fontconfig/fontconfig/-/issues/565\" target=\"_blank\">#565</a>) verursacht, dass <code>FcCharSetHasChar</code> abbricht, wenn es auf einen beschädigten Cache-Eintrag trifft. Chromium 154 überschreibt den Benutzer-Font-Cache in einem Format, das dies beim nächsten Start einer Qt-Anwendung auslöst. Abhängigkeit von <code>soplos-fontconfig-woff-fix</code> hinzugefügt, das fontconfig patcht, um den fehlerhaften Eintrag ohne Absturz zu verarbeiten.",
