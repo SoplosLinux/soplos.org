@@ -5271,6 +5271,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-213r4-title": "2.1.3-4 — September 2026",
+  "wel-rel-213r4-subtitle": "Recommended tab — DaVinci Resolve conversion updated to <code>makeresolvedeb</code> 1.10.1, fixing a silent install failure on Resolve 21.1.",
+  "wel-rel-213r4-fixed-li1": "<strong>Recommended tab — DaVinci Resolve install produced no <code>.deb</code>:</strong> the bundled <code>makeresolvedeb</code> was pinned to 1.10.0, which does not recognise the <code>Immersive</code> directory that DaVinci Resolve 21.1's installer introduced. On Resolve 21.1 the conversion ran to completion but left unpacked directories in the work folder instead of finished <code>.deb</code> packages, so the install silently produced nothing installable. Updated to <code>makeresolvedeb</code> 1.10.1, which handles the new directory correctly.",
+
   "wel-rel-213r3-title": "2.1.3-3 — September 2026",
   "wel-rel-213r3-subtitle": "Recommended tab (Graphics) — Fog Panther and Patchy added.",
   "wel-rel-213r3-added-li1": "<strong>Recommended tab (Graphics) — Fog Panther:</strong> added as a Flatpak (<code>com.fogpanther.FogPanther</code>) from Flathub.",

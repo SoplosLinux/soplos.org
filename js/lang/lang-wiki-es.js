@@ -4474,6 +4474,10 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-213r4-title": "2.1.3-4 — Septiembre 2026",
+    "wel-rel-213r4-subtitle": "Pestaña Recomendado — conversión de DaVinci Resolve actualizada a <code>makeresolvedeb</code> 1.10.1, corrigiendo un fallo silencioso de instalación en Resolve 21.1.",
+    "wel-rel-213r4-fixed-li1": "<strong>Pestaña Recomendado — la instalación de DaVinci Resolve no producía ningún <code>.deb</code>:</strong> el <code>makeresolvedeb</code> incluido estaba anclado a la versión 1.10.0, que no reconoce el directorio <code>Immersive</code> que introdujo el instalador de DaVinci Resolve 21.1. En Resolve 21.1, la conversión terminaba correctamente pero dejaba directorios sin empaquetar en la carpeta de trabajo en lugar de paquetes <code>.deb</code> acabados, por lo que la instalación no producía nada instalable de forma silenciosa. Actualizado a <code>makeresolvedeb</code> 1.10.1, que gestiona el nuevo directorio correctamente.",
+
     "wel-rel-213r3-title": "2.1.3-3 — Septiembre 2026",
     "wel-rel-213r3-subtitle": "Pestaña Recomendado (Gráficos) — añadidos Fog Panther y Patchy.",
     "wel-rel-213r3-added-li1": "<strong>Pestaña Recomendado (Gráficos) — Fog Panther:</strong> añadido como Flatpak (<code>com.fogpanther.FogPanther</code>) desde Flathub.",

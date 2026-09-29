@@ -4465,6 +4465,10 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-213r4-title": "2.1.3-4 — Setembro 2026",
+    "wel-rel-213r4-subtitle": "Separador Recomendado — conversão do DaVinci Resolve atualizada para <code>makeresolvedeb</code> 1.10.1, corrigindo uma falha de instalação silenciosa no Resolve 21.1.",
+    "wel-rel-213r4-fixed-li1": "<strong>Separador Recomendado — a instalação do DaVinci Resolve não produzia nenhum <code>.deb</code>:</strong> o <code>makeresolvedeb</code> incluído estava fixado na versão 1.10.0, que não reconhece o diretório <code>Immersive</code> introduzido pelo instalador do DaVinci Resolve 21.1. No Resolve 21.1, a conversão concluía sem erros mas deixava diretórios desempacotados na pasta de trabalho em vez de pacotes <code>.deb</code> acabados, pelo que a instalação não produzia silenciosamente nada instalável. Atualizado para <code>makeresolvedeb</code> 1.10.1, que gere corretamente o novo diretório.",
+
     "wel-rel-213r3-title": "2.1.3-3 — Setembro 2026",
     "wel-rel-213r3-subtitle": "Separador Recomendado (Gráficos) — Fog Panther e Patchy adicionados.",
     "wel-rel-213r3-added-li1": "<strong>Separador Recomendado (Gráficos) — Fog Panther:</strong> adicionado como Flatpak (<code>com.fogpanther.FogPanther</code>) a partir do Flathub.",

@@ -4472,6 +4472,10 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-213r4-title": "2.1.3-4 — Сентябрь 2026",
+    "wel-rel-213r4-subtitle": "Вкладка «Рекомендуемое» — конвертация DaVinci Resolve обновлена до <code>makeresolvedeb</code> 1.10.1, исправляя молчаливый сбой установки на Resolve 21.1.",
+    "wel-rel-213r4-fixed-li1": "<strong>Вкладка «Рекомендуемое» — установка DaVinci Resolve не создавала ни одного <code>.deb</code>:</strong> входящий в комплект <code>makeresolvedeb</code> был зафиксирован на версии 1.10.0, которая не распознаёт директорию <code>Immersive</code>, добавленную установщиком DaVinci Resolve 21.1. На Resolve 21.1 конвертация завершалась без ошибок, но оставляла нераспакованные директории в рабочей папке вместо готовых пакетов <code>.deb</code>, из-за чего установка молча не создавала ничего устанавливаемого. Обновлено до <code>makeresolvedeb</code> 1.10.1, который корректно обрабатывает новую директорию.",
+
     "wel-rel-213r3-title": "2.1.3-3 — Сентябрь 2026",
     "wel-rel-213r3-subtitle": "Вкладка «Рекомендуемое» (Графика) — добавлены Fog Panther и Patchy.",
     "wel-rel-213r3-added-li1": "<strong>Вкладка «Рекомендуемое» (Графика) — Fog Panther:</strong> добавлен как Flatpak (<code>com.fogpanther.FogPanther</code>) из Flathub.",

@@ -4466,6 +4466,10 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-213r4-title": "2.1.3-4 — Septembre 2026",
+    "wel-rel-213r4-subtitle": "Onglet Recommandé — conversion DaVinci Resolve mise à jour vers <code>makeresolvedeb</code> 1.10.1, corrigeant un échec d'installation silencieux sur Resolve 21.1.",
+    "wel-rel-213r4-fixed-li1": "<strong>Onglet Recommandé — l'installation de DaVinci Resolve ne produisait aucun <code>.deb</code> :</strong> le <code>makeresolvedeb</code> inclus était épinglé à la version 1.10.0, qui ne reconnaît pas le répertoire <code>Immersive</code> introduit par l'installeur de DaVinci Resolve 21.1. Avec Resolve 21.1, la conversion se terminait sans erreur mais laissait des répertoires non empaquetés dans le dossier de travail au lieu de paquets <code>.deb</code> finalisés, si bien que l'installation ne produisait silencieusement rien d'installable. Mis à jour vers <code>makeresolvedeb</code> 1.10.1, qui gère correctement le nouveau répertoire.",
+
     "wel-rel-213r3-title": "2.1.3-3 — Septembre 2026",
     "wel-rel-213r3-subtitle": "Onglet Recommandé (Graphiques) — Fog Panther et Patchy ajoutés.",
     "wel-rel-213r3-added-li1": "<strong>Onglet Recommandé (Graphiques) — Fog Panther :</strong> ajouté en tant que Flatpak (<code>com.fogpanther.FogPanther</code>) depuis Flathub.",
