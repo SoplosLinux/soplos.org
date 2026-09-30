@@ -4469,6 +4469,12 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-213r5-title": "2.1.3-5 — Settembre 2026",
+    "wel-rel-213r5-subtitle": "Scheda Consigliati (Multimedia) — quattro nuove applicazioni aggiunte: Glassy Music, Orchard, Sonora e Concat.",
+    "wel-rel-213r5-added-li1": "<strong>Scheda Consigliati (Multimedia) — Glassy Music:</strong> client di streaming musicale, installato come Flatpak da Flathub.",
+    "wel-rel-213r5-added-li2": "<strong>Scheda Consigliati (Multimedia) — Orchard:</strong> client per YouTube Music. Fissato a una versione beta specifica invece di essere risolto dall'API dell'ultima versione di GitHub, poiché il canale stabile non pubblica asset Linux dalla v4.5.0.",
+    "wel-rel-213r5-added-li3": "<strong>Scheda Consigliati (Multimedia) — Sonora:</strong> client di streaming per YouTube Music. Si installa dal proprio repository Flatpak a singola applicazione tramite un URL <code>.flatpakref</code>, non da Flathub.",
+    "wel-rel-213r5-added-li4": "<strong>Scheda Consigliati (Multimedia) — Concat:</strong> editor video con sottotitolazione tramite IA, installato come Flatpak da Flathub.",
     "wel-rel-213r4-title": "2.1.3-4 — Settembre 2026",
     "wel-rel-213r4-subtitle": "Scheda Consigliati — conversione DaVinci Resolve aggiornata a <code>makeresolvedeb</code> 1.10.1, correggendo un errore di installazione silenzioso su Resolve 21.1.",
     "wel-rel-213r4-fixed-li1": "<strong>Scheda Consigliati — l'installazione di DaVinci Resolve non produceva alcun <code>.deb</code>:</strong> il <code>makeresolvedeb</code> incluso era bloccato alla versione 1.10.0, che non riconosce la directory <code>Immersive</code> introdotta dall'installer di DaVinci Resolve 21.1. Con Resolve 21.1 la conversione terminava senza errori ma lasciava directory non compresse nella cartella di lavoro invece di pacchetti <code>.deb</code> finiti, quindi l'installazione non produceva silenziosamente nulla di installabile. Aggiornato a <code>makeresolvedeb</code> 1.10.1, che gestisce correttamente la nuova directory.",
