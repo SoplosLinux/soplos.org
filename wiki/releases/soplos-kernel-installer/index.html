@@ -127,6 +127,8 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v102r9" class="toc-link">1.0.2-9 <span class="toc-date">— 2026-10-04</span></a></li>
+                            <li><a href="#v102r8" class="toc-link">1.0.2-8 <span class="toc-date">— 2026-10-03</span></a></li>
                             <li><a href="#v102r7" class="toc-link">1.0.2-7 <span class="toc-date">— 2026-09-20</span></a></li>
                             <li><a href="#v102r6" class="toc-link">1.0.2-6 <span class="toc-date">— 2026-09-14</span></a></li>
                             <li><a href="#v102r5" class="toc-link">1.0.2-5 <span class="toc-date">— 2026-09-10</span></a></li>
@@ -154,6 +156,42 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.2-9 -->
+                        <section id="v102r9" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r9-title">1.0.2-9 — October 2026</span></h2>
+                            <p id="ki-rel-102r9-subtitle" class="lead">Zen downloader now checks for an exact-version patch (<code>0001-zen-7.2.9.patch</code>) before falling back to the major-minor line patch, plus native support for the Linux 7.2.9 Zen patch.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r9-added-li1"><strong>Linux 7.2.9 Zen patch support:</strong> <code>_download_zen_soplos()</code> now recognises <code>0001-zen-7.2.9.patch</code> in the <code>zen-soplos</code> repository, so Zen builds for kernel 7.2.9 use the dedicated patch instead of the generic 7.2 line patch.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r9-fixed-li1"><strong>Exact-version patch lookup added to <code>_download_zen_soplos()</code>:</strong> the function now first looks for a patch named after the full kernel version (<code>0001-zen-{version}.patch</code>) before falling back to the major-minor line patch (<code>0001-zen-{major_minor}.patch</code>), preventing a coarser patch from silently shadowing a more specific one that exists in the repository.</li>
+                            </ul>
+                        </section>
+
+                        <!-- 1.0.2-8 -->
+                        <section id="v102r8" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-102r8-title">1.0.2-8 — October 2026</span></h2>
+                            <p id="ki-rel-102r8-subtitle" class="lead">Zen patch source priority corrected — <code>zen-soplos</code> is now tried first to avoid a march conflict introduced by the official upstream release for kernel 7.2.9.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-102r8-fixed-li1"><strong>Zen patch source priority was backwards:</strong> <code>_download_zen()</code> tried zen-kernel/zen-kernel's own upstream releases first and only fell back to <code>SoplosLinux/zen-soplos</code> if no matching release existed. Kernel 7.2.9 V3/V4 builds failed because the official zen-kernel release for that version carries its own <code>CONFIG_X86_64_VERSION</code> march mechanism in <code>arch/x86/Makefile</code>, which conflicts with Soplos' own x86-64 ISA-level patch applied afterward. <code>zen-soplos</code> is now tried first; zen-kernel/zen-kernel is only a fallback when zen-soplos has no patch for the line yet or it doesn't apply.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-7 -->
                         <section id="v102r7" class="content-section">
