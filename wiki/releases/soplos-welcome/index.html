@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v213r6" class="toc-link">2.1.3-6 <span class="toc-date">— 2026-10-08</span></a></li>
                             <li><a href="#v213r5" class="toc-link">2.1.3-5 <span class="toc-date">— 2026-09-30</span></a></li>
                             <li><a href="#v213r4" class="toc-link">2.1.3-4 <span class="toc-date">— 2026-09-29</span></a></li>
                             <li><a href="#v213r3" class="toc-link">2.1.3-3 <span class="toc-date">— 2026-09-28</span></a></li>
@@ -221,6 +222,35 @@
                     <article class="main-content">
 
                         <!-- 2.1.3-4 -->
+                        <!-- 2.1.3-5 -->
+                        <!-- 2.1.3-6 -->
+                        <section id="v213r6" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-213r6-title">2.1.3-6 — October 2026</span></h2>
+                            <p id="wel-rel-213r6-subtitle" class="lead">Recommended tab — six new Adobe-suite alternatives (Rust-based), VirtualBox, VirtualBox Extension Pack and VMware Workstation Pro added; Audacity, Google Antigravity and Waydroid updated or moved.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-213r6-added-li1"><strong>Recommended tab (Office) — PrintCraft:</strong> clean-room Adobe-suite alternative written in Rust, installed from its latest GitHub release <code>.deb</code>.</li>
+                                <li id="wel-rel-213r6-added-li2"><strong>Recommended tab (Multimedia) — FilmCraft and EffectCraft:</strong> two Rust-based creative tools, installed from their latest GitHub release <code>.deb</code>.</li>
+                                <li id="wel-rel-213r6-added-li3"><strong>Recommended tab (Graphics) — PhotoCraft, VectorCraft and LightCraft:</strong> three clean-room Adobe-suite alternatives written in Rust, installed from their latest GitHub release <code>.deb</code>.</li>
+                                <li id="wel-rel-213r6-added-li4"><strong>Recommended tab (Virtualization) — VirtualBox and Extension Pack:</strong> a new generic <code>license_confirm</code> dialog in <code>recommended_tab.py</code> (reusable for any future package, not hardcoded to these two) handles the licence acceptance step before installation.</li>
+                                <li id="wel-rel-213r6-added-li5"><strong>Recommended tab (Virtualization) — VMware Workstation Pro:</strong> uses a DaVinci-Resolve-style manual flow — the user picks the <code>.bundle</code> file, the installer runs it unattended, then installs <code>soplos-vmware-modules</code> from the Soplos repositories for the <code>vmmon</code>/<code>vmnet</code> kernel modules.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-exchange-alt"></i> <span data-i18n="rel-label-changed">Changed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-213r6-changed-li1"><strong>Recommended tab — Waydroid moved to Virtualization:</strong> was previously in Development. Matches Welcome 3.0's reorganization.</li>
+                                <li id="wel-rel-213r6-changed-li2"><strong>Recommended tab (Multimedia) — Audacity now installs from the official AppImage:</strong> Audacity 4 ships no Debian package. The previous apt entry was silently installing the stale 3.7.8 from Debian instead of the current 4.x. Icon updated to Audacity 4 artwork.</li>
+                                <li id="wel-rel-213r6-changed-li3"><strong>Recommended tab (Development) — Google Antigravity now downloads the official tarball from Google's CDN:</strong> Google's own apt repository has been discontinued. The install step also cleans up any existing repo-based install (package, repo file, keyring) so upgrading from it leaves nothing behind.</li>
+                            </ul>
+                        </section>
+
                         <!-- 2.1.3-5 -->
                         <section id="v213r5" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="wel-rel-213r5-title">2.1.3-5 — September 2026</span></h2>
