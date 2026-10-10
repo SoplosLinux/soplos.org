@@ -121,6 +121,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v213r7" class="toc-link">2.1.3-7 <span class="toc-date">— 2026-10-10</span></a></li>
                             <li><a href="#v213r6" class="toc-link">2.1.3-6 <span class="toc-date">— 2026-10-08</span></a></li>
                             <li><a href="#v213r5" class="toc-link">2.1.3-5 <span class="toc-date">— 2026-09-30</span></a></li>
                             <li><a href="#v213r4" class="toc-link">2.1.3-4 <span class="toc-date">— 2026-09-29</span></a></li>
@@ -223,6 +224,28 @@
 
                         <!-- 2.1.3-4 -->
                         <!-- 2.1.3-5 -->
+                        <!-- 2.1.3-7 -->
+                        <section id="v213r7" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="wel-rel-213r7-title">2.1.3-7 — October 2026</span></h2>
+                            <p id="wel-rel-213r7-subtitle" class="lead">Drivers tab — Ralink/MediaTek Wi-Fi firmware corrected to <code>firmware-mediatek</code>, plus a new Broadcom proprietary Wi-Fi button.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-213r7-fixed-li1"><strong>Drivers tab — Ralink/MediaTek Wi-Fi firmware button did nothing:</strong> <code>firmware-ralink</code> has no install candidate in Debian testing (forky) — the Ralink blobs (<code>rt2860.bin</code>, <code>rt2870.bin</code>, <code>rt3071.bin</code>, and the <code>rt3070.bin</code>/<code>rt3090.bin</code> symlinks) are shipped inside <code>firmware-mediatek</code>. <code>_identify_wifi_vendor()</code> in <code>hardware_detector.py</code> now returns <code>firmware-mediatek</code> for Ralink/MediaTek adapters.</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="wel-rel-213r7-added-li1"><strong>Drivers tab — Broadcom Wi-Fi (proprietary):</strong> new button installing <code>broadcom-sta-dkms</code>. The existing button only covers fully reverse-engineered BCM43xx chips via <code>firmware-b43-installer</code>; several Broadcom chips (BCM4311, BCM4312, BCM4313, BCM4321, BCM4322, BCM43142, BCM43224/25/27/28 and others) have no open driver and need the proprietary one, for which Welcome previously offered no install path.</li>
+                            </ul>
+                        </section>
+
                         <!-- 2.1.3-6 -->
                         <section id="v213r6" class="content-section">
                             <h2><i class="fas fa-tag"></i> <span id="wel-rel-213r6-title">2.1.3-6 — October 2026</span></h2>
