@@ -4495,6 +4495,10 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-213r8-title": "2.1.3-8 — Octubre 2026",
+    "wel-rel-213r8-subtitle": "Pestaña Controladores — añadido parche de compatibilidad NVIDIA DKMS para kernels Linux 7.3+ (Fix 5: cambio de API en dmem_cgroup_register_region en os-interface.c).",
+    "wel-rel-213r8-fixed-li1": "<strong>Pestaña Controladores (compatibilidad NVIDIA DKMS en Linux 7.3+):</strong> añadido el parche <code>NV_DMEM_CGROUP_INIT_PATCH</code> que corrige el error de compilación <code>-Wint-conversion</code> en <code>nvidia/os-interface.c</code> al compilar módulos abiertos NVIDIA DKMS (610.57.04+) contra Linux 7.3+.",
+
     "wel-rel-213r7-title": "2.1.3-7 — Octubre 2026",
     "wel-rel-213r7-subtitle": "Pestaña Controladores — firmware Wi-Fi Ralink/MediaTek corregido a <code>firmware-mediatek</code>, y nuevo botón para Wi-Fi Broadcom propietario.",
     "wel-rel-213r7-fixed-li1": "<strong>Pestaña Controladores — el botón de firmware Wi-Fi Ralink/MediaTek no hacía nada:</strong> <code>firmware-ralink</code> no tiene candidato de instalación en Debian testing (forky) — los blobs Ralink (<code>rt2860.bin</code>, <code>rt2870.bin</code>, <code>rt3071.bin</code> y los enlaces simbólicos <code>rt3070.bin</code>/<code>rt3090.bin</code>) vienen dentro de <code>firmware-mediatek</code>. <code>_identify_wifi_vendor()</code> en <code>hardware_detector.py</code> ahora devuelve <code>firmware-mediatek</code> para adaptadores Ralink/MediaTek.",
@@ -5334,6 +5338,10 @@ Object.assign(window.LANG_ES, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
+
+    "ki-rel-103-title": "1.0.3 — Octubre 2026",
+    "ki-rel-103-subtitle": "Añadido parche de compatibilidad NVIDIA DKMS para kernels Linux 7.3+ para corregir fallos de compilación DKMS en módulos abiertos del controlador (Fix 5: cambio de firma de dmem_cgroup_register_region).",
+    "ki-rel-103-fixed-li1": "<strong>Corrección de compilación NVIDIA DKMS en Linux 7.3+:</strong> añadido <code>NV_DMEM_CGROUP_INIT_PATCH</code> para resolver el fallo de compilación <code>-Wint-conversion</code> en <code>nvidia/os-interface.c</code> originado por el commit <code>e11640b9cea4</code> del kernel al cambiar la firma de <code>dmem_cgroup_register_region()</code>. Seguro en todos los kernels y drivers; solo aplica en módulos abiertos que utilizan la API dmem cgroup.",
 
     "ki-rel-102r9-title": "1.0.2-9 — Octubre 2026",
     "ki-rel-102r9-subtitle": "El descargador Zen ahora comprueba si existe un parche de versión exacta (<code>0001-zen-7.2.9.patch</code>) antes de usar el parche de línea mayor-menor, además de soporte nativo para el parche Zen de Linux 7.2.9.",

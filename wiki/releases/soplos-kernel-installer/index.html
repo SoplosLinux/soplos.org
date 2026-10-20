@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v103" class="toc-link">1.0.3 <span class="toc-date">— 2026-10-20</span></a></li>
                             <li><a href="#v102r9" class="toc-link">1.0.2-9 <span class="toc-date">— 2026-10-04</span></a></li>
                             <li><a href="#v102r8" class="toc-link">1.0.2-8 <span class="toc-date">— 2026-10-03</span></a></li>
                             <li><a href="#v102r7" class="toc-link">1.0.2-7 <span class="toc-date">— 2026-09-20</span></a></li>
@@ -156,6 +157,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3 -->
+                        <section id="v103" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-103-title">1.0.3 — October 2026</span></h2>
+                            <p id="ki-rel-103-subtitle" class="lead">Added NVIDIA DKMS compatibility patch for Linux 7.3+ kernels to fix DKMS build failures on open driver modules (Fix 5: dmem_cgroup_register_region API signature change).</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-103-fixed-li1"><strong>NVIDIA DKMS build fix on Linux 7.3+:</strong> added <code>NV_DMEM_CGROUP_INIT_PATCH</code> to resolve <code>-Wint-conversion</code> compilation errors in <code>nvidia/os-interface.c</code> caused by kernel commit <code>e11640b9cea4</code> changing the <code>dmem_cgroup_register_region()</code> signature. Safe across all kernels and drivers; only applies to open modules using the dmem cgroup API.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.2-9 -->
                         <section id="v102r9" class="content-section">

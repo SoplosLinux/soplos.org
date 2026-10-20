@@ -4487,6 +4487,10 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-213r8-title": "2.1.3-8 — Octobre 2026",
+    "wel-rel-213r8-subtitle": "Onglet Pilotes — ajout du patch de compatibilité NVIDIA DKMS pour les noyaux Linux 7.3+ (Fix 5 : changement d'API dmem_cgroup_register_region dans os-interface.c).",
+    "wel-rel-213r8-fixed-li1": "<strong>Onglet Pilotes (compatibilité NVIDIA DKMS sur Linux 7.3+) :</strong> ajout du patch <code>NV_DMEM_CGROUP_INIT_PATCH</code> corrigeant l'erreur de compilation <code>-Wint-conversion</code> dans <code>nvidia/os-interface.c</code> lors de la compilation des modules ouverts NVIDIA DKMS (610.57.04+) contre Linux 7.3+.",
+
     "wel-rel-213r7-title": "2.1.3-7 — Octobre 2026",
     "wel-rel-213r7-subtitle": "Drivers tab — Ralink/MediaTek Wi-Fi firmware corrected to <code>firmware-mediatek</code>, plus a new Broadcom proprietary Wi-Fi button.",
     "wel-rel-213r7-fixed-li1": "<strong>Drivers tab — Ralink/MediaTek Wi-Fi firmware button did nothing:</strong> <code>firmware-ralink</code> has no install candidate in Debian testing (forky) — the Ralink blobs (<code>rt2860.bin</code>, <code>rt2870.bin</code>, <code>rt3071.bin</code>, and the <code>rt3070.bin</code>/<code>rt3090.bin</code> symlinks) are shipped inside <code>firmware-mediatek</code>. <code>_identify_wifi_vendor()</code> in <code>hardware_detector.py</code> now returns <code>firmware-mediatek</code> for Ralink/MediaTek adapters.",
@@ -5326,6 +5330,10 @@ Object.assign(window.LANG_FR, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
+
+    "ki-rel-103-title": "1.0.3 — Octobre 2026",
+    "ki-rel-103-subtitle": "Ajout du patch de compatibilité NVIDIA DKMS pour les noyaux Linux 7.3+ pour corriger les échecs de compilation DKMS sur les modules de pilotes ouverts (Fix 5 : changement de signature dmem_cgroup_register_region).",
+    "ki-rel-103-fixed-li1": "<strong>Correction de compilation NVIDIA DKMS sur Linux 7.3+ :</strong> ajout de <code>NV_DMEM_CGROUP_INIT_PATCH</code> pour résoudre l'erreur de compilation <code>-Wint-conversion</code> dans <code>nvidia/os-interface.c</code> causée par le commit de noyau <code>e11640b9cea4</code> modifiant la signature de <code>dmem_cgroup_register_region()</code>. Sûr sur tous les noyaux et pilotes ; s'applique uniquement aux modules ouverts utilisant l'API dmem cgroup.",
 
     "ki-rel-102r9-title": "1.0.2-9 — Octobre 2026",
     "ki-rel-102r9-subtitle": "Zen downloader now checks for an exact-version patch (<code>0001-zen-7.2.9.patch</code>) before falling back to the major-minor line patch, plus native support for the Linux 7.2.9 Zen patch.",
