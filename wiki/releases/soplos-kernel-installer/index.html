@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v103r2" class="toc-link">1.0.3-2 <span class="toc-date">— 2026-10-22</span></a></li>
                             <li><a href="#v103r1" class="toc-link">1.0.3-1 <span class="toc-date">— 2026-10-21</span></a></li>
                             <li><a href="#v103" class="toc-link">1.0.3 <span class="toc-date">— 2026-10-20</span></a></li>
                             <li><a href="#v102r9" class="toc-link">1.0.2-9 <span class="toc-date">— 2026-10-04</span></a></li>
@@ -158,6 +159,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3-2 -->
+                        <section id="v103r2" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-103r2-title">1.0.3-2 — October 2026</span></h2>
+                            <p id="ki-rel-103r2-subtitle" class="lead">Added the NVIDIA DKMS patches for kernels 7.2+: Fix 6 for the Debian 550 driver and Fix 7 for the 590 open modules, applied before a kernel is installed or updated.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span data-i18n="rel-label-added">Added</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-103r2-added-li1"><strong>NVIDIA 550 and 590 on Linux 7.2+ (Fix 6 and Fix 7):</strong> <code>NV_550_KERNEL72_COMPAT_PATCH</code> and <code>NV_590_KERNEL72_COMPAT_PATCH</code> fix the <code>linux/of_gpio.h</code>, <code>strncpy()</code> and <code>drm_atomic_state</code> changes in kernels 7.2+, and the 590 patch also backports the <code>nvidia-uvm</code> <code>folio_free</code> and <code>zone_device_page_init()</code> changes NVIDIA 610 already has. Each is applied to the installed NVIDIA sources before a kernel is installed or updated, only when the tree still has the text it fixes and <code>patch --dry-run</code> succeeds, so 580, 610 and already patched trees are left alone. Both build all five modules against <code>7.3.0-soplos-bore-ntsync-v4</code> and <code>7.2.11-soplos-bore-ntsync-v4</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.3-1 -->
                         <section id="v103r1" class="content-section">
