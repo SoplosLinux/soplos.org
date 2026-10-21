@@ -4492,6 +4492,10 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-213r9-title": "2.1.3-9 — Oktober 2026",
+    "wel-rel-213r9-subtitle": "Treiber-Tab — NVIDIA-DKMS-Patch für Linux 7.3+ (Fix 5) korrigiert, der wegen eines fehlerhaften Hunk-Headers nie angewendet wurde.",
+    "wel-rel-213r9-fixed-li1": "<strong>Treiber-Tab (NVIDIA-DKMS-Kompatibilität unter Linux 7.3+):</strong> Der in 2.1.3-8 hinzugefügte Patch <code>NV_DMEM_CGROUP_INIT_PATCH</code> wurde nie angewendet: Sein Hunk-Header gab 7 alte und 17 neue Zeilen an, der Inhalt hat aber 6 und 15; <code>patch</code> lehnte ihn deshalb als fehlerhaft ab und das Installationsskript gab nur eine Warnung aus. Der Header ist korrigiert (<code>@@ -2818,6 +2818,15 @@</code>). Mit den echten NVIDIA-610.57.04-Quellen geprüft: Er lässt sich sauber anwenden und das Modul wird gegen die Linux-7.3-Header kompiliert, während die ungepatchten Quellen mit <code>-Wint-conversion</code> in <code>os-interface.c:2820</code> fehlschlagen.",
+
     "wel-rel-213r8-title": "2.1.3-8 — Oktober 2026",
     "wel-rel-213r8-subtitle": "Treiber-Tab — NVIDIA DKMS-Kompatibilitätspatch für Linux 7.3+ Kernel hinzugefügt (Fix 5: dmem_cgroup_register_region API-Änderung in os-interface.c).",
     "wel-rel-213r8-fixed-li1": "<strong>Treiber-Tab (NVIDIA DKMS-Kompatibilität unter Linux 7.3+):</strong> Patch <code>NV_DMEM_CGROUP_INIT_PATCH</code> hinzugefügt, der den Kompilierungsfehler <code>-Wint-conversion</code> in <code>nvidia/os-interface.c</code> beim Bauen von NVIDIA Open-DKMS-Modulen (610.57.04+) unter Linux 7.3+ behebt.",
@@ -5336,6 +5340,10 @@ Object.assign(window.LANG_DE, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Benutzerdefinierter Linux-Kernel-Compiler und vorkompilierter Kernel-Installer für Soplos Linux — kompilieren Sie Ihren eigenen Kernel mit BORE-, Zen-, NTSYNC- und PREEMPT_RT-Patches oder installieren Sie gebrauchsfertige Soplos-Kernel aus dem offiziellen Repository.",
+
+    "ki-rel-103r1-title": "1.0.3-1 — Oktober 2026",
+    "ki-rel-103r1-subtitle": "NVIDIA-DKMS-Patch für Linux 7.3+ (Fix 5) korrigiert, der wegen eines fehlerhaften Hunk-Headers nie angewendet wurde. Offene NVIDIA-610-Module lassen sich nun unter Linux 7.3 kompilieren.",
+    "ki-rel-103r1-fixed-li1": "<strong>Der NVIDIA-DKMS-Patch für Linux 7.3+ wurde nie angewendet:</strong> Der Hunk-Header von <code>NV_DMEM_CGROUP_INIT_PATCH</code> gab 7 alte und 17 neue Zeilen an, der Inhalt hat aber 6 und 15; <code>patch</code> lehnte ihn deshalb als fehlerhaft ab und der Installer gab nur eine Warnung aus. Der Header ist korrigiert (<code>@@ -2818,6 +2818,15 @@</code>). Mit den echten NVIDIA-610.57.04-Quellen geprüft: Er lässt sich sauber anwenden und das Modul wird gegen die Linux-7.3-Header kompiliert, während die ungepatchten Quellen mit <code>-Wint-conversion</code> in <code>os-interface.c:2820</code> fehlschlagen.",
 
     "ki-rel-103-title": "1.0.3 — Oktober 2026",
     "ki-rel-103-subtitle": "NVIDIA DKMS-Kompatibilitätspatch für Linux 7.3+ Kernel hinzugefügt, um DKMS-Build-Fehler bei offenen Treibermodulen zu beheben (Fix 5: dmem_cgroup_register_region Signaturänderung).",

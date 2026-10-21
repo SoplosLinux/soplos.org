@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v103r1" class="toc-link">1.0.3-1 <span class="toc-date">— 2026-10-21</span></a></li>
                             <li><a href="#v103" class="toc-link">1.0.3 <span class="toc-date">— 2026-10-20</span></a></li>
                             <li><a href="#v102r9" class="toc-link">1.0.2-9 <span class="toc-date">— 2026-10-04</span></a></li>
                             <li><a href="#v102r8" class="toc-link">1.0.2-8 <span class="toc-date">— 2026-10-03</span></a></li>
@@ -157,6 +158,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3-1 -->
+                        <section id="v103r1" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-103r1-title">1.0.3-1 — October 2026</span></h2>
+                            <p id="ki-rel-103r1-subtitle" class="lead">Fixed the NVIDIA DKMS patch for Linux 7.3+ (Fix 5), which was never applied because of a malformed hunk header. NVIDIA 610 open modules now build on Linux 7.3.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-103r1-fixed-li1"><strong>NVIDIA DKMS patch for Linux 7.3+ never applied:</strong> the <code>NV_DMEM_CGROUP_INIT_PATCH</code> hunk header declared 7 old and 17 new lines while its body has 6 and 15, so <code>patch</code> rejected it as malformed and the installer only printed a warning. The header is corrected (<code>@@ -2818,6 +2818,15 @@</code>). Verified against the real NVIDIA 610.57.04 sources: it applies cleanly and the module builds against the Linux 7.3 headers, where the unpatched sources fail with <code>-Wint-conversion</code> at <code>os-interface.c:2820</code>.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.3 -->
                         <section id="v103" class="content-section">

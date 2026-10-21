@@ -4493,6 +4493,10 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-213r9-title": "2.1.3-9 — Октябрь 2026",
+    "wel-rel-213r9-subtitle": "Вкладка Драйверы — исправлен патч NVIDIA DKMS для Linux 7.3+ (Fix 5), который никогда не применялся из-за неверного заголовка блока.",
+    "wel-rel-213r9-fixed-li1": "<strong>Вкладка Драйверы (совместимость NVIDIA DKMS в Linux 7.3+):</strong> патч <code>NV_DMEM_CGROUP_INIT_PATCH</code>, добавленный в 2.1.3-8, никогда не применялся: заголовок его блока объявлял 7 старых и 17 новых строк, тогда как в теле их 6 и 15, поэтому <code>patch</code> отклонял его как некорректный, а скрипт установки выводил лишь предупреждение. Заголовок исправлен (<code>@@ -2818,6 +2818,15 @@</code>). Проверено на реальных исходниках NVIDIA 610.57.04: патч применяется чисто, а модуль собирается с заголовками Linux 7.3, тогда как исходники без патча падают с <code>-Wint-conversion</code> в <code>os-interface.c:2820</code>.",
+
     "wel-rel-213r8-title": "2.1.3-8 — Октябрь 2026",
     "wel-rel-213r8-subtitle": "Вкладка Драйверы — добавлен патч совместимости NVIDIA DKMS для ядер Linux 7.3+ (Fix 5: изменение API dmem_cgroup_register_region в os-interface.c).",
     "wel-rel-213r8-fixed-li1": "<strong>Вкладка Драйверы (совместимость NVIDIA DKMS в Linux 7.3+):</strong> добавлен патч <code>NV_DMEM_CGROUP_INIT_PATCH</code>, исправляющий ошибку компиляции <code>-Wint-conversion</code> в <code>nvidia/os-interface.c</code> при сборке открытых модулей NVIDIA DKMS (610.57.04+) под Linux 7.3+.",
@@ -5337,6 +5341,10 @@ Object.assign(window.LANG_RU, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
+
+    "ki-rel-103r1-title": "1.0.3-1 — Октябрь 2026",
+    "ki-rel-103r1-subtitle": "Исправлен патч NVIDIA DKMS для Linux 7.3+ (Fix 5), который никогда не применялся из-за неверного заголовка блока. Открытые модули NVIDIA 610 теперь собираются в Linux 7.3.",
+    "ki-rel-103r1-fixed-li1": "<strong>Патч NVIDIA DKMS для Linux 7.3+ никогда не применялся:</strong> заголовок блока <code>NV_DMEM_CGROUP_INIT_PATCH</code> объявлял 7 старых и 17 новых строк, тогда как в теле их 6 и 15, поэтому <code>patch</code> отклонял его как некорректный, а установщик выводил лишь предупреждение. Заголовок исправлен (<code>@@ -2818,6 +2818,15 @@</code>). Проверено на реальных исходниках NVIDIA 610.57.04: патч применяется чисто, а модуль собирается с заголовками Linux 7.3, тогда как исходники без патча падают с <code>-Wint-conversion</code> в <code>os-interface.c:2820</code>.",
 
     "ki-rel-103-title": "1.0.3 — Октябрь 2026",
     "ki-rel-103-subtitle": "Добавлен патч совместимости NVIDIA DKMS для ядер Linux 7.3+ для исправления сбоев сборки DKMS на открытых модулях драйверов (Fix 5: изменение сигнатуры dmem_cgroup_register_region).",

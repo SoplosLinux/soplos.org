@@ -4491,6 +4491,10 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-213r9-title": "2.1.3-9 — Octombrie 2026",
+    "wel-rel-213r9-subtitle": "Fila Drivere — s-a corectat patch-ul NVIDIA DKMS pentru Linux 7.3+ (Fix 5), care nu era aplicat niciodată din cauza unui antet de bloc malformat.",
+    "wel-rel-213r9-fixed-li1": "<strong>Fila Drivere (compatibilitate NVIDIA DKMS pe Linux 7.3+):</strong> patch-ul <code>NV_DMEM_CGROUP_INIT_PATCH</code> adăugat în 2.1.3-8 nu era aplicat niciodată: antetul blocului său declara 7 linii vechi și 17 noi, deși corpul are 6 și 15, așa că <code>patch</code> îl respingea ca malformat, iar scriptul de instalare afișa doar un avertisment. Antetul este corectat (<code>@@ -2818,6 +2818,15 @@</code>). Verificat cu sursele reale NVIDIA 610.57.04: se aplică fără probleme, iar modulul se compilează cu antetele Linux 7.3, unde sursele nepatchuite eșuează cu <code>-Wint-conversion</code> în <code>os-interface.c:2820</code>.",
+
     "wel-rel-213r8-title": "2.1.3-8 — Octombrie 2026",
     "wel-rel-213r8-subtitle": "Fila Drivere — s-a adăugat patch-ul de compatibilitate NVIDIA DKMS pentru kerneluri Linux 7.3+ (Fix 5: modificare API dmem_cgroup_register_region în os-interface.c).",
     "wel-rel-213r8-fixed-li1": "<strong>Fila Drivere (compatibilitate NVIDIA DKMS pe Linux 7.3+):</strong> s-a adăugat patch-ul <code>NV_DMEM_CGROUP_INIT_PATCH</code> care rezolvă eroarea de compilare <code>-Wint-conversion</code> în <code>nvidia/os-interface.c</code> la compilarea modulelor deschise NVIDIA DKMS (610.57.04+) pe Linux 7.3+.",
@@ -5335,6 +5339,10 @@ Object.assign(window.LANG_RO, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
+
+    "ki-rel-103r1-title": "1.0.3-1 — Octombrie 2026",
+    "ki-rel-103r1-subtitle": "S-a corectat patch-ul NVIDIA DKMS pentru Linux 7.3+ (Fix 5), care nu era aplicat niciodată din cauza unui antet de bloc malformat. Modulele deschise NVIDIA 610 se compilează acum pe Linux 7.3.",
+    "ki-rel-103r1-fixed-li1": "<strong>Patch-ul NVIDIA DKMS pentru Linux 7.3+ nu era aplicat niciodată:</strong> antetul blocului <code>NV_DMEM_CGROUP_INIT_PATCH</code> declara 7 linii vechi și 17 noi, deși corpul are 6 și 15, așa că <code>patch</code> îl respingea ca malformat, iar instalatorul afișa doar un avertisment. Antetul este corectat (<code>@@ -2818,6 +2818,15 @@</code>). Verificat cu sursele reale NVIDIA 610.57.04: se aplică fără probleme, iar modulul se compilează cu antetele Linux 7.3, unde sursele nepatchuite eșuează cu <code>-Wint-conversion</code> în <code>os-interface.c:2820</code>.",
 
     "ki-rel-103-title": "1.0.3 — Octombrie 2026",
     "ki-rel-103-subtitle": "S-a adăugat patch-ul de compatibilitate NVIDIA DKMS pentru kerneluri Linux 7.3+ pentru a remedia erorile de compilare DKMS pe modulele de driver deschise (Fix 5: modificare semnătură dmem_cgroup_register_region).",

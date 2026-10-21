@@ -4487,6 +4487,10 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-213r9-title": "2.1.3-9 — Octobre 2026",
+    "wel-rel-213r9-subtitle": "Onglet Pilotes — correction du patch NVIDIA DKMS pour Linux 7.3+ (Fix 5), qui n'était jamais appliqué à cause d'un en-tête de bloc mal formé.",
+    "wel-rel-213r9-fixed-li1": "<strong>Onglet Pilotes (compatibilité NVIDIA DKMS sous Linux 7.3+) :</strong> le patch <code>NV_DMEM_CGROUP_INIT_PATCH</code> ajouté dans la 2.1.3-8 n'était jamais appliqué : l'en-tête de son bloc déclarait 7 lignes anciennes et 17 nouvelles alors que son corps en compte 6 et 15 ; <code>patch</code> le rejetait donc comme mal formé et le script d'installation n'affichait qu'un avertissement. L'en-tête est corrigé (<code>@@ -2818,6 +2818,15 @@</code>). Vérifié avec les sources réelles de NVIDIA 610.57.04 : il s'applique proprement et le module se compile avec les en-têtes de Linux 7.3, alors que les sources non patchées échouent avec <code>-Wint-conversion</code> dans <code>os-interface.c:2820</code>.",
+
     "wel-rel-213r8-title": "2.1.3-8 — Octobre 2026",
     "wel-rel-213r8-subtitle": "Onglet Pilotes — ajout du patch de compatibilité NVIDIA DKMS pour les noyaux Linux 7.3+ (Fix 5 : changement d'API dmem_cgroup_register_region dans os-interface.c).",
     "wel-rel-213r8-fixed-li1": "<strong>Onglet Pilotes (compatibilité NVIDIA DKMS sur Linux 7.3+) :</strong> ajout du patch <code>NV_DMEM_CGROUP_INIT_PATCH</code> corrigeant l'erreur de compilation <code>-Wint-conversion</code> dans <code>nvidia/os-interface.c</code> lors de la compilation des modules ouverts NVIDIA DKMS (610.57.04+) contre Linux 7.3+.",
@@ -5330,6 +5334,10 @@ Object.assign(window.LANG_FR, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilateur de noyaux Linux personnalisés et installateur de noyaux précompilés pour Soplos Linux — compilez votre propre noyau avec les patches BORE, Zen, NTSYNC et PREEMPT_RT, ou installez des noyaux Soplos prêts à l'emploi depuis le dépôt officiel.",
+
+    "ki-rel-103r1-title": "1.0.3-1 — Octobre 2026",
+    "ki-rel-103r1-subtitle": "Correction du patch NVIDIA DKMS pour Linux 7.3+ (Fix 5), qui n'était jamais appliqué à cause d'un en-tête de bloc mal formé. Les modules ouverts NVIDIA 610 se compilent désormais sous Linux 7.3.",
+    "ki-rel-103r1-fixed-li1": "<strong>Le patch NVIDIA DKMS pour Linux 7.3+ n'était jamais appliqué :</strong> l'en-tête de bloc de <code>NV_DMEM_CGROUP_INIT_PATCH</code> déclarait 7 lignes anciennes et 17 nouvelles alors que son corps en compte 6 et 15 ; <code>patch</code> le rejetait donc comme mal formé et l'installateur n'affichait qu'un avertissement. L'en-tête est corrigé (<code>@@ -2818,6 +2818,15 @@</code>). Vérifié avec les sources réelles de NVIDIA 610.57.04 : il s'applique proprement et le module se compile avec les en-têtes de Linux 7.3, alors que les sources non patchées échouent avec <code>-Wint-conversion</code> dans <code>os-interface.c:2820</code>.",
 
     "ki-rel-103-title": "1.0.3 — Octobre 2026",
     "ki-rel-103-subtitle": "Ajout du patch de compatibilité NVIDIA DKMS pour les noyaux Linux 7.3+ pour corriger les échecs de compilation DKMS sur les modules de pilotes ouverts (Fix 5 : changement de signature dmem_cgroup_register_region).",

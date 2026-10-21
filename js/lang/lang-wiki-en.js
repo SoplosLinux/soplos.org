@@ -5292,6 +5292,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-213r9-title": "2.1.3-9 — October 2026",
+  "wel-rel-213r9-subtitle": "Drivers tab — fixed the NVIDIA DKMS patch for Linux 7.3+ (Fix 5), which was never applied because of a malformed hunk header.",
+  "wel-rel-213r9-fixed-li1": "<strong>Drivers tab (NVIDIA DKMS compatibility on Linux 7.3+):</strong> the <code>NV_DMEM_CGROUP_INIT_PATCH</code> added in 2.1.3-8 was never applied: its hunk header declared 7 old and 17 new lines while its body has 6 and 15, so <code>patch</code> rejected it as malformed and the install script only printed a warning. The header is corrected (<code>@@ -2818,6 +2818,15 @@</code>). Verified against the real NVIDIA 610.57.04 sources: it applies cleanly and the module builds against the Linux 7.3 headers, where the unpatched sources fail with <code>-Wint-conversion</code> at <code>os-interface.c:2820</code>.",
+
   "wel-rel-213r8-title": "2.1.3-8 — October 2026",
   "wel-rel-213r8-subtitle": "Drivers tab — added NVIDIA DKMS compatibility patch for Linux 7.3+ kernels (Fix 5: dmem_cgroup_register_region API change in os-interface.c).",
   "wel-rel-213r8-fixed-li1": "<strong>Drivers tab (NVIDIA DKMS compatibility on Linux 7.3+):</strong> added the <code>NV_DMEM_CGROUP_INIT_PATCH</code> patch fixing the <code>-Wint-conversion</code> build error in <code>nvidia/os-interface.c</code> when compiling NVIDIA open DKMS modules (610.57.04+) against Linux 7.3+.",
@@ -6135,6 +6139,10 @@ Object.assign(window.LANG_EN, {
   "ki-rel-breadcrumb": "Soplos Kernel Installer",
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
+
+  "ki-rel-103r1-title": "1.0.3-1 — October 2026",
+  "ki-rel-103r1-subtitle": "Fixed the NVIDIA DKMS patch for Linux 7.3+ (Fix 5), which was never applied because of a malformed hunk header. NVIDIA 610 open modules now build on Linux 7.3.",
+  "ki-rel-103r1-fixed-li1": "<strong>NVIDIA DKMS patch for Linux 7.3+ never applied:</strong> the <code>NV_DMEM_CGROUP_INIT_PATCH</code> hunk header declared 7 old and 17 new lines while its body has 6 and 15, so <code>patch</code> rejected it as malformed and the installer only printed a warning. The header is corrected (<code>@@ -2818,6 +2818,15 @@</code>). Verified against the real NVIDIA 610.57.04 sources: it applies cleanly and the module builds against the Linux 7.3 headers, where the unpatched sources fail with <code>-Wint-conversion</code> at <code>os-interface.c:2820</code>.",
 
   "ki-rel-103-title": "1.0.3 — October 2026",
   "ki-rel-103-subtitle": "Added NVIDIA DKMS compatibility patch for Linux 7.3+ kernels to fix DKMS build failures on open driver modules (Fix 5: dmem_cgroup_register_region API signature change).",

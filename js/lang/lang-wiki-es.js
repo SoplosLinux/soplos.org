@@ -4495,6 +4495,10 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-213r9-title": "2.1.3-9 — Octubre 2026",
+    "wel-rel-213r9-subtitle": "Pestaña Controladores — corregido el parche NVIDIA DKMS para Linux 7.3+ (Fix 5), que nunca se aplicaba por una cabecera de bloque mal formada.",
+    "wel-rel-213r9-fixed-li1": "<strong>Pestaña Controladores (compatibilidad NVIDIA DKMS en Linux 7.3+):</strong> el parche <code>NV_DMEM_CGROUP_INIT_PATCH</code> añadido en la 2.1.3-8 nunca se aplicaba: la cabecera de su bloque declaraba 7 líneas antiguas y 17 nuevas cuando su cuerpo tiene 6 y 15, así que <code>patch</code> lo rechazaba por mal formado y el script de instalación solo mostraba un aviso. La cabecera está corregida (<code>@@ -2818,6 +2818,15 @@</code>). Verificado con las fuentes reales de NVIDIA 610.57.04: se aplica limpiamente y el módulo compila con las cabeceras de Linux 7.3, donde las fuentes sin parchear fallan con <code>-Wint-conversion</code> en <code>os-interface.c:2820</code>.",
+
     "wel-rel-213r8-title": "2.1.3-8 — Octubre 2026",
     "wel-rel-213r8-subtitle": "Pestaña Controladores — añadido parche de compatibilidad NVIDIA DKMS para kernels Linux 7.3+ (Fix 5: cambio de API en dmem_cgroup_register_region en os-interface.c).",
     "wel-rel-213r8-fixed-li1": "<strong>Pestaña Controladores (compatibilidad NVIDIA DKMS en Linux 7.3+):</strong> añadido el parche <code>NV_DMEM_CGROUP_INIT_PATCH</code> que corrige el error de compilación <code>-Wint-conversion</code> en <code>nvidia/os-interface.c</code> al compilar módulos abiertos NVIDIA DKMS (610.57.04+) contra Linux 7.3+.",
@@ -5338,6 +5342,10 @@ Object.assign(window.LANG_ES, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
+
+    "ki-rel-103r1-title": "1.0.3-1 — Octubre 2026",
+    "ki-rel-103r1-subtitle": "Corregido el parche NVIDIA DKMS para Linux 7.3+ (Fix 5), que nunca se aplicaba por una cabecera de bloque mal formada. Los módulos abiertos de NVIDIA 610 ya compilan en Linux 7.3.",
+    "ki-rel-103r1-fixed-li1": "<strong>El parche NVIDIA DKMS para Linux 7.3+ nunca se aplicaba:</strong> la cabecera del bloque de <code>NV_DMEM_CGROUP_INIT_PATCH</code> declaraba 7 líneas antiguas y 17 nuevas cuando su cuerpo tiene 6 y 15, así que <code>patch</code> lo rechazaba por mal formado y el instalador solo mostraba un aviso. La cabecera está corregida (<code>@@ -2818,6 +2818,15 @@</code>). Verificado con las fuentes reales de NVIDIA 610.57.04: se aplica limpiamente y el módulo compila con las cabeceras de Linux 7.3, donde las fuentes sin parchear fallan con <code>-Wint-conversion</code> en <code>os-interface.c:2820</code>.",
 
     "ki-rel-103-title": "1.0.3 — Octubre 2026",
     "ki-rel-103-subtitle": "Añadido parche de compatibilidad NVIDIA DKMS para kernels Linux 7.3+ para corregir fallos de compilación DKMS en módulos abiertos del controlador (Fix 5: cambio de firma de dmem_cgroup_register_region).",
