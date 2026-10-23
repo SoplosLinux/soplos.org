@@ -4493,6 +4493,11 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-214r1-title": "2.1.4-1 — Октябрь 2026",
+    "wel-rel-214r1-subtitle": "Вкладки «Рекомендованные» и «Gaming» — набор Craft и новые лаунчеры игр из Welcome 3.0 теперь есть в Welcome 2.x.",
+    "wel-rel-214r1-added-li1": "<strong>Вкладка «Рекомендованные» (набор Craft):</strong> WordCraft, GridCraft и DeckCraft (Офис), DesignCraft и FigCraft (Графика), SoundCraft (Мультимедиа) и ArtCraft Launcher (Управление приложениями). Каждое устанавливается из <code>.deb</code> последнего релиза на GitHub, как и остальные приложения Craft.",
+    "wel-rel-214r1-added-li2": "<strong>Вкладка Gaming (лаунчеры):</strong> Epic Games Launcher и Xodus Nexus в виде AppImage в <code>~/AppImages</code> с ярлыками на рабочем столе (Epic также регистрирует схему URL <code>com.epicgames.launcher</code>, чтобы вход через браузер возвращался в лаунчер), ProtonPlus как Flatpak, OpenRGB из APT с правилами udev, созданными командой <code>openrgb --print-udev-rules</code>, и <code>i2c-dev</code>, загружаемым при старте, а также MSI Keyboard RGB из APT.",
+    "wel-rel-214r1-added-li3": "<strong>Переводы:</strong> описания всех новых записей переведены на 8 поддерживаемых языков.",
     "wel-rel-214-title": "2.1.4 — Октябрь 2026",
     "wel-rel-214-subtitle": "Вкладка Драйверы — добавлены патчи NVIDIA DKMS для ядер 7.2+ (Fix 6 для драйвера 550 из Debian, Fix 7 для открытых модулей 590), а порядок установки исправлен так, чтобы патчи применялись до того, как первая сборка DKMS сможет прервать скрипт.",
     "wel-rel-214-added-li1": "<strong>NVIDIA 550 в Linux 7.2+ (Fix 6):</strong> NVIDIA 550.163.01 из Debian перестал собираться на ядрах 7.2+, потому что из ядра удалены <code>linux/of_gpio.h</code> и <code>strncpy()</code>, а <code>struct drm_atomic_state</code> стала <code>struct drm_atomic_commit</code>. Новый <code>NV_550_KERNEL72_COMPAT_PATCH</code> добавляет блок совместимости для <code>of_get_named_gpio()</code>, заменяет пять вызовов <code>strncpy()</code>, сопоставляет переименованные имена DRM и принудительно задаёт пять проверок конфигурации <code>nvidia-drm</code>. Он применяется только когда дерево исходников ещё содержит текст версии 550 и <code>patch --dry-run</code> проходит успешно, и собирает все пять модулей с <code>7.3.0-soplos-bore-ntsync-v4</code> и <code>7.2.11-soplos-bore-ntsync-v4</code>.",
@@ -5346,6 +5351,12 @@ Object.assign(window.LANG_RU, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
+
+    "ki-rel-103r3-title": "1.0.3-3 — Октябрь 2026",
+    "ki-rel-103r3-subtitle": "Исправлена сборка, которая начиналась без нужных зависимостей: установщик игнорировал сбой проверки зависимостей, и нехватка <code>libelf-dev</code> обнаруживалась лишь посреди компиляции.",
+    "ki-rel-103r3-fixed-li1": "<strong>Сборка начиналась без своих зависимостей:</strong> установщик игнорировал результат проверки зависимостей, поэтому, когда вызов pkexec завершался с ошибкой или отменялся, он продолжал работу, а нехватка <code>libelf-dev</code> обнаруживалась лишь посреди компиляции (<code>gelf.h: No such file or directory</code> при сборке objtool в Linux 7.3). Теперь он останавливается с сообщением, ничего не скачав.",
+    "ki-rel-103r3-fixed-li2": "<strong><code>libelf-dev</code> установлен без <code>gelf.h</code>:</strong> пакет переустанавливался только тогда, когда его не было, а не когда он был установлен без <code>/usr/include/gelf.h</code>, как это уже делалось для <code>libssl-dev</code>. Теперь делается.",
+    "ki-rel-103r3-fixed-li3": "<strong>Недоступный репозиторий останавливал установку:</strong> зависимости устанавливались командой <code>apt-get update &amp;&amp; apt-get install</code>, так что неудачное обновление (нет сети, повреждённый репозиторий) мешало установить недостающие пакеты. Теперь обновление может завершиться ошибкой, а установка всё равно пойдёт по спискам, которые есть в системе.",
 
     "ki-rel-103r2-title": "1.0.3-2 — Октябрь 2026",
     "ki-rel-103r2-subtitle": "Добавлены патчи NVIDIA DKMS для ядер 7.2+: Fix 6 для драйвера 550 из Debian и Fix 7 для открытых модулей 590, применяемые перед установкой или обновлением ядра.",

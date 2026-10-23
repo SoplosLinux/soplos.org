@@ -4491,6 +4491,11 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-214r1-title": "2.1.4-1 — Octombrie 2026",
+    "wel-rel-214r1-subtitle": "Filele Recomandate și Gaming — suita Craft și noile lansatoare de jocuri din Welcome 3.0 sunt acum în Welcome 2.x.",
+    "wel-rel-214r1-added-li1": "<strong>Fila Recomandate (suita Craft):</strong> WordCraft, GridCraft și DeckCraft (Birou), DesignCraft și FigCraft (Grafică), SoundCraft (Multimedia) și ArtCraft Launcher (Gestionarea aplicațiilor). Fiecare se instalează din <code>.deb</code>-ul ultimei sale versiuni de pe GitHub, ca restul aplicațiilor Craft.",
+    "wel-rel-214r1-added-li2": "<strong>Fila Gaming (lansatoare):</strong> Epic Games Launcher și Xodus Nexus ca AppImage în <code>~/AppImages</code>, cu intrările lor de desktop (Epic înregistrează și schema URL <code>com.epicgames.launcher</code> pentru ca autentificarea din browser să revină la lansator), ProtonPlus ca Flatpak, OpenRGB din APT cu regulile udev generate de <code>openrgb --print-udev-rules</code> și <code>i2c-dev</code> încărcat la pornire, și MSI Keyboard RGB din APT.",
+    "wel-rel-214r1-added-li3": "<strong>Traduceri:</strong> descrierile tuturor intrărilor noi sunt traduse în cele 8 limbi acceptate.",
     "wel-rel-214-title": "2.1.4 — Octombrie 2026",
     "wel-rel-214-subtitle": "Fila Drivere — au fost adăugate patch-urile NVIDIA DKMS pentru kernel 7.2+ (Fix 6 pentru driverul 550 din Debian, Fix 7 pentru modulele deschise 590) și s-a corectat ordinea instalării, astfel încât patch-urile să fie aplicate înainte ca prima compilare DKMS să poată opri scriptul.",
     "wel-rel-214-added-li1": "<strong>NVIDIA 550 pe Linux 7.2+ (Fix 6):</strong> NVIDIA 550.163.01 din Debian nu se mai compila pe kernel 7.2+ pentru că <code>linux/of_gpio.h</code> și <code>strncpy()</code> au fost eliminate din kernel, iar <code>struct drm_atomic_state</code> a devenit <code>struct drm_atomic_commit</code>. Noul <code>NV_550_KERNEL72_COMPAT_PATCH</code> adaugă un bloc de compatibilitate pentru <code>of_get_named_gpio()</code>, înlocuiește cele cinci apeluri <code>strncpy()</code>, asociază numele DRM redenumite și forțează cinci verificări de configurare ale <code>nvidia-drm</code>. Este aplicat doar când arborele de surse are încă textul lui 550 și <code>patch --dry-run</code> reușește, și compilează toate cele cinci module cu <code>7.3.0-soplos-bore-ntsync-v4</code> și <code>7.2.11-soplos-bore-ntsync-v4</code>.",
@@ -5344,6 +5349,12 @@ Object.assign(window.LANG_RO, {
     "ki-rel-breadcrumb": "Soplos Kernel Installer",
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
+
+    "ki-rel-103r3-title": "1.0.3-3 — Octombrie 2026",
+    "ki-rel-103r3-subtitle": "Corectată o compilare care pornea fără dependențele ei: instalatorul ignora eșecul verificării dependențelor, așa că lipsa <code>libelf-dev</code> apărea abia în mijlocul compilării.",
+    "ki-rel-103r3-fixed-li1": "<strong>O compilare pornea fără dependențele ei:</strong> instalatorul ignora rezultatul verificării dependențelor, așa că atunci când apelul pkexec eșua sau era anulat mergea mai departe, iar lipsa <code>libelf-dev</code> apărea abia în mijlocul compilării (<code>gelf.h: No such file or directory</code> la compilarea objtool pe Linux 7.3). Acum se oprește cu un mesaj înainte de a descărca ceva.",
+    "ki-rel-103r3-fixed-li2": "<strong><code>libelf-dev</code> instalat fără <code>gelf.h</code>:</strong> era reinstalat doar când lipsea, nu când era instalat fără <code>/usr/include/gelf.h</code>, așa cum se făcea deja pentru <code>libssl-dev</code>. Acum se face.",
+    "ki-rel-103r3-fixed-li3": "<strong>Un depozit inaccesibil oprea instalarea:</strong> dependențele se instalau cu <code>apt-get update &amp;&amp; apt-get install</code>, așa că o actualizare eșuată (fără rețea, un depozit stricat) împiedica instalarea pachetelor lipsă. Acum actualizarea poate eșua, iar instalarea se face cu listele pe care le are sistemul.",
 
     "ki-rel-103r2-title": "1.0.3-2 — Octombrie 2026",
     "ki-rel-103r2-subtitle": "Au fost adăugate patch-urile NVIDIA DKMS pentru kernel 7.2+: Fix 6 pentru driverul 550 din Debian și Fix 7 pentru modulele deschise 590, aplicate înainte de instalarea sau actualizarea unui kernel.",
