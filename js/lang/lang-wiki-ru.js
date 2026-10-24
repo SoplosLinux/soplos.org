@@ -4493,6 +4493,11 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-214r3-title": "2.1.4-3 — Октябрь 2026",
+    "wel-rel-214r3-subtitle": "Вкладка Gaming — Heronite, новый игровой лаунчер, написанный на Rust.",
+    "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> лёгкий игровой лаунчер на Rust, который собирает игры Steam, Epic, GOG и Amazon в одной библиотеке. Его нет ни в Debian, ни на Flathub, поэтому он устанавливается из <code>.deb</code> релиза на GitHub, как R2ModMan. Как в Welcome 3.0.",
+    "wel-rel-214r3-added-li2": "<strong>Переводы:</strong> новое описание переведено на 8 поддерживаемых языков.",
+
     "wel-rel-214r2-title": "2.1.4-2 — Октябрь 2026",
     "wel-rel-214r2-subtitle": "Вкладка «Драйверы» — сканирование оборудования теперь распознаёт компьютеры Apple и предлагает то, что нужно Mac.",
     "wel-rel-214r2-added-li1": "<strong>Поддержка Mac в сканировании оборудования:</strong> на компьютере Apple, определяемом по производителю в DMI, результаты предлагают mbpfan (управление вентиляторами) и TLP (батарея и энергия) на MacBook, оба из Debian, и драйвер камеры FaceTime HD на любом Mac, где она есть. На компьютере, который не является Mac, ничего не показывается. TLP прерывает установку вместо того, чтобы удалить <code>power-profiles-daemon</code>, если рабочий стол его использует.",

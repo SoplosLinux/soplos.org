@@ -4492,6 +4492,11 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-214r3-title": "2.1.4-3 — Oktober 2026",
+    "wel-rel-214r3-subtitle": "Gaming-Tab — Heronite, ein neuer in Rust geschriebener Spiele-Launcher.",
+    "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> ein schlanker, in Rust geschriebener Spiele-Launcher, der Spiele von Steam, Epic, GOG und Amazon in einer Bibliothek vereint. Er ist weder in Debian noch auf Flathub, daher wird er wie R2ModMan aus dem <code>.deb</code> seines GitHub-Releases installiert. Entspricht Welcome 3.0.",
+    "wel-rel-214r3-added-li2": "<strong>Übersetzungen:</strong> Die neue Beschreibung ist in die 8 unterstützten Sprachen übersetzt.",
+
     "wel-rel-214r2-title": "2.1.4-2 — Oktober 2026",
     "wel-rel-214r2-subtitle": "Treiber-Tab — der Hardware-Scan erkennt jetzt Apple-Computer und bietet an, was ein Mac braucht.",
     "wel-rel-214r2-added-li1": "<strong>Mac-Unterstützung im Hardware-Scan:</strong> Auf einem Apple-Computer, erkannt am DMI-Hersteller, bieten die Ergebnisse mbpfan (Lüftersteuerung) und TLP (Akku und Energie) auf MacBooks, beide aus Debian, und den Treiber der FaceTime-HD-Kamera auf jedem Mac mit dieser Kamera an. Auf einem Computer, der kein Mac ist, wird nichts angezeigt. TLP bricht die Installation ab, statt <code>power-profiles-daemon</code> zu entfernen, wenn der Desktop es nutzt.",

@@ -4490,6 +4490,11 @@ Object.assign(window.LANG_IT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigazione Ctrl+Shift+Tab all'indietro:</strong> GTK invia <code>KEY_ISO_Left_Tab</code> per questa combinazione, non <code>KEY_Tab</code>. Il gestore dei tasti ora verifica esplicitamente <code>KEY_ISO_Left_Tab</code> affinché la navigazione all'indietro funzioni correttamente.",
     "wel-rel-208-3-trans-li1": "<strong>Tutte e 8 le lingue</strong> (ES, EN, FR, DE, PT, IT, RO, RU) aggiornate con le nuove stringhe per RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-214r3-title": "2.1.4-3 — Ottobre 2026",
+    "wel-rel-214r3-subtitle": "Scheda Gaming — Heronite, un nuovo launcher di giochi scritto in Rust.",
+    "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> un launcher di giochi leggero scritto in Rust che riunisce in un'unica libreria i giochi di Steam, Epic, GOG e Amazon. Non è in Debian né su Flathub, quindi si installa dal <code>.deb</code> della sua release su GitHub, come R2ModMan. Come in Welcome 3.0.",
+    "wel-rel-214r3-added-li2": "<strong>Traduzioni:</strong> la nuova descrizione è tradotta nelle 8 lingue supportate.",
+
     "wel-rel-214r2-title": "2.1.4-2 — Ottobre 2026",
     "wel-rel-214r2-subtitle": "Scheda Driver — il rilevamento hardware ora riconosce i computer Apple e offre ciò di cui un Mac ha bisogno.",
     "wel-rel-214r2-added-li1": "<strong>Supporto per Mac nel rilevamento hardware:</strong> su un computer Apple, riconosciuto dal produttore indicato nel DMI, i risultati offrono mbpfan (controllo delle ventole) e TLP (batteria ed energia) sui MacBook, entrambi da Debian, e il driver della fotocamera FaceTime HD su qualsiasi Mac che la abbia. Non viene mostrato nulla su un computer che non sia un Mac. TLP interrompe l'installazione invece di rimuovere <code>power-profiles-daemon</code> quando il desktop lo usa.",

@@ -4495,6 +4495,11 @@ Object.assign(window.LANG_ES, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegación Ctrl+Shift+Tab hacia atrás:</strong> GTK envía <code>KEY_ISO_Left_Tab</code> para esta combinación, no <code>KEY_Tab</code>. El controlador de teclas ahora verifica <code>KEY_ISO_Left_Tab</code> explícitamente para que la navegación hacia atrás funcione correctamente.",
     "wel-rel-208-3-trans-li1": "<strong>Los 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizados con nuevas cadenas para RyzenAdj y Lutris Vulkan Fix.",
 
+    "wel-rel-214r3-title": "2.1.4-3 — Octubre 2026",
+    "wel-rel-214r3-subtitle": "Pestaña Gaming — Heronite, un nuevo lanzador de juegos escrito en Rust.",
+    "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> un lanzador de juegos ligero escrito en Rust que reúne en una sola biblioteca los juegos de Steam, Epic, GOG y Amazon. No está en Debian ni en Flathub, así que se instala desde el <code>.deb</code> de su versión en GitHub, igual que R2ModMan. Coincide con Welcome 3.0.",
+    "wel-rel-214r3-added-li2": "<strong>Traducciones:</strong> la nueva descripción está traducida a los 8 idiomas soportados.",
+
     "wel-rel-214r2-title": "2.1.4-2 — Octubre 2026",
     "wel-rel-214r2-subtitle": "Pestaña Controladores — el escáner de hardware ahora reconoce los ordenadores Apple y ofrece lo que necesita un Mac.",
     "wel-rel-214r2-added-li1": "<strong>Soporte para Mac en el escáner de hardware:</strong> en un ordenador Apple, reconocido por el fabricante que da DMI, los resultados ofrecen mbpfan (control de ventiladores) y TLP (batería y energía) en los MacBook, ambos de Debian, y el driver de la cámara FaceTime HD en cualquier Mac que la tenga. No se muestra nada en un ordenador que no sea un Mac. TLP detiene la instalación en lugar de quitar <code>power-profiles-daemon</code> cuando el escritorio lo usa.",

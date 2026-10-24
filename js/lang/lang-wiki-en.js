@@ -5292,6 +5292,11 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-214r3-title": "2.1.4-3 — October 2026",
+  "wel-rel-214r3-subtitle": "Gaming tab — Heronite, a new game launcher written in Rust.",
+  "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> a light game launcher written in Rust that gathers Steam, Epic, GOG and Amazon games in one library. It is not in Debian or Flathub, so it is installed from the <code>.deb</code> of its GitHub release, the same way as R2ModMan. Matches Welcome 3.0.",
+  "wel-rel-214r3-added-li2": "<strong>Translations:</strong> the new description is translated into the 8 supported languages.",
+
   "wel-rel-214r2-title": "2.1.4-2 — October 2026",
   "wel-rel-214r2-subtitle": "Drivers tab — the hardware scan now recognises Apple computers and offers what a Mac needs.",
   "wel-rel-214r2-added-li1": "<strong>Mac support in the hardware scan:</strong> on an Apple computer, recognised from its DMI vendor, the results offer mbpfan (fan control) and TLP (battery and power) on MacBooks, both from Debian, and the driver of the FaceTime HD camera on any Mac that has it. Nothing is shown on a computer that is not a Mac. TLP stops the install instead of removing <code>power-profiles-daemon</code> when the desktop uses it.",

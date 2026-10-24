@@ -4487,6 +4487,11 @@ Object.assign(window.LANG_FR, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigation Ctrl+Shift+Tab vers l'arrière :</strong> GTK envoie <code>KEY_ISO_Left_Tab</code> pour cette combinaison, pas <code>KEY_Tab</code>. Le gestionnaire de touches vérifie désormais <code>KEY_ISO_Left_Tab</code> explicitement pour que la navigation fonctionne correctement.",
     "wel-rel-208-3-trans-li1": "<strong>Les 8 langues</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mises à jour avec les nouvelles chaînes pour RyzenAdj et Lutris Vulkan Fix.",
 
+    "wel-rel-214r3-title": "2.1.4-3 — Octobre 2026",
+    "wel-rel-214r3-subtitle": "Onglet Gaming — Heronite, un nouveau lanceur de jeux écrit en Rust.",
+    "wel-rel-214r3-added-li1": "<strong>Heronite :</strong> un lanceur de jeux léger écrit en Rust qui réunit dans une seule bibliothèque les jeux Steam, Epic, GOG et Amazon. Il n'est ni dans Debian ni sur Flathub ; il s'installe donc depuis le <code>.deb</code> de sa version GitHub, comme R2ModMan. Identique à Welcome 3.0.",
+    "wel-rel-214r3-added-li2": "<strong>Traductions :</strong> la nouvelle description est traduite dans les 8 langues prises en charge.",
+
     "wel-rel-214r2-title": "2.1.4-2 — Octobre 2026",
     "wel-rel-214r2-subtitle": "Onglet Pilotes — l'analyse du matériel reconnaît désormais les ordinateurs Apple et propose ce dont un Mac a besoin.",
     "wel-rel-214r2-added-li1": "<strong>Prise en charge des Mac dans l'analyse du matériel :</strong> sur un ordinateur Apple, reconnu par le fabricant indiqué dans DMI, les résultats proposent mbpfan (contrôle des ventilateurs) et TLP (batterie et énergie) sur les MacBook, tous deux issus de Debian, et le pilote de la caméra FaceTime HD sur tout Mac qui en possède une. Rien n'est affiché sur un ordinateur qui n'est pas un Mac. TLP interrompt l'installation au lieu de supprimer <code>power-profiles-daemon</code> lorsque le bureau l'utilise.",

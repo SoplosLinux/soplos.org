@@ -4486,6 +4486,11 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-214r3-title": "2.1.4-3 — Outubro 2026",
+    "wel-rel-214r3-subtitle": "Separador Gaming — Heronite, um novo lançador de jogos escrito em Rust.",
+    "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> um lançador de jogos leve escrito em Rust que reúne numa só biblioteca os jogos da Steam, Epic, GOG e Amazon. Não está no Debian nem no Flathub, por isso é instalado a partir do <code>.deb</code> da sua versão no GitHub, tal como o R2ModMan. Igual ao Welcome 3.0.",
+    "wel-rel-214r3-added-li2": "<strong>Traduções:</strong> a nova descrição está traduzida para os 8 idiomas suportados.",
+
     "wel-rel-214r2-title": "2.1.4-2 — Outubro 2026",
     "wel-rel-214r2-subtitle": "Separador Controladores — a deteção de hardware passa a reconhecer computadores Apple e oferece o que um Mac precisa.",
     "wel-rel-214r2-added-li1": "<strong>Suporte para Mac na deteção de hardware:</strong> num computador Apple, reconhecido pelo fabricante indicado no DMI, os resultados oferecem o mbpfan (controlo das ventoinhas) e o TLP (bateria e energia) nos MacBook, ambos do Debian, e o controlador da câmara FaceTime HD em qualquer Mac que a tenha. Não se mostra nada num computador que não seja um Mac. O TLP interrompe a instalação em vez de remover o <code>power-profiles-daemon</code> quando o ambiente de trabalho o usa.",
