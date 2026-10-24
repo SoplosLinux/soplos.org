@@ -4486,6 +4486,11 @@ Object.assign(window.LANG_PT, {
     "wel-rel-208-3-fixed-li1": "<strong>Navegação Ctrl+Shift+Tab para trás:</strong> O GTK envia <code>KEY_ISO_Left_Tab</code> para esta combinação, não <code>KEY_Tab</code>. O gestor de teclas verifica agora <code>KEY_ISO_Left_Tab</code> explicitamente para que a navegação funcione corretamente.",
     "wel-rel-208-3-trans-li1": "<strong>Os 8 idiomas</strong> (ES, EN, FR, DE, PT, IT, RO, RU) atualizados com novas cadeias para RyzenAdj e Lutris Vulkan Fix.",
 
+    "wel-rel-214r2-title": "2.1.4-2 — Outubro 2026",
+    "wel-rel-214r2-subtitle": "Separador Controladores — a deteção de hardware passa a reconhecer computadores Apple e oferece o que um Mac precisa.",
+    "wel-rel-214r2-added-li1": "<strong>Suporte para Mac na deteção de hardware:</strong> num computador Apple, reconhecido pelo fabricante indicado no DMI, os resultados oferecem o mbpfan (controlo das ventoinhas) e o TLP (bateria e energia) nos MacBook, ambos do Debian, e o controlador da câmara FaceTime HD em qualquer Mac que a tenha. Não se mostra nada num computador que não seja um Mac. O TLP interrompe a instalação em vez de remover o <code>power-profiles-daemon</code> quando o ambiente de trabalho o usa.",
+    "wel-rel-214r2-added-li2": "<strong>Câmara FaceTime HD:</strong> um projeto da comunidade que os autores consideram experimental e que não está no Debian. É compilado no computador num pacote local a partir de código obtido num commit fixo, pelo que o DKMS o recompila para cada kernel e pode ser removido na mesma janela; o firmware da câmara é descarregado dos servidores de atualizações da Apple e verificado com somas de verificação fixas.",
+    "wel-rel-214r2-added-li3": "<strong>Traduções:</strong> os novos textos estão traduzidos para os 8 idiomas suportados.",
     "wel-rel-214r1-title": "2.1.4-1 — Outubro 2026",
     "wel-rel-214r1-subtitle": "Separadores Recomendados e Gaming — a suite Craft e os novos lançadores de jogos do Welcome 3.0 já estão no Welcome 2.x.",
     "wel-rel-214r1-added-li1": "<strong>Separador Recomendados (suite Craft):</strong> WordCraft, GridCraft e DeckCraft (Escritório), DesignCraft e FigCraft (Gráficos), SoundCraft (Multimédia) e ArtCraft Launcher (Gestão de apps). Cada uma é instalada a partir do <code>.deb</code> da sua última release do GitHub, como as restantes apps Craft.",

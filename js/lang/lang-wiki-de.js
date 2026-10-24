@@ -4492,6 +4492,11 @@ Object.assign(window.LANG_DE, {
     "wel-rel-208-3-fixed-li1": "<strong>Rückwärts-Navigation Ctrl+Shift+Tab:</strong> GTK sendet für diese Kombination <code>KEY_ISO_Left_Tab</code>, nicht <code>KEY_Tab</code>. Der Tastenhandler prüft nun explizit auf <code>KEY_ISO_Left_Tab</code>, sodass die Rückwärtsnavigation korrekt funktioniert.",
     "wel-rel-208-3-trans-li1": "<strong>Alle 8 Sprachen</strong> (ES, EN, FR, DE, PT, IT, RO, RU) mit neuen Zeichenketten für RyzenAdj und Lutris Vulkan Fix aktualisiert.",
 
+    "wel-rel-214r2-title": "2.1.4-2 — Oktober 2026",
+    "wel-rel-214r2-subtitle": "Treiber-Tab — der Hardware-Scan erkennt jetzt Apple-Computer und bietet an, was ein Mac braucht.",
+    "wel-rel-214r2-added-li1": "<strong>Mac-Unterstützung im Hardware-Scan:</strong> Auf einem Apple-Computer, erkannt am DMI-Hersteller, bieten die Ergebnisse mbpfan (Lüftersteuerung) und TLP (Akku und Energie) auf MacBooks, beide aus Debian, und den Treiber der FaceTime-HD-Kamera auf jedem Mac mit dieser Kamera an. Auf einem Computer, der kein Mac ist, wird nichts angezeigt. TLP bricht die Installation ab, statt <code>power-profiles-daemon</code> zu entfernen, wenn der Desktop es nutzt.",
+    "wel-rel-214r2-added-li2": "<strong>FaceTime-HD-Kamera:</strong> ein Community-Projekt, das seine Autoren als experimentell bezeichnen und das nicht in Debian ist. Es wird auf dem Rechner in ein lokales Paket aus Quellen gebaut, die an einem festen Commit geholt werden, sodass DKMS es für jeden Kernel neu baut und es sich im selben Fenster entfernen lässt; die Firmware der Kamera wird von den Update-Servern von Apple geladen und mit festen Prüfsummen geprüft.",
+    "wel-rel-214r2-added-li3": "<strong>Übersetzungen:</strong> Die neuen Texte sind in die 8 unterstützten Sprachen übersetzt.",
     "wel-rel-214r1-title": "2.1.4-1 — Oktober 2026",
     "wel-rel-214r1-subtitle": "Tabs Empfohlen und Gaming — die Craft-Suite und die neuen Spiellauncher aus Welcome 3.0 sind jetzt in Welcome 2.x.",
     "wel-rel-214r1-added-li1": "<strong>Tab Empfohlen (Craft-Suite):</strong> WordCraft, GridCraft und DeckCraft (Büro), DesignCraft und FigCraft (Grafik), SoundCraft (Multimedia) und ArtCraft Launcher (App-Verwaltung). Jede App wird aus dem <code>.deb</code> ihres neuesten GitHub-Releases installiert, wie die übrigen Craft-Apps.",

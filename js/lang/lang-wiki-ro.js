@@ -4491,6 +4491,11 @@ Object.assign(window.LANG_RO, {
     "wel-rel-208-3-fixed-li1": "<strong>Navigarea Ctrl+Shift+Tab înapoi:</strong> GTK trimite <code>KEY_ISO_Left_Tab</code> pentru această combinație, nu <code>KEY_Tab</code>. Gestionarul de taste verifică acum explicit <code>KEY_ISO_Left_Tab</code> pentru ca navigarea înapoi să funcționeze corect.",
     "wel-rel-208-3-trans-li1": "<strong>Toate cele 8 limbi</strong> (ES, EN, FR, DE, PT, IT, RO, RU) actualizate cu noi șiruri pentru RyzenAdj și Lutris Vulkan Fix.",
 
+    "wel-rel-214r2-title": "2.1.4-2 — Octombrie 2026",
+    "wel-rel-214r2-subtitle": "Fila Drivere — detectarea hardware recunoaște acum computerele Apple și oferă ce are nevoie un Mac.",
+    "wel-rel-214r2-added-li1": "<strong>Suport pentru Mac în detectarea hardware:</strong> pe un computer Apple, recunoscut după producătorul din DMI, rezultatele oferă mbpfan (controlul ventilatoarelor) și TLP (baterie și energie) pe MacBook, ambele din Debian, și driverul camerei FaceTime HD pe orice Mac care o are. Nu se afișează nimic pe un computer care nu este Mac. TLP oprește instalarea în loc să elimine <code>power-profiles-daemon</code> atunci când desktopul îl folosește.",
+    "wel-rel-214r2-added-li2": "<strong>Camera FaceTime HD:</strong> un proiect al comunității pe care autorii săi îl consideră experimental și care nu este în Debian. Se compilează pe computer într-un pachet local din surse preluate la un commit fix, astfel că DKMS îl recompilează pentru fiecare kernel și poate fi eliminat din aceeași fereastră; firmware-ul camerei se descarcă de pe serverele de actualizări Apple și se verifică cu sume de control fixe.",
+    "wel-rel-214r2-added-li3": "<strong>Traduceri:</strong> textele noi sunt traduse în cele 8 limbi acceptate.",
     "wel-rel-214r1-title": "2.1.4-1 — Octombrie 2026",
     "wel-rel-214r1-subtitle": "Filele Recomandate și Gaming — suita Craft și noile lansatoare de jocuri din Welcome 3.0 sunt acum în Welcome 2.x.",
     "wel-rel-214r1-added-li1": "<strong>Fila Recomandate (suita Craft):</strong> WordCraft, GridCraft și DeckCraft (Birou), DesignCraft și FigCraft (Grafică), SoundCraft (Multimedia) și ArtCraft Launcher (Gestionarea aplicațiilor). Fiecare se instalează din <code>.deb</code>-ul ultimei sale versiuni de pe GitHub, ca restul aplicațiilor Craft.",
