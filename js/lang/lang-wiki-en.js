@@ -5292,6 +5292,10 @@ Object.assign(window.LANG_EN, {
   "wel-rel-208-3-fixed-li1": "<strong>Ctrl+Shift+Tab backward navigation:</strong> GTK sends <code>KEY_ISO_Left_Tab</code> for this combination, not <code>KEY_Tab</code>. The key handler now checks for <code>KEY_ISO_Left_Tab</code> explicitly so backward tab navigation works correctly.",
   "wel-rel-208-3-trans-li1": "<strong>All 8 languages</strong> (ES, EN, FR, DE, PT, IT, RO, RU) updated with new strings for RyzenAdj and Lutris Vulkan Fix.",
 
+  "wel-rel-214r4-title": "2.1.4-4 — October 2026",
+  "wel-rel-214r4-subtitle": "Recommended tab — dynamic download URL for Google Antigravity.",
+  "wel-rel-214r4-changed-li1": "<strong>Google Antigravity:</strong> the installer now resolves the official tarball download URL dynamically from <code>https://antigravity.google/download</code> instead of relying on a hardcoded version URL, ensuring installations always pull the latest available release.",
+
   "wel-rel-214r3-title": "2.1.4-3 — October 2026",
   "wel-rel-214r3-subtitle": "Gaming tab — Heronite, a new game launcher written in Rust.",
   "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> a light game launcher written in Rust that gathers Steam, Epic, GOG and Amazon games in one library. It is not in Debian or Flathub, so it is installed from the <code>.deb</code> of its GitHub release, the same way as R2ModMan. Matches Welcome 3.0.",

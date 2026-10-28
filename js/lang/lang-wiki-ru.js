@@ -4493,6 +4493,10 @@ Object.assign(window.LANG_RU, {
     "wel-rel-208-3-fixed-li1": "<strong>Обратная навигация Ctrl+Shift+Tab:</strong> GTK отправляет <code>KEY_ISO_Left_Tab</code> для этой комбинации, а не <code>KEY_Tab</code>. Обработчик клавиш теперь явно проверяет <code>KEY_ISO_Left_Tab</code>, чтобы обратная навигация работала корректно.",
     "wel-rel-208-3-trans-li1": "<strong>Все 8 языков</strong> (ES, EN, FR, DE, PT, IT, RO, RU) обновлены с новыми строками для RyzenAdj и Lutris Vulkan Fix.",
 
+    "wel-rel-214r4-title": "2.1.4-4 — Октябрь 2026",
+    "wel-rel-214r4-subtitle": "Вкладка Рекомендуемые — динамический URL загрузки для Google Antigravity.",
+    "wel-rel-214r4-changed-li1": "<strong>Google Antigravity:</strong> установщик теперь динамически получает официальный URL для загрузки архива с <code>https://antigravity.google/download</code> вместо фиксированной версии, гарантируя загрузку самого последнего доступного релиза.",
+
     "wel-rel-214r3-title": "2.1.4-3 — Октябрь 2026",
     "wel-rel-214r3-subtitle": "Вкладка Gaming — Heronite, новый игровой лаунчер, написанный на Rust.",
     "wel-rel-214r3-added-li1": "<strong>Heronite:</strong> лёгкий игровой лаунчер на Rust, который собирает игры Steam, Epic, GOG и Amazon в одной библиотеке. Его нет ни в Debian, ни на Flathub, поэтому он устанавливается из <code>.deb</code> релиза на GitHub, как R2ModMan. Как в Welcome 3.0.",
