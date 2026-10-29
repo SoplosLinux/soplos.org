@@ -5364,6 +5364,10 @@ Object.assign(window.LANG_RO, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilator de kerneluri Linux personalizate și instalator de kerneluri precompilate pentru Soplos Linux — compilați propriul kernel cu patch-uri BORE, Zen, NTSYNC și PREEMPT_RT, sau instalați kerneluri Soplos gata de utilizat din depozitul oficial.",
 
+    "ki-rel-103r6-title": "1.0.3-6 — Octombrie 2026",
+    "ki-rel-103r6-subtitle": "Corectată temperatura procesorului din panoul de compilare, care putea afișa o valoare fixă a plăcii de bază în locul procesorului. Senzorul procesorului (k10temp pe AMD, coretemp pe Intel) este acum preferat întotdeauna zonei ACPI a plăcii.",
+    "ki-rel-103r6-fixed-li1": "<strong>Temperatura procesorului de la senzorul corect:</strong> Panoul de compilare lua primul senzor <code>coretemp</code>, <code>k10temp</code> sau <code>acpitz</code> din <code>/sys/class/hwmon</code>, a cărui ordine nu este stabilă, iar <code>acpitz</code> este adesea o valoare ACPI fixă (16,8 °C la sarcină maximă pe o placă Gigabyte, 20 °C pe Zyren). Senzorii sunt căutați acum într-o ordine fixă, <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> și <code>acpitz</code> la final, folosind citirea <code>Tctl</code> (AMD) sau <code>Package</code>/<code>Core 0</code> (Intel), așa cum face deja Soplos Sys Cleaner.",
+
     "ki-rel-103r5-title": "1.0.3-5 — Octombrie 2026",
     "ki-rel-103r5-subtitle": "Fiecare kernel are acum Binder pentru Waydroid: un kernel fără el oprește compilarea. Se folosește driverul în C cât timp kernelul îl are și cel în Rust după ce este eliminat upstream, așa că toolchain-ul Rust devine o dependență de compilare. Patch-ul X3D VCache folosește noile fișiere pentru 6.12 și 7.2, cu contoarele de încărcare ale CCD-urilor corectate.",
     "ki-rel-103r5-changed-li1": "<strong>Binder obligatoriu pe fiecare kernel:</strong> Un kernel al cărui driver Binder este eliminat de <code>olddefconfig</code>, sau al cărui <code>ANDROID_BINDER_DEVICES</code> nu include <code>hwbinder</code>/<code>vndbinder</code>, oprește acum compilarea în loc să afișeze doar un avertisment.",

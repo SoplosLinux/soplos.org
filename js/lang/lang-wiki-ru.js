@@ -5366,6 +5366,10 @@ Object.assign(window.LANG_RU, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Компилятор пользовательских ядер Linux и установщик предсобранных ядер для Soplos Linux — компилируйте собственное ядро с патчами BORE, Zen, NTSYNC и PREEMPT_RT или устанавливайте готовые ядра Soplos из официального репозитория.",
 
+    "ki-rel-103r6-title": "1.0.3-6 — Октябрь 2026",
+    "ki-rel-103r6-subtitle": "Исправлена температура процессора на панели сборки: вместо процессора она могла показывать фиксированное значение материнской платы. Теперь датчик процессора (k10temp на AMD, coretemp на Intel) всегда предпочитается ACPI-зоне платы.",
+    "ki-rel-103r6-fixed-li1": "<strong>Температура процессора с правильного датчика:</strong> Панель сборки брала первый датчик <code>coretemp</code>, <code>k10temp</code> или <code>acpitz</code> в <code>/sys/class/hwmon</code>, порядок которых не постоянен, а <code>acpitz</code> часто выдаёт фиксированное значение ACPI (16,8 °C при полной нагрузке на плате Gigabyte, 20 °C на Zyren). Теперь датчики ищутся в фиксированном порядке: <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> и последним <code>acpitz</code>, с показанием <code>Tctl</code> (AMD) или <code>Package</code>/<code>Core 0</code> (Intel), как уже делает Soplos Sys Cleaner.",
+
     "ki-rel-103r5-title": "1.0.3-5 — Октябрь 2026",
     "ki-rel-103r5-subtitle": "Теперь каждое ядро содержит Binder для Waydroid: ядро без него останавливает сборку. Используется драйвер на C, пока он есть в ядре, а после его удаления в upstream — драйвер на Rust, поэтому инструментарий Rust стал зависимостью сборки. Патч X3D VCache использует новые файлы для 6.12 и 7.2 с исправленными счётчиками нагрузки CCD.",
     "ki-rel-103r5-changed-li1": "<strong>Binder обязателен в каждом ядре:</strong> Ядро, у которого <code>olddefconfig</code> убирает драйвер Binder или в <code>ANDROID_BINDER_DEVICES</code> которого нет <code>hwbinder</code>/<code>vndbinder</code>, теперь останавливает сборку, а не только выводит предупреждение.",

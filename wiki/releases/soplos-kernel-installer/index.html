@@ -127,6 +127,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v103r6" class="toc-link">1.0.3-6 <span class="toc-date">— 2026-10-29</span></a></li>
                             <li><a href="#v103r5" class="toc-link">1.0.3-5 <span class="toc-date">— 2026-10-29</span></a></li>
                             <li><a href="#v103r4" class="toc-link">1.0.3-4 <span class="toc-date">— 2026-10-29</span></a></li>
                             <li><a href="#v103r3" class="toc-link">1.0.3-3 <span class="toc-date">— 2026-10-23</span></a></li>
@@ -162,6 +163,20 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 1.0.3-6 -->
+                        <section id="v103r6" class="content-section">
+                            <h2><i class="fas fa-tag"></i> <span id="ki-rel-103r6-title">1.0.3-6 — October 2026</span></h2>
+                            <p id="ki-rel-103r6-subtitle" class="lead">Fixed the CPU temperature in the build panel, which could show a fixed board value instead of the processor. The CPU sensor (k10temp on AMD, coretemp on Intel) is now always preferred over the board's ACPI zone.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-wrench"></i> <span data-i18n="rel-label-fixed">Fixed</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="ki-rel-103r6-fixed-li1"><strong>CPU temperature from the right sensor:</strong> The build panel took the first <code>coretemp</code>, <code>k10temp</code> or <code>acpitz</code> sensor in <code>/sys/class/hwmon</code>, whose order is not stable, and <code>acpitz</code> is often a fixed ACPI value (16.8 °C at full load on a Gigabyte board, 20 °C on the Zyren). Sensors are now searched in a fixed order, <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> and <code>acpitz</code> last, using the <code>Tctl</code> (AMD) or <code>Package</code>/<code>Core 0</code> (Intel) reading, as Soplos Sys Cleaner already does.</li>
+                            </ul>
+                        </section>
 
                         <!-- 1.0.3-5 -->
                         <section id="v103r5" class="content-section">

@@ -5367,6 +5367,10 @@ Object.assign(window.LANG_ES, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels precompilados para Soplos Linux — compila tu propio kernel con parches BORE, Zen, NTSYNC y PREEMPT_RT, o instala kernels Soplos listos para usar desde el repositorio oficial.",
 
+    "ki-rel-103r6-title": "1.0.3-6 — Octubre 2026",
+    "ki-rel-103r6-subtitle": "Corregida la temperatura de la CPU en el panel de compilación, que podía mostrar un valor fijo de la placa en lugar del procesador. Ahora se prefiere siempre el sensor de la CPU (k10temp en AMD, coretemp en Intel) a la zona ACPI de la placa.",
+    "ki-rel-103r6-fixed-li1": "<strong>Temperatura de la CPU desde el sensor correcto:</strong> El panel de compilación tomaba el primer sensor <code>coretemp</code>, <code>k10temp</code> o <code>acpitz</code> de <code>/sys/class/hwmon</code>, cuyo orden no es estable, y <code>acpitz</code> suele ser un valor ACPI fijo (16,8 °C a plena carga en una placa Gigabyte, 20 °C en el Zyren). Ahora los sensores se buscan en un orden fijo, <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> y <code>acpitz</code> el último, usando la lectura <code>Tctl</code> (AMD) o <code>Package</code>/<code>Core 0</code> (Intel), como ya hace Soplos Sys Cleaner.",
+
     "ki-rel-103r5-title": "1.0.3-5 — Octubre 2026",
     "ki-rel-103r5-subtitle": "Todos los kernels llevan ahora Binder para Waydroid: un kernel sin él detiene la compilación. Se usa el driver en C mientras el kernel lo tenga y el de Rust cuando se retire en upstream, así que el toolchain de Rust pasa a ser una dependencia de compilación. El parche X3D VCache usa los nuevos archivos para 6.12 y 7.2, con los contadores de carga de los CCD corregidos.",
     "ki-rel-103r5-changed-li1": "<strong>Binder obligatorio en todos los kernels:</strong> Un kernel cuyo driver Binder desaparece en <code>olddefconfig</code>, o cuyo <code>ANDROID_BINDER_DEVICES</code> no incluye <code>hwbinder</code>/<code>vndbinder</code>, detiene ahora la compilación en lugar de mostrar solo un aviso.",

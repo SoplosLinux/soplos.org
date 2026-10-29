@@ -5359,6 +5359,10 @@ Object.assign(window.LANG_PT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilador de kernels Linux personalizados e instalador de kernels pré-compilados para Soplos Linux — compile o seu próprio kernel com patches BORE, Zen, NTSYNC e PREEMPT_RT, ou instale kernels Soplos prontos a usar a partir do repositório oficial.",
 
+    "ki-rel-103r6-title": "1.0.3-6 — Outubro 2026",
+    "ki-rel-103r6-subtitle": "Corrigida a temperatura do processador no painel de compilação, que podia mostrar um valor fixo da placa em vez do processador. O sensor do processador (k10temp em AMD, coretemp em Intel) passa a ser sempre preferido à zona ACPI da placa.",
+    "ki-rel-103r6-fixed-li1": "<strong>Temperatura do processador a partir do sensor certo:</strong> O painel de compilação usava o primeiro sensor <code>coretemp</code>, <code>k10temp</code> ou <code>acpitz</code> em <code>/sys/class/hwmon</code>, cuja ordem não é estável, e o <code>acpitz</code> é muitas vezes um valor ACPI fixo (16,8 °C em carga máxima numa placa Gigabyte, 20 °C no Zyren). Os sensores são agora procurados numa ordem fixa, <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> e <code>acpitz</code> por último, usando a leitura <code>Tctl</code> (AMD) ou <code>Package</code>/<code>Core 0</code> (Intel), como já faz o Soplos Sys Cleaner.",
+
     "ki-rel-103r5-title": "1.0.3-5 — Outubro 2026",
     "ki-rel-103r5-subtitle": "Todos os kernels têm agora Binder para o Waydroid: um kernel sem ele pára a compilação. Usa-se o driver em C enquanto o kernel o tiver e o de Rust quando for retirado upstream, pelo que o toolchain de Rust passa a ser uma dependência de compilação. O patch X3D VCache usa os novos ficheiros para 6.12 e 7.2, com os contadores de carga dos CCD corrigidos.",
     "ki-rel-103r5-changed-li1": "<strong>Binder obrigatório em todos os kernels:</strong> Um kernel cujo driver Binder é removido pelo <code>olddefconfig</code>, ou cujo <code>ANDROID_BINDER_DEVICES</code> não inclui <code>hwbinder</code>/<code>vndbinder</code>, pára agora a compilação em vez de mostrar apenas um aviso.",

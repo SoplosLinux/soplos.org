@@ -6164,6 +6164,10 @@ Object.assign(window.LANG_EN, {
   "ki-rel-hero-title": "Soplos Kernel Installer",
   "ki-rel-hero-subtitle": "Custom Linux kernel builder and pre-built kernel installer for Soplos Linux — compile your own kernel with BORE, Zen, NTSYNC and PREEMPT_RT patches, or install ready-to-use Soplos kernels from the official repository.",
 
+  "ki-rel-103r6-title": "1.0.3-6 — October 2026",
+  "ki-rel-103r6-subtitle": "Fixed the CPU temperature in the build panel, which could show a fixed board value instead of the processor. The CPU sensor (k10temp on AMD, coretemp on Intel) is now always preferred over the board's ACPI zone.",
+  "ki-rel-103r6-fixed-li1": "<strong>CPU temperature from the right sensor:</strong> The build panel took the first <code>coretemp</code>, <code>k10temp</code> or <code>acpitz</code> sensor in <code>/sys/class/hwmon</code>, whose order is not stable, and <code>acpitz</code> is often a fixed ACPI value (16.8 °C at full load on a Gigabyte board, 20 °C on the Zyren). Sensors are now searched in a fixed order, <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> and <code>acpitz</code> last, using the <code>Tctl</code> (AMD) or <code>Package</code>/<code>Core 0</code> (Intel) reading, as Soplos Sys Cleaner already does.",
+
   "ki-rel-103r5-title": "1.0.3-5 — October 2026",
   "ki-rel-103r5-subtitle": "Every kernel now has Binder for Waydroid: a kernel without it stops the build. The C driver is used while the kernel has it, and the Rust driver once it is removed upstream, so the Rust toolchain is now a build dependency. The X3D VCache patch uses the new files for 6.12 and 7.2, with fixed CCD load counters.",
   "ki-rel-103r5-changed-li1": "<strong>Binder is required on every kernel:</strong> A kernel whose Binder driver is dropped by <code>olddefconfig</code>, or whose <code>ANDROID_BINDER_DEVICES</code> lacks <code>hwbinder</code>/<code>vndbinder</code>, now stops the build instead of only showing a warning.",

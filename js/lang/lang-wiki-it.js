@@ -5363,6 +5363,10 @@ Object.assign(window.LANG_IT, {
     "ki-rel-hero-title": "Soplos Kernel Installer",
     "ki-rel-hero-subtitle": "Compilatore di kernel Linux personalizzati e installatore di kernel precompilati per Soplos Linux — compila il tuo kernel con patch BORE, Zen, NTSYNC e PREEMPT_RT, o installa kernel Soplos pronti all'uso dal repository ufficiale.",
 
+    "ki-rel-103r6-title": "1.0.3-6 — Ottobre 2026",
+    "ki-rel-103r6-subtitle": "Corretta la temperatura della CPU nel pannello di compilazione, che poteva mostrare un valore fisso della scheda madre invece del processore. Il sensore della CPU (k10temp su AMD, coretemp su Intel) è ora sempre preferito alla zona ACPI della scheda.",
+    "ki-rel-103r6-fixed-li1": "<strong>Temperatura della CPU dal sensore giusto:</strong> Il pannello di compilazione prendeva il primo sensore <code>coretemp</code>, <code>k10temp</code> o <code>acpitz</code> in <code>/sys/class/hwmon</code>, il cui ordine non è stabile, e <code>acpitz</code> è spesso un valore ACPI fisso (16,8 °C a pieno carico su una scheda Gigabyte, 20 °C sullo Zyren). Ora i sensori vengono cercati in un ordine fisso, <code>k10temp</code>, <code>coretemp</code>, <code>nct6775</code>, <code>it87</code> e <code>acpitz</code> per ultimo, usando la lettura <code>Tctl</code> (AMD) o <code>Package</code>/<code>Core 0</code> (Intel), come fa già Soplos Sys Cleaner.",
+
     "ki-rel-103r5-title": "1.0.3-5 — Ottobre 2026",
     "ki-rel-103r5-subtitle": "Ogni kernel ora ha Binder per Waydroid: un kernel senza di esso ferma la compilazione. Si usa il driver in C finché il kernel lo ha e quello in Rust quando viene rimosso upstream, quindi la toolchain Rust diventa una dipendenza di compilazione. La patch X3D VCache usa i nuovi file per 6.12 e 7.2, con i contatori di carico dei CCD corretti.",
     "ki-rel-103r5-changed-li1": "<strong>Binder obbligatorio su ogni kernel:</strong> Un kernel il cui driver Binder viene rimosso da <code>olddefconfig</code>, o il cui <code>ANDROID_BINDER_DEVICES</code> non include <code>hwbinder</code>/<code>vndbinder</code>, ora ferma la compilazione invece di mostrare solo un avviso.",
