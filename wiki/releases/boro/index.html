@@ -126,6 +126,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2026-11" class="toc-link" style="white-space:nowrap">2026.11 <span class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-11-01</span></a></li>
                             <li><a href="#v2026-10" class="toc-link" style="white-space:nowrap">2026.10 <span class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-10-01</span></a></li>
                             <li><a href="#v2026-09" class="toc-link" style="white-space:nowrap">2026.09 <span
                                         class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-09-06</span></a>
@@ -163,6 +164,57 @@
                     <article class="main-content">
 
                         <!-- 2026.08 -->
+                        <!-- 2026.11 -->
+                        <section id="v2026-11" class="content-section">
+                            <h2><i class="fas fa-compact-disc"></i> <span id="boro-rel-2026-11-title">2026.11 — November 2026</span></h2>
+                            <p id="boro-rel-2026-11-subtitle" class="lead">Soplos kernel 7.3.1-soplos-v1 and GNOME 50.5. GDM3 updated to 51.1; xterm added.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-microchip"></i> <span id="boro-rel-2026-11-label-kernel">Kernel</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><code>7.2.8-soplos-v1</code> → <code>7.3.1-soplos-v1</code></li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-desktop"></i> GNOME</h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><strong>GDM3</strong> <code>50.3</code> → <code>51.1</code></li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span id="boro-rel-2026-11-label-packages-added">Added packages</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><code>gweather-locations</code> 2026.2-2</li>
+                                <li><code>linux-headers-7.3.1-soplos-v1</code> 1</li>
+                                <li><code>linux-image-7.3.1-soplos-v1</code> 1</li>
+                                <li><code>xbitmaps</code> 1.1.1-2.2</li>
+                                <li><code>xterm</code> 412-1</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span id="boro-rel-2026-11-label-packages-removed">Removed packages</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><code>linux-headers-7.2.8-soplos-v1</code> 1</li>
+                                <li><code>linux-image-7.2.8-soplos-v1</code> 1</li>
+                                <li><code>qml6-module-qt-labs-qmlmodels</code> 6.10.2+dfsg-6</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-chart-bar"></i> <span id="boro-rel-2026-11-label-stats">Statistics</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="boro-rel-2026-11-stats">Total packages: 2116 → 2113 (+11 added / -14 removed / ~569 updated)</li>
+                            </ul>
+                        </section>
                         <!-- 2026.10 -->
                         <section id="v2026-10" class="content-section">
                             <h2><i class="fas fa-compact-disc"></i> <span id="boro-rel-2026-10-title">2026.10 — October 2026</span></h2>
@@ -1128,12 +1180,13 @@
                                             <th>2026.08<br><small>2026-08-05</small></th>
                                             <th>2026.09<br><small>2026-09-06</small></th>
                                             <th>2026.10<br><small>2026-10-01</small></th>
+                                            <th>2026.11<br><small>2026-11-01</small></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <!-- Identity -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-identity-group">Identity</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-identity-group">Identity</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-status">Status</strong></td>
@@ -1147,9 +1200,11 @@
                                             <td>Stable</td>
                                             <td>Stable</td>
                                             <td>Stable</td>
+                                            <td>Stable</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-arch">Architecture</strong></td>
+                                            <td>x86_64 (amd64)</td>
                                             <td>x86_64 (amd64)</td>
                                             <td>x86_64 (amd64)</td>
                                             <td>x86_64 (amd64)</td>
@@ -1173,12 +1228,14 @@
                                             <td>Yes</td>
                                             <td>Yes</td>
                                             <td>Yes</td>
+                                            <td>Yes</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-secureboot">Secure Boot</strong></td>
                                             <td>Yes</td>
                                             <td>Yes</td>
                                             <td>Yes</td>
+                                            <td>No</td>
                                             <td>No</td>
                                             <td>No</td>
                                             <td>No</td>
@@ -1199,6 +1256,7 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>~2.8 GB</td>
+                                            <td>~2.8 GB</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-soplos-release">soplos-release</strong></td>
@@ -1212,6 +1270,7 @@
                                             <td>0.2.7-5</td>
                                             <td>0.2.7-5</td>
                                             <td>1.0.0-5</td>
+                                            <td>1.0.0-8</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-total-pkgs">Total packages</strong></td>
@@ -1225,10 +1284,11 @@
                                             <td>2105</td>
                                             <td>2121</td>
                                             <td>2116</td>
+                                            <td>2113</td>
                                         </tr>
                                         <!-- Base system -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-base-sys-group">Base system</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-base-sys-group">Base system</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-kernel">Kernel</strong></td>
@@ -1242,6 +1302,7 @@
                                             <td>7.1.5-soplos-v1</td>
                                             <td>7.2.3-soplos-v1</td>
                                             <td>7.2.8-soplos-v1</td>
+                                            <td>7.3.1-soplos-v1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-systemd">systemd</strong></td>
@@ -1254,6 +1315,7 @@
                                             <td>260.1</td>
                                             <td>260.1</td>
                                             <td>261.2</td>
+                                            <td>262</td>
                                             <td>262</td>
                                         </tr>
                                         <tr>
@@ -1268,6 +1330,7 @@
                                             <td>2.42-16</td>
                                             <td>2.43</td>
                                             <td>2.43-6</td>
+                                            <td>2.43-7</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-gcc">GCC (max. available)</strong></td>
@@ -1279,6 +1342,7 @@
                                             <td>16.1.0</td>
                                             <td>16.1.0</td>
                                             <td>16.1.0</td>
+                                            <td>16.2.0</td>
                                             <td>16.2.0</td>
                                             <td>16.2.0</td>
                                         </tr>
@@ -1294,6 +1358,7 @@
                                             <td>3.6.2</td>
                                             <td>3.6.3</td>
                                             <td>3.6.4</td>
+                                            <td>3.6.5</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-bash">bash</strong></td>
@@ -1307,6 +1372,7 @@
                                             <td>5.3-3</td>
                                             <td>5.3-3+b1</td>
                                             <td>5.3-4</td>
+                                            <td>5.3-4</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-python">Python 3.13</strong></td>
@@ -1316,6 +1382,7 @@
                                             <td>3.13.12</td>
                                             <td>3.13.12</td>
                                             <td>3.13.12</td>
+                                            <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
@@ -1333,6 +1400,7 @@
                                             <td>3.14.6</td>
                                             <td>3.14.7</td>
                                             <td>3.14.7</td>
+                                            <td>3.14.8</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-dbus">dbus</strong></td>
@@ -1346,12 +1414,14 @@
                                             <td>1.16.2-4</td>
                                             <td>1.16.2-5</td>
                                             <td>1.16.2-5+b1</td>
+                                            <td>1.16.2-8</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-grub">GRUB</strong></td>
                                             <td>2.14~git</td>
                                             <td>2.14~git</td>
                                             <td>2.14~git</td>
+                                            <td>2.14</td>
                                             <td>2.14</td>
                                             <td>2.14</td>
                                             <td>2.14</td>
@@ -1372,6 +1442,7 @@
                                             <td>24.004.60-5.2</td>
                                             <td>24.004.60-5.2</td>
                                             <td>26.134.222-1</td>
+                                            <td>26.134.222-1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-sudo">sudo</strong></td>
@@ -1385,6 +1456,7 @@
                                             <td>1.9.17p2-5</td>
                                             <td>1.9.17p2-7</td>
                                             <td>1.9.17p2-8</td>
+                                            <td>1.9.17p2-9</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-curl">curl</strong></td>
@@ -1398,10 +1470,11 @@
                                             <td>8.21.0</td>
                                             <td>8.21.0</td>
                                             <td>8.22.0-1</td>
+                                            <td>8.22.0-1</td>
                                         </tr>
                                         <!-- Desktop environment -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-de-group">Desktop environment</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-de-group">Desktop environment</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-desktop">Desktop</strong></td>
@@ -1414,6 +1487,7 @@
                                             <td>GNOME 50.2</td>
                                             <td>GNOME 50.2</td>
                                             <td>GNOME 50.4</td>
+                                            <td>GNOME 50.5</td>
                                             <td>GNOME 50.5</td>
                                         </tr>
                                         <tr>
@@ -1428,6 +1502,7 @@
                                             <td>50.2</td>
                                             <td>50.4</td>
                                             <td>50.5</td>
+                                            <td>50.5</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-mutter">Compositor (Mutter)</strong></td>
@@ -1441,6 +1516,7 @@
                                             <td>50.2</td>
                                             <td>50.4</td>
                                             <td>50.5</td>
+                                            <td>50.5</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-wayland">Wayland</strong></td>
@@ -1452,6 +1528,7 @@
                                             <td>1.24.0-2+b2</td>
                                             <td>1.24.0-2+b2</td>
                                             <td>1.24.0-2+b2</td>
+                                            <td>1.26.0</td>
                                             <td>1.26.0</td>
                                             <td>1.26.0</td>
                                         </tr>
@@ -1467,6 +1544,7 @@
                                             <td>24.1.11</td>
                                             <td>24.1.13</td>
                                             <td>24.1.13</td>
+                                            <td>24.1.14</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-gdm">Login manager (GDM3)</strong></td>
@@ -1480,6 +1558,7 @@
                                             <td>50</td>
                                             <td>50.2</td>
                                             <td>50.3</td>
+                                            <td>51.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-libadwaita">Libadwaita</strong></td>
@@ -1493,10 +1572,11 @@
                                             <td>1.9</td>
                                             <td>1.9.2</td>
                                             <td>1.9.2</td>
+                                            <td>1.10.0</td>
                                         </tr>
                                         <!-- Package management -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-pkgmgmt-group">Package management</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-pkgmgmt-group">Package management</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-apt">apt</strong></td>
@@ -1510,12 +1590,14 @@
                                             <td>3.2.0</td>
                                             <td>3.3.3</td>
                                             <td>3.3.3</td>
+                                            <td>3.3.3</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-repos">Repositories</strong></td>
                                             <td>trixie+testing</td>
                                             <td>trixie+testing</td>
                                             <td>trixie+testing</td>
+                                            <td>testing+forky</td>
                                             <td>testing+forky</td>
                                             <td>testing+forky</td>
                                             <td>testing+forky</td>
@@ -1536,18 +1618,19 @@
                                             <td>1.16.6</td>
                                             <td>1.18.2</td>
                                             <td>1.18.4</td>
+                                            <td>1.18.4</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-snap">Snap</strong></td>
-                                            <td colspan="10" style="text-align:center" id="boro-rel-table-snap-value">Not pre-installed — available from repositories</td>
+                                            <td colspan="11" style="text-align:center" id="boro-rel-table-snap-value">Not pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-update-policy">Update policy</strong></td>
-                                            <td colspan="10" style="text-align:center" id="boro-rel-table-update-policy-value">Rolling (Debian Testing)</td>
+                                            <td colspan="11" style="text-align:center" id="boro-rel-table-update-policy-value">Rolling (Debian Testing)</td>
                                         </tr>
                                         <!-- System components -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-components-group">System components</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-components-group">System components</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-pipewire">PipeWire</strong></td>
@@ -1560,6 +1643,7 @@
                                             <td>1.6.4</td>
                                             <td>1.6.4</td>
                                             <td>1.6.8</td>
+                                            <td>1.6.9</td>
                                             <td>1.6.9</td>
                                         </tr>
                                         <tr>
@@ -1574,6 +1658,7 @@
                                             <td>1.56.0</td>
                                             <td>1.58.0</td>
                                             <td>1.58.1</td>
+                                            <td>1.58.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-bluetooth">Bluetooth (bluez)</strong></td>
@@ -1585,6 +1670,7 @@
                                             <td>5.85</td>
                                             <td>5.85</td>
                                             <td>5.85</td>
+                                            <td>5.87</td>
                                             <td>5.87</td>
                                             <td>5.87</td>
                                         </tr>
@@ -1600,6 +1686,7 @@
                                             <td>26.1.5</td>
                                             <td>26.1.6</td>
                                             <td>26.1.6</td>
+                                            <td>26.1.6</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-vulkan">Vulkan</strong></td>
@@ -1613,6 +1700,7 @@
                                             <td>1.4.341</td>
                                             <td>1.4.341</td>
                                             <td>1.4.357</td>
+                                            <td>1.4.363</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-nvidia">NVIDIA (proprietary)</strong></td>
@@ -1626,14 +1714,15 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>—</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-initrd">Drivers in initrd</strong></td>
-                                            <td colspan="10" style="text-align:center">2600+</td>
+                                            <td colspan="11" style="text-align:center">2600+</td>
                                         </tr>
                                         <!-- Installer -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-installer-group">Installer</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-installer-group">Installer</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-calamares">Calamares</strong></td>
@@ -1647,10 +1736,11 @@
                                             <td>3.4.2</td>
                                             <td>3.4.2</td>
                                             <td>3.4.2</td>
+                                            <td>3.4.3</td>
                                         </tr>
                                         <!-- Security -->
                                         <tr>
-                                            <td colspan="11" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-security-group">Security</td>
+                                            <td colspan="12" style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700" id="boro-rel-table-security-group">Security</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-apparmor">AppArmor</strong></td>
@@ -1664,6 +1754,7 @@
                                             <td>4.1.7 <span data-i18n="inline-active">(active)</span></td>
                                             <td>4.1.8 <span data-i18n="inline-active">(active)</span></td>
                                             <td>4.1.8 <span data-i18n="inline-active">(active)</span></td>
+                                            <td>4.1.8 <span data-i18n="inline-active">(active)</span></td>
                                         </tr>
                                         <tr>
                                             <td><strong id="boro-rel-table-ufw">UFW</strong></td>
@@ -1675,6 +1766,7 @@
                                             <td>0.36.2-9</td>
                                             <td>0.36.2-9</td>
                                             <td>0.36.2-9</td>
+                                            <td>0.36.2-10</td>
                                             <td>0.36.2-10</td>
                                             <td>0.36.2-10</td>
                                         </tr>
@@ -1698,11 +1790,12 @@
                                             <th>2026.08</th>
                                             <th>2026.09</th>
                                             <th>2026.10</th>
+                                            <th>2026.11</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td colspan="11"
+                                            <td colspan="12"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="boro-rel-table-branding-group">Soplos Branding &amp; Themes</td>
                                         </tr>
@@ -1718,10 +1811,11 @@
                                             <td>0.0.1</td>
                                             <td>0.0.1</td>
                                             <td>0.0.1</td>
+                                            <td>0.0.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-gdm3-theme</strong></td>
-                                            <td colspan="10" style="text-align:center" id="boro-rel-table-gdm3-included">Included</td>
+                                            <td colspan="11" style="text-align:center" id="boro-rel-table-gdm3-included">Included</td>
                                         </tr>
                                         <tr>
                                             <td><strong>fastfetch-soplos</strong></td>
@@ -1735,6 +1829,7 @@
                                             <td>0.0.3</td>
                                             <td>0.0.3</td>
                                             <td>0.0.4-2</td>
+                                            <td>0.0.4-4</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-grub-theme</strong></td>
@@ -1747,6 +1842,7 @@
                                             <td>0.0.6-2</td>
                                             <td>0.0.6-2</td>
                                             <td>0.0.6-2</td>
+                                            <td>0.0.7-1</td>
                                             <td>0.0.7-1</td>
                                         </tr>
                                         <tr>
@@ -1761,9 +1857,10 @@
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
+                                            <td>0.0.2</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="11"
+                                            <td colspan="12"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="boro-rel-table-soplos-apps-group">Soplos Apps</td>
                                         </tr>
@@ -1779,12 +1876,14 @@
                                             <td>2.0.2-5 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
                                             <td>2.0.2-5 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
                                             <td>2.0.2-5 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
+                                            <td>2.0.2-5 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-plymouth-manager</strong></td>
                                             <td>1.0.6</td>
                                             <td>1.0.6</td>
                                             <td>1.0.6</td>
+                                            <td>2.0.0-7 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
                                             <td>2.0.0-7 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
                                             <td>2.0.0-7 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
                                             <td>2.0.0-7 <em data-i18n="inline-out-of-iso-short">(out of ISO)</em></td>
@@ -1805,6 +1904,7 @@
                                             <td>2.0.3</td>
                                             <td>2.0.3</td>
                                             <td>2.0.3</td>
+                                            <td>2.0.3</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-welcome</strong></td>
@@ -1815,6 +1915,7 @@
                                             <td>2.1.0-3</td>
                                             <td>2.1.0-6</td>
                                             <td>2.1.1</td>
+                                            <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
@@ -1831,22 +1932,23 @@
                                             <td>2.0.2-8</td>
                                             <td>2.0.2-8</td>
                                             <td>2.0.2-8</td>
+                                            <td>2.0.2-8</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-sys-cleaner</strong></td>
-                                            <td colspan="10" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
+                                            <td colspan="11" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-appimage-manager</strong></td>
-                                            <td colspan="10" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
+                                            <td colspan="11" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-kernel-installer</strong></td>
-                                            <td colspan="10" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
+                                            <td colspan="11" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-webapp-manager</strong></td>
-                                            <td colspan="10" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
+                                            <td colspan="11" style="text-align:center" data-i18n="repos-only-value">Not pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-system-service</strong></td>
@@ -1858,10 +1960,12 @@
                                             <td>1.0.0-5</td>
                                             <td>1.0.0-5</td>
                                             <td>1.0.0-6</td>
+                                            <td>1.0.0-6</td>
                                         </tr>
                                         <tr>
                                             <td><strong>zsh-soplos</strong></td>
                                             <td>—</td><td>—</td><td>—</td>
+                                            <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
@@ -1880,6 +1984,21 @@
                                             <td>0.0.1-5</td>
                                             <td>0.0.1-5</td>
                                             <td>0.0.2</td>
+                                            <td>0.0.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ghostty-tip</strong></td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>1.3.2~dev.20260619</td>
+                                            <td>1.3.2~dev.20260619</td>
+                                            <td>1.3.2~dev.20260703</td>
+                                            <td>1.3.2~dev.20260717</td>
+                                            <td>1.3.2~dev.20260727</td>
+                                            <td>1.3.2~dev.20260828</td>
+                                            <td>1.3.2~dev.20260927</td>
+                                            <td>1.4.1~dev.20261027</td>
                                         </tr>
                                         <tr>
                                             <td><strong>zram-soplos</strong></td>
@@ -1891,9 +2010,10 @@
                                             <td>0.0.1-2</td>
                                             <td>0.0.1-2</td>
                                             <td>0.0.1-2</td>
+                                            <td>0.0.1-2</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="11"
+                                            <td colspan="12"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="boro-rel-table-gnome-group">GNOME Desktop</td>
                                         </tr>
@@ -1909,6 +2029,7 @@
                                             <td>50</td>
                                             <td>50.4</td>
                                             <td>50.5</td>
+                                            <td>50.5</td>
                                         </tr>
                                         <tr>
                                             <td><strong>GDM3</strong></td>
@@ -1922,6 +2043,7 @@
                                             <td>50</td>
                                             <td>50.2</td>
                                             <td>50.3</td>
+                                            <td>51.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Mutter</strong></td>
@@ -1934,6 +2056,7 @@
                                             <td>50</td>
                                             <td>50</td>
                                             <td>50.4</td>
+                                            <td>50.5</td>
                                             <td>50.5</td>
                                         </tr>
                                         <tr>
@@ -1948,12 +2071,14 @@
                                             <td>50.1</td>
                                             <td>50.2.2</td>
                                             <td>50.2.2</td>
+                                            <td>51.0.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>gnome-terminal</strong></td>
                                             <td>3.58.0</td>
                                             <td>3.58.0</td>
                                             <td>3.58.1</td>
+                                            <td>3.60.0</td>
                                             <td>3.60.0</td>
                                             <td>3.60.0</td>
                                             <td>3.60.0</td>
@@ -1974,6 +2099,7 @@
                                             <td>4.22.4</td>
                                             <td>4.22.4</td>
                                             <td>4.22.4</td>
+                                            <td>4.24.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Libadwaita</strong></td>
@@ -1987,9 +2113,10 @@
                                             <td>1.9</td>
                                             <td>1.9.2</td>
                                             <td>1.9.2</td>
+                                            <td>1.10.0</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="11"
+                                            <td colspan="12"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="boro-rel-table-drivers-group">Hardware &amp; Drivers</td>
                                         </tr>
@@ -2005,9 +2132,11 @@
                                             <td>7.1.5-soplos-v1</td>
                                             <td>7.2.3-soplos-v1</td>
                                             <td>7.2.8-soplos-v1</td>
+                                            <td>7.3.1-soplos-v1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Drivers in initrd</strong></td>
+                                            <td>2600+</td>
                                             <td>2600+</td>
                                             <td>2600+</td>
                                             <td>2600+</td>
@@ -2030,10 +2159,11 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>—</td>
                                         </tr>
                                         <tr>
                                             <td><strong>NVIDIA legacy (340/390/470/550/590)</strong></td>
-                                            <td colspan="10" style="text-align:center"><em data-i18n="nvidia-legacy-value">Installable via soplos-welcome</em></td>
+                                            <td colspan="11" style="text-align:center"><em data-i18n="nvidia-legacy-value">Installable via soplos-welcome</em></td>
                                         </tr>
                                         <tr>
                                             <td><strong>Mesa</strong></td>
@@ -2045,6 +2175,7 @@
                                             <td>26.0.6</td>
                                             <td>26.0.6</td>
                                             <td>26.1.5</td>
+                                            <td>26.1.6</td>
                                             <td>26.1.6</td>
                                             <td>26.1.6</td>
                                         </tr>
@@ -2060,6 +2191,7 @@
                                             <td>1.4.341</td>
                                             <td>1.4.341</td>
                                             <td>1.4.357</td>
+                                            <td>1.4.363</td>
                                         </tr>
                                     </tbody>
                                 </table>

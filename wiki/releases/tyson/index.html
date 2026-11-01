@@ -131,6 +131,7 @@
                     <aside class="toc">
                         <h3 id="rel-toc-title">Versions</h3>
                         <ul>
+                            <li><a href="#v2026-11" class="toc-link" style="white-space:nowrap">2026.11 <span class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-11-01</span></a></li>
                             <li><a href="#v2026-10" class="toc-link" style="white-space:nowrap">2026.10 <span
                                         class="toc-date" style="font-size:0.75rem;opacity:0.5">2026-10-01</span></a>
                             </li>
@@ -186,6 +187,54 @@
                     </aside>
 
                     <article class="main-content">
+
+                        <!-- 2026.11 -->
+                        <section id="v2026-11" class="content-section">
+                            <h2><i class="fas fa-compact-disc"></i> <span id="tyson-rel-2026-11-title">2026.10 — October
+                                    2026</span></h2>
+                            <p id="tyson-rel-2026-11-subtitle" class="lead">Soplos kernel 7.3.1-soplos-v1. xterm added; kde-config-sddm and kf6-breeze-icon-theme removed.</p>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-microchip"></i> <span
+                                        id="tyson-rel-2026-11-label-kernel">Kernel</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><code>7.2.8-soplos-v1</code> → <code>7.3.1-soplos-v1</code></li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-plus-circle"></i> <span
+                                        id="tyson-rel-2026-11-label-packages-added">Added packages</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><code>linux-headers-7.3.1-soplos-v1</code> 1</li>
+                                <li><code>linux-image-7.3.1-soplos-v1</code> 1</li>
+                                <li><code>xterm</code> 412-1</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-minus-circle"></i> <span
+                                        id="tyson-rel-2026-11-label-packages-removed">Removed packages</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li><code>kde-config-sddm</code> 4:6.7.4-1</li>
+                                <li><code>kf6-breeze-icon-theme</code> 4:6.30.0-1</li>
+                                <li><code>linux-headers-7.2.8-soplos-v1</code> 1</li>
+                                <li><code>linux-image-7.2.8-soplos-v1</code> 1</li>
+                            </ul>
+
+                            <div class="subsection-header">
+                                <h3><i class="fas fa-chart-bar"></i> <span
+                                        id="tyson-rel-2026-11-label-stats">Statistics</span></h3>
+                                <div class="accent-hr"></div>
+                            </div>
+                            <ul>
+                                <li id="tyson-rel-2026-11-stats">Total packages: 2480 → 2474 (+17 added / -23 removed / ~856 updated)</li>
+                            </ul>
+                        </section>
 
                         <!-- 2026.10 -->
                         <section id="v2026-10" class="content-section">
@@ -1695,12 +1744,13 @@
                                             <th>2026.08<br><small>2026-08-05</small></th>
                                             <th>2026.09<br><small>2026-09-06</small></th>
                                             <th>2026.10<br><small>2026-10-01</small></th>
+                                            <th>2026.11<br><small>2026-11-01</small></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <!-- Identity -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-identity-group">Identity</td>
                                         </tr>
@@ -1722,9 +1772,11 @@
                                             <td>Stable</td>
                                             <td>Stable</td>
                                             <td>Stable</td>
+                                            <td>Stable</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-arch">Architecture</strong></td>
+                                            <td>x86_64 (amd64)</td>
                                             <td>x86_64 (amd64)</td>
                                             <td>x86_64 (amd64)</td>
                                             <td>x86_64 (amd64)</td>
@@ -1760,6 +1812,7 @@
                                             <td>Yes</td>
                                             <td>Yes</td>
                                             <td>Yes</td>
+                                            <td>Yes</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-secureboot">Secure Boot</strong></td>
@@ -1772,6 +1825,7 @@
                                             <td>Yes</td>
                                             <td>Yes</td>
                                             <td>Yes</td>
+                                            <td>No</td>
                                             <td>No</td>
                                             <td>No</td>
                                             <td>No</td>
@@ -1798,6 +1852,7 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>~3.2 GB</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-soplos-release">soplos-release</strong></td>
@@ -1817,6 +1872,7 @@
                                             <td>0.1.8-6</td>
                                             <td>0.1.8-6</td>
                                             <td>1.0.0-5</td>
+                                            <td>1.0.0-8</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-total-pkgs">Total packages</strong></td>
@@ -1835,11 +1891,12 @@
                                             <td>2552</td>
                                             <td>2495</td>
                                             <td>2496</td>
-                                            <td>2478</td>
+                                            <td>2480</td>
+                                            <td>2474</td>
                                         </tr>
                                         <!-- Base system -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-base-sys-group">Base system</td>
                                         </tr>
@@ -1861,6 +1918,7 @@
                                             <td>7.1.5-soplos-v1</td>
                                             <td>7.2.3-soplos-v1</td>
                                             <td>7.2.8-soplos-v1</td>
+                                            <td>7.3.1-soplos-v1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-systemd">systemd</strong></td>
@@ -1880,6 +1938,7 @@
                                             <td>260.1</td>
                                             <td>261.2</td>
                                             <td>262</td>
+                                            <td>262</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-glibc">glibc</strong></td>
@@ -1897,6 +1956,7 @@
                                             <td>2.42-16</td>
                                             <td>2.42-16</td>
                                             <td>2.42-16</td>
+                                            <td>2.43</td>
                                             <td>2.43</td>
                                             <td>2.43</td>
                                         </tr>
@@ -1918,6 +1978,7 @@
                                             <td>16.1.0</td>
                                             <td>16.2.0</td>
                                             <td>16.2.0</td>
+                                            <td>16.2.0</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-openssl">OpenSSL</strong></td>
@@ -1937,6 +1998,7 @@
                                             <td>3.6.2</td>
                                             <td>3.6.3</td>
                                             <td>3.6.4</td>
+                                            <td>3.6.5</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-bash">bash</strong></td>
@@ -1945,6 +2007,7 @@
                                             <td>5.2.37</td>
                                             <td>5.2.37</td>
                                             <td>5.2.37</td>
+                                            <td>5.3</td>
                                             <td>5.3</td>
                                             <td>5.3</td>
                                             <td>5.3</td>
@@ -1975,6 +2038,7 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>—</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-python314">Python 3.14</strong></td>
@@ -1994,6 +2058,7 @@
                                             <td>3.14.6</td>
                                             <td>3.14.7</td>
                                             <td>3.14.7</td>
+                                            <td>3.14.8</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-dbus">dbus</strong></td>
@@ -2013,6 +2078,7 @@
                                             <td>1.16.2-4</td>
                                             <td>1.16.2-5</td>
                                             <td>1.16.2-5</td>
+                                            <td>1.16.2-8</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-grub">GRUB</strong></td>
@@ -2025,6 +2091,7 @@
                                             <td>2.14~git</td>
                                             <td>2.14~git</td>
                                             <td>2.14~git</td>
+                                            <td>2.14</td>
                                             <td>2.14</td>
                                             <td>2.14</td>
                                             <td>2.14</td>
@@ -2050,7 +2117,8 @@
                                             <td>24.004.60-5.2</td>
                                             <td>24.004.60-5.2</td>
                                             <td>24.004.60-5.2</td>
-                                            <td>24.004.60-5.2</td>
+                                            <td>26.134.222-1</td>
+                                            <td>26.134.222-1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-sudo">sudo</strong></td>
@@ -2070,6 +2138,7 @@
                                             <td>1.9.17p2-5</td>
                                             <td>1.9.17p2-7</td>
                                             <td>1.9.17p2-8</td>
+                                            <td>1.9.17p2-9</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-curl">curl</strong></td>
@@ -2089,10 +2158,11 @@
                                             <td>8.21.0</td>
                                             <td>8.21.0</td>
                                             <td>8.22.0</td>
+                                            <td>8.22.0</td>
                                         </tr>
                                         <!-- Desktop environment -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-de-group">Desktop environment</td>
                                         </tr>
@@ -2114,6 +2184,7 @@
                                             <td>KDE Plasma 6.6.5</td>
                                             <td>KDE Plasma 6.7.4</td>
                                             <td>KDE Plasma 6.7.4</td>
+                                            <td>KDE Plasma 6.7.4</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-kwin">Compositor (KWin)</strong></td>
@@ -2131,6 +2202,7 @@
                                             <td>6.6.5</td>
                                             <td>6.6.5</td>
                                             <td>6.6.5</td>
+                                            <td>6.7.4</td>
                                             <td>6.7.4</td>
                                             <td>6.7.4</td>
                                         </tr>
@@ -2152,6 +2224,7 @@
                                             <td>1.24.0-2+b2</td>
                                             <td>1.26.0</td>
                                             <td>1.26.0</td>
+                                            <td>1.26.0</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-xwayland">XWayland</strong></td>
@@ -2171,6 +2244,7 @@
                                             <td>24.1.11</td>
                                             <td>24.1.13</td>
                                             <td>24.1.13</td>
+                                            <td>24.1.14</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-sddm">Login manager</strong></td>
@@ -2189,11 +2263,12 @@
                                             <td>PLM 6.6.5-soplos</td>
                                             <td>PLM 6.6.5-soplos</td>
                                             <td>PLM 6.7.2-soplos</td>
-                                            <td>PLM 6.7.2-soplos</td>
+                                            <td>PLM 6.7.4-soplos</td>
+                                            <td>PLM 6.7.4-soplos</td>
                                         </tr>
                                         <!-- Package management -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-pkgmgmt-group">Package management</td>
                                         </tr>
@@ -2215,6 +2290,7 @@
                                             <td>3.2.0</td>
                                             <td>3.3.3</td>
                                             <td>3.3.3</td>
+                                            <td>3.3.3</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-repos">Repositories</strong></td>
@@ -2234,26 +2310,27 @@
                                             <td>testing+forky</td>
                                             <td>testing+forky</td>
                                             <td>testing+forky</td>
+                                            <td>testing+forky</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-flatpak">Flatpak</strong></td>
-                                            <td colspan="16" style="text-align:center"
+                                            <td colspan="17" style="text-align:center"
                                                 id="tyson-rel-table-flatpak-value">Not pre-installed — available from
                                                 repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-snap">Snap</strong></td>
-                                            <td colspan="16" style="text-align:center" id="tyson-rel-table-snap-value">
+                                            <td colspan="17" style="text-align:center" id="tyson-rel-table-snap-value">
                                                 Not pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-update-policy">Update policy</strong></td>
-                                            <td colspan="16" style="text-align:center"
+                                            <td colspan="17" style="text-align:center"
                                                 id="tyson-rel-table-update-policy-value">Rolling (Debian Testing)</td>
                                         </tr>
                                         <!-- System components -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-components-group">System components</td>
                                         </tr>
@@ -2275,6 +2352,7 @@
                                             <td>1.6.4</td>
                                             <td>1.6.8</td>
                                             <td>1.6.9</td>
+                                            <td>1.6.9</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-nm">NetworkManager</strong></td>
@@ -2294,6 +2372,7 @@
                                             <td>1.56.0</td>
                                             <td>1.58.0</td>
                                             <td>1.58.1</td>
+                                            <td>1.58.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-bluetooth">Bluetooth (bluez)</strong></td>
@@ -2311,6 +2390,7 @@
                                             <td>5.85</td>
                                             <td>5.85</td>
                                             <td>5.85</td>
+                                            <td>5.87</td>
                                             <td>5.87</td>
                                             <td>5.87</td>
                                         </tr>
@@ -2332,6 +2412,7 @@
                                             <td>26.1.5</td>
                                             <td>26.1.6</td>
                                             <td>26.1.6</td>
+                                            <td>26.1.6</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-vulkan">Vulkan</strong></td>
@@ -2349,8 +2430,9 @@
                                             <td>1.4.341</td>
                                             <td>1.4.341</td>
                                             <td>1.4.341</td>
-                                            <td>1.4.341</td>
-                                            <td>1.4.341</td>
+                                            <td>1.4.357</td>
+                                            <td>1.4.357</td>
+                                            <td>1.4.363</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-nvidia">NVIDIA (proprietary)</strong></td>
@@ -2370,14 +2452,15 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>—</td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-initrd">Drivers in initrd</strong></td>
-                                            <td colspan="16" style="text-align:center">2500+</td>
+                                            <td colspan="17" style="text-align:center">2500+</td>
                                         </tr>
                                         <!-- Installer -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-installer-group">Installer</td>
                                         </tr>
@@ -2399,10 +2482,11 @@
                                             <td>3.4.2</td>
                                             <td>3.4.2</td>
                                             <td>3.4.2</td>
+                                            <td>3.4.3</td>
                                         </tr>
                                         <!-- Security -->
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-security-group">Security</td>
                                         </tr>
@@ -2424,6 +2508,7 @@
                                             <td>4.1.7 <span data-i18n="inline-active">(active)</span></td>
                                             <td>4.1.8 <span data-i18n="inline-active">(active)</span></td>
                                             <td>4.1.8 <span data-i18n="inline-active">(active)</span></td>
+                                            <td>4.1.8 <span data-i18n="inline-active">(active)</span></td>
                                         </tr>
                                         <tr>
                                             <td><strong id="tyson-rel-table-ufw">UFW</strong></td>
@@ -2441,6 +2526,7 @@
                                             <td>0.36.2-9</td>
                                             <td>0.36.2-9</td>
                                             <td>0.36.2-9</td>
+                                            <td>0.36.2-10</td>
                                             <td>0.36.2-10</td>
                                             <td>0.36.2-10</td>
                                         </tr>
@@ -2471,11 +2557,12 @@
                                             <th>2026.08</th>
                                             <th>2026.09</th>
                                             <th>2026.10</th>
+                                            <th>2026.11</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-branding-group">Soplos Branding &amp; Themes</td>
                                         </tr>
@@ -2497,6 +2584,7 @@
                                             <td>0.0.1</td>
                                             <td>0.0.3</td>
                                             <td>0.0.3</td>
+                                            <td>0.0.3</td>
                                         </tr>
                                         <tr>
                                             <td><strong>fastfetch-soplos</strong></td>
@@ -2516,6 +2604,7 @@
                                             <td>0.0.1</td>
                                             <td>0.0.4-2</td>
                                             <td>0.0.4-2</td>
+                                            <td>0.0.4-4</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-grub-theme</strong></td>
@@ -2535,6 +2624,7 @@
                                             <td>0.0.6-2</td>
                                             <td>0.0.6-2</td>
                                             <td>0.0.7-1</td>
+                                            <td>0.0.7-1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-plymouth-theme</strong></td>
@@ -2545,6 +2635,7 @@
                                             <td>0.0.1</td>
                                             <td>0.0.1</td>
                                             <td>0.0.1</td>
+                                            <td>0.0.2</td>
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
@@ -2573,6 +2664,7 @@
                                             <td>0.0.3-3</td>
                                             <td>0.0.3-3</td>
                                             <td>0.0.3-3</td>
+                                            <td>0.0.3-3</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-plasma-classic-white-theme</strong></td>
@@ -2585,6 +2677,7 @@
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
+                                            <td>0.0.3-3</td>
                                             <td>0.0.3-3</td>
                                             <td>0.0.3-3</td>
                                             <td>0.0.3-3</td>
@@ -2611,6 +2704,7 @@
                                             <td>0.0.3-2</td>
                                             <td>0.0.3-2</td>
                                             <td>0.0.3-2</td>
+                                            <td>0.0.3-2</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-plasma-modern-white-themes</strong></td>
@@ -2623,6 +2717,7 @@
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
                                             <td>0.0.2</td>
+                                            <td>0.0.3-2</td>
                                             <td>0.0.3-2</td>
                                             <td>0.0.3-2</td>
                                             <td>0.0.3-2</td>
@@ -2649,6 +2744,7 @@
                                             <td>1.0.1</td>
                                             <td>1.0.1</td>
                                             <td>1.0.1</td>
+                                            <td>1.0.1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-wallpapers02</strong></td>
@@ -2661,6 +2757,7 @@
                                             <td>1.0.0</td>
                                             <td>1.0.0</td>
                                             <td>1.0.0</td>
+                                            <td>1.0.1</td>
                                             <td>1.0.1</td>
                                             <td>1.0.1</td>
                                             <td>1.0.1</td>
@@ -2687,9 +2784,10 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>—</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-soplos-apps-group">Soplos Apps</td>
                                         </tr>
@@ -2704,6 +2802,7 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td><em data-i18n="repos-only-value">repos only</em></td>
                                             <td><em data-i18n="repos-only-value">repos only</em></td>
                                             <td><em data-i18n="repos-only-value">repos only</em></td>
                                             <td><em data-i18n="repos-only-value">repos only</em></td>
@@ -2730,6 +2829,7 @@
                                             <td>2.0.3</td>
                                             <td>2.0.3</td>
                                             <td>2.0.3-1</td>
+                                            <td>2.0.3-1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-welcome</strong></td>
@@ -2746,6 +2846,7 @@
                                             <td>2.1.0-3</td>
                                             <td>2.1.0-6</td>
                                             <td>2.1.1</td>
+                                            <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
@@ -2768,6 +2869,7 @@
                                             <td>2.0.2-8</td>
                                             <td>2.0.2-8</td>
                                             <td>2.0.2-8</td>
+                                            <td>2.0.2-8</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-grub-editor</strong></td>
@@ -2787,25 +2889,26 @@
                                             <td><em data-i18n="out-of-iso-value">out of ISO</em></td>
                                             <td><em data-i18n="out-of-iso-value">out of ISO</em></td>
                                             <td><em data-i18n="out-of-iso-value">out of ISO</em></td>
+                                            <td><em data-i18n="out-of-iso-value">out of ISO</em></td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-sys-cleaner</strong></td>
-                                            <td colspan="16" style="text-align:center" data-i18n="repos-only-value">Not
+                                            <td colspan="17" style="text-align:center" data-i18n="repos-only-value">Not
                                                 pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-appimage-manager</strong></td>
-                                            <td colspan="16" style="text-align:center" data-i18n="repos-only-value">Not
+                                            <td colspan="17" style="text-align:center" data-i18n="repos-only-value">Not
                                                 pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-kernel-installer</strong></td>
-                                            <td colspan="16" style="text-align:center" data-i18n="repos-only-value">Not
+                                            <td colspan="17" style="text-align:center" data-i18n="repos-only-value">Not
                                                 pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
                                             <td><strong>soplos-webapp-manager</strong></td>
-                                            <td colspan="16" style="text-align:center" data-i18n="repos-only-value">Not
+                                            <td colspan="17" style="text-align:center" data-i18n="repos-only-value">Not
                                                 pre-installed — available from repositories</td>
                                         </tr>
                                         <tr>
@@ -2826,6 +2929,7 @@
                                             <td>1.0.0-5</td>
                                             <td>1.0.0-5</td>
                                             <td>1.0.0-6</td>
+                                            <td>1.0.0-6</td>
                                         </tr>
                                         <tr>
                                             <td><strong>zsh-soplos</strong></td>
@@ -2838,6 +2942,7 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
@@ -2861,9 +2966,30 @@
                                             <td>0.0.1-3</td>
                                             <td>0.0.1-3</td>
                                             <td>0.0.1-3</td>
-                                            <td>0.0.1-3</td>
+                                            <td>0.0.1-4</td>
                                             <td>0.0.1-4</td>
                                             <td>0.0.2</td>
+                                            <td>0.0.2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ghostty-tip</strong></td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                            <td>1.3.2~dev.20260619</td>
+                                            <td>1.3.2~dev.20260619</td>
+                                            <td>1.3.2~dev.20260703</td>
+                                            <td>1.3.2~dev.20260717</td>
+                                            <td>1.3.2~dev.20260727</td>
+                                            <td>1.3.2~dev.20260828</td>
+                                            <td>1.3.2~dev.20260927</td>
+                                            <td>1.4.1~dev.20261027</td>
                                         </tr>
                                         <tr>
                                             <td><strong>zram-soplos</strong></td>
@@ -2883,9 +3009,10 @@
                                             <td>0.0.1-2</td>
                                             <td>0.0.1-2</td>
                                             <td>0.0.1-2</td>
+                                            <td>0.0.1-2</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-kde-group">KDE Plasma</td>
                                         </tr>
@@ -2907,6 +3034,7 @@
                                             <td>6.6.5</td>
                                             <td>6.7.4</td>
                                             <td>6.7.4</td>
+                                            <td>6.7.4</td>
                                         </tr>
                                         <tr>
                                             <td><strong>KWin</strong></td>
@@ -2924,6 +3052,7 @@
                                             <td>6.6.5</td>
                                             <td>6.6.5</td>
                                             <td>6.6.5</td>
+                                            <td>6.7.4</td>
                                             <td>6.7.4</td>
                                             <td>6.7.4</td>
                                         </tr>
@@ -2945,6 +3074,7 @@
                                             <td>26.04.0</td>
                                             <td>26.08.0</td>
                                             <td>26.08.0</td>
+                                            <td>26.08.2</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Konsole</strong></td>
@@ -2964,6 +3094,7 @@
                                             <td>26.04.0</td>
                                             <td>26.04.0</td>
                                             <td>26.04.0</td>
+                                            <td>26.08.2</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Qt6</strong></td>
@@ -2983,9 +3114,10 @@
                                             <td>6.10.2</td>
                                             <td>6.10.2</td>
                                             <td>6.10.2</td>
+                                            <td>6.11.2</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="17"
+                                            <td colspan="18"
                                                 style="background:var(--accent-color,#2a4d6e);color:#fff;font-size:0.8rem;padding:0.4rem 0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-weight:700"
                                                 id="tyson-rel-table-drivers-group">Hardware &amp; Drivers</td>
                                         </tr>
@@ -3007,10 +3139,11 @@
                                             <td>7.1.5-soplos-v1</td>
                                             <td>7.2.3-soplos-v1</td>
                                             <td>7.2.8-soplos-v1</td>
+                                            <td>7.3.1-soplos-v1</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Drivers in initrd</strong></td>
-                                            <td colspan="16" style="text-align:center">2500+</td>
+                                            <td colspan="17" style="text-align:center">2500+</td>
                                         </tr>
                                         <tr>
                                             <td><strong>NVIDIA (proprietary)</strong></td>
@@ -3030,10 +3163,11 @@
                                             <td>—</td>
                                             <td>—</td>
                                             <td>—</td>
+                                            <td>—</td>
                                         </tr>
                                         <tr>
                                             <td><strong>NVIDIA legacy (340/390/470/550/590)</strong></td>
-                                            <td colspan="16" style="text-align:center"><em
+                                            <td colspan="17" style="text-align:center"><em
                                                     data-i18n="nvidia-legacy-value">Installable via soplos-welcome</em>
                                             </td>
                                         </tr>
@@ -3055,6 +3189,7 @@
                                             <td>26.1.5</td>
                                             <td>26.1.6</td>
                                             <td>26.1.6</td>
+                                            <td>26.1.6</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Vulkan</strong></td>
@@ -3072,8 +3207,9 @@
                                             <td>1.4.341</td>
                                             <td>1.4.341</td>
                                             <td>1.4.341</td>
-                                            <td>1.4.341</td>
-                                            <td>1.4.341</td>
+                                            <td>1.4.357</td>
+                                            <td>1.4.357</td>
+                                            <td>1.4.363</td>
                                         </tr>
                                     </tbody>
                                 </table>
