@@ -78,6 +78,8 @@ window.LANG_RO = {
     "contrib-badge-creator": "Creator de Conținut",
     "contrib-yoyo-role": "Youtuber &amp; Podcaster",
     "contrib-yoyo-text": "A analizat Soplos Linux în primele sale etape și a raportat corecții care au ajutat la conturarea proiectului. O voce cheie în comunitatea Linux de limbă spaniolă.",
+    "contrib-jesus-role": "Youtuber",
+    "contrib-jesus-text": "Susține și promovează Soplos Linux pe canalul său enLinux, cu recenzii și transmisiuni live care apropie distribuția de comunitatea Linux de limbă spaniolă.",
     "contrib-badge-nvidia-beta": "Betatester NVIDIA",
     "contrib-betatesters-title": "Beta Testeri",
     "contrib-yoyo-beta-role": "Betatester oficial NVIDIA",
