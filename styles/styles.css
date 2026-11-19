@@ -315,15 +315,11 @@ nav ul>li>.menu-dropdown-toggle {
 }
 
 /* Modal controls: visible focus styles for keyboard users */
-.modal-app-nav,
-.carousel-dot,
-.close-modal-app {
+.carousel-dot {
     outline: none;
 }
 
-.modal-app-nav:focus,
-.carousel-dot:focus,
-.close-modal-app:focus {
+.carousel-dot:focus {
     box-shadow: 0 0 0 3px rgba(255, 125, 46, 0.18);
     border-radius: 50%;
 }
@@ -349,17 +345,11 @@ nav ul>li>.menu-dropdown-toggle {
 }
 
 /* Contenedores de dots para modales */
-.modal-gallery-dots,
-.modal-app-dots {
+.modal-gallery-dots {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 12px;
-}
-
-/* Ensure modal image caption updates are announced to assistive tech */
-#modal-app-caption {
-    position: relative;
 }
 
 /* Dropdown menu */
@@ -510,10 +500,35 @@ nav ul>li>.menu-dropdown-toggle {
     text-align: right;
 }
 
-.hero-image img {
+/* The card of the hero: the wallpaper, with the logo motion hidden under it
+   as an easter egg. A click makes the motion grow out of the card to the
+   whole screen (js/main.js, growingFrame). */
+.hero-motion {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    aspect-ratio: 16 / 9;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    max-width: 90%;
+    overflow: hidden;
+    background: #09090c;
+}
+
+.hero-motion img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-motion iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .hero::after {
@@ -679,12 +694,62 @@ nav ul>li>.menu-dropdown-toggle {
     margin-bottom: 18px;
 }
 
-.apps-desc {
-    text-align: center;
-    max-width: 700px;
-    margin: 18px auto 32px auto;
-    color: #c0c0c0;
-    font-size: 1.15rem;
+/* =========================
+       APPS PRESENTATION
+       ========================= */
+/* The section is the presentation itself (apps/presentation), stopped on its
+   cover across the whole band. The button above it takes the click and the
+   keyboard; main.js then grows the same iframe to full screen and plays it. */
+.apps-presentation {
+    position: relative;
+    height: clamp(420px, 36vw, 620px);
+    padding: 0;
+    overflow: hidden;
+    background: #09090c;
+}
+
+.apps-presentation iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    pointer-events: none;
+}
+
+.apps-presentation-open,
+.hero-motion-open {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.apps-presentation-open:focus-visible,
+.hero-motion-open:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: -3px;
+}
+
+/* Open, the same frame leaves the section and grows to the whole screen, above
+   everything (js/main.js sets its box while it grows and shrinks). */
+.apps-presentation.is-open iframe,
+.hero-motion.is-open iframe {
+    position: fixed;
+    z-index: 10000;
+    pointer-events: auto;
+}
+
+body.frame-show-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .apps-presentation {
+        height: min(78vh, 640px);
+    }
 }
 
 /* =========================
@@ -730,7 +795,6 @@ nav ul>li>.menu-dropdown-toggle {
    =================================== */
 .close-modal,
 .close-modal-gallery,
-.close-modal-app,
 .close-modal-requirements {
     position: absolute;
     top: 32px;
@@ -756,9 +820,6 @@ nav ul>li>.menu-dropdown-toggle {
 .close-modal-gallery:hover,
 .close-modal-gallery:focus,
 .close-modal-gallery:active,
-.close-modal-app:hover,
-.close-modal-app:focus,
-.close-modal-app:active,
 .close-modal-requirements:hover,
 .close-modal-requirements:focus,
 .close-modal-requirements:active {
@@ -875,46 +936,6 @@ nav ul>li>.menu-dropdown-toggle {
 }
 
 
-/* =========================
-   APPLICATIONS SECTION
-   ========================= */
-.apps-versions-grid {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    margin-top: 32px;
-    flex-wrap: wrap;
-}
-
-.apps-version-card {
-    background: #303032;
-    border-radius: 16px;
-    box-shadow: var(--box-shadow);
-    padding: 32px 24px;
-    min-width: 320px;
-    max-width: 420px;
-    flex: 1 1 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.apps-version-card h3 {
-    color: var(--secondary-color);
-    margin-bottom: 18px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.apps-icons-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-    justify-content: center;
-    align-items: center;
-}
-
 .documentation,
 .community {
     flex: 1;
@@ -936,247 +957,6 @@ nav ul>li>.menu-dropdown-toggle {
     /* Stronger glow on hover */
     border-color: rgba(255, 107, 53, 0.3);
     /* Visible border on hover */
-}
-
-.app-icon-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: box-shadow 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.app-icon-btn img {
-    background: rgba(37, 37, 39, 0.85);
-    border-radius: 12px;
-    border: 1.5px solid #232326;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-    padding: 6px;
-    transition: box-shadow 0.2s, border 0.2s;
-}
-
-.app-icon-btn img:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
-    border-color: var(--primary-color);
-}
-
-.app-icon-btn {
-    position: relative;
-}
-
-.app-icon-btn::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(18, 18, 20, 0.95);
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 7px;
-    font-size: 0.72rem;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.18s ease;
-    z-index: 200;
-    border: 1px solid rgba(255, 107, 53, 0.3);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-.app-icon-btn:hover::after {
-    opacity: 1;
-}
-
-/* =========================
-   MODAL APP SECTION
-   ========================= */
-.modal-app {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.95) !important;
-    /* Same as gallery modal */
-    backdrop-filter: blur(5px);
-    /* Blur effect */
-    z-index: 3000;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.25s, visibility 0.25s;
-}
-
-.modal-app.show {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.modal-app-content {
-    background: none;
-    border-radius: var(--border-radius);
-    padding: 0;
-    max-width: 100vw;
-    width: 100vw;
-    height: 100vh;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-app-header {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 12px;
-    justify-content: center;
-}
-
-#modal-app-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0;
-}
-
-#modal-app-title {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin: 0;
-    font-weight: 700;
-}
-
-#modal-app-desc {
-    text-align: center;
-    margin-bottom: 18px;
-    font-size: 1.1rem;
-    color: var(--light-text);
-    max-width: 600px;
-}
-
-.modal-app-gallery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    flex: 1;
-    min-height: 0;
-    margin-bottom: 18px;
-    position: relative;
-    overflow: hidden;
-}
-
-.modal-app-track {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.modal-app-track img {
-    max-height: 100%;
-    max-width: 85vw;
-}
-
-#modal-app-img {
-    max-width: 90vw;
-    max-height: 100%;
-    object-fit: contain;
-    width: auto;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
-    background: #111;
-    margin: 0 auto;
-    display: block;
-}
-
-.modal-app-nav {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: #fff;
-    font-size: 2.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 32px;
-    transition: background 0.2s, color 0.2s;
-    z-index: 10;
-    /* Posicionamiento absoluto para que estén en los laterales */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.modal-app-nav:hover {
-    background: #fec431;
-    color: #222;
-}
-
-.modal-app-nav.prev {
-    left: 0;
-}
-
-.modal-app-nav.next {
-    right: 0;
-}
-
-.modal-app-caption {
-    color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 18px;
-    text-align: center;
-    min-height: 28px;
-}
-
-
-@keyframes modalAppZoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.85);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.modal-app.show .modal-app-content {
-    animation: modalAppZoomIn 0.35s cubic-bezier(.4, 0, .2, 1);
-}
-
-/* Closing animation for app modal (content zoom out + backdrop fade) */
-.modal-app.closing .modal-app-content {
-    animation: modalAppZoomOut 0.28s cubic-bezier(.4, 0, .2, 1) forwards;
-}
-
-.modal-app.closing {
-    animation: modalBgFadeOut 0.28s linear forwards;
-    pointer-events: none;
 }
 
 /* =========================
@@ -1344,6 +1124,18 @@ nav ul>li>.menu-dropdown-toggle {
 */
 .modal-requirements.show .modal-requirements-content {
     animation: modalAppZoomIn 0.35s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes modalAppZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes modalAppZoomOut {
@@ -2596,18 +2388,11 @@ footer .container p {
         order: 3;
     }
 
-    .hero-image img {
-        max-width: 100%;
+    .hero-motion {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
         margin: 0 auto;
-        display: block;
-        background: #222;
-        color: #fff;
-        position: static;
+        border-radius: 10px;
         box-shadow: none;
-        box-sizing: border-box;
     }
 
     /* =========================
@@ -2699,9 +2484,7 @@ footer .container p {
     .carousel-arrow,
     .features-arrow,
     .gallery-arrow,
-    .apps-arrow,
     .modal-gallery-nav,
-    .modal-app-nav,
     .requirements-arrow,
     .requirements-arrow {
         width: 44px;
@@ -2727,9 +2510,7 @@ footer .container p {
     .carousel-arrow i,
     .features-arrow i,
     .gallery-arrow i,
-    .apps-arrow i,
     .modal-gallery-nav i,
-    .modal-app-nav i,
     .requirements-arrow i,
     .requirements-arrow i {
         font-size: 1.7rem;
@@ -2740,9 +2521,7 @@ footer .container p {
     .carousel-arrow:hover,
     .features-arrow:hover,
     .gallery-arrow:hover,
-    .apps-arrow:hover,
     .modal-gallery-nav:hover,
-    .modal-app-nav:hover,
     .requirements-arrow:hover {
         background: #ef5a33;
         color: #fff;
@@ -2756,9 +2535,6 @@ footer .container p {
     .close-modal-gallery:hover,
     .close-modal-gallery:focus,
     .close-modal-gallery:active,
-    .close-modal-app:hover,
-    .close-modal-app:focus,
-    .close-modal-app:active,
     .close-modal-requirements:hover,
     .close-modal-requirements:focus,
     .close-modal-requirements:active {
@@ -2771,7 +2547,6 @@ footer .container p {
     .carousel-arrow:disabled,
     .features-arrow:disabled,
     .gallery-arrow:disabled,
-    .apps-arrow:disabled,
     .requirements-arrow:disabled {
         opacity: 0.4;
         cursor: not-allowed;
@@ -2780,7 +2555,6 @@ footer .container p {
     /* Posicionamiento específico para botones de cerrar modales en móvil */
     .close-modal,
     .close-modal-gallery,
-    .close-modal-app,
     .close-modal-requirements {
         top: 18px !important;
         right: 18px !important;
@@ -2793,7 +2567,6 @@ footer .container p {
     .carousel-arrow.prev,
     .features-arrow.prev,
     .gallery-arrow.prev,
-    .apps-arrow.prev,
     .requirements-arrow.prev,
     .modal-gallery-nav.prev {
         left: 0;
@@ -2802,7 +2575,6 @@ footer .container p {
     .carousel-arrow.next,
     .features-arrow.next,
     .gallery-arrow.next,
-    .apps-arrow.next,
     .requirements-arrow.next,
     .modal-gallery-nav.next {
         right: 0;
@@ -2818,7 +2590,6 @@ footer .container p {
     .carousel-dots,
     .features-dots,
     .gallery-dots,
-    .apps-dots,
     .requirements-dots {
         display: flex;
         justify-content: center;
@@ -2831,7 +2602,6 @@ footer .container p {
     /* Configuración específica de contenedores de carrusel */
     .features-grid,
     .screenshot-gallery,
-    .apps-versions-grid,
     #requirements .requirements-cards {
         position: relative;
     }
@@ -3011,299 +2781,6 @@ footer .container p {
         max-width: 98vw;
         margin: 0 auto;
     }
-
-    /* =========================
-   MODAL DE APPS (MÓVIL)
-   ========================= */
-    @media (max-width: 768px) {
-        .modal-app {
-            display: none !important;
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
-            z-index: 9999 !important;
-            background: rgba(0, 0, 0, 0.95) !important;
-            align-items: center !important;
-            justify-content: center !important;
-            padding: 0 !important;
-        }
-
-        .modal-app.show {
-            display: flex !important;
-        }
-
-        .modal-app-content {
-            width: 100vw !important;
-            height: 100vh !important;
-            max-width: 100vw !important;
-            max-height: 100vh !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-
-        .modal-app-header {
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            margin-bottom: 12px !important;
-            gap: 8px !important;
-        }
-
-        #modal-app-icon {
-            width: 64px !important;
-            height: 64px !important;
-            border-radius: 14px !important;
-            margin-bottom: 8px !important;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
-            background: #222 !important;
-        }
-
-        #modal-app-title {
-            font-size: 1.3rem !important;
-            color: var(--secondary-color) !important;
-            text-align: center !important;
-            font-weight: 700 !important;
-            margin-bottom: 4px !important;
-        }
-
-        #modal-app-desc {
-            font-size: 1.05rem !important;
-            color: #fff !important;
-            text-align: center !important;
-            margin-bottom: 10px !important;
-            padding: 0 12px !important;
-        }
-
-        .modal-app-gallery {
-            width: 100vw !important;
-            height: 40vh !important;
-            min-height: 180px !important;
-            max-height: 45vh !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            margin-bottom: 10px !important;
-            position: relative !important;
-        }
-
-        .modal-app-track {
-            flex: 1 !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            height: 100% !important;
-            position: relative !important;
-            overflow: hidden !important;
-        }
-
-        #modal-app-img,
-        .modal-app-track img {
-            max-width: 92vw !important;
-            max-height: 38vh !important;
-            border-radius: 14px !important;
-            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.5) !important;
-            background: #111 !important;
-            margin: 0 auto !important;
-            display: block !important;
-        }
-
-        /* Posicionamiento específico para modal-app-nav */
-        .modal-app-nav.prev {
-            left: 0 !important;
-            transform: translateY(-50%) !important;
-            z-index: 25 !important;
-        }
-
-        .modal-app-nav.next {
-            right: 0 !important;
-            transform: translateY(-50%) !important;
-            z-index: 25 !important;
-        }
-
-        #modal-app-caption {
-            font-size: 1.05rem !important;
-            color: #fff !important;
-            margin-bottom: 8px !important;
-            text-align: center !important;
-            min-height: 24px !important;
-        }
-
-        .modal-app-dot.active {
-            background: var(--primary-color) !important;
-            opacity: 1 !important;
-        }
-
-        #modal-app-links {
-            margin-top: 10px !important;
-            text-align: center !important;
-        }
-    }
-
-    /* =========================
-   APPS GRID
-   ========================= */
-    .apps-versions-grid {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-top: 24px;
-        flex-wrap: wrap;
-    }
-
-    .apps-version-card {
-        background: #303032;
-        border-radius: 16px;
-        box-shadow: var(--box-shadow);
-        padding: 24px 12px;
-        min-width: 220px;
-        max-width: 98vw;
-        flex: 1 1 220px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 18px;
-    }
-
-    .apps-version-card h3 {
-        color: var(--secondary-color);
-        margin-bottom: 12px;
-        font-size: 1.1rem;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .apps-icons-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .app-icon-btn {
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        border-radius: 12px;
-        transition: box-shadow 0.2s, transform 0.2s;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .app-icon-btn img {
-        background: rgba(37, 37, 39, 0.85);
-        border-radius: 12px;
-        border: 1.5px solid #232326;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-        padding: 4px;
-        transition: box-shadow 0.2s, border 0.2s;
-        width: 40px;
-        height: 40px;
-    }
-
-    .app-icon-btn img:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
-        border-color: var(--primary-color);
-    }
-
-    /* =========================
-   CARRUSEL DE APPS (MÓVIL)
-   ========================= */
-    @media (max-width: 768px) {
-        #apps .container {
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            width: 100vw !important;
-            max-width: 100vw !important;
-        }
-
-        .apps-versions-grid {
-            position: relative !important;
-            width: 100% !important;
-            min-height: 320px !important;
-            overflow: hidden !important;
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            margin: 24px 0 0 0 !important;
-            /* top space */
-            padding: 0 !important;
-        }
-
-        .apps-version-card {
-            /* Allow JS to position/animate cards: use absolute positioning centered at 50% */
-            position: absolute !important;
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%);
-            width: 92vw !important;
-            max-width: 92vw !important;
-            min-width: 0 !important;
-            height: auto !important;
-            /* opacity and pointer-events should be controlled by JS */
-            z-index: 1 !important;
-            transition: transform 0.35s ease, opacity 0.35s ease !important;
-            box-sizing: border-box !important;
-            margin: 0 auto !important;
-            padding: 24px 8px !important;
-        }
-
-        .apps-version-card.active {
-            opacity: 1;
-            z-index: 2 !important;
-            pointer-events: auto !important;
-        }
-
-        .apps-icons-grid {
-            gap: 18px !important;
-        }
-
-        .app-icon-btn {
-            width: 64px !important;
-            height: 64px !important;
-            border-radius: 16px !important;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
-            padding: 0 !important;
-        }
-
-        .app-icon-btn img {
-            width: 56px !important;
-            height: 56px !important;
-            border-radius: 14px !important;
-            padding: 6px !important;
-            border: 2px solid #232326 !important;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) !important;
-            background: rgba(37, 37, 39, 0.85) !important;
-        }
-
-        .app-icon-btn img:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28) !important;
-            border-color: var(--primary-color) !important;
-        }
-
-        /* Posicionamiento específico para apps carousel */
-        .apps-arrow.prev {
-            left: 2vw !important;
-        }
-
-        .apps-arrow.next {
-            right: 2vw !important;
-        }
-    }
-
-
 
     /* System requirements cards */
     @media (max-width: 768px) {

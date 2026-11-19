@@ -27,14 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dotClass: "gallery-dot",
   });
 
-  // Apps Carousel
-  new SoplosUI.SoplosCarousel(".apps-versions-grid", ".apps-version-card", {
-    prevClass: "apps-arrow prev",
-    nextClass: "apps-arrow next",
-    dotsClass: "apps-dots",
-    dotClass: "apps-dot",
-  });
-
   // Requirements Carousel
   new SoplosUI.SoplosCarousel(
     "#requirements .requirements-cards",
@@ -185,320 +177,101 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // App Modal
-  let appModal;
-  if (document.getElementById("modalApp")) {
-    appModal = new SoplosUI.SoplosImageModal("modalApp", {
-      closeSelector: ".close-modal-app",
-      trackSelector: ".modal-app-track", // Updated to point to inner track
-      captionSelector: ".modal-app-caption",
-      prevSelector: ".modal-app-nav.prev",
-      nextSelector: ".modal-app-nav.next",
-      dotsSelector: ".modal-app-dots",
+  // 3. Presentations that grow to the whole screen: the apps (section #apps,
+  // apps/presentation, stopped on its cover) and the logo (the hero card,
+  // motion/logo, stopped on its last frame).
+  // A click makes that same frame grow from its place to the whole screen,
+  // and then tells it to play; closing tells it to stop and shrinks it into
+  // its place again. Nothing is loaded twice and nothing changes under the
+  // eye. The page inside asks to open and close with postMessage
+  // ("<name>:open", "<name>:close") and is told "<name>:play" / "<name>:stop".
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // hidden: the frame is not seen in its place (something else is shown
+  // there); it fades in while it grows and out while it shrinks.
+  function growingFrame(place, openBtn, name, hidden = false) {
+    if (!place) return;
+    const frame = place.querySelector("iframe");
+    const GROW_MS = 700, SHRINK_MS = 550;
+    let lastFocus = null, state = "closed";
+    const tellFrame = (type) => frame.contentWindow && frame.contentWindow.postMessage({ type: `${name}:${type}` }, location.origin);
+
+    // Puts the frame, fixed, on a rectangle of the window.
+    const setBox = (r) => {
+      frame.style.top = r.top + "px";
+      frame.style.left = r.left + "px";
+      frame.style.width = r.width + "px";
+      frame.style.height = r.height + "px";
+    };
+    const fullBox = () => ({ top: 0, left: 0, width: innerWidth, height: innerHeight });
+    const placeInView = () => {
+      const r = place.getBoundingClientRect();
+      return r.bottom > 0 && r.top < innerHeight;
+    };
+    const animate = (ms, ease) => {
+      frame.style.transition = reduceMotion ? "none"
+        : ["top", "left", "width", "height", "opacity"].map((p) => `${p} ${ms}ms ${ease}`).join(", ");
+    };
+
+    const open = () => {
+      if (state !== "closed") return;
+      state = "opening";
+      lastFocus = document.activeElement;
+      frame.style.transition = "none";
+      setBox(place.getBoundingClientRect());
+      place.classList.add("is-open");
+      if (hidden) frame.style.opacity = "0";
+      void frame.offsetWidth;
+      animate(GROW_MS, "cubic-bezier(.7, 0, .2, 1)");
+      setBox(fullBox());
+      if (hidden) frame.style.opacity = "1";
+      history.pushState({ frameShow: name }, "");
+      setTimeout(() => {
+        if (state !== "opening") return;
+        state = "open";
+        // From here the frame follows the window if it is resized.
+        frame.style.transition = "none";
+        Object.assign(frame.style, { top: "0", left: "0", width: "100%", height: "100%" });
+        document.body.classList.add("frame-show-open");
+        tellFrame("play");
+        if (frame.contentWindow) frame.contentWindow.focus();
+      }, reduceMotion ? 0 : GROW_MS);
+    };
+
+    const close = (fromHistory) => {
+      if (state === "closed" || state === "closing") return;
+      state = "closing";
+      tellFrame("stop");
+      document.body.classList.remove("frame-show-open");
+      frame.style.transition = "none";
+      setBox(fullBox());
+      void frame.offsetWidth;
+      animate(SHRINK_MS, "cubic-bezier(.5, 0, .2, 1)");
+      if (placeInView()) setBox(place.getBoundingClientRect());
+      if (hidden || !placeInView()) frame.style.opacity = "0";
+      setTimeout(() => {
+        place.classList.remove("is-open");
+        frame.removeAttribute("style");
+        state = "closed";
+      }, reduceMotion ? 0 : SHRINK_MS);
+      if (!fromHistory && history.state && history.state.frameShow === name) history.back();
+      if (lastFocus) lastFocus.focus();
+    };
+    if (openBtn) openBtn.addEventListener("click", open);
+    window.addEventListener("message", (e) => {
+      if (e.origin !== location.origin || !e.data) return;
+      if (e.data.type === `${name}:open`) open();
+      else if (e.data.type === `${name}:close`) close(false);
     });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close(false);
+    });
+    // The back button of a phone closes the window instead of leaving the page.
+    window.addEventListener("popstate", () => close(true));
   }
-
-  const sharedApps = {
-    "appimage-manager": {
-      titleKey: "appAppImageManagerTitle",
-      descKey: "appAppImageManagerDesc",
-      images: [
-        "images/apps/soplos-appimage-manager/screenshot1.png",
-        "images/apps/soplos-appimage-manager/screenshot2.png",
-        "images/apps/soplos-appimage-manager/screenshot3.png",
-        "images/apps/soplos-appimage-manager/screenshot4.png",
-        "images/apps/soplos-appimage-manager/screenshot5.png",
-      ],
-    },
-    "kernel-installer": {
-      titleKey: "appKernelInstallerTitle",
-      descKey: "appKernelInstallerDesc",
-      images: [
-        "images/apps/soplos-kernel-installer/screenshot1.png",
-        "images/apps/soplos-kernel-installer/screenshot2.png",
-        "images/apps/soplos-kernel-installer/screenshot3.png",
-        "images/apps/soplos-kernel-installer/screenshot4.png",
-        "images/apps/soplos-kernel-installer/screenshot5.png",
-      ],
-    },
-    "system-service": {
-      titleKey: "appSystemServiceTitle",
-      descKey: "appSystemServiceDesc",
-      images: [
-        "images/apps/soplos-system-service/screenshot01.png",
-        "images/apps/soplos-system-service/screenshot02.png",
-        "images/apps/soplos-system-service/screenshot03.png",
-      ],
-    },
-    "sys-cleaner": {
-      titleKey: "appSysCleanerTitle",
-      descKey: "appSysCleanerDesc",
-      images: [
-        "images/apps/soplos-sys-cleaner/screenshot01.png",
-        "images/apps/soplos-sys-cleaner/screenshot02.png",
-        "images/apps/soplos-sys-cleaner/screenshot03.png",
-        "images/apps/soplos-sys-cleaner/screenshot04.png",
-        "images/apps/soplos-sys-cleaner/screenshot05.png",
-        "images/apps/soplos-sys-cleaner/screenshot06.png",
-        "images/apps/soplos-sys-cleaner/screenshot07.png",
-        "images/apps/soplos-sys-cleaner/screenshot08.png",
-        "images/apps/soplos-sys-cleaner/screenshot09.png",
-        "images/apps/soplos-sys-cleaner/screenshot10.png",
-        "images/apps/soplos-sys-cleaner/screenshot11.png",
-        "images/apps/soplos-sys-cleaner/screenshot12.png",
-        "images/apps/soplos-sys-cleaner/screenshot13.png",
-        "images/apps/soplos-sys-cleaner/screenshot14.png",
-      ],
-    },
-    "webapp-manager": {
-      titleKey: "appWebAppManagerTitle",
-      descKey: "appWebAppManagerDesc",
-      images: [
-        "images/apps/soplos-webapp-manager/screenshot1.png",
-        "images/apps/soplos-webapp-manager/screenshot2.png",
-        "images/apps/soplos-webapp-manager/screenshot3.png",
-      ],
-    },
-    "welcome-live": {
-      titleKey: "appWelcomeLiveTitle",
-      descKey: "appWelcomeLiveDesc",
-      images: [
-        "images/apps/soplos-welcome-live/screenshot1.png",
-        "images/apps/soplos-welcome-live/screenshot2.png",
-        "images/apps/soplos-welcome-live/screenshot3.png",
-        "images/apps/soplos-welcome-live/screenshot4.png",
-        "images/apps/soplos-welcome-live/screenshot5.png",
-      ],
-    },
-
-  };
-
-  const appData = {
-    tyron: {
-      "appimage-manager": sharedApps["appimage-manager"],
-      "grub-editor": {
-        titleKey: "appGrubEditorTitle",
-        descKey: "appGrubEditorDesc",
-        images: [
-          "images/Tyron/grub-editor/001-grub-editor.png",
-          "images/Tyron/grub-editor/002-boot-entries.png",
-          "images/Tyron/grub-editor/003-themes.png",
-          "images/Tyron/grub-editor/004-backgrounds.png",
-          "images/Tyron/grub-editor/005-fonts.png",
-        ],
-      },
-      "kernel-installer": sharedApps["kernel-installer"],
-      "plymouth-manager": {
-        titleKey: "appPlymouthManagerTitle",
-        descKey: "appPlymouthManagerDesc",
-        images: [
-          "images/Tyron/plymouth-manager/001-plymouth-manager.png",
-          "images/Tyron/plymouth-manager/002-Plymouth.png",
-        ],
-      },
-      "repo-selector": {
-        titleKey: "appRepoSelectorTitle",
-        descKey: "appRepoSelectorDesc",
-        images: [
-          "images/Tyron/repo-selector/001-reposelector.png",
-          "images/Tyron/repo-selector/002-speed-test.png",
-          "images/Tyron/repo-selector/003-repo-list.png",
-          "images/Tyron/repo-selector/004-gpg-keys.png",
-        ],
-      },
-      "system-service": sharedApps["system-service"],
-      "sys-cleaner": sharedApps["sys-cleaner"],
-      "theme-manager": {
-        titleKey: "appThemeManagerTitle",
-        descKey: "appThemeManagerDesc",
-        images: [
-          "images/apps/soplos-theme-manager/screenshot1.png",
-          "images/apps/soplos-theme-manager/screenshot2.png",
-          "images/apps/soplos-theme-manager/screenshot3.png",
-          "images/apps/soplos-theme-manager/screenshot4.png",
-          "images/apps/soplos-theme-manager/screenshot5.png",
-        ],
-      },
-      welcome: {
-        titleKey: "appWelcomeTitle",
-        descKey: "appWelcomeDesc",
-        images: [
-          "images/apps/soplos-welcome/screenshot01.png",
-          "images/apps/soplos-welcome/screenshot02.png",
-          "images/apps/soplos-welcome/screenshot03.png",
-          "images/apps/soplos-welcome/screenshot04.png",
-          "images/apps/soplos-welcome/screenshot05.png",
-          "images/apps/soplos-welcome/screenshot06.png",
-          "images/apps/soplos-welcome/screenshot07.png",
-          "images/apps/soplos-welcome/screenshot08.png",
-          "images/apps/soplos-welcome/screenshot09.png",
-          "images/apps/soplos-welcome/screenshot10.png",
-          "images/apps/soplos-welcome/screenshot11.png",
-          "images/apps/soplos-welcome/screenshot12.png",
-          "images/apps/soplos-welcome/screenshot13.png",
-        ],
-      },
-      "welcome-live": sharedApps["welcome-live"],
-      "webapp-manager": sharedApps["webapp-manager"],
-    },
-    tyson: {
-      "appimage-manager": sharedApps["appimage-manager"],
-      "grub-editor": {
-        titleKey: "appGrubEditorTitle",
-        descKey: "appGrubEditorDesc",
-        images: [
-          "images/Tyson/grub-editor/001-grub-editor.png",
-          "images/Tyson/grub-editor/002-boot-entries.png",
-          "images/Tyson/grub-editor/003-select-theme.png",
-          "images/Tyson/grub-editor/004-backgrounds.png",
-          "images/Tyson/grub-editor/005-select-font.png",
-        ],
-      },
-      "kernel-installer": sharedApps["kernel-installer"],
-      "plymouth-manager": {
-        titleKey: "appPlymouthManagerTitle",
-        descKey: "appPlymouthManagerDesc",
-        images: [
-          "images/Tyson/plymouth-manager/001-plymouth-manager.png",
-          "images/Tyson/plymouth-manager/002-Plymouth.png",
-        ],
-      },
-      "repo-selector": {
-        titleKey: "appRepoSelectorTitle",
-        descKey: "appRepoSelectorDesc",
-        images: [
-          "images/Tyson/repo-selector/001-reposelector.png",
-          "images/Tyson/repo-selector/002-speed-test.png",
-          "images/Tyson/repo-selector/003-repo-list.png",
-          "images/Tyson/repo-selector/004-gpg-keys.png",
-        ],
-      },
-      "system-service": sharedApps["system-service"],
-      "sys-cleaner": sharedApps["sys-cleaner"],
-      welcome: {
-        titleKey: "appWelcomeTitle",
-        descKey: "appWelcomeDesc",
-        images: [
-          "images/apps/soplos-welcome/screenshot01.png",
-          "images/apps/soplos-welcome/screenshot02.png",
-          "images/apps/soplos-welcome/screenshot03.png",
-          "images/apps/soplos-welcome/screenshot04.png",
-          "images/apps/soplos-welcome/screenshot05.png",
-          "images/apps/soplos-welcome/screenshot06.png",
-          "images/apps/soplos-welcome/screenshot07.png",
-          "images/apps/soplos-welcome/screenshot08.png",
-          "images/apps/soplos-welcome/screenshot09.png",
-          "images/apps/soplos-welcome/screenshot10.png",
-          "images/apps/soplos-welcome/screenshot11.png",
-          "images/apps/soplos-welcome/screenshot12.png",
-          "images/apps/soplos-welcome/screenshot13.png",
-        ],
-      },
-      "welcome-live": sharedApps["welcome-live"],
-      "webapp-manager": sharedApps["webapp-manager"],
-    },
-    boro: {
-      "appimage-manager": sharedApps["appimage-manager"],
-      "grub-editor": {
-        titleKey: "appGrubEditorTitle",
-        descKey: "appGrubEditorDesc",
-        images: [
-          "images/boro/grub-editor/001-grub-editor.png",
-          "images/boro/grub-editor/002-boot-entries.png",
-          "images/boro/grub-editor/003-themes.png",
-          "images/boro/grub-editor/004-backgrounds.png",
-          "images/boro/grub-editor/005-fonts.png",
-        ],
-      },
-      "kernel-installer": sharedApps["kernel-installer"],
-      "layout-switcher": {
-        titleKey: "appLayoutSwitcherTitle",
-        descKey: "appLayoutSwitcherDesc",
-        images: [
-          "images/boro/layout-switcher/screenshot1.png",
-          "images/boro/layout-switcher/screenshot2.png",
-        ],
-      },
-      "plymouth-manager": {
-        titleKey: "appPlymouthManagerTitle",
-        descKey: "appPlymouthManagerDesc",
-        images: [
-          "images/boro/plymouth-manager/001-plymouth-manager.png",
-          "images/boro/plymouth-manager/002-Plymouth.png",
-        ],
-      },
-      "repo-selector": {
-        titleKey: "appRepoSelectorTitle",
-        descKey: "appRepoSelectorDesc",
-        images: [
-          "images/boro/repo-selector/001-repo-selector.png",
-          "images/boro/repo-selector/002-speed-test.png",
-          "images/boro/repo-selector/003-repo-list.png",
-          "images/boro/repo-selector/004-gpg-keys.png",
-        ],
-      },
-      "system-service": sharedApps["system-service"],
-      "sys-cleaner": sharedApps["sys-cleaner"],
-      welcome: {
-        titleKey: "appWelcomeTitle",
-        descKey: "appWelcomeDesc",
-        images: [
-          "images/apps/soplos-welcome/screenshot01.png",
-          "images/apps/soplos-welcome/screenshot02.png",
-          "images/apps/soplos-welcome/screenshot03.png",
-          "images/apps/soplos-welcome/screenshot04.png",
-          "images/apps/soplos-welcome/screenshot05.png",
-          "images/apps/soplos-welcome/screenshot06.png",
-          "images/apps/soplos-welcome/screenshot07.png",
-          "images/apps/soplos-welcome/screenshot08.png",
-          "images/apps/soplos-welcome/screenshot09.png",
-          "images/apps/soplos-welcome/screenshot10.png",
-          "images/apps/soplos-welcome/screenshot11.png",
-          "images/apps/soplos-welcome/screenshot12.png",
-          "images/apps/soplos-welcome/screenshot13.png",
-        ],
-      },
-      "welcome-live": sharedApps["welcome-live"],
-      "webapp-manager": sharedApps["webapp-manager"],
-      "layout-switcher": {
-        titleKey: "appLayoutSwitcherTitle",
-        descKey: "appLayoutSwitcherDesc",
-        images: [
-          "images/boro/layout-switcher/screenshot1.png",
-          "images/boro/layout-switcher/screenshot2.png",
-        ],
-      },
-    },
-  };
-
-  document.querySelectorAll(".app-icon-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (!appModal) return;
-      const app = btn.getAttribute("data-app");
-      const version = btn.getAttribute("data-version");
-      const data = appData[version] && appData[version][app];
-
-      if (data) {
-        // Update Modal Header
-        const modalIcon = document.getElementById("modal-app-icon");
-        const modalTitle = document.getElementById("modal-app-title");
-        const modalDesc = document.getElementById("modal-app-desc");
-
-        if (modalIcon) modalIcon.src = btn.getAttribute("data-icon");
-        if (modalTitle)
-          modalTitle.textContent = window.getTranslatedText(data.titleKey);
-        if (modalDesc)
-          modalDesc.textContent = window.getTranslatedText(data.descKey);
-
-        // Set Images
-        // Use data.images directly
-        const images = data.images.map((src) => ({ src: src }));
-        appModal.setImages(images);
-        appModal.open(btn);
-      }
-    });
-  });
+  growingFrame(document.getElementById("apps"), document.getElementById("appsOpen"), "soplos-apps");
+  // The logo is an easter egg: the card shows the wallpaper, and a click on it
+  // brings the motion out of it.
+  growingFrame(document.querySelector(".hero-motion"), document.getElementById("logoOpen"), "soplos-logo", true);
 
   // 4. Mobile Menu Logic
   const menuButton = document.querySelector(".mobile-menu-toggle");

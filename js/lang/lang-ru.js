@@ -229,7 +229,6 @@ window.LANG_RU = {
     "downloadTitle": "Скачать Soplos Linux",
 
     // Tyron (XFCE)
-    "appsTyronTitle": "Xfce 4.20",
     "modalTyronTitle": "Tyron (XFCE) - Системные требования",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Приложения для Tyron",
@@ -240,7 +239,6 @@ window.LANG_RU = {
     "xfceDesktop": "Рабочая среда XFCE 4.20.1",
 
     // Tyson (Plasma)
-    "appsTysonTitle": "Plasma 6.7.4",
     "archSupportTyson": "Поддержка архитектуры x86_64",
     "customizationTitleTyson": "Настройка",
     "debianSecurityTyson": "Основан на надежной безопасности Debian",
@@ -281,7 +279,6 @@ window.LANG_RU = {
     "visualThemesTyson": "Предварительно настроенные визуальные темы и стили",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 50.5",
     "boroDescription": "Полное руководство для редакции GNOME Soplos Linux. Откройте для себя мощь и элегантность рабочего окружения GNOME 50.5.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Руководство Boro (GNOME)",
@@ -324,32 +321,6 @@ window.LANG_RU = {
     "waylandSystemBoro": "Оконная система: Wayland",
 
     // Soplos Applications
-    "appAppImageManagerTitle": "Soplos AppImage Manager",
-    "appAppImageManagerDesc": "Интегрируйте, управляйте и обновляйте приложения AppImage. Поддерживает автоматическую проверку обновлений через GitHub, GitLab и Codeberg.",
-    "appGrubEditorTitle": "Soplos GRUB Editor",
-    "appGrubEditorDesc": "Графический интерфейс для настройки загрузчика GRUB. Управляйте записями загрузки, темами, фонами и шрифтами с полной поддержкой подменю.",
-    "appKernelInstallerTitle": "Soplos Kernel Installer",
-    "appKernelInstallerDesc": "Компилируйте и устанавливайте пользовательские ядра Linux с поддержкой BORE, NTSYNC и PREEMPT_RT. Включает интеграцию Secure Boot и DKMS.",
-    "appLayoutSwitcherTitle": "Soplos Layout Switcher",
-    "appLayoutSwitcherDesc": "Переключайте рабочий стол GNOME Shell между предустановленными макетами — Soplos, Dock, Плитка и GNOME — включая нужные расширения и применяя соответствующие настройки.",
-    "appPlymouthManagerTitle": "Soplos Plymouth Manager",
-    "appPlymouthManagerDesc": "Менеджер экрана загрузки с интеллектуальными предпросмотрами, поддержкой Wayland и автоматической пересборкой initramfs.",
-    "appRepoSelectorTitle": "Soplos Repo Selector",
-    "appRepoSelectorDesc": "Управляйте репозиториями APT со встроенным тестом скорости зеркал, поддержкой формата DEB822 и управлением ключами GPG.",
-    "appSysCleanerTitle": "Soplos Sys Cleaner",
-    "appSysCleanerDesc": "Инструмент обслуживания системы для очистки кэша APT, удаления старых ядер, управления пакетами Flatpak и Snap и удаления неиспользуемых драйверов.",
-    "appSystemServiceTitle": "Soplos System Service",
-    "appSystemServiceDesc": "GTK3-менеджер служб systemd с цветовой индикацией состояния, кнопками Запуск/Стоп/Перезапуск и просмотром журналов journalctl.",
-    "appThemeManagerTitle": "Soplos Theme Manager",
-    "appThemeManagerDesc": "Полный набор инструментов настройки XFCE. Управляйте темами, обоями, профилем пользователя, плагинами панели и закреплёнными приложениями Dock. Экспортируйте и импортируйте пакеты тем.",
-    "appWelcomeTitle": "Soplos Welcome",
-    "appWelcomeDesc": "Помощник после установки для драйверов, ядер, программного обеспечения, безопасности и настройки рабочего стола.",
-    "appWelcomeLiveTitle": "Soplos Welcome Live",
-    "appWelcomeLiveDesc": "Помощник живой сессии для установки Soplos Linux или восстановления существующих систем через CHROOT с пошаговыми операциями спасения.",
-    "appWebAppManagerTitle": "Soplos WebApp Manager",
-    "appWebAppManagerDesc": "Создавайте настольные приложения из веб-сайтов с изолированными профилями, режимом инкогнито и поддержкой пользовательских иконок.",
-    "appsDesc": "Откройте для себя приложения, разработанные исключительно для Soplos Linux. Эти инструменты позволяют настраивать, управлять и улучшать ваш опыт на всех дистрибутивах Soplos.",
-    "appsTitle": "Эксклюзивные приложения Soplos",
     "soplosApps1": "Soplos Repo Selector 2.0.3",
     "soplosApps2": "Soplos Welcome 2.1.0-6",
     "soplosApps3": "Soplos Welcome Live 2.0.2-7",

@@ -229,7 +229,6 @@ window.LANG_EN = {
     "downloadTitle": "Download Soplos Linux",
 
     // Tyron (XFCE)
-    "appsTyronTitle": "Xfce 4.20",
     "modalTyronTitle": "Tyron (XFCE) - System Requirements",
     "requirementsTyronTitle": "Tyron (XFCE)",
     "tyronAppsLink": "Applications for Tyron",
@@ -240,7 +239,6 @@ window.LANG_EN = {
     "xfceDesktop": "XFCE 4.20.1 desktop environment",
 
     // Tyson (Plasma)
-    "appsTysonTitle": "Plasma 6.7.4",
     "archSupportTyson": "Support for x86_64 architecture",
     "customizationTitleTyson": "Customization",
     "debianBaseTyson": "Based on Debian Testing",
@@ -281,7 +279,6 @@ window.LANG_EN = {
     "visualThemesTyson": "Pre-configured visual themes and styles",
 
     // Boro (GNOME)
-    "appsBoroTitle": "GNOME 50.5",
     "boroDescription": "Complete guide for the GNOME edition of Soplos Linux. Discover the power and elegance of the GNOME 50.5 desktop environment.",
     "boroGalleryCaption": "Boro GNOME Desktop",
     "boroGuideLink": "Boro (GNOME) Guide",
@@ -324,32 +321,6 @@ window.LANG_EN = {
     "waylandSystemBoro": "Window system: Wayland",
 
     // Soplos Applications
-    "appAppImageManagerTitle": "Soplos AppImage Manager",
-    "appAppImageManagerDesc": "Integrate, manage and update AppImage applications. Supports automatic update checking via GitHub, GitLab and Codeberg.",
-    "appGrubEditorTitle": "Soplos GRUB Editor",
-    "appGrubEditorDesc": "Graphical interface to customize the GRUB bootloader. Manage boot entries, themes, backgrounds and fonts with full submenu support.",
-    "appKernelInstallerTitle": "Soplos Kernel Installer",
-    "appKernelInstallerDesc": "Compile and install custom Linux kernels with BORE, NTSYNC and PREEMPT_RT support. Includes Secure Boot and DKMS integration.",
-    "appLayoutSwitcherTitle": "Soplos Layout Switcher",
-    "appLayoutSwitcherDesc": "Switch the GNOME Shell desktop between predefined layouts — Soplos, Dock, Tiling and GNOME — by enabling the required extensions and applying matching settings.",
-    "appPlymouthManagerTitle": "Soplos Plymouth Manager",
-    "appPlymouthManagerDesc": "Boot splash screen manager with intelligent previews, Wayland support and automatic initramfs rebuilding.",
-    "appRepoSelectorTitle": "Soplos Repo Selector",
-    "appRepoSelectorDesc": "Manage APT repositories with built-in mirror speed test, DEB822 format support and GPG key management.",
-    "appSysCleanerTitle": "Soplos Sys Cleaner",
-    "appSysCleanerDesc": "System maintenance tool to clean APT cache, remove old kernels, manage Flatpak and Snap packages, and uninstall unused drivers.",
-    "appSystemServiceTitle": "Soplos System Service",
-    "appSystemServiceDesc": "GTK3 systemd service manager with color-coded status, Start/Stop/Restart controls and journalctl log viewer.",
-    "appThemeManagerTitle": "Soplos Theme Manager",
-    "appThemeManagerDesc": "Complete XFCE customization suite. Manage themes, wallpapers, user profile, panel plugins and Docklike pinned apps. Export and import theme bundles.",
-    "appWelcomeTitle": "Soplos Welcome",
-    "appWelcomeDesc": "Post-installation assistant for drivers, kernels, software, security and desktop customization.",
-    "appWelcomeLiveTitle": "Soplos Welcome Live",
-    "appWelcomeLiveDesc": "Live session companion for installing Soplos Linux or recovering existing systems via CHROOT with guided rescue operations.",
-    "appWebAppManagerTitle": "Soplos WebApp Manager",
-    "appWebAppManagerDesc": "Create desktop applications from websites with isolated profiles, incognito mode and custom icon support.",
-    "appsDesc": "Discover applications developed exclusively for Soplos Linux. These tools allow you to customize, manage and enhance your experience across all Soplos distributions.",
-    "appsTitle": "Exclusive Soplos Applications",
     "soplosApps1": "Soplos Repo Selector 2.0.3",
     "soplosApps2": "Soplos Welcome 2.1.0-6",
     "soplosApps3": "Soplos Welcome Live 2.0.2-7",

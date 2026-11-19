@@ -163,8 +163,14 @@
           </div>
         </div>
         <div class="hero-image">
-          <!-- Hero image: you can replace wallpaper.jpg with a more representative image if needed -->
-          <img src="images/hero/wallpaper.jpg" alt="Soplos Linux Wallpaper" />
+          <!-- An easter egg: the card shows the wallpaper, and a click on it brings
+               out, to the whole screen, the S of Soplos and SOPLOS turning into its
+               full name (motion/logo). -->
+          <div class="hero-motion">
+            <img src="images/hero/wallpaper.jpg" alt="Soplos Linux Wallpaper" />
+            <iframe src="motion/logo/?embed=1" title="Soplos Linux: Sleek Optimized Platform for Linux Operating System" tabindex="-1"></iframe>
+            <button type="button" class="hero-motion-open" id="logoOpen" aria-label="Soplos Linux: Sleek Optimized Platform for Linux Operating System"></button>
+          </div>
         </div>
       </div>
     </section>
@@ -289,164 +295,11 @@
       </div>
     </section>
 
-    <!-- 3. Soplos Exclusive Applications -->
-    <section id="apps" class="applications">
-      <div class="container">
-        <h2 id="appsTitle">Soplos Exclusive Apps</h2>
-        <p id="appsDesc" class="apps-desc">
-          Discover the applications developed exclusively for Soplos Linux.
-          These tools allow you to customize, manage, and enhance your
-          experience on Tyron and Tyson desktops.
-        </p>
-        <div class="apps-versions-grid">
-          <!-- Tyron card -->
-          <div class="apps-version-card" data-version="tyron">
-            <h3 id="appsTyronTitle">Tyron (XFCE)</h3>
-            <div class="apps-icons-grid">
-              <button class="app-icon-btn" data-app="appimage-manager" data-version="tyron"
-                data-icon="images/icons/org.soplos.appimagemanager.png" data-tooltip="AppImage Manager">
-                <img src="images/icons/org.soplos.appimagemanager.png" alt="Soplos AppImage Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="grub-editor" data-version="tyron"
-                data-icon="images/icons/org.soplos.grubeditor.png" data-tooltip="GRUB Editor">
-                <img src="images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor" />
-              </button>
-              <button class="app-icon-btn" data-app="kernel-installer" data-version="tyron"
-                data-icon="images/icons/org.soplos.kernel-installer.png" data-tooltip="Kernel Installer">
-                <img src="images/icons/org.soplos.kernel-installer.png" alt="Soplos Kernel Installer" />
-              </button>
-              <button class="app-icon-btn" data-app="plymouth-manager" data-version="tyron"
-                data-icon="images/icons/org.soplos.plymouthmanager.png" data-tooltip="Plymouth Manager">
-                <img src="images/icons/org.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="repo-selector" data-version="tyron"
-                data-icon="images/icons/org.soplos.reposelector.png" data-tooltip="Repo Selector">
-                <img src="images/icons/org.soplos.reposelector.png" alt="Soplos Repo Selector" />
-              </button>
-              <button class="app-icon-btn" data-app="system-service" data-version="tyron"
-                data-icon="images/icons/org.soplos.systemservice.png" data-tooltip="System Service">
-                <img src="images/icons/org.soplos.systemservice.png" alt="Soplos System Service" />
-              </button>
-              <button class="app-icon-btn" data-app="sys-cleaner" data-version="tyron"
-                data-icon="images/icons/org.soplos.sys-cleaner.png" data-tooltip="Sys Cleaner">
-                <img src="images/icons/org.soplos.sys-cleaner.png" alt="Soplos Sys Cleaner" />
-              </button>
-              <button class="app-icon-btn" data-app="theme-manager" data-version="tyron"
-                data-icon="images/icons/org.soplos.thememanager.png" data-tooltip="Theme Manager">
-                <img src="images/icons/org.soplos.thememanager.png" alt="Soplos Theme Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="welcome" data-version="tyron"
-                data-icon="images/icons/org.soplos.welcome.png" data-tooltip="Welcome">
-                <img src="images/icons/org.soplos.welcome.png" alt="Soplos Welcome" />
-              </button>
-              <button class="app-icon-btn" data-app="welcome-live" data-version="tyron"
-                data-icon="images/icons/org.soplos.welcomelive.png" data-tooltip="Welcome Live">
-                <img src="images/icons/org.soplos.welcomelive.png" alt="Soplos Welcome Live" />
-              </button>
-              <button class="app-icon-btn" data-app="webapp-manager" data-version="tyron"
-                data-icon="images/icons/org.soplos.webappmanager.png" data-tooltip="WebApp Manager">
-                <img src="images/icons/org.soplos.webappmanager.png" alt="Soplos WebApp Manager" />
-              </button>
-            </div>
-          </div>
-          <!-- Tyson card -->
-          <div class="apps-version-card" data-version="tyson">
-            <h3 id="appsTysonTitle">Tyson (Plasma 6)</h3>
-            <div class="apps-icons-grid">
-              <button class="app-icon-btn" data-app="appimage-manager" data-version="tyson"
-                data-icon="images/icons/org.soplos.appimagemanager.png" data-tooltip="AppImage Manager">
-                <img src="images/icons/org.soplos.appimagemanager.png" alt="Soplos AppImage Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="grub-editor" data-version="tyson"
-                data-icon="images/icons/org.soplos.grubeditor.png" data-tooltip="GRUB Editor">
-                <img src="images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor" />
-              </button>
-              <button class="app-icon-btn" data-app="kernel-installer" data-version="tyson"
-                data-icon="images/icons/org.soplos.kernel-installer.png" data-tooltip="Kernel Installer">
-                <img src="images/icons/org.soplos.kernel-installer.png" alt="Soplos Kernel Installer" />
-              </button>
-              <button class="app-icon-btn" data-app="plymouth-manager" data-version="tyson"
-                data-icon="images/icons/org.soplos.plymouthmanager.png" data-tooltip="Plymouth Manager">
-                <img src="images/icons/org.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="repo-selector" data-version="tyson"
-                data-icon="images/icons/org.soplos.reposelector.png" data-tooltip="Repo Selector">
-                <img src="images/icons/org.soplos.reposelector.png" alt="Soplos Repo Selector" />
-              </button>
-              <button class="app-icon-btn" data-app="system-service" data-version="tyson"
-                data-icon="images/icons/org.soplos.systemservice.png" data-tooltip="System Service">
-                <img src="images/icons/org.soplos.systemservice.png" alt="Soplos System Service" />
-              </button>
-              <button class="app-icon-btn" data-app="sys-cleaner" data-version="tyson"
-                data-icon="images/icons/org.soplos.sys-cleaner.png" data-tooltip="Sys Cleaner">
-                <img src="images/icons/org.soplos.sys-cleaner.png" alt="Soplos Sys Cleaner" />
-              </button>
-              <button class="app-icon-btn" data-app="welcome" data-version="tyson"
-                data-icon="images/icons/org.soplos.welcome.png" data-tooltip="Welcome">
-                <img src="images/icons/org.soplos.welcome.png" alt="Soplos Welcome" />
-              </button>
-              <button class="app-icon-btn" data-app="welcome-live" data-version="tyson"
-                data-icon="images/icons/org.soplos.welcomelive.png" data-tooltip="Welcome Live">
-                <img src="images/icons/org.soplos.welcomelive.png" alt="Soplos Welcome Live" />
-              </button>
-              <button class="app-icon-btn" data-app="webapp-manager" data-version="tyson"
-                data-icon="images/icons/org.soplos.webappmanager.png" data-tooltip="WebApp Manager">
-                <img src="images/icons/org.soplos.webappmanager.png" alt="Soplos WebApp Manager" />
-              </button>
-            </div>
-          </div>
-          <!-- Boro card -->
-          <div class="apps-version-card" data-version="boro">
-            <h3 id="appsBoroTitle">Boro (GNOME)</h3>
-            <div class="apps-icons-grid">
-              <button class="app-icon-btn" data-app="appimage-manager" data-version="boro"
-                data-icon="images/icons/org.soplos.appimagemanager.png" data-tooltip="AppImage Manager">
-                <img src="images/icons/org.soplos.appimagemanager.png" alt="Soplos AppImage Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="grub-editor" data-version="boro"
-                data-icon="images/icons/org.soplos.grubeditor.png" data-tooltip="GRUB Editor">
-                <img src="images/icons/org.soplos.grubeditor.png" alt="Soplos GRUB Editor" />
-              </button>
-              <button class="app-icon-btn" data-app="kernel-installer" data-version="boro"
-                data-icon="images/icons/org.soplos.kernel-installer.png" data-tooltip="Kernel Installer">
-                <img src="images/icons/org.soplos.kernel-installer.png" alt="Soplos Kernel Installer" />
-              </button>
-              <button class="app-icon-btn" data-app="layout-switcher" data-version="boro"
-                data-icon="images/icons/org.soplos.layoutswitcher.png" data-tooltip="Layout Switcher">
-                <img src="images/icons/org.soplos.layoutswitcher.png" alt="Soplos Layout Switcher" />
-              </button>
-              <button class="app-icon-btn" data-app="plymouth-manager" data-version="boro"
-                data-icon="images/icons/org.soplos.plymouthmanager.png" data-tooltip="Plymouth Manager">
-                <img src="images/icons/org.soplos.plymouthmanager.png" alt="Soplos Plymouth Manager" />
-              </button>
-              <button class="app-icon-btn" data-app="repo-selector" data-version="boro"
-                data-icon="images/icons/org.soplos.reposelector.png" data-tooltip="Repo Selector">
-                <img src="images/icons/org.soplos.reposelector.png" alt="Soplos Repo Selector" />
-              </button>
-              <button class="app-icon-btn" data-app="system-service" data-version="boro"
-                data-icon="images/icons/org.soplos.systemservice.png" data-tooltip="System Service">
-                <img src="images/icons/org.soplos.systemservice.png" alt="Soplos System Service" />
-              </button>
-              <button class="app-icon-btn" data-app="sys-cleaner" data-version="boro"
-                data-icon="images/icons/org.soplos.sys-cleaner.png" data-tooltip="Sys Cleaner">
-                <img src="images/icons/org.soplos.sys-cleaner.png" alt="Soplos Sys Cleaner" />
-              </button>
-              <button class="app-icon-btn" data-app="welcome" data-version="boro"
-                data-icon="images/icons/org.soplos.welcome.png" data-tooltip="Welcome">
-                <img src="images/icons/org.soplos.welcome.png" alt="Soplos Welcome" />
-              </button>
-              <button class="app-icon-btn" data-app="welcome-live" data-version="boro"
-                data-icon="images/icons/org.soplos.welcomelive.png" data-tooltip="Welcome Live">
-                <img src="images/icons/org.soplos.welcomelive.png" alt="Soplos Welcome Live" />
-              </button>
-              <button class="app-icon-btn" data-app="webapp-manager" data-version="boro"
-                data-icon="images/icons/org.soplos.webappmanager.png" data-tooltip="WebApp Manager">
-                <img src="images/icons/org.soplos.webappmanager.png" alt="Soplos WebApp Manager" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- 3. Soplos apps: the presentation, stopped on its cover, across the
+         whole band. A click makes it grow to the whole screen and play (js/main.js). -->
+    <section id="apps" class="apps-presentation">
+      <iframe src="apps/presentation/?embed=1" title="Soplos Linux · Apps 3.0" loading="lazy" tabindex="-1"></iframe>
+      <button type="button" class="apps-presentation-open" id="appsOpen" aria-label="Soplos Linux · Apps 3.0"></button>
     </section>
 
     <!-- Motivational transition section before system requirements -->
@@ -1260,37 +1113,6 @@
       </div>
     </div>
 
-    <!-- Modal for exclusive applications -->
-    <div id="modalApp" class="modal-app">
-      <div class="modal-app-content">
-        <button class="close-modal-app" aria-label="Close">
-          <i class="fas fa-times"></i>
-        </button>
-        <div class="modal-app-header">
-          <img id="modal-app-icon" src="" alt="" />
-          <h3 id="modal-app-title"></h3>
-        </div>
-        <p id="modal-app-desc"></p>
-        <div class="modal-app-gallery" style="position: relative">
-          <button class="modal-app-nav prev" style="z-index: 10">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div class="modal-app-track" style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-              "></div>
-          <button class="modal-app-nav next" style="z-index: 10">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <div class="modal-app-dots" id="modal-app-dots"></div>
-        <div class="modal-app-caption" id="modal-app-caption"></div>
-        <div class="modal-app-links" id="modal-app-links"></div>
-      </div>
-    </div>
   </main>
   <footer>
     <div class="container">
